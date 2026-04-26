@@ -464,7 +464,7 @@ export default function Home() {
         <div className="wrap">
           <div className="trust-grid reveal">
             <div className="trust-item">
-              <div className="trust-icon">&ne;</div>
+              <div className="trust-icon">{"\u2260"}</div>
               <div>
                 <div className="eyebrow">
                   <span className="dot" />
@@ -507,7 +507,7 @@ export default function Home() {
               </div>
             </div>
             <div className="trust-item">
-              <div className="trust-icon">&check;</div>
+              <div className="trust-icon">{"\u2713"}</div>
               <div>
                 <div className="eyebrow">
                   <span className="dot" />

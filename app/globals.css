@@ -128,7 +128,7 @@ section { padding: 120px 0; position: relative; }
 .trust-item { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start; }
 .trust-icon {
   width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--rule);
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;
   font-family: var(--mono); font-size: 14px; color: var(--ember);
 }
 @media (max-width: 900px) { .trust-grid { grid-template-columns: 1fr; gap: 32px; } }
@@ -410,9 +410,9 @@ footer { background: var(--ink); color: #C9B894; padding: 80px 0 40px; }
 .ha-scene[data-scene="5"] { animation-delay: -8s; }
 .ha-scene[data-scene="6"] { animation-delay: -4s; }
 @keyframes haCycle {
-  0%, 1% { opacity: 0; transform: translateY(20px) scale(0.98); filter: blur(2px); }
-  3%, 15% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
-  17%, 100% { opacity: 0; transform: translateY(-12px) scale(0.98); filter: blur(2px); }
+  0%, 1% { opacity: 0; transform: translateY(16px) scale(0.98); }
+  3%, 15% { opacity: 1; transform: translateY(0) scale(1); }
+  17%, 100% { opacity: 0; transform: translateY(-10px) scale(0.98); }
 }
 
 /* Avatar SVG base */
@@ -421,17 +421,18 @@ footer { background: var(--ink); color: #C9B894; padding: 80px 0 40px; }
 .ha-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ember); animation: haPulse 1.6s ease-in-out infinite; }
 
 /* Scene 3: Embers */
-.ha-scene-ember { background: linear-gradient(180deg, #FFF7EE, #F8ECD8); color: var(--ink); padding-top: 62px; align-items: flex-start; }
+.ha-scene-ember { background: linear-gradient(180deg, #FFF7EE, #F8ECD8); color: var(--ink); padding-top: 62px; align-items: flex-start; gap: 0; }
 .ha-ember-head { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ember); display: flex; align-items: center; gap: 8px; margin-bottom: 18px; }
 .ha-ember-flame { display: flex; align-items: center; }
 .ha-ember-title { font-family: var(--serif); font-size: 22px; font-weight: 380; line-height: 1.15; color: var(--ink); margin-bottom: 8px; }
-.ha-ember-subtitle { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-2); margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1px solid var(--rule-2); }
+.ha-ember-subtitle { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-2); margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1px solid var(--rule-2); width: 100%; }
+.ha-ember-body { width: 100%; }
 .ha-ember-body p { font-family: var(--serif); font-size: 14.5px; line-height: 1.55; color: var(--ink-2); margin-bottom: 14px; opacity: 0; animation: haMsgIn 0.6s ease-out forwards; }
 .ha-ember-body p:nth-child(1) { animation-delay: 0.6s; }
 .ha-ember-body p:nth-child(2) { animation-delay: 1.6s; }
-.ha-ember-footer { display: flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--rule-2); font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); }
+.ha-ember-footer { display: flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--rule-2); font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); width: 100%; }
 
-/* Scene 2: Video */
+/* Scene 1: Video */
 .ha-scene-video { background: #0E0B08; color: #F2EDE5; }
 .ha-vid-header {
   display: flex; align-items: center; justify-content: space-between;
@@ -450,7 +451,7 @@ footer { background: var(--ink); color: #C9B894; padding: 80px 0 40px; }
 .ha-vid-keeper .ha-portrait { flex: 1; width: 100%; border-radius: 14px; display: flex; align-items: center; justify-content: center; background: transparent; }
 .ha-vid-keeper .ha-portrait svg { width: 70%; height: auto; border-radius: 50%; filter: drop-shadow(0 4px 20px rgba(0,0,0,.4)); }
 .ha-vid-self {
-  position: absolute; right: 30px; bottom: 60px; width: 78px; height: 100px; border-radius: 10px;
+  position: absolute; right: 14px; bottom: 46px; width: 68px; height: 88px; border-radius: 10px;
   background: linear-gradient(160deg, #4a3d2e, #332720); border: 1.5px solid #F2EDE544;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
   z-index: 2; overflow: hidden;
@@ -468,7 +469,7 @@ footer { background: var(--ink); color: #C9B894; padding: 80px 0 40px; }
 .ha-vid-self .ha-name { font-size: 8px; }
 .ha-caption { margin-top: 14px; font-family: var(--serif); font-style: italic; font-size: 14px; line-height: 1.3; color: #F2EDE5; text-align: center; }
 
-/* Scene 3: Chat */
+/* Scene 2: Chat */
 .ha-scene-chat { background: var(--paper); color: var(--ink); padding-top: 48px; }
 .ha-chat-head { display: flex; align-items: center; gap: 10px; padding: 8px 0 12px; border-bottom: 1px solid var(--rule-2); margin-bottom: 14px; }
 .ha-chat-avatar { width: 36px; height: 36px; border-radius: 50%; overflow: hidden; background: transparent; position: relative; flex-shrink: 0; display: block; }
@@ -497,7 +498,7 @@ footer { background: var(--ink); color: #C9B894; padding: 80px 0 40px; }
 @keyframes haTypingOut { to { opacity: 0; transform: translateY(-4px); } }
 
 /* Scene 4: Friday */
-.ha-scene-friday { background: #FFF7EE; color: var(--ink); justify-content: center; align-items: center; text-align: center; }
+.ha-scene-friday { background: #FFF7EE; color: var(--ink); justify-content: flex-start; align-items: center; text-align: center; padding-top: 62px; }
 .ha-friday-stamp { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ember); margin-bottom: 18px; }
 .ha-friday-author { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid rgba(212,88,44,.2); width: 100%; }
 .ha-friday-avatar { width: 38px; height: 38px; border-radius: 50%; overflow: hidden; background: transparent; position: relative; flex-shrink: 0; }
@@ -521,16 +522,23 @@ footer { background: var(--ink); color: #C9B894; padding: 80px 0 40px; }
 .ha-circle-tile {
   position: relative; aspect-ratio: 1; border-radius: 10px; overflow: hidden;
   background: #2A2218; border: 1.5px solid rgba(228,137,76,0.4);
-  animation: haCircleIn 0.5s ease-out backwards, haBreath 3s ease-in-out infinite;
+  animation: haCircleIn 0.5s ease-out backwards;
 }
-.ha-circle-tile:nth-child(1) { animation-delay: 0.2s, 0s; }
-.ha-circle-tile:nth-child(2) { animation-delay: 0.4s, 0.5s; }
-.ha-circle-tile:nth-child(3) { animation-delay: 0.6s, 1s; }
-.ha-circle-tile:nth-child(4) { animation-delay: 0.8s, 1.5s; }
-.ha-circle-tile:nth-child(5) { animation-delay: 1s, 2s; }
-.ha-circle-tile:nth-child(6) { animation-delay: 1.2s, 2.5s; }
+.ha-circle-tile:nth-child(1) { animation-delay: 0.2s; }
+.ha-circle-tile:nth-child(2) { animation-delay: 0.4s; }
+.ha-circle-tile:nth-child(3) { animation-delay: 0.6s; }
+.ha-circle-tile:nth-child(4) { animation-delay: 0.8s; }
+.ha-circle-tile:nth-child(5) { animation-delay: 1s; }
+.ha-circle-tile:nth-child(6) { animation-delay: 1.2s; }
 @keyframes haCircleIn { from { opacity: 0; transform: scale(0.7); } to { opacity: 1; transform: scale(1); } }
-@keyframes haBreath { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
+.ha-circle-tile .ha-portrait svg { animation: haBreath 3s ease-in-out infinite; }
+.ha-circle-tile:nth-child(1) .ha-portrait svg { animation-delay: 0s; }
+.ha-circle-tile:nth-child(2) .ha-portrait svg { animation-delay: 0.5s; }
+.ha-circle-tile:nth-child(3) .ha-portrait svg { animation-delay: 1s; }
+.ha-circle-tile:nth-child(4) .ha-portrait svg { animation-delay: 1.5s; }
+.ha-circle-tile:nth-child(5) .ha-portrait svg { animation-delay: 2s; }
+.ha-circle-tile:nth-child(6) .ha-portrait svg { animation-delay: 2.5s; }
+@keyframes haBreath { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
 .ha-circle-tile .ha-portrait { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 9px; display: flex; align-items: center; justify-content: center; background: transparent; }
 .ha-circle-tile .ha-portrait svg { width: 100%; height: 100%; }
 .ha-circle-host { position: absolute; left: 4px; bottom: 4px; font-family: var(--mono); font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--ember); color: #FFF6E8; padding: 2px 5px; border-radius: 3px; z-index: 2; }
@@ -538,7 +546,7 @@ footer { background: var(--ink); color: #C9B894; padding: 80px 0 40px; }
 .ha-circle-count { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: #C9B894; text-align: center; margin-top: 8px; }
 
 /* Scene 6: CTA */
-.ha-scene-cta { background: linear-gradient(180deg, #FFF7EE, #FFE0B0); align-items: center; justify-content: center; text-align: center; gap: 16px; }
+.ha-scene-cta { background: linear-gradient(180deg, #FFF7EE, #FFE0B0); align-items: center; justify-content: center; text-align: center; gap: 14px; padding-top: 54px; padding-bottom: 54px; }
 .ha-cta-avatar { width: 72px; height: 72px; border-radius: 50%; overflow: hidden; border: 2.5px solid var(--ember); box-shadow: 0 0 0 6px rgba(212,88,44,.12); }
 .ha-cta-avatar svg { width: 100%; height: 100%; display: block; }
 .ha-cta-tending { font-family: var(--serif); font-size: 18px; line-height: 1.2; color: var(--ink); font-weight: 380; }
