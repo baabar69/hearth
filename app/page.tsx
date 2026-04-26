@@ -532,6 +532,132 @@ export default function Home() {
         </div>
       </section>
 
+      {/* BRING IT HERE */}
+      <section className="bring" id="bring">
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <div>
+              <div className="eyebrow">
+                <span className="dot" />
+                What people bring here
+              </div>
+              <h2 style={{ marginTop: 18 }}>
+                The weight that doesn&rsquo;t fit{" "}
+                <span className="serif-i" style={{ color: "var(--ember)" }}>
+                  anywhere else.
+                </span>
+              </h2>
+            </div>
+            <p className="lede">
+              Not diagnoses. Not emergencies. The real, recurring weight of a
+              life between cultures, families, and expectations &mdash; the
+              things you carry every week.
+            </p>
+          </div>
+
+          <div className="bring-grid reveal">
+            <div className="bring-card">
+              <div className="bring-icon">{"\u2302"}</div>
+              <h4>Family pressure</h4>
+              <p>
+                The call that ruins your Sunday. Expectations that don&rsquo;t
+                translate. Parents who love you in a language that feels like
+                control.
+              </p>
+            </div>
+            <div className="bring-card">
+              <div className="bring-icon">{"\u2736"}</div>
+              <h4>Grief &amp; loss</h4>
+              <p>
+                The kind that arrives on time and the kind that shows up ten
+                years late. Losing people, places, versions of yourself.
+              </p>
+            </div>
+            <div className="bring-card">
+              <div className="bring-icon">{"\u2661"}</div>
+              <h4>Caregiving burnout</h4>
+              <p>
+                Holding everyone else together while quietly falling apart.
+                The guilt of needing your own chair.
+              </p>
+            </div>
+            <div className="bring-card">
+              <div className="bring-icon">{"\u2316"}</div>
+              <h4>Diaspora identity</h4>
+              <p>
+                Too much of one thing, not enough of the other. Code-switching
+                so often you forget which one is real.
+              </p>
+            </div>
+            <div className="bring-card">
+              <div className="bring-icon">{"\u2318"}</div>
+              <h4>Career crossroads</h4>
+              <p>
+                The job your family wanted vs. the life you actually want.
+                Success that feels hollow. Starting over at 35.
+              </p>
+            </div>
+            <div className="bring-card">
+              <div className="bring-icon">{"\u29BF"}</div>
+              <h4>Relationship weight</h4>
+              <p>
+                The things you can&rsquo;t say to the person you sleep next to.
+                Partnerships bending under unspoken rules.
+              </p>
+            </div>
+            <div className="bring-card">
+              <div className="bring-icon">{"\u2609"}</div>
+              <h4>Loneliness</h4>
+              <p>
+                Not the kind that means you have no friends. The kind that means
+                nobody really knows the full version.
+              </p>
+            </div>
+            <div className="bring-card">
+              <div className="bring-icon">{"\u2740"}</div>
+              <h4>Wedding season</h4>
+              <p>
+                The questions. The comparisons. The timeline your family runs
+                that you never agreed to.
+              </p>
+            </div>
+            <div className="bring-card">
+              <div className="bring-icon">{"\u2726"}</div>
+              <h4>Raising kids between worlds</h4>
+              <p>
+                Discipline styles that clash. In-laws with opinions. Teaching
+                your kids a culture you&rsquo;re still figuring out yourself.
+              </p>
+            </div>
+            <div className="bring-card">
+              <div className="bring-icon">{"\u2307"}</div>
+              <h4>Parenting guilt</h4>
+              <p>
+                Losing your patience and then losing sleep over it.
+                The gap between the parent you planned to be and the one who
+                showed up today.
+              </p>
+            </div>
+            <div className="bring-card">
+              <div className="bring-icon">{"\u2747"}</div>
+              <h4>Your kid is struggling</h4>
+              <p>
+                Anxiety at school. Big feelings you don&rsquo;t know how to
+                hold. The fear that you&rsquo;re passing something down.
+              </p>
+            </div>
+            <div className="bring-card">
+              <div className="bring-icon">{"\u2312"}</div>
+              <h4>New parenthood</h4>
+              <p>
+                The identity shift nobody warned you about. A relationship
+                reshaped overnight. Needing village but having Wi-Fi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* MARQUEE */}
       <div className="marquee" aria-hidden="true">
         <div className="marquee-track">
@@ -629,11 +755,13 @@ export default function Home() {
           <div className="keeper-grid">
             <div className="reveal">
               <div className="keeper-card">
-                <div className="keeper-photo" />
+                <div className="keeper-photo">
+                  <Avatar id="aruna" size={240} />
+                </div>
                 <div className="keeper-meta">
                   <div>
                     <div className="keeper-name">
-                      Sarah <em>Williams</em>
+                      Aruna <em>Bhattacharya</em>
                     </div>
                     <div
                       style={{
@@ -669,7 +797,7 @@ export default function Home() {
                 </div>
                 <div className="keeper-cta">
                   <span className="keeper-langs">
-                    At the Hearth &mdash; Sarah&rsquo;s profile
+                    At the Hearth &mdash; Aruna&rsquo;s profile
                   </span>
                   <a
                     href="#"
@@ -886,11 +1014,11 @@ export default function Home() {
                   </div>
                   <div className="friday">
                     <span className="stamp">
-                      Friday reflection &middot; from Sarah
+                      Friday reflection &middot; from Aruna
                     </span>
                     You said you wanted to stop performing. I noticed you
                     laughed three times this week when something wasn&rsquo;t
-                    actually funny. Bring that to Sunday&rsquo;s Sit if you
+                    actually funny. Bring that to Monday&rsquo;s Sit if you
                     want.
                   </div>
                 </div>
