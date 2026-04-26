@@ -35,6 +35,55 @@ function HeroDots() {
   return null;
 }
 
+type AvatarId = 'aruna'|'you'|'maleA'|'maleB'|'femaleA'|'femaleB';
+const AVATARS: Record<AvatarId, { bg: string; skin: string; hair: string; hairStyle: string; top: string; blush?: string }> = {
+  aruna:   { bg: '#E8C9A0', skin: '#A0704B', hair: '#2C1810', hairStyle: 'long',  top: '#C75C3A', blush: '#D4826A' },
+  you:     { bg: '#B8C9D4', skin: '#F0CEAF', hair: '#8B6940', hairStyle: 'bob',   top: '#5B7A8C' },
+  maleA:   { bg: '#C5D4C0', skin: '#5C3820', hair: '#1A0E08', hairStyle: 'crop',  top: '#4F5A45' },
+  maleB:   { bg: '#D4C5B8', skin: '#F0CEAF', hair: '#6B4A28', hairStyle: 'short', top: '#6B6051' },
+  femaleA: { bg: '#D0C0D4', skin: '#C48860', hair: '#2C1810', hairStyle: 'curly', top: '#7A5A6B', blush: '#D09080' },
+  femaleB: { bg: '#C9D0C0', skin: '#5C3820', hair: '#1A0E08', hairStyle: 'locs',  top: '#5A6450' },
+};
+
+function Avatar({ id, size = 48 }: { id: AvatarId; size?: number }) {
+  const a = AVATARS[id];
+  const hairEls: Record<string, React.ReactNode> = {
+    long: <><path d="M12 16 Q12 6 24 5 Q36 6 36 16" fill={a.hair} /><path d="M12 16 Q11 28 15 32" stroke={a.hair} strokeWidth="3.5" fill="none" strokeLinecap="round" /><path d="M36 16 Q37 28 33 32" stroke={a.hair} strokeWidth="3.5" fill="none" strokeLinecap="round" /></>,
+    bob: <><path d="M12 16 Q12 6 24 5 Q36 6 36 16" fill={a.hair} /><path d="M12 16 Q11 24 14 27" stroke={a.hair} strokeWidth="3" fill="none" strokeLinecap="round" /><path d="M36 16 Q37 24 34 27" stroke={a.hair} strokeWidth="3" fill="none" strokeLinecap="round" /></>,
+    crop: <path d="M13 17 Q13 8 24 7 Q35 8 35 17 L35 14 Q34 9 24 8.5 Q14 9 13 14Z" fill={a.hair} />,
+    short: <><path d="M13 17 Q13 7 24 6 Q35 7 35 17 L35 14 Q34 8 24 7.5 Q14 8 13 14Z" fill={a.hair} /><path d="M13 15 Q12 13 14 12" stroke={a.hair} strokeWidth="2" fill="none" /><path d="M35 15 Q36 13 34 12" stroke={a.hair} strokeWidth="2" fill="none" /></>,
+    curly: <><ellipse cx="24" cy="11" rx="15" ry="10" fill={a.hair} />{[14,19,24,29,34].map((x,i) => <circle key={i} cx={x} cy={6 + (i%2)*2} r="3.5" fill={a.hair} />)}<path d="M10 16 Q8 26 13 32" stroke={a.hair} strokeWidth="3" fill="none" strokeLinecap="round" /><path d="M38 16 Q40 26 35 32" stroke={a.hair} strokeWidth="3" fill="none" strokeLinecap="round" /></>,
+    locs: <><path d="M12 16 Q12 6 24 5 Q36 6 36 16" fill={a.hair} />{[12,16.5,21,27,31.5,36].map((x,i) => <rect key={i} x={x-1.2} y={15} width="2.4" height={12 + (i%3)*4} rx="1.2" fill={a.hair} />)}</>,
+  };
+
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Background */}
+      <circle cx="24" cy="24" r="24" fill={a.bg} />
+      {/* Shoulders + top */}
+      <path d="M4 48 Q4 40 15 37 L21 35 L24 37 L27 35 L33 37 Q44 40 44 48Z" fill={a.top} />
+      {/* Collar notch */}
+      <path d="M21 35 L24 39 L27 35" fill="#F0EBE3" />
+      {/* Neck */}
+      <rect x="21" y="29.5" width="6" height="6" rx="3" fill={a.skin} />
+      {/* Head */}
+      <circle cx="24" cy="20" r="11" fill={a.skin} />
+      {/* Hair */}
+      {hairEls[a.hairStyle]}
+      {/* Eyes — two bold dots */}
+      <circle cx="19.5" cy="21" r="1.6" fill="#1A1412" />
+      <circle cx="28.5" cy="21" r="1.6" fill="#1A1412" />
+      {/* Eye highlights */}
+      <circle cx="20.1" cy="20.3" r="0.6" fill="white" opacity="0.9" />
+      <circle cx="29.1" cy="20.3" r="0.6" fill="white" opacity="0.9" />
+      {/* Smile */}
+      <path d="M21 26 Q24 28.5 27 26" stroke="#1A1412" strokeWidth="1" fill="none" strokeLinecap="round" opacity="0.5" />
+      {/* Blush */}
+      {a.blush && <><circle cx="16" cy="24" r="2.5" fill={a.blush} opacity="0.25" /><circle cx="32" cy="24" r="2.5" fill={a.blush} opacity="0.25" /></>}
+    </svg>
+  );
+}
+
 function SmoothScroll() {
   useEffect(() => {
     const handler = (e: Event) => {
@@ -146,51 +195,22 @@ export default function Home() {
                       <span className="ha-batt" />
                     </div>
                     <div className="ha-screen">
-                      {/* Scene 1: Pairing */}
-                      <div
-                        className="ha-scene ha-scene-match"
-                        data-scene="1"
-                      >
-                        <div className="ha-match-head">
-                          <span className="ha-dot" /> Pairing complete &middot;
-                          71 hrs
-                        </div>
-                        <div className="ha-match-stamp">
-                          We found your Keeper
-                        </div>
-                        <div className="ha-portrait-wrap">
-                          <div className="ha-portrait" />
-                          <div className="ha-glow-ring" />
-                        </div>
-                        <div className="ha-match-name">
-                          Aruna <em>Bhattacharya</em>
-                        </div>
-                        <div className="ha-match-meta">
-                          Toronto &middot; Bengali &middot; English &middot;
-                          Hindi
-                          <br />6 yrs at the Hearth
-                        </div>
-                        <div className="ha-match-tags">
-                          <span>Diaspora</span>
-                          <span>Family</span>
-                          <span>Caregiving</span>
-                        </div>
-                      </div>
-
-                      {/* Scene 2: Video Sit */}
+                      {/* Scene 1: The Sit (video call) */}
                       <div
                         className="ha-scene ha-scene-video"
-                        data-scene="2"
+                        data-scene="1"
                       >
                         <div className="ha-vid-header">
                           <span className="ha-rec" />
                           <span className="ha-vid-title">
                             The Sit &middot; with Aruna
                           </span>
-                          <span className="ha-vid-time">12:04</span>
+                          <span className="ha-vid-time">24:31</span>
                         </div>
                         <div className="ha-vid-keeper">
-                          <div className="ha-portrait" />
+                          <div className="ha-portrait">
+                            <Avatar id="aruna" size={120} />
+                          </div>
                           <div className="ha-talking-bars">
                             <span />
                             <span />
@@ -202,22 +222,26 @@ export default function Home() {
                           </span>
                         </div>
                         <div className="ha-vid-self">
-                          <div className="ha-portrait" />
+                          <div className="ha-portrait">
+                            <Avatar id="you" size={78} />
+                          </div>
                           <span className="ha-name">You</span>
                         </div>
                         <div className="ha-caption">
-                          &ldquo;What&rsquo;s the smallest true thing you can
-                          say tonight?&rdquo;
+                          &ldquo;What stayed with you since we last sat
+                          together?&rdquo;
                         </div>
                       </div>
 
-                      {/* Scene 3: Long Talk Chat */}
+                      {/* Scene 2: The Long Talk (async chat) */}
                       <div
                         className="ha-scene ha-scene-chat"
-                        data-scene="3"
+                        data-scene="2"
                       >
                         <div className="ha-chat-head">
-                          <span className="ha-chat-avatar" />
+                          <span className="ha-chat-avatar">
+                            <Avatar id="aruna" size={36} />
+                          </span>
                           <div>
                             <div className="ha-chat-title">Aruna B.</div>
                             <div className="ha-chat-sub">
@@ -226,22 +250,56 @@ export default function Home() {
                             </div>
                           </div>
                         </div>
-                        <div className="ha-msg ha-msg-them">
-                          My mother brought it up again. I don&rsquo;t know how
-                          to be honest without lighting the whole evening on
-                          fire.
+                        <div className="ha-msg ha-msg-me" style={{ animationDelay: '0.5s' }}>
+                          Amma called again. She wants me home for Diwali but
+                          the way she said it&thinsp;&mdash;&thinsp;like I owe
+                          her my whole November.
                         </div>
-                        <div className="ha-msg ha-msg-me">
-                          Heard. Two questions before you decide anything: what
-                          does <i>she</i> think she&rsquo;s protecting?
+                        <div className="ha-msg ha-msg-them" style={{ animationDelay: '1.4s' }}>
+                          What would it feel like to say yes only to the parts
+                          you actually want?
                         </div>
                         <div className="ha-typing">
                           <span />
                           <span />
                           <span />
                         </div>
-                        <div className="ha-msg ha-msg-them late">
-                          Oh. I never asked it like that.
+                        <div className="ha-msg ha-msg-me" style={{ animationDelay: '3.2s' }}>
+                          I didn&rsquo;t know I was allowed to do that.
+                        </div>
+                      </div>
+
+                      {/* Scene 3: Embers */}
+                      <div
+                        className="ha-scene ha-scene-ember"
+                        data-scene="3"
+                      >
+                        <div className="ha-ember-head">
+                          <span className="ha-ember-flame">
+                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                              <path d="M8 0C8 0 2 6 2 11a6 6 0 0012 0C14 6 8 0 8 0z" fill="var(--ember)" />
+                              <path d="M8 8c0 0-3 3-3 6a3 3 0 006 0c0-3-3-6-3-6z" fill="#FFB74D" />
+                            </svg>
+                          </span>
+                          <span>Embers &middot; 3 min read</span>
+                        </div>
+                        <h3 className="ha-ember-title">
+                          The Weight You Inherited
+                        </h3>
+                        <p className="ha-ember-subtitle">
+                          On carrying what was never yours to hold
+                        </p>
+                        <div className="ha-ember-body">
+                          <p>
+                            Your grandmother carried silence like currency.
+                          </p>
+                          <p>You learned to spend it the same way.</p>
+                        </div>
+                        <div className="ha-ember-footer">
+                          <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+                            <path d="M1 3a2 2 0 012-2h8a2 2 0 012 2v11.5l-6-3-6 3V3z" stroke="var(--ember)" strokeWidth="1.5" fill="none" />
+                          </svg>
+                          <span>Saved to your Hearth</span>
                         </div>
                       </div>
 
@@ -254,7 +312,9 @@ export default function Home() {
                           Friday Reflection &middot; from Aruna
                         </div>
                         <div className="ha-friday-author">
-                          <div className="ha-friday-avatar" />
+                          <div className="ha-friday-avatar">
+                            <Avatar id="aruna" size={38} />
+                          </div>
                           <div>
                             <div className="ha-friday-name">
                               Aruna Bhattacharya
@@ -271,7 +331,7 @@ export default function Home() {
                             something wasn&rsquo;t actually funny.
                           </p>
                           <p>
-                            Bring that to Sunday&rsquo;s Sit if you want.
+                            Bring that to Monday&rsquo;s Sit if you want.
                           </p>
                         </div>
                         <div className="ha-seal">&#10038;</div>
@@ -288,23 +348,35 @@ export default function Home() {
                         </div>
                         <div className="ha-circle-grid">
                           <div className="ha-circle-tile">
-                            <div className="ha-portrait" />
+                            <div className="ha-portrait">
+                              <Avatar id="aruna" size={80} />
+                            </div>
                             <span className="ha-circle-host">HOST</span>
                           </div>
                           <div className="ha-circle-tile">
-                            <div className="ha-portrait" />
+                            <div className="ha-portrait">
+                              <Avatar id="femaleA" size={80} />
+                            </div>
                           </div>
                           <div className="ha-circle-tile">
-                            <div className="ha-portrait" />
+                            <div className="ha-portrait">
+                              <Avatar id="maleA" size={80} />
+                            </div>
                           </div>
                           <div className="ha-circle-tile">
-                            <div className="ha-portrait" />
+                            <div className="ha-portrait">
+                              <Avatar id="maleB" size={80} />
+                            </div>
                           </div>
                           <div className="ha-circle-tile">
-                            <div className="ha-portrait" />
+                            <div className="ha-portrait">
+                              <Avatar id="femaleB" size={80} />
+                            </div>
                           </div>
                           <div className="ha-circle-tile">
-                            <div className="ha-portrait" />
+                            <div className="ha-portrait">
+                              <Avatar id="you" size={80} />
+                            </div>
                             <span
                               className="ha-circle-host"
                               style={{ background: "var(--sage)" }}
@@ -317,20 +389,27 @@ export default function Home() {
                           &ldquo;The mother you became, the mother you
                           had.&rdquo;
                         </div>
+                        <div className="ha-circle-count">
+                          6 of 8 gathered
+                        </div>
                       </div>
 
-                      {/* Scene 6: End */}
-                      <div className="ha-scene ha-scene-end" data-scene="6">
-                        <div className="ha-end-face">
-                          <div className="ha-portrait ha-portrait-big" />
-                          <div className="ha-glow" />
+                      {/* Scene 6: CTA */}
+                      <div className="ha-scene ha-scene-cta" data-scene="6">
+                        <div className="ha-cta-avatar">
+                          <Avatar id="aruna" size={64} />
                         </div>
-                        <div className="ha-end-line">
-                          You weren&rsquo;t
-                          <br />
-                          meant to carry it
-                          <br />
-                          <em>alone.</em>
+                        <div className="ha-cta-tending">
+                          Aruna is <em>tending</em> a spot for you
+                        </div>
+                        <div className="ha-cta-price">
+                          From $29&thinsp;/&thinsp;week
+                        </div>
+                        <div className="ha-cta-btn">
+                          Begin with The First Sit
+                        </div>
+                        <div className="ha-cta-match">
+                          Matched within 72 hours
                         </div>
                       </div>
                     </div>
@@ -353,7 +432,7 @@ export default function Home() {
                   <span className="ha-pdot" data-i="6" />
                 </div>
                 <div className="ha-cap">
-                  A week with your Keeper, in motion
+                  A week with your Keeper
                 </div>
               </div>
             </div>
