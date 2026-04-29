@@ -34,6 +34,14 @@ const FAQ = [
     a: "Yes, at any time. Upgrading to Hearth Deep takes effect immediately and you're billed the prorated difference. Downgrading to Hearthside takes effect at the start of your next billing cycle. Your Keeper stays the same either way.",
   },
   {
+    q: "What's the reschedule policy?",
+    a: "Life happens. Reschedule a Sit up to 24 hours before it starts and there's no fee — just pick a new time that works for both of you. Inside the 24-hour window, we charge a $20 fee to cover your Keeper's time, since they've already held the slot. Emergencies are different — your Keeper has discretion to waive the fee, and they will. We're not going to police a death in the family.",
+  },
+  {
+    q: "What if I miss a Sit?",
+    a: "If you no-show without rescheduling, the Sit counts as taken. Your Keeper will reach out through the Long Talk to check in. Three no-shows in a row triggers a gentle pause — we'll email to ask whether Hearth is still the right fit for this season of your life, with no judgement either way.",
+  },
+  {
     q: "Can I gift a Hearth membership?",
     a: "Yes. Gift options start at $39 for one month. The recipient gets a gentle onboarding email from us, not a surprise invoice. You choose when the gift is delivered. Visit the Gift page for details.",
   },

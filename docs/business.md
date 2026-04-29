@@ -481,7 +481,7 @@ Expansion playbook:
 
 ### 10.2 Keeper Training
 
-**Pre-launch training (60 hours, paid):**
+**Pre-launch training (120 hours, paid):**
 - Hearth philosophy and brand voice (8 hours)
 - Active listening techniques (12 hours)
 - Cultural-bridge skills (6 hours)

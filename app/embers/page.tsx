@@ -7,67 +7,67 @@ import SharedFooter from "../components/SharedFooter";
 
 const CATEGORIES = [
   "All",
-  "Heavy Things",
-  "Family Stuff",
-  "The In-Between",
-  "Practical Ground",
-  "Rituals",
+  "Grief",
+  "Family",
+  "Diaspora",
+  "Identity",
+  "Intimacy",
 ];
 
 const ESSAYS = [
   {
+    slug: "the-weight-you-inherited",
     title: "The Weight You Inherited",
     author: "Aruna Bhattacharya",
-    authorSlug: "aruna-bhattacharya",
-    category: "Heavy Things",
-    readTime: "8 min",
-    excerpt:
-      "Your grandmother carried silence like currency. You learned to spend it the same way. This is about the weight that passes between generations without anyone agreeing to carry it.",
-  },
-  {
-    title: "When Your Parents Call It Concern",
-    author: "Rabia K.",
-    authorSlug: "rabia-k",
-    category: "Family Stuff",
-    readTime: "6 min",
-    excerpt:
-      "There is a particular kind of love that arrives as pressure, as surveillance, as the Sunday call that leaves you flattened. This is about learning to receive it without losing yourself.",
-  },
-  {
-    title: "The Grief That Arrives Ten Years Late",
-    author: "Faisal M.",
-    authorSlug: "faisal-m",
-    category: "Heavy Things",
+    category: "Family",
     readTime: "7 min",
     excerpt:
-      "You thought you were fine. Then a song came on, or a smell, or someone else's father died, and the grief you skipped over found you anyway. It always does.",
+      "My grandmother kept her grief in a tin box on the highest shelf of the kitchen, and we all learned to look up at it without asking. I am forty-two now, and only this year did I understand what I had been carrying.",
   },
   {
-    title: "The Sunday Before Everything Changes",
-    author: "Priya S.",
-    authorSlug: "priya-s",
-    category: "The In-Between",
-    readTime: "4 min",
+    slug: "on-saying-no-to-your-mother",
+    title: "On Saying No to Your Mother",
+    author: "Rabia Khan",
+    category: "Family",
+    readTime: "6 min",
     excerpt:
-      "The last quiet day before a new job, a birth, a move, a diagnosis. The in-between that nobody photographs. This is about learning to stay in it instead of rushing through.",
+      "I said no to my mother on a Tuesday afternoon, over the phone, about a wedding I did not want to attend. I had practiced the sentence for weeks. It came out smaller than I had expected.",
   },
   {
-    title: "What Your Silence Costs You",
-    author: "Hassan A.",
-    authorSlug: "hassan-a",
-    category: "Practical Ground",
-    readTime: "5 min",
+    slug: "late-grief",
+    title: "Late Grief",
+    author: "Faisal Mahmood",
+    category: "Grief",
+    readTime: "6 min",
     excerpt:
-      "Silence is not neutral. It has a price, and most of us pay it for years before we see the bill. This is about the specific cost of not saying the thing that needs to be said.",
+      "My father died in 2014. I gave the eulogy in two languages. I did not cry. I went back to work on a Monday. The grief found me anyway, ten years late, in the spice aisle of a grocery store in Houston.",
   },
   {
-    title: "A Small Ritual for Hard Days",
-    author: "Aruna Bhattacharya",
-    authorSlug: "aruna-bhattacharya",
-    category: "Rituals",
-    readTime: "3 min",
+    slug: "code-switch-fatigue",
+    title: "Code-Switch Fatigue",
+    author: "Devika Iyer",
+    category: "Diaspora",
+    readTime: "7 min",
     excerpt:
-      "Not a cure. Not a solution. Just a practice for the days when everything feels like too much — something small you can do to mark the moment and move through it.",
+      "I have three voices. The work voice, the family voice, the friend voice. I switch between them so fast I no longer know which one is the original. I am tired in a way that sleep does not fix.",
+  },
+  {
+    slug: "the-bedroom-got-quiet",
+    title: "The Bedroom Got Quiet",
+    author: "Saira Ahmed",
+    category: "Intimacy",
+    readTime: "7 min",
+    excerpt:
+      "We did not fight. We did not stop being kind. The bedroom just got quiet in a way I did not have language for, and I lived inside the quiet for almost three years before I admitted it to anyone.",
+  },
+  {
+    slug: "the-year-i-stopped-performing",
+    title: "The Year I Stopped Performing",
+    author: "Meera Krishnan",
+    category: "Identity",
+    readTime: "7 min",
+    excerpt:
+      "I had been the good daughter, the good employee, the good friend, the good wife. I was thirty-six when I noticed, in a parking lot, that I had not asked myself what I wanted in maybe a decade. This is what happened next.",
   },
 ];
 
@@ -156,8 +156,9 @@ export default function EmbersPage() {
             }}
           >
             {filtered.map((essay) => (
-              <div
-                key={essay.title}
+              <Link
+                key={essay.slug}
+                href={`/embers/${essay.slug}`}
                 style={{
                   background: "var(--paper-2)",
                   border: "1px solid var(--rule)",
@@ -168,16 +169,18 @@ export default function EmbersPage() {
                   gap: 16,
                   transition: "transform .25s ease, box-shadow .25s ease",
                   cursor: "pointer",
+                  textDecoration: "none",
+                  color: "inherit",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.transform =
+                  (e.currentTarget as HTMLAnchorElement).style.transform =
                     "translateY(-3px)";
-                  (e.currentTarget as HTMLDivElement).style.boxShadow =
+                  (e.currentTarget as HTMLAnchorElement).style.boxShadow =
                     "0 16px 40px -20px rgba(26,23,20,.18)";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.transform = "";
-                  (e.currentTarget as HTMLDivElement).style.boxShadow = "";
+                  (e.currentTarget as HTMLAnchorElement).style.transform = "";
+                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = "";
                 }}
               >
                 <div
@@ -268,7 +271,7 @@ export default function EmbersPage() {
                     Read &rarr;
                   </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 

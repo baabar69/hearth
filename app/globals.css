@@ -154,6 +154,9 @@ section { padding: 120px 0; position: relative; }
 .bring-card:hover .bring-icon { background: var(--ember); color: #FFF6E8; transform: scale(1.08); }
 .bring-card h4 { font-family: var(--serif); font-weight: 380; font-size: 20px; line-height: 1.15; margin-bottom: 10px; }
 .bring-card p { font-size: 14px; color: var(--ink-2); line-height: 1.5; }
+a.bring-card-link { display: block; text-decoration: none; color: inherit; cursor: pointer; }
+a.bring-card-link h4 { color: var(--ink); }
+a.bring-card-link:hover h4 { color: var(--ember); transition: color .2s; }
 @media (max-width: 1000px) { .bring-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .bring-grid { grid-template-columns: 1fr; } }
 

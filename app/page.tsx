@@ -1,6 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import SharedFooter from "./components/SharedFooter";
+import SharedNav from "./components/SharedNav";
 
 function RevealOnScroll() {
   useEffect(() => {
@@ -113,37 +116,41 @@ function SmoothScroll() {
 }
 
 export default function Home() {
+  const [ctaStep, setCtaStep] = useState(1);
+  const [ctaName, setCtaName] = useState("");
+  const [ctaEmail, setCtaEmail] = useState("");
+  const [ctaTopics, setCtaTopics] = useState<string[]>([]);
+
+  const intakeTopics = [
+    { id: "grief", label: "Grief or loss" },
+    { id: "family", label: "Family pressure" },
+    { id: "diaspora", label: "Life between cultures" },
+    { id: "identity", label: "Identity & belonging" },
+    { id: "sexual_identity", label: "Sexual identity" },
+    { id: "intimacy", label: "Intimacy & shame" },
+    { id: "relationships", label: "Relationships" },
+    { id: "marriage", label: "Marriage or partnership" },
+    { id: "career", label: "Career & life direction" },
+    { id: "anxiety", label: "Anxiety or overwhelm" },
+    { id: "parenting", label: "Parenting stress" },
+    { id: "transition", label: "Major life change" },
+    { id: "loneliness", label: "Loneliness" },
+    { id: "other", label: "Something else" },
+  ];
+
+  const toggleTopic = (id: string) => {
+    setCtaTopics((prev) =>
+      prev.includes(id) ? prev.filter((t) => t !== id) : [...prev, id]
+    );
+  };
+
   return (
     <>
       <RevealOnScroll />
       <HeroDots />
       <SmoothScroll />
 
-      {/* NAV */}
-      <header className="nav">
-        <div className="wrap nav-inner">
-          <a href="/" className="brand">
-            <span className="brand-mark" />
-            <span className="brand-name">Hearth</span>
-          </a>
-          <nav className="nav-links">
-            <a href="#between">How it works</a>
-            <a href="#keepers">Meet the Keepers</a>
-            <a href="#circles">Circles</a>
-            <a href="#embers">Embers</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#stories">The Stories</a>
-          </nav>
-          <div className="nav-cta">
-            <a href="#" className="btn btn-ghost btn-sm">
-              Sign in
-            </a>
-            <a href="#cta" className="btn btn-primary btn-sm">
-              Begin the First Sit <span className="arr">&rarr;</span>
-            </a>
-          </div>
-        </div>
-      </header>
+      <SharedNav />
 
       {/* HERO */}
       <section className="hero">
@@ -195,22 +202,51 @@ export default function Home() {
                       <span className="ha-batt" />
                     </div>
                     <div className="ha-screen">
-                      {/* Scene 1: The Sit (video call) */}
+                      {/* Scene 1: Pairing */}
+                      <div
+                        className="ha-scene ha-scene-match"
+                        data-scene="1"
+                      >
+                        <div className="ha-match-head">
+                          <span className="ha-dot" /> Pairing complete &middot;
+                          71 hrs
+                        </div>
+                        <div className="ha-match-stamp">
+                          We found your Keeper
+                        </div>
+                        <div className="ha-portrait-wrap">
+                          <div className="ha-portrait" />
+                          <div className="ha-glow-ring" />
+                        </div>
+                        <div className="ha-match-name">
+                          Aruna <em>Bhattacharya</em>
+                        </div>
+                        <div className="ha-match-meta">
+                          Toronto &middot; Bengali &middot; English &middot;
+                          Hindi
+                          <br />Founding Keeper
+                        </div>
+                        <div className="ha-match-tags">
+                          <span>Diaspora</span>
+                          <span>Family</span>
+                          <span>Caregiving</span>
+                        </div>
+                      </div>
+
+                      {/* Scene 2: Video Sit */}
                       <div
                         className="ha-scene ha-scene-video"
-                        data-scene="1"
+                        data-scene="2"
                       >
                         <div className="ha-vid-header">
                           <span className="ha-rec" />
                           <span className="ha-vid-title">
                             The Sit &middot; with Aruna
                           </span>
-                          <span className="ha-vid-time">24:31</span>
+                          <span className="ha-vid-time">12:04</span>
                         </div>
                         <div className="ha-vid-keeper">
-                          <div className="ha-portrait">
-                            <Avatar id="aruna" size={120} />
-                          </div>
+                          <div className="ha-portrait" />
                           <div className="ha-talking-bars">
                             <span />
                             <span />
@@ -222,26 +258,22 @@ export default function Home() {
                           </span>
                         </div>
                         <div className="ha-vid-self">
-                          <div className="ha-portrait">
-                            <Avatar id="you" size={78} />
-                          </div>
+                          <div className="ha-portrait" />
                           <span className="ha-name">You</span>
                         </div>
                         <div className="ha-caption">
-                          &ldquo;What stayed with you since we last sat
-                          together?&rdquo;
+                          &ldquo;What&rsquo;s the smallest true thing you can
+                          say tonight?&rdquo;
                         </div>
                       </div>
 
-                      {/* Scene 2: The Long Talk (async chat) */}
+                      {/* Scene 3: Long Talk Chat */}
                       <div
                         className="ha-scene ha-scene-chat"
-                        data-scene="2"
+                        data-scene="3"
                       >
                         <div className="ha-chat-head">
-                          <span className="ha-chat-avatar">
-                            <Avatar id="aruna" size={36} />
-                          </span>
+                          <span className="ha-chat-avatar" />
                           <div>
                             <div className="ha-chat-title">Aruna B.</div>
                             <div className="ha-chat-sub">
@@ -250,56 +282,22 @@ export default function Home() {
                             </div>
                           </div>
                         </div>
-                        <div className="ha-msg ha-msg-me" style={{ animationDelay: '0.5s' }}>
-                          Amma called again. She wants me home for Diwali but
-                          the way she said it&thinsp;&mdash;&thinsp;like I owe
-                          her my whole November.
+                        <div className="ha-msg ha-msg-them">
+                          My mother brought it up again. I don&rsquo;t know how
+                          to be honest without lighting the whole evening on
+                          fire.
                         </div>
-                        <div className="ha-msg ha-msg-them" style={{ animationDelay: '1.4s' }}>
-                          What would it feel like to say yes only to the parts
-                          you actually want?
+                        <div className="ha-msg ha-msg-me">
+                          Heard. Two questions before you decide anything: what
+                          does <i>she</i> think she&rsquo;s protecting?
                         </div>
                         <div className="ha-typing">
                           <span />
                           <span />
                           <span />
                         </div>
-                        <div className="ha-msg ha-msg-me" style={{ animationDelay: '3.2s' }}>
-                          I didn&rsquo;t know I was allowed to do that.
-                        </div>
-                      </div>
-
-                      {/* Scene 3: Embers */}
-                      <div
-                        className="ha-scene ha-scene-ember"
-                        data-scene="3"
-                      >
-                        <div className="ha-ember-head">
-                          <span className="ha-ember-flame">
-                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
-                              <path d="M8 0C8 0 2 6 2 11a6 6 0 0012 0C14 6 8 0 8 0z" fill="var(--ember)" />
-                              <path d="M8 8c0 0-3 3-3 6a3 3 0 006 0c0-3-3-6-3-6z" fill="#FFB74D" />
-                            </svg>
-                          </span>
-                          <span>Embers &middot; 3 min read</span>
-                        </div>
-                        <h3 className="ha-ember-title">
-                          The Weight You Inherited
-                        </h3>
-                        <p className="ha-ember-subtitle">
-                          On carrying what was never yours to hold
-                        </p>
-                        <div className="ha-ember-body">
-                          <p>
-                            Your grandmother carried silence like currency.
-                          </p>
-                          <p>You learned to spend it the same way.</p>
-                        </div>
-                        <div className="ha-ember-footer">
-                          <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
-                            <path d="M1 3a2 2 0 012-2h8a2 2 0 012 2v11.5l-6-3-6 3V3z" stroke="var(--ember)" strokeWidth="1.5" fill="none" />
-                          </svg>
-                          <span>Saved to your Hearth</span>
+                        <div className="ha-msg ha-msg-them late">
+                          Oh. I never asked it like that.
                         </div>
                       </div>
 
@@ -312,9 +310,7 @@ export default function Home() {
                           Friday Reflection &middot; from Aruna
                         </div>
                         <div className="ha-friday-author">
-                          <div className="ha-friday-avatar">
-                            <Avatar id="aruna" size={38} />
-                          </div>
+                          <div className="ha-friday-avatar" />
                           <div>
                             <div className="ha-friday-name">
                               Aruna Bhattacharya
@@ -331,7 +327,7 @@ export default function Home() {
                             something wasn&rsquo;t actually funny.
                           </p>
                           <p>
-                            Bring that to Monday&rsquo;s Sit if you want.
+                            Bring that to Sunday&rsquo;s Sit if you want.
                           </p>
                         </div>
                         <div className="ha-seal">&#10038;</div>
@@ -348,35 +344,23 @@ export default function Home() {
                         </div>
                         <div className="ha-circle-grid">
                           <div className="ha-circle-tile">
-                            <div className="ha-portrait">
-                              <Avatar id="aruna" size={80} />
-                            </div>
+                            <div className="ha-portrait" />
                             <span className="ha-circle-host">HOST</span>
                           </div>
                           <div className="ha-circle-tile">
-                            <div className="ha-portrait">
-                              <Avatar id="femaleA" size={80} />
-                            </div>
+                            <div className="ha-portrait" />
                           </div>
                           <div className="ha-circle-tile">
-                            <div className="ha-portrait">
-                              <Avatar id="maleA" size={80} />
-                            </div>
+                            <div className="ha-portrait" />
                           </div>
                           <div className="ha-circle-tile">
-                            <div className="ha-portrait">
-                              <Avatar id="maleB" size={80} />
-                            </div>
+                            <div className="ha-portrait" />
                           </div>
                           <div className="ha-circle-tile">
-                            <div className="ha-portrait">
-                              <Avatar id="femaleB" size={80} />
-                            </div>
+                            <div className="ha-portrait" />
                           </div>
                           <div className="ha-circle-tile">
-                            <div className="ha-portrait">
-                              <Avatar id="you" size={80} />
-                            </div>
+                            <div className="ha-portrait" />
                             <span
                               className="ha-circle-host"
                               style={{ background: "var(--sage)" }}
@@ -389,27 +373,20 @@ export default function Home() {
                           &ldquo;The mother you became, the mother you
                           had.&rdquo;
                         </div>
-                        <div className="ha-circle-count">
-                          6 of 8 gathered
-                        </div>
                       </div>
 
-                      {/* Scene 6: CTA */}
-                      <div className="ha-scene ha-scene-cta" data-scene="6">
-                        <div className="ha-cta-avatar">
-                          <Avatar id="aruna" size={64} />
+                      {/* Scene 6: End */}
+                      <div className="ha-scene ha-scene-end" data-scene="6">
+                        <div className="ha-end-face">
+                          <div className="ha-portrait ha-portrait-big" />
+                          <div className="ha-glow" />
                         </div>
-                        <div className="ha-cta-tending">
-                          Aruna is <em>tending</em> a spot for you
-                        </div>
-                        <div className="ha-cta-price">
-                          From $29&thinsp;/&thinsp;week
-                        </div>
-                        <div className="ha-cta-btn">
-                          Begin with The First Sit
-                        </div>
-                        <div className="ha-cta-match">
-                          Matched within 72 hours
+                        <div className="ha-end-line">
+                          You weren&rsquo;t
+                          <br />
+                          meant to carry it
+                          <br />
+                          <em>alone.</em>
                         </div>
                       </div>
                     </div>
@@ -556,7 +533,7 @@ export default function Home() {
           </div>
 
           <div className="bring-grid reveal">
-            <div className="bring-card">
+            <Link href="/for/family-pressure" className="bring-card bring-card-link">
               <div className="bring-icon">{"\u2302"}</div>
               <h4>Family pressure</h4>
               <p>
@@ -564,15 +541,15 @@ export default function Home() {
                 translate. Parents who love you in a language that feels like
                 control.
               </p>
-            </div>
-            <div className="bring-card">
+            </Link>
+            <Link href="/for/grief" className="bring-card bring-card-link">
               <div className="bring-icon">{"\u2736"}</div>
               <h4>Grief &amp; loss</h4>
               <p>
                 The kind that arrives on time and the kind that shows up ten
                 years late. Losing people, places, versions of yourself.
               </p>
-            </div>
+            </Link>
             <div className="bring-card">
               <div className="bring-icon">{"\u2661"}</div>
               <h4>Caregiving burnout</h4>
@@ -581,14 +558,14 @@ export default function Home() {
                 The guilt of needing your own chair.
               </p>
             </div>
-            <div className="bring-card">
+            <Link href="/for/diaspora" className="bring-card bring-card-link">
               <div className="bring-icon">{"\u2316"}</div>
               <h4>Diaspora identity</h4>
               <p>
                 Too much of one thing, not enough of the other. Code-switching
                 so often you forget which one is real.
               </p>
-            </div>
+            </Link>
             <div className="bring-card">
               <div className="bring-icon">{"\u2318"}</div>
               <h4>Career crossroads</h4>
@@ -654,6 +631,32 @@ export default function Home() {
                 reshaped overnight. Needing village but having Wi-Fi.
               </p>
             </div>
+            <Link href="/for/intimacy" className="bring-card bring-card-link">
+              <div className="bring-icon">{"\u25ce"}</div>
+              <h4>Intimacy &amp; shame</h4>
+              <p>
+                The things you&rsquo;ve never said out loud about your body,
+                your desires, or your marriage. Shame that came before you
+                had words for it.
+              </p>
+            </Link>
+            <Link href="/for/sexual-identity" className="bring-card bring-card-link">
+              <div className="bring-icon">{"\u25c7"}</div>
+              <h4>Sexual identity</h4>
+              <p>
+                Questions you&rsquo;ve carried alone for years. Who you are,
+                who you love, and what that means in the world you were raised
+                in.
+              </p>
+            </Link>
+            <Link href="/for/anxiety" className="bring-card bring-card-link">
+              <div className="bring-icon">{"\u26ac"}</div>
+              <h4>Anxiety &amp; the body</h4>
+              <p>
+                The racing heart before a family dinner. The weight that sits
+                in your chest. Worry that won&rsquo;t stay in one place.
+              </p>
+            </Link>
           </div>
         </div>
       </section>
@@ -800,7 +803,7 @@ export default function Home() {
                     At the Hearth &mdash; Aruna&rsquo;s profile
                   </span>
                   <a
-                    href="#"
+                    href="/keepers/aruna-bhattacharya"
                     className="btn btn-ghost"
                     style={{ padding: "9px 14px", fontSize: 12.5 }}
                   >
@@ -890,10 +893,10 @@ export default function Home() {
                   flexWrap: "wrap" as const,
                 }}
               >
-                <a href="#" className="btn btn-primary">
+                <a href="/keepers" className="btn btn-primary">
                   Browse all Keepers <span className="arr">&rarr;</span>
                 </a>
-                <a href="#" className="btn btn-ghost">
+                <a href="/how-it-works" className="btn btn-ghost">
                   How Pairing works
                 </a>
               </div>
@@ -1478,11 +1481,11 @@ export default function Home() {
               Hearth Deep &middot; Single passes $35
             </p>
             <a
-              href="#"
+              href="/intake"
               className="btn btn-primary"
               style={{ background: "var(--ember)" }}
             >
-              All upcoming Circles <span className="arr">&rarr;</span>
+              Join Hearth & access Circles <span className="arr">&rarr;</span>
             </a>
           </div>
         </div>
@@ -1746,7 +1749,7 @@ export default function Home() {
                 memory but absent in modern life.
               </p>
               <a
-                href="#"
+                href="/about"
                 className="btn btn-ghost"
                 style={{ marginTop: 24 }}
               >
@@ -1800,71 +1803,107 @@ export default function Home() {
           <p className="sub">
             Pull up a chair. Your Keeper is on the other side.
           </p>
-          <div className="cta-row">
-            <a href="#" className="btn btn-primary btn-lg">
-              Begin the First Sit <span className="arr">&rarr;</span>
-            </a>
-            <a href="#" className="btn btn-ghost btn-lg">
-              Light a Hearth for someone
-            </a>
-          </div>
+          {/* Step indicator */}
+          {ctaStep < 3 && (
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 32, marginBottom: 24 }}>
+              {[1, 2].map((s) => (
+                <div key={s} style={{
+                  width: s === ctaStep ? 24 : 8, height: 8, borderRadius: 100,
+                  background: s === ctaStep ? "var(--ember)" : "rgba(255,255,255,0.25)",
+                  transition: "all 0.3s",
+                }} />
+              ))}
+            </div>
+          )}
+
+          {/* Step 1 — name + email */}
+          {ctaStep === 1 && (
+            <form
+              onSubmit={(e) => { e.preventDefault(); setCtaStep(2); }}
+              style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 12, width: "100%", maxWidth: 440, margin: "0 auto" }}
+            >
+              <input
+                type="text" required placeholder="Your first name"
+                value={ctaName} onChange={(e) => setCtaName(e.target.value)}
+                style={{ width: "100%", padding: "12px 16px", fontFamily: "var(--mono)", fontSize: 14, border: "1px solid rgba(255,255,255,0.25)", borderRadius: 6, background: "rgba(255,255,255,0.08)", color: "var(--paper)", outline: "none", boxSizing: "border-box" as const }}
+              />
+              <input
+                type="email" required placeholder="your@email.com"
+                value={ctaEmail} onChange={(e) => setCtaEmail(e.target.value)}
+                style={{ width: "100%", padding: "12px 16px", fontFamily: "var(--mono)", fontSize: 14, border: "1px solid rgba(255,255,255,0.25)", borderRadius: 6, background: "rgba(255,255,255,0.08)", color: "var(--paper)", outline: "none", boxSizing: "border-box" as const }}
+              />
+              <button type="submit" className="btn btn-primary btn-lg" style={{ width: "100%" }}>
+                Continue &rarr;
+              </button>
+              <p style={{ fontFamily: "var(--mono)", fontSize: 11, letterSpacing: "0.08em", color: "rgba(255,255,255,0.45)", textAlign: "center", marginTop: 4 }}>
+                14-day money-back &middot; cancel any time &middot; no credit card to start
+              </p>
+            </form>
+          )}
+
+          {/* Step 2 — what brings you here */}
+          {ctaStep === 2 && (
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 20, width: "100%", maxWidth: 480, margin: "0 auto" }}>
+              <p style={{ fontFamily: "var(--serif)", fontSize: 20, color: "var(--paper)", textAlign: "center", lineHeight: 1.4, margin: 0 }}>
+                {ctaName ? `${ctaName}, what` : "What"} brings you to Hearth?
+              </p>
+              <p style={{ fontFamily: "var(--mono)", fontSize: 12, color: "rgba(255,255,255,0.5)", textAlign: "center", marginTop: -12, letterSpacing: "0.08em" }}>
+                Pick everything that feels true.
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap" as const, gap: 10, justifyContent: "center" }}>
+                {intakeTopics.map((t) => {
+                  const selected = ctaTopics.includes(t.id);
+                  return (
+                    <button key={t.id} type="button" onClick={() => toggleTopic(t.id)} style={{
+                      padding: "9px 18px", fontFamily: "var(--mono)", fontSize: 13, letterSpacing: "0.06em",
+                      borderRadius: 100, border: selected ? "1.5px solid var(--ember)" : "1.5px solid rgba(255,255,255,0.25)",
+                      background: selected ? "var(--ember)" : "rgba(255,255,255,0.06)", color: "var(--paper)",
+                      cursor: "pointer", transition: "all 0.15s",
+                    }}>
+                      {t.label}
+                    </button>
+                  );
+                })}
+              </div>
+              <button
+                type="button"
+                disabled={ctaTopics.length === 0}
+                onClick={() => setCtaStep(3)}
+                className="btn btn-primary btn-lg"
+                style={{ width: "100%", maxWidth: 300, opacity: ctaTopics.length === 0 ? 0.45 : 1, cursor: ctaTopics.length === 0 ? "not-allowed" : "pointer" }}
+              >
+                Find my Keeper &rarr;
+              </button>
+              <button type="button" onClick={() => setCtaStep(1)} style={{ fontFamily: "var(--mono)", fontSize: 12, color: "rgba(255,255,255,0.4)", background: "none", border: "none", cursor: "pointer", letterSpacing: "0.06em" }}>
+                &larr; Back
+              </button>
+            </div>
+          )}
+
+          {/* Step 3 — confirmation */}
+          {ctaStep === 3 && (
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, marginTop: 8, textAlign: "center" }}>
+              <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24 }}>
+                &#x2764;&#xfe0e;
+              </div>
+              <p style={{ fontFamily: "var(--serif)", fontSize: 22, color: "var(--paper)", maxWidth: "34ch", lineHeight: 1.4, margin: 0 }}>
+                {ctaName ? `${ctaName}, your` : "Your"} Keeper is being matched.
+              </p>
+              <p style={{ fontFamily: "var(--mono)", fontSize: 13, color: "rgba(255,255,255,0.55)", letterSpacing: "0.06em", maxWidth: "36ch", lineHeight: 1.6, margin: 0 }}>
+                Expect an email at {ctaEmail} within 48 hours.
+              </p>
+              <a href="/embers" style={{ fontFamily: "var(--mono)", fontSize: 13, letterSpacing: "0.08em", color: "#FFB74D", textDecoration: "underline", marginTop: 8 }}>
+                While you wait &mdash; read an Ember &rarr;
+              </a>
+              <a href="/gift" className="btn btn-ghost btn-lg" style={{ marginTop: 8 }}>
+                Light a Hearth for someone
+              </a>
+            </div>
+          )}
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer>
-        <div className="wrap">
-          <div className="foot-grid">
-            <div className="foot-brand">
-              <div className="brand">
-                <span className="brand-mark" />
-                <span
-                  className="brand-name"
-                  style={{ color: "var(--paper)" }}
-                >
-                  Hearth
-                </span>
-              </div>
-              <p>
-                Peer support, paired for the long term. Hearth is not therapy,
-                not a chatbot, not a crisis line. We are the people who pull up
-                a chair.
-              </p>
-            </div>
-            <div className="foot-col">
-              <h5>Hearth</h5>
-              <a href="#">How it works</a>
-              <a href="#">Meet the Keepers</a>
-              <a href="#">Circles</a>
-              <a href="#">Embers</a>
-              <a href="#">The Bridge</a>
-            </div>
-            <div className="foot-col">
-              <h5>The Brand</h5>
-              <a href="#">Our story</a>
-              <a href="#">The Stories</a>
-              <a href="#">The Tea &mdash; free content</a>
-              <a href="#">Pricing</a>
-              <a href="#">Light a Hearth</a>
-            </div>
-            <div className="foot-col">
-              <h5>Members</h5>
-              <a href="#">Sign in</a>
-              <a href="#">Become a Keeper</a>
-              <a href="#">Privacy</a>
-              <a href="#">Terms</a>
-              <a href="#">Contact</a>
-            </div>
-          </div>
-          <div className="foot-bot">
-            <span>&copy; 2026 Hearth. Made with attention.</span>
-            <span className="crisis">
-              In crisis? Call or text 988 (US) &middot; 988 (Canada). Hearth is
-              not emergency support.
-            </span>
-          </div>
-        </div>
-      </footer>
+      <SharedFooter />
     </>
   );
 }

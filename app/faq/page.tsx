@@ -90,6 +90,14 @@ const CATEGORIES: Category[] = [
         q: "What's the refund policy?",
         a: "14-day money-back guarantee from your first Sit. If it doesn't feel right, email us — full refund, no questions. After 14 days, unused months on annual plans are refunded pro-rated if you cancel. Monthly plans are charged as used.",
       },
+      {
+        q: "What's the reschedule policy?",
+        a: "Reschedule a Sit up to 24 hours before it starts — no fee, just pick a new time. Inside the 24-hour window, there's a $20 late-reschedule fee that covers your Keeper's held slot. Emergencies are different — your Keeper has discretion to waive the fee, and they will. We're not going to police a death in the family.",
+      },
+      {
+        q: "What if I miss a Sit?",
+        a: "If you no-show without rescheduling, the Sit counts as taken. Your Keeper will reach out through the Long Talk to check in. Three no-shows in a row triggers a gentle pause — we'll email to ask whether Hearth is still the right fit for this season, with no judgement either way.",
+      },
     ],
   },
   {
