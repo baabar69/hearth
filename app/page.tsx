@@ -1513,23 +1513,39 @@ export default function Home() {
 
           <div className="price-grid reveal">
             <div className="price">
-              <div className="plan">Standard</div>
+              <div
+                style={{
+                  display: "inline-block",
+                  alignSelf: "flex-start",
+                  background: "var(--ember)",
+                  color: "white",
+                  fontFamily: "var(--mono)",
+                  fontSize: 10,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase" as const,
+                  padding: "4px 10px",
+                  borderRadius: 100,
+                  marginBottom: 16,
+                }}
+              >
+                Most popular
+              </div>
               <div className="name">
                 <em>Hearthside</em>
               </div>
               <div className="pp">
-                <span className="num">$29</span>
-                <span className="per">
-                  / week &middot; billed monthly &middot; ~$116/mo &middot; or
-                  $999/yr
-                </span>
+                <span className="num">$39</span>
+                <span className="per">/mo &middot; billed monthly</span>
               </div>
+              <p style={{ fontSize: 13, color: "var(--ink-3)", marginBottom: 8, marginTop: -4 }}>
+                or $390/yr &mdash; 2 months free
+              </p>
               <ul>
                 <li>
                   Matched Keeper &mdash; paired in 72 hours or we keep looking
                 </li>
                 <li>
-                  One 35&ndash;60 min Sit every week, video or audio
+                  One Sit every two weeks (biweekly) &mdash; 35&ndash;60 min, video or audio
                 </li>
                 <li>
                   Unlimited Long Talk &middot; 24-hour Keeper response window
@@ -1547,22 +1563,36 @@ export default function Home() {
             </div>
 
             <div className="price deep">
-              <div className="plan">Premium</div>
+              <div
+                style={{
+                  display: "inline-block",
+                  alignSelf: "flex-start",
+                  background: "rgba(255,255,255,0.15)",
+                  color: "var(--paper)",
+                  fontFamily: "var(--mono)",
+                  fontSize: 10,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase" as const,
+                  padding: "4px 10px",
+                  borderRadius: 100,
+                  marginBottom: 16,
+                }}
+              >
+                Best for intensive support
+              </div>
               <div className="name">
                 <em>Hearth Deep</em>
               </div>
               <div className="pp">
-                <span className="num" style={{ color: "var(--paper)" }}>
-                  $49
-                </span>
-                <span className="per">
-                  / week &middot; billed monthly &middot; ~$196/mo &middot; or
-                  $1,699/yr
-                </span>
+                <span className="num" style={{ color: "var(--paper)" }}>$99</span>
+                <span className="per">/mo &middot; billed monthly</span>
               </div>
+              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", marginBottom: 8, marginTop: -4 }}>
+                or $990/yr &mdash; 2 months free
+              </p>
               <ul>
                 <li>Everything in Hearthside</li>
-                <li>Two Sits per week</li>
+                <li>Weekly Sits &mdash; 35&ndash;60 min each, every week</li>
                 <li>
                   Priority Long Talk &mdash; 4-hour Keeper response
                 </li>
