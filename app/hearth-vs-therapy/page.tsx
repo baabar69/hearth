@@ -447,6 +447,159 @@ export default function HearthVsTherapyPage() {
         </div>
       </section>
 
+      {/* AI COMPANIONS */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <div>
+              <div className="eyebrow">
+                <span className="dot" />
+                And what about AI companions?
+              </div>
+              <h2 style={{ marginTop: 18 }}>
+                The chair is not a{" "}
+                <span className="serif-i" style={{ color: "var(--ember)" }}>
+                  chatbot.
+                </span>
+              </h2>
+            </div>
+            <p className="lede">
+              The AI companion category is real, growing, and useful for some
+              things. We&rsquo;re not against it. We&rsquo;re different on
+              purpose.
+            </p>
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 24,
+            }}
+            className="vs-ai-grid"
+          >
+            <div
+              style={{
+                background: "var(--paper-2)",
+                border: "1px solid var(--rule)",
+                borderRadius: 12,
+                padding: "32px 32px 28px",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--mono)",
+                  fontSize: 11,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--ink-3)",
+                  marginBottom: 14,
+                }}
+              >
+                What an AI companion is good at
+              </p>
+              <ul
+                style={{
+                  listStyle: "none",
+                  padding: 0,
+                  margin: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 12,
+                }}
+              >
+                {[
+                  "Available at 3am, every night, no scheduling.",
+                  "Will remember your dog's name and your boss's last text.",
+                  "Cheaper than human support — usually $5–$20/month.",
+                  "No social cost. No fear of being a burden.",
+                  "Useful for venting in a low-stakes loop.",
+                ].map((t, i) => (
+                  <li key={i} style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: 10, alignItems: "start" }}>
+                    <span style={{ fontFamily: "var(--mono)", color: "var(--ink-3)", fontSize: 14, marginTop: 2 }}>+</span>
+                    <span style={{ fontFamily: "var(--serif)", fontSize: 15.5, lineHeight: 1.55, color: "var(--ink-2)" }}>
+                      {t}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div
+              style={{
+                background: "var(--ink)",
+                color: "var(--paper)",
+                borderRadius: 12,
+                padding: "32px 32px 28px",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--mono)",
+                  fontSize: 11,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "#FFB74D",
+                  marginBottom: 14,
+                }}
+              >
+                What only a human Keeper does
+              </p>
+              <ul
+                style={{
+                  listStyle: "none",
+                  padding: 0,
+                  margin: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 12,
+                }}
+              >
+                {[
+                  "Notices the thing you didn't say. Asks about the silence.",
+                  "Has lived a version of the same story. Brings real context, not pattern-matched comfort.",
+                  "Sits with you in silence — without filling it.",
+                  "Carries cultural fluency you don't have to translate.",
+                  "Will tell you, gently, when you need a clinician — and walk you to one.",
+                ].map((t, i) => (
+                  <li key={i} style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: 10, alignItems: "start" }}>
+                    <span style={{ color: "#FFB74D", fontSize: 14, marginTop: 2 }}>+</span>
+                    <span style={{ fontFamily: "var(--serif)", fontSize: 15.5, lineHeight: 1.55, color: "rgba(242,237,229,0.88)" }}>
+                      {t}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div
+            style={{
+              maxWidth: 760,
+              marginInline: "auto",
+              marginTop: 48,
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                fontFamily: "var(--serif)",
+                fontSize: "clamp(20px, 2.4vw, 26px)",
+                lineHeight: 1.5,
+                color: "var(--ink-2)",
+                fontStyle: "italic",
+              }}
+            >
+              An AI companion gives you a mirror that talks back. A Keeper
+              gives you a person who has been where you&rsquo;re sitting.{" "}
+              <span style={{ color: "var(--ember)", fontStyle: "normal", fontWeight: 380 }}>
+                Both have a place. They aren&rsquo;t the same thing.
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* THE BRIDGE */}
       <section>
         <div className="wrap">
@@ -551,6 +704,7 @@ export default function HearthVsTherapyPage() {
         @media (max-width: 900px) {
           .vs-grid-2 { grid-template-columns: 1fr !important; }
           .vs-bridge-row { grid-template-columns: 1fr !important; gap: 24px !important; }
+          .vs-ai-grid { grid-template-columns: 1fr !important; }
           .vs-header { grid-template-columns: 100px 1fr 1fr !important; }
           .vs-row { grid-template-columns: 100px 1fr 1fr !important; }
           .vs-header > div, .vs-row > div { padding: 14px 12px !important; font-size: 13px !important; }

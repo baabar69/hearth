@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import ExitPopup from "./components/ExitPopup";
 
 const SITE_URL = "https://hearth.com";
 const SITE_NAME = "Hearth";
@@ -127,7 +128,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_LD) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <ExitPopup />
+      </body>
     </html>
   );
 }

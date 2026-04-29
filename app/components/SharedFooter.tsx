@@ -21,6 +21,7 @@ export default function SharedFooter() {
           <div className="foot-col">
             <h5>Hearth</h5>
             <Link href="/how-it-works">How it works</Link>
+            <Link href="/why-paired">Why paired</Link>
             <Link href="/keepers">Meet the Keepers</Link>
             <Link href="/circles">Circles</Link>
             <Link href="/embers">Embers</Link>

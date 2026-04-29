@@ -96,23 +96,23 @@ export default function TermsPage() {
                 You may cancel your membership at any time. Cancellation is available in one click from your account settings, with no phone call, no exit interview, and no dark patterns required. This is compliant with the FTC&rsquo;s Click-to-Cancel rule.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
-                After cancellation, your access continues through the end of the current billing period. You will not be charged again. Annual memberships that are cancelled will receive a pro-rated refund of unused months.
+                After cancellation, your access continues through the end of the current billing period you have already paid for. You will not be charged again. Annual memberships are paid in full upfront, and you retain full access through the end of the term you have paid for.
               </p>
             </div>
 
             <div>
               <h2 style={{ fontSize: "clamp(22px, 2vw, 30px)", marginBottom: 18 }}>
-                Refund policy
+                Billing &amp; payments
               </h2>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)", marginBottom: 16 }}>
-                Hearth offers a 14-day money-back guarantee from the date of your first Sit. If the service doesn&rsquo;t feel right, email us at{" "}
-                <a href="mailto:hello@hearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
-                  hello@hearth.com
-                </a>{" "}
-                and we will issue a full refund with no questions asked and no exit interview.
+                A valid payment method is required to begin a Hearth membership. Monthly plans are billed on the same date each month, starting the day you sign up. Annual plans are billed in full upfront at a discounted rate. Receipts are provided for every charge.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
-                After the 14-day period, refunds are available for unused months on annual plans. Monthly plan charges are not refunded after the billing date.
+                All charges are final once a billing period has begun. Cancellation stops future charges but does not reverse charges for billing periods that have already started or that you have already used. If you believe a charge was made in error, please email{" "}
+                <a href="mailto:hello@hearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
+                  hello@hearth.com
+                </a>
+                {" "}within 30 days and we will review your case.
               </p>
             </div>
 

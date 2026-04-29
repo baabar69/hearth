@@ -95,8 +95,7 @@ export default function PressPage() {
               <FactRow label="Pricing" value="$39/month (Hearthside, biweekly Sits) · $99/month (Hearth Deep, weekly Sits)" />
               <FactRow label="Keeper training" value="120-hour pre-launch program · ongoing supervision · cultural fluency review" />
               <FactRow label="Match time" value="Within 72 hours of intake. Hand-matched, not algorithmic." />
-              <FactRow label="Cancellation" value="One click, no exit interview. FTC Click-to-Cancel compliant." />
-              <FactRow label="Money-back" value="14 days, no questions." />
+              <FactRow label="Cancellation" value="One click, no exit interview. FTC Click-to-Cancel compliant. Access continues through the end of the billing period you've already paid for." />
               <FactRow label="Where Keepers are based" value="Primarily South Asia. They work evening hours to match US and Canadian time zones." />
               <FactRow label="Where members live" value="Diaspora communities in the US and Canada at launch. UK, Australia, and Gulf coming." />
               <FactRow label="Founded" value="2026" />

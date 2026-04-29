@@ -26,10 +26,6 @@ const FAQ = [
     a: "We offer a limited number of reduced-rate memberships for people who genuinely cannot afford the standard pricing. Email access@hearth.com with a brief note about your situation. We take this seriously and don't require financial documentation.",
   },
   {
-    q: "What's the refund policy?",
-    a: "14-day money-back guarantee from your first Sit. If it doesn't feel right, email us and we'll refund in full — no questions, no exit interview. After 14 days, we refund unused months on annual plans if you cancel; monthly plans are charged as used.",
-  },
-  {
     q: "Can I change tiers mid-subscription?",
     a: "Yes, at any time. Upgrading to Hearth Deep takes effect immediately and you're billed the prorated difference. Downgrading to Hearthside takes effect at the start of your next billing cycle. Your Keeper stays the same either way.",
   },
@@ -122,7 +118,7 @@ export default function PricingPage() {
               <a href="/#cta" className="btn btn-primary">
                 Begin with Hearthside <span className="arr">&rarr;</span>
               </a>
-              <p className="mb">14-day money-back &middot; cancel any time</p>
+              <p className="mb">Cancel any time, in one click</p>
             </div>
 
             {/* Hearth Deep */}
@@ -164,7 +160,98 @@ export default function PricingPage() {
               >
                 Begin with Hearth Deep <span className="arr">&rarr;</span>
               </a>
-              <p className="mb">14-day money-back &middot; cancel any time</p>
+              <p className="mb">Cancel any time, in one click</p>
+            </div>
+          </div>
+
+          {/* WHAT $39 GETS YOU — IN CONTEXT */}
+          <div style={{ marginTop: 80, paddingTop: 48, borderTop: "1px solid var(--rule-2)" }}>
+            <div className="eyebrow" style={{ marginBottom: 18 }}>
+              <span className="dot" />
+              What $39 gets you, in context
+            </div>
+            <h2 style={{ fontSize: "clamp(28px, 3.5vw, 44px)", lineHeight: 1.15, marginBottom: 32, maxWidth: "20ch" }}>
+              Honest pricing, in a{" "}
+              <span className="serif-i" style={{ color: "var(--ember)" }}>
+                crowded landscape.
+              </span>
+            </h2>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(2, 1fr)",
+                gap: 18,
+              }}
+              className="pricing-context-grid"
+            >
+              <ContextCard
+                option="Free peer chats"
+                price="$0"
+                what="Anonymous volunteers, different person each time, variable training. Good for a one-off vent."
+                gap="No consistency. No relationship. No cultural fluency built in."
+              />
+              <ContextCard
+                option="AI companions"
+                price="~$20/mo"
+                what="Always available, remembers what you say, never gets tired. Real comfort for some."
+                gap="Not a person. Doesn't sit with silence the way a human does. Won't notice the thing you didn't say."
+              />
+              <ContextCard
+                option="12-week group programs"
+                price="$300–600"
+                what="Structured curriculum, cohort-based, time-bound. Useful for a specific transition."
+                gap="Ends. One facilitator, group format, no ongoing pairing past graduation."
+              />
+              <ContextCard
+                option="Therapy"
+                price="$400–1,200/mo"
+                what="Clinical care from a licensed professional. The right tool for diagnosis, treatment, deep clinical work."
+                gap="Often hard to find culturally fluent. Expensive without insurance. Not built for the slow weight between sessions."
+                accent
+              />
+            </div>
+
+            <div
+              style={{
+                marginTop: 28,
+                padding: "32px 36px",
+                background: "#FFF7EE",
+                border: "1px solid rgba(156,42,26,0.12)",
+                borderRadius: 12,
+                display: "grid",
+                gridTemplateColumns: "auto 1fr",
+                gap: 24,
+                alignItems: "center",
+              }}
+              className="pricing-hearth-row"
+            >
+              <div
+                style={{
+                  fontFamily: "var(--serif)",
+                  fontSize: 36,
+                  fontWeight: 300,
+                  color: "var(--ember)",
+                  fontStyle: "italic",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Hearth · $39/mo
+              </div>
+              <p
+                style={{
+                  fontFamily: "var(--serif)",
+                  fontSize: 17,
+                  lineHeight: 1.65,
+                  color: "var(--ink-2)",
+                  margin: 0,
+                }}
+              >
+                One Keeper, the same person every Sit, paired by hand within
+                72 hours. Cultural context built in. Async Long Talk in
+                between. The slow, paired, long-term shape of support — for
+                less than the cost of a single therapy session.
+              </p>
             </div>
           </div>
 
@@ -483,7 +570,7 @@ export default function PricingPage() {
             }}
           >
             <span className="dot" style={{ background: "#FFE0B0" }} />
-            14-day money-back guarantee
+            Cancel any time, in one click
           </div>
           <h2 style={{ marginTop: 18 }}>
             Pull up a chair.
@@ -499,7 +586,93 @@ export default function PricingPage() {
         </div>
       </section>
 
+      <style>{`
+        @media (max-width: 760px) {
+          .pricing-context-grid { grid-template-columns: 1fr !important; }
+          .pricing-hearth-row { grid-template-columns: 1fr !important; gap: 14px !important; }
+        }
+      `}</style>
+
       <SharedFooter />
     </>
+  );
+}
+
+function ContextCard({
+  option,
+  price,
+  what,
+  gap,
+  accent,
+}: {
+  option: string;
+  price: string;
+  what: string;
+  gap: string;
+  accent?: boolean;
+}) {
+  return (
+    <div
+      style={{
+        background: "var(--paper)",
+        border: accent ? "1px solid var(--rule)" : "1px solid var(--rule-2)",
+        borderRadius: 10,
+        padding: "24px 26px 26px",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "baseline",
+          marginBottom: 12,
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "var(--serif)",
+            fontSize: 19,
+            fontWeight: 380,
+            color: "var(--ink)",
+          }}
+        >
+          {option}
+        </span>
+        <span
+          style={{
+            fontFamily: "var(--mono)",
+            fontSize: 13,
+            letterSpacing: "0.04em",
+            color: "var(--ink-3)",
+          }}
+        >
+          {price}
+        </span>
+      </div>
+      <p
+        style={{
+          fontSize: 14.5,
+          lineHeight: 1.6,
+          color: "var(--ink-2)",
+          marginBottom: 12,
+        }}
+      >
+        {what}
+      </p>
+      <p
+        style={{
+          fontFamily: "var(--mono)",
+          fontSize: 12,
+          letterSpacing: "0.04em",
+          lineHeight: 1.55,
+          color: "var(--ink-3)",
+          margin: 0,
+          paddingTop: 12,
+          borderTop: "1px solid var(--rule-2)",
+        }}
+      >
+        Where it falls short: {gap}
+      </p>
+    </div>
   );
 }

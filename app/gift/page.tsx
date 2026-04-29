@@ -41,7 +41,7 @@ const FAQ = [
   },
   {
     q: "What if they decide Hearth isn't right for them?",
-    a: "They can decline the gift and we'll issue you a refund within 7 days. No awkward conversation required.",
+    a: "If they decline, the gift converts to a credit on your account — usable for another gift to someone else, or applied to your own future membership. No awkward conversation required, and the value isn't lost.",
   },
   {
     q: "Does the price appear anywhere in the gift email?",

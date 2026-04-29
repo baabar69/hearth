@@ -183,7 +183,7 @@ export default function Home() {
                 </span>
                 <span>
                   <span className="dot" />
-                  14-day money-back
+                  Cancel any time
                 </span>
                 <span>
                   <span className="dot" />
@@ -463,11 +463,11 @@ export default function Home() {
               </div>
             </div>
             <div className="trust-item">
-              <div className="trust-icon">14</div>
+              <div className="trust-icon">×</div>
               <div>
                 <div className="eyebrow">
                   <span className="dot" />
-                  14-day money-back
+                  Cancel in one click
                 </div>
                 <p
                   style={{
@@ -477,9 +477,9 @@ export default function Home() {
                     lineHeight: 1.55,
                   }}
                 >
-                  If the first Sit doesn&rsquo;t feel right, full refund. No
-                  exit interview, no friction. Cancel any time in one click
-                  &mdash; Click-to-Cancel, no dark patterns.
+                  No exit interview, no friction, no dark patterns. Cancel
+                  any time and you keep access through the end of the
+                  billing period you&rsquo;ve already paid for.
                 </p>
               </div>
             </div>
@@ -1508,9 +1508,8 @@ export default function Home() {
               </h2>
             </div>
             <p className="lede">
-              14-day money-back guarantee. If the first Sit doesn&rsquo;t feel
-              right, full refund &mdash; no exit interview, no friction. Cancel
-              any time, in one click.
+              No streaks. No upsells. No dark patterns. Cancel any time, in
+              one click &mdash; no exit interview, no friction.
             </p>
           </div>
 
@@ -1562,7 +1561,7 @@ export default function Home() {
               <a href="#cta" className="btn btn-primary">
                 Begin with Hearthside <span className="arr">&rarr;</span>
               </a>
-              <p className="mb">14-day money-back &middot; cancel any time</p>
+              <p className="mb">Cancel any time, in one click</p>
             </div>
 
             <div className="price deep">
@@ -1613,7 +1612,7 @@ export default function Home() {
               >
                 Begin with Hearth Deep <span className="arr">&rarr;</span>
               </a>
-              <p className="mb">14-day money-back &middot; cancel any time</p>
+              <p className="mb">Cancel any time, in one click</p>
             </div>
           </div>
 
@@ -1836,7 +1835,7 @@ export default function Home() {
                 Continue &rarr;
               </button>
               <p style={{ fontFamily: "var(--mono)", fontSize: 11, letterSpacing: "0.08em", color: "rgba(255,255,255,0.45)", textAlign: "center", marginTop: 4 }}>
-                14-day money-back &middot; cancel any time &middot; no credit card to start
+                Cancel any time, in one click
               </p>
             </form>
           )}

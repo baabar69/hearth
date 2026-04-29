@@ -25,6 +25,18 @@ const CATEGORIES: Category[] = [
         a: "Friends mean well but get tired, have their own lives, and can't hold consistent attention. Family can be part of what you're carrying. A Keeper is a trained, paid professional — not a volunteer, not a friend — whose only job in your relationship is to hold space for you. They don't need you to be okay. They don't have a stake in your decisions. They stay.",
       },
       {
+        q: "How is this different from peer-listening apps like 7 Cups?",
+        a: "Peer-listening apps connect you with anonymous volunteers — different person each time, no consistent relationship, variable training, free or freemium. Hearth is the opposite: one paid Keeper, matched by hand, the same person every Sit, for as long as you stay. Listening apps are good for a one-off vent. Hearth is built for the months and years where the same patterns keep showing up and you need someone who already knows the context.",
+      },
+      {
+        q: "How is this different from AI companions like Replika?",
+        a: "An AI companion can be there at 3am, remember what you told it, and never get tired. We're not against that. But it isn't a person, and the relationship doesn't carry the same weight. A human Keeper has lived a version of what you're describing. They notice the thing you didn't say. They sit with silence in a way an LLM can't. We are deliberately human, paired, and slow — because for the things Hearth holds, those qualities are the point, not the inefficiency.",
+      },
+      {
+        q: "How is this different from a 12-week group program?",
+        a: "Group programs are time-bound, cohort-based, and usually run by one founder-facilitator. They work well for structured curricula. Hearth is open-ended and one-to-one — you stay paired with your Keeper for as long as the relationship serves you. Six months. Two years. The point is continuity, not a finish line. Hearth also offers Circles (our cohort format) for members who want both the long pairing and the time-bound group experience.",
+      },
+      {
         q: "What does 'peer support' actually mean here?",
         a: "Peer support means companionship from someone with lived experience and training — not clinical credentials. A Keeper has often navigated many of the same themes you're navigating, and has been trained by Hearth in listening, cultural fluency, scope boundaries, and crisis protocol. They are not peers in the sense of strangers on the internet — they are carefully selected, paid, and supervised.",
       },
@@ -85,10 +97,6 @@ const CATEGORIES: Category[] = [
       {
         q: "Is there a sliding scale or scholarship?",
         a: "We offer a limited number of reduced-rate memberships for people who genuinely can't afford standard pricing. Email access@hearth.com with a brief note. We don't require financial documentation. We take this seriously.",
-      },
-      {
-        q: "What's the refund policy?",
-        a: "14-day money-back guarantee from your first Sit. If it doesn't feel right, email us — full refund, no questions. After 14 days, unused months on annual plans are refunded pro-rated if you cancel. Monthly plans are charged as used.",
       },
       {
         q: "What's the reschedule policy?",
