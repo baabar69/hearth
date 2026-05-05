@@ -27,8 +27,10 @@ const TOPICS = [
 const AGE_RANGES = ["Under 18", "18–24", "25–34", "35–44", "45–54", "55+"];
 
 const COUNTRIES = [
-  "United States", "United Kingdom", "Canada", "Australia",
-  "Pakistan", "India", "Bangladesh", "UAE", "Other",
+  "United States", "Canada", "United Kingdom", "Australia",
+  "India", "Pakistan", "Bangladesh", "UAE",
+  "Singapore", "New Zealand", "Ireland", "Germany",
+  "France", "Netherlands", "South Africa", "Other",
 ];
 
 const WELLBEING_LABELS = [

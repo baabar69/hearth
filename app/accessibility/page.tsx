@@ -262,10 +262,10 @@ export default function AccessibilityPage() {
               If something on Hearth gets in the way of you using it, please
               email{" "}
               <a
-                href="mailto:access@hearth.com"
+                href="mailto:access@dearhearth.com"
                 style={{ color: "#FFB74D", textDecoration: "underline" }}
               >
-                access@hearth.com
+                access@dearhearth.com
               </a>
               . Tell us what you ran into and what would help. We respond
               within two business days, and we treat accessibility issues as

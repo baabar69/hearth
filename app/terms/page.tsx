@@ -31,7 +31,7 @@ export default function TermsPage() {
               textTransform: "uppercase",
             }}
           >
-            Last updated: April 2026 &middot; Governing law: Delaware, USA
+            Last updated: May 2026 &middot; Governing law: Delaware, USA
           </p>
         </div>
       </section>
@@ -109,8 +109,8 @@ export default function TermsPage() {
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
                 All charges are final once a billing period has begun. Cancellation stops future charges but does not reverse charges for billing periods that have already started or that you have already used. If you believe a charge was made in error, please email{" "}
-                <a href="mailto:hello@hearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
-                  hello@hearth.com
+                <a href="mailto:hello@dearhearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
+                  hello@dearhearth.com
                 </a>
                 {" "}within 30 days and we will review your case.
               </p>
@@ -122,8 +122,8 @@ export default function TermsPage() {
               </h2>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
                 Keepers are independent contractors trained by Hearth. They are bound by Hearth&rsquo;s Keeper Code of Conduct, which prohibits solicitation of members outside the platform, disclosure of member information, provision of clinical advice, and any conduct that violates member trust. Complaints about Keeper conduct should be directed to{" "}
-                <a href="mailto:hello@hearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
-                  hello@hearth.com
+                <a href="mailto:hello@dearhearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
+                  hello@dearhearth.com
                 </a>
                 .
               </p>
@@ -135,6 +135,15 @@ export default function TermsPage() {
               </h2>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
                 Hearth&rsquo;s liability is limited to the fees paid by the member in the 12 months preceding the claim. Hearth is not liable for indirect, incidental, or consequential damages. Nothing in these terms limits liability for gross negligence or intentional misconduct.
+              </p>
+            </div>
+
+            <div>
+              <h2 style={{ fontSize: "clamp(22px, 2vw, 30px)", marginBottom: 18 }}>
+                Service availability &amp; warranties
+              </h2>
+              <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
+                Hearth is provided &ldquo;as is&rdquo; and &ldquo;as available.&rdquo; We work hard to keep the platform running smoothly, but we do not guarantee uninterrupted access, error-free operation, or that the service will meet every member&rsquo;s specific needs. We make no warranty that any conversation with a Keeper will produce a specific outcome. Hearth is companionship, not a guaranteed result.
               </p>
             </div>
 
@@ -162,12 +171,12 @@ export default function TermsPage() {
               </h2>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
                 Legal questions: email{" "}
-                <a href="mailto:legal@hearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
-                  legal@hearth.com
+                <a href="mailto:legal@dearhearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
+                  legal@dearhearth.com
                 </a>
                 . General questions:{" "}
-                <a href="mailto:hello@hearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
-                  hello@hearth.com
+                <a href="mailto:hello@dearhearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
+                  hello@dearhearth.com
                 </a>
                 .
               </p>

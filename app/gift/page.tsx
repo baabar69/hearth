@@ -49,7 +49,7 @@ const FAQ = [
   },
   {
     q: "Can I gift internationally?",
-    a: "Currently, gifts can only be redeemed in the US and Canada. UK and Australia are coming soon.",
+    a: "Yes. Hearth is open to members worldwide. Your gift recipient just needs an email and a willingness to pull up a chair. Sits are scheduled across global time zones, and our Keepers can match on language and cultural context if that matters to your recipient.",
   },
 ];
 

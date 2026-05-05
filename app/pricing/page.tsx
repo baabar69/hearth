@@ -22,10 +22,6 @@ const FAQ = [
     a: "Not currently. Hearth is peer support, not therapy, so it doesn't fall under standard mental health insurance codes. We're working on FSA/HSA compatibility — watch this space. If your employer has an EAP or wellness benefit, it may cover peer support; check with your HR team.",
   },
   {
-    q: "Is there a sliding scale or scholarship?",
-    a: "We offer a limited number of reduced-rate memberships for people who genuinely cannot afford the standard pricing. Email access@hearth.com with a brief note about your situation. We take this seriously and don't require financial documentation.",
-  },
-  {
     q: "Can I change tiers mid-subscription?",
     a: "Yes, at any time. Upgrading to Hearth Deep takes effect immediately and you're billed the prorated difference. Downgrading to Hearthside takes effect at the start of your next billing cycle. Your Keeper stays the same either way.",
   },

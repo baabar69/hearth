@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
+import KeeperPortrait from "../components/KeeperPortrait";
 
 export const metadata = {
   title: "Meet the Keepers · Hearth",
@@ -8,7 +9,18 @@ export const metadata = {
     "Each one a person, not a profile. Browse, listen, read. The match matters.",
 };
 
-const KEEPERS = [
+type Keeper = {
+  slug: string;
+  name: string;
+  city: string;
+  tagline: string;
+  themes: string[];
+  languages: string[];
+  bio: string;
+  photo?: string;
+};
+
+const KEEPERS: Keeper[] = [
   {
     slug: "aruna-bhattacharya",
     name: "Aruna Bhattacharya",
@@ -17,6 +29,7 @@ const KEEPERS = [
     themes: ["Diaspora identity", "Caregiving", "Family pressure", "Career-cultural"],
     languages: ["Bengali", "English", "Hindi"],
     bio: "25 years counseling people through the hardest chapters — without a clipboard.",
+    photo: "/images/keepers/aruna.jpg",
   },
   {
     slug: "rabia-k",
@@ -26,6 +39,7 @@ const KEEPERS = [
     themes: ["Mothers", "Marriage", "Sandwich years", "In-laws"],
     languages: ["Urdu", "English", "Punjabi"],
     bio: "Has informally mentored 60+ younger women across two countries.",
+    photo: "/images/keepers/rabia.jpg",
   },
   {
     slug: "faisal-m",
@@ -35,6 +49,7 @@ const KEEPERS = [
     themes: ["Grief", "Men's emotional support", "Career crossroads", "Diaspora fathers"],
     languages: ["Urdu", "English"],
     bio: "Former journalist. Sits with hard things without flinching.",
+    photo: "/images/keepers/faisal.jpg",
   },
   {
     slug: "priya-s",
@@ -44,6 +59,7 @@ const KEEPERS = [
     themes: ["Postpartum", "New parenthood", "Identity", "Bicultural parenting"],
     languages: ["Tamil", "English", "Hindi"],
     bio: "Three cultures, two kids, one very honest voice.",
+    photo: "/images/keepers/priya.jpg",
   },
   {
     slug: "hassan-a",
@@ -53,6 +69,7 @@ const KEEPERS = [
     themes: ["Grief", "Faith and identity", "First-year-after", "New immigrant"],
     languages: ["Urdu", "English", "Arabic"],
     bio: "Trained Islamic counselor turned Keeper.",
+    photo: "/images/keepers/hassan.jpg",
   },
 ];
 
@@ -118,42 +135,7 @@ export default function KeepersPage() {
                 }}
                 className="keeper-card"
               >
-                {/* Avatar placeholder */}
-                <div
-                  style={{
-                    aspectRatio: "4/3",
-                    background:
-                      "linear-gradient(135deg, var(--paper-3), var(--paper-2))",
-                    border: "1px solid var(--rule)",
-                    borderRadius: 6,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    overflow: "hidden",
-                    position: "relative",
-                  }}
-                >
-                  <div
-                    style={{
-                      position: "absolute",
-                      inset: 0,
-                      background:
-                        "radial-gradient(ellipse at 60% 20%, rgba(232,168,69,0.15), transparent 60%)",
-                    }}
-                  />
-                  <div
-                    style={{
-                      fontFamily: "var(--serif)",
-                      fontSize: 48,
-                      fontWeight: 300,
-                      color: "var(--ember)",
-                      opacity: 0.4,
-                      lineHeight: 1,
-                    }}
-                  >
-                    {k.name.charAt(0)}
-                  </div>
-                </div>
+                <KeeperPortrait name={k.name} photo={k.photo} aspectRatio="4/3" />
 
                 <div>
                   <div

@@ -41,7 +41,7 @@ const SHAPE = [
   {
     eyebrow: "Format",
     title: "Video. Evenings.",
-    body: "90 minutes, held over secure video. Scheduled to land kindly across US and Canada timezones — usually Wednesday or Thursday evenings.",
+    body: "90 minutes, held over secure video. We run cohorts across multiple time zones — Americas, Europe, South Asia, Oceania — so you can find one that lands kindly in your evening.",
   },
 ];
 
@@ -130,7 +130,7 @@ const FAQS = [
   },
   {
     q: "Can I switch Circles?",
-    a: "Before a series begins, yes — write to your Keeper or to circles@hearth.com and we'll move you. Once a cohort has started, we ask you to stay if you can. The room is built on the people who showed up to it.",
+    a: "Before a series begins, yes — write to your Keeper or to circles@dearhearth.com and we'll move you. Once a cohort has started, we ask you to stay if you can. The room is built on the people who showed up to it.",
   },
   {
     q: "Do I need to share?",
@@ -872,10 +872,10 @@ export default function CirclesPage() {
               The things people ask before signing up. If your question
               isn&rsquo;t here, write to{" "}
               <a
-                href="mailto:circles@hearth.com"
+                href="mailto:circles@dearhearth.com"
                 style={{ color: "var(--ember)", textDecoration: "underline" }}
               >
-                circles@hearth.com
+                circles@dearhearth.com
               </a>
               .
             </p>

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import ExitPopup from "./components/ExitPopup";
 
-const SITE_URL = "https://hearth.com";
+const SITE_URL = "https://dearhearth.com";
 const SITE_NAME = "Hearth";
 const DEFAULT_TITLE = "Hearth — Pull up a chair";
 const DEFAULT_DESCRIPTION =
@@ -17,13 +17,15 @@ export const metadata: Metadata = {
   description: DEFAULT_DESCRIPTION,
   keywords: [
     "peer support",
-    "diaspora mental health",
-    "South Asian therapy alternative",
+    "emotional support",
+    "non-clinical support",
     "grief support",
     "family pressure",
-    "cultural mental health",
+    "anxiety support",
     "Keeper peer support",
     "paired peer support",
+    "long-term peer support",
+    "alternative to therapy",
   ],
   authors: [{ name: "Hearth" }],
   creator: "Hearth",
@@ -52,7 +54,7 @@ export const metadata: Metadata = {
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
     images: ["/og-image.png"],
-    creator: "@hearth",
+    creator: "@dearhearth",
   },
   robots: {
     index: true,
@@ -87,7 +89,7 @@ const ORGANIZATION_LD = {
   sameAs: [],
   contactPoint: {
     "@type": "ContactPoint",
-    email: "hello@hearth.com",
+    email: "hello@dearhearth.com",
     contactType: "customer support",
     availableLanguage: ["English", "Bengali", "Hindi", "Urdu", "Punjabi"],
   },

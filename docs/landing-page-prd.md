@@ -2,7 +2,7 @@
 
 **Version:** 0.2 — Restructured from single-page to multi-page architecture
 **Last updated:** 2026-04-25
-**URL:** hearth.com (target) / gethearth.com (fallback) / hearth.life
+**URL:** dearhearth.com
 **Audience:** Designer, copywriter, frontend engineer, marketing
 
 The first version of this document scoped a single long landing page. We have outgrown it. Hearth is now a multi-page marketing site of ten designed pages plus a small set of utility pages. The reasons for the move are practical: a single page cannot carry the long-tail SEO surface area we need (Embers, Keeper profiles, Bridge); a single page cannot serve three distinct funnels (members, gifters, Keeper applicants) with the dignity each deserves; and the deeper pieces — pricing, the Bridge, the founder's letter — each need room to breathe rather than competing for the visitor's attention in one scroll. The Home page remains the front door. The other pages are the rooms inside the house.
@@ -488,10 +488,7 @@ A clean table with rows for: Matched Keeper, Sits per month, Sit frequency, Long
 - Can I pause my membership?
 - What's the cancellation policy?
 - Do you take insurance?
-- What's the refund policy on the First Sit?
 - Can I change tiers later?
-- Is there a sliding scale?
-- Are there scholarships?
 - What does Hearth Deep include that Hearthside doesn't?
 - Can I gift a membership? *(links to /gift)*
 
@@ -780,8 +777,8 @@ Short, warm starter notes the gifter can edit:
 13. Is there a free trial?
 14. How do you cancel?
 15. Do you take insurance?
-16. Is there a sliding scale?
-17. What's the refund policy?
+16. What's the reschedule policy?
+17. What if I miss a Sit?
 
 *The Bridge & clinical*
 18. What's The Bridge?
@@ -1224,7 +1221,7 @@ Targets apply per-page.
 ## 15. Launch Checklist
 
 ### Site-wide
-- [ ] Domain registered (hearth.com or fallback)
+- [ ] Domain registered (dearhearth.com or fallback)
 - [ ] SSL certificate active
 - [ ] Lighthouse 90+ mobile and desktop on **every page**
 - [ ] All copy reviewed by founder for voice
@@ -1266,7 +1263,7 @@ Targets apply per-page.
 - A fundraising page (no investor pitching anywhere)
 - A clinical product (we are NEVER making medical claims, on any page)
 - A B2B page (no `/workplaces` until Phase 2)
-- An app (the marketing site is separate from the member app at `app.hearth.com`)
+- An app (the marketing site is separate from the member app at `app.dearhearth.com`)
 
 And specifically:
 

@@ -218,7 +218,7 @@ Group programs run in 4–8 week cohorts with 6–10 members. Examples:
 - **Career-Cultural Circle** — South Asian women navigating tech, finance, medicine careers
 - **First-Year-After Circle** — new immigrants in their first year in the US
 
-Pricing: bundled into Hearthside tier (1 Circle/month) or single-Circle pass ($60–120 per cohort)
+Pricing: bundled into Hearthside tier (1 Circle/month included), 2/month included on Hearth Deep, or single-Circle pass at $25 per cohort session for non-members
 
 ### 5.6 Embers (Content Library)
 

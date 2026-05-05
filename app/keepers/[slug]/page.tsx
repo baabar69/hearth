@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import SharedNav from "../../components/SharedNav";
 import SharedFooter from "../../components/SharedFooter";
+import KeeperPortrait from "../../components/KeeperPortrait";
 
 export const metadata = {
   title: "Keeper Profile · Hearth",
@@ -20,12 +21,14 @@ type Keeper = {
   whatPeopleBring: string[];
   notesFromKeeper: string;
   notForNote: string;
+  photo?: string;
 };
 
 const KEEPERS: Keeper[] = [
   {
     slug: "aruna-bhattacharya",
     name: "Aruna Bhattacharya",
+    photo: "/images/keepers/aruna.jpg",
     tagline: "Was the cousin people called when something didn't make sense yet.",
     city: "Karachi → Toronto",
     languages: ["Bengali", "English", "Hindi"],
@@ -33,7 +36,7 @@ const KEEPERS: Keeper[] = [
     timezone: "EST (Toronto)",
     availability: "Monday–Thursday",
     fullBio:
-      "Aruna grew up in Karachi in a home where the door was always open — people came in the late afternoon, made tea they didn't need to ask for, and stayed until something shifted. She emigrated to Toronto in her late twenties, trained as a counselor, and then spent the next twenty-five years sitting with people in their hardest chapters. Not on a couch with a clipboard. At a kitchen table, on the phone, in the parking lot after something happened. She realized early that what most people needed first wasn't a session — it was a chair, a long evening, and someone who wasn't tired of them. Aruna became a Keeper because the word finally described what she'd always been. She works primarily with South Asian women navigating the gap between who they were told to be and who they actually are. She is fluent in the particular exhaustion of being the person everyone leans on, and in the specific guilt that comes with needing to be held yourself. She will not rush your sentence. She will not fix what doesn't need fixing. She will notice what you haven't yet.",
+      "Aruna grew up in Karachi in a home where the door was always open — people came in the late afternoon, made tea they didn't need to ask for, and stayed until something shifted. She emigrated to Toronto in her late twenties, trained as a counselor, and then spent the next twenty-five years sitting with people in their hardest chapters. Not on a couch with a clipboard. At a kitchen table, on the phone, in the parking lot after something happened. She realized early that what most people needed first wasn't a session — it was a chair, a long evening, and someone who wasn't tired of them. Aruna became a Keeper because the word finally described what she'd always been. She works with women navigating the gap between who they were told to be and who they actually are &mdash; and she brings particular fluency to those carrying weight that doesn&rsquo;t translate easily across cultures or generations. She is fluent in the particular exhaustion of being the person everyone leans on, and in the specific guilt that comes with needing to be held yourself. She will not rush your sentence. She will not fix what doesn't need fixing. She will notice what you haven't yet.",
     whatPeopleBring: [
       "The family pressure that arrives in a single phone call and ruins the whole week",
       "Caring for aging parents while raising children and working full-time — the sandwich years",
@@ -49,6 +52,7 @@ const KEEPERS: Keeper[] = [
   {
     slug: "rabia-k",
     name: "Rabia K.",
+    photo: "/images/keepers/rabia.jpg",
     tagline: "Retired school principal. Will tell you what your mother meant to say.",
     city: "Lahore → Jersey City",
     languages: ["Urdu", "English", "Punjabi"],
@@ -72,6 +76,7 @@ const KEEPERS: Keeper[] = [
   {
     slug: "faisal-m",
     name: "Faisal M.",
+    photo: "/images/keepers/faisal.jpg",
     tagline: "For the men who were never taught to grieve.",
     city: "Karachi → Houston",
     languages: ["Urdu", "English"],
@@ -90,11 +95,12 @@ const KEEPERS: Keeper[] = [
     notesFromKeeper:
       "I spent a decade watching men in crisis give one-word answers about how they were doing. I know what lives behind those one-word answers. You don't have to call it feelings. You can just tell me what happened.",
     notForNote:
-      "Faisal is a peer supporter, not a licensed therapist. He does not diagnose or provide clinical care. For men dealing with clinical depression, PTSD, or active crisis, The Bridge connects you with licensed therapists — including male therapists — with South Asian cultural fluency.",
+      "Faisal is a peer supporter, not a licensed therapist. He does not diagnose or provide clinical care. For men dealing with clinical depression, PTSD, or active crisis, The Bridge connects you with licensed therapists &mdash; including male therapists &mdash; with cultural fluency for the contexts our members live inside.",
   },
   {
     slug: "priya-s",
     name: "Priya S.",
+    photo: "/images/keepers/priya.jpg",
     tagline: "For the mothers nobody prepared.",
     city: "Chennai → London → Toronto",
     languages: ["Tamil", "English", "Hindi"],
@@ -118,6 +124,7 @@ const KEEPERS: Keeper[] = [
   {
     slug: "hassan-a",
     name: "Hassan A.",
+    photo: "/images/keepers/hassan.jpg",
     tagline: "Holds faith and doubt without forcing resolution.",
     city: "Islamabad → Chicago",
     languages: ["Urdu", "English", "Arabic"],
@@ -232,41 +239,12 @@ export default function KeeperProfile({
                   padding: 32,
                 }}
               >
-                <div
-                  style={{
-                    aspectRatio: "4/3",
-                    background:
-                      "linear-gradient(135deg, var(--paper-3) 0%, var(--paper-2) 100%)",
-                    borderRadius: 6,
-                    border: "1px solid var(--rule)",
-                    marginBottom: 24,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    position: "relative",
-                    overflow: "hidden",
-                  }}
-                >
-                  <div
-                    style={{
-                      position: "absolute",
-                      inset: 0,
-                      background:
-                        "radial-gradient(ellipse at 60% 20%, rgba(232,168,69,0.2), transparent 60%)",
-                    }}
+                <div style={{ marginBottom: 24 }}>
+                  <KeeperPortrait
+                    name={keeper.name}
+                    photo={keeper.photo}
+                    aspectRatio="4/3"
                   />
-                  <div
-                    style={{
-                      fontFamily: "var(--serif)",
-                      fontSize: 80,
-                      fontWeight: 300,
-                      color: "var(--ember)",
-                      opacity: 0.3,
-                      lineHeight: 1,
-                    }}
-                  >
-                    {keeper.name.charAt(0)}
-                  </div>
                 </div>
 
                 <div

@@ -47,7 +47,7 @@ export default function SharedFooter() {
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
             <Link href="/crisis">Crisis Resources</Link>
-            <Link href="mailto:hello@hearth.com">Contact</Link>
+            <Link href="mailto:hello@dearhearth.com">Contact</Link>
           </div>
         </div>
         <div className="foot-bot">

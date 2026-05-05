@@ -119,9 +119,11 @@ export default function AboutPage() {
               </p>
               <p>
                 &ldquo;Hearth is that elder&rsquo;s house, on your phone, in
-                any language, for the diaspora communities who left one world
-                and built another and are now navigating the gap between them
-                — without the village they were raised to rely on.&rdquo;
+                any language. For anyone navigating a life that doesn&rsquo;t
+                fit neatly on a couch — whether you left one world for
+                another, or your world simply changed under you, or the
+                village you were raised to rely on is no longer
+                there.&rdquo;
               </p>
               <p>
                 &ldquo;We are not therapy. We are not a chatbot. We are not
@@ -171,9 +173,11 @@ export default function AboutPage() {
               margin: "24px auto 0",
             }}
           >
-            For diaspora communities in the US and Canada — people from cultures
-            where the village elder, trusted aunt, and community wise-person
-            tradition is alive in memory but absent in modern life.
+            For anyone in the world carrying a life where the village
+            elder, trusted aunt, or community wise-person tradition is alive in
+            memory but absent in modern life. Our Keepers bring deep cultural
+            fluency for those who want it &mdash; and warm, careful presence
+            for everyone.
           </p>
         </div>
       </section>

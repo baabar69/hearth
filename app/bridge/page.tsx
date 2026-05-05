@@ -89,10 +89,10 @@ export default function BridgePage() {
               </p>
               <p style={{ marginTop: 18 }}>
                 The Bridge is Hearth&rsquo;s network of vetted, licensed
-                therapists with South Asian heritage and cultural fluency.
-                When a referral is made, it is a warm handoff — not a directory
-                dump, not a goodbye. You keep your Keeper. You add the
-                clinician.
+                therapists. Many bring deep cultural fluency for members who
+                want it; all bring real clinical care. When a referral is
+                made, it is a warm handoff &mdash; not a directory dump, not
+                a goodbye. You keep your Keeper. You add the clinician.
               </p>
             </div>
           </div>
@@ -217,10 +217,10 @@ export default function BridgePage() {
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 0 }}>
                 {[
-                  "Licensed in the US or Canada (LCSW, LMFT, LPC, PhD, PsyD tier)",
-                  "South Asian heritage or demonstrated cultural fluency with South Asian communities",
+                  "Properly licensed in their jurisdiction (LCSW, LMFT, LPC, PhD, PsyD or international equivalent — clinical psychologist, registered psychotherapist, etc.)",
+                  "Demonstrated cultural fluency, including for members navigating life between cultures",
                   "Active practice — not overwhelmed caseloads, not waitlisted for six months",
-                  "Familiar with diaspora-specific themes: immigration, family pressure, cultural identity, intergenerational dynamics",
+                  "Familiar with the themes our members bring: family pressure, identity, immigration, intergenerational dynamics, grief, intimacy",
                   "Committed to coordinating with Hearth Keepers when appropriate and with member consent",
                 ].map((item, i) => (
                   <li

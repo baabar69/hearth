@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Press · Hearth",
   description:
-    "For journalists, podcasters, and writers covering peer support, diaspora mental health, and the new emotional infrastructure.",
+    "For journalists, podcasters, and writers covering peer support, the cash-pay wellness market, and the new emotional infrastructure.",
 };
 
 export default function PressPage() {
@@ -56,8 +56,9 @@ export default function PressPage() {
                 A peer-support membership. Members are paired with a Keeper
                 &mdash; a trained, paid companion (not a licensed clinician)
                 &mdash; for biweekly or weekly Sits, an asynchronous Long Talk
-                thread, and group Circles. Keepers come from South Asia and
-                hold the cultural fluency that diaspora life requires.
+                thread, and group Circles. Keepers are based primarily in
+                South Asia and bring deep cultural fluency for those who want
+                it; warmth and careful presence for everyone.
               </p>
             </div>
             <div>
@@ -97,7 +98,7 @@ export default function PressPage() {
               <FactRow label="Match time" value="Within 72 hours of intake. Hand-matched, not algorithmic." />
               <FactRow label="Cancellation" value="One click, no exit interview. FTC Click-to-Cancel compliant. Access continues through the end of the billing period you've already paid for." />
               <FactRow label="Where Keepers are based" value="Primarily South Asia. They work evening hours to match US and Canadian time zones." />
-              <FactRow label="Where members live" value="Diaspora communities in the US and Canada at launch. UK, Australia, and Gulf coming." />
+              <FactRow label="Where members live" value="Open to members worldwide. Keepers schedule across global time zones." />
               <FactRow label="Founded" value="2026" />
             </div>
           </div>
@@ -122,16 +123,17 @@ export default function PressPage() {
             </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               <p style={{ color: "var(--ink-2)", lineHeight: 1.7, fontSize: 16 }}>
-                Most diaspora people we know don&rsquo;t need a clinician.
-                They need an elder. The auntie who saw the divorce coming. The
-                cousin who quit the job their parents wanted. The neighbour
+                Most people we know don&rsquo;t need a clinician. They need
+                an elder. The auntie who saw the divorce coming. The cousin
+                who quit the job their parents wanted. The neighbour
                 who&rsquo;d been through it.
               </p>
               <p style={{ color: "var(--ink-2)", lineHeight: 1.7, fontSize: 16 }}>
-                That elder is missing for a generation that left, or whose
-                parents left, or whose home village no longer holds the people
-                who knew. Therapy fills part of that gap. A friend fills part
-                of it. Hearth fills the part nobody else does.
+                That elder is missing for a generation whose villages have
+                quietly thinned &mdash; whether by leaving, by time, or just
+                by the way modern life unspools. Therapy fills part of that
+                gap. A friend fills part of it. Hearth fills the part nobody
+                else does.
               </p>
             </div>
           </div>
@@ -183,10 +185,10 @@ export default function PressPage() {
               <p style={{ color: "var(--ink-2)", lineHeight: 1.7, fontSize: 16 }}>
                 Email{" "}
                 <a
-                  href="mailto:press@hearth.com"
+                  href="mailto:press@dearhearth.com"
                   style={{ color: "var(--ember)", textDecoration: "underline" }}
                 >
-                  press@hearth.com
+                  press@dearhearth.com
                 </a>
                 . Please include your outlet, your deadline, and a sentence on
                 what the piece is about. We respond within two business days.

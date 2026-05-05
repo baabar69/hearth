@@ -192,11 +192,11 @@ export default function ForTherapistsPage() {
               {[
                 {
                   label: "License",
-                  body: "LCSW, LMFT, LPC, PhD, or PsyD — active and in good standing in the US or Canada.",
+                  body: "Active, in-good-standing clinical license in your jurisdiction — LCSW, LMFT, LPC, PhD, PsyD, registered psychotherapist, clinical psychologist, or international equivalent.",
                 },
                 {
                   label: "Cultural fluency",
-                  body: "South Asian heritage or demonstrated clinical experience with South Asian diaspora communities.",
+                  body: "Demonstrated clinical experience with members navigating life between cultures, family pressure, and intergenerational dynamics. Heritage is a plus, not a requirement.",
                 },
                 {
                   label: "Active practice",
@@ -441,12 +441,12 @@ export default function ForTherapistsPage() {
                     marginBottom: 8,
                   }}
                 >
-                  Cultural background and South Asian community experience
+                  Cultural background and community experience
                 </label>
                 <textarea
                   required
                   rows={4}
-                  placeholder="Tell us about your cultural background and your experience working with South Asian diaspora communities."
+                  placeholder="Tell us about your cultural background and your experience working with members navigating life between cultures, family pressure, or intergenerational dynamics."
                   style={{
                     width: "100%",
                     padding: "12px 14px",

@@ -42,7 +42,7 @@ const CATEGORIES: Category[] = [
       },
       {
         q: "Who built Hearth and why?",
-        a: "Hearth was built for diaspora communities in the US and Canada — people from cultures where the village elder, trusted aunt, and community wise-person traditions are alive in memory but absent in modern life. The founding belief: most people don't need therapy for most of what they carry. They need the elder's house, on their phone, in their language.",
+        a: "Hearth was built for anyone, anywhere, carrying weight that doesn't quite fit a couch — the village elder, the trusted aunt, the community wise-person tradition is alive in memory and absent in modern life, wherever modern life is happening. The founding belief: most people don't need therapy for most of what they carry. They need the elder's house, on their phone, in their language. Our Keepers bring deep cultural fluency for those who want it, and warm careful presence for everyone.",
       },
     ],
   },
@@ -55,7 +55,7 @@ const CATEGORIES: Category[] = [
       },
       {
         q: "Where are Keepers based?",
-        a: "Currently, Keepers are based in the US and Canada, serving members across North American time zones. We are working on expanding to the UK and Australia. Most Keepers work in major cities with South Asian diaspora communities.",
+        a: "Our Keepers are based primarily in South Asia — they work evening hours to match US and Canadian time zones, and they bring deep cultural fluency to the contexts our members live inside. We're working on expanding the Keeper roster to include US-resident Keepers and broader heritages over time.",
       },
       {
         q: "How do you choose Keepers?",
@@ -93,10 +93,6 @@ const CATEGORIES: Category[] = [
       {
         q: "Do you take insurance?",
         a: "Not currently. Hearth is peer support, not therapy, so standard mental health CPT codes don't apply. We're working on FSA/HSA compatibility. Some employer wellness budgets cover peer support — check with your HR team.",
-      },
-      {
-        q: "Is there a sliding scale or scholarship?",
-        a: "We offer a limited number of reduced-rate memberships for people who genuinely can't afford standard pricing. Email access@hearth.com with a brief note. We don't require financial documentation. We take this seriously.",
       },
       {
         q: "What's the reschedule policy?",
@@ -146,7 +142,7 @@ const CATEGORIES: Category[] = [
       },
       {
         q: "What happens to my data if I cancel?",
-        a: "You can export all your data before canceling. After cancellation, we hold your data for 30 days in case you change your mind, then delete it from our servers. You can also request immediate deletion at any time by emailing privacy@hearth.com.",
+        a: "You can export all your data before canceling. After cancellation, we hold your data for 30 days in case you change your mind, then delete it from our servers. You can also request immediate deletion at any time by emailing privacy@dearhearth.com.",
       },
     ],
   },
@@ -154,8 +150,8 @@ const CATEGORIES: Category[] = [
     label: "Gift",
     items: [
       {
-        q: "Can I gift this to someone who doesn't live in the US?",
-        a: "Currently, Hearth serves members in the US and Canada. Gift recipients must be in one of these two countries to be matched with a Keeper. We're working on UK expansion — sign up for the waitlist if your person is in the UK.",
+        q: "Can I gift this to someone in another country?",
+        a: "Yes. Hearth members live around the world. Your gift recipient just needs an email address and the willingness to pull up a chair. We schedule across global time zones, and our Keepers speak multiple languages — let us know in the gift form if cultural or language matching matters to your recipient.",
       },
       {
         q: "Does the recipient know what I paid?",
@@ -216,10 +212,10 @@ export default function FAQPage() {
             No fine print. No hedging. If you have a question not covered here,
             email us at{" "}
             <a
-              href="mailto:hello@hearth.com"
+              href="mailto:hello@dearhearth.com"
               style={{ color: "var(--ember)", textDecoration: "underline" }}
             >
-              hello@hearth.com
+              hello@dearhearth.com
             </a>
             .
           </p>
@@ -338,10 +334,10 @@ export default function FAQPage() {
           >
             Email us at{" "}
             <a
-              href="mailto:hello@hearth.com"
+              href="mailto:hello@dearhearth.com"
               style={{ color: "var(--ember)", textDecoration: "underline" }}
             >
-              hello@hearth.com
+              hello@dearhearth.com
             </a>
             . We respond within 24 hours.
           </p>

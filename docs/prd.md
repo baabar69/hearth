@@ -58,7 +58,7 @@ Design principle: **the app should feel like the digital equivalent of pulling u
 ### 3.1 Discovery → First Sit
 
 ```
-Visitor lands on hearth.com
+Visitor lands on dearhearth.com
   ↓
 Reads hero / value prop / how it works
   ↓
@@ -364,7 +364,7 @@ For high-risk cases: Hearth ops follows up at 24h, 7d, 30d to confirm member is 
 
 **Cohort size:** 6–10 members
 **Duration:** 4–8 weeks, weekly 75-min Circle Sit
-**Pricing:** bundled in Hearthside (1 Circle/month included); single-Circle pass $60–120
+**Pricing:** bundled in Hearthside (1 Circle/month included), 2/month included on Hearth Deep; single-Circle pass $25 for non-members
 **Format:** video room with all members visible, Keeper-led, structured opening/middle/closing
 **Privacy:** members agree to confidentiality; Hearth enforces (one-strike removal)
 **Roster management:** application-based for sensitive Circles (grief, postpartum); first-come for everyday Circles
@@ -610,7 +610,7 @@ For high-risk cases: Hearth ops follows up at 24h, 7d, 30d to confirm member is 
 
 ## 9. Mobile Strategy
 
-**Web-first MVP** (responsive web on hearth.com), then **native iOS at Mo 3**, **native Android at Mo 6**.
+**Web-first MVP** (responsive web on dearhearth.com), then **native iOS at Mo 3**, **native Android at Mo 6**.
 
 Reasoning: web-first allows fastest iteration; iOS native essential because Pakistani-American target audience is iOS-heavy (~60–65%) and expects polished native experience; Android native for Pakistani-Canadian and broader South Asian Phase 2.
 

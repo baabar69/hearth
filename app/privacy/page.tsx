@@ -31,7 +31,7 @@ export default function PrivacyPage() {
               textTransform: "uppercase",
             }}
           >
-            Last updated: April 2026
+            Last updated: May 2026
           </p>
         </div>
       </section>
@@ -52,6 +52,19 @@ export default function PrivacyPage() {
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
                 We collect standard usage data (device type, browser, page visits) to improve the platform. We do not run third-party ad pixels on any authenticated pages.
+              </p>
+            </div>
+
+            <div>
+              <h2 style={{ fontSize: "clamp(22px, 2vw, 30px)", marginBottom: 18 }}>
+                Age
+              </h2>
+              <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
+                Hearth is for adults. You must be 18 or older to create an account. We do not knowingly collect personal information from anyone under 18. If you become aware that a minor has created an account, email{" "}
+                <a href="mailto:privacy@dearhearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
+                  privacy@dearhearth.com
+                </a>
+                {" "}and we will delete it.
               </p>
             </div>
 
@@ -91,10 +104,26 @@ export default function PrivacyPage() {
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
                 To request deletion of your account and data, email{" "}
-                <a href="mailto:privacy@hearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
-                  privacy@hearth.com
+                <a href="mailto:privacy@dearhearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
+                  privacy@dearhearth.com
                 </a>
                 . We hold data for 30 days after cancellation in case you change your mind. After 30 days, it is permanently deleted from our servers. You can also request immediate deletion at any time.
+              </p>
+            </div>
+
+            <div>
+              <h2 style={{ fontSize: "clamp(22px, 2vw, 30px)", marginBottom: 18 }}>
+                Your rights
+              </h2>
+              <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)", marginBottom: 16 }}>
+                Wherever you live, you have rights over your data. You can ask us to: show you what we hold on you, correct it, delete it, give you a copy in a portable format, pause our use of it, or object to a specific use. Email{" "}
+                <a href="mailto:privacy@dearhearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
+                  privacy@dearhearth.com
+                </a>
+                {" "}to exercise any of these. We respond within 30 days, usually faster.
+              </p>
+              <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
+                If you live in the EU or UK, the GDPR applies and the rights above are codified in law. If you are a California resident, the CCPA applies and you have the additional right to know what categories of personal information we sell or share &mdash; we do not sell or share your personal information for advertising purposes, full stop.
               </p>
             </div>
 
@@ -113,8 +142,8 @@ export default function PrivacyPage() {
               </h2>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
                 Privacy questions: email{" "}
-                <a href="mailto:privacy@hearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
-                  privacy@hearth.com
+                <a href="mailto:privacy@dearhearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
+                  privacy@dearhearth.com
                 </a>
                 . We respond within 3 business days.
               </p>

@@ -516,8 +516,8 @@ export default function TrustPage() {
               </h3>
               <p style={{ color: "var(--ink-2)", fontSize: 15.5, lineHeight: 1.7 }}>
                 Email{" "}
-                <a href="mailto:security@hearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
-                  security@hearth.com
+                <a href="mailto:security@dearhearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
+                  security@dearhearth.com
                 </a>
                 . Responsible disclosure is welcomed and rewarded. Please give
                 us a reasonable window to fix before publishing.
@@ -546,8 +546,8 @@ export default function TrustPage() {
                 </Link>{" "}
                 spells out the legal detail. For anything not answered there,
                 email{" "}
-                <a href="mailto:privacy@hearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
-                  privacy@hearth.com
+                <a href="mailto:privacy@dearhearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
+                  privacy@dearhearth.com
                 </a>
                 .
               </p>

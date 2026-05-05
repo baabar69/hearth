@@ -340,7 +340,7 @@ export default function Home() {
                       >
                         <div className="ha-circle-head">
                           <span className="ha-dot" /> Tonight&rsquo;s Circle
-                          &middot; Diaspora Mothers
+                          &middot; Eldest Daughters
                         </div>
                         <div className="ha-circle-grid">
                           <div className="ha-circle-tile">
@@ -867,8 +867,9 @@ export default function Home() {
                       Speaks your languages &mdash; and your unspoken ones.
                     </h4>
                     <p>
-                      Diaspora context is the default, not the exception. The
-                      half-things you don&rsquo;t have to translate.
+                      Cultural context built in. The half-things you don&rsquo;t
+                      have to translate, the parts of a life that don&rsquo;t
+                      fit on a couch.
                     </p>
                   </div>
                 </div>
@@ -1136,8 +1137,9 @@ export default function Home() {
                   <em>One shared weather pattern.</em>
                 </h3>
                 <p>
-                  Diaspora Mothers. Caregiving. Grief. The First Year After.
-                  Wedding Season. Facilitated by a Keeper, never a clinician.
+                  Mothers. Caregiving. Grief. The First Year After. Wedding
+                  Season. Life Between Cultures. Facilitated by a Keeper,
+                  never a clinician.
                 </p>
               </div>
               <div className="svc-foot">
@@ -1241,7 +1243,7 @@ export default function Home() {
                   Give someone <em>a chair.</em>
                 </h3>
                 <p>
-                  Gift one month of Hearthside ($116). They get matched, they
+                  Gift one month of Hearthside ($39). They get matched, they
                   get the Long Talk, they get the Friday reflection. You get to
                   do something useful at the right moment.
                 </p>
@@ -1706,7 +1708,7 @@ export default function Home() {
                 }}
               >
                 Light a Hearth{" "}
-                <span style={{ color: "var(--ember)" }}>$116</span>
+                <span style={{ color: "var(--ember)" }}>$39</span>
               </p>
               <p
                 style={{
@@ -1742,10 +1744,11 @@ export default function Home() {
                   maxWidth: "42ch",
                 }}
               >
-                Hearth was built for diaspora communities in the US and Canada
-                &mdash; for people from cultures where the village elder,
-                trusted aunt, or community wise-person tradition is alive in
-                memory but absent in modern life.
+                Hearth was built for anyone, anywhere, carrying weight
+                that doesn&rsquo;t quite fit a couch. The village elder,
+                the trusted aunt, the community wise-person &mdash; a
+                tradition alive in memory and absent in modern life,
+                wherever modern life is happening.
               </p>
               <a
                 href="/about"

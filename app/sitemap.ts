@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const SITE = "https://hearth.com";
+const SITE = "https://dearhearth.com";
 
 const STATIC_ROUTES = [
   { path: "/", priority: 1.0, changeFrequency: "weekly" as const },
