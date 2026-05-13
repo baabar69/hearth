@@ -1,3 +1,5 @@
+> _Updated 2026-05-13: Hearth's target audience has broadened from South Asian diaspora to universal peer-support — Keepers are now hand-matched for fit rather than positioned around specific language/cultural fluency. The strategy below reflects the original diaspora positioning — kept here for historical context. Until this doc is replaced, treat the universal positioning in `docs/business.md` as the source of truth._
+
 # Hearth — Marketing Strategy
 
 The single document that should govern every marketing decision until it is replaced by a newer version of itself.

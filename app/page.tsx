@@ -160,7 +160,7 @@ export default function Home() {
   const intakeTopics = [
     { id: "grief", label: "Grief or loss" },
     { id: "family", label: "Family pressure" },
-    { id: "diaspora", label: "Life between cultures" },
+    { id: "belonging", label: "Between worlds & expectations" },
     { id: "identity", label: "Identity & belonging" },
     { id: "sexual_identity", label: "Sexual identity" },
     { id: "intimacy", label: "Intimacy & shame" },
@@ -258,12 +258,11 @@ export default function Home() {
                           Aruna <em>Bhattacharya</em>
                         </div>
                         <div className="ha-match-meta">
-                          Toronto &middot; Bengali &middot; English &middot;
-                          Hindi
+                          Toronto &middot; English
                           <br />Founding Keeper
                         </div>
                         <div className="ha-match-tags">
-                          <span>Diaspora</span>
+                          <span>Transitions</span>
                           <span>Family</span>
                           <span>Caregiving</span>
                         </div>
@@ -491,7 +490,7 @@ export default function Home() {
                     lineHeight: 1.55,
                   }}
                 >
-                  Hearth is peer support &mdash; not therapy, not medical
+                  Hearth is peer support. Not therapy, not medical
                   advice. We say it plainly because the difference is a
                   feature, not a limitation. When something needs a clinician,
                   your Keeper walks you to The Bridge.
@@ -534,9 +533,9 @@ export default function Home() {
                     lineHeight: 1.55,
                   }}
                 >
-                  120-hour Keeper training. Cultural fluency review. Crisis
-                  protocol certification. Monthly peer supervision.
-                  Background-checked. Paid professionals &mdash; not
+                  120-hour Keeper training. Sensitivity and scope review.
+                  Crisis protocol certification. Monthly peer supervision.
+                  Background-checked. Paid professionals, not
                   volunteers.
                 </p>
               </div>
@@ -563,8 +562,8 @@ export default function Home() {
             </div>
             <p className="lede">
               Not diagnoses. Not emergencies. The real, recurring weight of a
-              life between cultures, families, and expectations &mdash; the
-              things you carry every week.
+              life between families, expectations, and the seasons that come
+              for everyone. The things you carry every week.
             </p>
           </div>
 
@@ -594,12 +593,12 @@ export default function Home() {
                 The guilt of needing your own chair.
               </p>
             </div>
-            <Link href="/for/diaspora" className="bring-card bring-card-link">
+            <Link href="/for/identity" className="bring-card bring-card-link">
               <div className="bring-icon">{"\u2316"}</div>
-              <h4>Diaspora identity</h4>
+              <h4>Identity &amp; belonging</h4>
               <p>
                 Too much of one thing, not enough of the other. Code-switching
-                so often you forget which one is real.
+                so often you forget which version is real.
               </p>
             </Link>
             <div className="bring-card">
@@ -737,8 +736,8 @@ export default function Home() {
             <p className="lede">
               Friends mean well, but they get tired. Therapists are clinical,
               expensive, and not built for the everyday weight. A Keeper is a
-              third thing &mdash; older, attentive, consistent &mdash; that
-              most of us no longer have.
+              third thing (older, attentive, consistent) that most of us no
+              longer have.
             </p>
           </div>
 
@@ -760,7 +759,7 @@ export default function Home() {
               <div>
                 <div className="label">A Keeper</div>
                 <h3>
-                  Trained, consistent, culturally fluent. Yours, for years.
+                  Trained, consistent, matched by hand. Yours, for years.
                 </h3>
                 <p>
                   One person. Same chair every week. Lets your sentence finish.
@@ -818,25 +817,25 @@ export default function Home() {
                   <div className="keeper-loc">
                     Toronto / EST
                     <br />
-                    Bengali &middot; English &middot; Hindi
+                    English
                   </div>
                 </div>
                 <p className="keeper-bio">
                   &ldquo;I was the cousin people called when something
                   didn&rsquo;t make sense yet. I trained as a counselor, then
-                  realized what most people needed first wasn&rsquo;t a session
-                  &mdash; it was a chair, a long evening, and someone who
+                  realized what most people needed first wasn&rsquo;t a session.
+                  It was a chair, a long evening, and someone who
                   wasn&rsquo;t tired of them.&rdquo;
                 </p>
                 <div className="keeper-tags">
-                  <span className="tag">Diaspora identity</span>
+                  <span className="tag">Identity &amp; belonging</span>
                   <span className="tag">Caregiving</span>
                   <span className="tag">Family pressure</span>
-                  <span className="tag">Career-cultural</span>
+                  <span className="tag">Career crossroads</span>
                 </div>
                 <div className="keeper-cta">
                   <span className="keeper-langs">
-                    At the Hearth &mdash; Aruna&rsquo;s profile
+                    At the Hearth &middot; Aruna&rsquo;s profile
                   </span>
                   <a
                     href="/keepers/aruna-bhattacharya"
@@ -866,10 +865,10 @@ export default function Home() {
                   fontSize: 17,
                 }}
               >
-                Keepers are trained companions rooted in cultures where the
-                village elder, trusted aunt, and community wise-person
-                traditions are still alive. They are paid professionals &mdash;
-                not volunteers &mdash; and they stay yours.
+                Keepers are trained companions. The kind of person the
+                village elder, the trusted aunt, and the community wise-person
+                used to be. They are paid professionals, not volunteers, and
+                they stay yours.
               </p>
 
               <div className="keeper-points">
@@ -891,7 +890,7 @@ export default function Home() {
                     </h4>
                     <p>
                       Hearth&rsquo;s Keeper training covers listening,
-                      cultural fluency, scope, and crisis protocol &mdash; and
+                      sensitivity, scope, and crisis protocol, plus
                       what to hand to The Bridge.
                     </p>
                   </div>
@@ -900,12 +899,12 @@ export default function Home() {
                   <span className="num">03</span>
                   <div>
                     <h4>
-                      Speaks your languages &mdash; and your unspoken ones.
+                      Matched by hand for fit.
                     </h4>
                     <p>
-                      Cultural context built in. The half-things you don&rsquo;t
-                      have to translate, the parts of a life that don&rsquo;t
-                      fit on a couch.
+                      Paired by a human at Hearth for the themes you carry and
+                      the way you talk about them. The half-things you
+                      don&rsquo;t want to have to translate.
                     </p>
                   </div>
                 </div>
@@ -914,8 +913,8 @@ export default function Home() {
                   <div>
                     <h4>Friday reflections, every week.</h4>
                     <p>
-                      &ldquo;What stayed with me from this week&rdquo; &mdash;
-                      a short note from your Keeper, sent every Friday. A brand
+                      &ldquo;What stayed with me from this week.&rdquo;
+                      A short note from your Keeper, sent every Friday. A brand
                       signature.
                     </p>
                   </div>
@@ -1000,7 +999,7 @@ export default function Home() {
               <div className="glyph">&#8767;</div>
               <h3>The Long Talk</h3>
               <p>
-                An async thread between Sits &mdash; text, voice, photos. Slow
+                An async thread between Sits. Text, voice, photos. Slow
                 on purpose. Friday reflections, always.
               </p>
             </div>
@@ -1020,9 +1019,9 @@ export default function Home() {
               <h2 style={{ marginTop: 18 }}>Five rooms in the same house.</h2>
             </div>
             <p className="lede">
-              The Sit, the Long Talk, Circles, Embers, and &mdash; when needed
-              &mdash; the Bridge. Built to hold whatever stage of your life you
-              walk in with.
+              The Sit, the Long Talk, Circles, Embers, and the Bridge when
+              needed. Built to hold whatever stage of your life you walk in
+              with.
             </p>
           </div>
 
@@ -1174,8 +1173,8 @@ export default function Home() {
                 </h3>
                 <p>
                   Mothers. Caregiving. Grief. The First Year After. Wedding
-                  Season. Life Between Cultures. Facilitated by a Keeper,
-                  never a clinician.
+                  Season. Between Worlds &amp; Expectations. Facilitated by a
+                  Keeper, never a clinician.
                 </p>
               </div>
               <div className="svc-foot">
@@ -1192,7 +1191,7 @@ export default function Home() {
                 </h3>
                 <p>
                   Not generic wellness content. Written by Keepers and
-                  contributing essayists with cultural specificity. 3&ndash;7
+                  contributing essayists with real specificity. 3&ndash;7
                   minute reads or listens.
                 </p>
                 <div className="ember-list">
@@ -1237,8 +1236,8 @@ export default function Home() {
                 <p>
                   Hearth is not therapy. We say it plainly. When something
                   needs a clinician, your Keeper makes a warm handoff to a
-                  vetted, culturally fluent therapist on The Bridge &mdash; not
-                  a directory dump, not a goodbye.
+                  vetted, hand-matched therapist on The Bridge. Not a
+                  directory dump, not a goodbye.
                 </p>
                 <div className="bridge-vis">
                   <div className="bridge-node">
@@ -1307,7 +1306,7 @@ export default function Home() {
             </div>
             <p className="lede">
               First names. Real situations. The range of life Hearth was built
-              to hold &mdash; grief, family, identity, the in-between.
+              to hold: grief, family, identity, the in-between.
             </p>
           </div>
 
@@ -1395,11 +1394,11 @@ export default function Home() {
           <div className="circle-list reveal">
             <div className="circle">
               <div>
-                <div className="theme">Diaspora Mothers</div>
+                <div className="theme">Mothers</div>
                 <h3>The mother you became, the mother you had.</h3>
                 <p>
-                  For first- and second-generation mothers parenting between
-                  two unspoken rulebooks.
+                  For mothers parenting in the gap between how they were raised
+                  and the life they&rsquo;re actually building.
                 </p>
               </div>
               <div className="meta">
@@ -1430,7 +1429,7 @@ export default function Home() {
             </div>
             <div className="circle">
               <div>
-                <div className="theme">Career-Cultural</div>
+                <div className="theme">Career &amp; family</div>
                 <h3>
                   What you owe your parents vs. what you owe yourself.
                 </h3>
@@ -1467,8 +1466,8 @@ export default function Home() {
                 <div className="theme">Caregiving</div>
                 <h3>You became the parent. Now what.</h3>
                 <p>
-                  For adult children parenting their own parents, with the
-                  cultural specifics named.
+                  For adult children parenting their own parents, with all the
+                  specifics named: family rules, guilt, logistics.
                 </p>
               </div>
               <div className="meta">
@@ -1547,7 +1546,7 @@ export default function Home() {
             </div>
             <p className="lede">
               No streaks. No upsells. No dark patterns. Cancel any time, in
-              one click &mdash; no exit interview, no friction.
+              one click. No exit interview, no friction.
             </p>
           </div>
 
@@ -1582,10 +1581,10 @@ export default function Home() {
               </p>
               <ul>
                 <li>
-                  Matched Keeper &mdash; paired in 72 hours or we keep looking
+                  Matched Keeper, paired in 72 hours or we keep looking
                 </li>
                 <li>
-                  One Sit every two weeks (biweekly) &mdash; 35&ndash;60 min, video or audio
+                  One Sit every two weeks (biweekly), 35&ndash;60 min, video or audio
                 </li>
                 <li>
                   Unlimited Long Talk &middot; 24-hour Keeper response window
@@ -1635,13 +1634,13 @@ export default function Home() {
               </p>
               <ul>
                 <li>Everything in Hearthside</li>
-                <li>Weekly Sits &mdash; 35&ndash;60 min each, every week</li>
+                <li>Weekly Sits, 35&ndash;60 min each, every week</li>
                 <li>
-                  Priority Long Talk &mdash; 4-hour Keeper response
+                  Priority Long Talk, 4-hour Keeper response
                 </li>
                 <li>Two Circles per month included</li>
                 <li>
-                  Anniversary rituals &mdash; yearly meaning-making with your
+                  Anniversary rituals: yearly meaning-making with your
                   Keeper
                 </li>
                 <li>Bridge therapist matching, when needed</li>
@@ -1785,9 +1784,9 @@ export default function Home() {
               >
                 Hearth was built for anyone, anywhere, carrying weight
                 that doesn&rsquo;t quite fit a couch. The village elder,
-                the trusted aunt, the community wise-person &mdash; a
-                tradition alive in memory and absent in modern life,
-                wherever modern life is happening.
+                the trusted aunt, the community wise-person: a tradition
+                alive in memory and absent in modern life, wherever modern
+                life is happening.
               </p>
               <a
                 href="/about"
@@ -1807,10 +1806,10 @@ export default function Home() {
               </p>
               <p>
                 &ldquo;Modern life has stripped that away. We have therapists
-                for the clinical things and friends for the easy things, but
-                for everything in between &mdash; the grief, the half-formed
-                worries, the family questions that don&rsquo;t fit on a couch
-                &mdash; most of us have nobody.&rdquo;
+                for the clinical things and friends for the easy things. But
+                for everything in between (the grief, the half-formed
+                worries, the family questions that don&rsquo;t fit on a couch)
+                most of us have nobody.&rdquo;
               </p>
               <p>
                 &ldquo;Hearth is that elder&rsquo;s house, on your phone, in
@@ -1936,7 +1935,7 @@ export default function Home() {
                     lineHeight: 1.5,
                   }}
                 >
-                  {ctaError} — please try again.
+                  {ctaError}. Please try again.
                 </p>
               )}
               <button type="button" onClick={() => setCtaStep(1)} style={{ fontFamily: "var(--mono)", fontSize: 12, color: "rgba(255,255,255,0.4)", background: "none", border: "none", cursor: "pointer", letterSpacing: "0.06em" }}>

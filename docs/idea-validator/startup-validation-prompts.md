@@ -1,3 +1,5 @@
+> _Updated 2026-05-13: Hearth's target audience has broadened from South Asian diaspora to universal peer-support. The strategy below reflects the original diaspora positioning — kept here for historical context._
+
 # Startup Validation Prompts
 
 Source: @codingknowledge / harry — a 5-part Paul Graham-style startup validation framework.

@@ -102,14 +102,14 @@ export default function ForKeepersPage() {
                 The Keeper archetype
               </div>
               <h2 style={{ fontSize: "clamp(28px, 3vw, 44px)" }}>
-                The elder. The trusted aunt. The village wise-person.
+                The elder. The trusted friend. The person people lean on.
               </h2>
             </div>
             <div
               style={{ fontSize: 18, lineHeight: 1.7, color: "var(--ink-2)" }}
             >
               <p>
-                Keepers are people who already do this work — informally,
+                Keepers are people who already do this work. Informally,
                 unpaid, and without a title. The neighbor everyone sends
                 their adult children to. The retired professional people
                 call when something heavy happens. The friend who knows
@@ -119,13 +119,13 @@ export default function ForKeepersPage() {
                 Hearth trains you, gives you the structure and the tools,
                 pays you as a professional, and connects you with members
                 whose life context matches yours. You bring the presence,
-                the cultural fluency, and the particular patience that
+                the lived sensitivity, and the particular patience that
                 cannot be trained from scratch.
               </p>
               <p style={{ marginTop: 18 }}>
                 Keepers are not therapists. They do not diagnose. They do
-                not prescribe. They hold space, notice patterns, and — when
-                clinical care is the right tool — they know how to build
+                not prescribe. They hold space, notice patterns, and when
+                clinical care is the right tool, they know how to build
                 a bridge instead of a wall. Less than 8% of Keeper
                 applicants are accepted. We are looking for the real thing.
               </p>
@@ -152,13 +152,13 @@ export default function ForKeepersPage() {
             }}
           >
             {[
-              "Hold weekly or biweekly Sits with matched members — 35–60 minutes each",
+              "Hold weekly or biweekly Sits with matched members (35–60 minutes each)",
               "Maintain The Long Talk: respond to async messages within the agreed window",
-              "Write a Friday Reflection every week — a short note of what you noticed",
+              "Write a Friday Reflection every week: a short note of what you noticed",
               "Participate in monthly peer supervision with other Keepers",
-              "Maintain Hearth's scope — knowing when to refer to The Bridge and doing it warmly",
+              "Maintain Hearth's scope: knowing when to refer to The Bridge and doing it warmly",
               "Complete Hearth's 120-hour initial training program before your first member",
-              "Maintain cultural fluency in the themes and communities you work with",
+              "Stay attuned to the themes and communities you work with",
               "Attend quarterly community calls with the Hearth team",
               "Support your members through the pairing process and across tier changes",
               "Complete annual recertification with updated training on crisis protocol",
@@ -287,7 +287,7 @@ export default function ForKeepersPage() {
                 60% of every membership fee goes directly to the Keeper.
                 Keepers are paid biweekly in USD via direct deposit. Pay
                 increases with seniority, member retention, and peer
-                review. This is meaningful work and meaningful pay — not
+                review. This is meaningful work and meaningful pay. Not
                 a side gig, not a volunteer program.
               </p>
             </div>
@@ -320,7 +320,7 @@ export default function ForKeepersPage() {
               }}
             >
               The application takes 20–30 minutes. The essay questions are
-              real questions — we read every answer carefully. If you&rsquo;re
+              real questions. We read every answer carefully. If you&rsquo;re
               the person, we&rsquo;ll know.
             </p>
 
@@ -445,7 +445,7 @@ export default function ForKeepersPage() {
                   <input
                     required
                     type="text"
-                    placeholder="e.g. Urdu, English, Punjabi"
+                    placeholder="e.g. English, Spanish"
                     style={{
                       width: "100%",
                       padding: "12px 14px",
@@ -559,7 +559,7 @@ export default function ForKeepersPage() {
                     lineHeight: 1.5,
                   }}
                 >
-                  Not what you said. What you did — how you held the space,
+                  Not what you said. What you did. How you held the space,
                   what you chose not to say, what happened as a result.
                 </p>
                 <textarea

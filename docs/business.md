@@ -8,13 +8,13 @@
 
 ## 1. Executive Summary
 
-**Hearth** is a peer-support membership service for adults navigating grief, life transitions, family pressure, identity questions, and the everyday weight of being a person. Members are paired with a **Keeper** — a trained, culturally-fluent companion who holds space, reflects, advises, and stays consistent across the long talks. Hearth is **not** therapy; it lives in the underserved space between "calling a friend" and "seeing a clinician," where most demand for emotional support actually sits.
+**Hearth** is a peer-support membership service for adults navigating grief, life transitions, family pressure, identity questions, and the everyday weight of being a person. Members are paired with a **Keeper** — a trained peer companion who holds space, reflects, advises, and stays consistent across the long talks. Hearth is **not** therapy; it lives in the underserved space between "calling a friend" and "seeing a clinician," where most demand for emotional support actually sits.
 
-We launch into **diaspora communities in the US and Canada** — populations with no scaled, culturally-fluent mental-wellness option — and expand outward to any person who wants warmth-led support over clinical-coded therapy. Our Keepers are rooted in traditions where the elder-companion model never died; they bring lived cultural fluency, not a US-centric clinical frame.
+We launch into the **English-speaking adult market in the US, Canada, UK, and Australia** — anyone who wants warmth-led support over clinical-coded therapy. Our Keepers are hand-matched to each member for fit: lived experience, life-stage, themes carried, tone, time zone, and the particular thing the member is bringing. The match matters more than any one credential.
 
-The wedge is unfair-advantage-heavy: founder with deep roots in the communities we serve, Keepers recruited from South Asia and trained rigorously, US-licensed clinical referral partners (The Bridge) for cases that need it. The category is open: no incumbent owns diaspora peer support, and the broader cash-pay therapy market is in active decay (BetterHelp -9% revenue/quarter, Talkspace consumer -30%, Cerebral DOJ-settled, Woebot shut down B2C in 2025).
+The wedge is unfair-advantage-heavy: a hand-matching model that BetterHelp's algorithmic rotation can't replicate, Keepers trained rigorously on the relational craft (not the clinical), US-licensed clinical referral partners (The Bridge) for cases that need it. The category is open: no incumbent owns long-term peer support, and the broader cash-pay therapy market is in active decay (BetterHelp -9% revenue/quarter, Talkspace consumer -30%, Cerebral DOJ-settled, Woebot shut down B2C in 2025).
 
-**Realistic ceiling:** $5–15M ARR profitable lifestyle/PE-style business with the diaspora wedge. **Stretch ceiling:** $30–60M ARR if cross-cultural expansion succeeds. Not a venture-scale unicorn — a real, durable, mission-aligned business.
+**Realistic ceiling:** $5–15M ARR profitable lifestyle/PE-style business. **Stretch ceiling:** $30–60M ARR if B2B/employer channels validate. Not a venture-scale unicorn — a real, durable, mission-aligned business.
 
 ---
 
@@ -24,12 +24,12 @@ The wedge is unfair-advantage-heavy: founder with deep roots in the communities 
 A world where nobody navigates the weight of being a person alone — and where the wisdom that lived in villages, kitchens, and elder circles for ten thousand years is available again, on a phone, in any language.
 
 ### Mission
-We build Hearth to be the place between a friend and a clinician — the trusted, warm, culturally-fluent presence that holds you through grief, advice-seeking, and the long talks that nobody else has time for. We extend the village elder tradition into modern life without pretending to be therapy and without losing the warmth that therapy often lacks.
+We build Hearth to be the place between a friend and a clinician — a trusted, warm presence that holds you through grief, advice-seeking, and the long talks that nobody else has time for. We extend the elder-companion tradition into modern life without pretending to be therapy and without losing the warmth that therapy often lacks.
 
 ### Values
 1. **Warmth without saccharine** — we hold hard things plainly
 2. **Wisdom without credentialism** — lived experience matters as much as letters after a name
-3. **Cultural fluency as standard, not premium** — Keepers are chosen for fit, not for visibility
+3. **Match for fit, not for label** — Keepers are hand-paired with members based on lived experience and tone, not a checkbox demographic match
 4. **Honesty about scope** — we do peer support, not therapy, and we say so loudly
 5. **Bridges over walls** — when a member needs clinical care, we route them to it without ego
 6. **Human first, AI second** — we use AI to support Keepers, never to replace them
@@ -51,19 +51,22 @@ Roughly **60% of people who buy therapy in the US are not seeking treatment for 
 - Companionship through grief, transitions, hard chapters
 - Help navigating relationships, identity, and meaning
 
-This is not therapy. It's **what people used to get from village elders, grandmothers, religious counselors, and trusted aunts** — relationships modern American life has stripped away. Therapy fills the void inadequately because it's medicalized, expensive, hard to access, and often culturally illiterate.
+This is not therapy. It's **what people used to get from elders, grandmothers, religious counselors, and trusted neighbors** — relationships modern life has stripped away. Therapy fills the void inadequately because it's medicalized, expensive, hard to access, and often a poor fit for non-clinical weight.
 
 The remaining ~40% of therapy demand IS clinical (depression, anxiety disorders, OCD, PTSD, eating disorders, bipolar, severe trauma) and requires licensed clinicians. Hearth does not serve this group directly — we route them to The Bridge (our clinical referral partners).
 
-### 3.2 The Diaspora Gap
+### 3.2 Why Hand-Matching Wins
 
-The 60% gap is most extreme for first- and second-generation immigrants:
+The 60% gap is widest for anyone whose situation is too specific for an algorithm to handle well:
 
-- **1.2M Pakistani-Americans + 300K Pakistani-Canadians** — virtually no scaled culturally-fluent service
-- **First-gen immigrant women 25–45** report the highest unmet need in mental health surveys (Pew, RWJF)
-- **Cultural-fluency gap:** 89% of US therapists are non-Hispanic white (APA 2023). A Pakistani-American woman with grief over an aging parent in Karachi cannot start every session by explaining what *rishta*, *izzat*, or *sasural* mean.
-- **Existing diaspora-mental-health players** (Anise Health = AAPI, MannMukti and SAMHIN = nonprofit directories, Amaha and YourDost = India-only, Khalil Center = clinical Muslim) do not own the cash-pay subscription Pakistani-diaspora segment.
-- **Demand signal is loud:** r/ABCDesi, r/PAK, "Pakistani Women in Tech" WhatsApp groups, MasalaChai newsletter readers regularly post "anyone know an Urdu-speaking therapist?" with high engagement and no good answers.
+- **First- and second-generation immigrants** carrying family pressure across continents
+- **Eldest daughters and sandwich-generation caregivers** holding multiple lives together
+- **Men whose communities never taught grief out loud**
+- **New parents navigating identity loss**
+- **People in transitions** — divorce, career pivot, return-to-school, late-life recalibration
+- **People in grief that doesn't fit a calendar** — anticipatory grief, anniversary grief, ambiguous loss
+
+The single common thread: each of these people needs a *person who has lived this kind of thing*, not a credentialed stranger pulled from a directory. BetterHelp's rotation model proves the negative case — random matching with no continuity is exactly what doesn't work. Hand-matching is the moat.
 
 ### 3.3 The Dying Cash-Pay D2C Therapy Market
 
@@ -83,8 +86,8 @@ The category opening is **not** a cheaper BetterHelp clone (which would lose to 
 Three converging conditions:
 
 1. **AI lowers content production cost** — Keepers can offload note-taking, session summarization, and content generation to LLMs, freeing their time for actual relational work
-2. **Diaspora WhatsApp/Reddit communities have matured** — distribution channels exist that didn't 5 years ago
-3. **Cultural moment** — Gen Z and millennial diaspora are openly discussing mental health for the first time in their families' history; the taboo is breaking but the supply hasn't caught up
+2. **Online communities have matured into trust-based distribution channels** — Substack, Reddit, niche newsletters, and topical Discords exist at a scale that didn't 5 years ago, and they are friendlier to slow, literary, peer-support content than mainstream social
+3. **Cultural moment** — Gen Z and millennials are openly discussing mental health more than any prior cohort; the taboo is breaking but the supply of warm, non-clinical support hasn't caught up
 4. **Cash-pay therapy decay leaves a vacuum** — incumbents are shrinking, not growing; new entrants don't face full-strength competition
 
 ---
@@ -92,7 +95,7 @@ Three converging conditions:
 ## 4. Brand Identity
 
 ### 4.1 Name
-**Hearth** — the gathering place around the fire. Universal across cultures (Roman *focus*, Persian *tash*, English hearth). The literal English equivalent of the Pakistani village wisdom-keeper concept. Holds gravity (vigil-by-the-fire) and warmth (fireside chat) equally.
+**Hearth** — the gathering place around the fire. Universal across cultures (Roman *focus*, Persian *tash*, English hearth). The English word for the place an elder-companion has always tended. Holds gravity (vigil-by-the-fire) and warmth (fireside chat) equally.
 
 ### 4.2 Provider Title
 **Keeper** — one who tends the fire, holds confidences, watches over. From Old English *cēpan* (to seize, observe, hold). Six layered meanings — guardian, tender, holder of trust, preserver of tradition, person worth keeping, one responsible for another.
@@ -137,17 +140,17 @@ This vocabulary is the moat. Competitors can copy a name but not a coherent worl
 ### 4.5 Visual Direction
 
 - **Palette:** terracotta, deep oak, warm cream, ember orange. Avoid pastels. Avoid cool grays.
-- **Imagery:** kintsugi pottery, brownstone interiors, Karachi rooftops at dusk, single warm light source, cups of tea, hands held, kitchen tables, porches. **No stock-image therapy clichés** (clipboards, leather chairs, abstract gradients, generic "diverse women laughing").
+- **Imagery:** kintsugi pottery, brownstone interiors, rooftops at dusk, single warm light source, cups of tea, hands held, kitchen tables, porches. **No stock-image therapy clichés** (clipboards, leather chairs, abstract gradients, generic "diverse women laughing").
 - **Typography:** a serif with warmth (think *Garamond, Sentinel, Tiempos*) paired with a clean humanist sans-serif (*Söhne, Inter, Larsseit*). Reject geometric/cold sans-serifs.
 - **Motion:** slow. Long fades. No "pop" UI. The brand should feel like the moment you sit down on a porch, not the moment you open a productivity app.
 
 ### 4.6 Founder Story (Brand Origin)
 
-> "In Pakistani villages, when life got heavy, you walked to the elder's house. There was always a fire, always tea, always a person who'd lived more than you. They didn't have credentials. They had time, attention, and the patience to let your sentence finish.
+> "Before the suburbs, before the apps, before the appointment slots, when life got heavy you walked to the elder's house. There was always a fire, always tea, always a person who'd lived more than you. They didn't have credentials. They had time, attention, and the patience to let your sentence finish.
 >
 > Modern life has stripped that away. We have therapists for the clinical things and friends for the easy things, but for everything in between — the grief, the half-formed worries, the family questions that don't fit on a couch — most of us have nobody.
 >
-> Hearth is that elder's house, on your phone, in any language. We are the people who pull up a chair."
+> Hearth is that elder's house, on your phone. We are the people who pull up a chair."
 
 ---
 
@@ -164,7 +167,7 @@ A Keeper at Hearth provides **deep peer support, not therapy.** They:
 - Provide consistent presence across long arcs (months/years)
 - Help members structure their thinking about hard decisions
 - Hold accountability for member-defined goals
-- Share cultural context and translation (e.g., bridging Pakistani family expectations and US life)
+- Translate context the member is carrying (family dynamics, life-stage pressures, identity questions) into language they can work with
 - Offer companionship through grief, transitions, anniversaries
 - Connect members with practical resources (books, communities, articles, rituals)
 - Recognize when a member needs more than peer support — and route them to The Bridge
@@ -202,7 +205,7 @@ When any of the above arises, the Keeper bridges the member to a clinical partne
 **Format:** persistent chat thread between member and Keeper
 **Response SLA:** Keepers respond within 24 hours during their availability windows
 **Cadence:** unlimited messages — but the brand voice discourages "always-on" expectation. Members are encouraged to gather their thoughts.
-**Voice notes:** supported (audio messages are core to South Asian communication patterns)
+**Voice notes:** supported (audio messages are core to slow, intimate communication)
 **Media:** photos, links allowed; no screen-sharing
 **End-of-week ritual:** Keeper sends a "what stayed with me from this week" reflection every Friday evening (the brand's signature retention mechanic)
 
@@ -210,13 +213,13 @@ When any of the above arises, the Keeper bridges the member to a clinical partne
 
 Group programs run in 4–8 week cohorts with 6–10 members. Examples:
 
-- **Diaspora Mothers Circle** — first-gen immigrant moms navigating bicultural parenting
-- **Caregiving Circle** — adult children with aging parents back home
+- **Mothers Circle** — moms navigating identity, partnership, generational pressure
+- **Caregiving Circle** — adult children with aging parents, often at a distance
 - **Grief Circle (rotating themes)** — anniversary grief, anticipatory grief, sudden loss
-- **Wedding Season Circle** — for the months before a Pakistani wedding (real demand, real stress)
-- **Ramadan Circle** — emotional rhythm of the month, beyond the spiritual
-- **Career-Cultural Circle** — South Asian women navigating tech, finance, medicine careers
-- **First-Year-After Circle** — new immigrants in their first year in the US
+- **Wedding Season Circle** — for the months before a wedding (real demand, real stress)
+- **Career-Transition Circle** — adults navigating big shifts in work and identity
+- **First-Year-After Circle** — for anyone in the first year after a major life change (divorce, loss, move, new parenthood)
+- **Eldest Daughter Circle** — for the people who've been the family's emotional infrastructure
 
 Pricing: bundled into Hearthside tier (1 Circle/month included), 2/month included on Hearth Deep, or single-Circle pass at $25 per cohort session for non-members
 
@@ -235,8 +238,8 @@ Format: written essays + 5-minute audio narrations + occasional 60-second video 
 
 When a Keeper recognizes clinical need, they bridge the member to a US-licensed therapist from Hearth's partner network. The Bridge is:
 
-- A curated network of **30–50 US-licensed South Asian-heritage and culturally-fluent therapists** across major US states + ON, BC, AB
-- LMFT, LCSW, LPC tier (more accessible than psychologists; often diaspora practitioners)
+- A curated network of **30–50 US-licensed therapists** across major US states + ON, BC, AB, plus UK partners as the UK market grows
+- LMFT, LCSW, LPC tier (more accessible than psychologists); selected for warmth and lived experience as much as credential
 - Hearth pays a **referral fee** (no kickbacks) and member pays standard cash-pay rates ($120–200/session) or uses insurance via Headway/Alma/Grow Therapy
 - **Hearth Deep** tier includes Bridge therapist matching as part of the weekly-Sit plan; members are connected to Bridge therapists when clinical need is identified by their Keeper
 
@@ -258,30 +261,30 @@ Intake re-screen every 90 days, plus event-triggered re-screens (recent bereavem
 
 ## 6. Target Audience
 
-### 6.1 Primary Persona — Ayesha
+### 6.1 Primary Persona — Maya
 
-- 31, software PM in Jersey City, two kids, married, on her second tech job
-- Father in Lahore had a stroke last month; mom is overwhelmed
-- Company EAP gave her 6 sessions with a white therapist who didn't get it
+- 31, software PM in a US metro, two kids, married, on her second tech job
+- A parent at a distance had a stroke last month; the other parent is overwhelmed
+- Company EAP gave her 6 sessions with a therapist who didn't get the family-pressure piece at all
 - Has tried BetterHelp, lasted 4 weeks; left because the rotation of un-fitting therapists felt random
-- Active in r/ABCDesi, two Pakistani-American WhatsApp groups
-- Pays for Calm, Headspace at various points; subscribes to MasalaChai newsletter
+- Active in two or three niche online communities tied to her work and her parenting
+- Pays for Calm, Headspace at various points; subscribes to multiple Substacks
 - Spend pattern: $40–80/month on emotional/wellness apps when she's stressed; drops them when calm
-- The single line that captures her: *"I just want to talk to an Apa who gets it."*
+- The single line that captures her: *"I just want to talk to someone who's actually lived this."*
 
 ### 6.2 Secondary Personas
 
-**Imran** — 38, doctor in Toronto, Pakistani-Canadian, lost his mom 8 months ago; men's emotional support is broken in his community
-**Sara** — 27, recently engaged, navigating both her US-based partner and her Pakistani family's expectations; pre-wedding stress
-**Faiza** — 45, perimenopause + teenage daughter + aging in-laws + middle management; the sandwich-est sandwich
-**Hamza** — 24, second-gen, grew up in Houston, doesn't speak fluent Urdu, wants to understand his parents' world and his place in it
+**Daniel** — 38, doctor in a major city, lost his mom 8 months ago; men's emotional support is broken in most of his communities
+**Sara** — 27, recently engaged, navigating both her partner and her family's expectations; pre-wedding stress
+**Frances** — 45, perimenopause + teenage daughter + aging parents + middle management; the sandwich-est sandwich
+**Alex** — 24, recent grad, parents pressuring him on career and partnership; first-generation-professional impostor syndrome
 
 ### 6.3 Audience Phasing
 
-**Phase 1 (Months 0–12):** Pakistani diaspora women 25–45 in US and Canada. ~600K addressable. Goal: 2,000 paying members.
-**Phase 2 (Months 12–24):** Add Pakistani diaspora men + broader South Asian (Bangladeshi, Indian, Sri Lankan) diaspora. ~3M addressable. Goal: 8,000 paying members.
-**Phase 3 (Months 24–48):** Expand to other cultural-fluency-hungry segments — broader Muslim diaspora, Arab-American, broader immigrant cohorts wanting warmth-led non-clinical support. ~15M addressable. Goal: 25,000+ paying members.
-**Phase 4 (48+):** Cross-cultural Hearth — anyone seeking warm, peer-support over clinical therapy. The brand earns this expansion only if Phase 1–3 build the credibility moat.
+**Phase 1 (Months 0–12):** Adults 28–45 in the US, Canada, UK, Australia who have already paid for therapy/coaching/wellness and churned because the match wasn't right. Goal: 2,000 paying members.
+**Phase 2 (Months 12–24):** Broaden into men (different framing, different Circles), new parents, sandwich-generation caregivers, and adults in transition (divorce, late-career pivot, grief). Goal: 8,000 paying members.
+**Phase 3 (Months 24–48):** Hearth for Workplaces (B2B) — employer-funded benefit for tech, healthcare, professional-services firms whose generic EAPs are under-utilized. Goal: 25,000+ paying members across D2C + B2B.
+**Phase 4 (48+):** International expansion to other English-speaking markets, then localized markets where the elder-companion model resonates. The brand earns each expansion only if the prior phase built the retention case.
 
 ---
 
@@ -306,10 +309,10 @@ Intake re-screen every 90 days, plus event-triggered re-screens (recent bereavem
 
 ### 7.2 Why This Pricing Works
 
-- **$39/month impulse-subscription price point** sits in the "instinct-buy" zone — the same register as Calm, Headspace, and Spotify. A first-gen immigrant woman who already pays $40/month on wellness apps can say yes without a budget conversation. At $29–$39, the decision is emotional, not financial.
-- **"Biweekly" framing (twice a month, every two weeks)** is psychologically lighter than "weekly" without feeling stingy. Two Sits a month is a credible cadence for peer support — more than enough to build a relationship, low enough that a busy working mother can reliably show up. It sets a sustainable ritual rather than an obligation.
+- **$39/month impulse-subscription price point** sits in the "instinct-buy" zone — the same register as Calm, Headspace, and Spotify. Someone who already pays $40/month on wellness apps can say yes without a budget conversation. At $29–$39, the decision is emotional, not financial.
+- **"Biweekly" framing (twice a month, every two weeks)** is psychologically lighter than "weekly" without feeling stingy. Two Sits a month is a credible cadence for peer support — more than enough to build a relationship, low enough that a busy working adult can reliably show up. It sets a sustainable ritual rather than an obligation.
 - **$39 → $99 step-up logic:** the 2.5× price jump to Hearth Deep (weekly Sits) captures high-need seasons — active grief, pre-wedding pressure, a divorce, a new baby — without requiring a permanent price commitment. Members can move up during the hard season and down when life settles. That's a feature, not churn; it protects retention because members don't have to cancel, only downgrade.
-- **Light a Hearth at $39** (one month gifted) mirrors the base price exactly — a diaspora child can gift their mother a month of Hearth for the same price as a restaurant dinner. Low-friction gifting is a real acquisition channel when the product has genuine relational value.
+- **Light a Hearth at $39** (one month gifted) mirrors the base price exactly — an adult child can gift a parent a month of Hearth for the same price as a restaurant dinner. Low-friction gifting is a real acquisition channel when the product has genuine relational value.
 - **Annual prepay** pulls forward 10 months of revenue per member; the "2 months free" framing (rather than a percentage discount) is psychologically stronger and narratively clean. If 25–30% of members take annual, the cash position at month 1 transforms.
 - **No free tier** — no free-rider infrastructure cost, no support burden on non-paying users, no brand dilution from treating the product as a sampler. The 14-day money-back guarantee de-risks the purchase decision instead, and is operationally cheap relative to a perpetual free tier.
 
@@ -338,23 +341,23 @@ At scale (3,000+ members), blended gross margin reaches 40%+ as fixed costs amor
 ### 7.4 Revenue Streams (Multi-Pillar)
 
 1. **Subscription (primary)** — Hearthside, Hearth Deep
-2. **Light a Hearth gifting** — diaspora payers (parents, partners, siblings)
+2. **Light a Hearth gifting** — adult-child-to-parent, partner-to-partner, friend-to-friend
 3. **Group Circles add-on** — single-Circle passes for non-members
-4. **Hearth for Workplaces (Phase 3)** — B2B sales to South-Asian-heavy employers (tech companies, hospital systems with diaspora workforces, consulting firms) — HR-funded benefit
+4. **Hearth for Workplaces (Phase 3)** — B2B sales to mid-market employers (tech companies, hospital systems, consulting firms, professional services) — HR-funded benefit
 5. **Embers Pro** — premium content tier, in-depth essays + audio masterclasses
-6. **Hearth Retreats (Phase 3)** — in-person multi-day Circle experiences (Catskills, Lake Tahoe, and diaspora-homeland destinations) — 4 retreats/year, $1,500–3,000/seat
+6. **Hearth Retreats (Phase 3)** — in-person multi-day Circle experiences (Catskills, Lake Tahoe, UK countryside) — 4 retreats/year, $1,500–3,000/seat
 7. **Hearth Press (Phase 4)** — books, audio anthologies, podcasts under the Hearth brand
 
 ### 7.5 LTV/CAC Math (Target)
 
 - Target blended ARPU: $57/month (70% Hearthside / 30% Deep)
 - Target blended gross margin: ~40% at scale
-- Target CAC: $80 (organic-heavy GTM in diaspora communities)
+- Target CAC: $80 (organic-heavy GTM in literary content and trust-based niche communities)
 - Target retention: 8 months median (~70% Mo3 retention, ~55% Mo6, ~40% Mo12)
 - Target LTV: $57 × 8 = **$456 gross** / ~**$184 contribution** (after CAC)
 - LTV:CAC: **2.3:1** (honest, not inflated)
 
-**Honest read:** 2.3:1 is a real business — not a venture-scale story, but a defensible one. BetterHelp's reported LTV:CAC sits around 2:1 with far higher CAC and lower retention. Hearth's edge is organic distribution (lower CAC) and relational depth (higher retention). The path to 3:1 is upgrading more members to Hearth Deep and improving Mo6 retention past 55%.
+**Honest read:** 2.3:1 is a real business — not a venture-scale story, but a defensible one. BetterHelp's reported LTV:CAC sits around 2:1 with far higher CAC and lower retention. Hearth's edge is organic, content-led distribution (lower CAC) and relational depth from hand-matching (higher retention). The path to 3:1 is upgrading more members to Hearth Deep and improving Mo6 retention past 55%.
 
 Why retention is plausibly higher than BetterHelp: Hearth does not rotate Keepers; it does not medicalize the relationship; the relational contract is multi-year in nature, not shaped around a therapeutic arc with an end-point.
 
@@ -366,19 +369,19 @@ Why retention is plausibly higher than BetterHelp: Hearth does not rotate Keeper
 
 | Player | Status | Why we're different |
 |---|---|---|
-| BetterHelp | $240M Q2 rev, -9% YoY, FTC settled | Clinical positioning, no cultural fluency, US-licensed only |
+| BetterHelp | $240M Q2 rev, -9% YoY, FTC settled | Clinical positioning, algorithmic rotation, US-licensed only |
 | Talkspace | Consumer -30% YoY, pivoted to payor | Same as above, plus exiting consumer |
 | Cerebral | DOJ-settled, 35% layoffs | Damaged brand, prescription-led |
 | Brightside | 2 layoff rounds H1 2025 | In-network, clinical, no warmth |
 
-### 8.2 Adjacent (Cultural / Niche)
+### 8.2 Adjacent (Niche / Specialty)
 
 | Player | Lane | Hearth's distinction |
 |---|---|---|
-| Anise Health | AAPI mental health, US-licensed | Pan-Asian; not Pakistani-specific; clinical-shaped |
-| Khalil Center | Clinical Muslim mental health | Clinical, not peer-support; Arab-leaning |
-| MannMukti, SAMHIN, Asian Mental Health Project | Nonprofit directories | No paid recurring service |
-| Amaha (India), YourDost (India) | India-domestic | Not US/CA market |
+| Coaching marketplaces (BetterUp, Modern Health) | Executive/corporate coaching, app-led | Hand-matched peer support; relational not goal-oriented |
+| Drop-in peer chat (7 Cups) | Free, anonymous, rotating listeners | Same Keeper every week, paid, durable |
+| AI companions (Replika, Pi, Character.ai) | 24/7 chatbot | Human relationship is the product |
+| Group programs (Reforge-style cohorts, grief retreats) | Time-bound cohorts | Indefinite Keeper relationship + optional Circles |
 | Hims/Hers Mental Health | Meds-led | Not relational |
 
 ### 8.3 AI Chatbots
@@ -390,15 +393,15 @@ Why retention is plausibly higher than BetterHelp: Hearth does not rotate Keeper
 | Replika | $19.99/mo, 10M users | Companionship not advice |
 | Woebot | **Shut down B2C 2025** | Cautionary tale |
 
-**Strategic position:** Hearth is *not* in the AI-chatbot race. The defensible lane is **human-led, culturally fluent, peer-support** — exactly what AI cannot replicate at the relational depth required.
+**Strategic position:** Hearth is *not* in the AI-chatbot race. The defensible lane is **human-led, hand-matched, peer-support** — exactly what AI cannot replicate at the relational depth required.
 
 ### 8.4 The Open Lane
 
 **No incumbent owns:**
-- Pakistani diaspora cash-pay subscription
-- South Asian diaspora at scale (US + CA)
-- Peer-support / wisdom-keeper category as distinct from therapy
-- The "between friends and clinicians" emotional space
+- Hand-matched, long-term peer support at consumer subscription prices
+- The "between friends and clinicians" emotional space, marketed honestly
+- Peer-support / elder-companion category as distinct from therapy
+- A consumer brand that says "not therapy" loudly and means it
 
 This is genuine whitespace.
 
@@ -406,18 +409,18 @@ This is genuine whitespace.
 
 ## 9. Go-to-Market Strategy
 
-### 9.1 Phase 1 (Months 0–12) — Pakistani Diaspora Women
+### 9.1 Phase 1 (Months 0–12) — Adults who've already churned from therapy/coaching apps
 
-**Channels (ranked by validated diaspora behavior):**
+**Channels (ranked by literary-content-friendliness and intent):**
 
-1. **Reddit organic** — r/ABCDesi, r/PAK, r/pakistan, r/desimoms, r/SouthAsianAmerican. Karma-build first (6 weeks of helpful answering), soft-launch. Atticus playbook.
-2. **Pakistani-American WhatsApp groups** — founder must already be in 5+ to be able to seed. "Pakistani Women in Tech," city-level groups, mosque-adjacent groups. Cold entry impossible — leverages founder's existing network.
-3. **Diaspora newsletters** — MasalaChai, The Juggernaut, Brown Girl Magazine. Sponsorship + guest essays.
-4. **Pakistani-American podcast guest spots** — Junaid Akram (Pakistanis in tech), Two Brown Girls, Rishtas Reimagined. Founder-led.
-5. **Instagram and TikTok content** — short-form reels: "Things your Pakistani Apa would say" / Keeper micro-essays / Embers narrated. Build the brand voice publicly.
-6. **Long-tail SEO** — "Urdu speaking therapist alternative," "Pakistani peer support," "talk to someone who gets desi family." 50–200 long-tail pages over 6 months.
-7. **University partnerships** — UPenn, NYU, UT Austin, UIUC, CMU, UofT — South Asian student associations. Pipeline for graduating + early-career members.
-8. **Mosque + Islamic-center partnerships** — sensitive but real (Naseeha hotline proves the lane). Co-branded mental wellness resources.
+1. **Substack (the Hearth Letter)** — a weekly literary letter from a Keeper or the founder. Slow, observational, never salesy. Owned audience asset; the tribe's gathering place. Target: 5,000 subs by month 6.
+2. **Reddit organic** — r/Therapy, r/MentalHealth, r/EldestDaughter, r/Grief, r/Parenting, r/AskWomenOver30. Karma-build first (6 weeks of helpful answering), soft-launch. Atticus playbook.
+3. **Niche newsletters** — Cup of Jo, Ann Friedman Weekly, Anne Helen Petersen's *Culture Study*, Oldster, *The Long Reflection*. Sponsorship + guest essays.
+4. **Podcast guest spots** — On Being, Where Should We Begin?, We Can Do Hard Things, Modern Love. Founder-led, story-first not product-first.
+5. **Instagram and Substack Notes content** — short-form reels and notes: whisper monologues, letter-to patterns, slow b-roll voiceovers. Build the brand voice publicly.
+6. **Long-tail SEO** — "alternative to therapy peer support", "eldest daughter burnout help", "grief support not therapy", "wisdom keeper companion". 50–200 long-tail Embers essays over 6 months.
+7. **University partnerships** — alumni relations offices at large universities (Penn, NYU, Michigan, UofT) — graduating + early-career members.
+8. **Faith community partnerships** — where the elder-companion model already exists culturally. Co-branded mental wellness resources.
 9. **Founder content** — personal newsletter, public-square LinkedIn essays, build founder as voice of brand
 
 **Channels we will NOT use early:**
@@ -430,24 +433,24 @@ This is genuine whitespace.
 
 Before scaling spend or hiring:
 
-- [ ] **30 customer-discovery conversations** with Pakistani diaspora women in target ICP
+- [ ] **30 customer-discovery conversations** with members of the primary ICP
 - [ ] **20 paid pre-orders** at $39 for an intro Sit, sourced organically in 30 days
-- [ ] **5 Pakistani-heritage US-licensed therapists signed** as Bridge partners
-- [ ] **3 Pakistan-based Keeper candidates** identified, interviewed, and willing to train
+- [ ] **5 US-licensed therapists signed** as Bridge partners
+- [ ] **3 Keeper candidates** identified, interviewed, and willing to train
 
 If any of these fail, we don't scale — we re-validate.
 
-### 9.3 Phase 2 (Months 12–24) — Broader South Asian + Men
+### 9.3 Phase 2 (Months 12–24) — Men, parents, sandwich-caregivers, transitioners
 
 Expansion playbook:
 - New Circles for men (fewer entry points, different vocabulary)
-- Indian, Bangladeshi, Sri Lankan diaspora outreach (subreddits, cultural orgs, festivals)
-- Recruit Indian, Bangladeshi, Sri Lankan-heritage Keepers
+- Outreach via dad-focused newsletters, midlife-transition Substacks, grief-specific communities
+- Recruit Keepers with lived experience across more life-stages (new fatherhood, divorce, late-career pivot, end-of-life caregiving)
 - Launch "Hearth for Couples" (relationship Circles)
 
 ### 9.4 Phase 3 (Months 24–48) — Hearth for Workplaces (B2B)
 
-- Pitch to 50 South-Asian-heavy employers (tech, healthcare, consulting)
+- Pitch to 50 mid-market employers (tech, healthcare, consulting, professional services)
 - 1,000-employee company × $200/employee/year = $200K ACV
 - 10 customers in year 1 = $2M ARR, much higher gross margin than D2C
 
@@ -458,33 +461,33 @@ Expansion playbook:
 ### 10.1 Keeper Recruitment
 
 **Sourcing pool:**
-- Pakistani professionals with backgrounds in counseling, education, social work, religious studies, journalism, mentorship roles
-- Senior Pakistani women with strong family-mentor reputations (the literal village-elder archetype)
-- Pakistani-trained psychologists who want to work supplementally without US licensure
-- Diaspora Pakistani-Americans with lived experience + emotional literacy + cultural fluency
+- Professionals with backgrounds in counseling, education, social work, chaplaincy, journalism, mentorship roles
+- Senior adults (50+) with strong informal-mentor reputations in their communities (the elder-companion archetype, alive across many cultures)
+- Trained therapists in any country who want to work supplementally outside their clinical license
+- Adults with deep lived experience in the themes Hearth members carry: grief, caregiving, identity work, transitions, parenting, partnership repair
 
 **Hiring criteria (rubric):**
-- Cultural fluency (Pakistani idioms, family dynamics, religious context, regional differences)
-- Language: native Urdu + fluent English required; Punjabi/Pashto/Sindhi/Saraiki bonuses
+- Lived experience in at least one theme members regularly bring
+- Fluent English required; any additional language is a plus and gets surfaced in the matching layer
 - Lived experience > credentials, but credentials don't disqualify
 - Active listening assessment (recorded simulated session, scored)
 - Boundary-keeping assessment (can they recognize clinical territory and route to Bridge?)
 - Empathy + warmth assessment (peer reviews from candidate's existing community)
-- Background check (international, Pakistan-side criminal records, professional references)
+- Background check (international where applicable, professional references)
 - No prior clinical practice misconduct
 
 **Compensation:**
-- $20–35 USD per Sit (50min) — competitive with Pakistani professional rates, transformative compared to local salaries (PKR equivalents)
+- $20–35 USD per Sit (50min) — competitive globally, transformative in lower-cost markets
 - Bonus pool: top-rated Keepers earn 10–25% premiums
 - Long-tenure bonuses (5-year Keeper bonuses, etc.)
-- Travel sponsorship for senior Keepers to attend US Hearth events
+- Travel sponsorship for senior Keepers to attend annual Hearth retreat
 
 ### 10.2 Keeper Training
 
 **Pre-launch training (120 hours, paid):**
 - Hearth philosophy and brand voice (8 hours)
 - Active listening techniques (12 hours)
-- Cultural-bridge skills (6 hours)
+- Translating context (helping members name what they're carrying) (6 hours)
 - Recognizing clinical territory: the screening rubric (8 hours)
 - Crisis protocols and The Bridge handoff (6 hours)
 - Long Talk chat etiquette (4 hours)
@@ -492,7 +495,7 @@ Expansion playbook:
 - Self-care for Keepers (8 hours)
 
 **Ongoing:**
-- Monthly Keeper Circles (peer supervision, cultural fluency reinforcement)
+- Monthly Keeper Circles (peer supervision, craft reinforcement)
 - Quarterly continuing-ed (changes in protocol, new materials)
 - Annual Keeper retreat
 
@@ -516,7 +519,7 @@ When a Keeper detects acute risk (suicidal ideation, abuse disclosure, psychotic
 
 ### 10.5 Bridge Network Operations
 
-- Recruit 30–50 US-licensed South Asian-heritage and culturally-fluent therapists across major US states + ON, BC, AB
+- Recruit 30–50 US-licensed therapists across major US states + ON, BC, AB, plus UK partners as the UK market grows. Selection criterion: warmth + lived experience + willingness to work with peer-support handoffs
 - Onboarding: vetted via Headway/Alma profiles + reference checks + co-brand agreement
 - Compensation to Bridge therapists: standard cash-pay rate ($120–200/session); Hearth takes referral fee structured to comply with state-specific kickback rules (varies by state — some require disclosed flat fee, no per-session fees)
 - Bridge-tier members can use insurance via partner platforms (Headway/Alma) where therapist is in-network
@@ -547,13 +550,13 @@ When a Keeper detects acute risk (suicidal ideation, abuse disclosure, psychotic
 | Stripe / payment processor shutdown | Catastrophic | Medium | Backup processor, conservative marketing language, multiple LLM-monitored compliance audits/year |
 | State regulator C&D | Severe | Low-medium | Strict scope discipline, clear non-therapy positioning, immediate engagement if contacted |
 | Wrongful-death suit after member crisis | Catastrophic | Low (per user) but cumulative | Robust intake screen, Bridge handoff training, crisis protocols, $1M+ liability insurance |
-| Cultural misstep (Pakistani in-fighting, regional politics) | Severe | Medium | Hire across Pakistan's regional/sectarian/class spectrum; community advisory board |
+| Bad-match Keeper-member pairing surfaces publicly | Severe | Medium | Hand-match-by-default, 30-day no-questions Keeper swap, member NPS tracked per match |
 | Founder burnout (solo) | Severe | High | Hire ops lead by Mo 6, Bridge coordinator by Mo 9 |
-| Keeper supply doesn't scale | Severe | Medium | Diversify to broader South Asian heritage, US-resident Pakistani-Americans, recruitment pipelines via universities |
-| Trust gap with non-Pakistani users in Phase 3 | Moderate | Medium | Keep cultural specificity as feature, not bug; let brand earn cross-cultural through reputation |
-| HealthifyMe / Indian player launches similar | Moderate | Medium | Cultural specificity is hard to copy at quality; 18-month head start matters |
+| Keeper supply doesn't scale | Severe | Medium | Multi-country recruitment pipeline from day one; university alumni networks; chaplaincy-program partnerships |
+| Brand-voice drift as the team grows | Moderate | Medium | Voice rules documented; Content Lead has hard authority to send drafts back; the 7-second test |
+| A well-funded incumbent launches a "Keeper" clone | Moderate | Medium | Voice + ritual + hand-matching are hard to copy at quality; 18-month head start matters |
 | FTC investigation triggered by competitor or journalist | Severe | Low-medium | Proactive compliance; legal counsel review of all marketing; never overstate Keeper credentials |
-| BetterHelp / Talkspace pivots to compete | Moderate | Low | Their cost structure can't go below ~$160/mo with US-licensed; cultural fluency requires building from scratch |
+| BetterHelp / Talkspace pivots to compete | Moderate | Low | Their cost structure can't go below ~$160/mo with US-licensed; hand-matching requires structural change |
 
 ---
 
@@ -565,7 +568,7 @@ When a Keeper detects acute risk (suicidal ideation, abuse disclosure, psychotic
 - 5 Bridge therapists signed
 - 3 Keeper candidates identified and trained
 - Brand identity finalized
-- Legal entity (Delaware C-corp + Pakistan operating company)
+- Legal entity (Delaware C-corp + founder's home-country operating company as relevant)
 - Compliance posture documented
 - Landing page live; waitlist building
 
@@ -590,7 +593,7 @@ When a Keeper detects acute risk (suicidal ideation, abuse disclosure, psychotic
 ### Months 12–18 (Phase 2 expansion)
 - 3,000 paying members
 - 60 Keepers
-- Broader South Asian targeting
+- Audience expansion to men, new parents, sandwich-caregivers, transitioners
 - Hearth Deep (with Bridge matching) fully operational; focus on Hearthside → Deep upgrade conversion
 - $150–200K MRR
 - Series Seed raise (~$2M) if growth supports (target: 1,500+ members, 55%+ Mo6 retention)
@@ -637,26 +640,26 @@ When a Keeper detects acute risk (suicidal ideation, abuse disclosure, psychotic
 
 ### Founding Team (Months 0–6)
 - **Founder** — strategy, brand, product, ops, sales (everything until Mo6)
-- **Lead Keeper** (PT, contract → FT by Mo3) — Pakistan-based senior practitioner, runs Keeper training
+- **Lead Keeper** (PT, contract → FT by Mo3) — senior practitioner, runs Keeper training
 - **Compliance Counsel** (fractional, 5–10 hrs/mo) — US healthcare/wellness attorney for ongoing review
 
 ### First Hires (Mo 6–12)
-- **Operations Lead** — Pakistan or US, runs Keeper recruitment + scheduling + member success
+- **Operations Lead** — runs Keeper recruitment + scheduling + member success
 - **Engineer (Full-stack)** — supplements founder; or 2 engineers if founder steps back from coding
 - **Content Lead** — Embers + group programming + brand voice steward
 - **Bridge Coordinator** — manages clinical referral network
 
 ### Mo 12–24
-- **Marketing Lead** — community + diaspora-channels expert
+- **Marketing Lead** — community + content engine expert
 - **Senior Engineer / CTO-track** — if scaling
 - **Customer Success Manager** — member retention + escalation
 - **2–4 more Operations / Keeper-managers** — span of control as Keeper count grows
 - **B2B Sales Lead** (optional, Phase 3)
 
 ### Long-term advisory needs
-- **Pakistani-heritage US-licensed clinical lead** (advisor) — quality bar for The Bridge
-- **Religious/cultural advisor** (advisor) — Islamic counseling tradition consultant
-- **Brand / marketing advisor** (advisor) — diaspora-savvy operator
+- **US-licensed clinical lead** (advisor) — quality bar for The Bridge
+- **Pastoral / chaplaincy advisor** (advisor) — for translating the elder-companion craft into Keeper training
+- **Brand / marketing advisor** (advisor) — literary-content-marketing operator
 
 ---
 
@@ -691,18 +694,18 @@ A list of unconventional moves that could become moats, partnerships, or differe
 - **Hearth Anniversaries** — Keepers send members a note on the anniversary of significant losses or transitions discussed (member-controlled). Retention goldmine.
 - **The Letter** — every member, on signup, writes a "letter to who I want to be" sealed for 1 year. Re-opened at the anniversary Sit. Powerful ritual; high retention.
 - **Hearth Pages** — at end of life, Hearth offers a member's family the right to compile an "anthology" of their Long Talks (with Keeper-curated permission) as a private digital memoir. Grief-care extended into legacy.
-- **Father's House / Mother's Kitchen Circles** — themed Circles for diaspora dealing with parental aging, parental loss, or repairing parental relationships. Major emotional valence.
-- **Wedding Season Concierge** — wedding season is the highest-demand emotional support window across South Asian and many diaspora communities. Build a season-specific Circle and content calendar.
+- **Parent Circles** — themed Circles for adults navigating parental aging, parental loss, or repairing parental relationships. Major emotional valence.
+- **Wedding Season Concierge** — the months before a wedding are a quiet high-demand support window. Build a season-specific Circle and content calendar.
 - **The Tea (free 5-min audio)** — brand's signature free podcast: 5 minutes, daily, a Keeper sharing one piece of perspective. Lo-fi. Calm-app-but-warm. SEO + brand-build engine.
-- **Hearth × Faith Communities** — co-host monthly grief Circles at mosques, temples, gurdwaras, and churches in diaspora-heavy cities (NYC, Houston, Toronto, Chicago). Funded by Hearth, free entry. Trust-building + member acquisition + ethically aligned.
-- **Elder Keeper Fellowships** — paid 12-month program for women 55+ with strong informal community-elder roles. They become Keepers. Honors the village-elder archetype Hearth is built on.
+- **Hearth × Faith Communities** — co-host monthly grief Circles at churches, synagogues, mosques, temples, and secular humanist groups in major cities. Funded by Hearth, free entry. Trust-building + member acquisition + ethically aligned.
+- **Elder Keeper Fellowships** — paid 12-month program for adults 55+ with strong informal community-elder roles. They become Keepers. Honors the elder-companion archetype Hearth is built on.
 - **Hearth + Hospice partnerships** — partner with hospice organizations for end-of-life and post-loss support; extends Bridge concept in the other direction.
-- **Hearth Press** — an essays-and-podcasts arm that lives outside the app, builds Hearth's voice as a publisher, attracts top diaspora writers. Precedent: how Substack works.
+- **Hearth Press** — an essays-and-podcasts arm that lives outside the app, builds Hearth's voice as a publisher, attracts top literary writers on care, grief, and family. Precedent: how Substack works.
 - **The Quiet Hour** — once a week, the entire Hearth community goes silent together for 1 hour. Reflection time. Ritual at scale.
 - **Anti-app Mode** — subscription option that includes weekly mailed *physical* letters from the Keeper. Counter-programmed against the "always on" of phones. Premium feel.
 - **Hearth for Couples** (Phase 2) — Sits with both partners and the same Keeper; relational maintenance, not therapy
-- **The Long Walk** (annual community retreat) — Hearth members + Keepers walk together for a weekend. Catskills, Lake Tahoe, or a landmark location in the communities we serve. In-person bonding, content-creation moment, brand-deepening event.
-- **Hearth Stipends for new immigrants** — partner with diaspora professional associations and immigrant-support orgs to gift first-year Hearth memberships to newly arrived professionals. Acquisition + community-building.
+- **The Long Walk** (annual community retreat) — Hearth members + Keepers walk together for a weekend. Catskills, Lake Tahoe, UK countryside. In-person bonding, content-creation moment, brand-deepening event.
+- **Hearth Stipends for new arrivals / new parents** — partner with employee assistance programs, alumni networks, and parent-support orgs to gift first-year Hearth memberships at transition moments. Acquisition + community-building.
 - **Memorial Hearths** — when a member passes, their Keeper writes a short tribute (with family consent) for the Embers library. Brand soulfulness.
 - **Hearth for Therapists** (Phase 4) — counter-intuitive: a Keeper service for US-licensed therapists who themselves need warm peer support. Adjacent market with high WTP.
 
@@ -710,9 +713,9 @@ A list of unconventional moves that could become moats, partnerships, or differe
 
 ## 18. Closing — The Real Reason This Exists
 
-Modern life took the village elder away. Therapy filled some of the gap, but inadequately — too clinical, too expensive, too culturally illiterate, and too narrow in what it permits a relationship to become. Friends fill some of it but they're tired and have their own kids. Family is too tangled to be objective.
+Modern life took the elder-companion away. Therapy filled some of the gap, but inadequately — too clinical, too expensive, too narrow in what it permits a relationship to become, and too algorithmic in how it pairs strangers. Friends fill some of it but they're tired and have their own kids. Family is too tangled to be objective.
 
-Hearth is the missing piece. Not therapy, not friendship, not family — but the relational presence that exists in every culture and every century before this one, restored as a service, with the cultural fluency that modern American mental health can't deliver.
+Hearth is the missing piece. Not therapy, not friendship, not family — but the relational presence that exists in every culture and every century before this one, restored as a service, with the hand-matching that modern systems forgot.
 
 If Hearth works, it builds something rarer than a startup: an institution. The kind of place people remember as the reason they got through.
 

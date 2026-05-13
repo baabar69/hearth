@@ -31,7 +31,7 @@ const STATIC_ROUTES = [
 const FOR_TOPICS = [
   "grief",
   "family-pressure",
-  "diaspora",
+  "identity",
   "intimacy",
   "sexual-identity",
   "anxiety",

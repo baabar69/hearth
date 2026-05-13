@@ -1,3 +1,5 @@
+> _Updated 2026-05-13: Hearth's target audience has broadened from South Asian diaspora to universal peer-support. The strategy below reflects the original diaspora positioning — kept here for historical context._
+
 1. THE MARKET BREAKDOWN SYSTEM
    Most founders chase ideas. $100M founders study markets.
    Prompt: "Analyze the market for [your niche]. Do NOT give surface insights.

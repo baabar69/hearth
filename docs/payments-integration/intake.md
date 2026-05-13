@@ -26,6 +26,8 @@ Both POST to `/api/intake` with a `form: "full" | "short"` discriminator. The no
 **Step 5 — Keeper preferences:** keeperGender, preferredLanguage, connectionMode (video/audio), availability[], openNote
 **Step 6 — Consent:** referralSource, agreePeerSupport, agreeAge
 
+The `preferredLanguage` and `faithTradition` fields are signals the human matcher uses to pair the member with a Keeper who fits — not gates. The match is hand-built, not algorithmic.
+
 ### Safety screening
 
 When `safetyCheck === "yes"`:
@@ -85,9 +87,9 @@ Same reasoning as the payments side — Whop is source of truth for billing, fou
 1. You receive an email from `onboarding@resend.dev` with subject `New Hearth intake — <Name>`
 2. Read their answers, paying attention to:
    - **Safety flag** (red banner at top if applicable — handle first)
-   - Language preference (which Keeper speaks their language?)
+   - Language preference (which Keeper can hold this conversation in their language?)
    - Topics + open context (what's the weight?)
-   - Faith tradition (cultural matching)
+   - Faith tradition + life-stage + lived-experience signals (what kind of person will fit?)
 3. Match them with a Keeper by hand
 4. Reply to the email (replyTo is set to the applicant's email — your reply goes to them directly)
 5. Send them a payment link manually — for now, just paste the appropriate URL:

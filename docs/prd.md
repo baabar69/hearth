@@ -9,7 +9,7 @@
 
 ## 1. Product Vision
 
-Hearth is a peer-support membership product. The core unit of value is the **Keeper relationship** — a Pakistani-trained, culturally-fluent companion paired with the member for as long as the member wants them. The product is everything that surrounds and supports that relationship: discovery, intake, matching, sessions, async chat, group programs, content, payments, crisis bridging, and ongoing rituals.
+Hearth is a peer-support membership product. The core unit of value is the **Keeper relationship** — a trained peer companion hand-matched to the member for as long as the member wants them. The product is everything that surrounds and supports that relationship: discovery, intake, matching, sessions, async chat, group programs, content, payments, crisis bridging, and ongoing rituals.
 
 The product is *not* a marketplace. The product is *not* a chatbot. The product is *not* a directory. The product is a **relationship-care platform** with the lightest possible product surface that lets the relationship deepen.
 
@@ -20,36 +20,36 @@ Design principle: **the app should feel like the digital equivalent of pulling u
 ## 2. User Personas
 
 ### 2.1 Member — Primary
-**Ayesha, 31, Pakistani-American, Jersey City, married mother of two, software PM.**
-- Pain: father back home had a stroke; mother is overwhelmed; Ayesha can't sleep; her US-based therapist via EAP didn't understand Pakistani family dynamics
-- Goal: someone who *gets it*, who's available consistently, who isn't just a generic American therapist
+**Maya, 31, married mother of two in a US metro, software PM.**
+- Pain: a parent at a distance had a stroke; the other is overwhelmed; Maya can't sleep; her therapist via EAP didn't grasp the family-pressure piece
+- Goal: someone who *gets it*, who's available consistently, who isn't just a generic appointment-slot therapist
 - Tech comfort: high. iOS user. Pays monthly subscriptions on instinct. Cancels 40% of them within 90 days.
-- Decision drivers: cultural fluency > clinical credentials, consistency > flexibility, dignity > novelty
+- Decision drivers: match quality > clinical credentials, consistency > flexibility, dignity > novelty
 - Failure modes: leaves if the Keeper feels generic, leaves if the app feels gimmicky, leaves if the chat goes cold
 
 ### 2.2 Member — Secondary
-**Imran, 38, Pakistani-Canadian, Toronto, doctor, lost mother 8 months ago.**
-- Pain: men's emotional support broken in his community; couldn't grieve openly; uses alcohol more than he wants
+**Daniel, 38, doctor, lost his mother 8 months ago.**
+- Pain: men's emotional support is broken in most of his communities; couldn't grieve openly; uses alcohol more than he wants
 - Goal: a Keeper who isn't preachy; can hold his ambivalence about his mother without trying to fix it
 - Tech comfort: medium. Android user, doesn't use a lot of consumer apps.
-- Decision drivers: dignity > everything, gender of Keeper might matter, time-zone flexibility, anonymity from his medical community
+- Decision drivers: dignity > everything, gender of Keeper might matter, time-zone flexibility, anonymity from his professional community
 
 ### 2.3 Member — Tertiary
-**Hamza, 24, second-gen Houston, recent grad, working in finance, parents pressuring him on marriage and career.**
-- Pain: doesn't speak fluent Urdu, feels caught between his parents' expectations and his own identity; impostor syndrome at work
-- Goal: someone who can translate between his American self and his parents' world
+**Alex, 24, recent grad in finance, parents pressuring him on partnership and career.**
+- Pain: feels caught between his parents' expectations and his own identity; impostor syndrome at work
+- Goal: someone older who can translate between the inside of his head and his parents' world
 
 ### 2.4 Keeper
-**Rabia, 47, Karachi, retired school principal, runs a women's mentoring circle in her neighborhood, has informally mentored 60+ younger women over 20 years, fluent Urdu + English, decent Punjabi.**
-- Pain: her husband is salaried; she has time and skills but no good outlet for paid mentoring
-- Goal: meaningful work, paid in USD, flexible evening hours
-- Tech comfort: medium. WhatsApp expert, basic web user
+**Ruth, 47, former school principal, runs an informal mentoring circle in her neighborhood, has informally mentored 60+ younger adults over 20 years.**
+- Pain: she has time and skills but no good outlet for paid mentoring
+- Goal: meaningful work, flexible evening hours
+- Tech comfort: medium. Strong text/voice communicator, basic web user
 - Decision drivers: dignified compensation, clear training, good Hearth-side support
 
 ### 2.5 Bridge Therapist
-**Dr. Sana Khan, 41, LCSW, private practice in Edison NJ, Pakistani-American, accepts Cigna and Aetna via Headway.**
+**Dr. Sara Khan, 41, LCSW, private practice in a US metro, accepts Cigna and Aetna via Headway.**
 - Pain: marketing herself eats time she could spend with clients; her practice has weeks of waitlist
-- Goal: stable referral pipeline of pre-screened, culturally-aligned clients
+- Goal: stable referral pipeline of pre-screened, well-matched clients
 
 ---
 
@@ -122,7 +122,7 @@ Trigger: intake threshold OR Keeper-flagged in-session OR member self-request
   ↓
 Member sees Bridge explainer (this is for clinical care, here's why, here's what it costs)
   ↓
-Member matched to 2–3 Bridge therapists (location + insurance + cultural fit)
+Member matched to 2–3 Bridge therapists (location + insurance + hand-matched fit)
   ↓
 Member books with Bridge therapist (Headway-style)
   ↓
@@ -164,10 +164,10 @@ For high-risk cases: Hearth ops follows up at 24h, 7d, 30d to confirm member is 
 - Member referral program ("Light a Hearth")
 - Keeper performance dashboard
 - Bridge coordinator workflow (admin tool for routing)
-- Better matching algorithm (preferences + availability + cultural fit)
+- Better matching algorithm (preferences + availability + lived-experience fit)
 - Annual Letter to Future Self ritual feature
 - Keeper anniversary date markers (member-controlled)
-- Multi-language UI (Urdu UI option in app)
+- Multi-language UI (Spanish UI option in app for the US market; additional languages prioritized by member demand)
 
 ### 4.3 V2 — Nice to have (Months 12–24)
 
@@ -247,7 +247,7 @@ For high-risk cases: Hearth ops follows up at 24h, 7d, 30d to confirm member is 
 
 **V1.1 (Months 6–12): algorithmic-assist with manual override.**
 - Inputs: member's soft-intake themes, language preference, gender preference (optional), region/timezone, age range, life-stage themes
-- Keeper attributes: themes specialty, languages, gender, timezone, current capacity
+- Keeper attributes: themes specialty, languages, gender, timezone, current capacity, lived-experience tags
 - Output: ranked top 5 Keepers; ops admin selects 3 for member to choose from
 - ML-based ranking AFTER 1,000+ matches with feedback signal
 
@@ -267,7 +267,7 @@ For high-risk cases: Hearth ops follows up at 24h, 7d, 30d to confirm member is 
 - Languages
 - 3–5 Stories (member testimonials, name-changed)
 - Bio (200–300 words, written in Keeper's voice)
-- Cultural background (Karachi-raised, second-gen Pakistani-American Houston, etc.)
+- Background (where they grew up, where they live, the life-stages they've moved through)
 
 **Private metadata (ops only):**
 - Performance metrics
@@ -309,7 +309,7 @@ For high-risk cases: Hearth ops follows up at 24h, 7d, 30d to confirm member is 
 **Format:** persistent chat thread between member and Keeper (never group)
 **Message types:**
 - Text
-- Voice notes (up to 5 min each — voice notes are core to South Asian communication)
+- Voice notes (up to 5 min each — voice notes are core to slow, intimate communication)
 - Images (member-uploaded, encrypted, optional)
 - Reactions (limited set: heart, hands-folded, ear)
 **Read receipts:** off by default (members can opt-in). Removes pressure.
@@ -601,7 +601,7 @@ For high-risk cases: Hearth ops follows up at 24h, 7d, 30d to confirm member is 
 
 ### 8.6 Keeper Side
 - BAAs signed with all Keepers (data-handling obligations)
-- Pakistan-side Keepers access via web-only browser interface; no PHI on local devices
+- International Keepers (any country outside the data-host region) access via web-only browser interface; no PHI on local devices
 - VPN required for Keeper sessions (data egress controls)
 - Background checks (international scope)
 - Annual recertification + ongoing training
@@ -612,7 +612,7 @@ For high-risk cases: Hearth ops follows up at 24h, 7d, 30d to confirm member is 
 
 **Web-first MVP** (responsive web on dearhearth.com), then **native iOS at Mo 3**, **native Android at Mo 6**.
 
-Reasoning: web-first allows fastest iteration; iOS native essential because Pakistani-American target audience is iOS-heavy (~60–65%) and expects polished native experience; Android native for Pakistani-Canadian and broader South Asian Phase 2.
+Reasoning: web-first allows fastest iteration; iOS native at Mo 3 because the primary US target audience skews iOS and expects a polished native experience; Android native at Mo 6 expands reach to the rest of the market.
 
 **Native app priorities:**
 - Native video session experience (key UX differentiator)
@@ -631,17 +631,17 @@ Reasoning: web-first allows fastest iteration; iOS native essential because Paki
 
 ## 10. Internationalization
 
-**MVP languages:** English (US, Canada)
-**Mo 6:** add Urdu UI option (RTL-aware fonts, full translation of marketing + onboarding + key product surfaces)
-**Mo 12:** Hindi UI option (Devanagari support); Bengali UI option (for Bangladeshi diaspora)
+**MVP languages:** English (US, Canada, UK, Australia)
+**Mo 6:** add Spanish UI option (full translation of marketing + onboarding + key product surfaces)
+**Mo 12:** add additional languages prioritized by member-demand signal (track the languages members request at intake)
 **Tech:** i18next + Lokalise; ICU message format
 
-**Cultural localization (deeper than translation):**
-- Date/time formats (Pakistan day-of-week conventions)
-- Pricing (USD primary; CAD for Canadian members; never PKR for diaspora — they pay in USD)
-- Imagery (no monolithic Pakistani imagery; show diaspora life)
-- Voice notes default-on for South Asian audiences
-- Vacations and holidays (Eid scheduling, Ramadan-aware Sit times, Pakistan independence day)
+**Localization (deeper than translation):**
+- Date/time formats appropriate to the member's region
+- Pricing (USD primary; CAD for Canadian members; GBP for UK; AUD for Australia)
+- Imagery (no monolithic stock imagery; show real adult life — kitchens, porches, walks, hands holding cups)
+- Voice notes default-on (audio is core to slow, intimate communication)
+- Vacations and holidays — calendar honors major religious and civil observances; Sit-time recommendations adapt to fasting periods and significant national holidays
 
 ---
 

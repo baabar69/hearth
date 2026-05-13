@@ -18,8 +18,8 @@ const VALUES = [
     body: "The most useful wisdom in most people's lives came from people without degrees. We honor that tradition while being clear about our scope and building bridges to credentials when they matter.",
   },
   {
-    title: "Cultural fluency as standard",
-    body: "Diaspora context is not a niche add-on. It is the default. The things you don't have to translate. The half-understood things that are understood anyway.",
+    title: "Matched by hand, not by algorithm",
+    body: "Pairing is not a niche add-on. It is the default. A human at Hearth reads what you carried in, then chooses the Keeper who can hold the half-understood things that get understood anyway.",
   },
   {
     title: "Honesty about scope",
@@ -27,7 +27,7 @@ const VALUES = [
   },
   {
     title: "Bridges over walls",
-    body: "We do not compete with therapy. We complement it. We do not keep you in Hearth when something else serves you better. The Bridge is not a feature — it is a value.",
+    body: "We do not compete with therapy. We complement it. We do not keep you in Hearth when something else serves you better. The Bridge is not a feature. It is a value.",
   },
   {
     title: "Human first, AI second",
@@ -104,23 +104,23 @@ export default function AboutPage() {
               <p>
                 &ldquo;Modern life has stripped that away. The village is
                 gone. The elders are far away or passed away. We have therapists
-                for the clinical things and friends for the easy things, but
-                for everything in between — the grief, the half-formed worries,
+                for the clinical things and friends for the easy things. For
+                everything in between (the grief, the half-formed worries,
                 the family questions that don&rsquo;t fit on a couch, the
-                identity exhaustion, the caregiving weight — most of us have
+                identity exhaustion, the caregiving weight) most of us have
                 nobody.&rdquo;
               </p>
               <p>
-                &ldquo;We went looking for that person — the trusted aunt,
+                &ldquo;We went looking for that person. The trusted aunt,
                 the community elder, the neighbour who&rsquo;d seen more than
-                you — and found that they still exist. They are in our
+                you. We found that they still exist. They are in our
                 communities, mostly unrecognized and unpaid for this work they
                 do quietly every week. We called them Keepers.&rdquo;
               </p>
               <p>
                 &ldquo;Hearth is that elder&rsquo;s house, on your phone, in
                 any language. For anyone navigating a life that doesn&rsquo;t
-                fit neatly on a couch — whether you left one world for
+                fit neatly on a couch. Whether you left one world for
                 another, or your world simply changed under you, or the
                 village you were raised to rely on is no longer
                 there.&rdquo;
@@ -173,11 +173,10 @@ export default function AboutPage() {
               margin: "24px auto 0",
             }}
           >
-            For anyone in the world carrying a life where the village
-            elder, trusted aunt, or community wise-person tradition is alive in
-            memory but absent in modern life. Our Keepers bring deep cultural
-            fluency for those who want it &mdash; and warm, careful presence
-            for everyone.
+            For anyone carrying a life where the village elder, trusted aunt,
+            or community wise-person tradition is alive in memory but absent
+            in modern life. Our Keepers are matched by hand for fit, and
+            bring warm, careful presence for everyone.
           </p>
         </div>
       </section>

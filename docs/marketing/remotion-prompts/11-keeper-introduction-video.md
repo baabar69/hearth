@@ -1,3 +1,5 @@
+> _Updated 2026-05-13: Hearth's target audience has broadened from South Asian diaspora to universal peer-support. The prompt below reflects the original diaspora positioning — kept here for historical context._
+
 ```
 You are writing a Remotion v5+ video component for HEARTH.
 

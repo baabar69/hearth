@@ -5,19 +5,19 @@ import SharedFooter from "../components/SharedFooter";
 export const metadata = {
   title: "Hearth vs. therapy · Hearth",
   description:
-    "Hearth is not a substitute for therapy. It is a different thing. Here's the honest comparison — when therapy is the right tool, when Hearth is, and when you need both.",
+    "Hearth is not a substitute for therapy. It is a different thing. Here's the honest comparison: when therapy is the right tool, when Hearth is, and when you need both.",
 };
 
 const COMPARISON = [
   {
     label: "What it is",
     therapy: "Clinical mental-health treatment by a licensed professional.",
-    hearth: "Peer support — a paid, trained companion for the long term.",
+    hearth: "Peer support. A paid, trained companion for the long term.",
   },
   {
     label: "Who provides it",
     therapy: "Licensed therapist, psychologist, social worker, or counsellor.",
-    hearth: "A Keeper — vetted, trained, and supervised, but not a clinician.",
+    hearth: "A Keeper: vetted, trained, and supervised, but not a clinician.",
   },
   {
     label: "Credentials",
@@ -27,7 +27,7 @@ const COMPARISON = [
   {
     label: "What it's for",
     therapy: "Diagnosis, treatment, clinical mental-health conditions, deep psychological work.",
-    hearth: "The slow, ongoing weight of living — grief, family, identity, the in-between.",
+    hearth: "The slow, ongoing weight of living: grief, family, identity, the in-between.",
   },
   {
     label: "Frequency",
@@ -50,9 +50,9 @@ const COMPARISON = [
     hearth: "Not insurance-eligible. FSA/HSA may apply for some plans.",
   },
   {
-    label: "Cultural fluency",
-    therapy: "Variable. Specialty therapists exist but availability is limited.",
-    hearth: "Built in. Keepers are from the cultural context our members live inside.",
+    label: "Matching for fit",
+    therapy: "Variable. You usually pick from a directory and hope.",
+    hearth: "A human at Hearth reads what you brought in and chooses the Keeper who can hold it.",
   },
   {
     label: "Wait time",
@@ -71,14 +71,14 @@ const COMPARISON = [
   },
   {
     label: "What it can't do",
-    therapy: "Be there at 11pm on Tuesday. Always carry the cultural context. Show up cheaply.",
+    therapy: "Be there at 11pm on Tuesday. Always feel like the right fit. Show up cheaply.",
     hearth: "Diagnose. Prescribe. Replace the deep clinical work some seasons need.",
   },
 ];
 
 const THERAPY_SIGNS = [
   "You're in an active mental-health crisis or having thoughts of self-harm.",
-  "You suspect or know you have a clinical condition — depression, anxiety disorder, PTSD, bipolar, etc.",
+  "You suspect or know you have a clinical condition (depression, anxiety disorder, PTSD, bipolar, etc).",
   "You're managing a diagnosis with medication and need clinical oversight.",
   "You're processing trauma that needs structured clinical work (EMDR, IFS, CBT).",
   "You need a clinical assessment for legal, medical, or workplace reasons.",
@@ -86,18 +86,18 @@ const THERAPY_SIGNS = [
 ];
 
 const HEARTH_SIGNS = [
-  "You don't think you need a therapist — you need an elder, an auntie, the cousin who's been through it.",
+  "You don't think you need a therapist. You need an elder, an auntie, the cousin who's been through it.",
   "You have a therapist already and need someone for the time in between sessions.",
   "Therapy felt clinical when you wanted something warmer. You'd come back with a Keeper present.",
-  "Your weight is real but ordinary — family pressure, grief that's old, the slow drift of a life.",
-  "You want cultural context built in. You're tired of explaining who your mother is.",
+  "Your weight is real but ordinary: family pressure, grief that's old, the slow drift of a life.",
+  "You want someone matched to you on purpose. You're tired of explaining who your mother is.",
   "You want a relationship, not a programme. The same person, every week, over months.",
 ];
 
 const BOTH_SIGNS = [
   "You're in therapy for a clinical issue and Hearth holds the day-to-day in between.",
   "You're in early therapy and want a Keeper to walk you through the harder weeks.",
-  "Your therapist works on the deep root. Your Keeper holds the surface — the family call, the work week, the quiet hour before bed.",
+  "Your therapist works on the deep root. Your Keeper holds the surface: the family call, the work week, the quiet hour before bed.",
 ];
 
 export default function HearthVsTherapyPage() {
@@ -128,7 +128,7 @@ export default function HearthVsTherapyPage() {
             }}
           >
             We are not a cheaper version of therapy. We are not a watered-down
-            version of therapy. We are a different thing entirely &mdash; the
+            version of therapy. We are a different thing entirely: the
             chair that used to be in every village, returned to a generation
             that left the village. Therapy is essential when therapy is the
             right tool. Here&rsquo;s when it is, when Hearth is, and when you
@@ -384,7 +384,7 @@ export default function HearthVsTherapyPage() {
             </h2>
             <p style={{ color: "var(--ink-2)", fontSize: 17, lineHeight: 1.7, marginBottom: 48 }}>
               Therapy and Hearth aren&rsquo;t competing. Most of the strongest
-              outcomes we see are from members who use both &mdash; therapy
+              outcomes we see are from members who use both: therapy
               for the deep root, Hearth for the surface and the steady weight
               between sessions.
             </p>
@@ -511,7 +511,7 @@ export default function HearthVsTherapyPage() {
                 {[
                   "Available at 3am, every night, no scheduling.",
                   "Will remember your dog's name and your boss's last text.",
-                  "Cheaper than human support — usually $5–$20/month.",
+                  "Cheaper than human support, usually $5–$20/month.",
                   "No social cost. No fear of being a burden.",
                   "Useful for venting in a low-stakes loop.",
                 ].map((t, i) => (
@@ -558,9 +558,9 @@ export default function HearthVsTherapyPage() {
                 {[
                   "Notices the thing you didn't say. Asks about the silence.",
                   "Has lived a version of the same story. Brings real context, not pattern-matched comfort.",
-                  "Sits with you in silence — without filling it.",
-                  "Carries cultural fluency you don't have to translate.",
-                  "Will tell you, gently, when you need a clinician — and walk you to one.",
+                  "Sits with you in silence, without filling it.",
+                  "Was matched to you on purpose: the half-things you don't have to translate.",
+                  "Will tell you, gently, when you need a clinician, and walk you to one.",
                 ].map((t, i) => (
                   <li key={i} style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: 10, alignItems: "start" }}>
                     <span style={{ color: "#FFB74D", fontSize: 14, marginTop: 2 }}>+</span>
@@ -635,11 +635,11 @@ export default function HearthVsTherapyPage() {
             <div>
               <p style={{ color: "var(--ink-2)", fontSize: 17, lineHeight: 1.7, marginBottom: 18 }}>
                 If you start with Hearth and your Keeper notices you&rsquo;d
-                benefit from a clinician &mdash; for what they&rsquo;re hearing,
-                or what you&rsquo;re asking for &mdash; they don&rsquo;t hand
+                benefit from a clinician (for what they&rsquo;re hearing,
+                or what you&rsquo;re asking for) they don&rsquo;t hand
                 you a Google search and disappear. They walk you to The
-                Bridge: a vetted, culturally-fluent therapist matched by hand,
-                introduced by name.
+                Bridge: a vetted therapist matched by hand, introduced by
+                name.
               </p>
               <p style={{ color: "var(--ink-2)", fontSize: 17, lineHeight: 1.7, marginBottom: 24 }}>
                 Your Keeper stays your Keeper through the transition. The
@@ -686,7 +686,7 @@ export default function HearthVsTherapyPage() {
             <p style={{ color: "rgba(242,237,229,0.7)", fontSize: 16, lineHeight: 1.6, maxWidth: "48ch", marginInline: "auto", marginBottom: 28 }}>
               The 12-minute intake will help us see what you&rsquo;re carrying.
               If your Keeper thinks therapy is what you actually need, they
-              will tell you &mdash; honestly, in the first conversation.
+              will tell you. Honestly, in the first conversation.
             </p>
             <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
               <Link href="/intake" className="btn btn-primary btn-lg">

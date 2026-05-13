@@ -1,3 +1,5 @@
+> _Updated 2026-05-13: Hearth's target audience has broadened from South Asian diaspora to universal peer-support. The strategy below reflects the original diaspora positioning — kept here for historical context. The Remotion technical capabilities themselves remain accurate._
+
 # Remotion Capabilities for Hearth
 
 A practical reference for building Hearth marketing videos in a separate Remotion codebase. Sourced from the official Remotion documentation (remotion.dev) and the `@remotion/*` package docs. Verified, not invented.

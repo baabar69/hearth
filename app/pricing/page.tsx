@@ -19,11 +19,11 @@ const FAQ = [
   },
   {
     q: "How do I cancel?",
-    a: "One click, no exit interview, no friction. Cancel from your account settings at any time. You keep access through the end of the billing period you've already paid for. This is FTC-compliant click-to-cancel — we don't make it hard.",
+    a: "One click, no exit interview, no friction. Cancel from your account settings at any time. You keep access through the end of the billing period you've already paid for. This is FTC-compliant click-to-cancel. We don't make it hard.",
   },
   {
     q: "Does Hearth take insurance?",
-    a: "Not currently. Hearth is peer support, not therapy, so it doesn't fall under standard mental health insurance codes. We're working on FSA/HSA compatibility — watch this space. If your employer has an EAP or wellness benefit, it may cover peer support; check with your HR team.",
+    a: "Not currently. Hearth is peer support, not therapy, so it doesn't fall under standard mental health insurance codes. We're working on FSA/HSA compatibility (watch this space). If your employer has an EAP or wellness benefit, it may cover peer support; check with your HR team.",
   },
   {
     q: "Can I change tiers mid-subscription?",
@@ -31,11 +31,11 @@ const FAQ = [
   },
   {
     q: "What's the reschedule policy?",
-    a: "Life happens. Reschedule a Sit up to 24 hours before it starts and there's no fee — just pick a new time that works for both of you. Inside the 24-hour window, we charge a $20 fee to cover your Keeper's time, since they've already held the slot. Emergencies are different — your Keeper has discretion to waive the fee, and they will. We're not going to police a death in the family.",
+    a: "Life happens. Reschedule a Sit up to 24 hours before it starts and there's no fee. Just pick a new time that works for both of you. Inside the 24-hour window, we charge a $20 fee to cover your Keeper's time, since they've already held the slot. Emergencies are different. Your Keeper has discretion to waive the fee, and they will. We're not going to police a death in the family.",
   },
   {
     q: "What if I miss a Sit?",
-    a: "If you no-show without rescheduling, the Sit counts as taken. Your Keeper will reach out through the Long Talk to check in. Three no-shows in a row triggers a gentle pause — we'll email to ask whether Hearth is still the right fit for this season of your life, with no judgement either way.",
+    a: "If you no-show without rescheduling, the Sit counts as taken. Your Keeper will reach out through the Long Talk to check in. Three no-shows in a row triggers a gentle pause. We'll email to ask whether Hearth is still the right fit for this season of your life, with no judgement either way.",
   },
   {
     q: "Can I gift a Hearth membership?",
@@ -43,7 +43,7 @@ const FAQ = [
   },
   {
     q: "Why does it cost what it costs?",
-    a: "60% of what you pay goes directly to your Keeper. The rest covers platform, infrastructure, Keeper training, and supervision. We don't underpay our Keepers to offer a cheaper product — that model produces burned-out, poorly-trained people. Cultural fluency has a cost, and we think that cost is worth paying.",
+    a: "60% of what you pay goes directly to your Keeper. The rest covers platform, infrastructure, Keeper training, and supervision. We don't underpay our Keepers to offer a cheaper product. That model produces burned-out, poorly-trained people. Hand-matched, well-trained, paid-fairly support has a cost, and we think that cost is worth paying.",
   },
 ];
 
@@ -107,13 +107,13 @@ export default function PricingPage() {
                 Or $390/yr &mdash; save 2 months
               </div>
               <ul>
-                <li>Matched Keeper — paired in 72 hours or we keep looking</li>
-                <li>Biweekly Sits — one 35–60 min video or audio Sit every two weeks</li>
-                <li>The Long Talk — unlimited async thread, 24-hour Keeper response</li>
+                <li>Matched Keeper, paired in 72 hours or we keep looking</li>
+                <li>Biweekly Sits: one 35–60 min video or audio Sit every two weeks</li>
+                <li>The Long Talk, unlimited async thread with 24-hour Keeper response</li>
                 <li>Friday reflection from your Keeper, every week</li>
                 <li>Full Embers library access</li>
                 <li>One Circle per month included</li>
-                <li>The Bridge handoff — when a clinician is the right tool</li>
+                <li>The Bridge handoff when a clinician is the right tool</li>
               </ul>
               <Link
                 href={HEARTHSIDE_CHECKOUT_PATH}
@@ -150,10 +150,10 @@ export default function PricingPage() {
               </div>
               <ul>
                 <li>Everything in Hearthside</li>
-                <li>Weekly Sits — one 35–60 min Sit every week</li>
-                <li>Priority Long Talk — 4-hour Keeper response window</li>
+                <li>Weekly Sits: one 35–60 min Sit every week</li>
+                <li>Priority Long Talk with 4-hour Keeper response window</li>
                 <li>Two Circles per month included</li>
-                <li>Anniversary rituals — yearly meaning-making with your Keeper</li>
+                <li>Anniversary rituals: yearly meaning-making with your Keeper</li>
                 <li>Bridge therapist priority matching when needed</li>
               </ul>
               <Link
@@ -192,7 +192,7 @@ export default function PricingPage() {
                 option="Free peer chats"
                 price="$0"
                 what="Anonymous volunteers, different person each time, variable training. Good for a one-off vent."
-                gap="No consistency. No relationship. No cultural fluency built in."
+                gap="No consistency. No relationship. No one matched for fit."
               />
               <ContextCard
                 option="AI companions"
@@ -210,7 +210,7 @@ export default function PricingPage() {
                 option="Therapy"
                 price="$400–1,200/mo"
                 what="Clinical care from a licensed professional. The right tool for diagnosis, treatment, deep clinical work."
-                gap="Often hard to find culturally fluent. Expensive without insurance. Not built for the slow weight between sessions."
+                gap="Often hard to find the right fit. Expensive without insurance. Not built for the slow weight between sessions."
                 accent
               />
             </div>
@@ -251,9 +251,9 @@ export default function PricingPage() {
                 }}
               >
                 One Keeper, the same person every Sit, paired by hand within
-                72 hours. Cultural context built in. Async Long Talk in
-                between. The slow, paired, long-term shape of support — for
-                less than the cost of a single therapy session.
+                72 hours for fit. Async Long Talk in between. The slow,
+                paired, long-term shape of support, for less than the cost
+                of a single therapy session.
               </p>
             </div>
           </div>
@@ -489,17 +489,17 @@ export default function PricingPage() {
             >
               <p>
                 The majority of every membership fee goes directly to your
-                Keeper — not to a platform cut, not to investor returns, not to
+                Keeper. Not to a platform cut, not to investor returns, not to
                 marketing. Keepers are paid professionals. We don&rsquo;t use
                 the volunteer model, because burned-out, underpaid people
                 cannot hold space for other people well.
               </p>
               <p style={{ marginTop: 18 }}>
-                Cultural fluency has a cost. Finding, training, and retaining
-                Keepers who actually understand the diaspora South Asian
-                experience — in Bengali, Urdu, Tamil, Punjabi — takes real
-                investment. We think that cost is worth paying, and we think
-                you deserve to know where your money goes.
+                Hand-matching has a cost. Finding, training, and retaining
+                Keepers who can actually hold the recurring weight of a life,
+                with care and without flinching, takes real investment.
+                We think that cost is worth paying, and we think you deserve
+                to know where your money goes.
               </p>
               <p style={{ marginTop: 18 }}>
                 The remainder covers infrastructure, Hearth&rsquo;s Keeper

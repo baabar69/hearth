@@ -24,51 +24,51 @@ const KEEPERS: Keeper[] = [
   {
     slug: "aruna-bhattacharya",
     name: "Aruna Bhattacharya",
-    city: "Karachi → Toronto",
+    city: "Kolkata → Toronto",
     tagline: "Was the cousin people called when something didn't make sense yet.",
-    themes: ["Diaspora identity", "Caregiving", "Family pressure", "Career-cultural"],
-    languages: ["Bengali", "English", "Hindi"],
-    bio: "25 years counseling people through the hardest chapters — without a clipboard.",
+    themes: ["Identity", "Caregiving", "Family pressure", "Career crossroads"],
+    languages: ["English", "Bengali", "Hindi"],
+    bio: "25 years counseling people through the hardest chapters. No clipboard.",
     photo: "/images/keepers/aruna.jpg",
   },
   {
     slug: "rabia-k",
     name: "Rabia K.",
-    city: "Lahore → Jersey City",
+    city: "Karachi → Jersey City",
     tagline: "Retired school principal. Will tell you what your mother meant to say.",
     themes: ["Mothers", "Marriage", "Sandwich years", "In-laws"],
-    languages: ["Urdu", "English", "Punjabi"],
+    languages: ["English", "Urdu", "Punjabi"],
     bio: "Has informally mentored 60+ younger women across two countries.",
     photo: "/images/keepers/rabia.jpg",
   },
   {
     slug: "faisal-m",
     name: "Faisal M.",
-    city: "Karachi → Houston",
+    city: "Lahore → Houston",
     tagline: "For the men who were never taught to grieve.",
-    themes: ["Grief", "Men's emotional support", "Career crossroads", "Diaspora fathers"],
-    languages: ["Urdu", "English"],
+    themes: ["Grief", "Men's emotional support", "Career crossroads", "Fatherhood"],
+    languages: ["English", "Urdu"],
     bio: "Former journalist. Sits with hard things without flinching.",
     photo: "/images/keepers/faisal.jpg",
   },
   {
     slug: "priya-s",
     name: "Priya S.",
-    city: "Chennai → London → Toronto",
+    city: "Chennai → Toronto",
     tagline: "For the mothers nobody prepared.",
-    themes: ["Postpartum", "New parenthood", "Identity", "Bicultural parenting"],
-    languages: ["Tamil", "English", "Hindi"],
-    bio: "Three cultures, two kids, one very honest voice.",
+    themes: ["Postpartum", "New parenthood", "Identity", "Parenting"],
+    languages: ["English", "Tamil", "Hindi"],
+    bio: "Two kids, one very honest voice about what nobody tells you.",
     photo: "/images/keepers/priya.jpg",
   },
   {
     slug: "hassan-a",
     name: "Hassan A.",
-    city: "Islamabad → Chicago",
+    city: "Cairo → Chicago",
     tagline: "Holds faith and doubt without forcing resolution.",
-    themes: ["Grief", "Faith and identity", "First-year-after", "New immigrant"],
-    languages: ["Urdu", "English", "Arabic"],
-    bio: "Trained Islamic counselor turned Keeper.",
+    themes: ["Grief", "Faith and identity", "First-year-after", "Transitions"],
+    languages: ["English", "Arabic"],
+    bio: "Trained pastoral counselor turned Keeper.",
     photo: "/images/keepers/hassan.jpg",
   },
 ];
@@ -283,8 +283,8 @@ export default function KeepersPage() {
                   maxWidth: "48ch",
                 }}
               >
-                Keepers are trained mentors rooted in communities where the
-                village elder tradition is alive. If people naturally turn to
+                Keepers are trained mentors. The people others already turn
+                to when something heavy lands. If people naturally come to
                 you in their hard chapters, this might be yours.
               </p>
             </div>

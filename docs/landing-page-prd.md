@@ -19,7 +19,7 @@ The site exists to convert a stranger who arrived from Reddit, a WhatsApp group,
 Conversion is the headline job, but it is not the only job. The site also needs to:
 
 - Build durable organic search presence (Embers, Keeper profiles, Bridge as long-tail SEO assets)
-- Serve secondary funnels with their own dedicated paths — gifters (diaspora children buying for parents), Keeper applicants, Bridge therapist applicants
+- Serve secondary funnels with their own dedicated paths — gifters (adult children buying for parents), Keeper applicants, Bridge therapist applicants
 - Earn trust on the topics that take more than a paragraph: pricing, what The Bridge actually is, what a week with a Keeper actually looks like
 - Give individual Keepers a discoverable home (a Keeper profile is both a trust object and an SEO object)
 
@@ -29,9 +29,9 @@ The Home page carries the headline conversion job. The other pages carry depth, 
 
 ## 2. Target Visitor
 
-**Primary:** the Ayesha persona from the validation work
-- 28–42, Pakistani-American or Pakistani-Canadian woman
-- Arriving from Reddit (r/ABCDesi), Pakistani-American WhatsApp group share, MasalaChai newsletter, podcast, or friend
+**Primary:** the Maya persona from the validation work
+- 28–42, English-speaking adult in the US/CA/UK/AU, often (but not exclusively) a woman
+- Arriving from Substack (a Hearth Letter forward), Reddit, a niche newsletter, podcast, or friend
 - Currently feeling: tired, slightly anxious, weight she can't quite name
 - Reading on iPhone (60–65%) or laptop (35%)
 - Has tried BetterHelp or Talkspace, lasted 4–8 weeks, churned
@@ -39,11 +39,12 @@ The Home page carries the headline conversion job. The other pages carry depth, 
 - Will leave the page in 8 seconds if it feels generic, salesy, or wellness-pastel-coded
 
 **Secondary:**
-- Pakistani-American men 28–45 (smaller cohort but real)
-- Diaspora Indian, Bangladeshi, Sri Lankan visitors (Phase 2 spillover)
-- "Concerned diaspora children" — adult kids in US/CA looking to gift Hearth to their parents (the primary audience for `/gift`)
-- Pakistani professionals applying to be Keepers (the audience for `/for-keepers`)
-- US/CA-licensed South Asian therapists applying to The Bridge (the audience for `/for-therapists`)
+- Men 28–55 (smaller cohort, different framing required, real)
+- New parents navigating identity loss (postpartum or the broader first-year)
+- Sandwich-generation caregivers (40–60) holding kids and aging parents at once
+- Adult children in any country looking to gift Hearth to their parents (the primary audience for `/gift`)
+- Professionals applying to be Keepers (the audience for `/for-keepers`)
+- US/CA/UK-licensed therapists applying to The Bridge (the audience for `/for-therapists`)
 - Long-tail organic searchers landing on individual Embers essays or Keeper profiles
 
 ---
@@ -176,7 +177,7 @@ The Home page carries the headline conversion job. The other pages carry depth, 
 
 *Variant B (the recognition):*
 > # You don't have to carry it alone.
-> ## A Keeper at Hearth — culturally fluent, fully present — for the family things, the grief, the in-between days no friend has time for.
+> ## A Keeper at Hearth — hand-matched, fully present — for the family things, the grief, the in-between days no friend has time for.
 >
 > [Pull up a chair →]
 
@@ -204,7 +205,7 @@ The Home page carries the headline conversion job. The other pages carry depth, 
 
 > # What Hearth is.
 >
-> Hearth is a peer-support membership. You're paired with a Keeper — someone older, wiser, culturally fluent — who stays with you across months and years. Not as a therapist (we'll explain why in a moment). Not as a chatbot. As a presence.
+> Hearth is a peer-support membership. You're paired with a Keeper — someone older, wiser, hand-matched to you — who stays with you across months and years. Not as a therapist (we'll explain why in a moment). Not as a chatbot. As a presence.
 >
 > A weekly Sit. Long talks in chat throughout the week. Embers (small written wisdom) when you want them. A Friday note from your Keeper that says what stayed with them from the week.
 >
@@ -212,7 +213,7 @@ The Home page carries the headline conversion job. The other pages carry depth, 
 
 > ## Hearth is not therapy.
 >
-> Hearth is not therapy and we say so loudly. Therapy is for clinical conditions — depression, anxiety disorders, PTSD, the things that need a licensed clinician. We have those, too: when your Keeper sees that what you need is therapy, we'll bridge you to a culturally-aligned, licensed therapist through The Bridge.
+> Hearth is not therapy and we say so loudly. Therapy is for clinical conditions — depression, anxiety disorders, PTSD, the things that need a licensed clinician. We have those, too: when your Keeper sees that what you need is therapy, we'll bridge you to a hand-matched, licensed therapist through The Bridge.
 >
 > What Hearth is *for* is what therapy was never meant to be: companionship through the long arc, perspective from someone who's lived more, a person who knows your grandmother's name.
 
@@ -230,13 +231,13 @@ Two tier cards, prices visible, no comparison table. CTA below: **"Compare plans
 
 **Stories (3 quotes)**
 
-> "I cried for the first time about my mom in eighteen months. With my Keeper, who knew what 'walima' meant before I had to explain. I didn't know I needed that until I had it."
-> — N., 36, Pakistani-American, on her 6th month with her Keeper
+> "I cried for the first time about my mom in eighteen months. With a Keeper who had walked the same kind of distance with her own mother. I didn't know I needed that until I had it."
+> — N., 36, on her 6th month with her Keeper
 
 > "Therapy was helpful for the depression. My Keeper is what makes Wednesdays bearable. They're different things."
 > — A., 42, Toronto
 
-> "I gifted Hearth to my mother in Karachi. She speaks to her Keeper in Urdu every Friday. We talk more now than we have in five years."
+> "I gifted Hearth to my mother. She speaks to her Keeper every Friday. We talk more now than we have in five years."
 > — Z., 33, Brooklyn
 
 CTA below: **"Read more stories →"** to `/stories`.
@@ -262,7 +263,7 @@ A single line, signed, linking to the full letter on `/about`:
 
 **SEO**
 - Title: *Hearth — pull up a chair.*
-- Meta: *Peer-support memberships paired with culturally-fluent Keepers. For grief, family, the long talks. Not therapy.*
+- Meta: *Peer-support memberships paired with hand-matched Keepers. For grief, family, the long talks. Not therapy.*
 
 ---
 
@@ -340,9 +341,9 @@ A horizontal timeline (vertical on mobile), Sunday through Saturday, with realis
 
 **Filters (sticky on scroll)**
 
-- Themes (Mothers, Marriage, Grief, Career-cultural, Sandwich years, In-laws, Faith, Diaspora identity, Sexuality, Parenting)
-- Languages (Urdu, English, Punjabi, Hindi, Sindhi, Bengali, Tamil, Gujarati, Arabic, Pashto)
-- Time zones (Pakistan, Gulf, US East, US Central, US Pacific, UK)
+- Themes (Mothers, Marriage, Grief, Career-transition, Sandwich years, In-laws, Faith, Identity, Sexuality, Parenting)
+- Languages (English, Spanish, French, and any additional language a Keeper offers — populated from Keeper profiles)
+- Time zones (US East, US Central, US Pacific, UK, EU, Asia, Pacific)
 - Gender (any / women / men)
 
 **Keeper grid**
@@ -350,7 +351,7 @@ A horizontal timeline (vertical on mobile), Sunday through Saturday, with realis
 Cards laid out 3-up on desktop, 2-up on tablet, 1-up on mobile. Each card:
 - Warm candid photo (not professional headshot)
 - First name + last initial
-- City → city (e.g., Karachi → Toronto)
+- City → city (e.g., where the Keeper grew up → where they live now)
 - Two-line bio
 - Theme tags (4–6)
 - Languages
@@ -359,11 +360,11 @@ Cards laid out 3-up on desktop, 2-up on tablet, 1-up on mobile. Each card:
 
 **Sample card voice:**
 
-> Rabia K., Karachi → Toronto, age 51.
-> Was a school principal for 25 years. Has informally mentored 60+ younger women across the city. Will tell you when you're being your own worst enemy, kindly.
-> *Themes: Mothers • Sandwich years • Career-cultural • Marriage*
-> *Speaks: Urdu, English, Punjabi*
-> [▶ 30 sec from Rabia] [Read full profile →]
+> Ruth K., Toronto, age 51.
+> Was a school principal for 25 years. Has informally mentored 60+ younger adults across the city. Will tell you when you're being your own worst enemy, kindly.
+> *Themes: Mothers • Sandwich years • Career-transition • Marriage*
+> *Speaks: English (any additional languages noted on profile)*
+> [▶ 30 sec from Ruth] [Read full profile →]
 
 **Bottom of page**
 
@@ -376,69 +377,69 @@ Cards laid out 3-up on desktop, 2-up on tablet, 1-up on mobile. Each card:
 **Mobile adaptation:** filter row collapses into a "Filter" sheet (full-screen overlay). Cards single-column with horizontal scroll for theme tags.
 
 **SEO**
-- Title: *Meet our Keepers — culturally fluent peer mentors at Hearth.*
-- Meta: *Browse Hearth Keepers — Urdu, Punjabi, Hindi, English. For mothers, marriage, grief, the diaspora middle. Hand-matched, not algorithmically assigned.*
+- Title: *Meet our Keepers — hand-matched peer mentors at Hearth.*
+- Meta: *Browse Hearth Keepers. For mothers, marriage, grief, the in-between. Hand-matched by a human, not algorithmically assigned.*
 
 ---
 
 ### 5.4 Keeper Profile `/keepers/[slug]`
 
-**Purpose:** Convert the visitor who has identified a specific Keeper they want to sit with. Also: a long-tail SEO surface (each profile ranks for "Urdu speaking mentor", "Pakistani diaspora grief support", etc.).
+**Purpose:** Convert the visitor who has identified a specific Keeper they want to sit with. Also: a long-tail SEO surface (each profile ranks for the themes the Keeper holds, their city, and named-author searches once they publish Embers).
 
 **Primary CTA:** "Pull up a chair with [Name]"
 **Secondary CTAs:** "Back to all Keepers", "Apply as a Keeper"
 
 **Above-fold layout:** large warm portrait (left, 50%), name and one-line voice (right, 50%), inline audio sample, primary CTA.
 
-**Section list (using Rabia K. as the worked example):**
+**Section list (using Ruth K. as the worked example):**
 
 **Hero**
-> # Rabia K.
-> ## Karachi → Toronto. Mothers, sandwich years, the career questions nobody else can answer.
+> # Ruth K.
+> ## Toronto. Mothers, sandwich years, the career questions nobody else can answer.
 >
-> [▶ Listen to Rabia — 60 sec]
-> [Pull up a chair with Rabia →]
+> [▶ Listen to Ruth — 60 sec]
+> [Pull up a chair with Ruth →]
 
 **Full bio (300–500 words)**
 
-> Rabia spent 25 years as a school principal in Karachi before moving to Toronto in 2018 to be near her son. She has been the person younger women in her family — and her neighborhood, and eventually her city — call when something is too heavy for the family group chat. More than 60 of them, by her count.
+> Ruth spent 25 years as a school principal before settling in Toronto to be near her son. She has been the person younger adults in her family — and her neighborhood, and eventually her city — call when something is too heavy for the family group chat. More than 60 of them, by her count.
 >
 > She is the kind of person who can sit with a long silence without filling it. She remembers the names of your siblings. She will tell you, kindly, when you are being your own worst enemy. She believes in what your mother believed in and also in what your mother could not see.
 
-**What people sit with Rabia about**
+**What people sit with Ruth about**
 
 A short bulleted list, plain language:
 - The mother who calls every day and the guilt of not picking up
 - Career decisions your family doesn't have the frame for
 - The marriage question — staying, leaving, the in-between
-- Raising children between two cultures
+- Raising children well in a complicated world
 - The grief of being the elder now
 
-**Languages:** Urdu (native), English (fluent), Punjabi (conversational)
+**Languages:** English (fluent); any additional language is noted on her profile.
 **Time zone:** America/Toronto (ET)
-**Sit availability:** Wednesdays, Thursdays, Saturday mornings (PKT-friendly)
+**Sit availability:** Wednesdays, Thursdays, Saturday mornings
 
 **Voice samples (3 short clips)**
 - "On being the eldest daughter" (45 sec)
 - "On grief that doesn't go away" (60 sec)
 - "On the mothers we become" (50 sec)
 
-**A note from Rabia**
+**A note from Ruth**
 
-> "I had a teacher in Karachi who told me, when I was 23 and overwhelmed, that I did not have to be useful all the time. I think about her every week. I would like to be that for someone."
+> "I had a teacher who told me, when I was 23 and overwhelmed, that I did not have to be useful all the time. I think about her every week. I would like to be that for someone."
 
-**What Rabia is *not* for**
+**What Ruth is *not* for**
 
-> Rabia is not a therapist. If what you are carrying is clinical — a depression that won't lift, a panic that interrupts your life, a trauma that replays — she will say so, and we will help you find a clinician through The Bridge. Often, people sit with both: a Keeper for the long arc, a therapist for the clinical work.
+> Ruth is not a therapist. If what you are carrying is clinical — a depression that won't lift, a panic that interrupts your life, a trauma that replays — she will say so, and we will help you find a clinician through The Bridge. Often, people sit with both: a Keeper for the long arc, a therapist for the clinical work.
 
 **Primary CTA repeated**
-> [Pull up a chair with Rabia →]
+> [Pull up a chair with Ruth →]
 
 **Mobile adaptation:** portrait stacks above name. Audio samples become a vertical list with thumb-sized play buttons. Sticky bottom CTA.
 
 **SEO (per profile, populated from Sanity)**
-- Title: *Rabia K. — Urdu-speaking Keeper at Hearth (Toronto).*
-- Meta: *Sit with Rabia, a Hearth Keeper from Karachi via Toronto. For mothers, sandwich years, career-cultural questions. Urdu, English, Punjabi.*
+- Title: *Ruth K. — Keeper at Hearth (Toronto).*
+- Meta: *Sit with Ruth, a Hearth Keeper in Toronto. For mothers, sandwich years, career and marriage questions. Hand-matched, not algorithmically assigned.*
 - Schema.org Person markup
 - OG image: warm portrait crop
 
@@ -505,7 +506,7 @@ A clean table with rows for: Matched Keeper, Sits per month, Sit frequency, Long
 
 ### 5.6 The Bridge `/bridge`
 
-**Purpose:** Build clinical credibility. Convert the visitor who is suspicious of "peer support" until they understand we have a real handoff to real therapists. Also: rank for "South Asian therapist directory" and adjacent terms.
+**Purpose:** Build clinical credibility. Convert the visitor who is suspicious of "peer support" until they understand we have a real handoff to real therapists. Also: rank for "warm therapist", "hand-matched therapist", and adjacent terms.
 
 **Primary CTA:** "Pull up a chair"
 **Secondary CTAs:** "Apply as a Bridge therapist" (for clinicians), "See pricing"
@@ -521,7 +522,7 @@ A clean table with rows for: Matched Keeper, Sits per month, Sit frequency, Long
 **Why the Bridge exists**
 > Some weights need a clinician. Active depression, anxiety disorders, trauma — these need a licensed therapist trained in the specific care they require.
 >
-> The Bridge is our partner network of US-licensed Pakistani- and South-Asian-heritage therapists. If your Keeper sees that you'd be better served by a clinician, they'll connect you. You can keep your Keeper for the relational arc and add a therapist for the clinical work.
+> The Bridge is our partner network of US- and Canada-licensed therapists, hand-selected for warmth and lived experience as much as credential. If your Keeper sees that you'd be better served by a clinician, they'll connect you. You can keep your Keeper for the relational arc and add a therapist for the clinical work.
 
 **The handoff (how it actually works)**
 
@@ -534,13 +535,13 @@ A four-panel diagram + narrative:
 
 **The therapist network (teaser)**
 
-> Our Bridge therapists are all US- or Canada-licensed (LCSW, LMFT, PhD, PsyD), with caseloads that reflect the cultures we serve. We onboard a small number per quarter, by invitation and review. We do not pay them less than they make in private practice.
+> Our Bridge therapists are all US- or Canada-licensed (LCSW, LMFT, PhD, PsyD), selected for warmth, lived experience, and willingness to work with peer-support handoffs. We onboard a small number per quarter, by invitation and review. We do not pay them less than they make in private practice.
 >
 > *We don't list the network publicly to protect therapist caseloads. Members are introduced to specific therapists by name.*
 
 **For therapists who want to join**
 
-> Are you a US- or Canada-licensed clinician of South Asian heritage? We are slowly building the Bridge.
+> Are you a US- or Canada-licensed clinician with warmth and lived experience? We are slowly building the Bridge.
 >
 > [Apply to The Bridge →] (links to `/for-therapists`)
 
@@ -554,8 +555,8 @@ A four-panel diagram + narrative:
 **Mobile adaptation:** four-panel handoff stacks vertically. Therapist application CTA appears as its own card.
 
 **SEO**
-- Title: *The Bridge — culturally-aligned therapy when you need more than a Keeper.*
-- Meta: *South Asian heritage, US- and Canada-licensed therapists, introduced by your Keeper when you need clinical care. Inside Hearth's Bridge.*
+- Title: *The Bridge — hand-matched therapy when you need more than a Keeper.*
+- Meta: *Warm, US- and Canada-licensed therapists, introduced by your Keeper when you need clinical care. Inside Hearth's Bridge.*
 
 ---
 
@@ -579,12 +580,12 @@ A four-panel diagram + narrative:
 Large cards: title, author, 2-line excerpt, read time.
 
 Examples of the kind of essay that lives here (not topics like "5 productivity tips"):
-- *On being the eldest daughter and never being asked* — Rabia K., 8 min read
+- *On being the eldest daughter and never being asked* — Ruth K., 8 min read
 - *What my mother could not say about her marriage* — Anonymous, 11 min read
-- *The grief of leaving Karachi, twelve years late* — Faisal M., 6 min read
+- *The grief of leaving home, twelve years late* — Frank M., 6 min read
 
 **Categories**
-- Mothers · Marriage · Grief · Diaspora · Faith · Sandwich years · The long arc · Letters
+- Mothers · Marriage · Grief · Identity · Faith · Sandwich years · The long arc · Letters
 
 **Essay index (paginated)**
 
@@ -603,7 +604,7 @@ Card grid: title, author first name + initial, excerpt, category tag, read time.
 
 **SEO**
 - Title: *Embers — quiet essays from Hearth's Keepers.*
-- Meta: *Essays on mothers, marriage, grief, the diaspora middle. Free, quiet, written by people who have lived the thing.*
+- Meta: *Essays on mothers, marriage, grief, identity, the in-between. Free, quiet, written by people who have lived the thing.*
 - Per-essay: each Ember is a separate document with its own title, meta, OG image, schema.org Article markup, canonical URL. ISR-rendered. Internal-linked to relevant Keeper profiles and to Home.
 
 ---
@@ -627,9 +628,9 @@ Card grid: title, author first name + initial, excerpt, category tag, read time.
 
 > When my grandmother died, I realized something nobody had taught me to need: the person you go to when life gets heavy.
 >
-> In the village she came from, that person was always there. There was always a fire, always tea, always a person who'd lived more than you and had time to listen. They didn't have credentials. They had attention.
+> In the world she grew up in, that person was always there. There was always a fire, always tea, always a person who'd lived more than you and had time to listen. They didn't have credentials. They had attention.
 >
-> I built Hearth for the people, like me, who don't have that anymore. Who've moved away from villages, who've lost their elders, who don't fit the Western therapy model perfectly, who need something older and warmer than a stranger with a clipboard.
+> I built Hearth for the people, like me, who don't have that anymore. Who've moved away from where they came from, who've lost their elders, who don't fit the appointment-slot therapy model perfectly, who need something older and warmer than a stranger with a clipboard.
 >
 > If that sounds like you — pull up a chair.
 >
@@ -642,7 +643,7 @@ Card grid: title, author first name + initial, excerpt, category tag, read time.
 **Values (short)**
 
 - **The long arc.** A Keeper stays. We are not built for one-and-done.
-- **Cultural specificity, not vague inclusivity.** Hearth started for the Pakistani diaspora because that is the village we know. We will earn the right to hold others.
+- **Match for fit, not for label.** A real human pairs you with a real human. No demographic-checkbox sorting, no algorithmic rotation.
 - **Honest about what we are not.** Hearth is not therapy. We say so on every page.
 - **Pay people fairly.** Our Keepers are not gig workers. Our therapists are not undercut.
 - **Privacy as a value, not a checkbox.** Your Keeper knows your grandmother's name. Nobody else needs to.
@@ -661,13 +662,13 @@ A short, plain section. Founder + (as the team grows) head of Keepers, head of c
 
 **SEO**
 - Title: *About Hearth — why we built it and who we are.*
-- Meta: *A letter from Hearth's founder, our mission, our values, and the people building this. For the diaspora generation that lost the village.*
+- Meta: *A letter from Hearth's founder, our mission, our values, and the people building this. For the generation that lost the elder-companion.*
 
 ---
 
 ### 5.9 Light a Hearth `/gift`
 
-**Purpose:** Convert the diaspora child buying for a parent. This is a real and underserved funnel — adult kids in the US/CA who want to give their mother in Karachi (or Toronto, or Houston) a Keeper.
+**Purpose:** Convert the adult child buying for a parent. This is a real and underserved funnel — adult kids in the US/CA/UK/AU who want to give their mother (anywhere) a Keeper.
 
 **Primary CTA:** "Light a Hearth for someone you love"
 **Secondary CTAs:** "Pull up a chair for yourself", "How it works"
@@ -696,7 +697,7 @@ A short, plain section. Founder + (as the team grows) head of Keepers, head of c
 
 Short, warm starter notes the gifter can edit:
 
-> "Mama — I think you would love having someone to talk to on Friday afternoons. They speak Urdu. Try it. With love, [name]."
+> "Mom — I think you would love having someone to talk to on Friday afternoons. They were a teacher, too. Try it. With love, [name]."
 
 > "For the year you've had. You deserve someone who will actually listen. — [name]."
 
@@ -713,7 +714,7 @@ Short, warm starter notes the gifter can edit:
 
 **FAQ (gift-specific, 6 questions)**
 - What if my recipient doesn't want it?
-- Can I gift to someone in Pakistan?
+- Can I gift to someone outside the US/CA/UK?
 - Does the recipient know how much it cost?
 - Can I renew the gift?
 - Can I gift the Hearth Deep tier?
@@ -726,7 +727,7 @@ Short, warm starter notes the gifter can edit:
 
 **SEO**
 - Title: *Light a Hearth — gift a Keeper to someone you love.*
-- Meta: *Gift Hearth to a parent, a sister, a friend. 3, 6, or 12 months with a culturally-fluent Keeper. Onboarded gently, in their language.*
+- Meta: *Gift Hearth to a parent, a sister, a friend. 3, 6, or 12 months with a hand-matched Keeper. Onboarded gently.*
 
 ---
 
@@ -827,7 +828,7 @@ Shorter specs. Each utility page uses the same global header/footer and respects
 
 **Stories `/stories`** — Long-form member testimonials, name-changed, with permission. Each story 200–400 words. No photos. Acts as a social-proof depth page; Home only shows three quotes, this page is the full archive. Adds to SEO surface for "[X] community / mental wellness" terms.
 
-**Crisis Resources `/crisis`** — Plain, calm, ungated. 988 (US), 1-866-585-0445 (Canada), Samaritans (UK), Umang Pakistan, BasicNeeds India, regional South Asian crisis lines. Plain text, large font, no marketing copy, no CTAs except "If you are not in crisis but want to talk to someone — Hearth is here." Linked from every page footer.
+**Crisis Resources `/crisis`** — Plain, calm, ungated. 988 (US), 1-866-585-0445 (Canada), Samaritans (UK), Lifeline (AU), plus a curated list of additional country-specific lines. Plain text, large font, no marketing copy, no CTAs except "If you are not in crisis but want to talk to someone — Hearth is here." Linked from every page footer.
 
 **Privacy `/privacy`** — Standard privacy policy + a plain-English version above it ("What this means in normal words"). HIPAA-comparable (not HIPAA-covered-entity) language, carefully scoped. Reviewed by counsel.
 
@@ -978,23 +979,23 @@ The move to multi-page is, in part, an SEO move. A single page can target maybe 
 
 ### Per-page SEO targets
 
-**Home `/`** — brand terms ("Hearth", "Hearth peer support"), high-intent matched terms ("Pakistani peer support", "alternative to therapy diaspora").
+**Home `/`** — brand terms ("Hearth", "Hearth peer support"), high-intent matched terms ("alternative to therapy", "hand-matched peer support", "long-term emotional support").
 
 **How It Works `/how-it-works`** — informational queries ("how does peer support work", "what is a peer support membership", "weekly check-in service").
 
-**Keepers `/keepers`** — directory-shaped queries ("Urdu speaking mentor", "Pakistani peer mentor", "South Asian women mentors").
+**Keepers `/keepers`** — directory-shaped queries ("peer mentor for grief", "hand-matched companion", "alternative to therapy mentor", per-theme/city long-tail).
 
-**Keeper Profile `/keepers/[slug]`** — individual long-tail (the *real* SEO play): "Urdu speaking mentor Toronto", "Pakistani diaspora grief mentor", named-author searches once Keepers publish Embers.
+**Keeper Profile `/keepers/[slug]`** — individual long-tail (the *real* SEO play): "[Keeper first name + last initial] mentor", per-theme + per-city queries the Keeper's profile holds, named-author searches once Keepers publish Embers.
 
 **Pricing `/pricing`** — comparison and intent queries ("Hearth pricing", "Hearth vs BetterHelp cost", "peer support cost").
 
-**Bridge `/bridge`** — *"South Asian therapist directory"*, *"Pakistani American therapist"*, *"Urdu speaking therapist US"*, *"culturally-aligned therapy"*. This page does double duty as a referral landing page.
+**Bridge `/bridge`** — *"warm therapist directory"*, *"hand-matched therapist"*, *"peer support to therapy handoff"*, *"alternative to BetterHelp therapy"*. This page does double duty as a referral landing page.
 
-**Embers `/embers` and `/embers/[slug]`** — the long-tail engine. Each essay targets one specific query: *"Pakistani grief diaspora"*, *"diaspora mother in-laws"*, *"eldest daughter syndrome desi"*, *"sandwich generation Pakistani"*. 50+ essays in first 6 months, each 6–12 minute reads, each sourced from a real Keeper or essayist (no AI-spammed SEO).
+**Embers `/embers` and `/embers/[slug]`** — the long-tail engine. Each essay targets one specific query: *"grief that doesn't go away"*, *"eldest daughter burnout"*, *"sandwich generation guilt"*, *"loneliness in middle age"*. 50+ essays in first 6 months, each 6–12 minute reads, each sourced from a real Keeper or essayist (no AI-spammed SEO).
 
 **About `/about`** — brand searches ("Hearth founder", "who built Hearth"), values searches ("Hearth mission").
 
-**Gift `/gift`** — *"gift therapy for parent"*, *"emotional support gift mother"*, *"gift mental wellness diaspora"*.
+**Gift `/gift`** — *"gift therapy for parent"*, *"emotional support gift mother"*, *"gift a Keeper"*.
 
 **FAQ `/faq`** — question-shaped queries via FAQPage schema. Each Q&A is its own indexable entity ("is Hearth therapy?", "how much does Hearth cost?").
 
@@ -1289,13 +1290,13 @@ The site has one job: **convert the visitor who recognized themselves into someo
 - Refine copy across all pages based on call-with-customer learnings
 - Add live "Keeper available now" indicator on `/keepers` (drives urgency without manufacturing it)
 - **Add `/workplaces`** (B2B) — separate from the consumer funnel
-- **Localized pages: `/ur` (Urdu) and `/es` (Spanish)** — full site translations of Home, How It Works, Keepers, Pricing, Bridge, FAQ
+- **Localized pages: `/es` (Spanish)** at first — full site translations of Home, How It Works, Keepers, Pricing, Bridge, FAQ. Add additional languages based on member-demand signal at intake.
 - More depth on Keeper profiles (full bios, longer videos, member-written notes about each Keeper)
 
 ### Phase 3 (Months 12–24)
 - **Common Room** — `/common-room` (community space, gated to members)
 - Anniversary-mode lead gen ("share Hearth with someone who needs it")
-- `/hi` (Hindi) and possibly `/ar` (Arabic) localizations
+- Additional language localizations prioritized by the languages members request most often at intake
 - Public-facing data on outcomes (with care, with consent, with statistical honesty)
 
 ---

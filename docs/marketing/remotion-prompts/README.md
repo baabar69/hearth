@@ -1,3 +1,5 @@
+> _Updated 2026-05-13: Hearth's target audience has broadened from South Asian diaspora to universal peer-support. Individual prompts below may reference the original diaspora positioning — kept here for historical context._
+
 # Hearth — Remotion Video Prompts
 
 Twelve paste-ready prompts for generating Hearth's marketing videos in a separate Remotion codebase.

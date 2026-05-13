@@ -186,8 +186,8 @@ export default function ExitPopup() {
               }}
             >
               Leave your email and we&rsquo;ll send you{" "}
-              <strong style={{ fontWeight: 500 }}>$10 off your First Sit</strong>{" "}
-              — good whenever you&rsquo;re ready. No drip campaigns, no
+              <strong style={{ fontWeight: 500 }}>$10 off your First Sit</strong>
+              , good whenever you&rsquo;re ready. No drip campaigns, no
               follow-up sales emails. One note from us, and we&rsquo;ll wait.
             </p>
 
@@ -245,7 +245,7 @@ export default function ExitPopup() {
                   marginBottom: 14,
                 }}
               >
-                Or — for someone you love
+                Or, for someone you love
               </p>
               <p
                 style={{

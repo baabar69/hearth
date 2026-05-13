@@ -1,3 +1,5 @@
+> _Updated 2026-05-13: Hearth's target audience has broadened from South Asian diaspora to universal peer-support — Keepers are now hand-matched for fit rather than positioned around specific language/cultural fluency. The marketing playbook below reflects the original diaspora positioning — kept here for historical context. New marketing assets should follow the universal positioning in `docs/business.md`, `docs/prd.md`, and `docs/landing-page-prd.md`._
+
 # Hearth Marketing — Index
 
 This folder is the operational playbook for Hearth's marketing. Three pieces of primary research feed into three pieces of execution.

@@ -14,11 +14,11 @@ const GIFT_OPTIONS = [
 const TEMPLATES = [
   {
     label: "For a parent",
-    text: "I've been thinking about how much you carry, and how rarely you let anyone help. I wanted to give you something that holds you — a real person, not an app, who will listen the way you deserve to be listened to. No pressure to use it right away. It's yours whenever you're ready.",
+    text: "I've been thinking about how much you carry, and how rarely you let anyone help. I wanted to give you something that holds you. A real person, not an app, who will listen the way you deserve to be listened to. No pressure to use it right away. It's yours whenever you're ready.",
   },
   {
     label: "For a partner",
-    text: "You've been carrying a lot lately. I wanted to give you something that's just yours — not us, not work, just a space where you get to be heard. I'll be here. This is someone who's also there.",
+    text: "You've been carrying a lot lately. I wanted to give you something that's just yours. Not us, not work, just a space where you get to be heard. I'll be here. This is someone who's also there.",
   },
   {
     label: "For a friend",
@@ -41,15 +41,15 @@ const FAQ = [
   },
   {
     q: "What if they decide Hearth isn't right for them?",
-    a: "If they decline, the gift converts to a credit on your account — usable for another gift to someone else, or applied to your own future membership. No awkward conversation required, and the value isn't lost.",
+    a: "If they decline, the gift converts to a credit on your account, usable for another gift to someone else, or applied to your own future membership. No awkward conversation required, and the value isn't lost.",
   },
   {
     q: "Does the price appear anywhere in the gift email?",
-    a: "No. We mention the duration (e.g., 'one month of Hearth') — never the dollar amount.",
+    a: "No. We mention the duration (e.g., 'one month of Hearth'), never the dollar amount.",
   },
   {
     q: "Can I gift internationally?",
-    a: "Yes. Hearth is open to members worldwide. Your gift recipient just needs an email and a willingness to pull up a chair. Sits are scheduled across global time zones, and our Keepers can match on language and cultural context if that matters to your recipient.",
+    a: "Yes. Hearth is open to members worldwide. Your gift recipient just needs an email and a willingness to pull up a chair. Sits are scheduled across global time zones, and our Keepers are matched by hand for fit, including for context that matters to your recipient.",
   },
 ];
 
@@ -181,7 +181,7 @@ export default function GiftPage() {
               {
                 num: "03",
                 title: "We onboard them gently",
-                body: "We send a calm email explaining what Hearth is, how the First Sit works, and how to get started — at a pace that's theirs.",
+                body: "We send a calm email explaining what Hearth is, how the First Sit works, and how to get started. At a pace that's theirs.",
               },
             ].map((step) => (
               <div

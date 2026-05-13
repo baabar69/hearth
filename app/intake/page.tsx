@@ -9,8 +9,8 @@ import SharedNav from "@/app/components/SharedNav";
 const TOPICS = [
   { id: "grief", label: "Grief or loss" },
   { id: "family", label: "Family pressure or expectations" },
-  { id: "diaspora", label: "Life between cultures" },
-  { id: "identity", label: "Identity & belonging" },
+  { id: "belonging", label: "Belonging & where I fit" },
+  { id: "identity", label: "Identity & self-understanding" },
   { id: "sexual_identity", label: "Sexual identity or LGBTQ+" },
   { id: "intimacy", label: "Intimacy & shame" },
   { id: "relationships", label: "Relationship stress" },
@@ -81,12 +81,12 @@ const SPIRITUALITY_OPTIONS = [
 ];
 
 const FAITH_TRADITION_OPTIONS = [
-  "Muslim",
-  "Hindu",
-  "Sikh",
   "Buddhist",
   "Christian",
+  "Hindu",
   "Jewish",
+  "Muslim",
+  "Sikh",
   "Spiritual but unaffiliated",
   "Another tradition",
   "None",
@@ -95,14 +95,18 @@ const FAITH_TRADITION_OPTIONS = [
 
 const NATIVE_LANGUAGE_OPTIONS = [
   "English",
+  "Spanish",
+  "Mandarin",
+  "French",
+  "Arabic",
+  "Hindi",
   "Urdu",
   "Bengali",
   "Tamil",
   "Punjabi",
-  "Hindi",
-  "Gujarati",
-  "Sinhala",
-  "Arabic",
+  "Portuguese",
+  "German",
+  "Russian",
   "Other",
 ];
 
@@ -416,14 +420,14 @@ export default function IntakePage() {
               {data.firstName ? `${data.firstName}, you're in the queue.` : "You're in the queue."}
             </h1>
             <p style={{ fontFamily: "var(--mono)", fontSize: 14, color: "#777", lineHeight: 1.7, marginBottom: 32 }}>
-              We're reading your answers and finding your Keeper. Expect a note at <strong style={{ color: "var(--ink)" }}>{data.email}</strong> within 48 hours — we match by hand, not algorithm.
+              We're reading your answers and finding your Keeper. Expect a note at <strong style={{ color: "var(--ink)" }}>{data.email}</strong> within 48 hours. We match by hand, not algorithm.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 12, alignItems: "center" }}>
               <Link href="/embers" style={{
                 fontFamily: "var(--mono)", fontSize: 13, letterSpacing: "0.06em",
                 color: "var(--ember)", textDecoration: "underline",
               }}>
-                While you wait — read an Ember &rarr;
+                While you wait, read an Ember &rarr;
               </Link>
               <Link href="/" className="btn btn-ghost" style={{ marginTop: 8 }}>
                 Back to home
@@ -553,7 +557,7 @@ export default function IntakePage() {
                   <em style={{ fontStyle: "italic", fontSize: 15, color: "#999" }}>(optional)</em>
                 </FieldLabel>
                 <Textarea
-                  placeholder="In a sentence or two — what's happening? There's no right way to answer this."
+                  placeholder="In a sentence or two, what's happening? There's no right way to answer this."
                   value={data.openContext}
                   onChange={(v) => set("openContext", v)}
                 />
@@ -660,7 +664,7 @@ export default function IntakePage() {
                 <div>
                   <FieldLabel>Are you having any thoughts of harming yourself or others?</FieldLabel>
                   <p style={{ fontFamily: "var(--mono)", fontSize: 12, color: "#999", marginBottom: 12, lineHeight: 1.5 }}>
-                    Hearth is not a crisis service — please answer honestly so we can point you to the right support.
+                    Hearth is not a crisis service. Please answer honestly so we can point you to the right support.
                   </p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     {SAFETY_OPTIONS.map((o) => (
@@ -682,12 +686,12 @@ export default function IntakePage() {
                         Please reach out for immediate help.
                       </p>
                       <p style={{ fontFamily: "var(--mono)", fontSize: 13, color: "#555", marginBottom: 12 }}>
-                        Hearth isn&rsquo;t the right resource for a crisis — but these are:
+                        Hearth isn&rsquo;t the right resource for a crisis. These are:
                       </p>
                       <ul style={{ fontFamily: "var(--mono)", fontSize: 13, color: "#333", lineHeight: 2, paddingLeft: 20, margin: 0 }}>
-                        <li><strong>US:</strong> 988 Suicide & Crisis Lifeline — call or text <strong>988</strong></li>
+                        <li><strong>US:</strong> 988 Suicide & Crisis Lifeline. Call or text <strong>988</strong></li>
                         <li><strong>Canada:</strong> 1-866-585-0445</li>
-                        <li><strong>UK:</strong> Samaritans — <strong>116 123</strong></li>
+                        <li><strong>UK:</strong> Samaritans, <strong>116 123</strong></li>
                         <li><strong>Crisis Text Line:</strong> Text HOME to <strong>741741</strong></li>
                         <li>
                           <Link href="/crisis" style={{ color: "var(--ember)" }}>
@@ -696,7 +700,7 @@ export default function IntakePage() {
                         </li>
                       </ul>
                       <p style={{ fontFamily: "var(--mono)", fontSize: 12, color: "#888", marginTop: 12 }}>
-                        You can still complete this form — your Keeper will know you may need extra care.
+                        You can still complete this form. Your Keeper will know you may need extra care.
                       </p>
                     </div>
                   )}
@@ -836,7 +840,7 @@ export default function IntakePage() {
                 <div>
                   <FieldLabel>What language would you most like to speak with your Keeper in?</FieldLabel>
                   <p style={{ fontFamily: "var(--mono)", fontSize: 12, color: "#999", marginBottom: 12 }}>
-                    Cultural fluency runs through language. We&rsquo;ll try to match you with a Keeper who shares yours.
+                    Language matching helps your Keeper meet you where you are. We&rsquo;ll try to pair you with someone who shares yours.
                   </p>
                   <div style={{ display: "flex", flexWrap: "wrap" as const, gap: 8 }}>
                     {NATIVE_LANGUAGE_OPTIONS.map((o) => (
@@ -887,7 +891,7 @@ export default function IntakePage() {
                     <em style={{ fontStyle: "italic", fontSize: 15, color: "#999" }}>(optional)</em>
                   </FieldLabel>
                   <Textarea
-                    placeholder="A fear, a hope, something you've never said out loud — no pressure."
+                    placeholder="A fear, a hope, something you've never said out loud. No pressure."
                     value={data.openNote}
                     onChange={(v) => set("openNote", v)}
                   />
@@ -1035,7 +1039,7 @@ export default function IntakePage() {
                     lineHeight: 1.5,
                   }}
                 >
-                  {submitError} — please try again or email us directly.
+                  {submitError}. Please try again or email us directly.
                 </p>
               )}
               <button

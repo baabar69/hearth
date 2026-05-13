@@ -9,7 +9,7 @@ const CATEGORIES = [
   "All",
   "Grief",
   "Family",
-  "Diaspora",
+  "Transitions",
   "Identity",
   "Intimacy",
 ];
@@ -46,7 +46,7 @@ const ESSAYS = [
     slug: "code-switch-fatigue",
     title: "Code-Switch Fatigue",
     author: "Devika Iyer",
-    category: "Diaspora",
+    category: "Transitions",
     readTime: "7 min",
     excerpt:
       "I have three voices. The work voice, the family voice, the friend voice. I switch between them so fast I no longer know which one is the original. I am tired in a way that sleep does not fix.",

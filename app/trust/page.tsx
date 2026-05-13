@@ -5,7 +5,7 @@ import SharedFooter from "../components/SharedFooter";
 export const metadata = {
   title: "Trust & security · Hearth",
   description:
-    "How we protect what you bring to Hearth — encryption, no data selling, vetted Keepers, honest scope, and the things we will not do with your story.",
+    "How we protect what you bring to Hearth: encryption, no data selling, vetted Keepers, honest scope, and the things we will not do with your story.",
 };
 
 const PRINCIPLES = [
@@ -17,7 +17,7 @@ const PRINCIPLES = [
   {
     eyebrow: "Encrypted, end to end",
     title: "Your messages are not readable on our servers.",
-    body: "Long Talk messages, voice notes, and Sit notes are encrypted at rest and in transit. We use HIPAA-comparable security infrastructure — even though Hearth is not a healthcare provider, we hold ourselves to that standard.",
+    body: "Long Talk messages, voice notes, and Sit notes are encrypted at rest and in transit. We use HIPAA-comparable security infrastructure. Even though Hearth is not a healthcare provider, we hold ourselves to that standard.",
   },
   {
     eyebrow: "No trackers in the room",
@@ -27,7 +27,7 @@ const PRINCIPLES = [
   {
     eyebrow: "You own your story",
     title: "Export it, delete it, take it with you.",
-    body: "You can request a full export of your Sit notes, Long Talk messages, and account data at any time. You can delete your account permanently — and within 30 days, your conversation data is removed from our systems and backups.",
+    body: "You can request a full export of your Sit notes, Long Talk messages, and account data at any time. You can delete your account permanently, and within 30 days, your conversation data is removed from our systems and backups.",
   },
 ];
 
@@ -38,11 +38,11 @@ const KEEPERS = [
   },
   {
     title: "Trained for the work, and the limits",
-    body: "Keeper training covers active listening, cultural fluency, scope boundaries, and crisis protocol. The most important thing they learn is what is not theirs to handle — and how to walk you to a clinician when it is.",
+    body: "Keeper training covers active listening, trained sensitivity to context, scope boundaries, and crisis protocol. The most important thing they learn is what is not theirs to handle, and how to walk you to a clinician when it is.",
   },
   {
     title: "Supervised, ongoing",
-    body: "Every Keeper meets with a Lead Keeper monthly for case review and supervision. We take peer support as seriously as a clinical practice takes its own — without pretending it is one.",
+    body: "Every Keeper meets with a Lead Keeper monthly for case review and supervision. We take peer support as seriously as a clinical practice takes its own, without pretending it is one.",
   },
   {
     title: "Paid fairly",
@@ -57,7 +57,7 @@ const CRISIS = [
   },
   {
     title: "What our Keepers do when something escalates",
-    body: "If a Keeper notices something that needs a clinician — sustained suicidal ideation, an active crisis, abuse, anything outside peer support's scope — they pause the Sit gently, share the appropriate crisis resource, and walk you to The Bridge by name. They do not disappear. They do not pretend they can hold it.",
+    body: "If a Keeper notices something that needs a clinician (sustained suicidal ideation, an active crisis, abuse, anything outside peer support's scope) they pause the Sit gently, share the appropriate crisis resource, and walk you to The Bridge by name. They do not disappear. They do not pretend they can hold it.",
   },
   {
     title: "Mandatory reporting",
@@ -71,7 +71,7 @@ const PROMISES = [
   "We will not gamify your healing with streaks, badges, or points.",
   "We will not run dark-pattern cancellation flows. One click. No exit interview.",
   "We will not raise your price after you've signed up. Locked at your tier for as long as you stay.",
-  "We will not sell, share, or rent your data — to anyone, ever.",
+  "We will not sell, share, or rent your data, to anyone, ever.",
   "We will not let an algorithm match you. A human does it. By hand. In 72 hours.",
   "We will not pretend our Keepers can hold what only a clinician can. The Bridge is a value, not a feature.",
 ];
@@ -102,7 +102,7 @@ export default function TrustPage() {
             }}
           >
             Hearth is built for the things you don&rsquo;t say out loud
-            elsewhere. That puts a particular weight on us &mdash; to handle
+            elsewhere. That puts a particular weight on us, to handle
             what you bring with the same care your Keeper does. Here&rsquo;s how
             we do it. Plainly, without legalese.
           </p>
@@ -127,7 +127,7 @@ export default function TrustPage() {
             </div>
             <p className="lede">
               These aren&rsquo;t aspirations. They&rsquo;re how the product is
-              built &mdash; in the database, in the auth layer, in the
+              built. In the database, in the auth layer, in the
               Keeper&rsquo;s interface, in the lawyer&rsquo;s contract.
             </p>
           </div>

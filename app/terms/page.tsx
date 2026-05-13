@@ -69,7 +69,7 @@ export default function TermsPage() {
                 What Hearth is (and isn&rsquo;t)
               </h2>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)", marginBottom: 16 }}>
-                Hearth provides peer support services through trained, paid companions called Keepers. Keepers are not licensed therapists, counselors, social workers, or medical professionals. The service Hearth provides is peer support — companionship, listening, and pattern-noticing — and nothing more.
+                Hearth provides peer support services through trained, paid companions called Keepers. Keepers are not licensed therapists, counselors, social workers, or medical professionals. The service Hearth provides is peer support (companionship, listening, and pattern-noticing) and nothing more.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
                 No diagnosis is made through Hearth. No clinical treatment is provided. No prescription or medical advice is given. There is no doctor-patient relationship, therapist-client relationship, or any other clinical relationship formed through the use of Hearth.

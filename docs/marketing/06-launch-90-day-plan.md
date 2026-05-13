@@ -1,3 +1,5 @@
+> _Updated 2026-05-13: Hearth's target audience has broadened from South Asian diaspora to universal peer-support. The strategy below reflects the original diaspora positioning — kept here for historical context._
+
 # Hearth — 90-Day Launch Plan
 
 The first 90 days of marketing execution. Concrete, week-by-week, with owners and outputs.

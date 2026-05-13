@@ -41,7 +41,7 @@ const SHAPE = [
   {
     eyebrow: "Format",
     title: "Video. Evenings.",
-    body: "90 minutes, held over secure video. We run cohorts across multiple time zones — Americas, Europe, South Asia, Oceania — so you can find one that lands kindly in your evening.",
+    body: "90 minutes, held over secure video. We run cohorts across multiple time zones (Americas, Europe, Asia, Oceania) so you can find one that lands kindly in your evening.",
   },
 ];
 
@@ -49,7 +49,7 @@ const WEEK = [
   {
     day: "Monday",
     title: "The prompt arrives.",
-    body: "Your Keeper sends a single prompt to the cohort — a question, a passage, a small piece of writing. Something to sit with for two days. Nothing to perform, nothing to submit. Just a thing to carry into Wednesday.",
+    body: "Your Keeper sends a single prompt to the cohort. A question, a passage, a small piece of writing. Something to sit with for two days. Nothing to perform, nothing to submit. Just a thing to carry into Wednesday.",
   },
   {
     day: "Wednesday, 7pm",
@@ -59,19 +59,19 @@ const WEEK = [
   {
     day: "Thursday",
     title: "The Long Talk thread.",
-    body: "A private thread for the cohort opens for the rest of the week. Not a Slack. Not a chat room. A slow place — most members write a paragraph or two, sometimes nothing. Your Keeper reads it and replies in their own voice.",
+    body: "A private thread for the cohort opens for the rest of the week. Not a Slack. Not a chat room. A slow place. Most members write a paragraph or two, sometimes nothing. Your Keeper reads it and replies in their own voice.",
   },
   {
     day: "Friday",
     title: "The closing reflection.",
-    body: "Your Keeper writes a short reflection on what stayed with them from Wednesday — themes they noticed, threads worth carrying forward. Then the week is closed. You rest until Monday.",
+    body: "Your Keeper writes a short reflection on what stayed with them from Wednesday: themes they noticed, threads worth carrying forward. Then the week is closed. You rest until Monday.",
   },
 ];
 
 const THEMES = [
   {
-    title: "Diaspora Mothers",
-    forWhom: "Mothers raising children in a country that isn't the one that raised them.",
+    title: "Mothers Between Worlds",
+    forWhom: "Mothers raising children in circumstances different from the ones that raised them.",
     dates: "Apr 28 → May 26, 2026",
     weeks: "4 weeks",
     facilitator: "Aruna",
@@ -87,7 +87,7 @@ const THEMES = [
   },
   {
     title: "Grief That Arrived Late",
-    forWhom: "For losses you never grieved out loud — the parent, the homeland, the version of yourself.",
+    forWhom: "For losses you never grieved out loud: the parent, the place, the version of yourself.",
     dates: "May 12 → Jun 9, 2026",
     weeks: "4 weeks",
     facilitator: "Priya S.",
@@ -95,7 +95,7 @@ const THEMES = [
   },
   {
     title: "On Coming Out to a Family You Love",
-    forWhom: "A confidential cohort for queer members from communities where the question is layered.",
+    forWhom: "A confidential cohort for queer members from families where the question is layered.",
     dates: "May 20 → Jul 15, 2026",
     weeks: "8 weeks",
     facilitator: "Hassan A.",
@@ -122,15 +122,15 @@ const THEMES = [
 const FAQS = [
   {
     q: "Are Circles confidential?",
-    a: "Yes. What members share inside a Circle stays inside that Circle. Your Keeper holds the same confidentiality they do in a one-to-one Sit. We ask members to agree to the same before the first session — it is part of the opening.",
+    a: "Yes. What members share inside a Circle stays inside that Circle. Your Keeper holds the same confidentiality they do in a one-to-one Sit. We ask members to agree to the same before the first session. It is part of the opening.",
   },
   {
     q: "What if I miss a session?",
-    a: "Life happens. We do not record sessions, so a missed week is genuinely missed — but your Keeper will send a short note about what the room held that night, and the Long Talk thread is open all week. Most cohorts can hold one or two missed weeks comfortably.",
+    a: "Life happens. We do not record sessions, so a missed week is genuinely missed. But your Keeper will send a short note about what the room held that night, and the Long Talk thread is open all week. Most cohorts can hold one or two missed weeks comfortably.",
   },
   {
     q: "Can I switch Circles?",
-    a: "Before a series begins, yes — write to your Keeper or to circles@dearhearth.com and we'll move you. Once a cohort has started, we ask you to stay if you can. The room is built on the people who showed up to it.",
+    a: "Before a series begins, yes. Write to your Keeper or to circles@dearhearth.com and we'll move you. Once a cohort has started, we ask you to stay if you can. The room is built on the people who showed up to it.",
   },
   {
     q: "Do I need to share?",
@@ -142,7 +142,7 @@ const FAQS = [
   },
   {
     q: "Can my Keeper join my Circle?",
-    a: "Usually no. The Keeper who facilitates a Circle is a different Keeper from your one-to-one Keeper, by design — so the Circle stays a peer cohort and not a second therapy session. If your Keeper happens to be facilitating a theme that interests you, we'll let you know and walk you through the choice.",
+    a: "Usually no. The Keeper who facilitates a Circle is a different Keeper from your one-to-one Keeper, by design, so the Circle stays a peer cohort and not a second therapy session. If your Keeper happens to be facilitating a theme that interests you, we'll let you know and walk you through the choice.",
   },
 ];
 
@@ -172,9 +172,9 @@ export default function CirclesPage() {
             }}
           >
             Small, themed cohorts of six to ten members, facilitated by a Keeper,
-            over four to eight weeks. The eldest daughters, the diaspora mothers,
-            the grief that arrived late. A room of people who already understand
-            the question, so you do not spend the night explaining it.
+            over four to eight weeks. The eldest daughters, the mothers between
+            worlds, the grief that arrived late. A room of people who already
+            understand the question, so you do not spend the night explaining it.
           </p>
           <div className="hero-cta" style={{ marginTop: 32 }}>
             <Link href="/intake" className="btn btn-primary btn-lg">
@@ -204,8 +204,8 @@ export default function CirclesPage() {
               </h2>
             </div>
             <p className="lede">
-              Circles share the shape of a Sit &mdash; slow, paired with a real
-              person, no streaks &mdash; but with a few other members in the room
+              Circles share the shape of a Sit: slow, paired with a real
+              person, no streaks. But with a few other members in the room
               who are bringing a version of the same thing.
             </p>
           </div>
@@ -644,7 +644,7 @@ export default function CirclesPage() {
               >
                 Circles are not group therapy. They are not a clinical support
                 group. They are not AA-style mutual aid. They are not advice
-                circles &mdash; nobody is telling you what to do, and nobody is
+                circles. Nobody is telling you what to do, and nobody is
                 graded for participation.
               </p>
               <p
@@ -657,7 +657,7 @@ export default function CirclesPage() {
               >
                 A Circle is a <em>peer cohort</em>, facilitated by a trained
                 Keeper. The work is being in a room with other people who
-                already understand the shape of the question &mdash; and a host
+                already understand the shape of the question, with a host
                 who keeps the room safe enough that the slow conversation can
                 happen.
               </p>

@@ -1,3 +1,5 @@
+> _Updated 2026-05-13: Hearth's target audience has broadened from South Asian diaspora to universal peer-support. The strategy below reflects the original diaspora positioning — kept here for historical context._
+
 # Hearth Platform Strategy
 
 A 2026 playbook for marketing a sensitive, slow, literary peer-support membership across ten channels. Voice: warm, slow, literary. Promise: "Pull up a chair. You weren't meant to carry it alone." Product: a $39/$99 monthly membership pairing members with a trained Keeper (not a therapist) for long-term emotional support.

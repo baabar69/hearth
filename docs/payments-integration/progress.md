@@ -2,6 +2,21 @@
 
 Chronological record of the Whop payments integration. Newest entries at the top.
 
+## 2026-05-13 — Positioning rebalance (diaspora is *included*, not exclusive)
+
+Refinement on top of today's earlier broadening pass. The principle: "diaspora can still be part of us, but not exclusively for diaspora." Concrete restores:
+
+- **Intake language options** (`app/intake/page.tsx`): added Urdu, Bengali, Tamil, Punjabi back **alongside** Spanish, Mandarin, French, Arabic, Hindi, Portuguese, German, Russian. So a diaspora user can self-identify without the platform framing itself as diaspora-exclusive.
+- **Keeper bios** (`app/keepers/[slug]/page.tsx` and `app/keepers/page.tsx`): restored origin cities (e.g. `Karachi → Jersey City`, `Lahore → Houston`, `Kolkata → Toronto`, `Chennai → Toronto`, `Cairo → Chicago`) and per-Keeper languages (Bengali/Hindi, Urdu/Punjabi, Urdu, Tamil/Hindi, Arabic). These are **personal context** about individuals, not platform-wide claims of cultural fluency.
+- Platform-level positioning stays universal — the homepage hero, FAQ, pricing copy, About, How-it-works, etc. still read "for anyone facing X" without ranking diaspora above any other audience.
+- Embers essays were never removed (they were preserved verbatim during the broadening pass) — they're first-person personal stories with named authors, and now sit naturally alongside universal copy.
+
+Typecheck + build clean.
+
+## 2026-05-13 — Positioning broadened (universal peer support)
+
+Hearth's positioning shifted today from "peer support for the South Asian diaspora, with Keepers culturally fluent in Bengali / Urdu / Tamil / Punjabi" to "peer support for anyone facing grief, family pressure, identity questions, transitions, or loneliness — Keepers are trained peer companions hand-matched for fit." No code changes from this — the intake form's `preferredLanguage` and `faithTradition` fields still exist and still feed the human matcher, they're just no longer framed as "diaspora-specific cultural fluency." Docs in `docs/business.md`, `docs/prd.md`, `docs/landing-page-prd.md`, `docs/claude-design-prompt.md` were rewritten to reflect this. Historical strategy files in `docs/idea-validator/`, `docs/marketing/`, and prior entries in this log got header notes rather than rewrites — they're kept as historical context. No identifiers, plan IDs, env vars, or technical decisions changed.
+
 ## 2026-05-13 — Intake form made functional + BetterHelp-style fields added
 
 The pre-payment intake form (`/intake/page.tsx` and the homepage `#cta` short form) was UI-only before today — `setSubmitted(true)` did nothing. Now it actually saves leads.

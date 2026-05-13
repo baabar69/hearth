@@ -4,9 +4,9 @@
 
 Hearth is a peer-support membership service for adults navigating grief, life transitions, family pressure, identity questions, and the everyday weight of being a person. It lives in the space between "calling a friend" and "seeing a therapist" — the underserved gap where most real emotional demand actually sits.
 
-Members are paired with a **Keeper** — a trained, culturally-fluent companion who listens, reflects, advises, and stays consistent across months and years. Hearth is explicitly **not therapy**. It does not diagnose, treat, or prescribe. When a member needs clinical care, they are routed to **The Bridge** — a curated network of licensed therapists.
+Members are paired with a **Keeper** — a trained peer companion, hand-matched to each member, who listens, reflects, advises, and stays consistent across months and years. Hearth is explicitly **not therapy**. It does not diagnose, treat, or prescribe. When a member needs clinical care, they are routed to **The Bridge** — a curated network of licensed therapists.
 
-Hearth's primary audience is diaspora communities in the US and Canada — people from cultures where the village elder, trusted aunt, or community wise-person tradition is still alive in memory but absent in modern life. Hearth restores that relationship as a modern service.
+Hearth's audience is English-speaking adults across the US, Canada, UK, and Australia — anyone navigating grief, family pressure, identity questions, life transitions, or loneliness who wants warm peer support over clinical-coded therapy. The product restores the elder-companion relationship — the trusted older person who listens and stays — as a modern service.
 
 ---
 
@@ -62,7 +62,7 @@ Hearth uses its own vocabulary consistently across every surface. This language 
 
 ### Circles (Group Programs)
 - 4–8 week cohorts of 6–10 members on a shared theme
-- Examples: Diaspora Mothers Circle, Caregiving Circle, Grief Circle, Wedding Season Circle, Career-Cultural Circle, First-Year-After Circle
+- Examples: Mothers Circle, Caregiving Circle, Grief Circle, Wedding Season Circle, Career-Transition Circle, First-Year-After Circle, Eldest Daughter Circle
 - 1 Circle/month included in both tiers; single-Circle passes available as add-ons
 - Facilitated by a Keeper, not a clinician
 
@@ -74,7 +74,7 @@ Hearth uses its own vocabulary consistently across every surface. This language 
 
 ### The Bridge (Clinical Referral)
 - When a member's needs exceed peer support, their Keeper facilitates a warm handoff
-- Connects members to US-licensed South Asian-heritage and culturally-fluent therapists
+- Connects members to US- and Canada-licensed therapists, hand-selected for warmth and lived experience
 - Available as a standalone referral or as part of Hearth Deep tier
 - Members can use insurance via partner platforms where applicable
 
@@ -119,7 +119,7 @@ The primary landing page. Must communicate what Hearth is in the first screen �
 Walks a prospective member through the full journey in sequence: the First Sit (intake), Pairing (Keeper matching), the weekly Sit, the Long Talk, Circles, and the Embers library. Explains what a Keeper is and is not. Explains The Bridge. Explains the safety net (14-day money-back). Ends with CTA to begin.
 
 ### Page 3: Meet the Keepers
-A browsable directory of Keeper profiles. Each Keeper card shows: name, photo, brief bio, the themes they hold (grief, career transitions, parenting, etc.), languages spoken, and a link to their full "At the Hearth" profile page. Includes a filter by theme and language. Communicates that Keepers are rooted in cultures where the elder tradition is alive.
+A browsable directory of Keeper profiles. Each Keeper card shows: name, photo, brief bio, the themes they hold (grief, career transitions, parenting, etc.), languages spoken, and a link to their full "At the Hearth" profile page. Includes a filter by theme and language. Communicates that Keepers are real people with lived experience, hand-matched to members by a human (not algorithmically rotated).
 
 ### Page 4: At the Hearth (individual Keeper profile)
 A Keeper's public profile page. Includes: full name and photo, a short personal statement in their own voice, the themes they work with, languages spoken, their background (not credentials — lived experience), and member testimonials attributed to them. CTA to be paired with this Keeper, or to begin intake and be matched. This page has a template that applies to all Keepers.
@@ -137,10 +137,10 @@ A preview of the Embers content library. Shows the five categories (Heavy Things
 Explains what The Bridge is and why it exists. Communicates that Hearth is peer support, not therapy — and that knowing the difference is a feature, not a limitation. Explains the routing process (intake screener, Keeper recognition, warm handoff). Lists the types of situations The Bridge handles. Does not list individual therapists publicly. Ends with reassurance that being routed to The Bridge is not a failure or a dismissal.
 
 ### Page 9: About / Our Story
-The brand origin story. Tells the founding story in full: the village elder tradition, how modern life stripped it away, and why Hearth exists. Introduces the founder and their background. States the mission and values plainly. This page should feel like a letter, not a corporate about page. Includes the vocabulary of the brand (warmth, weight, carry, gather). No corporate speak.
+The brand origin story. Tells the founding story in full: the elder-companion tradition (the trusted older person who listened, present across many cultures), how modern life stripped it away, and why Hearth exists. Introduces the founder and their background. States the mission and values plainly. This page should feel like a letter, not a corporate about page. Includes the vocabulary of the brand (warmth, weight, carry, gather). No corporate speak.
 
 ### Page 10: The Stories (Testimonials)
-A dedicated testimonials page. Member stories, attributed to first name and theme (e.g. "Ayesha, navigating grief"). Mix of short pull-quotes and longer written pieces. May include audio testimonials if available. Represents the range of life situations Hearth serves: grief, career, family pressure, diaspora identity, caregiving, transitions.
+A dedicated testimonials page. Member stories, attributed to first name and theme (e.g. "Maya, navigating grief"). Mix of short pull-quotes and longer written pieces. May include audio testimonials if available. Represents the range of life situations Hearth serves: grief, career, family pressure, identity, caregiving, transitions, loneliness.
 
 ### Page 11: The Tea (Free Content / Blog)
 Hearth's free public content arm. Daily or weekly short-form pieces from Keepers: 5-minute audio perspectives, short written essays, micro-wisdom. Browsable by category. Serves as a discovery channel and brand voice expression. Not paywalled. Links to the full Embers library for members. Has its own identity within the Hearth brand.
@@ -180,7 +180,7 @@ Full access to the Embers content library for members. Browsable by category (He
 Visible to all members; active for members whose Keeper has initiated a Bridge referral or who have high intake scores. Shows an explanation of The Bridge, the member's referral status, and if applicable, the matched therapist's name, credentials, and how to book. Links to external booking via Headway/Alma where applicable. Does not feel alarming or clinical — feels like a warm next step.
 
 ### Page 22: Account Settings
-Member profile: name, photo, language preferences, notification settings, timezone. Privacy settings: whether session notes are visible to member, whether to opt in to session recording. Keeper preferences: option to flag themes that are off-limits for discussion. Accessibility settings.
+Member profile: name, photo, language preferences, notification settings, timezone. Privacy settings: whether session notes are visible to member, whether to opt in to session recording. Keeper preferences: option to flag themes that are off-limits for discussion, and to request a re-pair if the current match isn't fitting. Accessibility settings.
 
 ### Page 23: Billing & Subscription
 Current plan (Hearthside or Hearth Deep), billing cycle, next charge date. Option to switch tiers. Option to pause (if pause is supported). Option to cancel — must be frictionless per FTC Click-to-Cancel requirement; no dark patterns. Option to apply the 14-day money-back guarantee within the window. History of past charges. "Light a Hearth" — gift a membership to someone else.
@@ -256,8 +256,8 @@ This context helps avoid wrong-direction design decisions:
 
 ## The Founding Story (Brand Origin — use wherever the brand needs grounding)
 
-> "In villages, when life got heavy, you walked to the elder's house. There was always a fire, always tea, always a person who'd lived more than you. They didn't have credentials. They had time, attention, and the patience to let your sentence finish.
+> "Before the suburbs, before the apps, before the appointment slots, when life got heavy you walked to the elder's house. There was always a fire, always tea, always a person who'd lived more than you. They didn't have credentials. They had time, attention, and the patience to let your sentence finish.
 >
 > Modern life has stripped that away. We have therapists for the clinical things and friends for the easy things, but for everything in between — the grief, the half-formed worries, the family questions that don't fit on a couch — most of us have nobody.
 >
-> Hearth is that elder's house, on your phone, in any language. We are the people who pull up a chair."
+> Hearth is that elder's house, on your phone. We are the people who pull up a chair."

@@ -34,30 +34,30 @@ const TOPICS: Topic[] = [
     intro:
       "The kind of loss that gets a funeral and the kind that doesn't. Parents, grandparents, marriages, places, the version of yourself you were before something happened. There isn't a timeline for any of it, and there's nobody at the office who wants to hear about it past week two. Hearth is a chair, a Keeper, and however long the conversation needs to be.",
     signs: [
-      "You lost someone, and the people around you have stopped asking — but the weight hasn't moved.",
+      "You lost someone, and the people around you have stopped asking. The weight hasn't moved.",
       "The grief is years old and you only just realised you never grieved it out loud.",
       "Your family treats grief as a private thing. You are tired of being private.",
-      "It isn't a death — it's a divorce, a homeland you can't return to, the parent who's still alive but isn't the parent you needed.",
+      "It isn't a death. It's a divorce, a homeland you can't return to, the parent who's still alive but isn't the parent you needed.",
       "You're the one holding everyone else's grief and have no chair of your own to sit in.",
     ],
     weHold: [
       "A weekly or biweekly Sit with the same Keeper, every week, no matter where the grief takes you.",
-      "A Long Talk thread you can write into at 2am — your Keeper responds within 24 hours, no algorithms in between.",
-      "A Friday Reflection from your Keeper — what stayed with them about your week, in their own words.",
-      "If the grief tips into something clinical, your Keeper walks you to The Bridge — a vetted, culturally-fluent therapist — by name.",
+      "A Long Talk thread you can write into at 2am. Your Keeper responds within 24 hours, no algorithms in between.",
+      "A Friday Reflection from your Keeper: what stayed with them about your week, in their own words.",
+      "If the grief tips into something clinical, your Keeper walks you to The Bridge (a vetted therapist matched by hand for fit) by name.",
     ],
     weDont:
-      "Hearth is not a grief therapist. We do not provide bereavement counselling, prescribe anything, or replace the deeper clinical work some grief needs. We hold the long, slow, between-sessions weight — the ordinary grief that doesn't fit on a couch.",
+      "Hearth is not a grief therapist. We do not provide bereavement counselling, prescribe anything, or replace the deeper clinical work some grief needs. We hold the long, slow, between-sessions weight: the ordinary grief that doesn't fit on a couch.",
     keeperName: "Aruna Bhattacharya",
     keeperSlug: "aruna-bhattacharya",
     keeperBlurb:
       "Aruna has sat with grief in three languages and across two countries. She will not rush your sentence. She will not fix what doesn't need fixing.",
     storyQuote:
-      "My nani died two years ago. I never grieved out loud — there wasn't space for it. Aruna made the space. We talk about her every week. It feels like keeping her with me.",
+      "My grandmother died two years ago. I never grieved out loud. There wasn't space for it. Aruna made the space. We talk about her every week. It feels like keeping her with me.",
     storyAttribution: "Devika · 38 · Bay Area · 1 year and 4 months in Hearth",
     related: [
       { slug: "family-pressure", label: "Family pressure" },
-      { slug: "diaspora", label: "Life between cultures" },
+      { slug: "identity", label: "Identity & belonging" },
       { slug: "anxiety", label: "Anxiety & overwhelm" },
     ],
   },
@@ -70,7 +70,7 @@ const TOPICS: Topic[] = [
     headlinePre: "The call that\nruins",
     headlineEmber: "your Sunday.",
     intro:
-      "Expectations that don't translate. Parents who love you in a language that feels like control. The marriage timeline you never agreed to. The career your family wanted versus the life you actually want. Therapy can help with the patterns. Hearth helps with the next phone call — and the one after that.",
+      "Expectations that don't translate. Parents who love you in a language that feels like control. The marriage timeline you never agreed to. The career your family wanted versus the life you actually want. Therapy can help with the patterns. Hearth helps with the next phone call, and the one after that.",
     signs: [
       "A single phone call from a parent ruins the rest of your day.",
       "You've been having the same fight for ten years and nothing has shifted.",
@@ -80,12 +80,12 @@ const TOPICS: Topic[] = [
     ],
     weHold: [
       "A regular Sit with someone who has lived a version of the same story.",
-      "A Long Talk thread for the immediate after — the call you just hung up from, the dinner you survived.",
+      "A Long Talk thread for the immediate after: the call you just hung up from, the dinner you survived.",
       "A Keeper who will not pathologise your family. Who understands what they were protecting, and helps you decide what's yours to carry.",
-      "Cultural fluency built in. Nothing to translate, nothing to caveat.",
+      "A Keeper matched to you by hand. Nothing to translate, nothing to caveat.",
     ],
     weDont:
-      "Hearth is not family therapy. We do not mediate, do not work with multiple family members at once, and do not replace the structured work that some family wounds need. We hold the in-between — your reflection, your nervous system, your slow figuring-out.",
+      "Hearth is not family therapy. We do not mediate, do not work with multiple family members at once, and do not replace the structured work that some family wounds need. We hold the in-between: your reflection, your nervous system, your slow figuring-out.",
     keeperName: "Rabia K.",
     keeperSlug: "rabia-k",
     keeperBlurb:
@@ -94,42 +94,42 @@ const TOPICS: Topic[] = [
       "My mother and I have been having the same fight for ten years. Aruna didn't fix it. She helped me see what we were both protecting. The fight is still there. The shame around it isn't.",
     storyAttribution: "Priya · 34 · Toronto · 8 months in Hearth",
     related: [
-      { slug: "diaspora", label: "Life between cultures" },
+      { slug: "identity", label: "Identity & belonging" },
       { slug: "grief", label: "Grief & loss" },
       { slug: "intimacy", label: "Intimacy & shame" },
     ],
   },
   {
-    slug: "diaspora",
-    metaTitle: "Life between cultures support · Hearth",
+    slug: "identity",
+    metaTitle: "Identity & belonging support · Hearth",
     metaDescription:
-      "Peer support for diaspora life — too much of one thing, not enough of the other. A Keeper from your part of the world, fluent in what you don't have to translate.",
-    eyebrow: "For life between cultures",
+      "Peer support for the questions about who you are: at work, at home, in the room. A Keeper matched by hand for the context you don't want to spend the hour explaining.",
+    eyebrow: "For identity & belonging",
     headlinePre: "Too much of one thing.\nNot enough",
     headlineEmber: "of the other.",
     intro:
-      "Code-switching so often you forget which one is real. Parents whose homeland isn't yours, and a country that doesn't quite let you all the way in. The questions you can't take to a therapist because you'd spend the whole hour explaining the context. Hearth starts with the context already understood.",
+      "Code-switching so often you forget which one is real. The version of yourself for work, the version for family, the version for the closest people, and the gap between them that nobody else sees. The questions you can't take to a therapist because you'd spend the whole hour explaining the context. Hearth starts with the context already understood.",
     signs: [
-      "You explain your family to your friends and your friends to your family — and don't quite belong with either.",
-      "You're too American for the cousins, too brown for the office, too queer/secular/loud for the community.",
-      "Your parents' culture stopped at the year they emigrated. Yours kept moving. So did the homeland.",
-      "You go back and feel like a tourist. You stay here and feel like a guest.",
+      "You explain your family to your friends and your friends to your family, and don't quite belong with either.",
+      "You're a different person at work, at home, and with the people who knew you first.",
+      "The world you grew up in and the world you live in now don't always fit together.",
+      "You go back to where you came from and feel like a tourist. You stay here and feel like a guest.",
       "You have a therapist who is wonderful and also doesn't quite get it.",
     ],
     weHold: [
-      "Keepers based in South Asia, fluent in the cultural context you live inside.",
-      "A Sit where the auntie reference, the uncle reference, the religious-but-not reference, all land.",
-      "A Friday Reflection in your Keeper's voice — sometimes English, sometimes Bengali or Urdu or Hindi if that's where the realest word lives.",
-      "Languages: Bengali, Hindi, Urdu, English, Punjabi, Tamil — speak in the one where the truth fits.",
+      "A Keeper matched to you by hand for the context you live inside.",
+      "A Sit where the references land: the people in your life, the rooms you sit in, the shorthand you've been carrying.",
+      "A Friday Reflection in your Keeper's voice. Short, specific, in their own words.",
+      "No translation tax. Start the sentence where it actually starts.",
     ],
     weDont:
-      "Hearth is not an identity coach. We do not tell you who to be or which culture to choose. We hold the in-between with you, without trying to resolve it on your behalf.",
+      "Hearth is not an identity coach. We do not tell you who to be or which version of yourself to choose. We hold the in-between with you, without trying to resolve it on your behalf.",
     keeperName: "Aruna Bhattacharya",
     keeperSlug: "aruna-bhattacharya",
     keeperBlurb:
-      "Karachi → Toronto. Twenty-five years of sitting with people who didn't fit one place neatly. Bengali, English, Hindi.",
+      "Toronto. Twenty-five years of sitting with people who didn't fit one place neatly. Patient, attentive, unhurried.",
     storyQuote:
-      "I'm too American for the family, too brown for the office, too queer for the community. Hassan got it without me having to explain. That's the whole thing — not having to explain.",
+      "I'm a different person at work, at home, and with my closest friends. Hassan got it without me having to explain. That's the whole thing. Not having to explain.",
     storyAttribution: "Anonymous · 32 · Seattle · 7 months in Hearth",
     related: [
       { slug: "family-pressure", label: "Family pressure" },
@@ -141,7 +141,7 @@ const TOPICS: Topic[] = [
     slug: "intimacy",
     metaTitle: "Intimacy & shame support · Hearth",
     metaDescription:
-      "Peer support for the things you've never said out loud — about your body, your desires, your marriage. A Keeper who will not flinch.",
+      "Peer support for the things you've never said out loud: about your body, your desires, your marriage. A Keeper who will not flinch.",
     eyebrow: "For intimacy & shame",
     headlinePre: "The things you've\nnever said",
     headlineEmber: "out loud.",
@@ -149,13 +149,13 @@ const TOPICS: Topic[] = [
       "Shame around your body. Marriages where the bedroom is quiet. Things you couldn't say to your husband, your wife, your therapist, your closest friend. Hearth is not a sex therapist. We are a chair where the words can come out for the first time, in your own pace, with someone who has heard them before and will not look away.",
     signs: [
       "There are things about your body, your desires, or your marriage you've never said to anyone.",
-      "You grew up where sex was either invisible or shameful — and you've never had a place to put what that left.",
+      "You grew up where sex was either invisible or shameful, and you've never had a place to put what that left.",
       "Your marriage is fine on the outside. The bedroom has been silent for a long time.",
       "You're carrying something from a long time ago that you've never spoken about.",
-      "You want to talk to your partner about it — and you need to say it once first, somewhere safe.",
+      "You want to talk to your partner about it. You need to say it once first, somewhere safe.",
     ],
     weHold: [
-      "A confidential Sit with a Keeper trained for the slow work of shame — the kind that came before you had words for it.",
+      "A confidential Sit with a Keeper trained for the slow work of shame: the kind that came before you had words for it.",
       "A Long Talk thread where you can write the thing you've been writing in your head for years.",
       "A Keeper who will not perform comfort or rush you toward a fix.",
       "Encrypted, never shared, no one but your Keeper sees what you bring.",
@@ -165,7 +165,7 @@ const TOPICS: Topic[] = [
     keeperName: "Rabia K.",
     keeperSlug: "rabia-k",
     keeperBlurb:
-      "Has held three decades of stories. Will not flinch, will not perform. Speaks Urdu, Punjabi, English — uses the one where the truth comes easier.",
+      "Has held three decades of stories. Will not flinch, will not perform. Will sit with the words until the truth comes easier.",
     storyQuote:
       "I'd never said any of it out loud. Not to my husband, not to friends, not to a therapist. Rabia didn't flinch. That's what I needed before I could say it to anyone else.",
     storyAttribution: "Anonymous · 41 · Houston · 6 months in Hearth",
@@ -184,32 +184,32 @@ const TOPICS: Topic[] = [
     headlinePre: "Questions you've\ncarried",
     headlineEmber: "alone for years.",
     intro:
-      "Who you are. Who you love. What that means in the family you were raised in, the religion you were raised inside, the community that knows your parents. Hearth is a chair where the question can be asked out loud — without the answer being prescribed for you.",
+      "Who you are. Who you love. What that means in the family you were raised in, the religion you were raised inside, the community that knows your parents. Hearth is a chair where the question can be asked out loud, without the answer being prescribed for you.",
     signs: [
       "You've known something about yourself for years and have never said it.",
-      "You can't take this to your family, your community, your religion — and you don't want to lose any of them.",
+      "You can't take this to your family, your community, your religion, and you don't want to lose any of them.",
       "You're out in some parts of your life and not in others. The split is exhausting.",
       "You're trying to figure out who to tell first, in what order, and how.",
       "You want a witness to the figuring-out, not advice on the destination.",
     ],
     weHold: [
       "A Keeper who has either lived a version of this themselves or has held many people through it. We match carefully.",
-      "A confidential, encrypted space — your Sits and Long Talks are not shared with anyone, ever.",
+      "A confidential, encrypted space. Your Sits and Long Talks are not shared with anyone, ever.",
       "Time. We do not push timelines. The slow work is the work.",
-      "A handoff to The Bridge — therapists who are LGBTQ+-affirming and culturally fluent — when something deeper than peer support is needed.",
+      "A handoff to The Bridge (LGBTQ+-affirming therapists matched by hand for fit) when something deeper than peer support is needed.",
     ],
     weDont:
       "Hearth is not an identity therapist or a coming-out coach. We will not tell you who you are or what to do. We sit with you while you figure it out, in your time, in your language.",
     keeperName: "Aruna Bhattacharya",
     keeperSlug: "aruna-bhattacharya",
     keeperBlurb:
-      "Has sat with many people on the slow journey toward saying something true. Bengali, English, Hindi. Will hold the question without pushing the answer.",
+      "Has sat with many people on the slow journey toward saying something true. Will hold the question without pushing the answer.",
     storyQuote:
-      "I came to Hearth because I couldn't tell my family. Priya didn't tell me what to do. She helped me figure out who I needed to tell first — myself.",
+      "I came to Hearth because I couldn't tell my family. Priya didn't tell me what to do. She helped me figure out who I needed to tell first. Myself.",
     storyAttribution: "Anonymous · 26 · London · 5 months in Hearth",
     related: [
       { slug: "intimacy", label: "Intimacy & shame" },
-      { slug: "diaspora", label: "Life between cultures" },
+      { slug: "identity", label: "Identity & belonging" },
       { slug: "family-pressure", label: "Family pressure" },
     ],
   },
@@ -222,9 +222,9 @@ const TOPICS: Topic[] = [
     headlinePre: "Worry that won't\nstay",
     headlineEmber: "in one place.",
     intro:
-      "The racing heart before a family dinner. The weight that sits in your chest before you've even opened the laptop. Therapy is great for the deep work and the diagnosis. Hearth is for the rest of the week — the day-to-day grind of an anxious life, with someone who knows you well enough that you don't have to start at the beginning.",
+      "The racing heart before a family dinner. The weight that sits in your chest before you've even opened the laptop. Therapy is great for the deep work and the diagnosis. Hearth is for the rest of the week: the day-to-day grind of an anxious life, with someone who knows you well enough that you don't have to start at the beginning.",
     signs: [
-      "Your anxiety is mostly about people — family, partner, kids, work, the weight of all of them.",
+      "Your anxiety is mostly about people: family, partner, kids, work, the weight of all of them.",
       "You have a therapist and you also need someone for the time in between.",
       "Sundays are heavy. Family group chats are heavy. The hour before bed is heavy.",
       "You've tried meditation apps and they didn't reach the part of you that needed reaching.",
@@ -232,12 +232,12 @@ const TOPICS: Topic[] = [
     ],
     weHold: [
       "A regular Sit so the relationship is built before the next anxious week.",
-      "A Long Talk thread for the spike — write a paragraph at 11pm, get a real human reply within 24 hours.",
+      "A Long Talk thread for the spike. Write a paragraph at 11pm, get a real human reply within 24 hours.",
       "A Keeper who knows your context and doesn't make you re-explain.",
       "Honest pacing. We don't rush you toward calm. We sit with the worry first.",
     ],
     weDont:
-      "Hearth is not a treatment for clinical anxiety or panic disorder. We do not diagnose, prescribe, or replace the work that medication and therapy can do. If your anxiety is severe or escalating, our Keepers will walk you to The Bridge — a vetted, culturally-fluent therapist — personally.",
+      "Hearth is not a treatment for clinical anxiety or panic disorder. We do not diagnose, prescribe, or replace the work that medication and therapy can do. If your anxiety is severe or escalating, our Keepers will walk you to The Bridge (a vetted therapist matched by hand for fit) personally.",
     keeperName: "Rabia K.",
     keeperSlug: "rabia-k",
     keeperBlurb:
@@ -248,7 +248,7 @@ const TOPICS: Topic[] = [
     related: [
       { slug: "family-pressure", label: "Family pressure" },
       { slug: "grief", label: "Grief & loss" },
-      { slug: "diaspora", label: "Life between cultures" },
+      { slug: "identity", label: "Identity & belonging" },
     ],
   },
 ];

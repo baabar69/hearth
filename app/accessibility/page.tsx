@@ -15,7 +15,7 @@ const COMMITMENTS = [
   },
   {
     title: "Keyboard navigable",
-    body: "Every interactive element is reachable by keyboard. Forms, the intake flow, the Long Talk thread, video Sits — all of it works without a mouse.",
+    body: "Every interactive element is reachable by keyboard. Forms, the intake flow, the Long Talk thread, video Sits. All of it works without a mouse.",
   },
   {
     title: "Screen-reader friendly",
@@ -27,7 +27,7 @@ const COMMITMENTS = [
   },
   {
     title: "Voice notes alongside text",
-    body: "Long Talk supports voice notes and text — pick whichever modality reaches the part of you that needs reaching. We're working on automatic transcripts for voice notes.",
+    body: "Long Talk supports voice notes and text. Pick whichever modality reaches the part of you that needs reaching. We're working on automatic transcripts for voice notes.",
   },
   {
     title: "Adjustable text and contrast",
@@ -36,10 +36,10 @@ const COMMITMENTS = [
 ];
 
 const LIMITS = [
-  "Some Embers essays haven't been audited for screen-reader flow yet — we're working through the archive.",
+  "Some Embers essays haven't been audited for screen-reader flow yet. We're working through the archive.",
   "Voice-note auto-transcription is in beta. If you need a transcript and it's not generated, email us and we'll provide one within 24 hours.",
   "Group Circles use a third-party video provider; we're verifying their AA compliance and pushing improvements where they fall short.",
-  "Cognitive accessibility is harder to standardise — we welcome feedback on copy density, decision flows, and intake length.",
+  "Cognitive accessibility is harder to standardise. We welcome feedback on copy density, decision flows, and intake length.",
 ];
 
 export default function AccessibilityPage() {
@@ -269,7 +269,7 @@ export default function AccessibilityPage() {
               </a>
               . Tell us what you ran into and what would help. We respond
               within two business days, and we treat accessibility issues as
-              bugs &mdash; not feature requests.
+              bugs, not feature requests.
             </p>
             <p
               style={{

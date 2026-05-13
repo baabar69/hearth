@@ -33,7 +33,7 @@ export default function PressPage() {
           >
             Hearth is new. We&rsquo;d rather be quoted accurately than quoted
             often. Here&rsquo;s what we&rsquo;re comfortable saying about
-            ourselves &mdash; and what we&rsquo;re not.
+            ourselves, and what we&rsquo;re not.
           </p>
         </div>
       </section>
@@ -53,12 +53,11 @@ export default function PressPage() {
                 What Hearth is
               </h2>
               <p style={{ color: "var(--ink-2)", lineHeight: 1.65, fontSize: 16 }}>
-                A peer-support membership. Members are paired with a Keeper
-                &mdash; a trained, paid companion (not a licensed clinician)
-                &mdash; for biweekly or weekly Sits, an asynchronous Long Talk
-                thread, and group Circles. Keepers are based primarily in
-                South Asia and bring deep cultural fluency for those who want
-                it; warmth and careful presence for everyone.
+                A peer-support membership. Members are paired with a Keeper,
+                a trained, paid companion (not a licensed clinician),
+                for biweekly or weekly Sits, an asynchronous Long Talk
+                thread, and group Circles. Keepers are matched by hand for
+                fit; warmth and careful presence for everyone.
               </p>
             </div>
             <div>
@@ -94,10 +93,10 @@ export default function PressPage() {
             </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
               <FactRow label="Pricing" value="$39/month (Hearthside, biweekly Sits) · $99/month (Hearth Deep, weekly Sits)" />
-              <FactRow label="Keeper training" value="120-hour pre-launch program · ongoing supervision · cultural fluency review" />
+              <FactRow label="Keeper training" value="120-hour pre-launch program · ongoing supervision · regular fit-and-scope review" />
               <FactRow label="Match time" value="Within 72 hours of intake. Hand-matched, not algorithmic." />
               <FactRow label="Cancellation" value="One click, no exit interview. FTC Click-to-Cancel compliant. Access continues through the end of the billing period you've already paid for." />
-              <FactRow label="Where Keepers are based" value="Primarily South Asia. They work evening hours to match US and Canadian time zones." />
+              <FactRow label="Where Keepers are based" value="Around the world. They work evening hours to match members' time zones." />
               <FactRow label="Where members live" value="Open to members worldwide. Keepers schedule across global time zones." />
               <FactRow label="Founded" value="2026" />
             </div>
@@ -124,16 +123,16 @@ export default function PressPage() {
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               <p style={{ color: "var(--ink-2)", lineHeight: 1.7, fontSize: 16 }}>
                 Most people we know don&rsquo;t need a clinician. They need
-                an elder. The auntie who saw the divorce coming. The cousin
+                an elder. The friend who saw the divorce coming. The cousin
                 who quit the job their parents wanted. The neighbour
                 who&rsquo;d been through it.
               </p>
               <p style={{ color: "var(--ink-2)", lineHeight: 1.7, fontSize: 16 }}>
                 That elder is missing for a generation whose villages have
-                quietly thinned &mdash; whether by leaving, by time, or just
-                by the way modern life unspools. Therapy fills part of that
-                gap. A friend fills part of it. Hearth fills the part nobody
-                else does.
+                quietly thinned. Whether by leaving, by time, or just by the
+                way modern life unspools. Therapy fills part of that gap. A
+                friend fills part of it. Hearth fills the part nobody else
+                does.
               </p>
             </div>
           </div>

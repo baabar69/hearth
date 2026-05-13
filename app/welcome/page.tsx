@@ -273,8 +273,8 @@ function SuccessState({
             at <strong>{receipt.customerEmail}</strong>
           </>
         ) : null}
-        . Expect an introduction from your Keeper within 48 hours &mdash; we
-        pair by hand, not by algorithm.
+        . Expect an introduction from your Keeper within 48 hours. We pair by
+        hand, not by algorithm.
       </p>
 
       {receipt && (
@@ -324,7 +324,7 @@ function SuccessState({
         }}
       >
         <Link href="/embers" className="btn btn-primary">
-          While you wait &mdash; read an Ember{" "}
+          While you wait, read an Ember{" "}
           <span className="arr">&rarr;</span>
         </Link>
         <a

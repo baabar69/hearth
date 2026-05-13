@@ -5,24 +5,24 @@ import SharedFooter from "../components/SharedFooter";
 export const metadata = {
   title: "Why paired. Why long term. · Hearth",
   description:
-    "The whole peer-support category was built around drop-in chats and 12-week programs. Hearth is the opposite — paired with one Keeper, for the long term, on purpose.",
+    "The whole peer-support category was built around drop-in chats and 12-week programs. Hearth is the opposite: paired with one Keeper, for the long term, on purpose.",
 };
 
 const PAIRED_REASONS = [
   {
     n: "01",
     title: "The first three Sits aren't really the work.",
-    body: "They're the part where someone learns who you are — what you mean by 'my mother,' which cousin you're talking about, why the wedding is a problem and not a celebration. With a different listener every time, you'd start over every time. The slow part is where the work begins.",
+    body: "They're the part where someone learns who you are. What you mean by 'my mother,' which cousin you're talking about, why the wedding is a problem and not a celebration. With a different listener every time, you'd start over every time. The slow part is where the work begins.",
   },
   {
     n: "02",
     title: "Patterns repeat. The same person needs to see them.",
-    body: "Most of what people carry isn't one event — it's a pattern. The same fight with the same parent. The career indecision that comes back every spring. The grief that resurfaces on the third Diwali. A Keeper who has heard you describe it three times will catch the fourth before you do.",
+    body: "Most of what people carry isn't one event. It's a pattern. The same fight with the same parent. The career indecision that comes back every spring. The grief that resurfaces on the third anniversary. A Keeper who has heard you describe it three times will catch the fourth before you do.",
   },
   {
     n: "03",
     title: "Safety isn't built in a single conversation.",
-    body: "The things that actually need saying out loud — the shame, the doubt, the thing about your marriage you've never told anyone — only come out when you trust the room. That trust takes weeks to build. Drop-in models reset the room every time. Hearth doesn't.",
+    body: "The things that actually need saying out loud (the shame, the doubt, the thing about your marriage you've never told anyone) only come out when you trust the room. That trust takes weeks to build. Drop-in models reset the room every time. Hearth doesn't.",
   },
   {
     n: "04",
@@ -40,7 +40,7 @@ const LONG_TERM_REASONS = [
   {
     n: "02",
     title: "Seasons need different things from the same relationship.",
-    body: "The Keeper who held you through a parent's illness is the same Keeper who holds you through the wedding three years later. The continuity is the value — not because they remember the dates, but because they know how you carry hard things, and they show up differently for the next one.",
+    body: "The Keeper who held you through a parent's illness is the same Keeper who holds you through the wedding three years later. The continuity is the value, not because they remember the dates, but because they know how you carry hard things, and they show up differently for the next one.",
   },
   {
     n: "03",
@@ -50,7 +50,7 @@ const LONG_TERM_REASONS = [
   {
     n: "04",
     title: "If a season doesn't need us, you can pause.",
-    body: "Cancel any time. Come back any time. Your Keeper holds the spot. The relationship doesn't end because the subscription paused — and if your Keeper isn't right anymore, we re-pair you, by hand.",
+    body: "Cancel any time. Come back any time. Your Keeper holds the spot. The relationship doesn't end because the subscription paused. If your Keeper isn't right anymore, we re-pair you, by hand.",
   },
 ];
 
@@ -105,8 +105,8 @@ export default function WhyPairedPage() {
             The whole peer-support category was built around drop-in chats,
             anonymous listeners, AI companions, and 12-week programs. Hearth
             is the opposite. We pair you with one Keeper, by hand, and we
-            don&rsquo;t set a finish line. Here&rsquo;s why that choice
-            isn&rsquo;t a feature &mdash; it is the product.
+            don&rsquo;t set a finish line. That choice isn&rsquo;t a feature.
+            It is the product.
           </p>
         </div>
       </section>

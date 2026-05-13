@@ -45,7 +45,7 @@ export default function PrivacyPage() {
                 What we collect
               </h2>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)", marginBottom: 16 }}>
-                When you create an account, we collect your name and email address. During the First Sit intake, we collect the information you share about what you&rsquo;re navigating — this is used only for Keeper matching and held with full confidentiality.
+                When you create an account, we collect your name and email address. During the First Sit intake, we collect the information you share about what you&rsquo;re navigating. This is used only for Keeper matching and held with full confidentiality.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)", marginBottom: 16 }}>
                 Your Long Talk thread (messages between you and your Keeper) is stored in our system. Sit recordings are stored only if you explicitly enable opt-in recording. Session notes are stored only if you and your Keeper have agreed to note-keeping.
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
                 We do not sell your data. Ever. To anyone.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)", marginBottom: 16 }}>
-                We do not share your personal information or session content with third parties without your explicit written consent — except in cases where we are legally required to do so (e.g., mandatory reporting of imminent harm).
+                We do not share your personal information or session content with third parties without your explicit written consent, except in cases where we are legally required to do so (e.g., mandatory reporting of imminent harm).
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
                 If your Keeper refers you to a Bridge therapist, context is shared only with your explicit consent and only the specific context you agree to share.
@@ -123,7 +123,7 @@ export default function PrivacyPage() {
                 {" "}to exercise any of these. We respond within 30 days, usually faster.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
-                If you live in the EU or UK, the GDPR applies and the rights above are codified in law. If you are a California resident, the CCPA applies and you have the additional right to know what categories of personal information we sell or share &mdash; we do not sell or share your personal information for advertising purposes, full stop.
+                If you live in the EU or UK, the GDPR applies and the rights above are codified in law. If you are a California resident, the CCPA applies and you have the additional right to know what categories of personal information we sell or share. We do not sell or share your personal information for advertising purposes, full stop.
               </p>
             </div>
 

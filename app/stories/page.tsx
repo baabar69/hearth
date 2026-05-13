@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Stories · Hearth",
   description:
-    "What members say about pulling up a chair. Real stories, real Sits, real Keepers — names changed for privacy.",
+    "What members say about pulling up a chair. Real stories, real Sits, real Keepers. Names changed for privacy.",
 };
 
 const STORIES = [
@@ -46,7 +46,7 @@ const STORIES = [
     keeper: "Aruna",
     topic: "Grief & loss",
     quote:
-      "My nani died two years ago. I never grieved out loud — there wasn't space for it. Aruna made the space. We talk about her every week. It feels like keeping her with me.",
+      "My grandmother died two years ago. I never grieved out loud. There wasn't space for it. Aruna made the space. We talk about her every week. It feels like keeping her with me.",
     months: "1 year and 4 months in Hearth",
   },
   {
@@ -74,9 +74,9 @@ const STORIES = [
     age: "32",
     location: "Seattle",
     keeper: "Hassan A.",
-    topic: "Diaspora identity",
+    topic: "Identity",
     quote:
-      "I'm too American for the family, too brown for the office, too queer for the community. Hassan got it without me having to explain. That's the whole thing — not having to explain.",
+      "I'm a different person at work, at home, and with my closest friends. Hassan got it without me having to explain. That's the whole thing — not having to explain.",
     months: "7 months in Hearth",
   },
   {

@@ -14,35 +14,35 @@ const CATEGORIES: Category[] = [
     items: [
       {
         q: "Is Hearth therapy?",
-        a: "No. Hearth is peer support — not therapy, not medical advice, not a clinical service. Keepers are trained companions, not licensed therapists. We say this plainly because the distinction is a feature, not a limitation. When something clinical comes up, your Keeper will tell you honestly and walk you to The Bridge, which connects you with vetted licensed therapists.",
+        a: "No. Hearth is peer support. Not therapy, not medical advice, not a clinical service. Keepers are trained companions, not licensed therapists. We say this plainly because the distinction is a feature, not a limitation. When something clinical comes up, your Keeper will tell you honestly and walk you to The Bridge, which connects you with vetted licensed therapists.",
       },
       {
         q: "How is this different from BetterHelp or Talkspace?",
-        a: "BetterHelp and Talkspace are therapy platforms — you're matched with licensed therapists who diagnose and treat. Hearth is peer support, which means it's for the recurring weight of a life, not for clinical conditions. Hearth is also meaningfully different in cultural depth — our Keepers are matched on language, lived context, and diaspora experience, not just availability.",
+        a: "BetterHelp and Talkspace are therapy platforms. You're matched with licensed therapists who diagnose and treat. Hearth is peer support, which means it's for the recurring weight of a life, not for clinical conditions. Hearth is also meaningfully different in how matching works: our Keepers are paired by hand for fit, based on the themes you carry and the way you talk about them, not just availability.",
       },
       {
         q: "How is this different from a friend or family member?",
-        a: "Friends mean well but get tired, have their own lives, and can't hold consistent attention. Family can be part of what you're carrying. A Keeper is a trained, paid professional — not a volunteer, not a friend — whose only job in your relationship is to hold space for you. They don't need you to be okay. They don't have a stake in your decisions. They stay.",
+        a: "Friends mean well but get tired, have their own lives, and can't hold consistent attention. Family can be part of what you're carrying. A Keeper is a trained, paid professional (not a volunteer, not a friend) whose only job in your relationship is to hold space for you. They don't need you to be okay. They don't have a stake in your decisions. They stay.",
       },
       {
         q: "How is this different from peer-listening apps like 7 Cups?",
-        a: "Peer-listening apps connect you with anonymous volunteers — different person each time, no consistent relationship, variable training, free or freemium. Hearth is the opposite: one paid Keeper, matched by hand, the same person every Sit, for as long as you stay. Listening apps are good for a one-off vent. Hearth is built for the months and years where the same patterns keep showing up and you need someone who already knows the context.",
+        a: "Peer-listening apps connect you with anonymous volunteers: different person each time, no consistent relationship, variable training, free or freemium. Hearth is the opposite. One paid Keeper, matched by hand, the same person every Sit, for as long as you stay. Listening apps are good for a one-off vent. Hearth is built for the months and years where the same patterns keep showing up and you need someone who already knows the context.",
       },
       {
         q: "How is this different from AI companions like Replika?",
-        a: "An AI companion can be there at 3am, remember what you told it, and never get tired. We're not against that. But it isn't a person, and the relationship doesn't carry the same weight. A human Keeper has lived a version of what you're describing. They notice the thing you didn't say. They sit with silence in a way an LLM can't. We are deliberately human, paired, and slow — because for the things Hearth holds, those qualities are the point, not the inefficiency.",
+        a: "An AI companion can be there at 3am, remember what you told it, and never get tired. We're not against that. But it isn't a person, and the relationship doesn't carry the same weight. A human Keeper has lived a version of what you're describing. They notice the thing you didn't say. They sit with silence in a way an LLM can't. We are deliberately human, paired, and slow, because for the things Hearth holds, those qualities are the point, not the inefficiency.",
       },
       {
         q: "How is this different from a 12-week group program?",
-        a: "Group programs are time-bound, cohort-based, and usually run by one founder-facilitator. They work well for structured curricula. Hearth is open-ended and one-to-one — you stay paired with your Keeper for as long as the relationship serves you. Six months. Two years. The point is continuity, not a finish line. Hearth also offers Circles (our cohort format) for members who want both the long pairing and the time-bound group experience.",
+        a: "Group programs are time-bound, cohort-based, and usually run by one founder-facilitator. They work well for structured curricula. Hearth is open-ended and one-to-one. You stay paired with your Keeper for as long as the relationship serves you. Six months. Two years. The point is continuity, not a finish line. Hearth also offers Circles (our cohort format) for members who want both the long pairing and the time-bound group experience.",
       },
       {
         q: "What does 'peer support' actually mean here?",
-        a: "Peer support means companionship from someone with lived experience and training — not clinical credentials. A Keeper has often navigated many of the same themes you're navigating, and has been trained by Hearth in listening, cultural fluency, scope boundaries, and crisis protocol. They are not peers in the sense of strangers on the internet — they are carefully selected, paid, and supervised.",
+        a: "Peer support means companionship from someone with lived experience and training, not clinical credentials. A Keeper has often navigated many of the same themes you're navigating, and has been trained by Hearth in listening, sensitivity, scope boundaries, and crisis protocol. They are not peers in the sense of strangers on the internet. They are carefully selected, paid, and supervised.",
       },
       {
         q: "Who built Hearth and why?",
-        a: "Hearth was built for anyone, anywhere, carrying weight that doesn't quite fit a couch — the village elder, the trusted aunt, the community wise-person tradition is alive in memory and absent in modern life, wherever modern life is happening. The founding belief: most people don't need therapy for most of what they carry. They need the elder's house, on their phone, in their language. Our Keepers bring deep cultural fluency for those who want it, and warm careful presence for everyone.",
+        a: "Hearth was built for anyone, anywhere, carrying weight that doesn't quite fit a couch. The village elder, the trusted aunt, the community wise-person tradition is alive in memory and absent in modern life, wherever modern life is happening. The founding belief: most people don't need therapy for most of what they carry. They need the elder's house, on their phone. Our Keepers are matched by hand for fit, and bring warm, careful presence for everyone.",
       },
     ],
   },
@@ -51,19 +51,19 @@ const CATEGORIES: Category[] = [
     items: [
       {
         q: "Are Keepers licensed therapists?",
-        a: "No. Keepers are trained peer supporters. They complete Hearth's 120-hour Keeper training, which covers listening skills, cultural fluency, scope boundaries, and crisis protocol. They are not licensed therapists and do not diagnose, treat, or prescribe. When clinical care is needed, Keepers make a warm referral to The Bridge.",
+        a: "No. Keepers are trained peer supporters. They complete Hearth's 120-hour Keeper training, which covers listening skills, sensitivity, scope boundaries, and crisis protocol. They are not licensed therapists and do not diagnose, treat, or prescribe. When clinical care is needed, Keepers make a warm referral to The Bridge.",
       },
       {
         q: "Where are Keepers based?",
-        a: "Our Keepers are based primarily in South Asia — they work evening hours to match US and Canadian time zones, and they bring deep cultural fluency to the contexts our members live inside. We're working on expanding the Keeper roster to include US-resident Keepers and broader heritages over time.",
+        a: "Our Keepers are based around the world. They work hours that match the time zones of the members they're paired with. We're continuously expanding the Keeper roster across regions and lived experiences.",
       },
       {
         q: "How do you choose Keepers?",
-        a: "We look for people who already do this work informally — the person in the community everyone turns to, the trusted elder, the friend with the right kind of patience. We look for cultural fluency, language range, lived experience, and the specific quality of holding space without fixing. Then we train them thoroughly. Less than 8% of Keeper applicants are accepted.",
+        a: "We look for people who already do this work informally: the person in the community everyone turns to, the trusted elder, the friend with the right kind of patience. We look for lived experience, trained sensitivity, and the specific quality of holding space without fixing. Then we train them thoroughly. Less than 8% of Keeper applicants are accepted.",
       },
       {
         q: "What if my Keeper isn't the right fit?",
-        a: "You can switch in the first 30 days, no questions asked. After 30 days, switching is available but requires a brief conversation with our pairing team. We want the match to work — it is in everyone's interest. Most members find the first match is right; when it isn't, we take the rematch seriously.",
+        a: "You can switch in the first 30 days, no questions asked. After 30 days, switching is available but requires a brief conversation with our pairing team. We want the match to work. It is in everyone's interest. Most members find the first match is right; when it isn't, we take the rematch seriously.",
       },
       {
         q: "Can I switch Keepers?",
@@ -71,7 +71,7 @@ const CATEGORIES: Category[] = [
       },
       {
         q: "How are Keepers paid?",
-        a: "Keepers receive 60% of what you pay each month. They are paid biweekly in USD. This is a meaningful living, not a side gig. We believe the quality of Hearth depends entirely on whether Keepers are treated as professionals — so we pay them as professionals.",
+        a: "Keepers receive 60% of what you pay each month. They are paid biweekly in USD. This is a meaningful living, not a side gig. We believe the quality of Hearth depends entirely on whether Keepers are treated as professionals, so we pay them as professionals.",
       },
     ],
   },
@@ -92,15 +92,15 @@ const CATEGORIES: Category[] = [
       },
       {
         q: "Do you take insurance?",
-        a: "Not currently. Hearth is peer support, not therapy, so standard mental health CPT codes don't apply. We're working on FSA/HSA compatibility. Some employer wellness budgets cover peer support — check with your HR team.",
+        a: "Not currently. Hearth is peer support, not therapy, so standard mental health CPT codes don't apply. We're working on FSA/HSA compatibility. Some employer wellness budgets cover peer support; check with your HR team.",
       },
       {
         q: "What's the reschedule policy?",
-        a: "Reschedule a Sit up to 24 hours before it starts — no fee, just pick a new time. Inside the 24-hour window, there's a $20 late-reschedule fee that covers your Keeper's held slot. Emergencies are different — your Keeper has discretion to waive the fee, and they will. We're not going to police a death in the family.",
+        a: "Reschedule a Sit up to 24 hours before it starts and there's no fee. Just pick a new time. Inside the 24-hour window, there's a $20 late-reschedule fee that covers your Keeper's held slot. Emergencies are different. Your Keeper has discretion to waive the fee, and they will. We're not going to police a death in the family.",
       },
       {
         q: "What if I miss a Sit?",
-        a: "If you no-show without rescheduling, the Sit counts as taken. Your Keeper will reach out through the Long Talk to check in. Three no-shows in a row triggers a gentle pause — we'll email to ask whether Hearth is still the right fit for this season, with no judgement either way.",
+        a: "If you no-show without rescheduling, the Sit counts as taken. Your Keeper will reach out through the Long Talk to check in. Three no-shows in a row triggers a gentle pause. We'll email to ask whether Hearth is still the right fit for this season, with no judgement either way.",
       },
     ],
   },
@@ -109,7 +109,7 @@ const CATEGORIES: Category[] = [
     items: [
       {
         q: "What's The Bridge?",
-        a: "The Bridge is Hearth's network of vetted, licensed therapists with South Asian heritage and cultural fluency. When your Keeper notices something clinical, they make a warm handoff — a personal introduction to a specific therapist, not a directory dump. You keep your Keeper throughout. It's not a goodbye; it's an addition.",
+        a: "The Bridge is Hearth's network of vetted, licensed therapists matched to members by hand. When your Keeper notices something clinical, they make a warm handoff: a personal introduction to a specific therapist, not a directory dump. You keep your Keeper throughout. It's not a goodbye; it's an addition.",
       },
       {
         q: "What if I'm already in therapy?",
@@ -121,7 +121,7 @@ const CATEGORIES: Category[] = [
       },
       {
         q: "What if I have a clinical diagnosis?",
-        a: "Hearth can provide peer support alongside clinical care for most diagnoses. If your diagnosis requires a level of care that exceeds peer support scope — active crisis, severe clinical depression, PTSD processing, eating disorders — your Keeper will be honest about that and help you access The Bridge.",
+        a: "Hearth can provide peer support alongside clinical care for most diagnoses. If your diagnosis requires a level of care that exceeds peer support scope (active crisis, severe clinical depression, PTSD processing, eating disorders) your Keeper will be honest about that and help you access The Bridge.",
       },
     ],
   },
@@ -138,7 +138,7 @@ const CATEGORIES: Category[] = [
       },
       {
         q: "Are Sits recorded?",
-        a: "Recording is opt-in. Your Sit is never recorded by default. If you want a recording, you enable it in settings and the recording belongs entirely to you — stored in your private account, downloadable, deletable.",
+        a: "Recording is opt-in. Your Sit is never recorded by default. If you want a recording, you enable it in settings and the recording belongs entirely to you. Stored in your private account, downloadable, deletable.",
       },
       {
         q: "What happens to my data if I cancel?",
@@ -151,24 +151,24 @@ const CATEGORIES: Category[] = [
     items: [
       {
         q: "Can I gift this to someone in another country?",
-        a: "Yes. Hearth members live around the world. Your gift recipient just needs an email address and the willingness to pull up a chair. We schedule across global time zones, and our Keepers speak multiple languages — let us know in the gift form if cultural or language matching matters to your recipient.",
+        a: "Yes. Hearth members live around the world. Your gift recipient just needs an email address and the willingness to pull up a chair. We schedule across global time zones; let us know in the gift form if there's anything specific that should shape who they're paired with.",
       },
       {
         q: "Does the recipient know what I paid?",
-        a: "No. The gift email to your recipient mentions only the duration (e.g., 'one month of Hearth') — not the dollar amount. Gift amounts are never visible to recipients.",
+        a: "No. The gift email to your recipient mentions only the duration (e.g., 'one month of Hearth') and not the dollar amount. Gift amounts are never visible to recipients.",
       },
     ],
   },
   {
-    label: "Languages & Locations",
+    label: "Who Hearth is for",
     items: [
       {
-        q: "What languages do Keepers speak?",
-        a: "Current Keeper languages include Bengali, Urdu, Hindi, Punjabi, Tamil, English, and Arabic. We are actively adding Keepers in Gujarati, Telugu, and Sinhala. If you need a language not currently listed, email us — we may be able to pair you or put you on the waitlist for a specific Keeper.",
+        q: "Who is Hearth for?",
+        a: "Hearth is for anyone navigating grief, family pressure, identity questions, transitions, loneliness, intimacy and relationships, career crossroads, parenting, caregiving, or the kind of recurring weight that doesn't fit a clinical chair. If you need an elder more than you need a clinician, Hearth is for you.",
       },
       {
         q: "Can men join Hearth?",
-        a: "Yes. Hearth is for everyone. We have Keepers specifically suited to the experience of diaspora men — including Faisal M., who works specifically with men navigating grief, career crossroads, and the cost of performing stoicism for a lifetime. The brief mention of South Asian women in our marketing reflects where the founding demand was loudest, not where the door closes.",
+        a: "Yes. Hearth is for everyone. We have Keepers specifically suited to the experience of men carrying weight that doesn't get talked about, including Keepers who work with men navigating grief, career crossroads, and the cost of performing stoicism for a lifetime.",
       },
     ],
   },
@@ -177,7 +177,7 @@ const CATEGORIES: Category[] = [
     items: [
       {
         q: "What happens if I'm in crisis?",
-        a: "Hearth is not a crisis service, and Keepers are not trained for emergency response. If you are in immediate danger, call 911 (US/Canada) or go to your nearest emergency room. If you are experiencing a mental health crisis, call or text 988 (US) or 1-866-585-0445 (Canada). Your Keeper will always name the crisis line first when something acute comes up — and then stay with you.",
+        a: "Hearth is not a crisis service, and Keepers are not trained for emergency response. If you are in immediate danger, call 911 (US/Canada) or go to your nearest emergency room. If you are experiencing a mental health crisis, call or text 988 (US) or 1-866-585-0445 (Canada). Your Keeper will always name the crisis line first when something acute comes up, and then stay with you.",
       },
     ],
   },

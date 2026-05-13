@@ -92,12 +92,12 @@ export default function HowItWorks() {
                 }}
               >
                 Before we pair you, we sit with you for about 12 minutes. You
-                tell us what you&rsquo;re carrying — the specific weight that
+                tell us what you&rsquo;re carrying: the specific weight that
                 brought you here. We run three short screeners: one for what
-                you&rsquo;re navigating, one for your cultural context, and
-                one to make sure Hearth is actually the right fit. If something
-                clinical comes up, we tell you plainly and point you toward The
-                Bridge instead.
+                you&rsquo;re navigating, one for the context you&rsquo;re
+                bringing it in, and one to make sure Hearth is actually the
+                right fit. If something clinical comes up, we tell you plainly
+                and point you toward The Bridge instead.
               </p>
               <p
                 style={{
@@ -109,8 +109,8 @@ export default function HowItWorks() {
                 }}
               >
                 The First Sit is not a sales call. It is a real intake. We
-                listen for what kind of company will actually help — and that
-                sometimes means telling you Hearth is not it.
+                listen for what kind of company will actually help, and
+                sometimes that means telling you Hearth is not it.
               </p>
             </div>
           </div>
@@ -154,11 +154,12 @@ export default function HowItWorks() {
                   maxWidth: "58ch",
                 }}
               >
-                We hand-match you with three Keeper candidates based on your
-                language, cultural background, and the themes you carry. You
-                get to watch a short video introduction from each one, read
-                their profiles, and pick the one who feels right. There is no
-                algorithm making this call — a human at Hearth makes the match.
+                We hand-match you with three Keeper candidates based on the
+                themes you carry and the kind of company that will actually
+                help. You get to watch a short video introduction from each
+                one, read their profiles, and pick the one who feels right.
+                There is no algorithm making this call. A human at Hearth
+                makes the match.
               </p>
               <p
                 style={{
@@ -170,7 +171,7 @@ export default function HowItWorks() {
                 }}
               >
                 If the match does not feel right in the first 30 days, you
-                switch — no questions, no extra charge. The pairing takes 72
+                switch. No questions, no extra charge. The pairing takes 72
                 hours from your First Sit. If we can&rsquo;t find the right
                 fit in 72 hours, we keep looking and tell you why.
               </p>
@@ -220,7 +221,7 @@ export default function HowItWorks() {
                 a shape: an arrival ritual at the start (a short grounding
                 practice your Keeper leads), long listening in the middle, and
                 a closing ritual at the end. Your Keeper doesn&rsquo;t take
-                notes while you talk — their attention is on you, not a
+                notes while you talk. Their attention is on you, not a
                 clipboard. No notes unless you want them.
               </p>
               <p
@@ -345,7 +346,7 @@ export default function HowItWorks() {
                   maxWidth: "58ch",
                 }}
               >
-                Between Sits, there&rsquo;s an async thread — your private
+                Between Sits, there&rsquo;s an async thread: your private
                 channel with your Keeper. Text, voice notes, photos, links.
                 You can write at midnight when something lands. Your Keeper
                 replies within 24 hours on Hearthside, within 4 hours on
@@ -360,7 +361,7 @@ export default function HowItWorks() {
                   maxWidth: "58ch",
                 }}
               >
-                Every Friday, your Keeper sends a reflection — a short note
+                Every Friday, your Keeper sends a reflection. A short note
                 about what they noticed this week. Not advice. Pattern-noticing.
                 The thing you said that stayed with them. This is a Hearth
                 signature.
@@ -405,7 +406,7 @@ export default function HowItWorks() {
                 day: "Sun",
                 activity: "A voice note from your Keeper",
                 detail:
-                  "A short audio message — what your Keeper has been sitting with since your last session.",
+                  "A short audio message. What your Keeper has been sitting with since your last session.",
                 highlight: false,
               },
               {

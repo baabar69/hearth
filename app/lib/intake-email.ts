@@ -63,8 +63,8 @@ export function buildNotifyEmail(s: IntakeSubmission): {
 
   const subject =
     s.form === "short"
-      ? `New Hearth interest — ${s.firstName}`
-      : `New Hearth intake — ${s.firstName}${topicsStr ? ` (${topicsStr.split(",")[0]?.trim()})` : ""}`;
+      ? `New Hearth interest: ${s.firstName}`
+      : `New Hearth intake: ${s.firstName}${topicsStr ? ` (${topicsStr.split(",")[0]?.trim()})` : ""}`;
 
   const html = `<!doctype html>
 <html><body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:#FAF7F2;padding:32px 12px;color:#222">
@@ -136,9 +136,9 @@ export function buildAckEmail(s: IntakeSubmission): {
   <div style="font-family:monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#9C2A1A">Hearth</div>
   <h1 style="font-size:26px;font-weight:400;margin:14px 0 18px">${escapeHtml(s.firstName)}, we read every word.</h1>
   <p style="font-size:15px;color:#333">Thank you for trusting us with this. A real person on our team is reading your answers right now and will pair you by hand with a Keeper who fits.</p>
-  <p style="font-size:15px;color:#333">Expect a note from us within <strong>48 hours</strong>. Same email address &mdash; just reply if anything comes up.</p>
-  <p style="font-size:14px;color:#777;margin-top:32px;padding-top:24px;border-top:1px solid #E8E2DA">In the meantime, you can read one of our Embers &mdash; short reflections from our Keepers about the kind of weight we sit with: <a href="https://dearhearth.com/embers" style="color:#9C2A1A">dearhearth.com/embers</a></p>
-  <p style="font-size:11px;color:#999;margin-top:24px;font-family:monospace">If this wasn&rsquo;t you, ignore this email &mdash; nothing happens without your reply.</p>
+  <p style="font-size:15px;color:#333">Expect a note from us within <strong>48 hours</strong>, at the same email address. Just reply if anything comes up.</p>
+  <p style="font-size:14px;color:#777;margin-top:32px;padding-top:24px;border-top:1px solid #E8E2DA">In the meantime, you can read one of our Embers. They&rsquo;re short reflections from our Keepers about the kind of weight we sit with: <a href="https://dearhearth.com/embers" style="color:#9C2A1A">dearhearth.com/embers</a></p>
+  <p style="font-size:11px;color:#999;margin-top:24px;font-family:monospace">If this wasn&rsquo;t you, ignore this email. Nothing happens without your reply.</p>
 </div>
 </body></html>`;
 

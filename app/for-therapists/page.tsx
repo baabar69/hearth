@@ -74,7 +74,7 @@ export default function ForTherapistsPage() {
               maxWidth: "52ch",
             }}
           >
-            A steady pipeline of pre-screened, culturally matched clients.
+            A steady pipeline of pre-screened clients, hand-matched for fit.
             You keep your practice. We protect your caseload. The referrals
             are warm, not a directory dump.
           </p>
@@ -117,18 +117,18 @@ export default function ForTherapistsPage() {
               >
                 Bridge therapists receive referrals that are fundamentally
                 different from a standard directory. Members who reach The
-                Bridge have been working with a Keeper — they are not coming
+                Bridge have been working with a Keeper. They are not coming
                 to you cold. They have already done the work of naming what
                 they&rsquo;re carrying.
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 0 }}>
                 {[
-                  "Pre-screened members — Hearth handles intake, pairing, and ongoing support",
-                  "Culturally matched referrals — members whose cultural context aligns with yours",
-                  "Warm handoffs from their Keeper — you get context, with member consent",
-                  "No obligation to take every referral — you control your caseload",
+                  "Pre-screened members. Hearth handles intake, pairing, and ongoing support",
+                  "Hand-matched referrals: members whose context aligns with yours",
+                  "Warm handoffs from their Keeper. You get context, with member consent",
+                  "No obligation to take every referral. You control your caseload",
                   "You keep your own fee structure, billing, and practice autonomy",
-                  "Coordination with Hearth Keepers when appropriate — the client keeps both",
+                  "Coordination with Hearth Keepers when appropriate. The client keeps both",
                 ].map((item, i) => (
                   <li
                     key={i}
@@ -192,11 +192,11 @@ export default function ForTherapistsPage() {
               {[
                 {
                   label: "License",
-                  body: "Active, in-good-standing clinical license in your jurisdiction — LCSW, LMFT, LPC, PhD, PsyD, registered psychotherapist, clinical psychologist, or international equivalent.",
+                  body: "Active, in-good-standing clinical license in your jurisdiction: LCSW, LMFT, LPC, PhD, PsyD, registered psychotherapist, clinical psychologist, or international equivalent.",
                 },
                 {
-                  label: "Cultural fluency",
-                  body: "Demonstrated clinical experience with members navigating life between cultures, family pressure, and intergenerational dynamics. Heritage is a plus, not a requirement.",
+                  label: "Trained sensitivity",
+                  body: "Demonstrated clinical experience with members navigating grief, family pressure, identity questions, transitions, and intergenerational dynamics. Lived experience is a plus, not a requirement.",
                 },
                 {
                   label: "Active practice",
@@ -204,7 +204,7 @@ export default function ForTherapistsPage() {
                 },
                 {
                   label: "Alignment",
-                  body: "Comfort with the peer support model — not competing with it, coordinating with it.",
+                  body: "Comfort with the peer support model. Not competing with it, coordinating with it.",
                 },
               ].map((req, i) => (
                 <div
@@ -384,7 +384,7 @@ export default function ForTherapistsPage() {
                   <input
                     required
                     type="text"
-                    placeholder="e.g. Hindi, English, Urdu"
+                    placeholder="e.g. English, Spanish"
                     style={{
                       width: "100%",
                       padding: "12px 14px",
@@ -441,12 +441,12 @@ export default function ForTherapistsPage() {
                     marginBottom: 8,
                   }}
                 >
-                  Cultural background and community experience
+                  Background and community experience
                 </label>
                 <textarea
                   required
                   rows={4}
-                  placeholder="Tell us about your cultural background and your experience working with members navigating life between cultures, family pressure, or intergenerational dynamics."
+                  placeholder="Tell us about your background and your experience working with members navigating grief, family pressure, identity, transitions, or intergenerational dynamics."
                   style={{
                     width: "100%",
                     padding: "12px 14px",

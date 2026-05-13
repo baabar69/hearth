@@ -5,7 +5,7 @@ import SharedFooter from "../components/SharedFooter";
 export const metadata = {
   title: "The Bridge · Hearth",
   description:
-    "When you need more than a Keeper, we bridge you to a vetted, culturally fluent licensed therapist.",
+    "When you need more than a Keeper, we bridge you to a vetted licensed therapist, matched by hand for fit.",
 };
 
 export default function BridgePage() {
@@ -33,8 +33,8 @@ export default function BridgePage() {
             }}
           >
             Peer support is real and valuable. But some things need a licensed
-            clinician. When that moment arrives, we don&rsquo;t abandon you —
-            your Keeper walks you across.
+            clinician. When that moment arrives, we don&rsquo;t abandon you.
+            Your Keeper walks you across.
           </p>
         </div>
       </section>
@@ -74,24 +74,24 @@ export default function BridgePage() {
               }}
             >
               <p>
-                Hearth was built for the space between friends and therapists
-                — for the recurring weight of a life, for the conversations
+                Hearth was built for the space between friends and therapists.
+                For the recurring weight of a life, for the conversations
                 that don&rsquo;t require clinical intervention. Keepers are
                 trained for exactly this. They are not trained for everything.
               </p>
               <p style={{ marginTop: 18 }}>
                 Clinical depression. Active trauma processing. Eating disorders.
                 Crisis. Medication questions. These things need a licensed
-                clinician — a therapist, psychiatrist, or counselor with proper
+                clinician: a therapist, psychiatrist, or counselor with proper
                 credentials and clinical supervision. Your Keeper knows this.
                 And when the line is reached, your Keeper doesn&rsquo;t step
                 away. They build you a bridge and stand at the entrance.
               </p>
               <p style={{ marginTop: 18 }}>
                 The Bridge is Hearth&rsquo;s network of vetted, licensed
-                therapists. Many bring deep cultural fluency for members who
-                want it; all bring real clinical care. When a referral is
-                made, it is a warm handoff &mdash; not a directory dump, not
+                therapists. Each one is matched by hand to the member, with
+                an eye to fit; all bring real clinical care. When a referral is
+                made, it is a warm handoff. Not a directory dump, not
                 a goodbye. You keep your Keeper. You add the clinician.
               </p>
             </div>
@@ -113,7 +113,7 @@ export default function BridgePage() {
               </h2>
             </div>
             <p className="lede">
-              The Bridge is not a referral mill. It is a handoff — made by
+              The Bridge is not a referral mill. It is a handoff, made by
               your Keeper, to someone specific, at the right time.
             </p>
           </div>
@@ -123,22 +123,22 @@ export default function BridgePage() {
               {
                 num: "01",
                 title: "Your Keeper notices.",
-                body: "Over time, your Keeper learns the shape of your life. They notice when something shifts — when what you're carrying starts to feel clinical rather than situational. They don't pathologize. They notice.",
+                body: "Over time, your Keeper learns the shape of your life. They notice when something shifts. When what you're carrying starts to feel clinical rather than situational. They don't pathologize. They notice.",
               },
               {
                 num: "02",
-                title: "They name it — to you.",
+                title: "They name it, to you.",
                 body: "Your Keeper doesn't act without you. They bring the observation to a Sit. They say what they've noticed, why they think a clinician might help, and what The Bridge actually is. No pressure. No deadline. A conversation.",
               },
               {
                 num: "03",
-                title: "They introduce you — by name.",
-                body: "If you say yes, your Keeper reaches out to a specific Bridge therapist — not a list, a person — and makes the introduction. They share context (with your consent). They tell the therapist who you are.",
+                title: "They introduce you, by name.",
+                body: "If you say yes, your Keeper reaches out to a specific Bridge therapist (not a list, a person) and makes the introduction. They share context, with your consent. They tell the therapist who you are.",
               },
               {
                 num: "04",
                 title: "You keep both.",
-                body: "This is not a graduation. Your Keeper stays. Your new therapist joins. The two may coordinate with your permission. You were not abandoned at the door — you walked through it with company.",
+                body: "This is not a graduation. Your Keeper stays. Your new therapist joins. The two may coordinate with your permission. You were not abandoned at the door. You walked through it with company.",
               },
             ].map((step, i) => (
               <div
@@ -199,7 +199,7 @@ export default function BridgePage() {
                 Bridge therapists
               </div>
               <h2 style={{ fontSize: "clamp(28px, 3vw, 44px)" }}>
-                Licensed. Culturally fluent. Vetted by us.
+                Licensed. Hand-matched. Vetted by us.
               </h2>
             </div>
             <div>
@@ -217,10 +217,10 @@ export default function BridgePage() {
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 0 }}>
                 {[
-                  "Properly licensed in their jurisdiction (LCSW, LMFT, LPC, PhD, PsyD or international equivalent — clinical psychologist, registered psychotherapist, etc.)",
-                  "Demonstrated cultural fluency, including for members navigating life between cultures",
-                  "Active practice — not overwhelmed caseloads, not waitlisted for six months",
-                  "Familiar with the themes our members bring: family pressure, identity, immigration, intergenerational dynamics, grief, intimacy",
+                  "Properly licensed in their jurisdiction (LCSW, LMFT, LPC, PhD, PsyD or international equivalent: clinical psychologist, registered psychotherapist, etc.)",
+                  "Trained sensitivity, including for members navigating identity questions and transitions",
+                  "Active practice. Not overwhelmed caseloads, not waitlisted for six months",
+                  "Familiar with the themes our members bring: grief, family pressure, identity, transitions, intergenerational dynamics, intimacy, loneliness",
                   "Committed to coordinating with Hearth Keepers when appropriate and with member consent",
                 ].map((item, i) => (
                   <li
@@ -281,7 +281,7 @@ export default function BridgePage() {
               <p>
                 We are not building a marketplace where therapists bid for
                 your business. We are not a directory that emails you a list
-                and wishes you luck. We protect therapist caseloads —
+                and wishes you luck. We protect therapist caseloads.
                 Bridge therapists are never overwhelmed with Hearth referrals.
                 The handoff is careful, specific, and human.
               </p>
@@ -331,7 +331,7 @@ export default function BridgePage() {
                   maxWidth: "48ch",
                 }}
               >
-                A steady pipeline of pre-screened, culturally matched clients.
+                A steady pipeline of pre-screened clients, hand-matched for fit.
                 Hearth handles the matching. You keep your own fee structure
                 and practice autonomy. We protect your caseload.
               </p>

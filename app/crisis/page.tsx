@@ -218,7 +218,7 @@ export default function CrisisPage() {
             >
               Hearth is not a crisis service. Our Keepers are not trained for
               emergency response. Hearth is peer support for the recurring
-              weight of a life — not for acute crisis. If you are in danger,
+              weight of a life, not for acute crisis. If you are in danger,
               please use the lines above.
             </p>
           </div>
@@ -240,7 +240,7 @@ export default function CrisisPage() {
                 marginBottom: 20,
               }}
             >
-              If you are not in crisis but want to talk to someone —
+              If you are not in crisis but want to talk to someone,
               Hearth is here for the long talks.
             </p>
             <Link href="/#cta" className="btn btn-ghost">

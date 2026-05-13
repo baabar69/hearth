@@ -4,9 +4,9 @@ import ExitPopup from "./components/ExitPopup";
 
 const SITE_URL = "https://dearhearth.com";
 const SITE_NAME = "Hearth";
-const DEFAULT_TITLE = "Hearth — Pull up a chair";
+const DEFAULT_TITLE = "Hearth: Pull up a chair";
 const DEFAULT_DESCRIPTION =
-  "Peer support, paired for the long term. Hearth pairs you with a Keeper — a trained companion (not therapy) — for the slow, ongoing weight of grief, family, identity, and the in-between.";
+  "Peer support, paired for the long term. Hearth pairs you with a Keeper, a trained companion (not therapy), for the slow, ongoing weight of grief, family, identity, and the in-between.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Hearth — Pull up a chair. Peer support, paired for the long term.",
+        alt: "Hearth: Pull up a chair. Peer support, paired for the long term.",
       },
     ],
   },
@@ -91,7 +91,7 @@ const ORGANIZATION_LD = {
     "@type": "ContactPoint",
     email: "hello@dearhearth.com",
     contactType: "customer support",
-    availableLanguage: ["English", "Bengali", "Hindi", "Urdu", "Punjabi"],
+    availableLanguage: ["English"],
   },
 };
 
