@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import SharedFooter from "./components/SharedFooter";
 import SharedNav from "./components/SharedNav";
+import {
+  HEARTHSIDE_CHECKOUT_PATH,
+  HEARTH_DEEP_CHECKOUT_PATH,
+} from "./lib/checkout";
 
 function RevealOnScroll() {
   useEffect(() => {
@@ -120,6 +124,38 @@ export default function Home() {
   const [ctaName, setCtaName] = useState("");
   const [ctaEmail, setCtaEmail] = useState("");
   const [ctaTopics, setCtaTopics] = useState<string[]>([]);
+  const [ctaSubmitting, setCtaSubmitting] = useState(false);
+  const [ctaError, setCtaError] = useState<string | null>(null);
+
+  const submitShortIntake = async () => {
+    setCtaSubmitting(true);
+    setCtaError(null);
+    try {
+      const res = await fetch("/api/intake", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          form: "short",
+          firstName: ctaName,
+          email: ctaEmail,
+          topics: ctaTopics,
+        }),
+      });
+      if (!res.ok) {
+        const body = (await res.json().catch(() => ({}))) as {
+          error?: string;
+        };
+        throw new Error(body.error ?? `submission failed (${res.status})`);
+      }
+      setCtaStep(3);
+    } catch (err) {
+      setCtaError(
+        err instanceof Error ? err.message : "Something went wrong.",
+      );
+    } finally {
+      setCtaSubmitting(false);
+    }
+  };
 
   const intakeTopics = [
     { id: "grief", label: "Grief or loss" },
@@ -1560,9 +1596,12 @@ export default function Home() {
                 <li>Full Embers library access</li>
                 <li>One Circle per month included</li>
               </ul>
-              <a href="#cta" className="btn btn-primary">
+              <Link
+                href={HEARTHSIDE_CHECKOUT_PATH}
+                className="btn btn-primary"
+              >
                 Begin with Hearthside <span className="arr">&rarr;</span>
-              </a>
+              </Link>
               <p className="mb">Cancel any time, in one click</p>
             </div>
 
@@ -1607,13 +1646,13 @@ export default function Home() {
                 </li>
                 <li>Bridge therapist matching, when needed</li>
               </ul>
-              <a
-                href="#cta"
+              <Link
+                href={HEARTH_DEEP_CHECKOUT_PATH}
                 className="btn btn-primary"
                 style={{ background: "var(--ember)" }}
               >
                 Begin with Hearth Deep <span className="arr">&rarr;</span>
-              </a>
+              </Link>
               <p className="mb">Cancel any time, in one click</p>
             </div>
           </div>
@@ -1869,13 +1908,37 @@ export default function Home() {
               </div>
               <button
                 type="button"
-                disabled={ctaTopics.length === 0}
-                onClick={() => setCtaStep(3)}
+                disabled={ctaTopics.length === 0 || ctaSubmitting}
+                onClick={submitShortIntake}
                 className="btn btn-primary btn-lg"
-                style={{ width: "100%", maxWidth: 300, opacity: ctaTopics.length === 0 ? 0.45 : 1, cursor: ctaTopics.length === 0 ? "not-allowed" : "pointer" }}
+                style={{
+                  width: "100%",
+                  maxWidth: 300,
+                  opacity: ctaTopics.length === 0 || ctaSubmitting ? 0.45 : 1,
+                  cursor:
+                    ctaTopics.length === 0 || ctaSubmitting
+                      ? "not-allowed"
+                      : "pointer",
+                }}
               >
-                Find my Keeper &rarr;
+                {ctaSubmitting ? "Sending…" : "Find my Keeper →"}
               </button>
+              {ctaError && (
+                <p
+                  role="alert"
+                  style={{
+                    fontFamily: "var(--mono)",
+                    fontSize: 11,
+                    color: "#FFB4B4",
+                    margin: "4px 0 0",
+                    maxWidth: 320,
+                    textAlign: "center",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {ctaError} — please try again.
+                </p>
+              )}
               <button type="button" onClick={() => setCtaStep(1)} style={{ fontFamily: "var(--mono)", fontSize: 12, color: "rgba(255,255,255,0.4)", background: "none", border: "none", cursor: "pointer", letterSpacing: "0.06em" }}>
                 &larr; Back
               </button>

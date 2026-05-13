@@ -80,6 +80,32 @@ const SPIRITUALITY_OPTIONS = [
   "Prefer not to say",
 ];
 
+const FAITH_TRADITION_OPTIONS = [
+  "Muslim",
+  "Hindu",
+  "Sikh",
+  "Buddhist",
+  "Christian",
+  "Jewish",
+  "Spiritual but unaffiliated",
+  "Another tradition",
+  "None",
+  "Prefer not to say",
+];
+
+const NATIVE_LANGUAGE_OPTIONS = [
+  "English",
+  "Urdu",
+  "Bengali",
+  "Tamil",
+  "Punjabi",
+  "Hindi",
+  "Gujarati",
+  "Sinhala",
+  "Arabic",
+  "Other",
+];
+
 const EMPLOYMENT_OPTIONS = [
   "Employed full-time", "Employed part-time", "Self-employed",
   "Student", "Not currently working", "Prefer not to say",
@@ -120,8 +146,10 @@ interface IntakeData {
   priorTherapy: string;
   relationshipStatus: string;
   spirituality: string;
+  faithTradition: string;
   employment: string;
   keeperGender: string;
+  preferredLanguage: string;
   connectionMode: string;
   availability: string[];
   openNote: string;
@@ -134,8 +162,8 @@ const INITIAL: IntakeData = {
   firstName: "", email: "", ageRange: "", country: "",
   topics: [], openContext: "",
   wellbeing: null, sleep: "", sadness: "", anxiety: "", safetyCheck: "",
-  priorTherapy: "", relationshipStatus: "", spirituality: "", employment: "",
-  keeperGender: "", connectionMode: "", availability: [], openNote: "",
+  priorTherapy: "", relationshipStatus: "", spirituality: "", faithTradition: "", employment: "",
+  keeperGender: "", preferredLanguage: "", connectionMode: "", availability: [], openNote: "",
   referralSource: "", agreePeerSupport: false, agreeAge: false,
 };
 
@@ -286,6 +314,8 @@ function Textarea({
 export default function IntakePage() {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [data, setData] = useState<IntakeData>(INITIAL);
 
   const set = <K extends keyof IntakeData>(key: K, value: IntakeData[K]) =>
@@ -299,19 +329,47 @@ export default function IntakePage() {
         : [...(d[key] as string[]), id],
     }));
 
+  const submitIntake = async () => {
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/intake", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ form: "full", ...data }),
+      });
+      if (!res.ok) {
+        const body = (await res.json().catch(() => ({}))) as {
+          error?: string;
+        };
+        throw new Error(body.error ?? `submission failed (${res.status})`);
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setSubmitError(
+        err instanceof Error ? err.message : "Something went wrong.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   const canProceed = (): boolean => {
     if (step === 1) return !!(data.firstName && data.email && data.ageRange && data.country);
     if (step === 2) return data.topics.length > 0;
     if (step === 3) return !!(data.wellbeing && data.sleep && data.sadness && data.anxiety && data.safetyCheck);
     if (step === 4) return !!(data.priorTherapy && data.relationshipStatus && data.spirituality && data.employment);
-    if (step === 5) return !!(data.keeperGender && data.connectionMode && data.availability.length > 0);
+    if (step === 5) return !!(data.keeperGender && data.preferredLanguage && data.connectionMode && data.availability.length > 0);
     if (step === 6) return !!(data.referralSource && data.agreePeerSupport && data.agreeAge);
     return false;
   };
 
   const handleNext = () => {
-    if (step === TOTAL_STEPS) setSubmitted(true);
-    else setStep((s) => s + 1);
+    if (step === TOTAL_STEPS) {
+      void submitIntake();
+    } else {
+      setStep((s) => s + 1);
+    }
   };
 
   const handleBack = () => setStep((s) => s - 1);
@@ -712,6 +770,26 @@ export default function IntakePage() {
                   </div>
                 </div>
 
+                {(data.spirituality === SPIRITUALITY_OPTIONS[0] ||
+                  data.spirituality === SPIRITUALITY_OPTIONS[1]) && (
+                  <div>
+                    <FieldLabel>
+                      Which tradition, if any, do you most identify with?{" "}
+                      <em style={{ fontStyle: "italic", fontSize: 15, color: "#999" }}>(helps with Keeper matching)</em>
+                    </FieldLabel>
+                    <div style={{ display: "flex", flexWrap: "wrap" as const, gap: 8 }}>
+                      {FAITH_TRADITION_OPTIONS.map((o) => (
+                        <Pill
+                          key={o}
+                          label={o}
+                          selected={data.faithTradition === o}
+                          onClick={() => set("faithTradition", o)}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <div>
                   <FieldLabel>Are you currently employed?</FieldLabel>
                   <div style={{ display: "flex", flexWrap: "wrap" as const, gap: 8 }}>
@@ -750,6 +828,23 @@ export default function IntakePage() {
                         label={o}
                         selected={data.keeperGender === o}
                         onClick={() => set("keeperGender", o)}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <FieldLabel>What language would you most like to speak with your Keeper in?</FieldLabel>
+                  <p style={{ fontFamily: "var(--mono)", fontSize: 12, color: "#999", marginBottom: 12 }}>
+                    Cultural fluency runs through language. We&rsquo;ll try to match you with a Keeper who shares yours.
+                  </p>
+                  <div style={{ display: "flex", flexWrap: "wrap" as const, gap: 8 }}>
+                    {NATIVE_LANGUAGE_OPTIONS.map((o) => (
+                      <Pill
+                        key={o}
+                        label={o}
+                        selected={data.preferredLanguage === o}
+                        onClick={() => set("preferredLanguage", o)}
                       />
                     ))}
                   </div>
@@ -926,19 +1021,41 @@ export default function IntakePage() {
               </Link>
             )}
 
-            <button
-              type="button"
-              onClick={handleNext}
-              disabled={!canProceed() || underAge}
-              className="btn btn-primary"
-              style={{
-                opacity: (!canProceed() || underAge) ? 0.4 : 1,
-                cursor: (!canProceed() || underAge) ? "not-allowed" : "pointer",
-                minWidth: 160,
-              }}
-            >
-              {step === TOTAL_STEPS ? "Find my Keeper →" : "Continue →"}
-            </button>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 8 }}>
+              {submitError && (
+                <p
+                  role="alert"
+                  style={{
+                    fontFamily: "var(--mono)",
+                    fontSize: 12,
+                    color: "#C62828",
+                    margin: 0,
+                    maxWidth: 320,
+                    textAlign: "right",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {submitError} — please try again or email us directly.
+                </p>
+              )}
+              <button
+                type="button"
+                onClick={handleNext}
+                disabled={!canProceed() || underAge || submitting}
+                className="btn btn-primary"
+                style={{
+                  opacity: (!canProceed() || underAge || submitting) ? 0.4 : 1,
+                  cursor: (!canProceed() || underAge || submitting) ? "not-allowed" : "pointer",
+                  minWidth: 160,
+                }}
+              >
+                {submitting
+                  ? "Sending…"
+                  : step === TOTAL_STEPS
+                    ? "Find my Keeper →"
+                    : "Continue →"}
+              </button>
+            </div>
           </div>
         </div>
       </main>

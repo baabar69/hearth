@@ -1,6 +1,10 @@
 import Link from "next/link";
 import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
+import {
+  HEARTHSIDE_CHECKOUT_PATH,
+  HEARTH_DEEP_CHECKOUT_PATH,
+} from "../lib/checkout";
 
 export const metadata = {
   title: "Pricing · Hearth",
@@ -111,9 +115,12 @@ export default function PricingPage() {
                 <li>One Circle per month included</li>
                 <li>The Bridge handoff — when a clinician is the right tool</li>
               </ul>
-              <a href="/#cta" className="btn btn-primary">
+              <Link
+                href={HEARTHSIDE_CHECKOUT_PATH}
+                className="btn btn-primary"
+              >
                 Begin with Hearthside <span className="arr">&rarr;</span>
-              </a>
+              </Link>
               <p className="mb">Cancel any time, in one click</p>
             </div>
 
@@ -149,13 +156,13 @@ export default function PricingPage() {
                 <li>Anniversary rituals — yearly meaning-making with your Keeper</li>
                 <li>Bridge therapist priority matching when needed</li>
               </ul>
-              <a
-                href="/#cta"
+              <Link
+                href={HEARTH_DEEP_CHECKOUT_PATH}
                 className="btn btn-primary"
                 style={{ background: "var(--ember)" }}
               >
                 Begin with Hearth Deep <span className="arr">&rarr;</span>
-              </a>
+              </Link>
               <p className="mb">Cancel any time, in one click</p>
             </div>
           </div>
