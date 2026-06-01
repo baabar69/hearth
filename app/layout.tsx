@@ -76,13 +76,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/logo.svg", type: "image/svg+xml" },
-    ],
-    apple: "/logo.svg",
-  },
+  // Icons are provided by file-based metadata conventions
+  // (app/favicon.ico, app/icon.svg, app/apple-icon.png), which take
+  // precedence over the metadata object and auto-generate the <link> tags.
   category: "health",
   verification: {
     // Wire real values via env when GSC + Bing are claimed.
