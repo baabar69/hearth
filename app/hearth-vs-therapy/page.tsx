@@ -3,9 +3,17 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "Hearth vs. therapy · Hearth",
+  title: "Hearth vs. Therapy — Honest Comparison & When to Choose Each",
   description:
-    "Hearth is not a substitute for therapy. It is a different thing. Here's the honest comparison: when therapy is the right tool, when Hearth is, and when you need both.",
+    "Hearth is peer support, not therapy. A side-by-side comparison: what each does, what they cost, who they fit, and when to use both. Written by Hearth.",
+  alternates: { canonical: "/hearth-vs-therapy" },
+  openGraph: {
+    title: "Hearth vs. Therapy — The Honest Comparison",
+    description:
+      "When therapy is the right tool, when Hearth is, and when you need both. Side by side.",
+    url: "/hearth-vs-therapy",
+    type: "website",
+  },
 };
 
 const COMPARISON = [
@@ -696,6 +704,16 @@ export default function HearthVsTherapyPage() {
                 I want a therapist instead
               </Link>
             </div>
+            <p style={{ marginTop: 28, color: "rgba(242,237,229,0.6)", fontSize: 14 }}>
+              Want the longer read?{" "}
+              <Link
+                href="/learn/peer-support-vs-therapy"
+                style={{ color: "#FFD7B5", textDecoration: "underline" }}
+              >
+                Peer support vs. therapy — the honest difference
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>

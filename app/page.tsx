@@ -195,7 +195,7 @@ export default function Home() {
             <div>
               <div className="eyebrow">
                 <span className="dot" />
-                Peer support, paired for the long term
+                Long-term peer support &middot; From $39 a month
               </div>
               <h1 style={{ marginTop: 24 }}>
                 Pull up a chair.
@@ -206,7 +206,7 @@ export default function Home() {
               </h1>
               <div className="hero-cta">
                 <a href="#cta" className="btn btn-primary btn-lg">
-                  Begin the First Sit <span className="arr">&rarr;</span>
+                  Find your Keeper <span className="arr">&rarr;</span>
                 </a>
                 <a href="#keepers" className="btn btn-ghost btn-lg">
                   Meet the Keepers
@@ -215,7 +215,11 @@ export default function Home() {
               <div className="hero-tag">
                 <span>
                   <span className="dot" />
-                  Matched Keeper in 72 hours
+                  Trained Keeper, matched in 72 hours
+                </span>
+                <span>
+                  <span className="dot" />
+                  From $39 / month
                 </span>
                 <span>
                   <span className="dot" />

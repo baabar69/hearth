@@ -4,9 +4,9 @@ import ExitPopup from "./components/ExitPopup";
 
 const SITE_URL = "https://dearhearth.com";
 const SITE_NAME = "Hearth";
-const DEFAULT_TITLE = "Hearth: Pull up a chair";
+const DEFAULT_TITLE = "Hearth — Peer support, paired for the long term";
 const DEFAULT_DESCRIPTION =
-  "Peer support, paired for the long term. Hearth pairs you with a Keeper, a trained companion (not therapy), for the slow, ongoing weight of grief, family, identity, and the in-between.";
+  "Hearth pairs you with the same trained Keeper for the long term — peer support (not therapy) for grief, family pressure, identity, caregiving, and the in-between. From $39/month, cancel any time.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -15,23 +15,31 @@ export const metadata: Metadata = {
     template: "%s · Hearth",
   },
   description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
   keywords: [
     "peer support",
-    "emotional support",
-    "non-clinical support",
-    "grief support",
-    "family pressure",
-    "anxiety support",
-    "Keeper peer support",
-    "paired peer support",
-    "long-term peer support",
+    "peer support online",
+    "online emotional support",
     "alternative to therapy",
+    "non-clinical mental health support",
+    "diaspora mental health",
+    "cultural mental health support",
+    "grief support online",
+    "caregiver support",
+    "long-term peer support",
+    "trained companion",
+    "subscription emotional support",
   ],
-  authors: [{ name: "Hearth" }],
+  authors: [{ name: "Hearth", url: SITE_URL }],
   creator: "Hearth",
   publisher: "Hearth",
   alternates: {
     canonical: "/",
+  },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
   openGraph: {
     type: "website",
@@ -45,7 +53,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Hearth: Pull up a chair. Peer support, paired for the long term.",
+        alt: "Hearth — Peer support, paired for the long term.",
       },
     ],
   },
@@ -55,6 +63,7 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     images: ["/og-image.png"],
     creator: "@dearhearth",
+    site: "@dearhearth",
   },
   robots: {
     index: true,
@@ -68,39 +77,95 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
+    apple: "/logo.svg",
   },
   category: "health",
+  verification: {
+    // Wire real values via env when GSC + Bing are claimed.
+    // google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+    // other: { "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION },
+  },
 };
 
 export const viewport: Viewport = {
   themeColor: "#F2EDE5",
   width: "device-width",
   initialScale: 1,
+  colorScheme: "light",
 };
+
+const ORG_ID = `${SITE_URL}/#organization`;
+const SITE_ID = `${SITE_URL}/#website`;
 
 const ORGANIZATION_LD = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Hearth",
+  "@id": ORG_ID,
+  name: SITE_NAME,
+  legalName: "Hearth",
+  alternateName: "Dear Hearth",
   url: SITE_URL,
-  logo: `${SITE_URL}/og-image.png`,
-  description: DEFAULT_DESCRIPTION,
-  sameAs: [],
-  contactPoint: {
-    "@type": "ContactPoint",
-    email: "hello@dearhearth.com",
-    contactType: "customer support",
-    availableLanguage: ["English"],
+  logo: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/logo.svg`,
+    width: 512,
+    height: 512,
+    caption: "Hearth",
   },
+  image: `${SITE_URL}/og-image.png`,
+  description:
+    "Hearth is a one-to-one peer-support subscription pairing each member with the same trained Keeper for the long term. Not therapy. Not a crisis service.",
+  slogan: "Pull up a chair.",
+  knowsAbout: [
+    "Peer support",
+    "Emotional support",
+    "Grief support",
+    "Caregiver support",
+    "Diaspora mental health",
+    "Identity and belonging",
+    "Family dynamics",
+  ],
+  // Empty sameAs is noisy. Populate as profiles are verified.
+  sameAs: [
+    "https://www.linkedin.com/company/dearhearth",
+    "https://twitter.com/dearhearth",
+  ],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: "hello@dearhearth.com",
+      availableLanguage: ["English", "Bengali", "Hindi", "Urdu", "Punjabi", "Tamil", "Arabic"],
+      areaServed: "Worldwide",
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "privacy",
+      email: "privacy@dearhearth.com",
+      availableLanguage: ["English"],
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "security",
+      email: "security@dearhearth.com",
+      availableLanguage: ["English"],
+    },
+  ],
 };
 
 const WEBSITE_LD = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: SITE_NAME,
+  "@id": SITE_ID,
   url: SITE_URL,
+  name: SITE_NAME,
   description: DEFAULT_DESCRIPTION,
+  inLanguage: "en-US",
+  publisher: { "@id": ORG_ID },
 };
 
 export default function RootLayout({

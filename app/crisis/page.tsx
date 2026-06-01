@@ -3,9 +3,17 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "Crisis Resources · Hearth",
+  title: "Mental Health Crisis Resources — US, Canada, UK, Pakistan & More",
   description:
-    "If you are in crisis, please reach out now. US: 988. Canada: 1-866-585-0445.",
+    "If you are in crisis, reach out now. US: 988. Canada: 1-866-585-0445. UK/IE: 116 123. Pakistan: 0311-7786264 (Umang). Hearth is peer support, not a crisis service.",
+  alternates: { canonical: "/crisis" },
+  openGraph: {
+    title: "Crisis Resources — Hearth",
+    description:
+      "Crisis hotlines for the US, Canada, UK, Ireland, Pakistan, and beyond.",
+    url: "/crisis",
+    type: "website",
+  },
 };
 
 export default function CrisisPage() {

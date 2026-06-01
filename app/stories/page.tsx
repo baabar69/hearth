@@ -3,9 +3,17 @@ import SharedFooter from "../components/SharedFooter";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Stories · Hearth",
+  title: "Member Stories — What Hearth Peer Support Looks Like",
   description:
-    "What members say about pulling up a chair. Real stories, real Sits, real Keepers. Names changed for privacy.",
+    "What members say about pulling up a chair. Real stories from real Sits with real Keepers — diaspora grief, family pressure, postpartum, caregiver burnout, faith. Names changed for privacy.",
+  alternates: { canonical: "/stories" },
+  openGraph: {
+    title: "Hearth Stories — Member experiences",
+    description:
+      "Real Sits, real Keepers, real outcomes. Names changed for privacy.",
+    url: "/stories",
+    type: "website",
+  },
 };
 
 const STORIES = [

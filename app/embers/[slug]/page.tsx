@@ -2,6 +2,12 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import SharedNav from "../../components/SharedNav";
 import SharedFooter from "../../components/SharedFooter";
+import {
+  articleLd,
+  breadcrumbLd,
+  jsonLd,
+  webPageLd,
+} from "../../lib/schema";
 
 type Essay = {
   slug: string;
@@ -196,18 +202,22 @@ export async function generateMetadata({
   const essay = ESSAYS.find((e) => e.slug === slug);
   if (!essay) return { title: "Ember · Hearth" };
 
-  const title = `${essay.title} · Embers · Hearth`;
+  const title = `${essay.title} — Embers · Hearth`;
   const description = essay.excerpt;
 
   return {
     title,
     description,
+    alternates: { canonical: `/embers/${essay.slug}` },
     openGraph: {
       title,
       description,
       type: "article",
       publishedTime: essay.publishDate,
+      modifiedTime: essay.publishDate,
       authors: [essay.author],
+      url: `/embers/${essay.slug}`,
+      tags: [essay.category, "peer support", "Hearth"],
     },
     twitter: {
       card: "summary_large_image",
@@ -235,6 +245,32 @@ export default async function EmberEssayPage({
   const essay = ESSAYS.find((e) => e.slug === slug);
   if (!essay) notFound();
 
+  const wordCount = essay.body.reduce(
+    (n, p) => n + p.split(/\s+/).filter(Boolean).length,
+    0
+  );
+  const ldBlocks = jsonLd([
+    webPageLd({
+      path: `/embers/${essay.slug}`,
+      name: `${essay.title} — Embers`,
+      description: essay.excerpt,
+      lastReviewed: essay.publishDate,
+    }),
+    breadcrumbLd([
+      { name: "Hearth", path: "/" },
+      { name: "Embers", path: "/embers" },
+      { name: essay.title, path: `/embers/${essay.slug}` },
+    ]),
+    articleLd({
+      path: `/embers/${essay.slug}`,
+      headline: essay.title,
+      description: essay.excerpt,
+      datePublished: essay.publishDate,
+      wordCount,
+      about: [essay.category, "Peer support", "Hearth"],
+    }),
+  ]);
+
   // Pick 3 related essays — same category first, then fill with others.
   const sameCategory = ESSAYS.filter(
     (e) => e.slug !== essay.slug && e.category === essay.category
@@ -246,6 +282,10 @@ export default async function EmberEssayPage({
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: ldBlocks }}
+      />
       <SharedNav />
 
       {/* HERO */}

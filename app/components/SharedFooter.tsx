@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HearthCairn, HearthDrawnWordmark } from "./HearthLogo";
 
 export default function SharedFooter() {
   return (
@@ -6,11 +7,9 @@ export default function SharedFooter() {
       <div className="wrap">
         <div className="foot-grid">
           <div className="foot-brand">
-            <div className="brand">
-              <span className="brand-mark" />
-              <span className="brand-name" style={{ color: "var(--paper)" }}>
-                Hearth
-              </span>
+            <div className="brand" style={{ alignItems: "center", gap: 8 }}>
+              <HearthCairn size={42} onDark />
+              <HearthDrawnWordmark height={28} color="#F2EDE5" />
             </div>
             <p>
               Peer support, paired for the long term. Hearth is not therapy,
@@ -27,6 +26,9 @@ export default function SharedFooter() {
             <Link href="/embers">Embers</Link>
             <Link href="/bridge">The Bridge</Link>
             <Link href="/hearth-vs-therapy">Hearth vs. therapy</Link>
+            <Link href="/learn/peer-support-vs-therapy">
+              Peer support vs. therapy
+            </Link>
             <Link href="/pricing">Pricing</Link>
           </div>
           <div className="foot-col">

@@ -1,12 +1,15 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import SharedNav from "../../components/SharedNav";
 import SharedFooter from "../../components/SharedFooter";
 import KeeperPortrait from "../../components/KeeperPortrait";
-
-export const metadata = {
-  title: "Keeper Profile · Hearth",
-};
+import {
+  breadcrumbLd,
+  jsonLd,
+  keeperPersonLd,
+  webPageLd,
+} from "../../lib/schema";
 
 type Keeper = {
   slug: string;
@@ -151,16 +154,65 @@ export function generateStaticParams() {
   return KEEPERS.map((k) => ({ slug: k.slug }));
 }
 
-export default function KeeperProfile({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const keeper = KEEPERS.find((k) => k.slug === slug);
+  if (!keeper) return { title: "Keeper · Hearth" };
+  const first = keeper.name.split(" ")[0];
+  const themes = keeper.themes.join(", ");
+  const title = `${keeper.name} — Hearth Keeper`;
+  const description = `${keeper.tagline} ${first} is a trained Hearth Keeper based in ${keeper.city}, supporting members through ${themes.toLowerCase()}.`;
+  return {
+    title,
+    description,
+    alternates: { canonical: `/keepers/${keeper.slug}` },
+    openGraph: {
+      type: "profile",
+      title,
+      description,
+      url: `/keepers/${keeper.slug}`,
+      images: keeper.photo
+        ? [{ url: keeper.photo, alt: keeper.name }]
+        : undefined,
+    },
+  };
+}
+
+export default async function KeeperProfile({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
 }) {
-  const keeper = KEEPERS.find((k) => k.slug === params.slug);
+  const { slug } = await params;
+  const keeper = KEEPERS.find((k) => k.slug === slug);
   if (!keeper) notFound();
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd([
+            webPageLd({
+              path: `/keepers/${keeper.slug}`,
+              name: `${keeper.name} — Hearth Keeper`,
+              description: keeper.tagline,
+              lastReviewed: "2026-05-14",
+              primaryImage: keeper.photo,
+            }),
+            breadcrumbLd([
+              { name: "Hearth", path: "/" },
+              { name: "Keepers", path: "/keepers" },
+              { name: keeper.name, path: `/keepers/${keeper.slug}` },
+            ]),
+            keeperPersonLd(keeper),
+          ]),
+        }}
+      />
       <SharedNav />
 
       {/* HERO */}

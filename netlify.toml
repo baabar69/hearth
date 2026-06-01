@@ -1,0 +1,62 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# ---- Global security & SEO headers ----
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-site"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://*.whop.com https://js.whop.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://*.whop.com https://api.whop.com https://api.resend.com; frame-src 'self' https://*.whop.com https://js.whop.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
+
+# ---- Immutable hashed assets ----
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/image*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ---- SEO control files ----
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "application/xml; charset=utf-8"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "text/plain; charset=utf-8"
+
+# ---- Legacy redirects (root www + http handled by Netlify by default) ----
+[[redirects]]
+  from = "https://www.dearhearth.com/*"
+  to = "https://dearhearth.com/:splat"
+  status = 301
+  force = true

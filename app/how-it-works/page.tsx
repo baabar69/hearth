@@ -2,9 +2,17 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "How it works · Hearth",
+  title: "How Hearth works — From sign-up to your first Sit",
   description:
-    "No mystery. No fine print. Here is what happens, in order, from the day you sign up to your Keeper.",
+    "Intake, hand-pairing within 72 hours, your first Sit, and the Long Talk in between. Step by step, in plain language, with no fine print.",
+  alternates: { canonical: "/how-it-works" },
+  openGraph: {
+    title: "How Hearth works — Step by step",
+    description:
+      "Intake to first Sit in 72 hours. The exact order of how Hearth pairs you with your Keeper.",
+    url: "/how-it-works",
+    type: "website",
+  },
 };
 
 export default function HowItWorks() {

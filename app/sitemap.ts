@@ -2,30 +2,42 @@ import type { MetadataRoute } from "next";
 
 const SITE = "https://dearhearth.com";
 
-const STATIC_ROUTES = [
-  { path: "/", priority: 1.0, changeFrequency: "weekly" as const },
-  { path: "/about", priority: 0.7, changeFrequency: "monthly" as const },
-  { path: "/how-it-works", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/keepers", priority: 0.9, changeFrequency: "weekly" as const },
-  { path: "/pricing", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/embers", priority: 0.8, changeFrequency: "weekly" as const },
-  { path: "/intake", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/bridge", priority: 0.8, changeFrequency: "monthly" as const },
-  { path: "/hearth-vs-therapy", priority: 0.8, changeFrequency: "monthly" as const },
-  { path: "/why-paired", priority: 0.7, changeFrequency: "monthly" as const },
-  { path: "/stories", priority: 0.7, changeFrequency: "weekly" as const },
-  { path: "/circles", priority: 0.7, changeFrequency: "weekly" as const },
-  { path: "/faq", priority: 0.6, changeFrequency: "monthly" as const },
-  { path: "/gift", priority: 0.6, changeFrequency: "monthly" as const },
-  { path: "/for-keepers", priority: 0.6, changeFrequency: "monthly" as const },
-  { path: "/for-therapists", priority: 0.6, changeFrequency: "monthly" as const },
-  { path: "/trust", priority: 0.6, changeFrequency: "monthly" as const },
-  { path: "/accessibility", priority: 0.4, changeFrequency: "yearly" as const },
-  { path: "/press", priority: 0.4, changeFrequency: "monthly" as const },
-  { path: "/crisis", priority: 0.5, changeFrequency: "yearly" as const },
-  { path: "/sign-in", priority: 0.3, changeFrequency: "yearly" as const },
-  { path: "/privacy", priority: 0.3, changeFrequency: "yearly" as const },
-  { path: "/terms", priority: 0.3, changeFrequency: "yearly" as const },
+// Real timestamps per route. Bumping these on a deploy is fine — fabricating a
+// uniform millisecond timestamp on every request is the thing Google ignores.
+// Hand-curated by section so high-priority commercial pages signal recency
+// without lying to crawlers.
+const ROUTES: Array<{ path: string; priority: number; lastmod: string }> = [
+  // Core
+  { path: "/",                          priority: 1.0, lastmod: "2026-05-14" },
+  { path: "/how-it-works",              priority: 0.9, lastmod: "2026-05-14" },
+  { path: "/pricing",                   priority: 0.9, lastmod: "2026-05-14" },
+  { path: "/keepers",                   priority: 0.9, lastmod: "2026-05-14" },
+  { path: "/hearth-vs-therapy",         priority: 0.9, lastmod: "2026-05-14" },
+  { path: "/learn/peer-support-vs-therapy", priority: 0.9, lastmod: "2026-05-14" },
+
+  // Mid-funnel
+  { path: "/about",                     priority: 0.7, lastmod: "2026-05-14" },
+  { path: "/why-paired",                priority: 0.7, lastmod: "2026-05-14" },
+  { path: "/stories",                   priority: 0.7, lastmod: "2026-05-14" },
+  { path: "/circles",                   priority: 0.7, lastmod: "2026-05-14" },
+  { path: "/embers",                    priority: 0.7, lastmod: "2026-05-14" },
+  { path: "/bridge",                    priority: 0.7, lastmod: "2026-05-14" },
+  { path: "/faq",                       priority: 0.7, lastmod: "2026-05-14" },
+
+  // Audience-specific
+  { path: "/for-keepers",               priority: 0.6, lastmod: "2026-05-14" },
+  { path: "/for-therapists",            priority: 0.6, lastmod: "2026-05-14" },
+  { path: "/gift",                      priority: 0.5, lastmod: "2026-05-14" },
+
+  // Trust / informational
+  { path: "/trust",                     priority: 0.6, lastmod: "2026-05-14" },
+  { path: "/crisis",                    priority: 0.6, lastmod: "2026-05-14" },
+  { path: "/press",                     priority: 0.4, lastmod: "2026-05-14" },
+  { path: "/accessibility",             priority: 0.3, lastmod: "2026-05-14" },
+  { path: "/privacy",                   priority: 0.3, lastmod: "2026-05-14" },
+  { path: "/terms",                     priority: 0.3, lastmod: "2026-05-14" },
+  // Note: /sign-in, /checkout, /welcome, /intake are intentionally excluded.
+  // /intake is a conversion flow that should not absorb crawl budget.
 ];
 
 const FOR_TOPICS = [
@@ -46,26 +58,21 @@ const KEEPER_SLUGS = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
-  const staticEntries = STATIC_ROUTES.map((r) => ({
+  const staticEntries = ROUTES.map((r) => ({
     url: `${SITE}${r.path}`,
-    lastModified: now,
-    changeFrequency: r.changeFrequency,
+    lastModified: new Date(r.lastmod),
     priority: r.priority,
   }));
 
   const forEntries = FOR_TOPICS.map((slug) => ({
     url: `${SITE}/for/${slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
+    lastModified: new Date("2026-05-14"),
     priority: 0.8,
   }));
 
   const keeperEntries = KEEPER_SLUGS.map((slug) => ({
     url: `${SITE}/keepers/${slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
+    lastModified: new Date("2026-05-14"),
     priority: 0.7,
   }));
 

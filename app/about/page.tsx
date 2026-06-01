@@ -3,9 +3,17 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "About · Hearth",
+  title: "About Hearth — Why we built paired, long-term peer support",
   description:
-    "Why Hearth exists. To restore the elder a generation of us never had.",
+    "Hearth exists to restore the elder a generation never had: trained, paid companionship for the recurring weight of a life. The story, the model, and how we think about scope.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Hearth — Why paired peer support",
+    description:
+      "Why Hearth exists and how it works. Paired, trained, long-term peer support — not therapy, not a streak.",
+    url: "/about",
+    type: "website",
+  },
 };
 
 const VALUES = [

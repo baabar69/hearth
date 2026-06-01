@@ -4,9 +4,17 @@ import SharedFooter from "../components/SharedFooter";
 import KeeperPortrait from "../components/KeeperPortrait";
 
 export const metadata = {
-  title: "Meet the Keepers · Hearth",
+  title: "Meet the Keepers — Trained peer supporters at Hearth",
   description:
-    "Each one a person, not a profile. Browse, listen, read. The match matters.",
+    "Browse Hearth's Keepers: trained peer supporters paired with members by hand. Each one a person, not a profile — with languages, themes, and lived experience that matches what you're carrying.",
+  alternates: { canonical: "/keepers" },
+  openGraph: {
+    title: "Meet the Keepers — Hearth",
+    description:
+      "Hearth's Keepers: trained peer supporters across languages, cultures, and themes. Paired by hand for fit.",
+    url: "/keepers",
+    type: "website",
+  },
 };
 
 type Keeper = {

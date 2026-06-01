@@ -4,6 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
+import {
+  breadcrumbLd,
+  faqLd,
+  jsonLd,
+  webPageLd,
+} from "../lib/schema";
 
 type FAQItem = { q: string; a: string };
 type Category = { label: string; items: FAQItem[] };
@@ -185,9 +191,29 @@ const CATEGORIES: Category[] = [
 
 export default function FAQPage() {
   const [openItem, setOpenItem] = useState<string | null>(null);
+  const allFaqItems = CATEGORIES.flatMap((c) => c.items);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd([
+            webPageLd({
+              path: "/faq",
+              name: "Frequently asked questions · Hearth",
+              description:
+                "Honest answers about Hearth: peer support vs. therapy, Keepers, pricing, the Bridge, privacy, crisis policy, and more.",
+              lastReviewed: "2026-05-14",
+            }),
+            breadcrumbLd([
+              { name: "Hearth", path: "/" },
+              { name: "FAQ", path: "/faq" },
+            ]),
+            faqLd(allFaqItems),
+          ]),
+        }}
+      />
       <SharedNav />
 
       {/* HERO */}

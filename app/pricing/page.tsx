@@ -5,11 +5,25 @@ import {
   HEARTHSIDE_CHECKOUT_PATH,
   HEARTH_DEEP_CHECKOUT_PATH,
 } from "../lib/checkout";
+import {
+  breadcrumbLd,
+  faqLd,
+  jsonLd,
+  pricingServiceLd,
+  webPageLd,
+} from "../lib/schema";
 
 export const metadata = {
-  title: "Pricing · Hearth",
+  title: "Hearth Pricing — $39/mo Peer Support, $99/mo Weekly Sits",
   description:
-    "Honest numbers. Two tiers. No streaks, no upsells. 60% goes to your Keeper.",
+    "Hearthside is $39/month (biweekly Sits). Hearth Deep is $99/month (weekly Sits). 60% goes to your Keeper. Cancel any time in one click.",
+  alternates: { canonical: "/pricing" },
+  openGraph: {
+    title: "Hearth Pricing — $39/mo or $99/mo",
+    description:
+      "Two tiers. Biweekly or weekly Sits. Unlimited Long Talk. Cancel any time.",
+    url: "/pricing",
+  },
 };
 
 const FAQ = [
@@ -50,6 +64,26 @@ const FAQ = [
 export default function PricingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd([
+            webPageLd({
+              path: "/pricing",
+              name: "Pricing · Hearth",
+              description:
+                "Hearth pricing: $39/month Hearthside (biweekly Sits) or $99/month Hearth Deep (weekly Sits). 60% goes to your Keeper.",
+              lastReviewed: "2026-05-14",
+            }),
+            breadcrumbLd([
+              { name: "Hearth", path: "/" },
+              { name: "Pricing", path: "/pricing" },
+            ]),
+            pricingServiceLd(),
+            faqLd(FAQ),
+          ]),
+        }}
+      />
       <SharedNav />
 
       {/* HERO */}

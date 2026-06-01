@@ -3,9 +3,17 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "Why paired. Why long term. · Hearth",
+  title: "Why Paired Peer Support, Long-Term — Hearth's Model",
   description:
-    "The whole peer-support category was built around drop-in chats and 12-week programs. Hearth is the opposite: paired with one Keeper, for the long term, on purpose.",
+    "Rotating volunteers and 12-week programs fail the slow, recurring weight of a life. Hearth pairs you with one Keeper for as long as it serves you. Here's the reasoning.",
+  alternates: { canonical: "/why-paired" },
+  openGraph: {
+    title: "Why paired, long-term peer support — Hearth",
+    description:
+      "Why continuity matters more than choice, and why a Keeper stays with you.",
+    url: "/why-paired",
+    type: "website",
+  },
 };
 
 const PAIRED_REASONS = [

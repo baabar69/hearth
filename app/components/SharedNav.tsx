@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { HearthCairn, HearthDrawnWordmark, HearthLockup } from "./HearthLogo";
 
 const NAV_LINKS = [
   { href: "/how-it-works", label: "How it works" },
@@ -23,9 +24,15 @@ export default function SharedNav() {
     <>
       <header className="nav">
         <div className="wrap nav-inner">
-          <Link href="/" className="brand">
-            <span className="brand-mark" />
-            <span className="brand-name">Hearth</span>
+          <Link href="/" className="brand" aria-label="Hearth — home">
+            <HearthLockup
+              size={26}
+              markRatio={1.4}
+              animated
+              intro
+              gapRatio={0.18}
+              wordmark="drawn"
+            />
           </Link>
           <nav className="nav-links">
             {NAV_LINKS.map((l) => (
@@ -80,8 +87,20 @@ export default function SharedNav() {
           }}
         >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 48 }}>
-            <Link href="/" onClick={() => setMobileOpen(false)} style={{ fontFamily: "var(--serif)", fontSize: 22, color: "var(--paper)", textDecoration: "none" }}>
-              Hearth
+            <Link
+              href="/"
+              onClick={() => setMobileOpen(false)}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                color: "var(--paper)",
+                textDecoration: "none",
+              }}
+              aria-label="Hearth — home"
+            >
+              <HearthCairn size={36} onDark animated />
+              <HearthDrawnWordmark height={26} color="#F2EDE5" />
             </Link>
             <button
               onClick={() => setMobileOpen(false)}
