@@ -125,11 +125,10 @@ const ORGANIZATION_LD = {
     "Identity and belonging",
     "Family dynamics",
   ],
-  // Empty sameAs is noisy. Populate as profiles are verified.
-  sameAs: [
-    "https://www.linkedin.com/company/dearhearth",
-    "https://twitter.com/dearhearth",
-  ],
+  // Only list profiles that actually resolve. A sameAs pointing at a 404 is a
+  // failed entity claim, not a neutral one — x.com/dearhearth was unclaimed and
+  // has been removed until it exists.
+  sameAs: ["https://www.linkedin.com/company/dearhearth"],
   contactPoint: [
     {
       "@type": "ContactPoint",

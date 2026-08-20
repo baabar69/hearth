@@ -36,6 +36,13 @@ export default function SharedFooter() {
             <Link href="/about">Our story</Link>
             <Link href="/stories">Stories</Link>
             <Link href="/press">Press</Link>
+            <a
+              href="https://www.linkedin.com/company/dearhearth"
+              target="_blank"
+              rel="me noopener noreferrer"
+            >
+              LinkedIn
+            </a>
             <Link href="/gift">Light a Hearth</Link>
             <Link href="/faq">Questions</Link>
             <Link href="/for-keepers">Become a Keeper</Link>
