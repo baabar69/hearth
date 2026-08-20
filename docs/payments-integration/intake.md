@@ -51,32 +51,44 @@ When a submission comes in:
 1. Server validates required fields (firstName, valid email, agreements)
 2. Strips/clamps long text fields (openContext, openNote → 2000 chars)
 3. Logs structured JSON event (always — works without email config)
-4. If `RESEND_API_KEY` is set:
+4. If `BREVO_API_KEY` is set:
    - Sends formatted notification email to `INTAKE_NOTIFY_EMAIL` (the founder)
    - Sends acknowledgement email to the applicant
 5. Returns `{ ok: true, sent: true/false }`
 
 ## Email provider
 
-Using **Resend** because:
-- Free tier: 100 emails/day (more than enough early)
-- Works without DNS setup via `onboarding@resend.dev` sender (rate-limited, but fine for dev)
-- API is one-line simple, code identical between dev and prod
-- Same SDK pattern as Whop — `new Resend(apiKey)`, no surprises
+Using **Brevo** (was Resend until 2026-08-20) because:
+- Free tier: 300 emails/day, shared with marketing campaigns
+- One account covers transactional, marketing, and the SMTP relay that lets
+  `hello@dearhearth.com` send through Gmail — no second vendor to authenticate
+- Plain `fetch` against `POST /v3/smtp/email`, no SDK dependency
 
-When you're ready to send from `intake@dearhearth.com`, verify the domain at https://resend.com/domains (adds 3 DNS records) and change `INTAKE_FROM_EMAIL`.
+The sender address must be validated in Brevo. Authenticate the whole domain at
+https://app.brevo.com/senders/domain (adds DKIM + DMARC records) so anything
+`@dearhearth.com` can send.
+
+**Watch out:** Brevo blocks API calls from unrecognised IPs. Netlify functions
+have dynamic IPs, so blocking must stay **deactivated** under Settings →
+Security → Authorized IPs, or production sends fail with `unauthorized`.
 
 ## Env vars
 
 | Variable | Required? | Purpose |
 |---|---|---|
-| `RESEND_API_KEY` | Optional in dev, required for emails | https://resend.com/api-keys |
+| `BREVO_API_KEY` | Optional in dev, required for emails | https://app.brevo.com → SMTP & API |
 | `INTAKE_NOTIFY_EMAIL` | Optional in dev, required for emails | Founder inbox where leads go |
-| `INTAKE_FROM_EMAIL` | Optional (defaults to `onboarding@resend.dev`) | Sender address |
+| `INTAKE_FROM_EMAIL` | Optional (defaults to `hello@dearhearth.com`) | Sender address, must be validated in Brevo |
+| `INTAKE_FROM_NAME` | Optional (defaults to `Hearth`) | Sender display name |
 
-**Graceful degradation:** without `RESEND_API_KEY`, the form still works — submissions are logged to the server console (Netlify function logs in prod, terminal in dev), and the user gets a successful confirmation. This way:
-- Dev works without any Resend setup
-- If Resend is down or misconfigured in prod, leads aren't lost — they're in your function logs
+**Graceful degradation:** without `BREVO_API_KEY`, the form still works — submissions are logged to the server console (Netlify function logs in prod, terminal in dev), and the user gets a successful confirmation. This way:
+- Dev works without any Brevo setup
+- If Brevo is down or misconfigured in prod, leads aren't lost — they're in your function logs
+
+**The cost of that degradation:** between May and August 2026 the production site
+had no email key set at all, so every submission in that window was logged and
+nobody was notified. Check function logs for that period before assuming there
+were no leads.
 
 ## Why no DB
 
@@ -84,7 +96,7 @@ Same reasoning as the payments side — Whop is source of truth for billing, fou
 
 ## What to do when a lead comes in
 
-1. You receive an email from `onboarding@resend.dev` with subject `New Hearth intake — <Name>`
+1. You receive an email from `hello@dearhearth.com` with subject `New Hearth intake — <Name>`
 2. Read their answers, paying attention to:
    - **Safety flag** (red banner at top if applicable — handle first)
    - Language preference (which Keeper can hold this conversation in their language?)
