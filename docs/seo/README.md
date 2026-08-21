@@ -67,6 +67,19 @@ Reachable targets, in order of realism:
 
 Full reasoning in `keyword-strategy.md`.
 
+## Fixed along the way
+
+**Soft 404s on every dynamic route** (2026-08-22, KAN-47). `/embers/<anything>`,
+`/keepers/<anything>` and `/for/<anything>` all returned HTTP 200 while rendering the
+404 page. The pages call `notFound()` correctly, but unknown slugs were rendered on
+demand and the streamed response had already committed a 200 by the time it fired.
+Google reads that as a soft 404 and crawls the unbounded invalid-URL space
+indefinitely. Fixed with `export const dynamicParams = false` on all three, since the
+set of essays, Keepers and topics is fully enumerated by `generateStaticParams`.
+
+Found while checking whether `/embers/feed.xml` was a real RSS feed. It was not —
+**the site has no feed at all**, which is a missed syndication path worth adding.
+
 ## Gotchas worth knowing
 
 - **The title template appends `· Hearth`.** That is 9 characters. Write page
