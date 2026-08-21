@@ -5,16 +5,22 @@ Last updated 2026-08-21.
 The problem in one line: searching "dearhearth" or "dear hearth" does not surface
 dearhearth.com. Only typing the full domain works, and that is navigation, not search.
 
-**Status 2026-08-21: 37 pages are indexed**, no manual actions. So this is not a
-crawling or discovery problem — Google has read the site. It is a ranking problem,
-which means authority and relevance, not technical SEO. See
-`search-console-findings.md`.
+**Status 2026-08-22.** 37 pages indexed, no manual actions, so this was never a
+crawling or discovery problem. The Performance data then showed something sharper: in
+3 months the site drew 203 impressions and 3 clicks at average position 31.4, and
+**every single query was about "hearth" the English noun** — fireplaces, hearth-keeping,
+two rival counselling practices. Zero impressions for peer support, therapy
+alternatives, or the brand name.
+
+Google has the site classified under the wrong topic. That is the problem to solve.
+See `keyword-strategy.md`.
 
 ## Documents here
 
 | File | What it covers |
 |---|---|
-| `search-console-findings.md` | The diagnosis, the evidence, and what has been ruled out |
+| `keyword-strategy.md` | What to target, what to ignore, and the content cluster |
+| `search-console-findings.md` | Indexing diagnosis, and what has been ruled out |
 | `link-building.md` | Off-page strategy, profile URLs, and the copy for each platform |
 
 Tracked in Jira under **KAN-7 — Search visibility**.
@@ -46,13 +52,20 @@ Do not chase the keyword **"hearth"**. It is a common English noun competing
 against Hearth & Hand with Magnolia, hearth.com, a fintech called Hearth, and the
 dictionary definition. Ranking there requires years of domain authority.
 
+Also do not chase `therapy`, `online therapy`, `betterhelp` or `mental health`. All
+are dominated by established brands with years of authority, and all are heavily
+filtered for health content.
+
 Reachable targets, in order of realism:
 
-1. `dearhearth`, `dear hearth` — should be #1 once indexed
-2. `hearth peer support`, `hearth keeper`
-3. Comparison and alternative queries — `peer support vs therapy`,
-   `BetterHelp alternative`. These carry buying intent and are where a new site
-   can genuinely compete.
+1. Long-tail informational — `what is peer support`, `someone to talk to who isn't a
+   therapist`, `grief support without therapy`
+2. `what is a hearth keeper` — we already get impressions for this and convert none
+   of them
+3. `dear hearth` — unique to us, but currently has no search demand at all, which is
+   a brand-awareness problem rather than an SEO one
+
+Full reasoning in `keyword-strategy.md`.
 
 ## Gotchas worth knowing
 
