@@ -310,7 +310,15 @@ export default function CantAffordTherapyPage() {
             >
               Therapists are asked this regularly and it does not offend them.
               The worst realistic outcome is a no and a referral, which still
-              moves you forward.
+              moves you forward. We wrote a{" "}
+              <Link
+                href="/learn/sliding-scale-therapy"
+                style={{ color: "var(--ember)" }}
+              >
+                full guide to asking
+              </Link>
+              , including phone and mid-treatment versions and what to do when
+              the answer is no.
             </p>
           </div>
         </div>
@@ -504,6 +512,12 @@ export default function CantAffordTherapyPage() {
               Keep reading
             </div>
             <div style={{ display: "grid", gap: 18, marginTop: 8 }}>
+              <Link
+                href="/learn/sliding-scale-therapy"
+                style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
+              >
+                Sliding scale therapy: how to ask &rarr;
+              </Link>
               <Link
                 href="/learn/how-much-does-therapy-cost"
                 style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}

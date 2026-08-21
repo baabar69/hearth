@@ -512,8 +512,11 @@ export default function HowMuchDoesTherapyCostPage() {
               }}
             >
               That does not make it affordable. It does mean the price is rarely
-              negotiable downward except through the routes built for it:
-              sliding scale, training clinics, community centres, Open Path. We
+              negotiable downward except through the routes built for it:{" "}
+              <Link href="/learn/sliding-scale-therapy" style={{ color: "var(--ember)" }}>
+                sliding scale
+              </Link>
+              , training clinics, community centres, Open Path. We
               wrote those up in{" "}
               <Link href="/learn/cant-afford-therapy" style={{ color: "var(--ember)" }}>
                 what to do when you cannot afford therapy

@@ -19,6 +19,7 @@ const ROUTES: Array<{ path: string; priority: number; lastmod: string }> = [
   { path: "/learn/do-i-need-therapy",    priority: 0.9, lastmod: "2026-08-22" },
   { path: "/learn/cant-afford-therapy",  priority: 0.9, lastmod: "2026-08-22" },
   { path: "/learn/how-much-does-therapy-cost", priority: 0.9, lastmod: "2026-08-22" },
+  { path: "/learn/sliding-scale-therapy", priority: 0.9, lastmod: "2026-08-22" },
 
   // Mid-funnel
   { path: "/about",                     priority: 0.7, lastmod: "2026-05-14" },
