@@ -197,8 +197,9 @@ export default function HowItWorks() {
                   maxWidth: "58ch",
                 }}
               >
-                If the match does not feel right in the first 30 days, tell
-                us and we rematch you. No questions, no extra charge. The pairing takes 72
+                If your first Sit with your Keeper does not feel right, tell
+                us and we assign you a different one. No questions, no extra
+                charge. The pairing takes 72
                 hours from your First Sit. If we can&rsquo;t find the right
                 fit in 72 hours, we keep looking and tell you why.
               </p>

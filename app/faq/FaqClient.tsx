@@ -69,11 +69,11 @@ const CATEGORIES: Category[] = [
       },
       {
         q: "What if my Keeper isn't the right fit?",
-        a: "You can switch in the first 30 days, no questions asked. After 30 days, switching is available but requires a brief conversation with our pairing team. We want the match to work. It is in everyone's interest. Most members find the first match is right; when it isn't, we take the rematch seriously.",
+        a: "After your first Sit, tell us. We assign you a different Keeper, no questions asked. We want the match to work. It is in everyone's interest. Most members find the first match is right; when it isn't, we take the rematch seriously.",
       },
       {
         q: "Can I switch Keepers?",
-        a: "Yes. In the first 30 days, one free switch is included. After that, you can request a switch at any time with a brief conversation with our team. We never penalize you for a mismatch.",
+        a: "Yes. If your first Sit does not feel right, ask and we assign you a different Keeper at no charge. You can request a change later as well. We never penalize you for a mismatch.",
       },
       {
         q: "How are Keepers paid?",

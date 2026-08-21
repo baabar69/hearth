@@ -26,7 +26,7 @@ const PROOF = [
   { n: "120 hrs", t: "of training before a Keeper ever meets a member." },
   { n: "Under 8%", t: "of Keeper applicants are accepted." },
   { n: "$39", t: "a month. Less than a single private therapy session almost anywhere." },
-  { n: "30 days", t: "to switch Keepers free. Cancel any time, in one click." },
+  { n: "1 Sit", t: "is all it takes to ask for a different Keeper. Cancel any time, in one click." },
 ];
 
 const COMPARE = [
@@ -38,7 +38,7 @@ const COMPARE = [
   {
     label: "The same person, for years",
     bh: "Not promised. You can be reassigned, and many people switch more than once.",
-    us: "Yes. It is the whole design. If the fit is wrong, switch free in the first 30 days.",
+    us: "Yes. It is the whole design. If your first Sit is not the right fit, ask and we assign someone else.",
   },
   {
     label: "Price per month",
@@ -99,7 +99,7 @@ const HOME_FAQ = [
   },
   {
     q: "What if my Keeper is not the right fit?",
-    a: "Switch free in the first 30 days, no questions asked. After that you can still request a switch at any time.",
+    a: "After your first Sit with your Keeper, if it does not feel right, ask and we assign you a different Keeper. No questions asked. You can request a change later too.",
   },
   {
     q: "Is it confidential?",
@@ -542,7 +542,7 @@ export default function Home() {
                 </span>
                 <span>
                   <span className="dot" />
-                  Switch Keepers free in the first 30 days
+                  Ask for a different Keeper after your first Sit
                 </span>
                 <span>
                   <span className="dot" />
@@ -1018,11 +1018,11 @@ export default function Home() {
                 <div className="kpoint">
                   <span className="num">03</span>
                   <div>
-                    <h4>Matched by hand. Switch free.</h4>
+                    <h4>Matched by hand. Changed on request.</h4>
                     <p>
                       A person at Hearth pairs you by language, lived context,
-                      and the themes you carry. Not the right fit? Switch free
-                      in the first 30 days.
+                      and the themes you carry. Not the right fit after your
+                      first Sit? Ask and we assign someone else.
                     </p>
                   </div>
                 </div>
@@ -1106,7 +1106,7 @@ export default function Home() {
                 <li>Chat thread in between, replies within a day</li>
                 <li>A note from your Keeper every Friday</li>
                 <li>One small-group session a month (we call it a Circle)</li>
-                <li>Matched within 72 hours, switch free in the first 30 days</li>
+                <li>Matched within 72 hours. Not the right fit after your first Sit? Ask and we reassign you</li>
               </ul>
               <Link
                 href={HEARTHSIDE_CHECKOUT_PATH}

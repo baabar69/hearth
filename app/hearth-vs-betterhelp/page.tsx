@@ -39,7 +39,7 @@ const COMPARISON = [
   {
     label: "Continuity",
     bh: "You can be matched to a different therapist if the fit is wrong. Many people do switch, sometimes more than once.",
-    hearth: "The same person, for as long as you stay. Switching is free in the first 30 days, then rare by design.",
+    hearth: "The same person, for as long as you stay. If your first Sit is not the right fit, ask and we assign someone else. After that, switching is rare by design.",
   },
   {
     label: "Cost",
