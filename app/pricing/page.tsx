@@ -16,7 +16,7 @@ import {
 export const metadata = {
   title: "Hearth Pricing: $39/mo Peer Support, $99/mo Weekly Sits",
   description:
-    "Hearthside is $39/month (biweekly Sits). Hearth Deep is $99/month (weekly Sits). 60% goes to your Keeper. Cancel any time in one click.",
+    "Hearthside is $39/month (biweekly Sits). Hearth Deep is $99/month (weekly Sits). Cancel any time in one click.",
   alternates: { canonical: "/pricing" },
   openGraph: {
     title: "Hearth Pricing: $39/mo or $99/mo",
@@ -57,7 +57,7 @@ const FAQ = [
   },
   {
     q: "Why does it cost what it costs?",
-    a: "60% of what you pay goes directly to your Keeper. The rest covers platform, infrastructure, Keeper training, and supervision. We don't underpay our Keepers to offer a cheaper product. That model produces burned-out, poorly-trained people. Hand-matched, well-trained, paid-fairly support has a cost, and we think that cost is worth paying.",
+    a: "Most of what you pay goes directly to your Keeper. The rest covers platform, infrastructure, Keeper training, and supervision. We don't underpay our Keepers to offer a cheaper product. That model produces burned-out, poorly-trained people. Hand-matched, well-trained, paid-fairly support has a cost, and we think that cost is worth paying.",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function PricingPage() {
               path: "/pricing",
               name: "Pricing · Hearth",
               description:
-                "Hearth pricing: $39/month Hearthside (biweekly Sits) or $99/month Hearth Deep (weekly Sits). 60% goes to your Keeper.",
+                "Hearth pricing: $39/month Hearthside (biweekly Sits) or $99/month Hearth Deep (weekly Sits). Cancel any time.",
               lastReviewed: "2026-05-14",
             }),
             breadcrumbLd([
@@ -511,7 +511,7 @@ export default function PricingPage() {
                 Why we cost what we cost
               </div>
               <h2 style={{ fontSize: "clamp(28px, 3vw, 44px)" }}>
-                60% goes to your Keeper.
+                Most of it goes to your Keeper.
               </h2>
             </div>
             <div

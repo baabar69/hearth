@@ -25,7 +25,7 @@ const PROOF = [
   { n: "72 hrs", t: "to be matched with your Keeper. By a person, not an algorithm." },
   { n: "120 hrs", t: "of training before a Keeper ever meets a member." },
   { n: "Under 8%", t: "of Keeper applicants are accepted." },
-  { n: "60%", t: "of every membership fee goes to your Keeper." },
+  { n: "$39", t: "a month. Less than a single private therapy session almost anywhere." },
   { n: "30 days", t: "to switch Keepers free. Cancel any time, in one click." },
 ];
 
@@ -91,7 +91,7 @@ const HOME_FAQ = [
   },
   {
     q: "Who are the Keepers?",
-    a: "Trained, vetted, paid peer supporters. Each completes 120 hours of Hearth training in listening, sensitivity, scope and crisis protocol, passes a background check and joins monthly supervision. Fewer than 8% of applicants are accepted. They receive 60% of every membership fee.",
+    a: "Trained, vetted, paid peer supporters. Each completes 120 hours of Hearth training in listening, sensitivity, scope and crisis protocol, passes a background check and joins monthly supervision. Fewer than 8% of applicants are accepted. They are paid from every membership fee, biweekly in USD.",
   },
   {
     q: "What does it cost?",

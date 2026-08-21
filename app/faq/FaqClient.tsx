@@ -77,7 +77,7 @@ const CATEGORIES: Category[] = [
       },
       {
         q: "How are Keepers paid?",
-        a: "Keepers receive 60% of what you pay each month. They are paid biweekly in USD. This is a meaningful living, not a side gig. We believe the quality of Hearth depends entirely on whether Keepers are treated as professionals, so we pay them as professionals.",
+        a: "Keepers are paid from membership fees, biweekly in USD, at rates that rise with seniority and member retention. This is a meaningful living, not a side gig. We believe the quality of Hearth depends entirely on whether Keepers are treated as professionals, so we pay them as professionals.",
       },
     ],
   },

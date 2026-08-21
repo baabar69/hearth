@@ -284,8 +284,8 @@ export default function ForKeepersPage() {
                   color: "#D8C8AA",
                 }}
               >
-                60% of every membership fee goes directly to the Keeper.
-                Keepers are paid biweekly in USD via direct deposit. Pay
+                Keepers are paid from every membership fee, biweekly in
+                USD via direct deposit. Pay
                 increases with seniority, member retention, and peer
                 review. This is meaningful work and meaningful pay. Not
                 a side gig, not a volunteer program.

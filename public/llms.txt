@@ -24,7 +24,7 @@ Hearth is a one-to-one peer-support subscription. Each member is hand-matched wi
 - Not insurance-billable. Hearth does not bill insurance and does not use clinical CPT codes. FSA/HSA compatibility is in progress.
 
 ## Who Keepers are
-Keepers are trained peer supporters, not licensed therapists. Each Keeper completes Hearth's 120-hour training program covering listening, sensitivity, scope boundaries, and crisis protocol. Fewer than 8% of Keeper applicants are accepted. Keepers participate in monthly peer supervision and are paid 60% of every membership fee. Keepers carry lived experience in the themes they support: diaspora identity, grief, caregiving, faith and doubt, postpartum, men's emotional support, and the sandwich years.
+Keepers are trained peer supporters, not licensed therapists. Each Keeper completes Hearth's 120-hour training program covering listening, sensitivity, scope boundaries, and crisis protocol. Fewer than 8% of Keeper applicants are accepted. Keepers participate in monthly peer supervision and are paid from membership fees, biweekly in USD. Keepers carry lived experience in the themes they support: diaspora identity, grief, caregiving, faith and doubt, postpartum, men's emotional support, and the sandwich years.
 
 ## Pricing in detail
 - **Hearthside ($39/month or $390/year)**: Matched Keeper, biweekly Sits, unlimited Long Talk (24-hour response), Friday reflections, Embers library, 1 Circle/month, Bridge referral access.

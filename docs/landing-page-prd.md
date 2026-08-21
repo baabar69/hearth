@@ -482,7 +482,7 @@ A clean table with rows for: Matched Keeper, Sits per month, Sit frequency, Long
 
 > A Keeper at Hearth is paid fairly for their time and skill. We don't undercut on price by underpaying providers. We're not the cheapest option — and we're not trying to be. We're the most relationally rich service for the price.
 >
-> About 60% of what you pay goes directly to your Keeper. The rest covers the platform, the Bridge clinical safety net, and the people who match you well.
+> Most of what you pay goes directly to your Keeper. The rest covers the platform, the Bridge clinical safety net, and the people who match you well.
 
 **Pricing FAQ (10 questions, accordion)**
 - What does "billed monthly" actually mean?

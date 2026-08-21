@@ -86,8 +86,8 @@ Hearth is a peer-support membership for adults carrying grief, family
 pressure, identity questions, caregiving, and the ordinary weight of being
 a person.
 
-Every member is hand-matched within 72 hours to a Keeper — a trained, paid
-peer companion, not a licensed therapist — and stays with that same Keeper
+Every member is hand-matched within 72 hours to a Keeper, a trained, paid
+peer companion rather than a licensed therapist, and stays with that same Keeper
 for as long as the relationship serves them. Continuity is the whole point.
 Most support products rotate you through a pool of interchangeable providers
 and call it choice. We think being known over time is what actually helps.
@@ -98,13 +98,13 @@ Friday Reflections (a short written check-in each week), and Circles (small,
 time-bound cohort groups).
 
 Hearth is deliberately not therapy. It occupies the space between calling a
-friend and booking a clinician — where most of the demand for emotional
-support actually sits, and where almost nothing is built. When a member needs
+friend and booking a clinician, where most of the demand for emotional
+support actually sits and where almost nothing is built. When a member needs
 clinical care, their Keeper makes a warm handoff through The Bridge, our
 vetted referral network of licensed therapists, and stays in the relationship
 throughout.
 
-60% of every subscription goes directly to the Keeper. We don't underpay
+Keepers are paid properly, from every subscription. We don't underpay
 companions to sell a cheaper product; that model produces burnout and churn.
 
 Hearthside is $39/month (biweekly Sits). Hearth Deep is $99/month (weekly
