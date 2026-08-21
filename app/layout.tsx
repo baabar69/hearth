@@ -128,7 +128,10 @@ const ORGANIZATION_LD = {
   // Only list profiles that actually resolve. A sameAs pointing at a 404 is a
   // failed entity claim, not a neutral one — x.com/dearhearth was unclaimed and
   // has been removed until it exists.
-  sameAs: ["https://www.linkedin.com/company/dearhearth"],
+  sameAs: [
+    "https://www.linkedin.com/company/dearhearth",
+    "https://www.crunchbase.com/organization/hearth-94b4",
+  ],
   contactPoint: [
     {
       "@type": "ContactPoint",

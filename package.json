@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postbuild": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@whop/checkout": "^0.0.54",
