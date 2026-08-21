@@ -2,6 +2,82 @@
 
 Chronological record of the Whop payments integration. Newest entries at the top.
 
+## 2026-08-21 — SEO groundwork and Search Console diagnosis
+
+Full write-up in `docs/seo/`. Tracked in Jira under KAN-7.
+
+Diagnosis: on-page SEO is not the bottleneck, inbound links are. Both Google and
+Bing independently report the same thing. Verified clean: robots.txt, canonicals,
+33-URL sitemap all returning 200, every internal link resolving, no deleted routes,
+no spam history on the domain, homepage server-rendered with 2,595 words.
+
+Shipped:
+
+- **`og-image.png` created.** It had never existed, despite being referenced three
+  times in the metadata and as the Organization schema's `image`. Every shared link
+  rendered a broken preview card. Built from the cairn and wordmark SVGs at 2x.
+- **Five pages had no metadata at all** — `/faq`, `/embers`, `/gift`, `/for-keepers`,
+  `/for-therapists` were client components, and Next only supports the `metadata`
+  export in Server Components. They silently inherited the homepage title, so five
+  pages competed on identical titles. Each split into a server `page.tsx` plus a
+  `*Client.tsx`, per the pattern in `next/dist/docs/.../generate-metadata.md`.
+- **Titles trimmed** to 45-51 characters. The root layout appends `· Hearth`, which
+  had pushed four of them past Google's display limit.
+- **WebPage + BreadcrumbList schema** added to `/how-it-works`, `/hearth-vs-therapy`,
+  `/why-paired`, `/about`, `/keepers`. Only 5 of ~29 pages had page-level schema.
+- **`sameAs` corrected.** It claimed `x.com/dearhearth`, which 404s — a failed entity
+  claim, not a neutral one. Removed. LinkedIn now resolves and Crunchbase was added.
+- **LinkedIn linked from the footer** with `rel="me"`, giving bidirectional entity
+  confirmation once the Page links back.
+- **IndexNow automated** via a `postbuild` hook (`scripts/indexnow.mjs`). Reads the
+  key from `public/`, pulls every `<loc>` from the live sitemap, posts to
+  api.indexnow.org. Guarded on Netlify's `CONTEXT` so previews and local builds never
+  submit. Reaches Bing, Yandex, Seznam and Naver — not Google, but Bing's index is
+  what ChatGPT search and DuckDuckGo read from.
+- **Nine raw `<a>` tags** pointing at internal routes converted to `next/link` across
+  7 files, including the primary "Pull up a chair" CTA. They were forcing full page
+  reloads.
+
+## 2026-08-20 — Email moved off Zoho to Brevo + ImprovMX
+
+Full detail in `docs/payments-integration/intake.md`. Tracked as KAN-10.
+
+**Found in the process:** production had no email key set at all between May and
+August 2026. `RESEND_API_KEY`, `INTAKE_NOTIFY_EMAIL` and `INTAKE_FROM_EMAIL` were
+absent from Netlify. The intake route degrades gracefully by design, so every
+submission in that window was logged, returned success to the applicant, and notified
+nobody. Lead recovery is tracked as KAN-18.
+
+Also worth recording: the Netlify MCP server reported "Environment variable upserted"
+for three variables it never created. Caught only because a live intake test returned
+`sent: false`. Set them through the Netlify REST API instead. Note the free plan
+rejects scoped or secret-flagged variables with a 403.
+
+Architecture now:
+
+- **Brevo** — transactional (intake) plus marketing plus the SMTP relay for Gmail
+  send-as. Free tier 300 emails/day. Replaced Resend; `app/api/intake/route.ts` calls
+  `POST /v3/smtp/email` with plain fetch, no SDK.
+- **ImprovMX** — inbound forwarding only. Free tier: 1 domain, 25 aliases, 500
+  forwards/day. `hello@` plus a catch-all reach the founder's Gmail.
+- **Zoho** — retired.
+
+DNS: 6 Zoho records removed, 7 added (2 MX, SPF, 2 Brevo DKIM CNAMEs, brevo-code,
+DMARC at `p=none`). All verified passing by both providers.
+
+Two gotchas that will bite whoever touches this next:
+
+- Brevo blocks unrecognised IPs. Netlify functions get a different IP per
+  invocation, so "block unknown IP addresses" must stay deactivated for both API and
+  SMTP keys, or production email dies silently.
+- Brevo's SMTP login is not the account email. It is `b620d2001@smtp-brevo.com`,
+  readable from `GET /v3/account` under `relay.data.userName`.
+
+One delivery incident, diagnosed and benign: a message sent 30 minutes before the MX
+cutover arrived 30 minutes *after* a later one. The sender's mail server still had
+Zoho's MX cached and retried until the TTL expired. ImprovMX forwarded both in 3
+seconds. One-time propagation effect, not a fault.
+
 ## 2026-05-13 — Positioning rebalance (diaspora is *included*, not exclusive)
 
 Refinement on top of today's earlier broadening pass. The principle: "diaspora can still be part of us, but not exclusively for diaspora." Concrete restores:
