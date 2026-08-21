@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GiftClient from "./GiftClient";
 
 export const metadata: Metadata = {
-  title: "Gift Hearth — Give Someone Long-Term Peer Support",
+  title: "Gift a Membership — Long-Term Peer Support",
   description:
     "Give a month or a year of Hearth. They are matched with their own Keeper within 72 hours. No awkward reveal, no expiry pressure.",
   alternates: { canonical: "/gift" },

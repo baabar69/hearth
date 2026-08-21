@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import FaqClient from "./FaqClient";
 
 export const metadata: Metadata = {
-  title: "Hearth FAQ — How Peer Support Works, Answered Plainly",
+  title: "Peer Support FAQ — Matching, Sits, Pricing",
   description:
     "How matching works, what a Sit is, how Hearth differs from therapy, what it costs, and how to cancel. Answered plainly, without hedging.",
   alternates: { canonical: "/faq" },
