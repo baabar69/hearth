@@ -8,6 +8,108 @@ import {
   HEARTHSIDE_CHECKOUT_PATH,
   HEARTH_DEEP_CHECKOUT_PATH,
 } from "./lib/checkout";
+import { jsonLd, faqLd } from "./lib/schema";
+
+const HERO_PICKS = [
+  { id: "family", label: "Family pressure" },
+  { id: "grief", label: "Grief or loss" },
+  { id: "career", label: "Career & direction" },
+  { id: "loneliness", label: "Loneliness" },
+  { id: "parenting", label: "Parenting" },
+  { id: "anxiety", label: "Anxiety or overwhelm" },
+  { id: "transition", label: "A big life change" },
+  { id: "other", label: "Something else" },
+];
+
+const PROOF = [
+  { n: "72 hrs", t: "to be matched with your Keeper. By a person, not an algorithm." },
+  { n: "120 hrs", t: "of training before a Keeper ever meets a member." },
+  { n: "Under 8%", t: "of Keeper applicants are accepted." },
+  { n: "60%", t: "of every membership fee goes to your Keeper." },
+  { n: "30 days", t: "to switch Keepers free. Cancel any time, in one click." },
+];
+
+const COMPARE = [
+  {
+    label: "Who you talk to",
+    bh: "A licensed therapist, assigned by questionnaire and availability.",
+    us: "A trained Keeper, chosen for you by a person who read what you wrote.",
+  },
+  {
+    label: "The same person, for years",
+    bh: "Not promised. You can be reassigned, and many people switch more than once.",
+    us: "Yes. It is the whole design. If the fit is wrong, switch free in the first 30 days.",
+  },
+  {
+    label: "Price per month",
+    bh: "About $280 to $400, per BetterHelp's own FAQ (August 2026).",
+    us: "$39 for a call every two weeks. $99 for every week.",
+  },
+  {
+    label: "Between sessions",
+    bh: "Messaging, answered when your therapist is next available.",
+    us: "A chat thread answered within a day, and a written note from your Keeper every Friday.",
+  },
+  {
+    label: "Can treat a condition",
+    bh: "Yes. It is licensed therapy.",
+    us: "No. Peer support, with help finding a therapist through The Bridge when you need one.",
+  },
+  {
+    label: "Time to start",
+    bh: "Often within 48 hours.",
+    us: "Within 72 hours, matched by hand.",
+  },
+];
+
+const VOICES = [
+  {
+    q: "I've been holding everyone for years. My mother. My kids. My husband's grief. The first Sit I cried for forty minutes. Aruna didn't try to stop me. She just stayed.",
+    who: "Sara, 47",
+    meta: "Caregiving · 10 months in",
+  },
+  {
+    q: "My grandmother died two years ago. I never grieved out loud. There wasn't space for it. Aruna made the space. We talk about her every week.",
+    who: "Devika, 38",
+    meta: "Grief · 1 year in",
+  },
+  {
+    q: "I quit the job my parents wanted. I didn't tell them for six weeks. Faisal sat with me through that silence. Not a therapist. Just someone who'd done a version of this himself.",
+    who: "Hassan, 29",
+    meta: "Career · 1 year in",
+  },
+];
+
+const HOME_FAQ = [
+  {
+    q: "Is Hearth therapy?",
+    a: "No. Hearth is peer support: a trained Keeper who is not a clinician, for the recurring weight of ordinary life. Keepers do not diagnose, treat or prescribe. If what you describe needs a therapist, your Keeper says so and helps you find a vetted one through The Bridge.",
+  },
+  {
+    q: "How is Hearth different from BetterHelp?",
+    a: "BetterHelp is online therapy with licensed professionals, at roughly $280 to $400 a month, and you can be reassigned to a different therapist. Hearth is one trained Keeper, matched to you by hand, who stays for years, at $39 a month. If you need treatment, choose therapy. If you need someone who knows your whole story and stays, that is Hearth.",
+  },
+  {
+    q: "Who are the Keepers?",
+    a: "Trained, vetted, paid peer supporters. Each completes 120 hours of Hearth training in listening, sensitivity, scope and crisis protocol, passes a background check and joins monthly supervision. Fewer than 8% of applicants are accepted. They receive 60% of every membership fee.",
+  },
+  {
+    q: "What does it cost?",
+    a: "$39 a month for a 35 to 60 minute call every two weeks, the chat thread, and the Friday note. $99 a month for a call every week. No per-session billing, no upsells. Cancel any time in one click and keep access to the end of the period you paid for.",
+  },
+  {
+    q: "What if my Keeper is not the right fit?",
+    a: "Switch free in the first 30 days, no questions asked. After that you can still request a switch at any time.",
+  },
+  {
+    q: "Is it confidential?",
+    a: "Yes. Calls and messages are encrypted. Hearth is not a medical record and nothing is shared with employers or insurers. You can export or delete your data at any time.",
+  },
+  {
+    q: "What happens after I click start?",
+    a: "A 12-minute intake about what you are carrying and how you like to talk. Within 72 hours a person at Hearth matches you with a Keeper. Your first call goes on the calendar. No payment is taken until you are matched and choose a plan.",
+  },
+];
 
 function RevealOnScroll() {
   useEffect(() => {
@@ -29,10 +131,10 @@ function RevealOnScroll() {
 }
 
 const HERO_SCENES = [
-  { day: "Mon", label: "Paired", tone: "light" },
-  { day: "Wed", label: "Long Talk", tone: "light" },
-  { day: "Fri", label: "Reflection", tone: "light" },
-  { day: "Sun", label: "The Sit", tone: "dark" },
+  { day: "Mon", label: "Matched", tone: "light" },
+  { day: "Wed", label: "Chat", tone: "light" },
+  { day: "Fri", label: "Friday note", tone: "light" },
+  { day: "Sun", label: "Video call", tone: "dark" },
 ] as const;
 const HERO_SCENE_MS = 6000;
 
@@ -395,7 +497,7 @@ export default function Home() {
             <div>
               <div className="eyebrow">
                 <span className="dot" />
-                Long-term peer support &middot; From $39 a month
+                A trained listener, matched to you &middot; From $39 a month
               </div>
               <h1 style={{ marginTop: 24 }}>
                 Pull up a chair.
@@ -405,19 +507,32 @@ export default function Home() {
                 to <span className="ember-word">carry it alone.</span>
               </h1>
               <p className="hero-sub">
-                <b>Someone who knows your whole story. And stays.</b> A trained
-                listener, hand-matched to you and kept for years: a video call
-                every two weeks, a chat thread in between, and a note from them
-                every Friday. Not therapy. Not a chatbot. Not a different
-                counsellor every month.
+                <b>Relief, comfort, and someone who stays.</b> One trained
+                Keeper, matched to you by hand: a video call every two weeks,
+                a chat thread in between, and a note every Friday. For the
+                weight that is not a diagnosis. $39 a month, cancel any time.
               </p>
+              <div className="hero-pick">
+                <div className="hero-pick-label">What are you carrying?</div>
+                <div className="hero-pick-row">
+                  {HERO_PICKS.map((t) => (
+                    <Link
+                      key={t.id}
+                      href={`/intake?topic=${t.id}`}
+                      className="pick"
+                    >
+                      {t.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               <div className="hero-cta">
                 <Link href="/intake" className="btn btn-primary btn-lg">
                   Start the 12-minute intake{" "}
                   <span className="arr">&rarr;</span>
                 </Link>
-                <a href="#keepers" className="btn btn-ghost btn-lg">
-                  Meet the Keepers
+                <a href="#compare" className="btn btn-ghost btn-lg">
+                  Compare with BetterHelp
                 </a>
               </div>
               <div className="hero-tag">
@@ -441,24 +556,65 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Positioning rail */}
-          <div className="gap-line">
-            <span>
-              <span className="pip" /> Calling a friend
-            </span>
-            <span className="rule" />
-            <span className="center">
-              Hearth lives in the space between
-            </span>
-            <span className="rule" />
-            <span>
-              Seeing a therapist{" "}
-              <span
-                className="pip"
-                style={{ marginLeft: 8, background: "var(--ember)" }}
-              />
-            </span>
+          {/* Proof strip */}
+          <div className="proof reveal">
+            {PROOF.map((x) => (
+              <div key={x.n} className="proof-item">
+                <div className="proof-n">{x.n}</div>
+                <div className="proof-t">{x.t}</div>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* WHAT CHANGES */}
+      <section className="change" id="what-changes">
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <div>
+              <div className="eyebrow">
+                <span className="dot" />
+                What you get out of it
+              </div>
+              <h2 style={{ marginTop: 18 }}>
+                Relief, comfort, and{" "}
+                <span className="serif-i" style={{ color: "var(--ember)" }}>
+                  a steadier week.
+                </span>
+              </h2>
+            </div>
+            <p className="lede">
+              Most people carry the hard things alone, in pieces, with nobody
+              who has the whole picture. A Keeper does. Here is what members
+              say changes, usually within the first few months.
+            </p>
+          </div>
+
+          <div className="change-grid reveal">
+            <div className="change-col">
+              <div className="change-label">Before</div>
+              <ul>
+                <li>You rehearse a difficult phone call for days and still say the wrong thing.</li>
+                <li>You are the person everyone leans on. Nobody asks how you are.</li>
+                <li>You have told the story so many times, in pieces, that nobody has all of it.</li>
+                <li>You keep a brave face on, and go home exhausted from it.</li>
+              </ul>
+            </div>
+            <div className="change-col is-after">
+              <div className="change-label">After a few months with a Keeper</div>
+              <ul>
+                <li><b>Relief.</b> One person has the whole story, so you stop explaining and say the true thing.</li>
+                <li><b>Comfort you can count on.</b> Every two weeks there is a call in the calendar, whatever the week did.</li>
+                <li><b>Feeling heard.</b> Your Keeper notices what you did not say, and tells you gently on a Friday.</li>
+                <li><b>A steadier week.</b> There is somewhere to put things, so they stop leaking into everything else.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p className="change-close reveal">
+            That is what you are paying for: relief that lasts, from a person who <em>stays.</em>
+          </p>
         </div>
       </section>
 
@@ -472,48 +628,48 @@ export default function Home() {
                 What you get
               </div>
               <h2 style={{ marginTop: 18 }}>
-                One person, yours.{" "}
+                What your membership includes,{" "}
                 <span className="serif-i" style={{ color: "var(--ember)" }}>
-                  Here&rsquo;s what that means.
+                  every month.
                 </span>
               </h2>
             </div>
             <p className="lede">
-              No streaks, no badges, no app telling you how to feel. A
-              Keeper is a person who knows your story, on a schedule you can
-              count on. Three things, every time.
+              No streaks, no badges, no app telling you how to feel. One
+              person who knows your story, on a schedule you can count on.
+              Three things, every time.
             </p>
           </div>
 
           <div className="steps three reveal">
             <div className="step">
-              <div className="num">THE SIT &middot; 35&ndash;60 MIN</div>
+              <div className="num">WE CALL IT THE SIT</div>
               <div className="glyph">&#9004;</div>
               <h3>A video call every two weeks</h3>
               <p>
-                Thirty-five to sixty minutes with your Keeper, on video or just
-                audio. Same person, same time, every two weeks. Every week on
-                the $99 plan.
+                Thirty-five to sixty minutes, on video or just audio, with the
+                same person every time. One hour where you do not have to
+                perform. Every week on the $99 plan.
               </p>
             </div>
             <div className="step">
-              <div className="num">THE LONG TALK &middot; CHAT</div>
+              <div className="num">WE CALL IT THE LONG TALK</div>
               <div className="glyph">&#8767;</div>
               <h3>A chat thread in between</h3>
               <p>
                 Text, voice notes, photos, whenever something comes up. Your
-                Keeper replies within a day. Slow on purpose: a thread, not a
-                feed.
+                Keeper replies within a day. The thing that happens on Tuesday
+                does not have to wait two weeks.
               </p>
             </div>
             <div className="step">
-              <div className="num">FRIDAY REFLECTION &middot; NOTE</div>
+              <div className="num">THE FRIDAY NOTE</div>
               <div className="glyph">&#10038;</div>
               <h3>A note from them every Friday</h3>
               <p>
                 A few lines from your Keeper each Friday: what they noticed
-                this week, what stayed with them. Small, specific, yours to
-                keep.
+                this week, what stayed with them. Proof, every week, that
+                someone is paying attention.
               </p>
             </div>
           </div>
@@ -541,6 +697,132 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HEARTH VS BETTERHELP */}
+      <section className="compare" id="compare">
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <div>
+              <div className="eyebrow">
+                <span className="dot" />
+                Hearth vs. BetterHelp
+              </div>
+              <h2 style={{ marginTop: 18 }}>
+                Therapy apps rent you a counsellor.{" "}
+                <span className="serif-i" style={{ color: "var(--ember)" }}>
+                  Hearth gives you a person who stays.
+                </span>
+              </h2>
+            </div>
+            <p className="lede">
+              BetterHelp is good at what it sells: licensed therapy, fast. It
+              was never built for the years-long relationship most of the
+              weight in a life needs. That is the gap we built for. Their
+              details are from their own FAQ, August 2026.
+            </p>
+          </div>
+
+          <div className="cmp reveal">
+            <div className="cmp-head">
+              <div>What</div>
+              <div>BetterHelp</div>
+              <div className="cmp-us">Hearth</div>
+            </div>
+            {COMPARE.map((row) => (
+              <div key={row.label} className="cmp-row">
+                <div className="cmp-label">{row.label}</div>
+                <div className="cmp-bh">{row.bh}</div>
+                <div className="cmp-us">{row.us}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="cmp-verdict reveal">
+            <p>
+              If you need treatment, choose therapy; BetterHelp is a fair way to
+              get it. If what you need is a trained person who knows your whole
+              story and stays, that is what we build. At about a seventh of the
+              price.
+            </p>
+            <Link href="/hearth-vs-betterhelp" className="btn btn-ghost">
+              The full comparison, with alternatives{" "}
+              <span className="arr">&rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* THE SPACE BETWEEN */}
+      <section className="between" id="between">
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <div>
+              <div className="eyebrow">
+                <span className="dot" />
+                So what is a Keeper, exactly?
+              </div>
+              <h2 style={{ marginTop: 18 }}>
+                There&rsquo;s a{" "}
+                <span className="serif-i" style={{ color: "var(--ember)" }}>
+                  whole life
+                </span>{" "}
+                between a friend and a therapist. Hearth lives there.
+              </h2>
+            </div>
+            <p className="lede">
+              Friends mean well, but they get tired. Therapists are for
+              clinical things, and priced like it. A Keeper is the third thing
+              (older, attentive, consistent) that most of us no longer have.
+              Hearth is peer support, not therapy. We say it plainly because
+              the difference is the point.
+            </p>
+          </div>
+
+          <div className="between-grid reveal">
+            <div className="bcell">
+              <div>
+                <div className="label">A friend</div>
+                <h3>Loves you, also has their own week.</h3>
+                <p>
+                  Inconsistent attention. Will project. Doesn&rsquo;t know how
+                  to hold a long story without trying to fix it.
+                </p>
+              </div>
+              <div className="role">
+                <span className="pip" /> What you already have
+              </div>
+            </div>
+            <div className="bcell is-hearth">
+              <div>
+                <div className="label">A Keeper</div>
+                <h3>
+                  Trained, consistent, matched by hand. Yours, for years.
+                </h3>
+                <p>
+                  One person. Same chair, every call. Lets your sentence
+                  finish. Notices the patterns you can&rsquo;t see yet.
+                </p>
+              </div>
+              <div className="role">
+                <span className="pip" /> What Hearth gives you
+              </div>
+            </div>
+            <div className="bcell">
+              <div>
+                <div className="label">A therapist</div>
+                <h3>Clinical care for clinical things.</h3>
+                <p>
+                  Diagnoses, treats, prescribes. Right tool for some things.
+                  Wrong tool for the everyday weight.
+                </p>
+              </div>
+              <div className="role">
+                <span className="pip" /> We help you find one, if you need one
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* IS THIS FOR YOU */}
       <section className="bring" id="bring">
         <div className="wrap">
@@ -551,9 +833,9 @@ export default function Home() {
                 Is this for you?
               </div>
               <h2 style={{ marginTop: 18 }}>
-                The weight that doesn&rsquo;t fit{" "}
+                For the things you carry{" "}
                 <span className="serif-i" style={{ color: "var(--ember)" }}>
-                  anywhere else.
+                  every week.
                 </span>
               </h2>
             </div>
@@ -627,78 +909,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* THE SPACE BETWEEN */}
-      <section className="between" id="between">
-        <div className="wrap">
-          <div className="sec-head reveal">
-            <div>
-              <div className="eyebrow">
-                <span className="dot" />
-                Not a friend. Not a therapist.
-              </div>
-              <h2 style={{ marginTop: 18 }}>
-                There&rsquo;s a{" "}
-                <span className="serif-i" style={{ color: "var(--ember)" }}>
-                  whole life
-                </span>{" "}
-                between a friend and a therapist. Hearth lives there.
-              </h2>
-            </div>
-            <p className="lede">
-              Friends mean well, but they get tired. Therapists are for
-              clinical things, and priced like it. A Keeper is the third thing
-              (older, attentive, consistent) that most of us no longer have.
-              Hearth is peer support, not therapy. We say it plainly because
-              the difference is the point.
-            </p>
-          </div>
-
-          <div className="between-grid reveal">
-            <div className="bcell">
-              <div>
-                <div className="label">A friend</div>
-                <h3>Loves you, also has their own week.</h3>
-                <p>
-                  Inconsistent attention. Will project. Doesn&rsquo;t know how
-                  to hold a long story without trying to fix it.
-                </p>
-              </div>
-              <div className="role">
-                <span className="pip" /> What you already have
-              </div>
-            </div>
-            <div className="bcell is-hearth">
-              <div>
-                <div className="label">A Keeper</div>
-                <h3>
-                  Trained, consistent, matched by hand. Yours, for years.
-                </h3>
-                <p>
-                  One person. Same chair, every call. Lets your sentence
-                  finish. Notices the patterns you can&rsquo;t see yet.
-                </p>
-              </div>
-              <div className="role">
-                <span className="pip" /> What Hearth gives you
-              </div>
-            </div>
-            <div className="bcell">
-              <div>
-                <div className="label">A therapist</div>
-                <h3>Clinical care for clinical things.</h3>
-                <p>
-                  Diagnoses, treats, prescribes. Right tool for some things.
-                  Wrong tool for the everyday weight.
-                </p>
-              </div>
-              <div className="role">
-                <span className="pip" /> We help you find one, if you need one
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* KEEPER FEATURE */}
       <section className="keeper" id="keepers">
         <div className="wrap">
@@ -766,8 +976,8 @@ export default function Home() {
                 Meet your Keepers
               </div>
               <h2 style={{ marginTop: 18 }}>
-                Not a coach. Not a clinician.{" "}
-                <span className="em">An elder, on your side.</span>
+                Trained, vetted, and{" "}
+                <span className="em">on your side.</span>
               </h2>
               <p
                 style={{
@@ -777,9 +987,10 @@ export default function Home() {
                   fontSize: 17,
                 }}
               >
-                Keepers are trained companions: the kind of person the village
-                elder, the trusted aunt, the community wise-person used to be.
-                Paid professionals, not volunteers. And they stay yours.
+                Keepers are trained companions, the kind of steady person most
+                of us used to have in a family or a neighbourhood. Paid
+                professionals, not volunteers. Not clinicians, and clear about
+                it. And they stay yours.
               </p>
 
               <div className="keeper-points">
@@ -894,7 +1105,7 @@ export default function Home() {
                 <li>A 35&ndash;60 minute call with your Keeper, every two weeks</li>
                 <li>Chat thread in between, replies within a day</li>
                 <li>A note from your Keeper every Friday</li>
-                <li>One small-group Circle a month</li>
+                <li>One small-group session a month (we call it a Circle)</li>
                 <li>Matched within 72 hours, switch free in the first 30 days</li>
               </ul>
               <Link
@@ -939,8 +1150,8 @@ export default function Home() {
                 <li>Everything in the two-week plan</li>
                 <li>A call with your Keeper every week</li>
                 <li>Chat replies within 4 hours</li>
-                <li>Two Circles a month</li>
-                <li>Priority therapist matching, if you ever need it</li>
+                <li>Two small-group sessions a month</li>
+                <li>Priority help finding a therapist, if you ever need one</li>
               </ul>
               <Link
                 href={HEARTH_DEEP_CHECKOUT_PATH}
@@ -963,23 +1174,100 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ONE STORY */}
-      <section className="one-story">
+      {/* MEMBER VOICES */}
+      <section className="voices" id="stories">
         <div className="wrap">
-          <blockquote className="one-story-quote reveal">
-            <p>
-              My therapist did the work she was built for. My Keeper is the one
-              who calls the shape of the week. I didn&rsquo;t know I was allowed
-              to have both.
+          <div className="sec-head reveal">
+            <div>
+              <div className="eyebrow">
+                <span className="dot" />
+                Members, in their own words
+              </div>
+              <h2 style={{ marginTop: 18 }}>
+                What members{" "}
+                <span className="serif-i" style={{ color: "var(--ember)" }}>
+                  say.
+                </span>
+              </h2>
+            </div>
+            <p className="lede">
+              First names, real situations, names changed for privacy.{" "}
+              <Link href="/stories" style={{ borderBottom: "1px solid var(--rule)" }}>
+                Read more stories &rarr;
+              </Link>
             </p>
-            <cite>Ayesha &middot; member for two years</cite>
-          </blockquote>
-          <p className="one-story-origin reveal">
-            Hearth is the elder&rsquo;s house, on your phone.{" "}
-            <Link href="/about">Why we built it &rarr;</Link>
-          </p>
+          </div>
+          <div className="voices-grid reveal">
+            {VOICES.map((v) => (
+              <figure key={v.who} className="voice">
+                <blockquote>{v.q}</blockquote>
+                <figcaption>
+                  <b>{v.who}</b>
+                  <span>{v.meta}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <section className="faq" id="faq">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(faqLd(HOME_FAQ)) }}
+        />
+        <div className="wrap">
+          <div className="faq-grid">
+            <div className="reveal">
+              <div className="eyebrow">
+                <span className="dot" />
+                Before you decide
+              </div>
+              <h2 style={{ marginTop: 18 }}>
+                The questions people ask{" "}
+                <span className="serif-i" style={{ color: "var(--ember)" }}>
+                  first.
+                </span>
+              </h2>
+              <p style={{ marginTop: 22, color: "var(--ink-2)", fontSize: 16, lineHeight: 1.6, maxWidth: "40ch" }}>
+                Plain answers. If yours is not here,{" "}
+                <Link href="/faq" style={{ borderBottom: "1px solid var(--rule)" }}>
+                  the full FAQ
+                </Link>{" "}
+                has the rest.
+              </p>
+            </div>
+            <div className="faq-list reveal">
+              {HOME_FAQ.map((f, i) => (
+                <details key={f.q} open={i === 0}>
+                  <summary>{f.q}</summary>
+                  <p>{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WORDS WE USE */}
+      <section className="glossary" aria-labelledby="glossary-title">
+        <div className="wrap">
+          <div className="eyebrow" id="glossary-title">
+            <span className="dot" />
+            Words we use, in plain English
+          </div>
+          <dl className="glossary-grid reveal">
+            <div><dt>Keeper</dt><dd>Your trained listener. One person, matched to you by hand, kept for years.</dd></div>
+            <div><dt>The Sit</dt><dd>Your call with your Keeper. 35 to 60 minutes, video or audio, every two weeks or every week.</dd></div>
+            <div><dt>The Long Talk</dt><dd>The chat thread between calls. Text, voice notes, photos. Replies within a day.</dd></div>
+            <div><dt>The Friday note</dt><dd>A few lines from your Keeper every Friday about what they noticed that week.</dd></div>
+            <div><dt>Circle</dt><dd>A small-group session, six to ten people, led by a Keeper. One a month is included.</dd></div>
+            <div><dt>The Bridge</dt><dd>If you ever need a therapist, we help you find a vetted one. Your Keeper stays.</dd></div>
+          </dl>
+        </div>
+      </section>
+
       {/* BIG CTA */}
       <section className="bigcta" id="cta">
         <div className="wrap">
@@ -1000,7 +1288,7 @@ export default function Home() {
             the long talk.
           </h2>
           <p className="sub">
-            Tell us what you&rsquo;re carrying. We match you within 72 hours.
+            Tell us what you&rsquo;re carrying. Within 72 hours you&rsquo;ll have someone to carry it with, and some relief.
           </p>
           {/* Step indicator */}
           {ctaStep < 3 && (

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import SharedNav from "@/app/components/SharedNav";
 
@@ -321,6 +321,20 @@ export default function IntakePage() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [data, setData] = useState<IntakeData>(INITIAL);
+
+  // The home page hero links here with ?topic=<id>[,<id>] so the visitor's
+  // choice carries through to Step 2 instead of being asked twice.
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("topic");
+    if (!q) return;
+    const ids = q.split(",").filter((id) => TOPICS.some((x) => x.id === id));
+    if (!ids.length) return;
+    // One-time read of the URL after hydration. Reading it in a lazy
+    // initialiser would mismatch the server render, and useSearchParams would
+    // force a Suspense fallback that blanks the prerendered form.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setData((d) => ({ ...d, topics: Array.from(new Set([...d.topics, ...ids])) }));
+  }, []);
 
   const set = <K extends keyof IntakeData>(key: K, value: IntakeData[K]) =>
     setData((d) => ({ ...d, [key]: value }));
