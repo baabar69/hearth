@@ -275,10 +275,10 @@ export default async function KeeperProfile({
               >
                 &ldquo;{keeper.tagline}&rdquo;
               </p>
-              <a href="/#cta" className="btn btn-primary btn-lg">
+              <Link href="/#cta" className="btn btn-primary btn-lg">
                 Pull up a chair with {keeper.name.split(" ")[0]}{" "}
                 <span className="arr">&rarr;</span>
-              </a>
+              </Link>
             </div>
 
             <div>
@@ -564,10 +564,10 @@ export default async function KeeperProfile({
             Ready to sit with {keeper.name.split(" ")[0]}?
           </h2>
           <div className="cta-row" style={{ marginTop: 40 }}>
-            <a href="/#cta" className="btn btn-primary btn-lg">
+            <Link href="/#cta" className="btn btn-primary btn-lg">
               Pull up a chair with {keeper.name.split(" ")[0]}{" "}
               <span className="arr">&rarr;</span>
-            </a>
+            </Link>
             <Link href="/keepers" className="btn btn-ghost btn-lg">
               Browse all Keepers
             </Link>

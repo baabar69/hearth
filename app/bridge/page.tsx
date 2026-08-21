@@ -365,9 +365,9 @@ export default function BridgePage() {
             Start with a Keeper. The Bridge is always close.
           </h2>
           <div className="cta-row" style={{ marginTop: 40 }}>
-            <a href="/#cta" className="btn btn-primary btn-lg">
+            <Link href="/#cta" className="btn btn-primary btn-lg">
               Pull up a chair <span className="arr">&rarr;</span>
-            </a>
+            </Link>
             <Link href="/keepers" className="btn btn-ghost btn-lg">
               Meet the Keepers
             </Link>

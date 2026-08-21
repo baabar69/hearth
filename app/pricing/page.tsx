@@ -613,9 +613,9 @@ export default function PricingPage() {
             Pull up a chair.
           </h2>
           <div className="cta-row" style={{ marginTop: 40 }}>
-            <a href="/#cta" className="btn btn-primary btn-lg">
+            <Link href="/#cta" className="btn btn-primary btn-lg">
               Pull up a chair <span className="arr">&rarr;</span>
-            </a>
+            </Link>
             <Link href="/gift" className="btn btn-ghost btn-lg">
               Gift a membership
             </Link>

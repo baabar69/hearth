@@ -1,5 +1,7 @@
 import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
+import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
+import Link from "next/link";
 
 export const metadata = {
   title: "How Hearth works — From sign-up to your first Sit",
@@ -18,6 +20,24 @@ export const metadata = {
 export default function HowItWorks() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd([
+            webPageLd({
+              path: "/how-it-works",
+              name: "How Hearth works · Hearth",
+              description:
+                "Intake, hand-pairing within 72 hours, your first Sit, and the Long Talk in between. Step by step, in plain language.",
+              lastReviewed: "2026-08-21",
+            }),
+            breadcrumbLd([
+              { name: "Hearth", path: "/" },
+              { name: "How it works", path: "/how-it-works" },
+            ]),
+          ]),
+        }}
+      />
       <SharedNav />
 
       {/* HERO */}
@@ -532,12 +552,12 @@ export default function HowItWorks() {
             Ready to pull up a chair?
           </h2>
           <div className="cta-row" style={{ marginTop: 40 }}>
-            <a href="/#cta" className="btn btn-primary btn-lg">
+            <Link href="/#cta" className="btn btn-primary btn-lg">
               Pull up a chair <span className="arr">&rarr;</span>
-            </a>
-            <a href="/keepers" className="btn btn-ghost btn-lg">
+            </Link>
+            <Link href="/keepers" className="btn btn-ghost btn-lg">
               Meet the Keepers first
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -841,13 +841,13 @@ export default function Home() {
                   <span className="keeper-langs">
                     At the Hearth &middot; Aruna&rsquo;s profile
                   </span>
-                  <a
+                  <Link
                     href="/keepers/aruna-bhattacharya"
                     className="btn btn-ghost"
                     style={{ padding: "9px 14px", fontSize: 12.5 }}
                   >
                     View profile <span className="arr">&rarr;</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -933,12 +933,12 @@ export default function Home() {
                   flexWrap: "wrap" as const,
                 }}
               >
-                <a href="/keepers" className="btn btn-primary">
+                <Link href="/keepers" className="btn btn-primary">
                   Browse all Keepers <span className="arr">&rarr;</span>
-                </a>
-                <a href="/how-it-works" className="btn btn-ghost">
+                </Link>
+                <Link href="/how-it-works" className="btn btn-ghost">
                   How Pairing works
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -1960,12 +1960,12 @@ export default function Home() {
               <p style={{ fontFamily: "var(--mono)", fontSize: 13, color: "rgba(255,255,255,0.55)", letterSpacing: "0.06em", maxWidth: "36ch", lineHeight: 1.6, margin: 0 }}>
                 Expect an email at {ctaEmail} within 48 hours.
               </p>
-              <a href="/embers" style={{ fontFamily: "var(--mono)", fontSize: 13, letterSpacing: "0.08em", color: "#FFB74D", textDecoration: "underline", marginTop: 8 }}>
+              <Link href="/embers" style={{ fontFamily: "var(--mono)", fontSize: 13, letterSpacing: "0.08em", color: "#FFB74D", textDecoration: "underline", marginTop: 8 }}>
                 While you wait &mdash; read an Ember &rarr;
-              </a>
-              <a href="/gift" className="btn btn-ghost btn-lg" style={{ marginTop: 8 }}>
+              </Link>
+              <Link href="/gift" className="btn btn-ghost btn-lg" style={{ marginTop: 8 }}>
                 Light a Hearth for someone
-              </a>
+              </Link>
             </div>
           )}
         </div>

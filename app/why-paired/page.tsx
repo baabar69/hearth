@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
+import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 
 export const metadata = {
   title: "Why Paired Peer Support, Long-Term — Hearth's Model",
@@ -88,6 +89,24 @@ const ALTERNATIVES = [
 export default function WhyPairedPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd([
+            webPageLd({
+              path: "/why-paired",
+              name: "Why Hearth pairs you with one Keeper · Hearth",
+              description:
+                "Why Hearth hand-matches one Keeper for the long term instead of rotating you through a pool, and what continuity changes.",
+              lastReviewed: "2026-08-21",
+            }),
+            breadcrumbLd([
+              { name: "Hearth", path: "/" },
+              { name: "Why paired", path: "/why-paired" },
+            ]),
+          ]),
+        }}
+      />
       <SharedNav />
 
       {/* HERO */}

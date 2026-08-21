@@ -2,6 +2,7 @@ import Link from "next/link";
 import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 import KeeperPortrait from "../components/KeeperPortrait";
+import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 
 export const metadata = {
   title: "Meet the Keepers — Trained peer supporters at Hearth",
@@ -84,6 +85,24 @@ const KEEPERS: Keeper[] = [
 export default function KeepersPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd([
+            webPageLd({
+              path: "/keepers",
+              name: "Meet the Keepers · Hearth",
+              description:
+                "The trained peer companions who hold Hearth's Sits and Long Talks, their backgrounds, languages, and the themes they carry.",
+              lastReviewed: "2026-08-21",
+            }),
+            breadcrumbLd([
+              { name: "Hearth", path: "/" },
+              { name: "Meet the Keepers", path: "/keepers" },
+            ]),
+          ]),
+        }}
+      />
       <SharedNav />
 
       {/* HERO */}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
+import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 
 export const metadata = {
   title: "Hearth vs. Therapy — Honest Comparison & When to Choose Each",
@@ -111,6 +112,24 @@ const BOTH_SIGNS = [
 export default function HearthVsTherapyPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd([
+            webPageLd({
+              path: "/hearth-vs-therapy",
+              name: "Hearth vs. therapy · Hearth",
+              description:
+                "What peer support does that therapy does not, what therapy does that Hearth will never do, and how to tell which one you need.",
+              lastReviewed: "2026-08-21",
+            }),
+            breadcrumbLd([
+              { name: "Hearth", path: "/" },
+              { name: "Hearth vs. therapy", path: "/hearth-vs-therapy" },
+            ]),
+          ]),
+        }}
+      />
       <SharedNav />
 
       {/* HERO */}

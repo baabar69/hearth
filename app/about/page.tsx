@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
+import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 
 export const metadata = {
   title: "About Hearth — Why we built paired, long-term peer support",
@@ -46,6 +47,24 @@ const VALUES = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd([
+            webPageLd({
+              path: "/about",
+              name: "About Hearth · Hearth",
+              description:
+                "Why Hearth exists, who it is for, and the elder-companion tradition it extends into modern life.",
+              lastReviewed: "2026-08-21",
+            }),
+            breadcrumbLd([
+              { name: "Hearth", path: "/" },
+              { name: "Our story", path: "/about" },
+            ]),
+          ]),
+        }}
+      />
       <SharedNav />
 
       {/* HERO */}
@@ -380,9 +399,9 @@ export default function AboutPage() {
             The First Sit takes about 12 minutes
           </p>
           <div className="cta-row" style={{ marginTop: 40 }}>
-            <a href="/#cta" className="btn btn-primary btn-lg">
+            <Link href="/#cta" className="btn btn-primary btn-lg">
               Pull up a chair <span className="arr">&rarr;</span>
-            </a>
+            </Link>
             <Link href="/keepers" className="btn btn-ghost btn-lg">
               Meet the Keepers
             </Link>
