@@ -21,6 +21,7 @@ Hearth is a one-to-one peer-support subscription. Each member is hand-matched wi
 - Not therapy. Keepers do not diagnose, prescribe, or provide clinical care.
 - Not a crisis service. For mental-health emergencies: 988 (US), 1-866-585-0445 (Canada), 116 123 (UK/IE), Umang 0311-7786264 (Pakistan), or local emergency services.
 - Not anonymous chat. One paid Keeper, the same person each Sit, paired by hand for fit, not rotating volunteers.
+- Not a directory. Members do not browse or choose a Keeper. Hearth assigns one by hand-matching within 72 hours, and the match can be changed on request (free in the first 30 days, a brief conversation with the pairing team after that).
 - Not insurance-billable. Hearth does not bill insurance and does not use clinical CPT codes. FSA/HSA compatibility is in progress.
 
 ## Who Keepers are
@@ -66,6 +67,6 @@ Keepers are trained peer supporters, not licensed therapists. Each Keeper comple
 - Peer support vs. therapy (long-form guide): https://dearhearth.com/learn/peer-support-vs-therapy
 - What is a hearth keeper? (meaning, history, and how Hearth uses the term): https://dearhearth.com/learn/what-is-a-hearth-keeper
 - The Bridge (clinical handoff): https://dearhearth.com/bridge
-- Keeper directory: https://dearhearth.com/keepers
+- Meet the Keepers (members are matched by hand, not self-selected): https://dearhearth.com/keepers
 
 Last reviewed: 2026-08-22

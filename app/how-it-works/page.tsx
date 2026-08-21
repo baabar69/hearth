@@ -182,12 +182,11 @@ export default function HowItWorks() {
                   maxWidth: "58ch",
                 }}
               >
-                We hand-match you with three Keeper candidates based on the
-                themes you carry and the kind of company that will actually
-                help. You get to watch a short video introduction from each
-                one, read their profiles, and pick the one who feels right.
-                There is no algorithm making this call. A human at Hearth
-                makes the match.
+                We hand-match you with one Keeper based on the themes you
+                carry and the kind of company that will actually help. There
+                is no algorithm making this call, and no directory to scroll
+                through. A human at Hearth reads your intake, makes the
+                match, and introduces you.
               </p>
               <p
                 style={{
@@ -198,8 +197,8 @@ export default function HowItWorks() {
                   maxWidth: "58ch",
                 }}
               >
-                If the match does not feel right in the first 30 days, you
-                switch. No questions, no extra charge. The pairing takes 72
+                If the match does not feel right in the first 30 days, tell
+                us and we rematch you. No questions, no extra charge. The pairing takes 72
                 hours from your First Sit. If we can&rsquo;t find the right
                 fit in 72 hours, we keep looking and tell you why.
               </p>

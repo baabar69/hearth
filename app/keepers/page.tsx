@@ -7,7 +7,7 @@ import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 export const metadata = {
   title: "Meet the Keepers: Trained peer supporters at Hearth",
   description:
-    "Browse Hearth's Keepers: trained peer supporters paired with members by hand. Each one a person, not a profile, with languages, themes, and lived experience that matches what you're carrying.",
+    "Meet Hearth's Keepers: trained peer supporters paired with members by hand, not chosen from a list. Each one a person, not a profile, with languages, themes, and lived experience that matches what you're carrying.",
   alternates: { canonical: "/keepers" },
   openGraph: {
     title: "Meet the Keepers · Hearth",
@@ -124,8 +124,9 @@ export default function KeepersPage() {
               maxWidth: "52ch",
             }}
           >
-            Each one a person, not a profile. Browse, listen, read. The match
-            matters.
+            Each one a person, not a profile. We make the match by hand, and
+            you can ask to change it at any time. This page is so you know
+            the kind of person you might be sitting with.
           </p>
           <p
             style={{

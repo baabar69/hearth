@@ -575,7 +575,7 @@ export default async function KeeperProfile({
               <span className="arr">&rarr;</span>
             </Link>
             <Link href="/keepers" className="btn btn-ghost btn-lg">
-              Browse all Keepers
+              Meet the other Keepers
             </Link>
           </div>
         </div>

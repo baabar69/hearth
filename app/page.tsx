@@ -1037,7 +1037,7 @@ export default function Home() {
                 }}
               >
                 <Link href="/keepers" className="btn btn-primary">
-                  Browse all Keepers <span className="arr">&rarr;</span>
+                  Meet the Keepers <span className="arr">&rarr;</span>
                 </Link>
                 <Link href="/how-it-works" className="btn btn-ghost">
                   How matching works

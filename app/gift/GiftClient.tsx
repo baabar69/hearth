@@ -37,7 +37,7 @@ const FAQ = [
   },
   {
     q: "Can they pick their own Keeper?",
-    a: "Yes. Every new member goes through the First Sit intake and is hand-matched with Keeper candidates. The recipient picks from three matched options.",
+    a: "Yes. Every new member goes through the First Sit intake and is hand-matched with one Keeper by a person at Hearth. The recipient does not need to choose anyone. If the match does not feel right, they ask and we rematch them.",
   },
   {
     q: "What if they decide Hearth isn't right for them?",
