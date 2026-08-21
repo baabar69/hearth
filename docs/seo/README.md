@@ -5,6 +5,11 @@ Last updated 2026-08-21.
 The problem in one line: searching "dearhearth" or "dear hearth" does not surface
 dearhearth.com. Only typing the full domain works, and that is navigation, not search.
 
+**Status 2026-08-21: 37 pages are indexed**, no manual actions. So this is not a
+crawling or discovery problem — Google has read the site. It is a ranking problem,
+which means authority and relevance, not technical SEO. See
+`search-console-findings.md`.
+
 ## Documents here
 
 | File | What it covers |
