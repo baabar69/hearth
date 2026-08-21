@@ -334,7 +334,15 @@ export default function CantAffordTherapyPage() {
             }}
           >
             Costs are indicative and change. Verify current numbers with each
-            provider before relying on them.
+            provider before relying on them. For what full-price therapy costs
+            by country, per session and per year, see{" "}
+            <Link
+              href="/learn/how-much-does-therapy-cost"
+              style={{ color: "var(--ember)" }}
+            >
+              how much therapy costs in 2026
+            </Link>
+            .
           </p>
           <div style={{ display: "grid", gap: 24, maxWidth: "72ch" }}>
             {OPTIONS.map((o) => (
@@ -496,6 +504,12 @@ export default function CantAffordTherapyPage() {
               Keep reading
             </div>
             <div style={{ display: "grid", gap: 18, marginTop: 8 }}>
+              <Link
+                href="/learn/how-much-does-therapy-cost"
+                style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
+              >
+                How much does therapy cost in 2026? &rarr;
+              </Link>
               <Link
                 href="/learn/do-i-need-therapy"
                 style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
