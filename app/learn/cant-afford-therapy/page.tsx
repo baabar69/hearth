@@ -350,6 +350,13 @@ export default function CantAffordTherapyPage() {
             >
               how much therapy costs in 2026
             </Link>
+            . If you have no coverage at all, start with{" "}
+            <Link
+              href="/learn/therapy-without-insurance"
+              style={{ color: "var(--ember)" }}
+            >
+              therapy without insurance
+            </Link>
             .
           </p>
           <div style={{ display: "grid", gap: 24, maxWidth: "72ch" }}>
@@ -517,6 +524,12 @@ export default function CantAffordTherapyPage() {
                 style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
               >
                 Sliding scale therapy: how to ask &rarr;
+              </Link>
+              <Link
+                href="/learn/therapy-without-insurance"
+                style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
+              >
+                Therapy without insurance: cost and options &rarr;
               </Link>
               <Link
                 href="/learn/how-much-does-therapy-cost"

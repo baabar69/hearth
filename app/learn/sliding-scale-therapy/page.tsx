@@ -496,7 +496,12 @@ export default function SlidingScaleTherapyPage() {
               <Link href="/learn/cant-afford-therapy" style={{ color: "var(--ember)" }}>
                 what to do when you cannot afford therapy
               </Link>
-              .
+              . If you have no insurance at all, or a plan that does not cover
+              the therapist you want,{" "}
+              <Link href="/learn/therapy-without-insurance" style={{ color: "var(--ember)" }}>
+                therapy without insurance
+              </Link>{" "}
+              covers the written estimate you are owed and how superbills work.
             </p>
           </div>
         </div>

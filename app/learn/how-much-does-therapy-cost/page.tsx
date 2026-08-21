@@ -280,7 +280,13 @@ export default function HowMuchDoesTherapyCostPage() {
               and similar cities, $250 is common and $300 is not rare. Sliding
               scale slots, where a therapist offers them, can bring a session to
               $30 to $80. In-network copays usually run $20 to $50, but a large
-              share of experienced therapists do not take insurance at all.
+              share of experienced therapists do not take insurance at all. If
+              you have no coverage, or a plan that does not cover your
+              therapist, see{" "}
+              <Link href="/learn/therapy-without-insurance" style={{ color: "var(--ember)" }}>
+                therapy without insurance
+              </Link>
+              , including the written estimate you are legally owed.
             </p>
 
             <h3 style={{ marginTop: 32, marginBottom: 12 }}>United Kingdom</h3>
