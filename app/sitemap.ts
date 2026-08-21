@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 const SITE = "https://dearhearth.com";
 
-// Real timestamps per route. Bumping these on a deploy is fine — fabricating a
+// Real timestamps per route. Bumping these on a deploy is fine: fabricating a
 // uniform millisecond timestamp on every request is the thing Google ignores.
 // Hand-curated by section so high-priority commercial pages signal recency
 // without lying to crawlers.
@@ -12,9 +12,12 @@ const ROUTES: Array<{ path: string; priority: number; lastmod: string }> = [
   { path: "/how-it-works",              priority: 0.9, lastmod: "2026-05-14" },
   { path: "/pricing",                   priority: 0.9, lastmod: "2026-05-14" },
   { path: "/keepers",                   priority: 0.9, lastmod: "2026-05-14" },
-  { path: "/hearth-vs-therapy",         priority: 0.9, lastmod: "2026-05-14" },
+  { path: "/hearth-vs-therapy",         priority: 0.9, lastmod: "2026-08-22" },
+  { path: "/hearth-vs-betterhelp",      priority: 0.9, lastmod: "2026-08-22" },
   { path: "/learn/peer-support-vs-therapy", priority: 0.9, lastmod: "2026-05-14" },
   { path: "/learn/what-is-a-hearth-keeper", priority: 0.9, lastmod: "2026-08-22" },
+  { path: "/learn/do-i-need-therapy",    priority: 0.9, lastmod: "2026-08-22" },
+  { path: "/learn/cant-afford-therapy",  priority: 0.9, lastmod: "2026-08-22" },
 
   // Mid-funnel
   { path: "/about",                     priority: 0.7, lastmod: "2026-05-14" },

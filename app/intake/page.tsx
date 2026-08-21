@@ -38,9 +38,9 @@ const WELLBEING_LABELS = [
 ];
 
 const SLEEP_OPTIONS = [
-  "Well — no complaints",
-  "Okay — some disruptions",
-  "Poorly — it's affecting me",
+  "Well, no complaints",
+  "Okay, some disruptions",
+  "Poorly, it's affecting me",
 ];
 
 const SADNESS_OPTIONS = [
@@ -58,7 +58,7 @@ const ANXIETY_OPTIONS = [
 const SAFETY_OPTIONS = [
   { id: "no", label: "No, I'm not having those thoughts" },
   { id: "sometimes", label: "Sometimes, but I'm not in danger" },
-  { id: "yes", label: "Yes — I need immediate support" },
+  { id: "yes", label: "Yes, I need immediate support" },
 ];
 
 const PRIOR_THERAPY_OPTIONS = [
@@ -75,7 +75,7 @@ const RELATIONSHIP_OPTIONS = [
 
 const SPIRITUALITY_OPTIONS = [
   "Yes, it's central to who I am",
-  "Somewhat — it matters but isn't everything",
+  "Somewhat, it matters but isn't everything",
   "Not really",
   "Prefer not to say",
 ];
@@ -118,7 +118,7 @@ const EMPLOYMENT_OPTIONS = [
 const KEEPER_GENDER_OPTIONS = ["No preference", "Woman", "Man", "Non-binary"];
 
 const CONNECTION_OPTIONS = [
-  "Video — I want to see them",
+  "Video, I want to see them",
   "Audio only",
   "I'll figure it out",
 ];
@@ -448,10 +448,10 @@ export default function IntakePage() {
         <div style={{ maxWidth: 600, margin: "0 auto", padding: "48px 24px 80px" }}>
           <ProgressBar />
 
-          {/* ── STEP 1 — About you ── */}
+          {/* ── STEP 1: About you ── */}
           {step === 1 && (
             <div>
-              <Eyebrow>Step 1 — About you</Eyebrow>
+              <Eyebrow>Step 1 &middot; About you</Eyebrow>
               <h2 style={{ fontFamily: "var(--serif)", fontSize: "clamp(24px,3.5vw,32px)", color: "var(--ink)", marginBottom: 8, lineHeight: 1.3 }}>
                 Let&rsquo;s start here.
               </h2>
@@ -529,10 +529,10 @@ export default function IntakePage() {
             </div>
           )}
 
-          {/* ── STEP 2 — What's weighing on you ── */}
+          {/* ── STEP 2: What's weighing on you ── */}
           {step === 2 && (
             <div>
-              <Eyebrow>Step 2 — What&rsquo;s weighing on you</Eyebrow>
+              <Eyebrow>Step 2 &middot; What&rsquo;s weighing on you</Eyebrow>
               <h2 style={{ fontFamily: "var(--serif)", fontSize: "clamp(24px,3.5vw,32px)", color: "var(--ink)", marginBottom: 8, lineHeight: 1.3 }}>
                 What are you carrying right now?
               </h2>
@@ -565,10 +565,10 @@ export default function IntakePage() {
             </div>
           )}
 
-          {/* ── STEP 3 — How you're doing ── */}
+          {/* ── STEP 3: How you're doing ── */}
           {step === 3 && (
             <div>
-              <Eyebrow>Step 3 — How you&rsquo;re doing</Eyebrow>
+              <Eyebrow>Step 3 &middot; How you&rsquo;re doing</Eyebrow>
               <h2 style={{ fontFamily: "var(--serif)", fontSize: "clamp(24px,3.5vw,32px)", color: "var(--ink)", marginBottom: 8, lineHeight: 1.3 }}>
                 A quick check-in.
               </h2>
@@ -720,10 +720,10 @@ export default function IntakePage() {
             </div>
           )}
 
-          {/* ── STEP 4 — A little more context ── */}
+          {/* ── STEP 4: A little more context ── */}
           {step === 4 && (
             <div>
-              <Eyebrow>Step 4 — A little more context</Eyebrow>
+              <Eyebrow>Step 4 &middot; A little more context</Eyebrow>
               <h2 style={{ fontFamily: "var(--serif)", fontSize: "clamp(24px,3.5vw,32px)", color: "var(--ink)", marginBottom: 8, lineHeight: 1.3 }}>
                 Help us understand you.
               </h2>
@@ -811,10 +811,10 @@ export default function IntakePage() {
             </div>
           )}
 
-          {/* ── STEP 5 — Finding your Keeper ── */}
+          {/* ── STEP 5: Finding your Keeper ── */}
           {step === 5 && (
             <div>
-              <Eyebrow>Step 5 — Finding your Keeper</Eyebrow>
+              <Eyebrow>Step 5 &middot; Finding your Keeper</Eyebrow>
               <h2 style={{ fontFamily: "var(--serif)", fontSize: "clamp(24px,3.5vw,32px)", color: "var(--ink)", marginBottom: 8, lineHeight: 1.3 }}>
                 Let&rsquo;s find your match.
               </h2>
@@ -900,10 +900,10 @@ export default function IntakePage() {
             </div>
           )}
 
-          {/* ── STEP 6 — Almost done ── */}
+          {/* ── STEP 6: Almost done ── */}
           {step === 6 && (
             <div>
-              <Eyebrow>Step 6 — Almost done</Eyebrow>
+              <Eyebrow>Step 6 &middot; Almost done</Eyebrow>
               <h2 style={{ fontFamily: "var(--serif)", fontSize: "clamp(24px,3.5vw,32px)", color: "var(--ink)", marginBottom: 8, lineHeight: 1.3 }}>
                 One last thing.
               </h2>

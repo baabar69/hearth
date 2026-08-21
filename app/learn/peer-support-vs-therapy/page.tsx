@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title:
     "Peer Support vs. Therapy: The Honest Difference (2026 Guide)",
   description:
-    "Peer support and therapy do different jobs. A plain guide to what each is for, how they cost, who they fit, and when to choose which — written by Hearth, a peer-support service that refers out for clinical care.",
+    "Peer support and therapy do different jobs. A plain guide to what each is for, how they cost, who they fit, and when to choose which. Written by Hearth, a peer-support service that refers out for clinical care.",
   alternates: { canonical: "/learn/peer-support-vs-therapy" },
   openGraph: {
     type: "article",
@@ -42,11 +42,11 @@ const FAQ = [
   },
   {
     q: "When is peer support a better fit than therapy?",
-    a: "Peer support is often the better fit for the recurring, non-clinical weight of a life: grief that does not need diagnosis, family or in-law dynamics, caregiving exhaustion, the slow loneliness of a long marriage, diaspora identity questions, the cost of code-switching, fatherhood, postpartum identity loss, faith and doubt, career-cultural conflict. These are the things people have historically taken to a trusted elder, not a clinician — peer support is the modern version of that.",
+    a: "Peer support is often the better fit for the recurring, non-clinical weight of a life: grief that does not need diagnosis, family or in-law dynamics, caregiving exhaustion, the slow loneliness of a long marriage, diaspora identity questions, the cost of code-switching, fatherhood, postpartum identity loss, faith and doubt, career-cultural conflict. These are the things people have historically taken to a trusted elder, not a clinician. Peer support is the modern version of that.",
   },
   {
     q: "Is peer support cheaper than therapy?",
-    a: "Usually, yes. In the United States, therapy commonly costs $150–$300 per session without insurance and $400–$1,200 per month for weekly care. Subscription peer support typically ranges from free (volunteer platforms like 7 Cups) to $40–$100 per month for paid, paired services like Hearth. Cost differences come from licensure, clinical liability, and the depth of training — not from one being inherently more valuable than the other.",
+    a: "Usually, yes. In the United States, therapy commonly costs $150–$300 per session without insurance and $400–$1,200 per month for weekly care. Subscription peer support typically ranges from free (volunteer platforms like 7 Cups) to $40–$100 per month for paid, paired services like Hearth. Cost differences come from licensure, clinical liability, and the depth of training, not from one being inherently more valuable than the other.",
   },
   {
     q: "Can I do both peer support and therapy at the same time?",
@@ -399,10 +399,10 @@ export default function PeerSupportVsTherapyPage() {
                 Therapy in 2026 is a regulated profession in most countries.
                 A therapist holds a license issued by a state or national
                 board after years of clinical training, supervised practice,
-                and exams. Licensure types vary — Licensed Marriage and
+                and exams. Licensure types vary: Licensed Marriage and
                 Family Therapist (LMFT), Licensed Clinical Social Worker
                 (LCSW), Licensed Professional Counselor (LPC), psychologist
-                (PhD/PsyD), psychiatrist (MD/DO who can prescribe) — but the
+                (PhD/PsyD), psychiatrist (MD/DO who can prescribe). But the
                 common thread is that the therapist can legally diagnose,
                 document a treatment plan, and operate within a defined
                 clinical standard of care.
@@ -449,8 +449,8 @@ export default function PeerSupportVsTherapyPage() {
                 Peer support is companionship by someone who has lived a
                 version of what you are living and who has been trained to
                 hold space for it without trying to fix it. The phrase has
-                clinical roots — in addiction recovery and serious-mental-
-                illness recovery, "peer specialists" are a recognised
+                clinical roots: in addiction recovery and serious-mental-
+                illness recovery, &ldquo;peer specialists&rdquo; are a recognised
                 category, often certified, sometimes Medicaid-billable. The
                 consumer version of peer support is broader and less
                 regulated: paid one-to-one services (like Hearth), volunteer
@@ -488,7 +488,7 @@ export default function PeerSupportVsTherapyPage() {
                 cast. Training means a documented curriculum (Hearth runs
                 120 hours of training, monthly peer supervision, and
                 crisis-protocol certification), not a weekend workshop. Both
-                matter more than the supporter's lived experience alone.
+                matter more than the supporter&rsquo;s lived experience alone.
               </p>
             </div>
 
@@ -511,7 +511,7 @@ export default function PeerSupportVsTherapyPage() {
                   disorder, PTSD, OCD, bipolar disorder, an eating
                   disorder), if you are in or near a crisis state, if
                   medication is on the table, or if your situation requires
-                  a clinician's authority (court-mandated treatment,
+                  a clinician&rsquo;s authority (court-mandated treatment,
                   custody, disability claims).
                 </li>
                 <li style={{ marginBottom: 12 }}>
@@ -545,8 +545,8 @@ export default function PeerSupportVsTherapyPage() {
               </h2>
               <p style={{ fontSize: 18, lineHeight: 1.75, color: "var(--ink-2)" }}>
                 Peer support is not a cheaper therapist. If you see a
-                service marketing itself as "therapy without the price tag,"
-                that is a red flag — they are either misrepresenting what
+                service marketing itself as &ldquo;therapy without the price tag,&rdquo;
+                that is a red flag. They are either misrepresenting what
                 they offer or operating outside their scope. Peer support
                 is also not friendship. Friends mean well but get tired,
                 have their own lives, and cannot hold consistent attention
@@ -597,7 +597,7 @@ export default function PeerSupportVsTherapyPage() {
               trained peer supporters, not licensed therapists. We do not
               diagnose, do not prescribe, and we are not a crisis service.
               When something needs a clinician, your Keeper says so plainly
-              and walks you to The Bridge — our network of vetted, licensed
+              and walks you to The Bridge, our network of vetted, licensed
               therapists matched by hand for fit.
             </p>
             <p
@@ -708,6 +708,23 @@ export default function PeerSupportVsTherapyPage() {
                 <span style={{ color: "var(--ink-3)", fontSize: 14 }}>
                   How Hearth specifically differs from common therapy
                   platforms.
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/hearth-vs-betterhelp"
+                style={{
+                  display: "block",
+                  padding: 20,
+                  border: "1px solid var(--rule-2)",
+                  borderRadius: 10,
+                }}
+              >
+                <strong>Hearth vs. BetterHelp</strong>
+                <br />
+                <span style={{ color: "var(--ink-3)", fontSize: 14 }}>
+                  Costs, formats, who each fits, and the honest alternatives.
                 </span>
               </Link>
             </li>

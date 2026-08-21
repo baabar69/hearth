@@ -5,12 +5,12 @@ import KeeperPortrait from "../components/KeeperPortrait";
 import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 
 export const metadata = {
-  title: "Meet the Keepers — Trained peer supporters at Hearth",
+  title: "Meet the Keepers: Trained peer supporters at Hearth",
   description:
-    "Browse Hearth's Keepers: trained peer supporters paired with members by hand. Each one a person, not a profile — with languages, themes, and lived experience that matches what you're carrying.",
+    "Browse Hearth's Keepers: trained peer supporters paired with members by hand. Each one a person, not a profile, with languages, themes, and lived experience that matches what you're carrying.",
   alternates: { canonical: "/keepers" },
   openGraph: {
-    title: "Meet the Keepers — Hearth",
+    title: "Meet the Keepers · Hearth",
     description:
       "Hearth's Keepers: trained peer supporters across languages, cultures, and themes. Paired by hand for fit.",
     url: "/keepers",

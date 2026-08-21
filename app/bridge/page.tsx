@@ -3,12 +3,12 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "The Bridge — Vetted Therapist Referrals from Hearth",
+  title: "The Bridge: Vetted Therapist Referrals from Hearth",
   description:
     "When peer support is not enough, your Keeper hands you off to a vetted, licensed therapist matched by hand for fit. The Bridge is how Hearth stays honest about scope.",
   alternates: { canonical: "/bridge" },
   openGraph: {
-    title: "The Bridge — Hearth's clinical handoff",
+    title: "The Bridge: Hearth's clinical handoff",
     description:
       "Hand-matched referrals to licensed therapists when clinical care is the right tool.",
     url: "/bridge",

@@ -22,7 +22,7 @@ const TEMPLATES = [
   },
   {
     label: "For a friend",
-    text: "I've been the person you call, and I'm always glad when you do. I also know I have my own limits — my own weeks. I got you a Keeper so you have someone else in your corner. Not instead of me. Alongside.",
+    text: "I've been the person you call, and I'm always glad when you do. I also know I have my own limits, my own weeks. I got you a Keeper so you have someone else in your corner. Not instead of me. Alongside.",
   },
 ];
 
@@ -559,7 +559,7 @@ export default function GiftPage() {
                     background: "var(--ember)",
                   }}
                 >
-                  Light a Hearth &mdash; ${selectedOption.price}{" "}
+                  Light a Hearth &middot; ${selectedOption.price}{" "}
                   <span className="arr">&rarr;</span>
                 </button>
                 <p

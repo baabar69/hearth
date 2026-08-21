@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ForKeepersClient from "./ForKeepersClient";
 
 export const metadata: Metadata = {
-  title: "Become a Keeper — Paid Peer Support Work",
+  title: "Become a Keeper: Paid Peer Support Work",
   description:
     "Hearth pays Keepers 60% of member revenue to hold long-term one-to-one peer support. No clinical licence required. Training, supervision, and members matched to you.",
   alternates: { canonical: "/for-keepers" },

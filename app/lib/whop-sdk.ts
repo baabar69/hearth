@@ -22,7 +22,7 @@ const baseURL =
 export const whopSdk = new Whop({ apiKey, baseURL });
 
 // Per Whop's docs, the webhook secret must be base64-encoded before being
-// passed to webhooks.unwrap() — the underlying standardwebhooks library
+// passed to webhooks.unwrap(): the underlying standardwebhooks library
 // expects an encoded key. The raw env value comes from Whop in plain form
 // (e.g. "whsec_xxxxxxxx") and gets encoded here.
 const rawWebhookSecret = process.env.WHOP_WEBHOOK_SECRET;

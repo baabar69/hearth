@@ -26,6 +26,7 @@ export default function SharedFooter() {
             <Link href="/embers">Embers</Link>
             <Link href="/bridge">The Bridge</Link>
             <Link href="/hearth-vs-therapy">Hearth vs. therapy</Link>
+            <Link href="/hearth-vs-betterhelp">Hearth vs. BetterHelp</Link>
             <Link href="/learn/peer-support-vs-therapy">
               Peer support vs. therapy
             </Link>

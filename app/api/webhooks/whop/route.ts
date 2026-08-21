@@ -127,7 +127,7 @@ export async function POST(request: Request): Promise<Response> {
       }
     }
   } catch (err) {
-    // Don't 500 on internal handler errors — Whop will retry and we don't want
+    // Don't 500 on internal handler errors: Whop will retry and we don't want
     // a single bad event to block the queue. Log and ack.
     console.error("[whop-webhook] handler error", err);
   }

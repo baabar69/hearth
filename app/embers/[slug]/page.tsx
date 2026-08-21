@@ -208,7 +208,7 @@ export async function generateMetadata({
   const essay = ESSAYS.find((e) => e.slug === slug);
   if (!essay) return { title: "Ember · Hearth" };
 
-  const title = `${essay.title} — Embers · Hearth`;
+  const title = `${essay.title} · Embers · Hearth`;
   const description = essay.excerpt;
 
   return {
@@ -258,7 +258,7 @@ export default async function EmberEssayPage({
   const ldBlocks = jsonLd([
     webPageLd({
       path: `/embers/${essay.slug}`,
-      name: `${essay.title} — Embers`,
+      name: `${essay.title} · Embers`,
       description: essay.excerpt,
       lastReviewed: essay.publishDate,
     }),
@@ -277,7 +277,7 @@ export default async function EmberEssayPage({
     }),
   ]);
 
-  // Pick 3 related essays — same category first, then fill with others.
+  // Pick 3 related essays: same category first, then fill with others.
   const sameCategory = ESSAYS.filter(
     (e) => e.slug !== essay.slug && e.category === essay.category
   );
@@ -446,7 +446,7 @@ export default async function EmberEssayPage({
         </div>
       </section>
 
-      {/* CTA — quiet, in-line */}
+      {/* CTA: quiet, in-line */}
       <section
         style={{
           padding: "64px 0",

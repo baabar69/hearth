@@ -3,12 +3,12 @@ import SharedFooter from "../components/SharedFooter";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Member Stories — What Hearth Peer Support Looks Like",
+  title: "Member Stories: What Hearth Peer Support Looks Like",
   description:
-    "What members say about pulling up a chair. Real stories from real Sits with real Keepers — diaspora grief, family pressure, postpartum, caregiver burnout, faith. Names changed for privacy.",
+    "What members say about pulling up a chair. Real stories from real Sits with real Keepers: diaspora grief, family pressure, postpartum, caregiver burnout, faith. Names changed for privacy.",
   alternates: { canonical: "/stories" },
   openGraph: {
-    title: "Hearth Stories — Member experiences",
+    title: "Hearth Stories: Member experiences",
     description:
       "Real Sits, real Keepers, real outcomes. Names changed for privacy.",
     url: "/stories",
@@ -64,7 +64,7 @@ const STORIES = [
     keeper: "Priya S.",
     topic: "Sexual identity",
     quote:
-      "I came to Hearth because I couldn't tell my family. Priya didn't tell me what to do. She helped me figure out who I needed to tell first — myself.",
+      "I came to Hearth because I couldn't tell my family. Priya didn't tell me what to do. She helped me figure out who I needed to tell first. Myself.",
     months: "5 months in Hearth",
   },
   {
@@ -84,7 +84,7 @@ const STORIES = [
     keeper: "Hassan A.",
     topic: "Identity",
     quote:
-      "I'm a different person at work, at home, and with my closest friends. Hassan got it without me having to explain. That's the whole thing — not having to explain.",
+      "I'm a different person at work, at home, and with my closest friends. Hassan got it without me having to explain. That's the whole thing: not having to explain.",
     months: "7 months in Hearth",
   },
   {

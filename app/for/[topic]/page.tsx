@@ -741,8 +741,8 @@ export default async function ForTopicPage({
               detail="weekly Sits · billed monthly · or $990/yr (2 months free)"
               bullets={[
                 "Everything in Hearthside",
-                "Weekly Sits — 35–60 min each",
-                "Priority Long Talk — 4h response",
+                "Weekly Sits, 35–60 min each",
+                "Priority Long Talk, 4h response",
                 "Two Circles per month included",
                 "Bridge therapist matching when needed",
               ]}

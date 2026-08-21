@@ -19,7 +19,7 @@ type BrevoEmail = {
   text: string;
 };
 
-// Brevo's transactional endpoint. Called with fetch rather than their SDK —
+// Brevo's transactional endpoint. Called with fetch rather than their SDK -
 // one POST, no dependency worth carrying for it.
 async function sendViaBrevo(email: BrevoEmail): Promise<void> {
   const res = await fetch("https://api.brevo.com/v3/smtp/email", {
@@ -53,7 +53,7 @@ function isStringArray(v: unknown): v is string[] {
 }
 
 function isValidEmail(value: string): boolean {
-  // Cheap RFC-ish check — server-side guard, not the source of truth.
+  // Cheap RFC-ish check: server-side guard, not the source of truth.
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
@@ -119,7 +119,7 @@ export async function POST(request: Request): Promise<Response> {
     return Response.json({ error: "invalid_submission" }, { status: 400 });
   }
 
-  // Audit log — captured by Netlify function logs in prod, terminal in dev.
+  // Audit log: captured by Netlify function logs in prod, terminal in dev.
   console.log(
     JSON.stringify({
       level: "info",
@@ -147,7 +147,7 @@ export async function POST(request: Request): Promise<Response> {
   }
 
   if (!BREVO_API_KEY || !INTAKE_NOTIFY_EMAIL) {
-    // Email not configured — succeed anyway so dev works without Brevo setup.
+    // Email not configured: succeed anyway so dev works without Brevo setup.
     // Console log above is the audit trail until they wire up email.
     return Response.json({ ok: true, sent: false });
   }
@@ -174,7 +174,7 @@ export async function POST(request: Request): Promise<Response> {
 
     return Response.json({ ok: true, sent: true });
   } catch (err) {
-    // Don't fail the user's submission if email delivery hiccups — the audit
+    // Don't fail the user's submission if email delivery hiccups: the audit
     // log line above still captures the lead. Surface to ops via log.
     console.error("[intake] email delivery failed", err);
     return Response.json({ ok: true, sent: false, email_error: true });

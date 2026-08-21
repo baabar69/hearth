@@ -16,7 +16,7 @@ const REVIEWED = "2026-08-22";
 export const metadata: Metadata = {
   title: "What Is a Hearth Keeper? Meaning & Origins",
   description:
-    "A hearth keeper tended the household fire — the oldest domestic role there is, from Hestia and Vesta to the folk practice of carrying flame to a new home. What the term means, where it comes from, and why it endures.",
+    "A hearth keeper tended the household fire: the oldest domestic role there is, from Hestia and Vesta to the folk practice of carrying flame to a new home. What the term means, where it comes from, and why it endures.",
   alternates: { canonical: "/learn/what-is-a-hearth-keeper" },
   openGraph: {
     type: "article",
@@ -33,11 +33,11 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "What is a hearth keeper?",
-    a: "A hearth keeper is the person responsible for tending the household fire — keeping it alive, banking it overnight, and relighting it. Before matches and central heating, letting the fire go out meant a cold house, no cooked food, and the trouble of fetching flame from a neighbour. In Greek and Roman households the role carried religious weight too: the hearth was where the household's goddess was honoured, and tending it was an act of devotion as much as housekeeping.",
+    a: "A hearth keeper is the person responsible for tending the household fire: keeping it alive, banking it overnight, and relighting it. Before matches and central heating, letting the fire go out meant a cold house, no cooked food, and the trouble of fetching flame from a neighbour. In Greek and Roman households the role carried religious weight too: the hearth was where the household's goddess was honoured, and tending it was an act of devotion as much as housekeeping.",
   },
   {
     q: "What does 'keeper of the hearth' mean?",
-    a: "Literally, the person who keeps the household fire burning. Figuratively, it has come to mean whoever holds a home or a family together — the person who maintains warmth, continuity and welcome, often without much recognition for it. The phrase carries both senses at once, which is why it has outlived the practical job by several centuries.",
+    a: "Literally, the person who keeps the household fire burning. Figuratively, it has come to mean whoever holds a home or a family together: the person who maintains warmth, continuity and welcome, often without much recognition for it. The phrase carries both senses at once, which is why it has outlived the practical job by several centuries.",
   },
   {
     q: "Is 'hearthkeeper' one word or two?",
@@ -45,11 +45,11 @@ const FAQ = [
   },
   {
     q: "Who was the goddess of the hearth?",
-    a: "Hestia in Greek tradition, Vesta in Roman. Hestia's name means 'hearth' — she was not a goddess who happened to be associated with the fireplace, she essentially was it. Rome took the idea considerably further: alongside the fire in every household, the state maintained a sacred hearth in the Forum, tended by priestesses known as the Vestals whose central duty was ensuring it never went out.",
+    a: "Hestia in Greek tradition, Vesta in Roman. Hestia's name means 'hearth'. She was not a goddess who happened to be associated with the fireplace, she essentially was it. Rome took the idea considerably further: alongside the fire in every household, the state maintained a sacred hearth in the Forum, tended by priestesses known as the Vestals whose central duty was ensuring it never went out.",
   },
   {
     q: "Is a hearth keeper the same as a Hearth Keeper at dearhearth.com?",
-    a: "No, and the difference matters. The historical hearth keeper tended a literal fire. A Keeper at Hearth is a trained peer companion — a person matched to one member for the long term, who listens and stays consistent through grief, family pressure, identity questions and caregiving. We borrowed the metaphor because the shape of the job is similar: something that needs tending rather than fixing, and someone who stays with it. Keepers are not therapists and do not provide clinical care.",
+    a: "No, and the difference matters. The historical hearth keeper tended a literal fire. A Keeper at Hearth is a trained peer companion: a person matched to one member for the long term, who listens and stays consistent through grief, family pressure, identity questions and caregiving. We borrowed the metaphor because the shape of the job is similar: something that needs tending rather than fixing, and someone who stays with it. Keepers are not therapists and do not provide clinical care.",
   },
 ];
 
@@ -180,7 +180,7 @@ export default function WhatIsAHearthKeeperPage() {
               }}
             >
               A <strong>hearth keeper</strong> is the person who tends the
-              household fire — keeping it alive through the day, banking it
+              household fire: keeping it alive through the day, banking it
               overnight, coaxing it back each morning.
             </p>
             <p
@@ -194,8 +194,8 @@ export default function WhatIsAHearthKeeperPage() {
               It was ordinary, relentless, largely invisible work. Nobody
               thanked you for a fire that was still burning. They noticed
               immediately when it wasn&rsquo;t. The phrase survived the job
-              because that shape of work — continuous, unglamorous, holding
-              something together so everyone else can get on with their lives —
+              because that shape of work (continuous, unglamorous, holding
+              something together so everyone else can get on with their lives)
               never went anywhere.
             </p>
           </div>
@@ -215,7 +215,7 @@ export default function WhatIsAHearthKeeperPage() {
               It is difficult now to feel how much depended on a household fire.
               It was the only heat. It was the only way to cook. In the evening
               it was very nearly the only light, and it was the one place in the
-              building everyone gathered — not by preference but by physics,
+              building everyone gathered, not by preference but by physics,
               because it was the single warm spot in a cold structure.
             </p>
             <p
@@ -227,7 +227,7 @@ export default function WhatIsAHearthKeeperPage() {
               }}
             >
               Relighting it from nothing was genuinely hard work. Before friction
-              matches — a nineteenth-century invention — you were striking flint
+              matches (a nineteenth-century invention) you were striking flint
               against steel into tinder that had to be bone dry, in a house that
               very often wasn&rsquo;t. An hour of frustrated effort to recover
               something that should never have been allowed to lapse.
@@ -240,7 +240,7 @@ export default function WhatIsAHearthKeeperPage() {
                 marginTop: 20,
               }}
             >
-              So the fire was not allowed to lapse. It was <em>banked</em> —
+              So the fire was not allowed to lapse. It was <em>banked</em>:
               covered with ash at night so the embers held their heat until
               morning, when they could be uncovered and fed back into flame. That
               is the actual daily craft of hearth keeping, and it is why the job
@@ -258,7 +258,7 @@ export default function WhatIsAHearthKeeperPage() {
             >
               If it did go out, the usual remedy was to go next door and ask.
               Carrying live coals between houses was common enough to be
-              unremarkable — a neighbourly transaction that quietly reveals how
+              unremarkable, a neighbourly transaction that quietly reveals how
               interdependent households were about the one thing none of them
               could do without.
             </p>
@@ -291,8 +291,8 @@ export default function WhatIsAHearthKeeperPage() {
               }}
             >
               This made the hearth the household&rsquo;s altar. Offerings were
-              made there. It was customary to honour Hestia first and last — at
-              the beginning of a meal and at its end — which put a small act of
+              made there. It was customary to honour Hestia first and last, at
+              the beginning of a meal and at its end, which put a small act of
               devotion at either edge of every ordinary day. The women who ran
               the household generally held this duty, which meant the religious
               life of a Greek home ran through the same hands as its cooking.
@@ -308,7 +308,7 @@ export default function WhatIsAHearthKeeperPage() {
               Rome inherited the idea as <strong>Vesta</strong> and then took it
               much further. Alongside the fire in every private house, the state
               kept a sacred hearth in the Forum, and its flame was tended by
-              priestesses — the Vestals — whose defining responsibility was that
+              priestesses, the Vestals, whose defining responsibility was that
               it never be allowed to go out. Rome had taken a domestic chore and
               made it a matter of civic survival. The fire in the Forum was
               understood to stand for the continuity of Rome itself.
@@ -343,7 +343,7 @@ export default function WhatIsAHearthKeeperPage() {
                 }}
               >
                 Not a symbol of the fire. The actual fire. You could obviously
-                have lit a fresh one on arrival — but a new fire would have been
+                have lit a fresh one on arrival, but a new fire would have been
                 a different fire, and the point was that it should be the same
                 one. Continuity was the thing being moved.
               </p>
@@ -364,7 +364,7 @@ export default function WhatIsAHearthKeeperPage() {
             <p style={{ fontSize: 18, lineHeight: 1.75, color: "var(--ink-2)" }}>
               Central heating should have retired the phrase. It didn&rsquo;t.
               &ldquo;Keeper of the hearth&rdquo; is still in use, and it has
-              drifted a long way from fuel and ash — it now describes whoever
+              drifted a long way from fuel and ash. It now describes whoever
               holds a home or a family together. The person who notices what is
               running low. Who remembers which relative is not speaking to which.
               Who keeps the thread of a family&rsquo;s life from dropping.
@@ -409,7 +409,7 @@ export default function WhatIsAHearthKeeperPage() {
                   It is invisible when it works.
                 </strong>{" "}
                 Nobody remarks on a fire that is still burning. The work is only
-                ever noticed in its absence — which is the defining condition of
+                ever noticed in its absence, which is the defining condition of
                 most care.
               </li>
             </ul>
@@ -446,7 +446,7 @@ export default function WhatIsAHearthKeeperPage() {
             >
               The reason the old word fitted is the three properties above. The
               things people actually carry are continuous rather than episodic.
-              They want tending, not fixing — most of what weighs on a life is
+              They want tending, not fixing. Most of what weighs on a life is
               not a malfunction to be repaired. And the work of staying with
               someone through it is invisible precisely when it is going well.
             </p>
@@ -459,7 +459,7 @@ export default function WhatIsAHearthKeeperPage() {
               }}
             >
               And there is the fire carried between houses. What we are trying to
-              build is that, rather than the alternative — being handed to
+              build is that, rather than the alternative: being handed to
               whoever is free this week and starting the explanation from the
               beginning again. The same Keeper, who already knows the shape of
               your situation. Continuity is the product.
@@ -494,8 +494,8 @@ export default function WhatIsAHearthKeeperPage() {
                 . If you are in crisis, please use the{" "}
                 <Link href="/crisis" style={{ color: "var(--ember)" }}>
                   crisis resources
-                </Link>{" "}
-                — in the US call or text 988; in the UK, Samaritans on 116 123.
+                </Link>
+                . In the US call or text 988; in the UK, Samaritans on 116 123.
               </p>
             </div>
           </div>

@@ -170,7 +170,7 @@ export async function generateMetadata({
   if (!keeper) return { title: "Keeper · Hearth" };
   const first = keeper.name.split(" ")[0];
   const themes = keeper.themes.join(", ");
-  const title = `${keeper.name} — Hearth Keeper`;
+  const title = `${keeper.name}, Hearth Keeper`;
   const description = `${keeper.tagline} ${first} is a trained Hearth Keeper based in ${keeper.city}, supporting members through ${themes.toLowerCase()}.`;
   return {
     title,
@@ -205,7 +205,7 @@ export default async function KeeperProfile({
           __html: jsonLd([
             webPageLd({
               path: `/keepers/${keeper.slug}`,
-              name: `${keeper.name} — Hearth Keeper`,
+              name: `${keeper.name}, Hearth Keeper`,
               description: keeper.tagline,
               lastReviewed: "2026-05-14",
               primaryImage: keeper.photo,

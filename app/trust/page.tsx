@@ -3,12 +3,12 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "Trust & Security at Hearth — Encryption, Scope, Privacy",
+  title: "Trust & Security at Hearth: Encryption, Scope, Privacy",
   description:
     "AES-256 at rest, TLS 1.3 in transit, HIPAA-comparable infrastructure, magic-link auth, no data sales, no ad pixels. The eight promises we will not break.",
   alternates: { canonical: "/trust" },
   openGraph: {
-    title: "Trust & Security — Hearth",
+    title: "Trust & Security · Hearth",
     description:
       "How we protect your story. Encryption, scope discipline, and the things we will not do with your data.",
     url: "/trust",

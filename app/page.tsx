@@ -70,7 +70,7 @@ function HeroPhone() {
   }, [autoplay, active, runs]);
 
   const scenes = [
-    /* Mon — Paired */
+    /* Mon: Paired */
     <div className="ha-scene ha-scene-match" key="match">
       <div className="ha-match-head">
         <span className="ha-dot" /> Paired in 71 hours
@@ -98,7 +98,7 @@ function HeroPhone() {
       </div>
     </div>,
 
-    /* Wed — The Long Talk */
+    /* Wed: The Long Talk */
     <div className="ha-scene ha-scene-chat" key="chat">
       <div className="ha-chat-head">
         <span className="ha-chat-avatar">
@@ -136,7 +136,7 @@ function HeroPhone() {
       </div>
     </div>,
 
-    /* Fri — Reflection */
+    /* Fri: Reflection */
     <div className="ha-scene ha-scene-friday" key="friday">
       <div className="ha-friday-stamp">Friday Reflection &middot; from Aruna</div>
       <div className="ha-friday-author">
@@ -159,7 +159,7 @@ function HeroPhone() {
       <div className="ha-seal">&#10038;</div>
     </div>,
 
-    /* Sun — The Sit */
+    /* Sun: The Sit */
     <div className="ha-scene ha-scene-video" key="video">
       <div className="ha-vid-header">
         <span className="ha-rec" />
@@ -176,7 +176,7 @@ function HeroPhone() {
           <span />
           <span />
         </div>
-        <span className="ha-name">Aruna B. &mdash; Keeper</span>
+        <span className="ha-name">Aruna B. &middot; Keeper</span>
       </div>
       <div className="ha-vid-self">
         <div className="ha-portrait">
@@ -278,7 +278,7 @@ function Avatar({ id, size = 48 }: { id: AvatarId; size?: number }) {
       <circle cx="24" cy="20" r="11" fill={a.skin} />
       {/* Hair */}
       {hairEls[a.hairStyle]}
-      {/* Eyes — two bold dots */}
+      {/* Eyes: two bold dots */}
       <circle cx="19.5" cy="21" r="1.6" fill="#1A1412" />
       <circle cx="28.5" cy="21" r="1.6" fill="#1A1412" />
       {/* Eye highlights */}
@@ -405,10 +405,11 @@ export default function Home() {
                 to <span className="ember-word">carry it alone.</span>
               </h1>
               <p className="hero-sub">
-                <b>Someone who knows your whole story &mdash; and stays.</b>{" "}
-                A trained listener, matched to you: a video call every two
-                weeks, a chat thread in between, and a note from them every
-                Friday. Not therapy. Not a chatbot.
+                <b>Someone who knows your whole story. And stays.</b> A trained
+                listener, hand-matched to you and kept for years: a video call
+                every two weeks, a chat thread in between, and a note from them
+                every Friday. Not therapy. Not a chatbot. Not a different
+                counsellor every month.
               </p>
               <div className="hero-cta">
                 <Link href="/intake" className="btn btn-primary btn-lg">
@@ -887,7 +888,7 @@ export default function Home() {
                 <span className="per">/mo &middot; billed monthly</span>
               </div>
               <p style={{ fontSize: 13, color: "var(--ink-3)", marginBottom: 8, marginTop: -4 }}>
-                or $390/yr &mdash; 2 months free
+                or $390/yr (2 months free)
               </p>
               <ul>
                 <li>A 35&ndash;60 minute call with your Keeper, every two weeks</li>
@@ -932,7 +933,7 @@ export default function Home() {
                 <span className="per">/mo &middot; billed monthly</span>
               </div>
               <p style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", marginBottom: 8, marginTop: -4 }}>
-                or $990/yr &mdash; 2 months free
+                or $990/yr (2 months free)
               </p>
               <ul>
                 <li>Everything in the two-week plan</li>
@@ -953,9 +954,11 @@ export default function Home() {
           </div>
 
           <p className="price-context reveal">
-            For scale: therapy usually runs $400&ndash;1,200 a month. A Keeper
-            is $39.{" "}
-            <Link href="/pricing">Full pricing, extras and gifting &rarr;</Link>
+            For scale: therapy usually runs $400&ndash;1,200 a month, and a
+            therapy app can hand you a new counsellor any time. A Keeper is $39,
+            and stays.{" "}
+            <Link href="/pricing">Full pricing &rarr;</Link>
+            <Link href="/hearth-vs-betterhelp">Compare with BetterHelp &rarr;</Link>
           </p>
         </div>
       </section>
@@ -1012,7 +1015,7 @@ export default function Home() {
             </div>
           )}
 
-          {/* Step 1 — name + email */}
+          {/* Step 1: name + email */}
           {ctaStep === 1 && (
             <form
               onSubmit={(e) => { e.preventDefault(); setCtaStep(2); }}
@@ -1037,7 +1040,7 @@ export default function Home() {
             </form>
           )}
 
-          {/* Step 2 — what brings you here */}
+          {/* Step 2: what brings you here */}
           {ctaStep === 2 && (
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 20, width: "100%", maxWidth: 480, margin: "0 auto" }}>
               <p style={{ fontFamily: "var(--serif)", fontSize: 20, color: "var(--paper)", textAlign: "center", lineHeight: 1.4, margin: 0 }}>
@@ -1100,7 +1103,7 @@ export default function Home() {
             </div>
           )}
 
-          {/* Step 3 — confirmation */}
+          {/* Step 3: confirmation */}
           {ctaStep === 3 && (
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, marginTop: 8, textAlign: "center" }}>
               <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24 }}>
@@ -1113,7 +1116,7 @@ export default function Home() {
                 Expect an email at {ctaEmail} within 48 hours.
               </p>
               <Link href="/embers" style={{ fontFamily: "var(--mono)", fontSize: 13, letterSpacing: "0.08em", color: "#FFB74D", textDecoration: "underline", marginTop: 8 }}>
-                While you wait &mdash; read an Ember &rarr;
+                While you wait, read an Ember &rarr;
               </Link>
               <Link href="/gift" className="btn btn-ghost btn-lg" style={{ marginTop: 8 }}>
                 Light a Hearth for someone

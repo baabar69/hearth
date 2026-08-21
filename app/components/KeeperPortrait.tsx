@@ -37,7 +37,7 @@ export default function KeeperPortrait({
       {showPhoto ? (
         <Image
           src={photo}
-          alt={`${name} — Hearth Keeper`}
+          alt={`${name}, Hearth Keeper`}
           fill
           sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw"
           style={{ objectFit: "cover" }}

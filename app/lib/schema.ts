@@ -10,7 +10,7 @@ export function jsonLd(obj: JsonLd | JsonLd[]): string {
   return JSON.stringify(obj);
 }
 
-/** BreadcrumbList — supply pairs from root downward. */
+/** BreadcrumbList: supply pairs from root downward. */
 export function breadcrumbLd(
   items: Array<{ name: string; path: string }>
 ): JsonLd {

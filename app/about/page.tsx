@@ -4,14 +4,14 @@ import SharedFooter from "../components/SharedFooter";
 import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 
 export const metadata = {
-  title: "About Hearth — Why we built paired, long-term peer support",
+  title: "About Hearth: Why we built paired, long-term peer support",
   description:
     "Hearth exists to restore the elder a generation never had: trained, paid companionship for the recurring weight of a life. The story, the model, and how we think about scope.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Hearth — Why paired peer support",
+    title: "About Hearth: Why paired peer support",
     description:
-      "Why Hearth exists and how it works. Paired, trained, long-term peer support — not therapy, not a streak.",
+      "Why Hearth exists and how it works. Paired, trained, long-term peer support. Not therapy, not a streak.",
     url: "/about",
     type: "website",
   },
@@ -157,7 +157,7 @@ export default function AboutPage() {
                 a crisis line. We are the people who pull up a chair and stay
                 in the room with you. We are the long talk.&rdquo;
               </p>
-              <span className="sig">&mdash; Founder&rsquo;s letter, 2024</span>
+              <span className="sig">Founder&rsquo;s letter, 2024</span>
             </div>
           </div>
         </div>

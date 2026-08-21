@@ -148,7 +148,7 @@ Thank you for trusting us with this. A real person on our team is reading your a
 
 Expect a note from us within 48 hours.
 
-— Hearth`;
+Hearth`;
 
   return { subject, html, text };
 }

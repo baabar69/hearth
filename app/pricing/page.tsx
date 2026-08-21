@@ -14,12 +14,12 @@ import {
 } from "../lib/schema";
 
 export const metadata = {
-  title: "Hearth Pricing — $39/mo Peer Support, $99/mo Weekly Sits",
+  title: "Hearth Pricing: $39/mo Peer Support, $99/mo Weekly Sits",
   description:
     "Hearthside is $39/month (biweekly Sits). Hearth Deep is $99/month (weekly Sits). 60% goes to your Keeper. Cancel any time in one click.",
   alternates: { canonical: "/pricing" },
   openGraph: {
-    title: "Hearth Pricing — $39/mo or $99/mo",
+    title: "Hearth Pricing: $39/mo or $99/mo",
     description:
       "Two tiers. Biweekly or weekly Sits. Unlimited Long Talk. Cancel any time.",
     url: "/pricing",
@@ -138,7 +138,7 @@ export default function PricingPage() {
                   marginBottom: 4,
                 }}
               >
-                Or $390/yr &mdash; save 2 months
+                Or $390/yr (save 2 months)
               </div>
               <ul>
                 <li>Matched Keeper, paired in 72 hours or we keep looking</li>
@@ -180,7 +180,7 @@ export default function PricingPage() {
                   marginBottom: 4,
                 }}
               >
-                Or $990/yr &mdash; save 2 months
+                Or $990/yr (save 2 months)
               </div>
               <ul>
                 <li>Everything in Hearthside</li>
@@ -201,7 +201,7 @@ export default function PricingPage() {
             </div>
           </div>
 
-          {/* WHAT $39 GETS YOU — IN CONTEXT */}
+          {/* WHAT $39 GETS YOU: IN CONTEXT */}
           <div style={{ marginTop: 80, paddingTop: 48, borderTop: "1px solid var(--rule-2)" }}>
             <div className="eyebrow" style={{ marginBottom: 18 }}>
               <span className="dot" />

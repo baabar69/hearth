@@ -4,12 +4,12 @@ import SharedFooter from "../components/SharedFooter";
 import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 
 export const metadata = {
-  title: "Hearth vs. Therapy — Honest Comparison & When to Choose Each",
+  title: "Hearth vs. Therapy: Honest Comparison & When to Choose Each",
   description:
     "Hearth is peer support, not therapy. A side-by-side comparison: what each does, what they cost, who they fit, and when to use both. Written by Hearth.",
   alternates: { canonical: "/hearth-vs-therapy" },
   openGraph: {
-    title: "Hearth vs. Therapy — The Honest Comparison",
+    title: "Hearth vs. Therapy: The Honest Comparison",
     description:
       "When therapy is the right tool, when Hearth is, and when you need both. Side by side.",
     url: "/hearth-vs-therapy",
@@ -729,7 +729,14 @@ export default function HearthVsTherapyPage() {
                 href="/learn/peer-support-vs-therapy"
                 style={{ color: "#FFD7B5", textDecoration: "underline" }}
               >
-                Peer support vs. therapy — the honest difference
+                Peer support vs. therapy: the honest difference
+              </Link>
+              {" · "}
+              <Link
+                href="/hearth-vs-betterhelp"
+                style={{ color: "#FFD7B5", textDecoration: "underline" }}
+              >
+                Hearth vs. BetterHelp
               </Link>
               .
             </p>

@@ -36,7 +36,7 @@ export default async function CheckoutPage({
   const returnUrl = welcomeUrl();
 
   // Whop rejects redirect_url unless it starts with https://. Skip it for local
-  // http dev — the embed's client-side returnUrl prop handles the redirect.
+  // http dev: the embed's client-side returnUrl prop handles the redirect.
   const serverRedirectUrl = returnUrl.startsWith("https://")
     ? returnUrl
     : undefined;
@@ -97,7 +97,7 @@ export default async function CheckoutPage({
               }}
             >
               Cancel any time, in one click. Your card is processed securely by
-              Whop &mdash; we never see it.
+              Whop; we never see it.
             </p>
           </div>
 

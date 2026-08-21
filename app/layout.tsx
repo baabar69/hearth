@@ -4,9 +4,9 @@ import ExitPopup from "./components/ExitPopup";
 
 const SITE_URL = "https://dearhearth.com";
 const SITE_NAME = "Hearth";
-const DEFAULT_TITLE = "Hearth — Peer support, paired for the long term";
+const DEFAULT_TITLE = "Hearth: The Private Alternative to Therapy Apps";
 const DEFAULT_DESCRIPTION =
-  "Hearth pairs you with the same trained Keeper for the long term — peer support (not therapy) for grief, family pressure, identity, caregiving, and the in-between. From $39/month, cancel any time.";
+  "One trained Keeper, hand-matched to you and kept for years. A video call every two weeks, a chat thread in between, a note every Friday. Peer support, not therapy. From $39 a month.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Hearth — Peer support, paired for the long term.",
+        alt: "Hearth: the private alternative to therapy apps.",
       },
     ],
   },
@@ -126,7 +126,7 @@ const ORGANIZATION_LD = {
     "Family dynamics",
   ],
   // Only list profiles that actually resolve. A sameAs pointing at a 404 is a
-  // failed entity claim, not a neutral one — x.com/dearhearth was unclaimed and
+  // failed entity claim, not a neutral one: x.com/dearhearth was unclaimed and
   // has been removed until it exists.
   sameAs: [
     "https://www.linkedin.com/company/dearhearth",

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 /* ============================================================
-   HEARTH — The Cairn
+   HEARTH: The Cairn
    Ported from Claude Design (logos-v10.jsx · Round 10).
 
    Three stacked stones. A wayfinder. Cairns mark trails, summits,
@@ -285,7 +285,7 @@ export type HearthWordmarkProps = {
   italic?: boolean;
 };
 
-/** Type-set Fraunces italic wordmark — used as a fallback in tight spaces. */
+/** Type-set Fraunces italic wordmark: used as a fallback in tight spaces. */
 export function HearthWordmark({
   size = 28,
   color = PALETTE.ink,
@@ -313,7 +313,7 @@ export function HearthWordmark({
 export type HearthDrawnWordmarkProps = {
   /** rendered height in pixels (width auto-scales by aspect ratio) */
   height?: number;
-  /** fill color — defaults to ink */
+  /** fill color: defaults to ink */
   color?: string;
   className?: string;
   /** if true, animate in (fade + slide up) once on mount */
@@ -324,7 +324,7 @@ export type HearthDrawnWordmarkProps = {
  * The hand-drawn calligraphic "hearth" wordmark.
  *
  * Sourced from a custom-lettered PNG, vectorized via potrace. Renders via CSS
- * `mask-image` so a single SVG file can be re-colored for any background —
+ * `mask-image` so a single SVG file can be re-colored for any background -
  * just pass `color` (ink for light backgrounds, paper for dark, ember for
  * accent surfaces).
  *
@@ -384,7 +384,7 @@ export function HearthDrawnWordmark({
 }
 
 export type HearthLockupProps = {
-  /** wordmark size — interpreted as height for "drawn", font-size for "font" */
+  /** wordmark size: interpreted as height for "drawn", font-size for "font" */
   size?: number;
   /** mark height = size × markRatio. Defaults to 1.5 (cairn slightly taller than wordmark) */
   markRatio?: number;
@@ -402,7 +402,7 @@ export type HearthLockupProps = {
   intro?: boolean;
 };
 
-/** Horizontal lockup — cairn beside wordmark. Used in the nav. */
+/** Horizontal lockup: cairn beside wordmark. Used in the nav. */
 export function HearthLockup({
   size = 24,
   markRatio = 1.5,

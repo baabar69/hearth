@@ -24,7 +24,7 @@ export default function SharedNav() {
     <>
       <header className="nav">
         <div className="wrap nav-inner">
-          <Link href="/" className="brand" aria-label="Hearth — home">
+          <Link href="/" className="brand" aria-label="Hearth, home">
             <HearthLockup
               size={26}
               markRatio={1.4}
@@ -97,7 +97,7 @@ export default function SharedNav() {
                 color: "var(--paper)",
                 textDecoration: "none",
               }}
-              aria-label="Hearth — home"
+              aria-label="Hearth, home"
             >
               <HearthCairn size={36} onDark animated />
               <HearthDrawnWordmark height={26} color="#F2EDE5" />

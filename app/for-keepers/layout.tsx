@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Become a Hearth Keeper — Paid Peer Support Work",
+  title: "Become a Hearth Keeper: Paid Peer Support Work",
   description:
     "Apply to become a Hearth Keeper. Paid peer-support work, 120 hours of training, monthly supervision, 60% of every membership fee. Fewer than 8% of applicants are accepted.",
   alternates: { canonical: "/for-keepers" },
