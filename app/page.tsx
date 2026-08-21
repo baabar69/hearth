@@ -28,18 +28,216 @@ function RevealOnScroll() {
   return null;
 }
 
-function HeroDots() {
+const HERO_SCENES = [
+  { day: "Mon", label: "Paired", tone: "light" },
+  { day: "Wed", label: "Long Talk", tone: "light" },
+  { day: "Fri", label: "Reflection", tone: "light" },
+  { day: "Sun", label: "The Sit", tone: "dark" },
+] as const;
+const HERO_SCENE_MS = 6000;
+
+function HeroPhone() {
+  const [active, setActive] = useState(0);
+  // Per-scene run counters. Bumping one remounts that scene so its inner
+  // animations replay each time it comes on screen; the outgoing scene keeps
+  // its key, so it can still fade out.
+  const [runs, setRuns] = useState<number[]>(() =>
+    HERO_SCENES.map(() => 0)
+  );
+  const [autoplay, setAutoplay] = useState(true);
+
+  const go = (i: number) => {
+    setActive(i);
+    setRuns((r) => r.map((v, k) => (k === i ? v + 1 : v)));
+  };
+
   useEffect(() => {
-    const dots = document.querySelectorAll(".ha-pdot");
-    if (!dots.length) return;
-    let i = 0;
-    const interval = setInterval(() => {
-      i = (i + 1) % 6;
-      dots.forEach((d, idx) => d.classList.toggle("active", idx === i));
-    }, 4000);
-    return () => clearInterval(interval);
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const apply = () => setAutoplay(!mq.matches);
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
   }, []);
-  return null;
+
+  useEffect(() => {
+    if (!autoplay) return;
+    const t = setTimeout(
+      () => go((active + 1) % HERO_SCENES.length),
+      HERO_SCENE_MS
+    );
+    return () => clearTimeout(t);
+    // `runs` changes on every manual jump, which restarts the countdown.
+  }, [autoplay, active, runs]);
+
+  const scenes = [
+    /* Mon — Paired */
+    <div className="ha-scene ha-scene-match" key="match">
+      <div className="ha-match-head">
+        <span className="ha-dot" /> Paired in 71 hours
+      </div>
+      <div className="ha-match-stamp">We found your Keeper.</div>
+      <div className="ha-portrait-wrap">
+        <div className="ha-portrait">
+          <Avatar id="aruna" size={112} />
+        </div>
+        <div className="ha-glow-ring" />
+      </div>
+      <div className="ha-match-name">
+        Aruna <em>Bhattacharya</em>
+      </div>
+      <div className="ha-match-meta">
+        Toronto &middot; English &middot; Founding Keeper
+      </div>
+      <div className="ha-match-tags">
+        <span>Transitions</span>
+        <span>Family</span>
+        <span>Caregiving</span>
+      </div>
+      <div className="ha-match-next">
+        First Sit &middot; <b>Sunday, 7 PM</b>
+      </div>
+    </div>,
+
+    /* Wed — The Long Talk */
+    <div className="ha-scene ha-scene-chat" key="chat">
+      <div className="ha-chat-head">
+        <span className="ha-chat-avatar">
+          <Avatar id="aruna" size={36} />
+        </span>
+        <div>
+          <div className="ha-chat-title">Aruna B.</div>
+          <div className="ha-chat-sub">
+            <span className="ha-dot" /> The Long Talk &middot; online
+          </div>
+        </div>
+      </div>
+      <div className="ha-msg ha-msg-them">
+        My mother brought it up again. I don&rsquo;t know how to be honest
+        without lighting the whole evening on fire.
+      </div>
+      <div className="ha-msg ha-msg-me">
+        Heard. Two questions before you decide anything: what does <i>she</i>{" "}
+        think she&rsquo;s protecting?
+      </div>
+      <div className="ha-typing">
+        <span />
+        <span />
+        <span />
+      </div>
+      <div className="ha-msg ha-msg-them late">
+        Oh. I never asked it like that.
+      </div>
+      <div className="ha-chat-compose">
+        <span>Write back&hellip;</span>
+        <span className="ha-chat-send">&uarr;</span>
+      </div>
+    </div>,
+
+    /* Fri — Reflection */
+    <div className="ha-scene ha-scene-friday" key="friday">
+      <div className="ha-friday-stamp">Friday Reflection &middot; from Aruna</div>
+      <div className="ha-friday-author">
+        <div className="ha-friday-avatar">
+          <Avatar id="aruna" size={38} />
+        </div>
+        <div>
+          <div className="ha-friday-name">Aruna Bhattacharya</div>
+          <div className="ha-friday-when">Friday &middot; 7:14 AM</div>
+        </div>
+      </div>
+      <div className="ha-friday-body">
+        <p>You said you wanted to stop performing.</p>
+        <p>
+          I noticed you laughed three times this week when something
+          wasn&rsquo;t actually funny.
+        </p>
+        <p>Bring that to Sunday&rsquo;s Sit if you want.</p>
+      </div>
+      <div className="ha-seal">&#10038;</div>
+    </div>,
+
+    /* Sun — The Sit */
+    <div className="ha-scene ha-scene-video" key="video">
+      <div className="ha-vid-header">
+        <span className="ha-rec" />
+        <span className="ha-vid-title">The Sit &middot; with Aruna</span>
+        <span className="ha-vid-time">12:04</span>
+      </div>
+      <div className="ha-vid-keeper">
+        <div className="ha-portrait">
+          <Avatar id="aruna" size={160} />
+        </div>
+        <div className="ha-talking-bars">
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
+        <span className="ha-name">Aruna B. &mdash; Keeper</span>
+      </div>
+      <div className="ha-vid-self">
+        <div className="ha-portrait">
+          <Avatar id="you" size={60} />
+        </div>
+        <span className="ha-name">You</span>
+      </div>
+      <div className="ha-caption">
+        &ldquo;What&rsquo;s the smallest true thing you can say
+        tonight?&rdquo;
+      </div>
+    </div>,
+  ];
+
+  return (
+    <div className="hero-anim">
+      <div className="ha-stage" aria-hidden="true">
+        <div className="ha-phone" data-tone={HERO_SCENES[active].tone}>
+          <div className="ha-status">
+            <span className="ha-time">9:42</span>
+            <span className="ha-batt" />
+          </div>
+          <div className="ha-screen">
+            {scenes.map((scene, i) => (
+              <div
+                key={`${i}-${runs[i]}`}
+                className={`ha-scene-slot${i === active ? " active" : ""}`}
+              >
+                {scene}
+              </div>
+            ))}
+          </div>
+        </div>
+        <span className="ha-spark s1" />
+        <span className="ha-spark s2" />
+        <span className="ha-spark s3" />
+        <span className="ha-spark s4" />
+      </div>
+
+      <div className="ha-cap" id="ha-cap">
+        A week with your Keeper
+      </div>
+      <div className="ha-tabs" role="group" aria-labelledby="ha-cap">
+        {HERO_SCENES.map((s, i) => (
+          <button
+            key={s.day}
+            type="button"
+            className={`ha-tab${i === active ? " active" : ""}${
+              i < active ? " done" : ""
+            }`}
+            aria-pressed={i === active}
+            aria-label={`${s.day}: ${s.label}`}
+            onClick={() => go(i)}
+          >
+            <span className="ha-tab-day">{s.day}</span>
+            <span className="ha-tab-label">{s.label}</span>
+            <span className="ha-tab-bar">
+              <span key={runs[i]} className="ha-tab-fill" />
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 type AvatarId = 'aruna'|'you'|'maleA'|'maleB'|'femaleA'|'femaleB';
@@ -183,7 +381,6 @@ export default function Home() {
   return (
     <>
       <RevealOnScroll />
-      <HeroDots />
       <SmoothScroll />
 
       <SharedNav />
@@ -233,224 +430,7 @@ export default function Home() {
             </div>
 
             <div className="hero-meta">
-              {/* HERO ANIMATION */}
-              <div className="hero-anim" aria-hidden="true">
-                <div className="ha-stage">
-                  <div className="ha-phone">
-                    <div className="ha-status">
-                      <span className="ha-time">9:42</span>
-                      <span className="ha-batt" />
-                    </div>
-                    <div className="ha-screen">
-                      {/* Scene 1: Pairing */}
-                      <div
-                        className="ha-scene ha-scene-match"
-                        data-scene="1"
-                      >
-                        <div className="ha-match-head">
-                          <span className="ha-dot" /> Pairing complete &middot;
-                          71 hrs
-                        </div>
-                        <div className="ha-match-stamp">
-                          We found your Keeper
-                        </div>
-                        <div className="ha-portrait-wrap">
-                          <div className="ha-portrait" />
-                          <div className="ha-glow-ring" />
-                        </div>
-                        <div className="ha-match-name">
-                          Aruna <em>Bhattacharya</em>
-                        </div>
-                        <div className="ha-match-meta">
-                          Toronto &middot; English
-                          <br />Founding Keeper
-                        </div>
-                        <div className="ha-match-tags">
-                          <span>Transitions</span>
-                          <span>Family</span>
-                          <span>Caregiving</span>
-                        </div>
-                      </div>
-
-                      {/* Scene 2: Video Sit */}
-                      <div
-                        className="ha-scene ha-scene-video"
-                        data-scene="2"
-                      >
-                        <div className="ha-vid-header">
-                          <span className="ha-rec" />
-                          <span className="ha-vid-title">
-                            The Sit &middot; with Aruna
-                          </span>
-                          <span className="ha-vid-time">12:04</span>
-                        </div>
-                        <div className="ha-vid-keeper">
-                          <div className="ha-portrait" />
-                          <div className="ha-talking-bars">
-                            <span />
-                            <span />
-                            <span />
-                            <span />
-                          </div>
-                          <span className="ha-name">
-                            Aruna B. &mdash; Keeper
-                          </span>
-                        </div>
-                        <div className="ha-vid-self">
-                          <div className="ha-portrait" />
-                          <span className="ha-name">You</span>
-                        </div>
-                        <div className="ha-caption">
-                          &ldquo;What&rsquo;s the smallest true thing you can
-                          say tonight?&rdquo;
-                        </div>
-                      </div>
-
-                      {/* Scene 3: Long Talk Chat */}
-                      <div
-                        className="ha-scene ha-scene-chat"
-                        data-scene="3"
-                      >
-                        <div className="ha-chat-head">
-                          <span className="ha-chat-avatar" />
-                          <div>
-                            <div className="ha-chat-title">Aruna B.</div>
-                            <div className="ha-chat-sub">
-                              <span className="ha-dot" /> The Long Talk &middot;
-                              online
-                            </div>
-                          </div>
-                        </div>
-                        <div className="ha-msg ha-msg-them">
-                          My mother brought it up again. I don&rsquo;t know how
-                          to be honest without lighting the whole evening on
-                          fire.
-                        </div>
-                        <div className="ha-msg ha-msg-me">
-                          Heard. Two questions before you decide anything: what
-                          does <i>she</i> think she&rsquo;s protecting?
-                        </div>
-                        <div className="ha-typing">
-                          <span />
-                          <span />
-                          <span />
-                        </div>
-                        <div className="ha-msg ha-msg-them late">
-                          Oh. I never asked it like that.
-                        </div>
-                      </div>
-
-                      {/* Scene 4: Friday Reflection */}
-                      <div
-                        className="ha-scene ha-scene-friday"
-                        data-scene="4"
-                      >
-                        <div className="ha-friday-stamp">
-                          Friday Reflection &middot; from Aruna
-                        </div>
-                        <div className="ha-friday-author">
-                          <div className="ha-friday-avatar" />
-                          <div>
-                            <div className="ha-friday-name">
-                              Aruna Bhattacharya
-                            </div>
-                            <div className="ha-friday-when">
-                              Friday &middot; 7:14 AM
-                            </div>
-                          </div>
-                        </div>
-                        <div className="ha-friday-body">
-                          <p>You said you wanted to stop performing.</p>
-                          <p>
-                            I noticed you laughed three times this week when
-                            something wasn&rsquo;t actually funny.
-                          </p>
-                          <p>
-                            Bring that to Sunday&rsquo;s Sit if you want.
-                          </p>
-                        </div>
-                        <div className="ha-seal">&#10038;</div>
-                      </div>
-
-                      {/* Scene 5: Circle Gathering */}
-                      <div
-                        className="ha-scene ha-scene-circle"
-                        data-scene="5"
-                      >
-                        <div className="ha-circle-head">
-                          <span className="ha-dot" /> Tonight&rsquo;s Circle
-                          &middot; Eldest Daughters
-                        </div>
-                        <div className="ha-circle-grid">
-                          <div className="ha-circle-tile">
-                            <div className="ha-portrait" />
-                            <span className="ha-circle-host">HOST</span>
-                          </div>
-                          <div className="ha-circle-tile">
-                            <div className="ha-portrait" />
-                          </div>
-                          <div className="ha-circle-tile">
-                            <div className="ha-portrait" />
-                          </div>
-                          <div className="ha-circle-tile">
-                            <div className="ha-portrait" />
-                          </div>
-                          <div className="ha-circle-tile">
-                            <div className="ha-portrait" />
-                          </div>
-                          <div className="ha-circle-tile">
-                            <div className="ha-portrait" />
-                            <span
-                              className="ha-circle-host"
-                              style={{ background: "var(--sage)" }}
-                            >
-                              YOU
-                            </span>
-                          </div>
-                        </div>
-                        <div className="ha-circle-cap">
-                          &ldquo;The mother you became, the mother you
-                          had.&rdquo;
-                        </div>
-                      </div>
-
-                      {/* Scene 6: End */}
-                      <div className="ha-scene ha-scene-end" data-scene="6">
-                        <div className="ha-end-face">
-                          <div className="ha-portrait ha-portrait-big" />
-                          <div className="ha-glow" />
-                        </div>
-                        <div className="ha-end-line">
-                          You weren&rsquo;t
-                          <br />
-                          meant to carry it
-                          <br />
-                          <em>alone.</em>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Floating ember sparks */}
-                  <span className="ha-spark s1" />
-                  <span className="ha-spark s2" />
-                  <span className="ha-spark s3" />
-                  <span className="ha-spark s4" />
-                </div>
-
-                {/* Scene progress dots */}
-                <div className="ha-dots">
-                  <span className="ha-pdot active" data-i="1" />
-                  <span className="ha-pdot" data-i="2" />
-                  <span className="ha-pdot" data-i="3" />
-                  <span className="ha-pdot" data-i="4" />
-                  <span className="ha-pdot" data-i="5" />
-                  <span className="ha-pdot" data-i="6" />
-                </div>
-                <div className="ha-cap">
-                  A week with your Keeper
-                </div>
-              </div>
+              <HeroPhone />
             </div>
           </div>
 
