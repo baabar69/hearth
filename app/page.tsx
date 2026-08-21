@@ -94,7 +94,7 @@ function HeroPhone() {
         <span>Caregiving</span>
       </div>
       <div className="ha-match-next">
-        First Sit &middot; <b>Sunday, 7 PM</b>
+        Sunday&rsquo;s Sit &middot; <b>7 PM</b>
       </div>
     </div>,
 
@@ -119,13 +119,16 @@ function HeroPhone() {
         Heard. Two questions before you decide anything: what does <i>she</i>{" "}
         think she&rsquo;s protecting?
       </div>
-      <div className="ha-typing">
-        <span />
-        <span />
-        <span />
-      </div>
-      <div className="ha-msg ha-msg-them late">
-        Oh. I never asked it like that.
+      {/* The typing bubble sits in the slot the last message will fill. */}
+      <div className="ha-chat-tail">
+        <div className="ha-typing">
+          <span />
+          <span />
+          <span />
+        </div>
+        <div className="ha-msg ha-msg-them late">
+          Oh. I never asked it like that.
+        </div>
       </div>
       <div className="ha-chat-compose">
         <span>Write back&hellip;</span>
@@ -401,10 +404,17 @@ export default function Home() {
                 <br />
                 to <span className="ember-word">carry it alone.</span>
               </h1>
+              <p className="hero-sub">
+                <b>Someone who knows your whole story &mdash; and stays.</b>{" "}
+                A trained listener, matched to you: a video call every two
+                weeks, a chat thread in between, and a note from them every
+                Friday. Not therapy. Not a chatbot.
+              </p>
               <div className="hero-cta">
-                <a href="#cta" className="btn btn-primary btn-lg">
-                  Find your Keeper <span className="arr">&rarr;</span>
-                </a>
+                <Link href="/intake" className="btn btn-primary btn-lg">
+                  Start the 12-minute intake{" "}
+                  <span className="arr">&rarr;</span>
+                </Link>
                 <a href="#keepers" className="btn btn-ghost btn-lg">
                   Meet the Keepers
                 </a>
@@ -412,19 +422,15 @@ export default function Home() {
               <div className="hero-tag">
                 <span>
                   <span className="dot" />
-                  Trained Keeper, matched in 72 hours
+                  Matched within 72 hours
                 </span>
                 <span>
                   <span className="dot" />
-                  From $39 / month
+                  Switch Keepers free in the first 30 days
                 </span>
                 <span>
                   <span className="dot" />
                   Cancel any time
-                </span>
-                <span>
-                  <span className="dot" />
-                  Not therapy. By design.
                 </span>
               </div>
             </div>
@@ -455,87 +461,93 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TRUST STRIP */}
-      <section className="trust-strip">
+      {/* WHAT YOU GET */}
+      <section className="how" id="what-you-get">
         <div className="wrap">
-          <div className="trust-grid reveal">
-            <div className="trust-item">
-              <div className="trust-icon">{"\u2260"}</div>
-              <div>
-                <div className="eyebrow">
-                  <span className="dot" />
-                  Is this therapy? No.
-                </div>
-                <p
-                  style={{
-                    marginTop: 10,
-                    color: "var(--ink-2)",
-                    fontSize: 15,
-                    lineHeight: 1.55,
-                  }}
-                >
-                  Hearth is peer support. Not therapy, not medical
-                  advice. We say it plainly because the difference is a
-                  feature, not a limitation. When something needs a clinician,
-                  your Keeper walks you to The Bridge.
-                </p>
+          <div className="sec-head reveal">
+            <div>
+              <div className="eyebrow">
+                <span className="dot" />
+                What you get
               </div>
+              <h2 style={{ marginTop: 18 }}>
+                One person, yours.{" "}
+                <span className="serif-i" style={{ color: "var(--ember)" }}>
+                  Here&rsquo;s what that means.
+                </span>
+              </h2>
             </div>
-            <div className="trust-item">
-              <div className="trust-icon">×</div>
-              <div>
-                <div className="eyebrow">
-                  <span className="dot" />
-                  Cancel in one click
-                </div>
-                <p
-                  style={{
-                    marginTop: 10,
-                    color: "var(--ink-2)",
-                    fontSize: 15,
-                    lineHeight: 1.55,
-                  }}
-                >
-                  No exit interview, no friction, no dark patterns. Cancel
-                  any time and you keep access through the end of the
-                  billing period you&rsquo;ve already paid for.
-                </p>
-              </div>
+            <p className="lede">
+              No streaks, no badges, no app telling you how to feel. A
+              Keeper is a person who knows your story, on a schedule you can
+              count on. Three things, every time.
+            </p>
+          </div>
+
+          <div className="steps three reveal">
+            <div className="step">
+              <div className="num">THE SIT &middot; 35&ndash;60 MIN</div>
+              <div className="glyph">&#9004;</div>
+              <h3>A video call every two weeks</h3>
+              <p>
+                Thirty-five to sixty minutes with your Keeper, on video or just
+                audio. Same person, same time, every two weeks. Every week on
+                the $99 plan.
+              </p>
             </div>
-            <div className="trust-item">
-              <div className="trust-icon">{"\u2713"}</div>
-              <div>
-                <div className="eyebrow">
-                  <span className="dot" />
-                  Every Keeper vetted
-                </div>
-                <p
-                  style={{
-                    marginTop: 10,
-                    color: "var(--ink-2)",
-                    fontSize: 15,
-                    lineHeight: 1.55,
-                  }}
-                >
-                  120-hour Keeper training. Sensitivity and scope review.
-                  Crisis protocol certification. Monthly peer supervision.
-                  Background-checked. Paid professionals, not
-                  volunteers.
-                </p>
-              </div>
+            <div className="step">
+              <div className="num">THE LONG TALK &middot; CHAT</div>
+              <div className="glyph">&#8767;</div>
+              <h3>A chat thread in between</h3>
+              <p>
+                Text, voice notes, photos, whenever something comes up. Your
+                Keeper replies within a day. Slow on purpose: a thread, not a
+                feed.
+              </p>
             </div>
+            <div className="step">
+              <div className="num">FRIDAY REFLECTION &middot; NOTE</div>
+              <div className="glyph">&#10038;</div>
+              <h3>A note from them every Friday</h3>
+              <p>
+                A few lines from your Keeper each Friday: what they noticed
+                this week, what stayed with them. Small, specific, yours to
+                keep.
+              </p>
+            </div>
+          </div>
+
+          <div className="how-start reveal">
+            <div className="how-start-steps">
+              <span>
+                <b>01</b> A 12-minute intake
+              </span>
+              <span className="sep">&rarr;</span>
+              <span>
+                <b>02</b> Matched with a Keeper within 72 hours
+              </span>
+              <span className="sep">&rarr;</span>
+              <span>
+                <b>03</b> Your first call on the calendar
+              </span>
+            </div>
+            <p className="how-start-note">
+              And if something ever needs a therapist, your Keeper helps you
+              find one.{" "}
+              <Link href="/how-it-works">How it works, in detail &rarr;</Link>
+            </p>
           </div>
         </div>
       </section>
 
-      {/* BRING IT HERE */}
+      {/* IS THIS FOR YOU */}
       <section className="bring" id="bring">
         <div className="wrap">
           <div className="sec-head reveal">
             <div>
               <div className="eyebrow">
                 <span className="dot" />
-                What people bring here
+                Is this for you?
               </div>
               <h2 style={{ marginTop: 18 }}>
                 The weight that doesn&rsquo;t fit{" "}
@@ -545,15 +557,15 @@ export default function Home() {
               </h2>
             </div>
             <p className="lede">
-              Not diagnoses. Not emergencies. The real, recurring weight of a
-              life between families, expectations, and the seasons that come
-              for everyone. The things you carry every week.
+              Not emergencies. Not diagnoses. The everyday weight: family,
+              grief, caregiving, the in-between years. The things you carry
+              every week.
             </p>
           </div>
 
-          <div className="bring-grid reveal">
+          <div className="bring-grid six reveal">
             <Link href="/for/family-pressure" className="bring-card bring-card-link">
-              <div className="bring-icon">{"\u2302"}</div>
+              <div className="bring-icon">{"⌂"}</div>
               <h4>Family pressure</h4>
               <p>
                 The call that ruins your Sunday. Expectations that don&rsquo;t
@@ -562,7 +574,7 @@ export default function Home() {
               </p>
             </Link>
             <Link href="/for/grief" className="bring-card bring-card-link">
-              <div className="bring-icon">{"\u2736"}</div>
+              <div className="bring-icon">{"✶"}</div>
               <h4>Grief &amp; loss</h4>
               <p>
                 The kind that arrives on time and the kind that shows up ten
@@ -570,23 +582,15 @@ export default function Home() {
               </p>
             </Link>
             <div className="bring-card">
-              <div className="bring-icon">{"\u2661"}</div>
+              <div className="bring-icon">{"♡"}</div>
               <h4>Caregiving burnout</h4>
               <p>
                 Holding everyone else together while quietly falling apart.
                 The guilt of needing your own chair.
               </p>
             </div>
-            <Link href="/for/identity" className="bring-card bring-card-link">
-              <div className="bring-icon">{"\u2316"}</div>
-              <h4>Identity &amp; belonging</h4>
-              <p>
-                Too much of one thing, not enough of the other. Code-switching
-                so often you forget which version is real.
-              </p>
-            </Link>
             <div className="bring-card">
-              <div className="bring-icon">{"\u2318"}</div>
+              <div className="bring-icon">{"⌘"}</div>
               <h4>Career crossroads</h4>
               <p>
                 The job your family wanted vs. the life you actually want.
@@ -594,15 +598,7 @@ export default function Home() {
               </p>
             </div>
             <div className="bring-card">
-              <div className="bring-icon">{"\u29BF"}</div>
-              <h4>Relationship weight</h4>
-              <p>
-                The things you can&rsquo;t say to the person you sleep next to.
-                Partnerships bending under unspoken rules.
-              </p>
-            </div>
-            <div className="bring-card">
-              <div className="bring-icon">{"\u2609"}</div>
+              <div className="bring-icon">{"☉"}</div>
               <h4>Loneliness</h4>
               <p>
                 Not the kind that means you have no friends. The kind that means
@@ -610,95 +606,25 @@ export default function Home() {
               </p>
             </div>
             <div className="bring-card">
-              <div className="bring-icon">{"\u2740"}</div>
-              <h4>Wedding season</h4>
-              <p>
-                The questions. The comparisons. The timeline your family runs
-                that you never agreed to.
-              </p>
-            </div>
-            <div className="bring-card">
-              <div className="bring-icon">{"\u2726"}</div>
-              <h4>Raising kids between worlds</h4>
-              <p>
-                Discipline styles that clash. In-laws with opinions. Teaching
-                your kids a culture you&rsquo;re still figuring out yourself.
-              </p>
-            </div>
-            <div className="bring-card">
-              <div className="bring-icon">{"\u2307"}</div>
-              <h4>Parenting guilt</h4>
-              <p>
-                Losing your patience and then losing sleep over it.
-                The gap between the parent you planned to be and the one who
-                showed up today.
-              </p>
-            </div>
-            <div className="bring-card">
-              <div className="bring-icon">{"\u2747"}</div>
-              <h4>Your kid is struggling</h4>
-              <p>
-                Anxiety at school. Big feelings you don&rsquo;t know how to
-                hold. The fear that you&rsquo;re passing something down.
-              </p>
-            </div>
-            <div className="bring-card">
-              <div className="bring-icon">{"\u2312"}</div>
+              <div className="bring-icon">{"⌒"}</div>
               <h4>New parenthood</h4>
               <p>
                 The identity shift nobody warned you about. A relationship
                 reshaped overnight. Needing village but having Wi-Fi.
               </p>
             </div>
-            <Link href="/for/intimacy" className="bring-card bring-card-link">
-              <div className="bring-icon">{"\u25ce"}</div>
-              <h4>Intimacy &amp; shame</h4>
-              <p>
-                The things you&rsquo;ve never said out loud about your body,
-                your desires, or your marriage. Shame that came before you
-                had words for it.
-              </p>
-            </Link>
-            <Link href="/for/sexual-identity" className="bring-card bring-card-link">
-              <div className="bring-icon">{"\u25c7"}</div>
-              <h4>Sexual identity</h4>
-              <p>
-                Questions you&rsquo;ve carried alone for years. Who you are,
-                who you love, and what that means in the world you were raised
-                in.
-              </p>
-            </Link>
-            <Link href="/for/anxiety" className="bring-card bring-card-link">
-              <div className="bring-icon">{"\u26ac"}</div>
-              <h4>Anxiety &amp; the body</h4>
-              <p>
-                The racing heart before a family dinner. The weight that sits
-                in your chest. Worry that won&rsquo;t stay in one place.
-              </p>
-            </Link>
           </div>
+
+          <p className="bring-more reveal">
+            &hellip;and the things that don&rsquo;t have a name yet. Also:{" "}
+            <Link href="/for/identity">identity &amp; belonging</Link>,{" "}
+            <Link href="/for/intimacy">intimacy &amp; shame</Link>,{" "}
+            <Link href="/for/sexual-identity">sexual identity</Link>,{" "}
+            <Link href="/for/anxiety">anxiety</Link>. If it&rsquo;s on your
+            mind every week, it belongs here.
+          </p>
         </div>
       </section>
-
-      {/* MARQUEE */}
-      <div className="marquee" aria-hidden="true">
-        <div className="marquee-track">
-          <span>
-            Pull up to the Hearth <span className="pip" /> Bring it to the
-            Hearth <span className="pip" /> Some things deserve the long talk{" "}
-            <span className="pip" /> The elder&rsquo;s house, on your phone{" "}
-            <span className="pip" /> You weren&rsquo;t meant to carry it
-            alone <span className="pip" />
-          </span>
-          <span>
-            Pull up to the Hearth <span className="pip" /> Bring it to the
-            Hearth <span className="pip" /> Some things deserve the long talk{" "}
-            <span className="pip" /> The elder&rsquo;s house, on your phone{" "}
-            <span className="pip" /> You weren&rsquo;t meant to carry it
-            alone <span className="pip" />
-          </span>
-        </div>
-      </div>
 
       {/* THE SPACE BETWEEN */}
       <section className="between" id="between">
@@ -707,7 +633,7 @@ export default function Home() {
             <div>
               <div className="eyebrow">
                 <span className="dot" />
-                The space between
+                Not a friend. Not a therapist.
               </div>
               <h2 style={{ marginTop: 18 }}>
                 There&rsquo;s a{" "}
@@ -718,10 +644,11 @@ export default function Home() {
               </h2>
             </div>
             <p className="lede">
-              Friends mean well, but they get tired. Therapists are clinical,
-              expensive, and not built for the everyday weight. A Keeper is a
-              third thing (older, attentive, consistent) that most of us no
-              longer have.
+              Friends mean well, but they get tired. Therapists are for
+              clinical things, and priced like it. A Keeper is the third thing
+              (older, attentive, consistent) that most of us no longer have.
+              Hearth is peer support, not therapy. We say it plainly because
+              the difference is the point.
             </p>
           </div>
 
@@ -746,8 +673,8 @@ export default function Home() {
                   Trained, consistent, matched by hand. Yours, for years.
                 </h3>
                 <p>
-                  One person. Same chair every week. Lets your sentence finish.
-                  Notices the patterns you can&rsquo;t see yet.
+                  One person. Same chair, every call. Lets your sentence
+                  finish. Notices the patterns you can&rsquo;t see yet.
                 </p>
               </div>
               <div className="role">
@@ -764,7 +691,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="role">
-                <span className="pip" /> Routed via The Bridge when needed
+                <span className="pip" /> We help you find one, if you need one
               </div>
             </div>
           </div>
@@ -835,7 +762,7 @@ export default function Home() {
             <div className="keeper-copy reveal">
               <div className="eyebrow">
                 <span className="dot" />
-                What a Keeper is
+                Meet your Keepers
               </div>
               <h2 style={{ marginTop: 18 }}>
                 Not a coach. Not a clinician.{" "}
@@ -849,10 +776,9 @@ export default function Home() {
                   fontSize: 17,
                 }}
               >
-                Keepers are trained companions. The kind of person the
-                village elder, the trusted aunt, and the community wise-person
-                used to be. They are paid professionals, not volunteers, and
-                they stay yours.
+                Keepers are trained companions: the kind of person the village
+                elder, the trusted aunt, the community wise-person used to be.
+                Paid professionals, not volunteers. And they stay yours.
               </p>
 
               <div className="keeper-points">
@@ -869,37 +795,22 @@ export default function Home() {
                 <div className="kpoint">
                   <span className="num">02</span>
                   <div>
-                    <h4>
-                      Trained, not credentialed in the clinical sense.
-                    </h4>
+                    <h4>Trained, vetted, paid.</h4>
                     <p>
-                      Hearth&rsquo;s Keeper training covers listening,
-                      sensitivity, scope, and crisis protocol, plus
-                      what to hand to The Bridge.
+                      120 hours of Keeper training, background checks, crisis
+                      protocol, monthly supervision. Not clinicians, and clear
+                      about it.
                     </p>
                   </div>
                 </div>
                 <div className="kpoint">
                   <span className="num">03</span>
                   <div>
-                    <h4>
-                      Matched by hand for fit.
-                    </h4>
+                    <h4>Matched by hand. Switch free.</h4>
                     <p>
-                      Paired by a human at Hearth for the themes you carry and
-                      the way you talk about them. The half-things you
-                      don&rsquo;t want to have to translate.
-                    </p>
-                  </div>
-                </div>
-                <div className="kpoint">
-                  <span className="num">04</span>
-                  <div>
-                    <h4>Friday reflections, every week.</h4>
-                    <p>
-                      &ldquo;What stayed with me from this week.&rdquo;
-                      A short note from your Keeper, sent every Friday. A brand
-                      signature.
+                      A person at Hearth pairs you by language, lived context,
+                      and the themes you carry. Not the right fit? Switch free
+                      in the first 30 days.
                     </p>
                   </div>
                 </div>
@@ -917,597 +828,10 @@ export default function Home() {
                   Browse all Keepers <span className="arr">&rarr;</span>
                 </Link>
                 <Link href="/how-it-works" className="btn btn-ghost">
-                  How Pairing works
+                  How matching works
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* HOW IT WORKS */}
-      <section className="how" id="how">
-        <div className="wrap">
-          <div className="sec-head reveal">
-            <div>
-              <div className="eyebrow">
-                <span className="dot" />
-                How it works
-              </div>
-              <h2 style={{ marginTop: 18 }}>
-                Four simple steps. Then a chair that&rsquo;s{" "}
-                <span className="serif-i" style={{ color: "var(--ember)" }}>
-                  always yours.
-                </span>
-              </h2>
-            </div>
-            <p className="lede">
-              No streaks. No badges. No optimizing your feelings. Just a Sit on
-              the calendar, a Keeper who knows the shape of your week, and the
-              Long Talk in between.
-            </p>
-          </div>
-
-          <div className="steps reveal">
-            <div className="step">
-              <div className="num">01 &mdash; INTAKE</div>
-              <div className="glyph">&#10038;</div>
-              <h3>The First Sit</h3>
-              <p>
-                A 12-minute intake. Three short screeners. We listen for what
-                you&rsquo;re carrying, and what kind of company will actually
-                help.
-              </p>
-            </div>
-            <div className="step">
-              <div className="num">02 &mdash; PAIRING</div>
-              <div className="glyph">&#9680;</div>
-              <h3>Meet your Keeper</h3>
-              <p>
-                We hand-match you with a Keeper based on language, lived
-                context, and the themes you carry. 72-hour pairing or we keep
-                looking.
-              </p>
-            </div>
-            <div className="step">
-              <div className="num">03 &mdash; SIT</div>
-              <div className="glyph">&#9004;</div>
-              <h3>The weekly Sit</h3>
-              <p>
-                35&ndash;60 minutes on video. Arrival, long listening, pattern
-                noticing, closing ritual. No notes unless you want them.
-              </p>
-            </div>
-            <div className="step">
-              <div className="num">04 &mdash; TEND</div>
-              <div className="glyph">&#8767;</div>
-              <h3>The Long Talk</h3>
-              <p>
-                An async thread between Sits. Text, voice, photos. Slow
-                on purpose. Friday reflections, always.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICE GRID */}
-      <section id="services">
-        <div className="wrap">
-          <div className="sec-head reveal">
-            <div>
-              <div className="eyebrow">
-                <span className="dot" />
-                What you get
-              </div>
-              <h2 style={{ marginTop: 18 }}>Five rooms in the same house.</h2>
-            </div>
-            <p className="lede">
-              The Sit, the Long Talk, Circles, Embers, and the Bridge when
-              needed. Built to hold whatever stage of your life you walk in
-              with.
-            </p>
-          </div>
-
-          <div className="services-grid reveal">
-            {/* Long Talk */}
-            <div className="svc span-7">
-              <div>
-                <div className="label">The Long Talk &middot; Async chat</div>
-                <h3>
-                  Some things deserve <em>the long talk.</em>
-                </h3>
-                <p>
-                  A persistent thread between you and your Keeper. Text, voice
-                  notes, photos, links. Replies within 24 hours on Hearthside,
-                  4 hours on Hearth Deep. Slow on purpose.
-                </p>
-                <div className="svc-vis" style={{ background: "var(--paper)" }}>
-                  <div className="chat-time">Wed &middot; 9:42 PM</div>
-                  <div className="chat-bubble me">
-                    My mother brought up the engagement again. I don&rsquo;t
-                    know how to be honest without lighting the whole evening on
-                    fire.
-                  </div>
-                  <div className="chat-time">Thu &middot; 8:14 AM</div>
-                  <div className="chat-bubble them">
-                    Heard. Two questions before you decide anything: what does{" "}
-                    <i>she</i> think she&rsquo;s protecting? And what&rsquo;s
-                    the smallest true thing you can say tonight?
-                  </div>
-                  <div className="friday">
-                    <span className="stamp">
-                      Friday reflection &middot; from Aruna
-                    </span>
-                    You said you wanted to stop performing. I noticed you
-                    laughed three times this week when something wasn&rsquo;t
-                    actually funny. Bring that to Monday&rsquo;s Sit if you
-                    want.
-                  </div>
-                </div>
-              </div>
-              <div className="svc-foot">
-                <span className="more">More about The Long Talk</span>
-              </div>
-            </div>
-
-            {/* The Sit */}
-            <div className="svc span-5">
-              <div>
-                <div className="label">The Sit &middot; 1:1 video</div>
-                <h3>
-                  35&ndash;60 minutes.{" "}
-                  <em>The same chair, every week.</em>
-                </h3>
-                <p>
-                  Arrival, long listening, pattern noticing, closing ritual.
-                  Audio-only if the camera feels like too much. Recording is
-                  opt-in and yours.
-                </p>
-                <div className="svc-vis">
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "1fr 1fr",
-                      gap: 8,
-                    }}
-                  >
-                    <div
-                      style={{
-                        aspectRatio: "1",
-                        background:
-                          "repeating-linear-gradient(135deg,#D9C8A8 0 6px,#CDBA96 6px 12px)",
-                        borderRadius: 6,
-                        border: "1px solid var(--rule)",
-                        position: "relative",
-                      }}
-                    >
-                      <span
-                        style={{
-                          position: "absolute",
-                          left: 8,
-                          bottom: 6,
-                          fontFamily: "var(--mono)",
-                          fontSize: 9,
-                          color: "#1A171477",
-                          letterSpacing: "0.14em",
-                        }}
-                      >
-                        YOU
-                      </span>
-                    </div>
-                    <div
-                      style={{
-                        aspectRatio: "1",
-                        background:
-                          "repeating-linear-gradient(135deg,#C8B898 0 6px,#BCA983 6px 12px)",
-                        borderRadius: 6,
-                        border: "1px solid var(--rule)",
-                        position: "relative",
-                      }}
-                    >
-                      <span
-                        style={{
-                          position: "absolute",
-                          left: 8,
-                          bottom: 6,
-                          fontFamily: "var(--mono)",
-                          fontSize: 9,
-                          color: "#1A171477",
-                          letterSpacing: "0.14em",
-                        }}
-                      >
-                        KEEPER
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      marginTop: 14,
-                      fontFamily: "var(--mono)",
-                      fontSize: 11,
-                      letterSpacing: "0.14em",
-                      textTransform: "uppercase" as const,
-                      color: "var(--ink-3)",
-                    }}
-                  >
-                    <span style={{ color: "var(--ember)" }}>
-                      &#9679; Live &middot; 38:12
-                    </span>
-                    <span>Closing in 8 min</span>
-                  </div>
-                </div>
-              </div>
-              <div className="svc-foot">
-                <span className="more">More about The Sit</span>
-              </div>
-            </div>
-
-            {/* Circles */}
-            <div className="svc span-6">
-              <div>
-                <div className="label">
-                  Circles &middot; 4&ndash;8 week cohorts
-                </div>
-                <h3>
-                  Six to ten people.{" "}
-                  <em>One shared weather pattern.</em>
-                </h3>
-                <p>
-                  Mothers. Caregiving. Grief. The First Year After. Wedding
-                  Season. Between Worlds &amp; Expectations. Facilitated by a
-                  Keeper, never a clinician.
-                </p>
-              </div>
-              <div className="svc-foot">
-                <span className="more">Browse upcoming Circles</span>
-              </div>
-            </div>
-
-            {/* Embers */}
-            <div className="svc span-6" id="embers">
-              <div>
-                <div className="label">Embers &middot; Library</div>
-                <h3>
-                  Short pieces. <em>Specific. Adult.</em>
-                </h3>
-                <p>
-                  Not generic wellness content. Written by Keepers and
-                  contributing essayists with real specificity. 3&ndash;7
-                  minute reads or listens.
-                </p>
-                <div className="ember-list">
-                  <div className="ember-row">
-                    <span className="cat">Family Stuff</span>
-                    <span className="ttl">
-                      When your parents call it &ldquo;concern&rdquo;
-                    </span>
-                    <span className="dur">6 MIN</span>
-                  </div>
-                  <div className="ember-row">
-                    <span className="cat">The In-Between</span>
-                    <span className="ttl">
-                      The Sunday before everything changes
-                    </span>
-                    <span className="dur">4 MIN</span>
-                  </div>
-                  <div className="ember-row">
-                    <span className="cat">Heavy Things</span>
-                    <span className="ttl">
-                      Grief that arrives ten years late
-                    </span>
-                    <span className="dur">7 MIN</span>
-                  </div>
-                </div>
-              </div>
-              <div className="svc-foot">
-                <span className="more">Open the Embers library</span>
-              </div>
-            </div>
-
-            {/* Bridge */}
-            <div className="svc span-7">
-              <div>
-                <div className="label">
-                  The Bridge &middot; Clinical referral
-                </div>
-                <h3>
-                  When peer support isn&rsquo;t the right tool,{" "}
-                  <em>your Keeper walks you over.</em>
-                </h3>
-                <p>
-                  Hearth is not therapy. We say it plainly. When something
-                  needs a clinician, your Keeper makes a warm handoff to a
-                  vetted, hand-matched therapist on The Bridge. Not a
-                  directory dump, not a goodbye.
-                </p>
-                <div className="bridge-vis">
-                  <div className="bridge-node">
-                    <div className="lbl">Member</div>
-                    <div className="nm">You</div>
-                  </div>
-                  <div className="bridge-arrow">&rarr;</div>
-                  <div
-                    className="bridge-node"
-                    style={{
-                      background: "var(--ink)",
-                      color: "var(--paper)",
-                      borderColor: "var(--ink)",
-                    }}
-                  >
-                    <div className="lbl" style={{ color: "#C9B894" }}>
-                      Hearth
-                    </div>
-                    <div className="nm">Your Keeper</div>
-                  </div>
-                  <div className="bridge-arrow">&rarr;</div>
-                  <div className="bridge-node">
-                    <div className="lbl">The Bridge</div>
-                    <div className="nm">Vetted therapist</div>
-                  </div>
-                </div>
-              </div>
-              <div className="svc-foot">
-                <span className="more">More about The Bridge</span>
-              </div>
-            </div>
-
-            {/* Light a Hearth */}
-            <div className="svc span-5">
-              <div>
-                <div className="label">Light a Hearth &middot; Gifting</div>
-                <h3>
-                  Give someone <em>a chair.</em>
-                </h3>
-                <p>
-                  Gift one month of Hearthside ($39). They get matched, they
-                  get the Long Talk, they get the Friday reflection. You get to
-                  do something useful at the right moment.
-                </p>
-              </div>
-              <div className="svc-foot">
-                <span className="more">Light a Hearth</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* STORIES */}
-      <section className="stories" id="stories">
-        <div className="wrap">
-          <div className="sec-head reveal">
-            <div>
-              <div className="eyebrow">
-                <span className="dot" />
-                The Stories
-              </div>
-              <h2 style={{ marginTop: 18 }}>
-                Members, in their own words.
-              </h2>
-            </div>
-            <p className="lede">
-              First names. Real situations. The range of life Hearth was built
-              to hold: grief, family, identity, the in-between.
-            </p>
-          </div>
-
-          <div className="stories-grid reveal">
-            <div className="story feature">
-              <div className="quote">
-                My therapist did the work she was built for. My Keeper is the
-                one who calls the shape of the week. I didn&rsquo;t know I was
-                allowed to have both.
-              </div>
-              <div className="who">
-                <span>AYESHA &mdash; NAVIGATING GRIEF</span>
-                <span>HEARTHSIDE &middot; 2 YRS</span>
-              </div>
-            </div>
-            <div className="story dark">
-              <div className="quote">
-                The Friday reflection is the thing I didn&rsquo;t know I was
-                waiting for all week. My Keeper noticed something about my
-                mother I&rsquo;d been carrying for a decade and never said out
-                loud.
-              </div>
-              <div className="who">
-                <span>RAVI &mdash; FAMILY &middot; CAREER</span>
-                <span>HEARTH DEEP &middot; 8 MO</span>
-              </div>
-            </div>
-            <div className="story">
-              <div className="quote">
-                I was burning out my best friend. Hearth gave me a chair that
-                wasn&rsquo;t her.
-              </div>
-              <div className="who">
-                <span>PRIYA &mdash; CAREGIVING</span>
-                <span>HEARTHSIDE</span>
-              </div>
-            </div>
-            <div className="story">
-              <div className="quote">
-                After my dad died, the Grief Circle was the only place where
-                nobody flinched when I said the actual sentence.
-              </div>
-              <div className="who">
-                <span>HASSAN &mdash; GRIEF CIRCLE</span>
-                <span>HEARTHSIDE</span>
-              </div>
-            </div>
-            <div className="story">
-              <div className="quote">
-                A Keeper who&rsquo;d lived the wedding-season pressure herself.
-                Three months later I&rsquo;m still quoting her back to myself.
-              </div>
-              <div className="who">
-                <span>MEERA &mdash; WEDDING SEASON</span>
-                <span>HEARTH DEEP</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CIRCLES */}
-      <section className="circles-section" id="circles">
-        <div className="wrap">
-          <div className="sec-head reveal">
-            <div>
-              <div className="eyebrow" style={{ color: "#C9B894" }}>
-                <span className="dot" />
-                Circles &middot; Currently gathering
-              </div>
-              <h2 style={{ marginTop: 18 }}>
-                Six to ten people.{" "}
-                <span className="serif-i" style={{ color: "var(--ember)" }}>
-                  A shared weather.
-                </span>
-              </h2>
-            </div>
-            <p className="lede" style={{ color: "#D8C8AA" }}>
-              A Circle is not group therapy. It&rsquo;s the kitchen table at
-              the right house. 4&ndash;8 weeks, one Keeper facilitating, themes
-              specific enough to actually land.
-            </p>
-          </div>
-
-          <div className="circle-list reveal">
-            <div className="circle">
-              <div>
-                <div className="theme">Mothers</div>
-                <h3>The mother you became, the mother you had.</h3>
-                <p>
-                  For mothers parenting in the gap between how they were raised
-                  and the life they&rsquo;re actually building.
-                </p>
-              </div>
-              <div className="meta">
-                <span>
-                  <span className="dot" />3 spots &middot; Starts May 6
-                </span>
-                <span>SARAH W.</span>
-              </div>
-            </div>
-            <div className="circle full">
-              <div>
-                <div className="theme">Grief Circle</div>
-                <h3>
-                  Late grief. Out-of-order grief. The kind nobody named.
-                </h3>
-                <p>
-                  For losses the world rushed you past. Open invitation, no
-                  timeline required.
-                </p>
-              </div>
-              <div className="meta">
-                <span>
-                  <span className="dot" />
-                  Full &middot; Waitlist open
-                </span>
-                <span>HASSAN A.</span>
-              </div>
-            </div>
-            <div className="circle">
-              <div>
-                <div className="theme">Career &amp; family</div>
-                <h3>
-                  What you owe your parents vs. what you owe yourself.
-                </h3>
-                <p>
-                  For the career conversation that&rsquo;s actually a family
-                  conversation in disguise.
-                </p>
-              </div>
-              <div className="meta">
-                <span>
-                  <span className="dot" />5 spots &middot; Starts May 13
-                </span>
-                <span>JASMINE C.</span>
-              </div>
-            </div>
-            <div className="circle">
-              <div>
-                <div className="theme">Wedding Season</div>
-                <h3>Six weddings, one nervous system.</h3>
-                <p>
-                  A short, seasonal Circle for the months when the questions
-                  multiply.
-                </p>
-              </div>
-              <div className="meta">
-                <span>
-                  <span className="dot" />2 spots &middot; Starts May 20
-                </span>
-                <span>MARGARET H.</span>
-              </div>
-            </div>
-            <div className="circle">
-              <div>
-                <div className="theme">Caregiving</div>
-                <h3>You became the parent. Now what.</h3>
-                <p>
-                  For adult children parenting their own parents, with all the
-                  specifics named: family rules, guilt, logistics.
-                </p>
-              </div>
-              <div className="meta">
-                <span>
-                  <span className="dot" />4 spots &middot; Starts Jun 3
-                </span>
-                <span>DAVID C.</span>
-              </div>
-            </div>
-            <div className="circle">
-              <div>
-                <div className="theme">First Year After</div>
-                <h3>The first year after the thing.</h3>
-                <p>
-                  After a divorce, a death, a leaving. The year nobody designs
-                  for.
-                </p>
-              </div>
-              <div className="meta">
-                <span>
-                  <span className="dot" />6 spots &middot; Starts Jun 10
-                </span>
-                <span>AISHA M.</span>
-              </div>
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              marginTop: 36,
-              flexWrap: "wrap" as const,
-              gap: 16,
-            }}
-          >
-            <p
-              style={{
-                fontFamily: "var(--mono)",
-                fontSize: 11,
-                letterSpacing: "0.14em",
-                textTransform: "uppercase" as const,
-                color: "#9C8E78",
-              }}
-            >
-              1 Circle/month included on Hearthside &middot; 2 included on
-              Hearth Deep &middot; Single passes $35
-            </p>
-            <a
-              href="/intake"
-              className="btn btn-primary"
-              style={{ background: "var(--ember)" }}
-            >
-              Join Hearth & access Circles <span className="arr">&rarr;</span>
-            </a>
           </div>
         </div>
       </section>
@@ -1522,15 +846,16 @@ export default function Home() {
                 Pricing
               </div>
               <h2 style={{ marginTop: 18 }}>
-                Two tiers.{" "}
+                Two plans.{" "}
                 <span className="serif-i" style={{ color: "var(--ember)" }}>
-                  No streaks. No upsells.
+                  Pick how often you talk.
                 </span>
               </h2>
             </div>
             <p className="lede">
-              No streaks. No upsells. No dark patterns. Cancel any time, in
-              one click. No exit interview, no friction.
+              Everything else is the same: your Keeper, the chat thread, the
+              Friday note. No upsells, no dark patterns. Cancel any time, in
+              one click.
             </p>
           </div>
 
@@ -1551,11 +876,12 @@ export default function Home() {
                   marginBottom: 16,
                 }}
               >
-                Most popular
+                Most people start here
               </div>
               <div className="name">
-                <em>Hearthside</em>
+                Every <em>two weeks</em>
               </div>
+              <div className="plan">Hearthside</div>
               <div className="pp">
                 <span className="num">$39</span>
                 <span className="per">/mo &middot; billed monthly</span>
@@ -1564,26 +890,17 @@ export default function Home() {
                 or $390/yr &mdash; 2 months free
               </p>
               <ul>
-                <li>
-                  Matched Keeper, paired in 72 hours or we keep looking
-                </li>
-                <li>
-                  One Sit every two weeks (biweekly), 35&ndash;60 min, video or audio
-                </li>
-                <li>
-                  Unlimited Long Talk &middot; 24-hour Keeper response window
-                </li>
-                <li>
-                  Friday reflection from your Keeper, every week
-                </li>
-                <li>Full Embers library access</li>
-                <li>One Circle per month included</li>
+                <li>A 35&ndash;60 minute call with your Keeper, every two weeks</li>
+                <li>Chat thread in between, replies within a day</li>
+                <li>A note from your Keeper every Friday</li>
+                <li>One small-group Circle a month</li>
+                <li>Matched within 72 hours, switch free in the first 30 days</li>
               </ul>
               <Link
                 href={HEARTHSIDE_CHECKOUT_PATH}
                 className="btn btn-primary"
               >
-                Begin with Hearthside <span className="arr">&rarr;</span>
+                Choose every two weeks <span className="arr">&rarr;</span>
               </Link>
               <p className="mb">Cancel any time, in one click</p>
             </div>
@@ -1604,11 +921,12 @@ export default function Home() {
                   marginBottom: 16,
                 }}
               >
-                Best for intensive support
+                For a heavier season
               </div>
               <div className="name">
-                <em>Hearth Deep</em>
+                Every <em>week</em>
               </div>
+              <div className="plan">Hearth Deep</div>
               <div className="pp">
                 <span className="num" style={{ color: "var(--paper)" }}>$99</span>
                 <span className="per">/mo &middot; billed monthly</span>
@@ -1617,194 +935,48 @@ export default function Home() {
                 or $990/yr &mdash; 2 months free
               </p>
               <ul>
-                <li>Everything in Hearthside</li>
-                <li>Weekly Sits, 35&ndash;60 min each, every week</li>
-                <li>
-                  Priority Long Talk, 4-hour Keeper response
-                </li>
-                <li>Two Circles per month included</li>
-                <li>
-                  Anniversary rituals: yearly meaning-making with your
-                  Keeper
-                </li>
-                <li>Bridge therapist matching, when needed</li>
+                <li>Everything in the two-week plan</li>
+                <li>A call with your Keeper every week</li>
+                <li>Chat replies within 4 hours</li>
+                <li>Two Circles a month</li>
+                <li>Priority therapist matching, if you ever need it</li>
               </ul>
               <Link
                 href={HEARTH_DEEP_CHECKOUT_PATH}
                 className="btn btn-primary"
                 style={{ background: "var(--ember)" }}
               >
-                Begin with Hearth Deep <span className="arr">&rarr;</span>
+                Choose every week <span className="arr">&rarr;</span>
               </Link>
               <p className="mb">Cancel any time, in one click</p>
             </div>
           </div>
 
-          <div className="alacarte reveal">
-            <div>
-              <div className="eyebrow">
-                <span className="dot" />&Agrave; la carte
-              </div>
-              <p
-                style={{
-                  marginTop: 12,
-                  fontFamily: "var(--serif)",
-                  fontSize: 22,
-                  lineHeight: 1.2,
-                }}
-              >
-                Extra Sit{" "}
-                <span style={{ color: "var(--ember)" }}>$35</span>
-              </p>
-              <p
-                style={{
-                  marginTop: 6,
-                  color: "var(--ink-3)",
-                  fontSize: 13.5,
-                }}
-              >
-                Add a Sit when the week needs it.
-              </p>
-            </div>
-            <div>
-              <div className="eyebrow">
-                <span className="dot" />&Agrave; la carte
-              </div>
-              <p
-                style={{
-                  marginTop: 12,
-                  fontFamily: "var(--serif)",
-                  fontSize: 22,
-                  lineHeight: 1.2,
-                }}
-              >
-                Couples Sit{" "}
-                <span style={{ color: "var(--ember)" }}>$59</span>
-              </p>
-              <p
-                style={{
-                  marginTop: 6,
-                  color: "var(--ink-3)",
-                  fontSize: 13.5,
-                }}
-              >
-                Bring a partner, sibling, or parent.
-              </p>
-            </div>
-            <div>
-              <div className="eyebrow">
-                <span className="dot" />&Agrave; la carte
-              </div>
-              <p
-                style={{
-                  marginTop: 12,
-                  fontFamily: "var(--serif)",
-                  fontSize: 22,
-                  lineHeight: 1.2,
-                }}
-              >
-                Single Circle{" "}
-                <span style={{ color: "var(--ember)" }}>$35</span>
-              </p>
-              <p
-                style={{
-                  marginTop: 6,
-                  color: "var(--ink-3)",
-                  fontSize: 13.5,
-                }}
-              >
-                A 4&ndash;8 week cohort, no membership required.
-              </p>
-            </div>
-            <div>
-              <div className="eyebrow">
-                <span className="dot" />
-                Gifting
-              </div>
-              <p
-                style={{
-                  marginTop: 12,
-                  fontFamily: "var(--serif)",
-                  fontSize: 22,
-                  lineHeight: 1.2,
-                }}
-              >
-                Light a Hearth{" "}
-                <span style={{ color: "var(--ember)" }}>$39</span>
-              </p>
-              <p
-                style={{
-                  marginTop: 6,
-                  color: "var(--ink-3)",
-                  fontSize: 13.5,
-                }}
-              >
-                One month of Hearthside, given to someone.
-              </p>
-            </div>
-          </div>
+          <p className="price-context reveal">
+            For scale: therapy usually runs $400&ndash;1,200 a month. A Keeper
+            is $39.{" "}
+            <Link href="/pricing">Full pricing, extras and gifting &rarr;</Link>
+          </p>
         </div>
       </section>
 
-      {/* ORIGIN */}
-      <section className="origin">
+      {/* ONE STORY */}
+      <section className="one-story">
         <div className="wrap">
-          <div className="origin-grid">
-            <div className="reveal">
-              <div className="eyebrow">
-                <span className="dot" />
-                Why Hearth exists
-              </div>
-              <h2 style={{ marginTop: 20 }}>
-                The elder&rsquo;s house, on your phone.
-              </h2>
-              <p
-                style={{
-                  marginTop: 22,
-                  color: "var(--ink-2)",
-                  fontSize: 17,
-                  maxWidth: "42ch",
-                }}
-              >
-                Hearth was built for anyone, anywhere, carrying weight
-                that doesn&rsquo;t quite fit a couch. The village elder,
-                the trusted aunt, the community wise-person: a tradition
-                alive in memory and absent in modern life, wherever modern
-                life is happening.
-              </p>
-              <a
-                href="/about"
-                className="btn btn-ghost"
-                style={{ marginTop: 24 }}
-              >
-                Read our story <span className="arr">&rarr;</span>
-              </a>
-            </div>
-            <div className="letter reveal">
-              <p>
-                &ldquo;In villages, when life got heavy, you walked to the
-                elder&rsquo;s house. There was always a fire, always tea,
-                always a person who&rsquo;d lived more than you. They
-                didn&rsquo;t have credentials. They had time, attention, and
-                the patience to let your sentence finish.&rdquo;
-              </p>
-              <p>
-                &ldquo;Modern life has stripped that away. We have therapists
-                for the clinical things and friends for the easy things. But
-                for everything in between (the grief, the half-formed
-                worries, the family questions that don&rsquo;t fit on a couch)
-                most of us have nobody.&rdquo;
-              </p>
-              <p>
-                &ldquo;Hearth is that elder&rsquo;s house, on your phone, in
-                any language. We are the people who pull up a chair.&rdquo;
-              </p>
-              <span className="sig">&mdash; Founder&rsquo;s letter</span>
-            </div>
-          </div>
+          <blockquote className="one-story-quote reveal">
+            <p>
+              My therapist did the work she was built for. My Keeper is the one
+              who calls the shape of the week. I didn&rsquo;t know I was allowed
+              to have both.
+            </p>
+            <cite>Ayesha &middot; member for two years</cite>
+          </blockquote>
+          <p className="one-story-origin reveal">
+            Hearth is the elder&rsquo;s house, on your phone.{" "}
+            <Link href="/about">Why we built it &rarr;</Link>
+          </p>
         </div>
       </section>
-
       {/* BIG CTA */}
       <section className="bigcta" id="cta">
         <div className="wrap">
@@ -1817,7 +989,7 @@ export default function Home() {
             }}
           >
             <span className="dot" style={{ background: "#FFE0B0" }} />
-            The First Sit takes about 12 minutes
+            The intake takes about 12 minutes
           </div>
           <h2 style={{ marginTop: 18 }}>
             Some things <em>deserve</em>
@@ -1825,7 +997,7 @@ export default function Home() {
             the long talk.
           </h2>
           <p className="sub">
-            Pull up a chair. Your Keeper is on the other side.
+            Tell us what you&rsquo;re carrying. We match you within 72 hours.
           </p>
           {/* Step indicator */}
           {ctaStep < 3 && (
@@ -1857,10 +1029,10 @@ export default function Home() {
                 style={{ width: "100%", padding: "12px 16px", fontFamily: "var(--mono)", fontSize: 14, border: "1px solid rgba(255,255,255,0.25)", borderRadius: 6, background: "rgba(255,255,255,0.08)", color: "var(--paper)", outline: "none", boxSizing: "border-box" as const }}
               />
               <button type="submit" className="btn btn-primary btn-lg" style={{ width: "100%" }}>
-                Continue &rarr;
+                Next: what brings you here &rarr;
               </button>
               <p style={{ fontFamily: "var(--mono)", fontSize: 11, letterSpacing: "0.08em", color: "rgba(255,255,255,0.45)", textAlign: "center", marginTop: 4 }}>
-                Cancel any time, in one click
+                No payment yet. We&rsquo;ll email you within 48 hours.
               </p>
             </form>
           )}
@@ -1904,7 +1076,7 @@ export default function Home() {
                       : "pointer",
                 }}
               >
-                {ctaSubmitting ? "Sending…" : "Find my Keeper →"}
+                {ctaSubmitting ? "Sending…" : "Match me with a Keeper →"}
               </button>
               {ctaError && (
                 <p

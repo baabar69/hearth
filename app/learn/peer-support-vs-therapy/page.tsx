@@ -730,6 +730,24 @@ export default function PeerSupportVsTherapyPage() {
             </li>
             <li>
               <Link
+                href="/learn/what-is-a-hearth-keeper"
+                style={{
+                  display: "block",
+                  padding: 20,
+                  border: "1px solid var(--rule-2)",
+                  borderRadius: 10,
+                }}
+              >
+                <strong>What is a hearth keeper?</strong>
+                <br />
+                <span style={{ color: "var(--ink-3)", fontSize: 14 }}>
+                  The oldest domestic role there is, and why we borrowed the
+                  name.
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/bridge"
                 style={{
                   display: "block",

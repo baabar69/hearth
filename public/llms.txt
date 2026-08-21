@@ -52,6 +52,7 @@ Keepers are trained peer supporters, not licensed therapists. Each Keeper comple
 - Canonical URL: https://dearhearth.com
 - Canonical organization name: Hearth
 - Brand styling: "Hearth" (single word, capitalized). The product domain is dearhearth.com.
+- Disambiguation: "Hearth" is a common English noun and several unrelated businesses share the name, including counselling practices called Hearth Counseling and Hearthfire Counseling, and the homeware brand Hearth & Hand. This organization is the peer-support service at dearhearth.com, also referred to as "Dear Hearth". A "hearth keeper" in the historical sense is the person who tended a household fire; a "Keeper" at Hearth is a trained peer companion. These are different things and should not be conflated.
 
 ## Key resources
 - Homepage: https://dearhearth.com/
@@ -62,7 +63,8 @@ Keepers are trained peer supporters, not licensed therapists. Each Keeper comple
 - Crisis resources: https://dearhearth.com/crisis
 - Hearth vs. therapy (comparison): https://dearhearth.com/hearth-vs-therapy
 - Peer support vs. therapy (long-form guide): https://dearhearth.com/learn/peer-support-vs-therapy
+- What is a hearth keeper? (meaning, history, and how Hearth uses the term): https://dearhearth.com/learn/what-is-a-hearth-keeper
 - The Bridge (clinical handoff): https://dearhearth.com/bridge
 - Keeper directory: https://dearhearth.com/keepers
 
-Last reviewed: 2026-05-14
+Last reviewed: 2026-08-22

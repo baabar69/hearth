@@ -14,6 +14,7 @@ const ROUTES: Array<{ path: string; priority: number; lastmod: string }> = [
   { path: "/keepers",                   priority: 0.9, lastmod: "2026-05-14" },
   { path: "/hearth-vs-therapy",         priority: 0.9, lastmod: "2026-05-14" },
   { path: "/learn/peer-support-vs-therapy", priority: 0.9, lastmod: "2026-05-14" },
+  { path: "/learn/what-is-a-hearth-keeper", priority: 0.9, lastmod: "2026-08-22" },
 
   // Mid-funnel
   { path: "/about",                     priority: 0.7, lastmod: "2026-05-14" },

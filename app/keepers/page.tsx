@@ -127,6 +127,23 @@ export default function KeepersPage() {
             Each one a person, not a profile. Browse, listen, read. The match
             matters.
           </p>
+          <p
+            style={{
+              marginTop: 18,
+              fontSize: 16,
+              lineHeight: 1.6,
+              color: "var(--ink-3)",
+              maxWidth: "52ch",
+            }}
+          >
+            New to the word?{" "}
+            <Link
+              href="/learn/what-is-a-hearth-keeper"
+              style={{ color: "var(--ember)" }}
+            >
+              What is a hearth keeper?
+            </Link>
+          </p>
         </div>
       </section>
 
