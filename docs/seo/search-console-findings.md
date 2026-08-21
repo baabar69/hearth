@@ -15,14 +15,15 @@ Search Console → Indexing → Pages → "Why pages aren't indexed", 15 pages e
 | Crawled — currently not indexed | Google systems | 4 |
 | Discovered — currently not indexed | Google systems | 0 |
 
-**The number we still do not have** is how many pages are *indexed*. That figure sits
-above this table and determines which problem we are solving:
+**Indexed: 37.** Captured 2026-08-21. Security & Manual Actions: no issues.
 
-- Near zero indexed → a discovery problem, and inbound links are the fix
-- Around 18 indexed (33 in the sitemap minus 15 excluded) → the site is indexed and
-  this is a ranking problem, which is a better position to be in
+That is *more* than the 33 URLs in our sitemap, so Google has crawled the site
+thoroughly and found pages beyond the ones we declared.
 
-Record it before doing anything else.
+**This is not a discovery problem, and never was.** The pages are in Google's index.
+They are simply not being surfaced for the queries we care about, which is a question
+of authority and relevance rather than crawling. 15 excluded against 37 indexed is a
+perfectly normal ratio, and most of those exclusions are intentional.
 
 ## What Bing reports
 
@@ -75,14 +76,31 @@ pages and decided not to index them. On a domain with no inbound links this norm
 means "not enough signal to be worth indexing" rather than anything wrong with the
 page. Fixed by authority, not by editing the pages.
 
-## Caveat on an earlier claim
+## Two earlier claims that were wrong
 
-An exact-phrase web search for a sentence from the homepage `<h1>` returned nothing
-from dearhearth.com, and this was initially described as decisive proof the site was
-not indexed. That was overstated. The search tool used is not necessarily Google and
-may not honour quoted phrases, so it is weak evidence. The Search Console data above
-is the reliable source, and it is not consistent with "nothing is indexed" — only 4
-pages sit in "Crawled — currently not indexed".
+**"The site is not indexed."** Stated with far more confidence than the evidence
+supported, and now disproved: 37 pages are indexed.
+
+**"An exact-phrase search proves it."** An exact-phrase search for a sentence from the
+homepage `<h1>` returned nothing from dearhearth.com, and this was called decisive.
+It was not. The search tool used is not necessarily Google and may not honour quoted
+phrases. Search Console is the reliable source and it contradicts that reading.
+
+The lesson worth keeping: check Search Console's own numbers before inferring anything
+from third-party search results.
+
+## The open question
+
+Search Console → **Performance → Queries** has not been read yet. It shows which
+queries the site already receives impressions for, and at what average position.
+
+- Impressions for "dearhearth" at position 1-3 → the site *is* findable, and the
+  original complaint is likely personalisation. The founder searches from Pakistan;
+  the site targets the US, Canada, UK and Australia.
+- Zero impressions → indexed but suppressed, which is a different and more serious
+  problem.
+
+Read this before spending effort anywhere else.
 
 ## Also worth confirming
 
