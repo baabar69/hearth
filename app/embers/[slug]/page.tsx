@@ -189,6 +189,12 @@ const ESSAYS: Essay[] = [
   },
 ];
 
+// The set of essays is fixed and fully enumerated by generateStaticParams, so any
+// other slug should 404 outright. Without this, Next renders unknown slugs on
+// demand; notFound() fires but the streamed response has already committed a 200,
+// which Google reads as a soft 404 and crawls indefinitely.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return ESSAYS.map((e) => ({ slug: e.slug }));
 }
