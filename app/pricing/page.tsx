@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
+import CostComparison from "../components/CostComparison";
 import {
   HEARTHSIDE_CHECKOUT_PATH,
   HEARTH_DEEP_CHECKOUT_PATH,
@@ -546,6 +547,8 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+
+      <CostComparison heading="What a month costs elsewhere." intro="For context, not for a pitch. Most of these are clinical care and Hearth is not. If what you need is a clinician, the rows marked Yes are the ones to compare with each other." />
 
       {/* FAQ */}
       <section

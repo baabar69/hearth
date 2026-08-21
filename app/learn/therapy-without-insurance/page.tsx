@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SharedNav from "../../components/SharedNav";
 import SharedFooter from "../../components/SharedFooter";
+import CostComparison from "../../components/CostComparison";
 import {
   articleLd,
   breadcrumbLd,
@@ -476,6 +477,8 @@ export default function TherapyWithoutInsurancePage() {
           </div>
         </div>
       </section>
+
+      <CostComparison />
 
       {/* WHERE HEARTH FITS */}
       <section style={{ padding: "80px 0", background: "var(--paper-2)" }}>
