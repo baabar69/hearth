@@ -3,46 +3,11 @@ import {
   buildNotifyEmail,
   type IntakeSubmission,
 } from "../../lib/intake-email";
+import { emailConfigured, sendEmail } from "../../lib/brevo";
 
 export const runtime = "nodejs";
 
-const BREVO_API_KEY = process.env.BREVO_API_KEY;
 const INTAKE_NOTIFY_EMAIL = process.env.INTAKE_NOTIFY_EMAIL;
-const INTAKE_FROM_EMAIL = process.env.INTAKE_FROM_EMAIL ?? "hello@dearhearth.com";
-const INTAKE_FROM_NAME = process.env.INTAKE_FROM_NAME ?? "Hearth";
-
-type BrevoEmail = {
-  to: string;
-  replyTo?: string;
-  subject: string;
-  html: string;
-  text: string;
-};
-
-// Brevo's transactional endpoint. Called with fetch rather than their SDK -
-// one POST, no dependency worth carrying for it.
-async function sendViaBrevo(email: BrevoEmail): Promise<void> {
-  const res = await fetch("https://api.brevo.com/v3/smtp/email", {
-    method: "POST",
-    headers: {
-      "api-key": BREVO_API_KEY as string,
-      "content-type": "application/json",
-      accept: "application/json",
-    },
-    body: JSON.stringify({
-      sender: { name: INTAKE_FROM_NAME, email: INTAKE_FROM_EMAIL },
-      to: [{ email: email.to }],
-      ...(email.replyTo ? { replyTo: { email: email.replyTo } } : {}),
-      subject: email.subject,
-      htmlContent: email.html,
-      textContent: email.text,
-    }),
-  });
-
-  if (!res.ok) {
-    throw new Error(`brevo ${res.status}: ${await res.text()}`);
-  }
-}
 
 function isString(v: unknown): v is string {
   return typeof v === "string";
@@ -146,7 +111,7 @@ export async function POST(request: Request): Promise<Response> {
     );
   }
 
-  if (!BREVO_API_KEY || !INTAKE_NOTIFY_EMAIL) {
+  if (!emailConfigured || !INTAKE_NOTIFY_EMAIL) {
     // Email not configured: succeed anyway so dev works without Brevo setup.
     // Console log above is the audit trail until they wire up email.
     return Response.json({ ok: true, sent: false });
@@ -157,14 +122,14 @@ export async function POST(request: Request): Promise<Response> {
     const ack = buildAckEmail(submission);
 
     await Promise.all([
-      sendViaBrevo({
+      sendEmail({
         to: INTAKE_NOTIFY_EMAIL,
         replyTo: submission.email,
         subject: notify.subject,
         html: notify.html,
         text: notify.text,
       }),
-      sendViaBrevo({
+      sendEmail({
         to: submission.email,
         subject: ack.subject,
         html: ack.html,

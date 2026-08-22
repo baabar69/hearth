@@ -6,7 +6,7 @@ import { whopSdk } from "../lib/whop-sdk";
 export const metadata = {
   title: "Welcome · Hearth",
   description:
-    "Your payment was received. Your Keeper is being matched. Expect an email within 48 hours.",
+    "Your payment was received. Your Keeper is being matched. Expect an email within 72 hours.",
 };
 
 export const dynamic = "force-dynamic";
@@ -273,7 +273,7 @@ function SuccessState({
             at <strong>{receipt.customerEmail}</strong>
           </>
         ) : null}
-        . Expect an introduction from your Keeper within 48 hours. We pair by
+        . Expect an introduction from your Keeper within 72 hours. We pair by
         hand, not by algorithm.
       </p>
 

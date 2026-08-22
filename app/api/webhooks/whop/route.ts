@@ -1,4 +1,6 @@
 import { whopSdk, WHOP_WEBHOOK_SECRET } from "../../../lib/whop-sdk";
+import { notifyFounder, sendEmail, emailConfigured } from "../../../lib/brevo";
+import { buildFounderMoneyAlert, buildMemberWelcomeEmail, formatAmount, humanisePlan } from "../../../lib/member-email";
 
 export const runtime = "nodejs";
 
@@ -57,7 +59,46 @@ export async function POST(request: Request): Promise<Response> {
             metadata: payment.metadata,
           }),
         );
-        // FUTURE: persist membership state to DB, send welcome email, etc.
+        {
+          const email = payment.user?.email ?? undefined;
+          const planSlug =
+            typeof payment.metadata?.plan_slug === "string"
+              ? payment.metadata.plan_slug
+              : undefined;
+          const amount = formatAmount(payment.subtotal, payment.currency);
+          const alert = buildFounderMoneyAlert({
+            kind: "paid",
+            fields: [
+              ["Email", email],
+              ["Plan", humanisePlan(planSlug)],
+              ["Amount", amount],
+              ["Payment ID", payment.id],
+              ["User ID", payment.user?.id],
+              ["Source", typeof payment.metadata?.source === "string" ? payment.metadata.source : undefined],
+            ],
+            action:
+              "Find their intake (search your inbox for this email address). Match them by hand within 72 hours and have the Keeper send the introduction and booking link. If there is no intake yet, the welcome email has already asked them to complete it.",
+          });
+          await notifyFounder({ ...alert, replyTo: email });
+
+          // The welcome page promises this email. Send it, and never let a
+          // failure here turn into a non-200 that makes Whop retry the event.
+          if (email && emailConfigured) {
+            try {
+              await sendEmail({ to: email, ...buildMemberWelcomeEmail({ planSlug, amount }) });
+            } catch (err) {
+              console.error(
+                JSON.stringify({
+                  level: "error",
+                  tag: "whop-webhook",
+                  handler: "payment.succeeded",
+                  welcome_email: "failed",
+                  error: err instanceof Error ? err.message : String(err),
+                }),
+              );
+            }
+          }
+        }
         break;
       }
 
@@ -71,6 +112,18 @@ export async function POST(request: Request): Promise<Response> {
             payment_id: payment.id,
             user_email: payment.user?.email,
             failure_message: payment.failure_message,
+          }),
+        );
+        await notifyFounder(
+          buildFounderMoneyAlert({
+            kind: "failed",
+            fields: [
+              ["Email", payment.user?.email ?? undefined],
+              ["Payment ID", payment.id],
+              ["Reason", payment.failure_message ?? undefined],
+            ],
+            action:
+              "Whop retries failed payments automatically. If this is an existing member, expect a dunning email from Whop to them; reach out personally only if it fails again.",
           }),
         );
         break;
@@ -103,11 +156,34 @@ export async function POST(request: Request): Promise<Response> {
             user_id: membership.user?.id,
           }),
         );
+        await notifyFounder(
+          buildFounderMoneyAlert({
+            kind: "cancelled",
+            fields: [
+              ["Email", membership.user?.email ?? undefined],
+              ["Membership ID", membership.id],
+              ["User ID", membership.user?.id],
+            ],
+            action:
+              "Tell their Keeper today so the Long Talk closes gracefully rather than going silent. Access continues to the end of the paid period. No win-back sequence; one warm note from the Keeper is enough.",
+          }),
+        );
         break;
       }
 
       case "refund.created": {
         const refund = event.data;
+        await notifyFounder(
+          buildFounderMoneyAlert({
+            kind: "refunded",
+            fields: [
+              ["Refund ID", refund.id],
+              ["Details", JSON.stringify(refund).slice(0, 600)],
+            ],
+            action:
+              "Confirm it in the Whop dashboard, tell the Keeper, and log why. Refund rate is a tier-1 KPI with a target under 3 percent.",
+          }),
+        );
         console.log(
           JSON.stringify({
             level: "info",
