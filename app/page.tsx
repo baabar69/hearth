@@ -107,7 +107,7 @@ const HOME_FAQ = [
   },
   {
     q: "What happens after I click start?",
-    a: "A 12-minute intake about what you are carrying and how you like to talk. Within 72 hours a person at Hearth matches you with a Keeper. Your first call goes on the calendar. No payment is taken until you are matched and choose a plan.",
+    a: "A 12-minute intake about what you are carrying and how you like to talk, then a membership. Within 72 hours of both, a person at Hearth matches you by hand with a Keeper, who writes to you first. If the first Sit is not the right fit, ask and we assign someone else at no charge.",
   },
 ];
 
