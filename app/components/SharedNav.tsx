@@ -46,9 +46,6 @@ export default function SharedNav() {
             ))}
           </nav>
           <div className="nav-cta">
-            <Link href="/sign-in" className="btn btn-ghost btn-sm nav-signin">
-              Sign in
-            </Link>
             <Link href="/intake" className="btn btn-primary btn-sm">
               Pull up a chair <span className="arr">&rarr;</span>
             </Link>
@@ -131,21 +128,6 @@ export default function SharedNav() {
             ))}
           </nav>
           <div style={{ marginTop: 40, display: "flex", flexDirection: "column", gap: 14 }}>
-            <Link
-              href="/sign-in"
-              onClick={() => setMobileOpen(false)}
-              style={{
-                fontFamily: "var(--mono)",
-                fontSize: 13,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                color: "var(--paper)",
-                textDecoration: "none",
-                opacity: 0.7,
-              }}
-            >
-              Sign in
-            </Link>
             <Link
               href="/intake"
               onClick={() => setMobileOpen(false)}

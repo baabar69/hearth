@@ -51,7 +51,6 @@ export default function SharedFooter() {
           </div>
           <div className="foot-col">
             <h5>Members</h5>
-            <Link href="/sign-in">Sign in</Link>
             <Link href="/trust">Trust & security</Link>
             <Link href="/accessibility">Accessibility</Link>
             <Link href="/privacy">Privacy</Link>

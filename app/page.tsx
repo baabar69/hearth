@@ -25,40 +25,40 @@ const PROOF = [
   { n: "72 hrs", t: "to be matched with your Keeper. By a person, not an algorithm." },
   { n: "120 hrs", t: "of training before a Keeper ever meets a member." },
   { n: "Under 8%", t: "of Keeper applicants are accepted." },
-  { n: "$39", t: "a month. Less than a single private therapy session almost anywhere." },
+  { n: "Every Friday", t: "a note from your Keeper, written for you. Never templated." },
   { n: "1 Sit", t: "is all it takes to ask for a different Keeper. Cancel any time, in one click." },
 ];
 
 const COMPARE = [
   {
-    label: "Who you talk to",
-    bh: "A licensed therapist, assigned by questionnaire and availability.",
-    us: "A trained Keeper, chosen for you by a person who read what you wrote.",
+    label: "Who chooses your match",
+    bh: "An algorithm and a schedule.",
+    us: "A person who read your words.",
   },
   {
-    label: "The same person, for years",
-    bh: "Not promised. You can be reassigned, and many people switch more than once.",
-    us: "Yes. It is the whole design. If your first Sit is not the right fit, ask and we assign someone else.",
+    label: "Who you get",
+    bh: "Whoever is available.",
+    us: "One Keeper, chosen for you, and kept.",
   },
   {
-    label: "Price per month",
-    bh: "About $260 to $520, at $60 to $120 a week. Figures as of August 2026.",
-    us: "$39 for a call every two weeks. $99 for every week.",
+    label: "How long they stay",
+    bh: "Until you are reassigned.",
+    us: "As long as it serves you. Years, for most.",
+  },
+  {
+    label: "What arrives unasked",
+    bh: "Nothing.",
+    us: "A note from your Keeper every Friday, written for you.",
   },
   {
     label: "Between sessions",
-    bh: "Messaging, answered when your therapist is next available.",
-    us: "A chat thread answered within a day, and a written note from your Keeper every Friday.",
+    bh: "A queue.",
+    us: "A thread with someone who already knows the story.",
   },
   {
-    label: "Can treat a condition",
-    bh: "Yes. It is licensed therapy.",
-    us: "No. Peer support, with help finding a therapist through The Bridge when you need one.",
-  },
-  {
-    label: "Time to start",
-    bh: "Often within 48 hours.",
-    us: "Within 72 hours, matched by hand.",
+    label: "The relationship",
+    bh: "Transactional.",
+    us: "Tended.",
   },
 ];
 
@@ -704,21 +704,19 @@ export default function Home() {
             <div>
               <div className="eyebrow">
                 <span className="dot" />
-                Hearth vs. therapy apps
+                The difference
               </div>
               <h2 style={{ marginTop: 18 }}>
                 Therapy apps rent you a counsellor.{" "}
                 <span className="serif-i" style={{ color: "var(--ember)" }}>
-                  Hearth gives you a person who stays.
+                  Hearth keeps you a person.
                 </span>
               </h2>
             </div>
             <p className="lede">
-              Therapy apps are good at what they sell: licensed therapy, fast.
-              They were never built for the years-long relationship most of the
-              weight in a life needs. That is the gap we built for. Their
-              column uses the published prices of the largest platforms,
-              August 2026.
+              An app matches you by questionnaire and availability, and
+              reassigns you when it suits the roster. Hearth reads what you
+              wrote, chooses one Keeper for you, and keeps them. For years.
             </p>
           </div>
 
@@ -739,14 +737,12 @@ export default function Home() {
 
           <div className="cmp-verdict reveal">
             <p>
-              If you need treatment, choose therapy; a good app is a fair way
-              to get it. If what you need is a trained person who knows your
-              whole story and stays, that is what we build. At a fraction of
-              the price.
+              Hearth is not therapy. If you ever need treatment, we will say
+              so and help you find the best. What we offer is rarer: one
+              person, chosen with care, who stays.
             </p>
             <Link href="/hearth-vs-betterhelp" className="btn btn-ghost">
-              The full comparison, with alternatives{" "}
-              <span className="arr">&rarr;</span>
+              Read the full comparison <span className="arr">&rarr;</span>
             </Link>
           </div>
         </div>

@@ -42,7 +42,7 @@ Keepers are trained peer supporters, not licensed therapists. Each Keeper comple
 - FTC-compliant click-to-cancel in account settings.
 
 ## How Hearth differs from common alternatives
-- **vs. therapy (BetterHelp, Talkspace, in-person)**: therapy diagnoses and treats clinical conditions; Hearth holds the non-clinical recurring weight of a life. The two complement each other and many members use both. Hearth is also cheaper ($39/month vs. roughly $280 to $400/month for BetterHelp as of August 2026) because it is not clinical care. Full comparison: https://dearhearth.com/hearth-vs-betterhelp
+- **vs. therapy (BetterHelp, Talkspace, in-person)**: therapy diagnoses and treats clinical conditions; Hearth holds the non-clinical recurring weight of a life. The two complement each other and many members use both. Hearth costs $39/month because it is a different service, not a discount on therapy. It is not positioned as a cheaper alternative to clinical care. Full comparison: https://dearhearth.com/hearth-vs-betterhelp
 - **vs. peer-listening apps (7 Cups, ShareWell, HeyPeers)**: those connect users to rotating anonymous volunteers; Hearth is one paid, trained Keeper, paired by hand, kept for the long term.
 - **vs. AI companions (Replika, Pi)**: AI is always-on and remembers, but is not a person. Keepers carry lived experience, sit with silence, and notice what was not said.
 - **vs. 12-week group programs**: group programs end. Hearth is open-ended; Circles cover the time-bound group format inside the subscription.
