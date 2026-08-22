@@ -86,8 +86,8 @@ const HOME_FAQ = [
     a: "No. Hearth is peer support: a trained Keeper who is not a clinician, for the recurring weight of ordinary life. Keepers do not diagnose, treat or prescribe. If what you describe needs a therapist, your Keeper says so and helps you find a vetted one through The Bridge.",
   },
   {
-    q: "How is Hearth different from BetterHelp?",
-    a: "BetterHelp is online therapy with licensed professionals, at roughly $280 to $400 a month, and you can be reassigned to a different therapist. Hearth is one trained Keeper, matched to you by hand, who stays for years, at $39 a month. If you need treatment, choose therapy. If you need someone who knows your whole story and stays, that is Hearth.",
+    q: "How is Hearth different from therapy apps like BetterHelp?",
+    a: "Therapy apps sell online therapy with licensed professionals, at roughly $260 to $520 a month, and you can be reassigned to a different therapist. Hearth is one trained Keeper, matched to you by hand and kept for as long as it serves you, for $39 a month. It is peer support, not therapy. If you need treatment, choose therapy. If you need a person who stays, that is what we built.",
   },
   {
     q: "Who are the Keepers?",
@@ -532,7 +532,7 @@ export default function Home() {
                   <span className="arr">&rarr;</span>
                 </Link>
                 <a href="#compare" className="btn btn-ghost btn-lg">
-                  Compare with BetterHelp
+                  Compare with therapy apps
                 </a>
               </div>
               <div className="hero-tag">
@@ -1170,7 +1170,7 @@ export default function Home() {
             therapy app can hand you a new counsellor any time. A Keeper is $39,
             and stays.{" "}
             <Link href="/pricing">Full pricing &rarr;</Link>
-            <Link href="/hearth-vs-betterhelp">Compare with BetterHelp &rarr;</Link>
+            <Link href="/hearth-vs-betterhelp">Compare with therapy apps &rarr;</Link>
           </p>
         </div>
       </section>
