@@ -26,6 +26,7 @@ export type IntakeSubmission = {
   referralSource?: string;
   agreePeerSupport?: boolean;
   agreeAge?: boolean;
+  paid?: boolean;
 };
 
 function row(label: string, value: string | undefined | null): string {
@@ -77,6 +78,7 @@ export function buildNotifyEmail(s: IntakeSubmission): {
   <table style="width:100%;border-collapse:collapse;margin:12px 0">
     ${row("Name", s.firstName)}
     ${row("Email", s.email)}
+    ${row("Paid already", s.paid ? "yes, membership active" : undefined)}
     ${row("Age", s.ageRange)}
     ${row("Country", s.country)}
     ${row("Language", s.preferredLanguage)}

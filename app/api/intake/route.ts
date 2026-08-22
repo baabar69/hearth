@@ -68,6 +68,7 @@ function parseSubmission(body: unknown): IntakeSubmission | null {
       ? o.agreePeerSupport
       : undefined,
     agreeAge: typeof o.agreeAge === "boolean" ? o.agreeAge : undefined,
+    paid: o.paid === true ? true : undefined,
   };
 }
 

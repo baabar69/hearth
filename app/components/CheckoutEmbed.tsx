@@ -8,6 +8,7 @@ type Props = {
   sessionId: string;
   environment: WhopEnvironment;
   returnUrl: string;
+  prefillEmail?: string;
 };
 
 export default function CheckoutEmbed({
@@ -15,6 +16,7 @@ export default function CheckoutEmbed({
   sessionId,
   environment,
   returnUrl,
+  prefillEmail,
 }: Props) {
   return (
     <div
@@ -34,6 +36,7 @@ export default function CheckoutEmbed({
         sessionId={sessionId}
         environment={environment}
         returnUrl={returnUrl}
+        prefill={prefillEmail ? { email: prefillEmail } : undefined}
         theme="light"
         themeOptions={{ accentColor: "orange" }}
         fallback={

@@ -1398,16 +1398,20 @@ export default function Home() {
                 &#x2764;&#xfe0e;
               </div>
               <p style={{ fontFamily: "var(--serif)", fontSize: 22, color: "var(--paper)", maxWidth: "34ch", lineHeight: 1.4, margin: 0 }}>
-                {ctaName ? `${ctaName}, your` : "Your"} Keeper is being matched.
+                {ctaName ? `Thank you, ${ctaName}.` : "Thank you."} Two steps left.
               </p>
-              <p style={{ fontFamily: "var(--mono)", fontSize: 13, color: "rgba(255,255,255,0.55)", letterSpacing: "0.06em", maxWidth: "36ch", lineHeight: 1.6, margin: 0 }}>
-                Expect an email at {ctaEmail} within 48 hours.
+              <p style={{ fontFamily: "var(--mono)", fontSize: 13, color: "rgba(255,255,255,0.55)", letterSpacing: "0.06em", maxWidth: "40ch", lineHeight: 1.6, margin: 0 }}>
+                The twelve-minute intake, then a membership. A person matches you by hand within 72 hours of both, and your Keeper writes to {ctaEmail}.
               </p>
-              <Link href="/embers" style={{ fontFamily: "var(--mono)", fontSize: 13, letterSpacing: "0.08em", color: "#FFB74D", textDecoration: "underline", marginTop: 8 }}>
-                While you wait, read an Ember &rarr;
+              <Link
+                href={`/intake?email=${encodeURIComponent(ctaEmail)}&first=${encodeURIComponent(ctaName)}${ctaTopics.length ? `&topic=${encodeURIComponent(ctaTopics.join(","))}` : ""}`}
+                className="btn btn-primary btn-lg"
+                style={{ marginTop: 8 }}
+              >
+                Begin the intake <span className="arr">&rarr;</span>
               </Link>
-              <Link href="/gift" className="btn btn-ghost btn-lg" style={{ marginTop: 8 }}>
-                Light a Hearth for someone
+              <Link href="/embers" style={{ fontFamily: "var(--mono)", fontSize: 13, letterSpacing: "0.08em", color: "#FFB74D", textDecoration: "underline", marginTop: 8 }}>
+                Or read an Ember first &rarr;
               </Link>
             </div>
           )}

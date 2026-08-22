@@ -70,6 +70,8 @@ export async function POST(request: Request): Promise<Response> {
             kind: "paid",
             fields: [
               ["Email", email],
+              ["Intake email", typeof payment.metadata?.intake_email === "string" ? payment.metadata.intake_email : undefined],
+              ["First name", typeof payment.metadata?.first_name === "string" ? payment.metadata.first_name : undefined],
               ["Plan", humanisePlan(planSlug)],
               ["Amount", amount],
               ["Payment ID", payment.id],
@@ -77,7 +79,7 @@ export async function POST(request: Request): Promise<Response> {
               ["Source", typeof payment.metadata?.source === "string" ? payment.metadata.source : undefined],
             ],
             action:
-              "Find their intake (search your inbox for this email address). Match them by hand within 72 hours and have the Keeper send the introduction and booking link. If there is no intake yet, the welcome email has already asked them to complete it.",
+              "Find their intake: search your inbox for the intake email above, or the payment email if none. Match them by hand within 72 hours and have the Keeper send the introduction and booking link. If there is no intake yet, the welcome email has already asked them to complete it, with their email pre-filled so it ties back here.",
           });
           await notifyFounder({ ...alert, replyTo: email });
 
@@ -85,7 +87,7 @@ export async function POST(request: Request): Promise<Response> {
           // failure here turn into a non-200 that makes Whop retry the event.
           if (email && emailConfigured) {
             try {
-              await sendEmail({ to: email, ...buildMemberWelcomeEmail({ planSlug, amount }) });
+              await sendEmail({ to: email, ...buildMemberWelcomeEmail({ planSlug, amount, email }) });
             } catch (err) {
               console.error(
                 JSON.stringify({

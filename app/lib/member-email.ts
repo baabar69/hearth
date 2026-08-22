@@ -33,9 +33,14 @@ const CRISIS =
 export function buildMemberWelcomeEmail(args: {
   planSlug?: string;
   amount?: string;
+  email?: string;
 }): { subject: string; html: string; text: string } {
   const plan = humanisePlan(args.planSlug);
   const amountLine = args.amount ? ` (${args.amount})` : "";
+  // Carry the payer's email into the intake so a later submission ties back to this payment.
+  const intakeUrl = args.email
+    ? `${SITE}/intake?email=${encodeURIComponent(args.email)}&paid=1`
+    : `${SITE}/intake`;
 
   const subject = "Your chair is being set. What happens next at Hearth";
 
@@ -44,7 +49,7 @@ export function buildMemberWelcomeEmail(args: {
     "",
     "What happens next:",
     "",
-    "1. A person at Hearth reads your intake. If you have not done it yet, it takes about twelve minutes and it is how we match you: " + `${SITE}/intake`,
+    "1. A person at Hearth reads your intake. If you have not done it yet, it takes about twelve minutes and it is how we match you: " + intakeUrl,
     "2. Within 72 hours you are matched by hand with one Keeper, a trained peer companion, chosen for the themes you carry and the kind of company that will actually help.",
     "3. Your Keeper emails you directly to introduce themselves and to book your first Sit, a 35 to 60 minute video or audio conversation.",
     "4. If that first Sit does not feel right, tell us and we assign you a different Keeper. No questions, no extra charge.",
@@ -64,7 +69,7 @@ export function buildMemberWelcomeEmail(args: {
   <p>Your payment for <strong>${escapeHtml(plan)}</strong>${escapeHtml(amountLine)} has come through. Thank you for trusting us with this.</p>
   <p style="margin-top:22px"><strong>What happens next</strong></p>
   <ol style="padding-left:20px">
-    <li style="margin-bottom:10px">A person at Hearth reads your intake. If you have not done it yet, it takes about twelve minutes and it is how we match you: <a href="${SITE}/intake" style="color:#9C2A1A">${SITE}/intake</a></li>
+    <li style="margin-bottom:10px">A person at Hearth reads your intake. If you have not done it yet, it takes about twelve minutes and it is how we match you: <a href="${intakeUrl}" style="color:#9C2A1A">${SITE}/intake</a></li>
     <li style="margin-bottom:10px">Within 72 hours you are matched by hand with one Keeper, a trained peer companion, chosen for the themes you carry and the kind of company that will actually help.</li>
     <li style="margin-bottom:10px">Your Keeper emails you directly to introduce themselves and to book your first Sit, a 35 to 60 minute video or audio conversation.</li>
     <li style="margin-bottom:10px">If that first Sit does not feel right, tell us and we assign you a different Keeper. No questions, no extra charge.</li>

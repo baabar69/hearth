@@ -242,6 +242,32 @@ function FieldLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
+/* Progress bar. Module-level so React sees a stable component type; defining
+   it inside IntakePage remounted it on every keystroke. */
+function ProgressBar({ step }: { step: number }) {
+  return (
+    <div style={{ marginBottom: 40 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
+        <span style={{ fontFamily: "var(--mono)", fontSize: 11, letterSpacing: "0.08em", color: "#999" }}>
+          Step {step} of {TOTAL_STEPS}
+        </span>
+        <span style={{ fontFamily: "var(--mono)", fontSize: 11, letterSpacing: "0.08em", color: "#999" }}>
+          ~{TOTAL_STEPS - step + 1} min left
+        </span>
+      </div>
+      <div style={{ height: 3, background: "#E8E2DA", borderRadius: 100, overflow: "hidden" }}>
+        <div style={{
+          height: "100%",
+          width: `${(step / TOTAL_STEPS) * 100}%`,
+          background: "var(--ember)",
+          borderRadius: 100,
+          transition: "width 0.4s",
+        }} />
+      </div>
+    </div>
+  );
+}
+
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <p style={{
@@ -322,18 +348,35 @@ export default function IntakePage() {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [data, setData] = useState<IntakeData>(INITIAL);
 
+  // True when the visitor arrived from the post-payment welcome email, which
+  // links here with &paid=1. Changes the confirmation screen and is sent with
+  // the submission so the founder's notification says the member has paid.
+  const [paid, setPaid] = useState(false);
+
   // The home page hero links here with ?topic=<id>[,<id>] so the visitor's
-  // choice carries through to Step 2 instead of being asked twice.
+  // choice carries through to Step 2 instead of being asked twice. The welcome
+  // email and the home page short form link here with ?email=&first= so the
+  // intake ties back to a payment or a lead without retyping.
   useEffect(() => {
-    const q = new URLSearchParams(window.location.search).get("topic");
-    if (!q) return;
-    const ids = q.split(",").filter((id) => TOPICS.some((x) => x.id === id));
-    if (!ids.length) return;
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get("topic");
+    const ids = q ? q.split(",").filter((id) => TOPICS.some((x) => x.id === id)) : [];
+    const email = (params.get("email") ?? "").trim().slice(0, 200);
+    const first = (params.get("first") ?? "").trim().slice(0, 80);
+    const fromPayment = params.get("paid") === "1";
+    if (!ids.length && !email && !first && !fromPayment) return;
     // One-time read of the URL after hydration. Reading it in a lazy
     // initialiser would mismatch the server render, and useSearchParams would
     // force a Suspense fallback that blanks the prerendered form.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setData((d) => ({ ...d, topics: Array.from(new Set([...d.topics, ...ids])) }));
+    /* eslint-disable react-hooks/set-state-in-effect */
+    if (fromPayment) setPaid(true);
+    setData((d) => ({
+      ...d,
+      topics: ids.length ? Array.from(new Set([...d.topics, ...ids])) : d.topics,
+      email: d.email || email,
+      firstName: d.firstName || first,
+    }));
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
   const set = <K extends keyof IntakeData>(key: K, value: IntakeData[K]) =>
@@ -354,7 +397,7 @@ export default function IntakePage() {
       const res = await fetch("/api/intake", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ form: "full", ...data }),
+        body: JSON.stringify({ form: "full", ...data, paid }),
       });
       if (!res.ok) {
         const body = (await res.json().catch(() => ({}))) as {
@@ -392,29 +435,6 @@ export default function IntakePage() {
 
   const handleBack = () => setStep((s) => s - 1);
 
-  /* progress bar */
-  const ProgressBar = () => (
-    <div style={{ marginBottom: 40 }}>
-      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-        <span style={{ fontFamily: "var(--mono)", fontSize: 11, letterSpacing: "0.08em", color: "#999" }}>
-          Step {step} of {TOTAL_STEPS}
-        </span>
-        <span style={{ fontFamily: "var(--mono)", fontSize: 11, letterSpacing: "0.08em", color: "#999" }}>
-          ~{TOTAL_STEPS - step + 1} min left
-        </span>
-      </div>
-      <div style={{ height: 3, background: "#E8E2DA", borderRadius: 100, overflow: "hidden" }}>
-        <div style={{
-          height: "100%",
-          width: `${(step / TOTAL_STEPS) * 100}%`,
-          background: "var(--ember)",
-          borderRadius: 100,
-          transition: "width 0.4s",
-        }} />
-      </div>
-    </div>
-  );
-
   /* confirmation screen */
   if (submitted) {
     return (
@@ -433,9 +453,35 @@ export default function IntakePage() {
             <h1 style={{ fontFamily: "var(--serif)", fontSize: "clamp(26px,4vw,36px)", color: "var(--ink)", marginBottom: 16, lineHeight: 1.3 }}>
               {data.firstName ? `${data.firstName}, you're in the queue.` : "You're in the queue."}
             </h1>
-            <p style={{ fontFamily: "var(--mono)", fontSize: 14, color: "#777", lineHeight: 1.7, marginBottom: 32 }}>
-              We're reading your answers and finding your Keeper. Expect a note at <strong style={{ color: "var(--ink)" }}>{data.email}</strong> within 48 hours. We match by hand, not algorithm.
-            </p>
+            {paid ? (
+              <p style={{ fontFamily: "var(--mono)", fontSize: 14, color: "#777", lineHeight: 1.7, marginBottom: 32 }}>
+                Your answers are with us and your membership is active. A person reads this today, and your Keeper introduces themselves at <strong style={{ color: "var(--ink)" }}>{data.email}</strong> within 72 hours. We match by hand, not algorithm.
+              </p>
+            ) : (
+              <>
+                <p style={{ fontFamily: "var(--mono)", fontSize: 14, color: "#777", lineHeight: 1.7, marginBottom: 24 }}>
+                  Your answers are with us. One step left: choose a membership, and a person matches you by hand within 72 hours of it. Your Keeper introduces themselves at <strong style={{ color: "var(--ink)" }}>{data.email}</strong>.
+                </p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginBottom: 28 }}>
+                  <Link
+                    href={`/checkout/hearthside?email=${encodeURIComponent(data.email)}&first=${encodeURIComponent(data.firstName)}`}
+                    className="btn btn-primary btn-lg"
+                  >
+                    Hearthside, $39 a month <span className="arr">&rarr;</span>
+                  </Link>
+                  <Link
+                    href={`/checkout/hearth-deep?email=${encodeURIComponent(data.email)}&first=${encodeURIComponent(data.firstName)}`}
+                    className="btn btn-ghost btn-lg"
+                  >
+                    Hearth Deep, $99 a month
+                  </Link>
+                </div>
+                <p style={{ fontFamily: "var(--mono)", fontSize: 12, color: "#999", lineHeight: 1.6, marginBottom: 24 }}>
+                  Biweekly Sits on Hearthside, weekly on Hearth Deep. Cancel any time, in one click.{" "}
+                  <Link href="/pricing" style={{ color: "var(--ember)", textDecoration: "underline" }}>Compare the two</Link>.
+                </p>
+              </>
+            )}
             <div style={{ display: "flex", flexDirection: "column", gap: 12, alignItems: "center" }}>
               <Link href="/embers" style={{
                 fontFamily: "var(--mono)", fontSize: 13, letterSpacing: "0.06em",
@@ -460,7 +506,7 @@ export default function IntakePage() {
       <SharedNav />
       <main style={{ minHeight: "100vh", background: "var(--paper)", paddingTop: 72 }}>
         <div style={{ maxWidth: 600, margin: "0 auto", padding: "48px 24px 80px" }}>
-          <ProgressBar />
+          <ProgressBar step={step} />
 
           {/* ── STEP 1: About you ── */}
           {step === 1 && (

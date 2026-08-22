@@ -19,12 +19,32 @@ export const metadata = {
 
 export const dynamic = "force-dynamic";
 
+// The intake confirmation screen and the welcome email link here with the
+// member's email and first name, so a payment can be tied back to an intake
+// in the founder's alert. Only those two fields travel; intake answers never
+// go in a URL or in Whop metadata.
+function cleanEmail(v: unknown): string | undefined {
+  if (typeof v !== "string") return undefined;
+  const s = v.trim().slice(0, 200);
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s) ? s : undefined;
+}
+function cleanName(v: unknown): string | undefined {
+  if (typeof v !== "string") return undefined;
+  const s = v.trim().slice(0, 80);
+  return s.length ? s : undefined;
+}
+
 export default async function CheckoutPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ plan: string }>;
+  searchParams: Promise<{ email?: string; first?: string }>;
 }) {
   const { plan } = await params;
+  const query = await searchParams;
+  const intakeEmail = cleanEmail(query.email);
+  const firstName = cleanName(query.first);
 
   if (!isPlanSlug(plan)) {
     notFound();
@@ -46,7 +66,9 @@ export default async function CheckoutPage({
     redirect_url: serverRedirectUrl,
     metadata: {
       plan_slug: plan,
-      source: "hearth-pricing",
+      source: intakeEmail ? "hearth-intake" : "hearth-pricing",
+      ...(intakeEmail ? { intake_email: intakeEmail } : {}),
+      ...(firstName ? { first_name: firstName } : {}),
     },
   });
 
@@ -106,6 +128,7 @@ export default async function CheckoutPage({
             sessionId={session.id}
             environment={environment}
             returnUrl={returnUrl}
+            prefillEmail={intakeEmail}
           />
 
           <p
