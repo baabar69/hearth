@@ -1,0 +1,50 @@
+[
+  {
+    "id": "sun-a",
+    "file": "sun-a.png"
+  },
+  {
+    "id": "sun-b",
+    "file": "sun-b.png"
+  },
+  {
+    "id": "sun-c",
+    "file": "sun-c.png"
+  },
+  {
+    "id": "sun-d",
+    "file": "sun-d.png"
+  },
+  {
+    "id": "wed-a",
+    "file": "wed-a.png"
+  },
+  {
+    "id": "wed-b",
+    "file": "wed-b.png"
+  },
+  {
+    "id": "wed-c",
+    "file": "wed-c.png"
+  },
+  {
+    "id": "wed-d",
+    "file": "wed-d.png"
+  },
+  {
+    "id": "thu-a",
+    "file": "thu-a.png"
+  },
+  {
+    "id": "thu-b",
+    "file": "thu-b.png"
+  },
+  {
+    "id": "thu-c",
+    "file": "thu-c.png"
+  },
+  {
+    "id": "thu-d",
+    "file": "thu-d.png"
+  }
+]

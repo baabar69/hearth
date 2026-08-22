@@ -1,0 +1,7 @@
+{
+  "name": "hearth-marketing-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Rendering and contact-sheet tools for the Instagram content pipeline. Separate from the site build on purpose.",
+  "dependencies": { "playwright-core": "^1.50.0" }
+}

@@ -1,0 +1,25 @@
+<!doctype html><meta charset="utf-8"><title>Contact sheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<style>body{margin:0;padding:28px;background:#F2EDE5;color:#0E0B08;font-family:'Inter Tight',system-ui,sans-serif}
+h1{font-family:Fraunces,serif;font-weight:400;font-size:28px;margin:0 0 6px}.bar{position:sticky;top:0;background:#F2EDE5;padding:12px 0;border-bottom:1px solid #0E0B0833;margin-bottom:18px;display:flex;gap:12px;align-items:center}
+button{font:inherit;padding:9px 16px;border-radius:999px;border:1px solid #0E0B08;background:#0E0B08;color:#F2EDE5;cursor:pointer}#count{color:#6B6051}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.card{display:block;background:#FFF7EE;border:1px solid #0E0B0833;border-radius:8px;padding:14px;cursor:pointer}.card:has(input:checked){border-color:#9C2A1A;box-shadow:0 0 0 3px #9C2A1A22}
+.card input{float:right}.meta{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6B6051;margin-bottom:8px}
+.hook{font-family:Fraunces,serif;font-size:20px;line-height:1.25}.img img{width:100%;border-radius:4px;display:block;margin-bottom:8px}</style>
+<h1>Cover batch</h1>
+<div class="bar"><button onclick="copySel()">Copy selection as JSON</button><span id="count">0 selected</span></div>
+<div class="grid"><label class="card img"><input type="checkbox" value="sun-a"><img src="sun-a.png" loading="lazy"><div class="meta">sun-a</div></label>
+<label class="card img"><input type="checkbox" value="sun-b"><img src="sun-b.png" loading="lazy"><div class="meta">sun-b</div></label>
+<label class="card img"><input type="checkbox" value="sun-c"><img src="sun-c.png" loading="lazy"><div class="meta">sun-c</div></label>
+<label class="card img"><input type="checkbox" value="sun-d"><img src="sun-d.png" loading="lazy"><div class="meta">sun-d</div></label>
+<label class="card img"><input type="checkbox" value="wed-a"><img src="wed-a.png" loading="lazy"><div class="meta">wed-a</div></label>
+<label class="card img"><input type="checkbox" value="wed-b"><img src="wed-b.png" loading="lazy"><div class="meta">wed-b</div></label>
+<label class="card img"><input type="checkbox" value="wed-c"><img src="wed-c.png" loading="lazy"><div class="meta">wed-c</div></label>
+<label class="card img"><input type="checkbox" value="wed-d"><img src="wed-d.png" loading="lazy"><div class="meta">wed-d</div></label>
+<label class="card img"><input type="checkbox" value="thu-a"><img src="thu-a.png" loading="lazy"><div class="meta">thu-a</div></label>
+<label class="card img"><input type="checkbox" value="thu-b"><img src="thu-b.png" loading="lazy"><div class="meta">thu-b</div></label>
+<label class="card img"><input type="checkbox" value="thu-c"><img src="thu-c.png" loading="lazy"><div class="meta">thu-c</div></label>
+<label class="card img"><input type="checkbox" value="thu-d"><img src="thu-d.png" loading="lazy"><div class="meta">thu-d</div></label></div>
+<script>const upd=()=>document.getElementById('count').textContent=document.querySelectorAll('input:checked').length+' selected';document.addEventListener('change',upd);
+function copySel(){const ids=[...document.querySelectorAll('input:checked')].map(i=>i.value);navigator.clipboard.writeText(JSON.stringify(ids));alert(ids.length+' ids copied. Paste them back to Claude.');}</script>
