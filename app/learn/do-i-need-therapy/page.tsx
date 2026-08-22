@@ -533,12 +533,12 @@ export default function DoINeedTherapyPage() {
             Several of these are free. If a free option fits what you are
             carrying, use the free option. We would rather you got the right help
             than our help. If you are weighing up the online therapy platforms
-            specifically, we compared them in{" "}
+            specifically, we set the category against Hearth in{" "}
             <Link
               href="/hearth-vs-betterhelp"
               style={{ color: "var(--ember)" }}
             >
-              Hearth vs. BetterHelp
+              Hearth vs. therapy apps
             </Link>
             .
           </p>
@@ -711,10 +711,10 @@ export default function DoINeedTherapyPage() {
                 Peer support vs. therapy: the honest difference &rarr;
               </Link>
               <Link
-                href="/hearth-vs-betterhelp"
+                href="/hearth-vs-therapy"
                 style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
               >
-                Hearth vs. BetterHelp: an honest comparison &rarr;
+                Hearth vs. therapy: the honest comparison &rarr;
               </Link>
               <Link
                 href="/bridge"

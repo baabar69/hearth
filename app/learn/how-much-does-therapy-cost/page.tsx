@@ -452,13 +452,14 @@ export default function HowMuchDoesTherapyCostPage() {
               What the online platforms charge.
             </h2>
             <p style={{ fontSize: 17.5, lineHeight: 1.75, color: "var(--ink-2)" }}>
-              <strong>BetterHelp</strong> bills <strong>$70 to $100 a week,
-              charged monthly, so $280 to $400 a month</strong> as of August
-              2026, for one live session a week plus messaging. That is cheaper
-              than weekly private therapy in a major US city and more expensive
-              than fortnightly private therapy almost anywhere. The therapist
-              you are matched with can change, and that is the trade-off people
-              most often report.
+              <strong>Subscription therapy apps</strong> bill{" "}
+              <strong>$60 to $120 a week, charged monthly or every four
+              weeks, so roughly $260 to $520 a month</strong> as of August
+              2026, for a licensed therapist, usually one live session a week
+              plus messaging. That is cheaper than weekly private therapy in a
+              major US city and more expensive than fortnightly private therapy
+              almost anywhere. The therapist you are matched with can change,
+              and that is the trade-off people most often report.
             </p>
             <p
               style={{
@@ -468,15 +469,14 @@ export default function HowMuchDoesTherapyCostPage() {
                 marginTop: 20,
               }}
             >
-              <strong>Talkspace</strong> messaging plans start around{" "}
-              <strong>$69 a week</strong>, with live sessions costing more, and
-              it is one of the few platforms that accepts some US insurance.
-              Subscription therapy is usually $60 to $120 a week across the
-              category. We compared the main platforms in{" "}
+              Messaging-only plans start lower, around <strong>$69 a week</strong>,
+              with live sessions costing more, and a few platforms accept some
+              US insurance, which can bring the cost down a long way. We set the
+              category against Hearth in{" "}
               <Link href="/hearth-vs-betterhelp" style={{ color: "var(--ember)" }}>
-                Hearth vs. BetterHelp
+                Hearth vs. therapy apps
               </Link>
-              .
+              , using the largest platform as the worked example.
             </p>
             <p
               style={{
@@ -487,7 +487,9 @@ export default function HowMuchDoesTherapyCostPage() {
               }}
             >
               Prices on these platforms change often and vary by location and
-              promotion. Check the platform&rsquo;s own pricing page on the day.
+              promotion. The figures above come from BetterHelp&rsquo;s FAQ and
+              Talkspace&rsquo;s pricing page, checked in August 2026. Check the
+              platform&rsquo;s own page on the day.
             </p>
           </div>
         </div>
@@ -626,10 +628,10 @@ export default function HowMuchDoesTherapyCostPage() {
                 Do I need therapy, or someone to talk to? &rarr;
               </Link>
               <Link
-                href="/hearth-vs-betterhelp"
+                href="/hearth-vs-therapy"
                 style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
               >
-                Hearth vs. BetterHelp: an honest comparison &rarr;
+                Hearth vs. therapy: the honest comparison &rarr;
               </Link>
               <Link
                 href="/pricing"

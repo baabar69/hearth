@@ -441,7 +441,7 @@ export default function CantAffordTherapyPage() {
                 href="/hearth-vs-betterhelp"
                 style={{ color: "var(--ember)" }}
               >
-                Hearth vs. BetterHelp
+                Hearth vs. therapy apps
               </Link>
               . It is also considerably more expensive than free, and several of
               the options above cost nothing. If a warmline, a NAMI group or 7 Cups fits what you are
@@ -553,10 +553,10 @@ export default function CantAffordTherapyPage() {
                 Peer support vs. therapy: the honest difference &rarr;
               </Link>
               <Link
-                href="/hearth-vs-betterhelp"
+                href="/hearth-vs-therapy"
                 style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
               >
-                Hearth vs. BetterHelp: an honest comparison &rarr;
+                Hearth vs. therapy: the honest comparison &rarr;
               </Link>
               <Link
                 href="/pricing"

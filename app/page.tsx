@@ -42,7 +42,7 @@ const COMPARE = [
   },
   {
     label: "Price per month",
-    bh: "About $280 to $400, per BetterHelp's own FAQ (August 2026).",
+    bh: "About $260 to $520, at $60 to $120 a week. Figures as of August 2026.",
     us: "$39 for a call every two weeks. $99 for every week.",
   },
   {
@@ -697,14 +697,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HEARTH VS BETTERHELP */}
+      {/* HEARTH VS THERAPY APPS */}
       <section className="compare" id="compare">
         <div className="wrap">
           <div className="sec-head reveal">
             <div>
               <div className="eyebrow">
                 <span className="dot" />
-                Hearth vs. BetterHelp
+                Hearth vs. therapy apps
               </div>
               <h2 style={{ marginTop: 18 }}>
                 Therapy apps rent you a counsellor.{" "}
@@ -714,17 +714,18 @@ export default function Home() {
               </h2>
             </div>
             <p className="lede">
-              BetterHelp is good at what it sells: licensed therapy, fast. It
-              was never built for the years-long relationship most of the
+              Therapy apps are good at what they sell: licensed therapy, fast.
+              They were never built for the years-long relationship most of the
               weight in a life needs. That is the gap we built for. Their
-              details are from their own FAQ, August 2026.
+              column uses the published prices of the largest platforms,
+              August 2026.
             </p>
           </div>
 
           <div className="cmp reveal">
             <div className="cmp-head">
               <div>What</div>
-              <div>BetterHelp</div>
+              <div>Therapy apps</div>
               <div className="cmp-us">Hearth</div>
             </div>
             {COMPARE.map((row) => (
@@ -738,10 +739,10 @@ export default function Home() {
 
           <div className="cmp-verdict reveal">
             <p>
-              If you need treatment, choose therapy; BetterHelp is a fair way to
-              get it. If what you need is a trained person who knows your whole
-              story and stays, that is what we build. At about a seventh of the
-              price.
+              If you need treatment, choose therapy; a good app is a fair way
+              to get it. If what you need is a trained person who knows your
+              whole story and stays, that is what we build. At a fraction of
+              the price.
             </p>
             <Link href="/hearth-vs-betterhelp" className="btn btn-ghost">
               The full comparison, with alternatives{" "}

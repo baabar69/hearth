@@ -1,12 +1,16 @@
 import Link from "next/link";
 
 /**
- * The one place competitor prices live. Every page that quotes BetterHelp,
- * Talkspace, private therapy or 7 Cups renders this rather than restating the
- * numbers, so the figures cannot drift apart between pages.
+ * The one place competitor prices live. Every page that quotes online therapy
+ * subscriptions, private therapy or 7 Cups renders this rather than restating
+ * the numbers, so the figures cannot drift apart between pages.
  *
- * Re-verify on a quarterly cadence and bump FIGURES_AS_OF. A stale competitor
- * price on a comparison page is a legal exposure, not a typo.
+ * Rows describe categories, not brands. Named providers appear only as the
+ * source of a figure, in the footnote, so a price claim always has a citation
+ * without the page reading as a comparison against one company.
+ *
+ * Re-verify on a quarterly cadence and bump FIGURES_AS_OF. A stale price on a
+ * comparison page is a legal exposure, not a typo.
  */
 
 export const FIGURES_AS_OF = "August 2026";
@@ -18,7 +22,7 @@ type Row = {
   perMonth: string;
   whatYouGet: string;
   clinical: "Yes" | "No";
-  source: Source;
+  sources: Source[];
   hearth?: boolean;
 };
 
@@ -29,7 +33,7 @@ const ROWS: Row[] = [
     whatYouGet:
       "One Keeper, matched by hand and kept. A Sit every two weeks, unlimited Long Talk, a written note every Friday.",
     clinical: "No",
-    source: { label: "Hearth pricing", href: "/pricing" },
+    sources: [{ label: "Hearth pricing", href: "/pricing" }],
     hearth: true,
   },
   {
@@ -38,32 +42,27 @@ const ROWS: Row[] = [
     whatYouGet:
       "Everything in Hearthside, with a Sit every week and priority replies on the Long Talk.",
     clinical: "No",
-    source: { label: "Hearth pricing", href: "/pricing" },
+    sources: [{ label: "Hearth pricing", href: "/pricing" }],
     hearth: true,
   },
   {
-    option: "BetterHelp",
-    perMonth: "$280 to $400",
+    option: "Online therapy subscription",
+    perMonth: "$260 to $520",
     whatYouGet:
-      "$70 to $100 a week, billed every four weeks. One live session a week with a licensed therapist, plus messaging.",
+      "$60 to $120 a week, billed monthly or every four weeks. A licensed therapist, usually one live session a week plus messaging. The therapist can change. Some platforms accept US insurance.",
     clinical: "Yes",
-    source: {
-      label: "BetterHelp FAQ",
-      href: "https://www.betterhelp.com/faq/",
-      external: true,
-    },
-  },
-  {
-    option: "Talkspace",
-    perMonth: "From about $276",
-    whatYouGet:
-      "Messaging plans from about $69 a week. Live sessions cost more. Accepts some US insurance, which can bring this down a long way.",
-    clinical: "Yes",
-    source: {
-      label: "Talkspace pricing",
-      href: "https://www.talkspace.com/pricing",
-      external: true,
-    },
+    sources: [
+      {
+        label: "BetterHelp FAQ",
+        href: "https://www.betterhelp.com/faq/",
+        external: true,
+      },
+      {
+        label: "Talkspace pricing",
+        href: "https://www.talkspace.com/pricing",
+        external: true,
+      },
+    ],
   },
   {
     option: "Private therapy, weekly",
@@ -71,28 +70,22 @@ const ROWS: Row[] = [
     whatYouGet:
       "At the US average of $165 a session. $430 to $1,080 across the usual $100 to $250 range. Licensed clinician, in person or online.",
     clinical: "Yes",
-    source: {
-      label: "Our cost guide",
-      href: "/learn/how-much-does-therapy-cost",
-    },
+    sources: [{ label: "Our cost guide", href: "/learn/how-much-does-therapy-cost" }],
   },
   {
     option: "Private therapy, every two weeks",
     perMonth: "About $360",
     whatYouGet: "Same clinician, half the frequency. $215 to $540 across the usual range.",
     clinical: "Yes",
-    source: {
-      label: "Our cost guide",
-      href: "/learn/how-much-does-therapy-cost",
-    },
+    sources: [{ label: "Our cost guide", href: "/learn/how-much-does-therapy-cost" }],
   },
   {
-    option: "7 Cups, listener tier",
+    option: "Free listener services",
     perMonth: "Free",
     whatYouGet:
-      "Trained volunteer listeners, available now, a different person each time. A paid therapy tier is separate.",
+      "Trained volunteer listeners, available now, a different person each time. Not clinicians. Some offer a separate paid therapy tier.",
     clinical: "No",
-    source: { label: "7 Cups", href: "https://www.7cups.com/", external: true },
+    sources: [{ label: "7 Cups", href: "https://www.7cups.com/", external: true }],
   },
 ];
 
@@ -115,6 +108,18 @@ const td: React.CSSProperties = {
   color: "var(--ink-2)",
   verticalAlign: "top",
 };
+
+function SourceLink({ s }: { s: Source }) {
+  return s.external ? (
+    <a href={s.href} target="_blank" rel="noopener noreferrer" style={{ color: "var(--ember)" }}>
+      {s.label}
+    </a>
+  ) : (
+    <Link href={s.href} style={{ color: "var(--ember)" }}>
+      {s.label}
+    </Link>
+  );
+}
 
 type Props = {
   heading?: string;
@@ -183,20 +188,12 @@ export default function CostComparison({
                     {r.clinical}
                   </td>
                   <td style={{ ...td, whiteSpace: "nowrap" }}>
-                    {r.source.external ? (
-                      <a
-                        href={r.source.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ color: "var(--ember)" }}
-                      >
-                        {r.source.label}
-                      </a>
-                    ) : (
-                      <Link href={r.source.href} style={{ color: "var(--ember)" }}>
-                        {r.source.label}
-                      </Link>
-                    )}
+                    {r.sources.map((s, i) => (
+                      <span key={s.href}>
+                        {i > 0 ? ", " : ""}
+                        <SourceLink s={s} />
+                      </span>
+                    ))}
                   </td>
                 </tr>
               ))}
@@ -212,10 +209,11 @@ export default function CostComparison({
             maxWidth: "68ch",
           }}
         >
-          Figures as of {FIGURES_AS_OF}. Competitor prices change and vary by
-          location and promotion; check their sites on the day. Hearth is peer
-          support, not therapy. Keepers do not diagnose, treat or prescribe, and
-          a cheaper non-clinical service does not meet a clinical need.
+          Figures as of {FIGURES_AS_OF}. Subscription prices change and vary by
+          location and promotion; the sources are each provider&rsquo;s own
+          pricing page, checked on that date. Hearth is peer support, not
+          therapy. Keepers do not diagnose, treat or prescribe, and a cheaper
+          non-clinical service does not meet a clinical need.
         </p>
       </div>
     </section>

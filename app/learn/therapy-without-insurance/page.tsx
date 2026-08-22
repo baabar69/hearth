@@ -575,10 +575,10 @@ export default function TherapyWithoutInsurancePage() {
                 Sliding scale therapy: how to ask &rarr;
               </Link>
               <Link
-                href="/hearth-vs-betterhelp"
+                href="/hearth-vs-therapy"
                 style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
               >
-                Hearth vs. BetterHelp: an honest comparison &rarr;
+                Hearth vs. therapy: the honest comparison &rarr;
               </Link>
             </div>
             <div className="cta-row" style={{ marginTop: 44 }}>

@@ -181,7 +181,14 @@ export default function HearthVsBetterHelpPage() {
             for about $280 to $400 a month. Hearth sells something older and
             narrower: one trained person, matched to you by hand, who stays for
             years. For $39 a month. This page compares the two honestly,
-            including where BetterHelp is the better choice.
+            including where BetterHelp is the better choice. BetterHelp is the
+            example because it is the one people search for; the same
+            comparison holds for any subscription therapy app, and the general
+            version is at{" "}
+            <Link href="/hearth-vs-therapy" style={{ color: "var(--ember)" }}>
+              Hearth vs. therapy
+            </Link>
+            .
           </p>
           <p
             style={{
