@@ -26,12 +26,12 @@ const COMPARISON = [
   {
     label: "Who provides it",
     therapy: "Licensed therapist, psychologist, social worker, or counsellor.",
-    hearth: "A Keeper: vetted, trained, and supervised, but not a clinician.",
+    hearth: "A Keeper: often a psychologist by training at home; vetted, supervised, never acting as your clinician.",
   },
   {
     label: "Credentials",
     therapy: "Master's or doctoral degree, licensure, supervised clinical hours.",
-    hearth: "120-hour Hearth training, lived experience, monthly supervision.",
+    hearth: "Many hold psychology or counselling degrees from their home countries, plus 120-hour Hearth training, lived experience, and monthly supervision.",
   },
   {
     label: "What it's for",

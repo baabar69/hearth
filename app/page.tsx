@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { track } from "./lib/analytics";
 import Link from "next/link";
 import SharedFooter from "./components/SharedFooter";
 import SharedNav from "./components/SharedNav";
@@ -17,6 +18,7 @@ const HERO_PICKS = [
   { id: "loneliness", label: "Loneliness" },
   { id: "parenting", label: "Parenting" },
   { id: "anxiety", label: "Anxiety or overwhelm" },
+  { id: "bullying", label: "Bullying or harassment" },
   { id: "transition", label: "A big life change" },
   { id: "other", label: "Something else" },
 ];
@@ -83,7 +85,7 @@ const VOICES = [
 const HOME_FAQ = [
   {
     q: "Is Hearth therapy?",
-    a: "No. Hearth is peer support: a trained Keeper who is not a clinician, for the recurring weight of ordinary life. Keepers do not diagnose, treat or prescribe. If what you describe needs a therapist, your Keeper says so and helps you find a vetted one through The Bridge.",
+    a: "No. Hearth is peer support: a trained Keeper (often a psychologist by training in their home country) who does not act as a clinician, for the recurring weight of ordinary life. Keepers do not diagnose, treat or prescribe. If what you describe needs a therapist, your Keeper says so and helps you find a vetted one through The Bridge.",
   },
   {
     q: "How is Hearth different from therapy apps like BetterHelp?",
@@ -451,6 +453,7 @@ export default function Home() {
         throw new Error(body.error ?? `submission failed (${res.status})`);
       }
       setCtaStep(3);
+      track("short_intake_submitted", { topics: ctaTopics.length });
     } catch (err) {
       setCtaError(
         err instanceof Error ? err.message : "Something went wrong.",
@@ -472,6 +475,9 @@ export default function Home() {
     { id: "career", label: "Career & life direction" },
     { id: "anxiety", label: "Anxiety or overwhelm" },
     { id: "parenting", label: "Parenting stress" },
+    { id: "bullying", label: "Bullying or harassment" },
+    { id: "comparison", label: "Comparison & body image" },
+    { id: "dating", label: "Dating burnout" },
     { id: "transition", label: "Major life change" },
     { id: "loneliness", label: "Loneliness" },
     { id: "other", label: "Something else" },
@@ -900,7 +906,10 @@ export default function Home() {
             <Link href="/for/identity">identity &amp; belonging</Link>,{" "}
             <Link href="/for/intimacy">intimacy &amp; shame</Link>,{" "}
             <Link href="/for/sexual-identity">sexual identity</Link>,{" "}
-            <Link href="/for/anxiety">anxiety</Link>. If it&rsquo;s on your
+            <Link href="/for/anxiety">anxiety</Link>,{" "}
+            <Link href="/for/bullying">bullying &amp; harassment</Link>,{" "}
+            <Link href="/for/comparison">comparison &amp; body image</Link>,{" "}
+            <Link href="/for/dating-burnout">dating burnout</Link>. If it&rsquo;s on your
             mind every week, it belongs here.
           </p>
         </div>
@@ -986,8 +995,9 @@ export default function Home() {
               >
                 Keepers are trained companions, the kind of steady person most
                 of us used to have in a family or a neighbourhood. Paid
-                professionals, not volunteers. Not clinicians, and clear about
-                it. And they stay yours.
+                professionals, not volunteers. Many trained as psychologists
+                in their home countries; none act as your clinician, and we
+                are clear about it. And they stay yours.
               </p>
 
               <div className="keeper-points">

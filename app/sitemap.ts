@@ -47,13 +47,31 @@ const ROUTES: Array<{ path: string; priority: number; lastmod: string }> = [
   // /intake is a conversion flow that should not absorb crawl budget.
 ];
 
-const FOR_TOPICS = [
-  "grief",
-  "family-pressure",
-  "identity",
-  "intimacy",
-  "sexual-identity",
-  "anxiety",
+const FOR_TOPICS: { slug: string; lastmod: string }[] = [
+  { slug: "grief", lastmod: "2026-05-14" },
+  { slug: "family-pressure", lastmod: "2026-05-14" },
+  { slug: "identity", lastmod: "2026-05-14" },
+  { slug: "intimacy", lastmod: "2026-05-14" },
+  { slug: "sexual-identity", lastmod: "2026-05-14" },
+  { slug: "anxiety", lastmod: "2026-05-14" },
+  { slug: "bullying", lastmod: "2026-08-24" },
+  { slug: "comparison", lastmod: "2026-08-24" },
+  { slug: "dating-burnout", lastmod: "2026-08-24" },
+];
+
+// Ember essays: per the new-page rule in AGENTS.md, every public page gets a
+// sitemap entry. Dates are each essay's publishDate.
+const EMBER_SLUGS: { slug: string; lastmod: string }[] = [
+  { slug: "the-weight-you-inherited", lastmod: "2025-09-12" },
+  { slug: "on-saying-no-to-your-mother", lastmod: "2025-10-04" },
+  { slug: "late-grief", lastmod: "2025-11-18" },
+  { slug: "code-switch-fatigue", lastmod: "2025-12-09" },
+  { slug: "the-bedroom-got-quiet", lastmod: "2026-01-22" },
+  { slug: "the-year-i-stopped-performing", lastmod: "2026-02-14" },
+  { slug: "the-door-you-were-promised", lastmod: "2026-08-24" },
+  { slug: "the-listener-they-switched-off", lastmod: "2026-08-24" },
+  { slug: "when-your-name-starts-trending", lastmod: "2026-08-24" },
+  { slug: "the-rooms-that-closed", lastmod: "2026-08-24" },
 ];
 
 const KEEPER_SLUGS = [
@@ -71,10 +89,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: r.priority,
   }));
 
-  const forEntries = FOR_TOPICS.map((slug) => ({
-    url: `${SITE}/for/${slug}`,
-    lastModified: new Date("2026-05-14"),
+  const forEntries = FOR_TOPICS.map((t) => ({
+    url: `${SITE}/for/${t.slug}`,
+    lastModified: new Date(t.lastmod),
     priority: 0.8,
+  }));
+
+  const emberEntries = EMBER_SLUGS.map((e) => ({
+    url: `${SITE}/embers/${e.slug}`,
+    lastModified: new Date(e.lastmod),
+    priority: 0.6,
   }));
 
   const keeperEntries = KEEPER_SLUGS.map((slug) => ({
@@ -83,5 +107,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticEntries, ...forEntries, ...keeperEntries];
+  return [...staticEntries, ...forEntries, ...emberEntries, ...keeperEntries];
 }

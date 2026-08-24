@@ -3,7 +3,8 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "Accessibility · Hearth",
+  title: "Accessibility",
+  alternates: { canonical: "/accessibility" },
   description:
     "How Hearth approaches accessibility. WCAG 2.1 AA commitment, what we've built, what we're still working on, and how to flag a barrier.",
 };

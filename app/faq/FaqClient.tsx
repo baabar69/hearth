@@ -20,7 +20,7 @@ const CATEGORIES: Category[] = [
     items: [
       {
         q: "Is Hearth therapy?",
-        a: "No. Hearth is peer support. Not therapy, not medical advice, not a clinical service. Keepers are trained companions, not licensed therapists. We say this plainly because the distinction is a feature, not a limitation. When something clinical comes up, your Keeper will tell you honestly and walk you to The Bridge, which connects you with vetted licensed therapists.",
+        a: "No. Hearth is peer support. Not therapy, not medical advice, not a clinical service. Keepers are professionally trained companions (many are psychologists or counsellors by training in their home countries) who do not act as clinicians at Hearth. We say this plainly because the distinction is a feature, not a limitation. When something clinical comes up, your Keeper will tell you honestly and walk you to The Bridge, which connects you with vetted licensed therapists.",
       },
       {
         q: "How is this different from BetterHelp or Talkspace?",
@@ -57,7 +57,7 @@ const CATEGORIES: Category[] = [
     items: [
       {
         q: "Are Keepers licensed therapists?",
-        a: "No. Keepers are trained peer supporters. They complete Hearth's 120-hour Keeper training, which covers listening skills, sensitivity, scope boundaries, and crisis protocol. They are not licensed therapists and do not diagnose, treat, or prescribe. When clinical care is needed, Keepers make a warm referral to The Bridge.",
+        a: "Many are, in their home countries. A large share of Keepers trained as psychologists or counsellors, and some hold licences where they first practised. Those licences are jurisdiction-specific, so at Hearth nobody acts as your clinician: Keepers do not diagnose, treat, or prescribe. Every Keeper also completes Hearth's 120-hour Keeper training, which covers listening skills, sensitivity, scope boundaries, and crisis protocol. When clinical care is needed, Keepers make a warm referral to The Bridge.",
       },
       {
         q: "Where are Keepers based?",

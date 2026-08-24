@@ -1,6 +1,8 @@
 "use client";
 
+import { useEffect } from "react";
 import { WhopCheckoutEmbed } from "@whop/checkout/react";
+import { track } from "../lib/analytics";
 import type { WhopEnvironment } from "../lib/checkout";
 
 type Props = {
@@ -9,6 +11,7 @@ type Props = {
   environment: WhopEnvironment;
   returnUrl: string;
   prefillEmail?: string;
+  planSlug: string;
 };
 
 export default function CheckoutEmbed({
@@ -17,7 +20,12 @@ export default function CheckoutEmbed({
   environment,
   returnUrl,
   prefillEmail,
+  planSlug,
 }: Props) {
+  useEffect(() => {
+    track("checkout_viewed", { plan: planSlug, from_intake: Boolean(prefillEmail) });
+  }, [planSlug, prefillEmail]);
+
   return (
     <div
       style={{

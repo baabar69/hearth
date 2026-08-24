@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { track } from "../lib/analytics";
 import Link from "next/link";
 import SharedNav from "@/app/components/SharedNav";
 
@@ -20,6 +21,9 @@ const TOPICS = [
   { id: "parenting", label: "Parenting stress" },
   { id: "loneliness", label: "Loneliness & disconnection" },
   { id: "transition", label: "Major life change" },
+  { id: "bullying", label: "Bullying or harassment" },
+  { id: "comparison", label: "Comparison & body image" },
+  { id: "dating", label: "Dating burnout or heartbreak" },
   { id: "trauma", label: "Difficult past experiences" },
   { id: "other", label: "Something else" },
 ];
@@ -95,18 +99,9 @@ const FAITH_TRADITION_OPTIONS = [
 
 const NATIVE_LANGUAGE_OPTIONS = [
   "English",
-  "Spanish",
-  "Mandarin",
-  "French",
-  "Arabic",
-  "Hindi",
   "Urdu",
-  "Bengali",
-  "Tamil",
+  "Hindi",
   "Punjabi",
-  "Portuguese",
-  "German",
-  "Russian",
   "Other",
 ];
 
@@ -406,6 +401,7 @@ export default function IntakePage() {
         throw new Error(body.error ?? `submission failed (${res.status})`);
       }
       setSubmitted(true);
+      track("intake_submitted", { paid });
     } catch (err) {
       setSubmitError(
         err instanceof Error ? err.message : "Something went wrong.",
@@ -1004,7 +1000,7 @@ export default function IntakePage() {
                       style={{ marginTop: 2, accentColor: "var(--ember)", flexShrink: 0 }}
                     />
                     <span style={{ fontFamily: "var(--mono)", fontSize: 13, color: "var(--ink)", lineHeight: 1.6 }}>
-                      I understand Hearth is <strong>peer support, not therapy</strong>. My Keeper is a trained companion, not a licensed clinician. For clinical care, I&rsquo;ll seek a therapist.
+                      I understand Hearth is <strong>peer support, not therapy</strong>. Keepers are professionally trained (many as psychologists in their home countries) but do not act as my clinician at Hearth: no diagnosis, no treatment, no prescriptions. For clinical care, Hearth will point me to a licensed therapist through The Bridge.
                     </span>
                   </label>
 

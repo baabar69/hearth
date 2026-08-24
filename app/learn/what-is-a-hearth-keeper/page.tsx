@@ -483,8 +483,10 @@ export default function WhatIsAHearthKeeperPage() {
                 <strong style={{ color: "var(--ink)" }}>
                   To be clear about what a Keeper is not.
                 </strong>{" "}
-                Keepers are not therapists, counsellors or clinicians. They do
-                not diagnose, they do not treat, and they do not prescribe.
+                Keepers do not act as therapists, counsellors or clinicians at
+                Hearth, whatever their training (many studied psychology or
+                counselling in their home countries). They do not diagnose,
+                they do not treat, and they do not prescribe.
                 Hearth is not therapy and is not a crisis service. When someone
                 needs clinical care, their Keeper says so and helps them reach it
                 through{" "}

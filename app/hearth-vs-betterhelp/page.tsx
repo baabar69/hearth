@@ -76,7 +76,7 @@ const COMPARISON = [
 const FAQ = [
   {
     q: "Is Hearth a replacement for BetterHelp?",
-    a: "No. BetterHelp provides therapy from licensed professionals. Hearth provides peer support from a trained Keeper who is not a clinician. If you need treatment for a mental-health condition, you need therapy, and BetterHelp is one way to get it. If what you need is a consistent, trained person for the everyday weight of your life, Hearth is built for that. Many members use both.",
+    a: "No. BetterHelp provides therapy from licensed professionals. Hearth provides peer support from a professionally trained Keeper who does not act as a clinician. If you need treatment for a mental-health condition, you need therapy, and BetterHelp is one way to get it. If what you need is a consistent, trained person for the everyday weight of your life, Hearth is built for that. Many members use both.",
   },
   {
     q: "Is Hearth cheaper than BetterHelp?",

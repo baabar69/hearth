@@ -137,7 +137,7 @@ const ORGANIZATION_LD = {
       "@type": "ContactPoint",
       contactType: "customer support",
       email: "hello@dearhearth.com",
-      availableLanguage: ["English", "Bengali", "Hindi", "Urdu", "Punjabi", "Tamil", "Arabic"],
+      availableLanguage: ["English", "Urdu", "Hindi", "Punjabi"],
       areaServed: "Worldwide",
     },
     {

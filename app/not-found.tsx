@@ -3,7 +3,7 @@ import SharedNav from "./components/SharedNav";
 import SharedFooter from "./components/SharedFooter";
 
 export const metadata = {
-  title: "Lost in the house · Hearth",
+  title: "Lost in the house",
   description:
     "The page you were looking for isn't here. Pull up a chair somewhere else.",
 };

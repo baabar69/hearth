@@ -69,7 +69,7 @@ const CRISIS = [
   },
   {
     title: "Mandatory reporting",
-    body: "Keepers are not licensed clinicians and do not have the same mandatory reporting obligations therapists do. But we follow the law in your jurisdiction for child safety and immediate danger. We will be honest with you about what that means before your first Sit.",
+    body: "Keepers do not practise as licensed clinicians at Hearth and do not have the same mandatory reporting obligations therapists do. But we follow the law in your jurisdiction for child safety and immediate danger. We will be honest with you about what that means before your first Sit.",
   },
 ];
 

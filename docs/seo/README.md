@@ -91,3 +91,10 @@ Found while checking whether `/embers/feed.xml` was a real RSS feed. It was not 
   one. Only list profiles that actually resolve.
 - **IndexNow reaches Bing, Yandex, Seznam and Naver — not Google.** It still
   matters, because Bing's index is what ChatGPT search and DuckDuckGo read from.
+
+## New-page checklist
+
+The binding version of this rule lives in `AGENTS.md` (New-page rule). Short form:
+sitemap entry with a real lastmod, llms.txt if citable, founder requests indexing
+in Search Console after the deploy (agent hands over the exact URL list), IndexNow
+is automatic on deploy. Added 2026-08-24 at the founder's request.

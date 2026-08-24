@@ -2,7 +2,8 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "Privacy Policy · Hearth",
+  title: "Privacy Policy",
+  alternates: { canonical: "/privacy" },
   description:
     "Plain-language privacy policy. What we collect, how it's stored, what's never shared.",
 };

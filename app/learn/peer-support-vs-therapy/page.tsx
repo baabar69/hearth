@@ -594,7 +594,9 @@ export default function PeerSupportVsTherapyPage() {
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.75, color: "var(--ink-2)" }}>
               We exist on the peer-support side of this map. Our Keepers are
-              trained peer supporters, not licensed therapists. We do not
+              trained peer supporters, many of them psychologists or
+              counsellors by training in their home countries, and none act
+              as licensed therapists here. We do not
               diagnose, do not prescribe, and we are not a crisis service.
               When something needs a clinician, your Keeper says so plainly
               and walks you to The Bridge, our network of vetted, licensed

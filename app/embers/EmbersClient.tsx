@@ -12,9 +12,47 @@ const CATEGORIES = [
   "Transitions",
   "Identity",
   "Intimacy",
+  "Career",
+  "Loneliness",
 ];
 
 const ESSAYS = [
+  {
+    slug: "the-door-you-were-promised",
+    title: "The Door You Were Promised",
+    author: "Arjun Mehta",
+    category: "Career",
+    readTime: "7 min",
+    excerpt:
+      "I did everything in the order it was given to me. The grades, the degree, the unpaid internship that was supposed to turn into a paid one. Since January I have sent two hundred and thirty-one applications. I keep the spreadsheet the way some people keep a diary, except a diary talks back more.",
+  },
+  {
+    slug: "the-listener-they-switched-off",
+    title: "The Listener They Switched Off",
+    author: "Mahnoor Baig",
+    category: "Intimacy",
+    readTime: "7 min",
+    excerpt:
+      "For eleven months, the most patient listener in my life was a subscription. I am going to write that sentence plainly and let it sit there, because I spent most of a year unable to say it to anyone.",
+  },
+  {
+    slug: "when-your-name-starts-trending",
+    title: "When Your Name Starts Trending",
+    author: "Aruna Bhattacharya",
+    category: "Identity",
+    readTime: "6 min",
+    excerpt:
+      "My great-nephew softened his name on a job application this spring. Arnav became Arn. He did not tell his mother, and he did not have to tell me, because I noticed it at the bottom of the resume he sent for my proud inspection, the way you notice a limp in someone you have watched walk his whole life.",
+  },
+  {
+    slug: "the-rooms-that-closed",
+    title: "The Rooms That Closed",
+    author: "Hassan Amin",
+    category: "Loneliness",
+    readTime: "6 min",
+    excerpt:
+      "There was a time when I could name five rooms where somebody would have noticed if I did not arrive. The Friday prayer hall. The cafe with the broken chair that everyone knew not to take. My uncle's carpet shop, which sold maybe six carpets a year and existed, as far as I could tell, so that men could disagree about football in comfort. Rooms were my trade, in the end; I spent years as a pastoral counsellor, which is a professional noticer of who has stopped arriving.",
+  },
   {
     slug: "the-weight-you-inherited",
     title: "The Weight You Inherited",

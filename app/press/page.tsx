@@ -3,7 +3,8 @@ import SharedFooter from "../components/SharedFooter";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Press · Hearth",
+  title: "Press",
+  alternates: { canonical: "/press" },
   description:
     "For journalists, podcasters, and writers covering peer support, the cash-pay wellness market, and the new emotional infrastructure.",
 };
@@ -54,7 +55,7 @@ export default function PressPage() {
               </h2>
               <p style={{ color: "var(--ink-2)", lineHeight: 1.65, fontSize: 16 }}>
                 A peer-support membership. Members are paired with a Keeper,
-                a trained, paid companion (not a licensed clinician),
+                a trained, paid companion (often clinically trained, never acting as your clinician),
                 for biweekly or weekly Sits, an asynchronous Long Talk
                 thread, and group Circles. Keepers are matched by hand for
                 fit; warmth and careful presence for everyone.

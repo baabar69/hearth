@@ -123,8 +123,10 @@ export default function ForKeepersPage() {
                 cannot be trained from scratch.
               </p>
               <p style={{ marginTop: 18 }}>
-                Keepers are not therapists. They do not diagnose. They do
-                not prescribe. They hold space, notice patterns, and when
+                Keepers do not work as therapists at Hearth, whatever they
+                are licensed as at home. Many applicants are psychologists or
+                counsellors, and that background is welcome. They do not
+                diagnose. They do not prescribe. They hold space, notice patterns, and when
                 clinical care is the right tool, they know how to build
                 a bridge instead of a wall. Less than 8% of Keeper
                 applicants are accepted. We are looking for the real thing.

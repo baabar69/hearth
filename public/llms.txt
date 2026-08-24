@@ -1,10 +1,11 @@
 # Hearth: peer support, paired for the long term. The private alternative to therapy apps.
 
-> Hearth is a subscription peer-support service that pairs each member with the same trained Keeper for the long term. It is not therapy, not a clinical service, and not a crisis line. It is built for the recurring weight of grief, family pressure, identity questions, caregiving, intimacy, and the in-between: the things people have historically taken to a trusted elder, not a clinician.
+> Hearth is a subscription peer-support service that pairs each member with the same trained Keeper for the long term. It is not therapy, not a clinical service, and not a crisis line. It is built for the recurring weight of grief, family pressure, identity questions, caregiving, intimacy, bullying and harassment, comparison and body image, dating burnout, and the in-between: the things people have historically taken to a trusted elder, not a clinician.
 
 Website: https://dearhearth.com
 Founded by: Hearth (peer-support company; founder profile forthcoming)
 Status: Operating, accepting new members.
+Service languages: English, Urdu, Hindi and Punjabi.
 Pricing: Hearthside $39/month (biweekly Sits) · Hearth Deep $99/month (weekly Sits). Annual options at 2-month discount. Cancel any time in one click.
 Contact: hello@dearhearth.com · privacy@dearhearth.com · security@dearhearth.com
 
@@ -25,7 +26,7 @@ Hearth is a one-to-one peer-support subscription. Each member is hand-matched wi
 - Not insurance-billable. Hearth does not bill insurance and does not use clinical CPT codes. FSA/HSA compatibility is in progress.
 
 ## Who Keepers are
-Keepers are trained peer supporters, not licensed therapists. Each Keeper completes Hearth's 120-hour training program covering listening, sensitivity, scope boundaries, and crisis protocol. Fewer than 8% of Keeper applicants are accepted. Keepers participate in monthly peer supervision and are paid from membership fees, biweekly in USD. Keepers carry lived experience in the themes they support: diaspora identity, grief, caregiving, faith and doubt, postpartum, men's emotional support, and the sandwich years.
+Keepers are trained peer supporters who do not act as clinicians at Hearth. Many trained as psychologists or counsellors and some hold licences in their home countries; those licences are jurisdiction-specific, so Hearth remains peer support only: no diagnosis, no treatment, no prescriptions. Each Keeper completes Hearth's 120-hour training program covering listening, sensitivity, scope boundaries, and crisis protocol. Fewer than 8% of Keeper applicants are accepted. Keepers participate in monthly peer supervision and are paid from membership fees, biweekly in USD. Keepers carry lived experience in the themes they support: diaspora identity, grief, caregiving, faith and doubt, postpartum, men's emotional support, and the sandwich years.
 
 ## Pricing in detail
 - **Hearthside ($39/month or $390/year)**: Matched Keeper, biweekly Sits, unlimited Long Talk (24-hour response), Friday reflections, Embers library, 1 Circle/month, Bridge referral access.

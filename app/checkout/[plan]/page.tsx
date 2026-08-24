@@ -13,7 +13,8 @@ import {
 import { whopSdk } from "../../lib/whop-sdk";
 
 export const metadata = {
-  title: "Checkout · Hearth",
+  title: "Checkout",
+  robots: { index: false, follow: false },
   description: "Secure checkout for your Hearth membership.",
 };
 
@@ -129,6 +130,7 @@ export default async function CheckoutPage({
             environment={environment}
             returnUrl={returnUrl}
             prefillEmail={intakeEmail}
+            planSlug={plan}
           />
 
           <p

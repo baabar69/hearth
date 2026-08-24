@@ -34,7 +34,7 @@ const KEEPERS: Keeper[] = [
     photo: "/images/keepers/aruna.jpg",
     tagline: "Was the cousin people called when something didn't make sense yet.",
     city: "Kolkata → Toronto",
-    languages: ["English", "Bengali", "Hindi"],
+    languages: ["English", "Hindi"],
     themes: ["Identity", "Caregiving", "Family pressure", "Career crossroads"],
     timezone: "EST (Toronto)",
     availability: "Monday–Thursday",
@@ -106,7 +106,7 @@ const KEEPERS: Keeper[] = [
     photo: "/images/keepers/priya.jpg",
     tagline: "For the mothers nobody prepared.",
     city: "Chennai → Toronto",
-    languages: ["English", "Tamil", "Hindi"],
+    languages: ["English", "Hindi"],
     themes: ["Postpartum", "New parenthood", "Identity", "Parenting"],
     timezone: "EST (Toronto)",
     availability: "Tuesday, Thursday, Saturday",
@@ -130,7 +130,7 @@ const KEEPERS: Keeper[] = [
     photo: "/images/keepers/hassan.jpg",
     tagline: "Holds faith and doubt without forcing resolution.",
     city: "Cairo → Chicago",
-    languages: ["English", "Arabic"],
+    languages: ["English"],
     themes: ["Grief", "Faith and identity", "First-year-after", "Transitions"],
     timezone: "CST (Chicago)",
     availability: "Monday, Wednesday, Thursday",
@@ -167,7 +167,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const keeper = KEEPERS.find((k) => k.slug === slug);
-  if (!keeper) return { title: "Keeper · Hearth" };
+  if (!keeper) return { title: "Keeper" };
   const first = keeper.name.split(" ")[0];
   const themes = keeper.themes.join(", ");
   const title = `${keeper.name}, Hearth Keeper`;

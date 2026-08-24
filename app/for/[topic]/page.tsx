@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import SharedNav from "../../components/SharedNav";
 import SharedFooter from "../../components/SharedFooter";
+import { jsonLd, webPageLd, breadcrumbLd } from "../../lib/schema";
 
 type Topic = {
   slug: string;
@@ -51,7 +52,7 @@ const TOPICS: Topic[] = [
     keeperName: "Aruna Bhattacharya",
     keeperSlug: "aruna-bhattacharya",
     keeperBlurb:
-      "Aruna has sat with grief in three languages and across two countries. She will not rush your sentence. She will not fix what doesn't need fixing.",
+      "Aruna has sat with grief in two languages and across two countries. She will not rush your sentence. She will not fix what doesn't need fixing.",
     storyQuote:
       "My grandmother died two years ago. I never grieved out loud. There wasn't space for it. Aruna made the space. We talk about her every week. It feels like keeping her with me.",
     storyAttribution: "Devika · 38 · Bay Area · 1 year and 4 months in Hearth",
@@ -251,6 +252,120 @@ const TOPICS: Topic[] = [
       { slug: "identity", label: "Identity & belonging" },
     ],
   },
+  {
+    slug: "bullying",
+    metaTitle: "Bullying & harassment support · Hearth",
+    metaDescription:
+      "Peer support for being picked at, ganged up on, or quietly left out: at work, at university, online. One trained Keeper who stays while you get your footing back.",
+    eyebrow: "For bullying & harassment",
+    headlinePre: "Being picked on was\nsupposed to end at",
+    headlineEmber: "the school gate.",
+    intro:
+      "It didn't. It moved into the group chat, the standup meeting, the comment section, the family WhatsApp. A manager who singles you out in front of everyone. A circle that closes without telling you. A pile-on you re-read at 1am even though you know better. You spend the commute rehearsing comebacks you will never say. Hearth is a chair, a Keeper (a trained peer companion, the same person every time), and somewhere to put it down while you work out what you want to do.",
+    signs: [
+      "Someone senior picks at you in ways everyone notices and nobody names. You have started to wonder if you imagined it. You didn't.",
+      "The group moved on without you. You found out from a joke everyone else already knew.",
+      "An online pile-on, or one persistent account, has you dreading the app you used to like.",
+      "A family member calls it teasing. It stopped being teasing years ago.",
+      "You have started shrinking: shorter messages, camera off, saying less in meetings, checking your tone twice.",
+    ],
+    weHold: [
+      "A weekly or biweekly Sit (a 35–60 minute video or audio call) with the same Keeper, who remembers the names, the history, and what last Tuesday cost you.",
+      "A Long Talk thread for the 1am re-read, the screenshot you need witnessed, the message you want to rehearse before you send it. A reply within 24 hours.",
+      "A Friday Reflection from your Keeper: what they saw you carry this week, and the ground you got back.",
+      "If the weight has tipped into panic, depression, or something that needs treatment, your Keeper walks you to The Bridge (a vetted therapist matched by hand) by name.",
+    ],
+    weDont:
+      "Hearth is not HR, not a lawyer, and not a crisis line. We do not investigate complaints, contact the people involved, or give legal advice, and if you are being threatened or stalked, the police and a lawyer come first. What we hold is the rest of it: the Sunday dread, the rehearsing, the second-guessing, and the slow work of getting your voice back.",
+    keeperName: "Rabia K.",
+    keeperSlug: "rabia-k",
+    keeperBlurb:
+      "Rabia ran a school long enough to have seen every shape of cruelty a corridor can hold, and every shape of recovering from it. She will not tell you to toughen up. She will help you find the sentence you wish you had said, and the one you will say next.",
+    storyQuote:
+      "Half my team had a chat without me in it. I found out in a meeting, from a joke they all already knew. Rabia didn't tell me to report it or to let it go. She sat with me while I worked out which one I wanted. I chose. It was mine to choose.",
+    storyAttribution: "Amir · 26 · Manchester · 8 months in Hearth",
+    related: [
+      { slug: "family-pressure", label: "Family pressure" },
+      { slug: "anxiety", label: "Anxiety & overwhelm" },
+      { slug: "identity", label: "Identity & belonging" },
+    ],
+  },
+  {
+    slug: "comparison",
+    metaTitle: "Comparison & body image support · Hearth",
+    metaDescription:
+      "Peer support for measuring your life against everyone else's highlight reel: the scroll, the mirror, the friends who seem further along. One Keeper, kept.",
+    eyebrow: "For comparison & body image",
+    headlinePre: "Everyone's life looks\nfinished, except",
+    headlineEmber: "yours.",
+    intro:
+      "The scroll before you sleep and the mirror before you leave the house. A friend's engagement, someone's launch, a body that photographs the way yours doesn't. By my age they had the flat, the title, the wedding. It is not vanity and it is not weakness; it is arithmetic you never agreed to do, running all day on a screen you carry everywhere. Hearth is a chair and one Keeper (a trained peer companion, the same person every time) who knows your actual life, not your feed.",
+    signs: [
+      "You know the scroll makes you feel worse. You do it anyway, then feel worse about that too.",
+      "A friend got good news and your first feeling was one you are ashamed of. You have nowhere to say that out loud.",
+      "You edit your face or your body before you let yourself be seen, and you remember when you didn't.",
+      "Every choice gets marked against an invisible cohort: by my age they had this, I should be there by now.",
+      "You can no longer tell which of your wants are yours and which you absorbed from the feed.",
+    ],
+    weHold: [
+      "A weekly or biweekly Sit (a 35–60 minute video or audio call) with the same Keeper, who knows what your week actually held, not what it looked like.",
+      "A Long Talk thread for the 1am scroll that turned on you. Write it as it happens. A reply within 24 hours, from a person.",
+      "A Friday Reflection from your Keeper: the week you actually lived, witnessed by someone who was paying attention to the real one.",
+      "If food, weight, or exercise has taken on a clinical shape, your Keeper says so plainly and walks you to The Bridge (a vetted therapist matched by hand), and to specialist care, by name.",
+    ],
+    weDont:
+      "Hearth is not body-image therapy and not an eating-disorder service. If eating, weight, or the mirror has become something with a clinical edge, that deserves real treatment, and we will help you find it rather than sit beside it. What we hold is the everyday arithmetic: the scroll, the shame, the invisible cohort, and the slow work of wanting your own life again.",
+    keeperName: "Priya S.",
+    keeperSlug: "priya-s",
+    keeperBlurb:
+      "Priya is one very honest voice about the gap between how lives look and how they feel. She will not tell you to delete the app. She will help you stop grading yourself with someone else's ruler.",
+    storyQuote:
+      "I muted half my feed and still did the maths every night: her flat, his salary, their wedding. Priya never gave me a quote about comparison. She asked what I actually wanted. It took me three weeks to answer honestly. That answer changed my year.",
+    storyAttribution: "Zainab · 24 · Toronto · 7 months in Hearth",
+    related: [
+      { slug: "identity", label: "Identity & belonging" },
+      { slug: "anxiety", label: "Anxiety & overwhelm" },
+      { slug: "intimacy", label: "Intimacy & shame" },
+    ],
+  },
+  {
+    slug: "dating-burnout",
+    metaTitle: "Dating burnout & heartbreak support · Hearth",
+    metaDescription:
+      "Peer support for the apps, the almosts, and the heartbreak nobody calls real. One trained Keeper who stays while you work out what you actually want.",
+    eyebrow: "For dating burnout & heartbreak",
+    headlinePre: "Four hundred swipes,\nthree almosts, and",
+    headlineEmber: "nothing that stayed.",
+    intro:
+      "The apps that feel like an unpaid second job. The situationship that ended without ever getting a name, so the grief doesn't get one either. Being the last single person in the group chat, performing fine at other people's weddings. The quiet fear, after enough endings, that the problem is you. It isn't a diagnosis and it isn't a phase; it is a weight, and it deserves a chair. Hearth is one Keeper (a trained peer companion, the same person every time) who remembers all of it: the names, the dates, the one from March.",
+    signs: [
+      "You delete the app, feel free for a fortnight, re-download it on a lonely Tuesday, and hate that loop.",
+      "Something ended that was never official, and everyone's comfort starts with at least. It was real to you.",
+      "You are performing fine at engagements and weddings, and going home flattened by them.",
+      "Since the last one, letting anyone close feels like handing them something breakable.",
+      "You have started to believe the common denominator is you. That belief is doing damage the dating never did.",
+    ],
+    weHold: [
+      "A weekly or biweekly Sit (a 35–60 minute video or audio call) with the same Keeper, who remembers March, and June, and what you swore in August.",
+      "A Long Talk thread for the message you drafted four times, the profile you almost reactivated, the ache after the third date that went nowhere. A reply within 24 hours.",
+      "A Friday Reflection from your Keeper: what they noticed about your week, including the things dating apps never will.",
+      "If the heartbreak has tipped into depression, or an old pattern needs deeper work, your Keeper walks you to The Bridge (a vetted therapist matched by hand) by name.",
+    ],
+    weDont:
+      "Hearth is not a dating coach, not a matchmaking service, and not couples therapy. We will not optimise your profile, and we will never tell you who to choose. What we hold is the long middle: the almosts, the hope you are embarrassed by, the tiredness, and the question under all of it, which was never really about the apps.",
+    keeperName: "Hassan A.",
+    keeperSlug: "hassan-a",
+    keeperBlurb:
+      "Hassan holds hope and doubt without forcing either into a resolution. He has sat with people through the almosts and the endings that never got a name. He will not tell you to get back out there.",
+    storyQuote:
+      "It ended after four months and everyone said at least it wasn't serious. It was serious to me. Hassan let it be serious. We talked about the one from March until saying his name stopped hurting. Then we talked about what I want next. Slowly.",
+    storyAttribution: "Daniel · 27 · Chicago · 6 months in Hearth",
+    related: [
+      { slug: "intimacy", label: "Intimacy & shame" },
+      { slug: "family-pressure", label: "Family pressure" },
+      { slug: "identity", label: "Identity & belonging" },
+    ],
+  },
 ];
 
 // The set of topics is fixed and fully enumerated by generateStaticParams, so any
@@ -272,8 +387,11 @@ export async function generateMetadata({
   const t = TOPICS.find((x) => x.slug === topic);
   if (!t) return { title: "Hearth" };
   return {
-    title: t.metaTitle,
+    // The layout template appends "· Hearth"; strip it from the stored titles
+    // so it does not appear twice.
+    title: t.metaTitle.replace(/ · Hearth$/, ""),
     description: t.metaDescription,
+    alternates: { canonical: `/for/${t.slug}` },
   };
 }
 
@@ -288,6 +406,25 @@ export default async function ForTopicPage({
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd([
+            webPageLd({
+              path: `/for/${t.slug}`,
+              name: t.metaTitle.replace(/ · Hearth$/, ""),
+              description: t.metaDescription,
+            }),
+            breadcrumbLd([
+              { name: "Hearth", path: "/" },
+              {
+                name: t.eyebrow.replace(/^For /, ""),
+                path: `/for/${t.slug}`,
+              },
+            ]),
+          ]),
+        }}
+      />
       <SharedNav />
 
       {/* HERO */}

@@ -4,7 +4,8 @@ import SharedFooter from "../components/SharedFooter";
 import { whopSdk } from "../lib/whop-sdk";
 
 export const metadata = {
-  title: "Welcome · Hearth",
+  title: "Welcome",
+  robots: { index: false, follow: false },
   description:
     "Your payment was received. Your Keeper is being matched. Expect an email within 72 hours.",
 };

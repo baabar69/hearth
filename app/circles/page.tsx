@@ -3,7 +3,8 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "Circles · Hearth",
+  title: "Circles",
+  alternates: { canonical: "/circles" },
   description:
     "Small, themed cohorts of 6–10 members, facilitated by a Keeper, over 4–8 weeks. The conversation you can't have alone, with people who already understand the room.",
   openGraph: {
