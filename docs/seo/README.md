@@ -98,3 +98,29 @@ The binding version of this rule lives in `AGENTS.md` (New-page rule). Short for
 sitemap entry with a real lastmod, llms.txt if citable, founder requests indexing
 in Search Console after the deploy (agent hands over the exact URL list), IndexNow
 is automatic on deploy. Added 2026-08-24 at the founder's request.
+
+## Coverage report (automated)
+
+`scripts/gsc-coverage.mjs` inspects every sitemap URL through the Search Console
+URL Inspection API and emails a weekly summary (indexed count, URLs worth a
+manual Request Indexing, canonical mismatches, errors) to hello@dearhearth.com
+via Brevo. It runs Mondays 07:00 UTC from `.github/workflows/index-coverage.yml`
+and can be run on demand from the Actions tab (workflow_dispatch).
+
+One-time setup still owed by the founder (about ten minutes):
+1. console.cloud.google.com: create a project (any name), enable the
+   "Google Search Console API".
+2. IAM and admin > Service accounts: create one (any name), no roles needed.
+3. On the service account: Keys > Add key > JSON. Download the file.
+4. search.google.com/search-console > Settings > Users and permissions:
+   add the service account's email address (ends in .iam.gserviceaccount.com)
+   with Full permission.
+5. Hand the JSON file to the agent, which stores it with:
+   `gh secret set GSC_SERVICE_ACCOUNT_JSON --repo baabar69/hearth < file.json`
+   and triggers a first run to verify.
+
+Until the secret exists the weekly run logs one line and exits green, so
+there is no false alarm. BREVO_API_KEY is already set as a repo secret.
+The property id defaults to `sc-domain:dearhearth.com`; if Search Console
+shows the property as a URL-prefix instead, set repo variable GSC_PROPERTY
+to `https://dearhearth.com/`.
