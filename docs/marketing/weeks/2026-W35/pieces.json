@@ -1,0 +1,410 @@
+{
+ "week": "2026-W35",
+ "pieces": [
+  {
+   "id": "sun-letter",
+   "day": "Sun",
+   "slot": "7:00pm ET",
+   "title": "A letter to the eldest daughter who never gets asked",
+   "lane": "cards",
+   "audio": "ticks",
+   "beats": [
+    {
+     "d": 3,
+     "eyebrow": "letter 1/6",
+     "text": "A letter to the eldest daughter who never gets asked.",
+     "size": 88,
+     "italic": true
+    },
+    {
+     "d": 4,
+     "eyebrow": "letter 2/6",
+     "text": "To the one who takes the Sunday call in the car with the engine off."
+    },
+    {
+     "d": 4,
+     "eyebrow": "letter 3/6",
+     "text": "To the one still in the kitchen at 11pm, wiping a counter that was already clean."
+    },
+    {
+     "d": 4,
+     "eyebrow": "letter 4/6",
+     "text": "To the one who danced at the cousin’s wedding and cried on the drive home."
+    },
+    {
+     "d": 3,
+     "eyebrow": "letter 5/6",
+     "text": "Nobody has asked you the question you ask everyone else.",
+     "size": 84,
+     "weight": 500,
+     "color": "ember"
+    },
+    {
+     "d": 3,
+     "eyebrow": "letter 6/6",
+     "text": "There should be one person whose only job is to ask you back."
+    },
+    {
+     "d": 2,
+     "text": "Pull up a chair.",
+     "size": 100,
+     "weight": 500,
+     "color": "ember",
+     "brand": true,
+     "sub": "one trained listener, yours for years."
+    },
+    {
+     "d": 2,
+     "text": "Send this to the person who is always the strong one.",
+     "mono": true,
+     "size": 32,
+     "color": "sage"
+    }
+   ],
+   "captions": {
+    "instagram": "If you are the eldest daughter, you already know the Sunday call is a shift you clock into.\n\nYou take the question about money, the question about her knee, the question about when you are coming home. Then you hang up and start your own evening at 9pm.\n\nHearth is peer support, not therapy. One trained listener, yours for years.\n\nSend this to the person who is always the strong one.\n\n#eldestdaughter #southasian #immigrantparents #peersupport #hearthkeepers",
+    "tiktok": "If you are the eldest daughter, you already know the Sunday call is a shift you clock into. Send this to the person who is always the strong one. #eldestdaughter #southasian #immigrantparents #peersupport",
+    "facebook": "If you are the eldest daughter, you already know the Sunday call is a shift you clock into.\n\nYou take the question about money, the question about her knee, the question about when you are coming home. Then you hang up and start your own evening at 9pm.\n\nHearth is peer support, not therapy: one trained listener, matched to you by hand, who stays for years. Send this to the person who is always the strong one.\n\ndearhearth.com",
+    "youtube": "TITLE: A letter to the eldest daughter who never gets asked #Shorts\n\nIf you are the eldest daughter, you already know the Sunday call is a shift you clock into.\n\nYou take the question about money, the question about her knee, the question about when you are coming home. Then you hang up and start your own evening at 9pm.\n\nHearth is peer support, not therapy. One trained listener, yours for years. https://dearhearth.com/?utm_source=youtube\n\nSend this to the person who is always the strong one.",
+    "threads": "If you are the eldest daughter, you already know the Sunday call is a shift you clock into.\n\nSend this to the person who is always the strong one.",
+    "pinterest": "If you are the eldest daughter, you already know the Sunday call is a shift you clock into. | You take the question about money, the question about her knee, the question about when you are coming home. Then you hang up and start your Hearth: one trained listener, yours for years. https://dearhearth.com/?utm_source=pinterest"
+   }
+  },
+  {
+   "id": "mon-quote",
+   "day": "Mon",
+   "slot": "10:00am ET",
+   "title": "It sounds like praise",
+   "lane": "kinetic",
+   "seconds": 13,
+   "groups": [
+    {
+     "words": [
+      "when you say",
+      "you are tired,"
+     ]
+    },
+    {
+     "words": [
+      "someone says",
+      "you are strong."
+     ]
+    },
+    {
+     "words": [
+      "it sounds like praise.",
+      "it works like",
+      "a door closing."
+     ],
+     "em": true
+    },
+    {
+     "words": [
+      "hearth",
+      "· link in bio ·"
+     ],
+     "mono": true
+    }
+   ],
+   "times": [
+    0,
+    2.6,
+    5.4,
+    10.2
+   ],
+   "captions": {
+    "instagram": "When you say you are tired, someone says you are strong.\n\nIt sounds like praise. It works like a door closing. The eldest daughter learns early that the compliment is where the conversation ends.\n\nHearth is peer support, not therapy. One trained listener, yours for years.\n\nIf you read this twice, you already know why.\n\n#eldestdaughter #southasian #immigrantparents #peersupport #hearthkeepers",
+    "tiktok": "When you say you are tired, someone says you are strong. If you read this twice, you already know why. #eldestdaughter #southasian #immigrantparents #peersupport",
+    "facebook": "When you say you are tired, someone says you are strong.\n\nIt sounds like praise. It works like a door closing. The eldest daughter learns early that the compliment is where the conversation ends.\n\nHearth is peer support, not therapy: one trained listener, matched to you by hand, who stays for years. If you read this twice, you already know why.\n\ndearhearth.com",
+    "youtube": "TITLE: When you say you are tired, someone says you are strong #Shorts\n\nWhen you say you are tired, someone says you are strong.\n\nIt sounds like praise. It works like a door closing. The eldest daughter learns early that the compliment is where the conversation ends.\n\nHearth is peer support, not therapy. One trained listener, yours for years. https://dearhearth.com/?utm_source=youtube\n\nIf you read this twice, you already know why.",
+    "threads": "When you say you are tired, someone says you are strong.\n\nIf you read this twice, you already know why.",
+    "pinterest": "When you say you are tired, someone says you are strong. | It sounds like praise. It works like a door closing. The eldest daughter learns early that the compliment is where the conversation ends. Hearth: one trained listener, yours for years. https://dearhearth.com/?utm_source=pinterest"
+   }
+  },
+  {
+   "id": "tue-notes",
+   "day": "Tue",
+   "slot": "10:00am ET",
+   "title": "Notes-app letter",
+   "lane": "notes",
+   "seconds": 21,
+   "stamp": "tuesday at 9:12 pm",
+   "lines": [
+    "a letter to the eldest daughter",
+    "you take the sunday call in the car, engine off.",
+    "you wipe the counter at 11pm. it was already clean.",
+    "you danced at the wedding. you cried on the drive home.",
+    "nobody asks you the question you ask everyone else.",
+    "there should be one person whose only job is to ask you back.",
+    "",
+    "hearth · one trained listener, yours for years"
+   ],
+   "captions": {
+    "instagram": "Wrote this one at 9:12 on a Tuesday.\n\nFor the eldest daughter who takes the Sunday call, does the paperwork, and answers the aunt kindly twice. Nobody asks you the question you ask everyone else.\n\nHearth is peer support, not therapy. One trained listener, yours for years.\n\nSend this to the person who is always the strong one.\n\n#eldestdaughter #southasian #immigrantparents #peersupport #hearthkeepers",
+    "tiktok": "Wrote this one at 9:12 on a Tuesday. Send this to the person who is always the strong one. #eldestdaughter #southasian #immigrantparents #peersupport",
+    "facebook": "Wrote this one at 9:12 on a Tuesday.\n\nFor the eldest daughter who takes the Sunday call, does the paperwork, and answers the aunt kindly twice. Nobody asks you the question you ask everyone else.\n\nHearth is peer support, not therapy: one trained listener, matched to you by hand, who stays for years. Send this to the person who is always the strong one.\n\ndearhearth.com",
+    "youtube": "TITLE: A note for the eldest daughter, written at 9:12pm #Shorts\n\nWrote this one at 9:12 on a Tuesday.\n\nFor the eldest daughter who takes the Sunday call, does the paperwork, and answers the aunt kindly twice. Nobody asks you the question you ask everyone else.\n\nHearth is peer support, not therapy. One trained listener, yours for years. https://dearhearth.com/?utm_source=youtube\n\nSend this to the person who is always the strong one.",
+    "threads": "Wrote this one at 9:12 on a Tuesday.\n\nSend this to the person who is always the strong one.",
+    "pinterest": "Wrote this one at 9:12 on a Tuesday. | For the eldest daughter who takes the Sunday call, does the paperwork, and answers the aunt kindly twice. Nobody asks you the question you a Hearth: one trained listener, yours for years. https://dearhearth.com/?utm_source=pinterest"
+   }
+  },
+  {
+   "id": "wed-things",
+   "day": "Wed",
+   "slot": "10:00am ET",
+   "title": "Things nobody tells the eldest daughter",
+   "lane": "cards",
+   "audio": "ticks",
+   "beats": [
+    {
+     "d": 3,
+     "eyebrow": "letter no. 22",
+     "text": "Things nobody tells the eldest daughter.",
+     "size": 84,
+     "weight": 500
+    },
+    {
+     "d": 3.2,
+     "eyebrow": "the sunday call",
+     "text": "You pick up on the first ring. You always have."
+    },
+    {
+     "d": 3.2,
+     "eyebrow": "the paperwork",
+     "text": "You have been the translator since middle school."
+    },
+    {
+     "d": 3.2,
+     "eyebrow": "wedding season",
+     "text": "They ask you when. Nobody asks you how."
+    },
+    {
+     "d": 3.2,
+     "eyebrow": "the versions",
+     "text": "You are known in pieces."
+    },
+    {
+     "d": 3.2,
+     "eyebrow": "the compliment",
+     "text": "When you say you are tired, someone says you are strong."
+    },
+    {
+     "d": 3.4,
+     "eyebrow": "the turn",
+     "text": "Nobody is going to notice on their own.",
+     "color": "ember",
+     "weight": 500
+    },
+    {
+     "d": 3,
+     "text": "If you read this twice, you already know why.",
+     "size": 56,
+     "italic": true,
+     "brand": true,
+     "sub": "one trained listener, yours for years. $39 a month."
+    }
+   ],
+   "captions": {
+    "instagram": "Being the eldest daughter in a South Asian family is a job nobody ever wrote an ending for.\n\nYou take the Sunday call. You do the paperwork. You answer the aunt’s question kindly, twice. Then someone tells you how strong you are, and the conversation closes.\n\nHearth is peer support, not therapy. One trained listener, yours for years.\n\nIf you read this twice, you already know why.\n\n#eldestdaughter #southasian #immigrantparents #peersupport #hearthkeepers",
+    "tiktok": "Being the eldest daughter in a South Asian family is a job nobody ever wrote an ending for. If you read this twice, you already know why. #eldestdaughter #southasian #immigrantparents #peersupport",
+    "facebook": "Being the eldest daughter in a South Asian family is a job nobody ever wrote an ending for.\n\nYou take the Sunday call. You do the paperwork. You answer the aunt’s question kindly, twice. Then someone tells you how strong you are, and the conversation closes.\n\nHearth is peer support, not therapy: one trained listener, matched to you by hand, who stays for years. If you read this twice, you already know why.\n\ndearhearth.com",
+    "youtube": "TITLE: Things nobody tells the eldest daughter #Shorts\n\nBeing the eldest daughter in a South Asian family is a job nobody ever wrote an ending for.\n\nYou take the Sunday call. You do the paperwork. You answer the aunt’s question kindly, twice. Then someone tells you how strong you are, and the conversation closes.\n\nHearth is peer support, not therapy. One trained listener, yours for years. https://dearhearth.com/?utm_source=youtube\n\nIf you read this twice, you already know why.",
+    "threads": "Being the eldest daughter in a South Asian family is a job nobody ever wrote an ending for.\n\nIf you read this twice, you already know why.",
+    "pinterest": "Being the eldest daughter in a South Asian family is a job nobody ever wrote an ending for. | You take the Sunday call. You do the paperwork. You answer the aunt’s question kindly, twice. Then someone tells you how strong you are, and Hearth: one trained listener, yours for years. https://dearhearth.com/?utm_source=pinterest"
+   }
+  },
+  {
+   "id": "thu-pov",
+   "day": "Thu",
+   "slot": "10:00am ET",
+   "title": "POV: everyone in your phone has called you this week",
+   "lane": "cards",
+   "audio": "ticks",
+   "beats": [
+    {
+     "d": 3,
+     "text": "POV: everyone in your phone has called you this week.",
+     "size": 80,
+     "weight": 500
+    },
+    {
+     "d": 2.4,
+     "eyebrow": "mon 8:40 pm",
+     "text": "Your mother. About the wedding. Forty minutes."
+    },
+    {
+     "d": 2.4,
+     "eyebrow": "wed 2:10 pm",
+     "text": "Your father’s insurance company. You did the talking."
+    },
+    {
+     "d": 2.4,
+     "eyebrow": "thu 11:02 pm",
+     "text": "Your brother. About money. Again."
+    },
+    {
+     "d": 2.4,
+     "eyebrow": "sun 6:04 pm",
+     "text": "The family group chat. Twice. The same thing."
+    },
+    {
+     "d": 2.8,
+     "eyebrow": "tonight",
+     "text": "You scrolled the whole list and pressed no one."
+    },
+    {
+     "d": 2.6,
+     "text": "Not one of those names is for this.",
+     "color": "ember",
+     "weight": 500,
+     "size": 80
+    },
+    {
+     "d": 2,
+     "text": "Pull up a chair.",
+     "size": 96,
+     "weight": 500,
+     "color": "ember",
+     "brand": true
+    }
+   ],
+   "captions": {
+    "instagram": "The eldest daughter is everyone’s first call and has no first call of her own.\n\nIt is not that nobody loves her. It is that everyone needs her, and needing someone is a different thing from asking after her.\n\nHearth is peer support, not therapy. One trained listener, yours for years.\n\nSend this to the person who is always the strong one.\n\n#eldestdaughter #southasian #immigrantparents #peersupport #hearthkeepers",
+    "tiktok": "The eldest daughter is everyone’s first call and has no first call of her own. Send this to the person who is always the strong one. #eldestdaughter #southasian #immigrantparents #peersupport",
+    "facebook": "The eldest daughter is everyone’s first call and has no first call of her own.\n\nIt is not that nobody loves her. It is that everyone needs her, and needing someone is a different thing from asking after her.\n\nHearth is peer support, not therapy: one trained listener, matched to you by hand, who stays for years. Send this to the person who is always the strong one.\n\ndearhearth.com",
+    "youtube": "TITLE: POV: everyone in your phone has called you this week #Shorts\n\nThe eldest daughter is everyone’s first call and has no first call of her own.\n\nIt is not that nobody loves her. It is that everyone needs her, and needing someone is a different thing from asking after her.\n\nHearth is peer support, not therapy. One trained listener, yours for years. https://dearhearth.com/?utm_source=youtube\n\nSend this to the person who is always the strong one.",
+    "threads": "The eldest daughter is everyone’s first call and has no first call of her own.\n\nSend this to the person who is always the strong one.",
+    "pinterest": "The eldest daughter is everyone’s first call and has no first call of her own. | It is not that nobody loves her. It is that everyone needs her, and needing someone is a different thing from asking after her. Hearth: one trained listener, yours for years. https://dearhearth.com/?utm_source=pinterest"
+   }
+  },
+  {
+   "id": "fri-note",
+   "day": "Fri",
+   "slot": "10:00am ET",
+   "title": "A Friday note (an example)",
+   "lane": "cards",
+   "audio": "ticks",
+   "beats": [
+    {
+     "d": 3,
+     "eyebrow": "friday note · an example, details changed",
+     "text": "You said “it’s fine” four times on Tuesday’s call.",
+     "size": 72,
+     "weight": 500
+    },
+    {
+     "d": 3,
+     "eyebrow": "an example, details changed",
+     "text": "Once about your mother. Twice about work. Once about the thing you stopped saying halfway."
+    },
+    {
+     "d": 3,
+     "eyebrow": "an example, details changed",
+     "text": "I am not going to make it mean anything. I just wanted you to know I counted."
+    },
+    {
+     "d": 3,
+     "eyebrow": "an example, details changed",
+     "text": "Being the steady one is a job. Nobody puts it on a calendar and nobody signs off on it."
+    },
+    {
+     "d": 3,
+     "eyebrow": "an example, details changed",
+     "text": "Bring the fourth one to Sunday’s call if you want."
+    },
+    {
+     "d": 2.6,
+     "eyebrow": "an example, details changed",
+     "text": "Either way, I will be there at four.",
+     "italic": true
+    },
+    {
+     "d": 2.4,
+     "text": "Your Keeper",
+     "italic": true,
+     "size": 64,
+     "color": "ember",
+     "brand": true,
+     "sub": "every friday, a few lines from the person who stays."
+    },
+    {
+     "d": 2,
+     "text": "Hearth: one trained listener, yours for years. Link in bio.",
+     "mono": true,
+     "size": 30,
+     "color": "sage"
+    }
+   ],
+   "captions": {
+    "instagram": "A Friday note, from a Keeper to someone who was the strong one all week.\n\nEvery Friday your Keeper writes you a few lines about what they noticed that week. Not advice, just proof that someone was paying attention. This one is an example, with details changed.\n\nHearth is peer support, not therapy. One trained listener, yours for years.\n\nHearth: one trained listener, yours for years. Link in bio.\n\n#eldestdaughter #southasian #immigrantparents #peersupport #hearthkeepers",
+    "tiktok": "A Friday note, from a Keeper to someone who was the strong one all week. Hearth: one trained listener, yours for years. Link in bio. #eldestdaughter #southasian #immigrantparents #peersupport",
+    "facebook": "A Friday note, from a Keeper to someone who was the strong one all week.\n\nEvery Friday your Keeper writes you a few lines about what they noticed that week. Not advice, just proof that someone was paying attention. This one is an example, with details changed.\n\nHearth is peer support, not therapy: one trained listener, matched to you by hand, who stays for years. Hearth: one trained listener, yours for years. Link in bio.\n\ndearhearth.com",
+    "youtube": "TITLE: What a Friday note from your Keeper looks like #Shorts\n\nA Friday note, from a Keeper to someone who was the strong one all week.\n\nEvery Friday your Keeper writes you a few lines about what they noticed that week. Not advice, just proof that someone was paying attention. This one is an example, with details changed.\n\nHearth is peer support, not therapy. One trained listener, yours for years. https://dearhearth.com/?utm_source=youtube\n\nHearth: one trained listener, yours for years. Link in bio.",
+    "threads": "A Friday note, from a Keeper to someone who was the strong one all week.\n\nHearth: one trained listener, yours for years. Link in bio.",
+    "pinterest": "A Friday note, from a Keeper to someone who was the strong one all week. | Every Friday your Keeper writes you a few lines about what they noticed that week. Not advice, just proof that someone was paying attention. Hearth: one trained listener, yours for years. https://dearhearth.com/?utm_source=pinterest"
+   }
+  },
+  {
+   "id": "sat-truth",
+   "day": "Sat",
+   "slot": "11:00am ET",
+   "title": "When they ask how I am doing",
+   "lane": "cards",
+   "audio": "ticks",
+   "beats": [
+    {
+     "d": 3,
+     "text": "When they ask how I’m doing,",
+     "size": 84,
+     "weight": 500
+    },
+    {
+     "d": 2.6,
+     "text": "I say busy.",
+     "size": 96,
+     "weight": 500
+    },
+    {
+     "d": 2.6,
+     "text": "Because I can’t say",
+     "size": 72
+    },
+    {
+     "d": 3.6,
+     "text": "I don’t remember the last time someone asked twice.",
+     "color": "ember",
+     "weight": 500,
+     "size": 76
+    },
+    {
+     "d": 3,
+     "text": "There should be one person whose only job is to ask you back."
+    },
+    {
+     "d": 2.4,
+     "text": "Pull up a chair.",
+     "size": 96,
+     "weight": 500,
+     "color": "ember",
+     "brand": true,
+     "sub": "one trained listener, yours for years."
+    },
+    {
+     "d": 2,
+     "text": "Send this to the person who is always the strong one.",
+     "mono": true,
+     "size": 32,
+     "color": "sage"
+    }
+   ],
+   "captions": {
+    "instagram": "When they ask how I’m doing, I say busy, because I can’t say I don’t remember the last time someone asked twice.\n\nNobody is being cruel. Everyone is just used to you being fine. A Keeper is the one person whose only job is to ask again.\n\nHearth is peer support, not therapy. One trained listener, yours for years.\n\nSend this to the person who is always the strong one.\n\n#eldestdaughter #southasian #immigrantparents #peersupport #hearthkeepers",
+    "tiktok": "When they ask how I’m doing, I say busy, because I can’t say I don’t remember the last time someone asked twice. Send this to the person who is always the strong one. #eldestdaughter #southasian #immigrantparents #peersupport",
+    "facebook": "When they ask how I’m doing, I say busy, because I can’t say I don’t remember the last time someone asked twice.\n\nNobody is being cruel. Everyone is just used to you being fine. A Keeper is the one person whose only job is to ask again.\n\nHearth is peer support, not therapy: one trained listener, matched to you by hand, who stays for years. Send this to the person who is always the strong one.\n\ndearhearth.com",
+    "youtube": "TITLE: When they ask how I am doing, I say busy #Shorts\n\nWhen they ask how I’m doing, I say busy, because I can’t say I don’t remember the last time someone asked twice.\n\nNobody is being cruel. Everyone is just used to you being fine. A Keeper is the one person whose only job is to ask again.\n\nHearth is peer support, not therapy. One trained listener, yours for years. https://dearhearth.com/?utm_source=youtube\n\nSend this to the person who is always the strong one.",
+    "threads": "When they ask how I’m doing, I say busy, because I can’t say I don’t remember the last time someone asked twice.\n\nSend this to the person who is always the strong one.",
+    "pinterest": "When they ask how I’m doing, I say busy, because I can’t say I don’t remember the last time someone asked twice. | Nobody is being cruel. Everyone is just used to you being fine. A Keeper is the one person whose only job is to ask again. Hearth: one trained listener, yours for years. https://dearhearth.com/?utm_source=pinterest"
+   }
+  }
+ ]
+}

@@ -51,4 +51,6 @@ Commands (type them in Claude Code in this repo):
 
 The method these follow, and what was deliberately not copied: [08-saraev-method-for-hearth.md](./08-saraev-method-for-hearth.md). Failures are logged in [errors.md](./errors.md).
 
+The daily, six-platform, approve-only pipeline (render every piece to MP4, drop into Buffer as drafts, founder taps Add to Queue): [09-daily-content-machine.md](./09-daily-content-machine.md). Scripts: `scripts/marketing/render-batch.mjs`, `scripts/marketing/publish-buffer.mjs`.
+
 Agents behind them: `hearth-content-writer`, `hearth-collab-scout`, `hearth-ig-analyst` in `.claude/agents/`. The weekly loop definition and how to schedule it: [loops/weekly-content-loop.md](./loops/weekly-content-loop.md). Nothing in this system publishes or spends without a human.

@@ -183,7 +183,7 @@ const CATEGORIES: Category[] = [
     items: [
       {
         q: "What happens if I'm in crisis?",
-        a: "Hearth is not a crisis service, and Keepers are not trained for emergency response. If you are in immediate danger, call 911 (US/Canada) or go to your nearest emergency room. If you are experiencing a mental health crisis, call or text 988 (US) or 1-866-585-0445 (Canada). Your Keeper will always name the crisis line first when something acute comes up, and then stay with you.",
+        a: "Hearth is not a crisis service, and Keepers are not trained for emergency response. If you are in immediate danger, call 911 (US/Canada) or go to your nearest emergency room. If you are experiencing a mental health crisis, call or text 988 (US and Canada). Your Keeper will always name the crisis line first when something acute comes up, and then stay with you.",
       },
     ],
   },

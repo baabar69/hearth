@@ -168,9 +168,8 @@ export default function DoINeedTherapyPage() {
             }}
           >
             <strong>If you are in crisis, start here, not with this article.</strong>{" "}
-            In the US call or text <strong>988</strong>. In the UK and Ireland,
-            Samaritans on <strong>116 123</strong>. In Canada,{" "}
-            <strong>1-866-585-0445</strong>. More numbers on our{" "}
+            In the US and Canada call or text <strong>988</strong>. In the UK
+            and Ireland, Samaritans on <strong>116 123</strong>. More numbers on our{" "}
             <Link href="/crisis" style={{ color: "var(--ember)" }}>
               crisis page
             </Link>

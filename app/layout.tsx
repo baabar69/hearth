@@ -131,6 +131,7 @@ const ORGANIZATION_LD = {
   sameAs: [
     "https://www.linkedin.com/company/dearhearth",
     "https://www.crunchbase.com/organization/hearth-94b4",
+    "https://www.wikidata.org/wiki/Q141431662",
   ],
   contactPoint: [
     {

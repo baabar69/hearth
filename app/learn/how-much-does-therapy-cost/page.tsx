@@ -214,9 +214,9 @@ export default function HowMuchDoesTherapyCostPage() {
               margin: 0,
             }}
           >
-            <strong>Crisis support costs nothing.</strong> US: call or text{" "}
+            <strong>Crisis support costs nothing.</strong> US and Canada: call or text{" "}
             <strong>988</strong>. UK and Ireland: Samaritans,{" "}
-            <strong>116 123</strong>. Canada: <strong>1-866-585-0445</strong>.
+            <strong>116 123</strong>.
             Australia: Lifeline, <strong>13 11 14</strong>. More on our{" "}
             <Link href="/crisis" style={{ color: "var(--ember)" }}>
               crisis page

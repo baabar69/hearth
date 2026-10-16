@@ -295,8 +295,8 @@ export default function BridgePage() {
               </p>
               <p style={{ marginTop: 18 }}>
                 The Bridge is also not a substitute for emergency services. If
-                you are in crisis right now, please reach out to 988 (US) or
-                1-866-585-0445 (Canada). Your Keeper is not a crisis line and
+                you are in crisis right now, please call or text 988 (US and
+                Canada). Your Keeper is not a crisis line and
                 neither is The Bridge.
               </p>
             </div>

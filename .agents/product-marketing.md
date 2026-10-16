@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v1.4
+**Document version:** v1.6
 **Last updated:** 2026-08-22
 
 Shared context for every marketing skill and agent in this repo. Read it before writing anything. Copy rules in `AGENTS.md` apply to all output (no em dashes, plain sentence first, never imply clinical outcomes).
@@ -30,7 +30,7 @@ Shared context for every marketing skill and agent in this repo. Read it before 
 
 ## Competitive Landscape
 
-- **Direct:** BetterHelp, Talkspace (online therapy; licensed clinicians; rotating providers; roughly $280 to $400/month for BetterHelp per their FAQ, Aug 2026). 7 Cups (free volunteer listeners, anonymous, rotating).
+- **Direct:** subscription therapy apps (licensed clinicians, rotating providers, about $260 to $520 a month at $60 to $120 a week, August 2026; BetterHelp's own FAQ is the source for its figure) and free peer-listening apps (volunteer listeners, anonymous, rotating). Founder rule, 2026-08-23: in copy, compare with the category ("therapy apps", "online therapy subscriptions"), never a named competitor, except to cite the source of a figure or on the one named page /hearth-vs-betterhelp, which exists because "betterhelp alternative" is the search query.
 - **Secondary:** Calm and Headspace (one-way, no listener), AI companions (Replika, Pi: always on, not a person).
 - **Indirect:** calling a friend, a 12-week group program, doing nothing.
 - **Where they fall short:** no continuity (you can be reassigned), matched by algorithm or availability, priced for crisis not for years, nobody carries your story forward.
@@ -41,7 +41,7 @@ Shared context for every marketing skill and agent in this repo. Read it before 
 2. **Matched by a person, within 72 hours.** A human reads the intake and chooses for fit, language and lived context. If the first Sit is not the right fit, ask and we assign someone else, at no charge.
 3. **A shape, not just sessions.** Call every two weeks, chat between, a Friday note.
    Product rule (founder, 2026-08-22): members do not choose their Keeper. Hearth matches one Keeper by hand within 72 hours; if the first Sit is not the right fit, the member asks and Hearth assigns someone else, no questions, no extra charge; later changes remain on request (founder refinement, 2026-08-22; never write "30 days"). Never write "choose your Keeper", "browse Keepers", "pick" or anything implying a directory. Safe phrasing: "matched with one Keeper, kept for as long as it serves you, changeable on request after the first Sit".
-4. **Priced to hold for years.** $39/month.
+4. **A price you can hold for years, stated plainly.** $39/month. Never sold as cheaper than anything; price is a fact on the page, not the argument.
 5. **Honest about scope.** Not therapy, and a warm handoff to a vetted therapist when therapy is what is needed.
 
 ## Objections and Anti-Personas
@@ -73,6 +73,7 @@ Shared context for every marketing skill and agent in this repo. Read it before 
 - No em dashes. No exclamation marks. No "Hi guys". No therapy-influencer cadence.
 - One true thing per piece. Specific images (the Sunday call, the kitchen at 11pm) over abstractions.
 - Three adjectives: steady, literate, honest.
+- **Positioning rule (founder, 2026-08-23): premium and craft-led, never "the cheaper alternative".** A person reads your words, chooses one Keeper, keeps them for years, writes every Friday. Apps are mass-market and algorithmic. The one comparison line that stays is confident, not apologetic: Hearth is not therapy; if you ever need treatment we say so and help you find the best. "Cheaper", "affordable", "a fraction of the price" and price-versus-therapy maths are out everywhere, including captions.
 
 ## Proof Points (true, citable)
 
@@ -99,6 +100,8 @@ Shared context for every marketing skill and agent in this repo. Read it before 
 
 ## Changelog
 
+- v1.6 (2026-08-23): premium, craft-led positioning; price never the argument (founder rule).
+- v1.5 (2026-08-23): compare with the category, not a named provider (founder rule).
 - v1.4 (2026-08-22): funnel order recorded (intake, membership, then matching within 72 hours of both), per KAN-72.
 - v1.3 (2026-08-22): Saraev operating rules added.
 - v1.2 (2026-08-22): founder decisions recorded: placeholders stay on the site for now, no new fabricated content; members do not choose Keepers (auto-matched, changeable on request).

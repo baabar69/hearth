@@ -61,7 +61,7 @@ const KEEPERS = [
 const CRISIS = [
   {
     title: "What we are not",
-    body: "Hearth is not a crisis service. If you are in immediate danger, please call 988 (US), 1-866-585-0445 (Canada), 116 123 (UK Samaritans), or text HOME to 741741 (Crisis Text Line). We have a full list at /crisis.",
+    body: "Hearth is not a crisis service. If you are in immediate danger, please call or text 988 (US and Canada), call 116 123 (UK Samaritans), or text HOME to 741741 (Crisis Text Line, US). We have a full list at /crisis.",
   },
   {
     title: "What our Keepers do when something escalates",
@@ -254,10 +254,6 @@ export default function TrustPage() {
               <SpecRow
                 label="Penetration testing"
                 value="Independent annual third-party security audit. Findings published in our security log."
-              />
-              <SpecRow
-                label="Insurance"
-                value="$1M+ professional liability coverage. Cyber-incident coverage in addition."
               />
               <SpecRow
                 label="Standard"

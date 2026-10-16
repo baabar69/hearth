@@ -5,7 +5,7 @@ import SharedFooter from "../components/SharedFooter";
 export const metadata = {
   title: "Mental Health Crisis Resources: US, Canada, UK, Pakistan & More",
   description:
-    "If you are in crisis, reach out now. US: 988. Canada: 1-866-585-0445. UK/IE: 116 123. Pakistan: 0311-7786264 (Umang). Hearth is peer support, not a crisis service.",
+    "If you are in crisis, reach out now. US and Canada: call or text 988. UK/IE: 116 123. Pakistan: 0311-7786264 (Umang). Hearth is peer support, not a crisis service.",
   alternates: { canonical: "/crisis" },
   openGraph: {
     title: "Crisis Resources · Hearth",
@@ -99,8 +99,8 @@ export default function CrisisPage() {
               },
               {
                 country: "Canada",
-                service: "Crisis Services Canada",
-                contact: "1-866-585-0445",
+                service: "9-8-8 Suicide Crisis Helpline",
+                contact: "Call or text 9-8-8",
                 detail: "24/7, free, confidential",
                 primary: true,
               },

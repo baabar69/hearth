@@ -204,8 +204,8 @@ export default function SlidingScaleTherapyPage() {
             }}
           >
             <strong>If you are in crisis, cost is not the question today.</strong>{" "}
-            US: call or text <strong>988</strong>. UK and Ireland: Samaritans,{" "}
-            <strong>116 123</strong>. Canada: <strong>1-866-585-0445</strong>.
+            US and Canada: call or text <strong>988</strong>. UK and Ireland: Samaritans,{" "}
+            <strong>116 123</strong>.
             More on our{" "}
             <Link href="/crisis" style={{ color: "var(--ember)" }}>
               crisis page

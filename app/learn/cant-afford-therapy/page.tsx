@@ -223,9 +223,8 @@ export default function CantAffordTherapyPage() {
             }}
           >
             <strong>Crisis support is free and does not depend on money.</strong>{" "}
-            In the US call or text <strong>988</strong>. In the UK and Ireland,
-            Samaritans on <strong>116 123</strong>. In Canada,{" "}
-            <strong>1-866-585-0445</strong>. More on our{" "}
+            In the US and Canada call or text <strong>988</strong>. In the UK
+            and Ireland, Samaritans on <strong>116 123</strong>. More on our{" "}
             <Link href="/crisis" style={{ color: "var(--ember)" }}>
               crisis page
             </Link>

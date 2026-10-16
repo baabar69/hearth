@@ -125,7 +125,7 @@ The Home page carries the headline conversion job. The other pages carry depth, 
 │   The Bridge          Contact            FAQ             │
 │   About                                  Crisis          │
 │  ──────────────────────────────────────────────────────  │
-│  "Hearth is not therapy." · 988 (US) · 1-866-585-0445   │
+│  "Hearth is not therapy." · 988 (US and Canada)         │
 │  Privacy · Terms · © 2026 Hearth, Inc.                   │
 └──────────────────────────────────────────────────────────┘
 ```
@@ -828,7 +828,7 @@ Shorter specs. Each utility page uses the same global header/footer and respects
 
 **Stories `/stories`** — Long-form member testimonials, name-changed, with permission. Each story 200–400 words. No photos. Acts as a social-proof depth page; Home only shows three quotes, this page is the full archive. Adds to SEO surface for "[X] community / mental wellness" terms.
 
-**Crisis Resources `/crisis`** — Plain, calm, ungated. 988 (US), 1-866-585-0445 (Canada), Samaritans (UK), Lifeline (AU), plus a curated list of additional country-specific lines. Plain text, large font, no marketing copy, no CTAs except "If you are not in crisis but want to talk to someone — Hearth is here." Linked from every page footer.
+**Crisis Resources `/crisis`** — Plain, calm, ungated. 988 (US and Canada), Samaritans (UK), Lifeline (AU), plus a curated list of additional country-specific lines. Plain text, large font, no marketing copy, no CTAs except "If you are not in crisis but want to talk to someone — Hearth is here." Linked from every page footer.
 
 **Privacy `/privacy`** — Standard privacy policy + a plain-English version above it ("What this means in normal words"). HIPAA-comparable (not HIPAA-covered-entity) language, carefully scoped. Reviewed by counsel.
 
@@ -912,7 +912,7 @@ Shorter specs. Each utility page uses the same global header/footer and respects
 
 ### Always-Visible (every page footer)
 - "Hearth is not therapy." stated in the footer of **every page**, no exception
-- Crisis line — 988 (US) and 1-866-585-0445 (Canada) — always visible in the footer
+- Crisis line — 988 (US and Canada) — always visible in the footer
 - "Your data is yours" privacy mention near forms
 - HTTPS padlock + simple "encrypted" mention near the soft-intake
 

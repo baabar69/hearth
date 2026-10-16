@@ -746,9 +746,9 @@ export default function IntakePage() {
                       </p>
                       <ul style={{ fontFamily: "var(--mono)", fontSize: 13, color: "#333", lineHeight: 2, paddingLeft: 20, margin: 0 }}>
                         <li><strong>US:</strong> 988 Suicide & Crisis Lifeline. Call or text <strong>988</strong></li>
-                        <li><strong>Canada:</strong> 1-866-585-0445</li>
+                        <li><strong>Canada:</strong> 9-8-8 Suicide Crisis Helpline. Call or text <strong>9-8-8</strong></li>
                         <li><strong>UK:</strong> Samaritans, <strong>116 123</strong></li>
-                        <li><strong>Crisis Text Line:</strong> Text HOME to <strong>741741</strong></li>
+                        <li><strong>Crisis Text Line (US):</strong> Text HOME to <strong>741741</strong></li>
                         <li>
                           <Link href="/crisis" style={{ color: "var(--ember)" }}>
                             Full list of resources &rarr;

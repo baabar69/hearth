@@ -62,7 +62,7 @@ export default function SharedFooter() {
         <div className="foot-bot">
           <span>&copy; 2026 Hearth. Made with attention.</span>
           <span className="crisis">
-            Hearth is not therapy. In crisis? US 988 &middot; Canada 1-866-585-0445 &middot; UK Samaritans 116 123. Hearth is not emergency support.
+            Hearth is not therapy. In crisis? US and Canada 988 &middot; UK Samaritans 116 123. Hearth is not emergency support.
           </span>
         </div>
       </div>

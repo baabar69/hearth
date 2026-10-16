@@ -393,7 +393,7 @@ For high-risk cases: Hearth ops follows up at 24h, 7d, 30d to confirm member is 
 ### 5.12 Crisis Detection and Response
 
 **Always-on safety surface:**
-- 988 (US), 1-866-585-0445 (CA), country-specific links visible in app footer + member dashboard
+- 988 (US and CA), country-specific links visible in app footer + member dashboard
 - One-tap "I need help right now" button in every Sit room and chat thread
 
 **LLM-assisted detection:**

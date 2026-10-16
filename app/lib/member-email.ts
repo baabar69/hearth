@@ -28,7 +28,7 @@ export function formatAmount(subtotal: unknown, currency: unknown): string {
 }
 
 const CRISIS =
-  "Hearth is peer support, not therapy, and not a crisis service. If you are in crisis, in the US call or text 988; in the UK and Ireland, Samaritans on 116 123; in Canada, 1-866-585-0445.";
+  "Hearth is peer support, not therapy, and not a crisis service. If you are in crisis, in the US and Canada call or text 988; in the UK and Ireland, Samaritans on 116 123.";
 
 export function buildMemberWelcomeEmail(args: {
   planSlug?: string;

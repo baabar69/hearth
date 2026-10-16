@@ -153,7 +153,7 @@ There are no signed Bridge therapists yet (KAN-69). The business plan's wording,
 
 1. **Stay.** Acknowledge what they said in their words. Do not change the subject, do not rush.
 2. **Say this, or close to it:** "I want to make sure you have the right support for this, and I am going to be straight with you about what I am and am not. I am your Keeper, not a clinician. I am going to give you two numbers now, and I will stay with you while you decide."
-3. **The numbers:** US, call or text 988. UK and Ireland, Samaritans 116 123. Canada, 1-866-585-0445. Pakistan, Umang 0311-7786264. Elsewhere, local emergency services.
+3. **The numbers:** US and Canada, call or text 988. UK and Ireland, Samaritans 116 123. Pakistan, Umang 0311-7786264. Elsewhere, local emergency services.
 4. **For clinical need that is not an emergency:** Open Path Collective, Psychology Today's directory, the member's GP. Offer to help them write the first email, there and then.
 5. **After, within 2 hours:** the Keeper emails the founder. Subject line starts with CRISIS.
 6. **Founder follows up with the member** within 24 hours, then at 7 days and 30 days. Each contact logged in the sheet.

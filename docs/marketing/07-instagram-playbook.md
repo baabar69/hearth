@@ -40,13 +40,17 @@ Founder and Keepers are not on camera for now. Every Reel is one of three lanes,
 |---|---|---|---|
 | **Letter-to** | 40% | Text on cream paper. "A letter to the eldest daughter who…" One tender truth per beat, 12 to 25 seconds, original audio or quiet piano. | Highest save and send rate for this audience. Cheap. Repeatable. |
 | **Slow b-roll essay** | 40% | Hands, a mug, a window, a chair pulled out. 45 to 90 second voiceover reading one paragraph. | The literary register that separates Hearth from therapy-influencer content. Watch time. |
-| **Viral format** | 20% | One borrowed structure per week: POV text, "things nobody tells you", before/after captions, a trending AI visual style where it fits the tone. | Reach. Must still be original footage or original renders, no watermarks, and must land on one true thing. |
+| **Viral format** | 20% | One borrowed structure per week, from the live tracker list in `research/trending-formats-2026-08.md`: notes-app card, concealed emotional truth ("when they ask X, I say Y, because I can't say Z"), hyper-specific POV text, text-message reveal, kinetic typography, "kinda chic" list. | Reach. Must still be original renders, no watermarks, and must land on one true thing. |
 
 **Founder note to confirm:** you mentioned "dino initiative" style and other viral AI formats. Tell me which references you mean and I will add a fourth lane with a production template.
 
 Carousels: one per week, 8 to 10 slides, the "letter-to" or a plain explainer ("What a Keeper actually does"). Carousels are the save engine; Reels are the reach engine.
 
 Every piece ends on one of three closers, rotated: "Send this to the person who is always the strong one." · "Hearth: one trained listener, yours for years. $39/month. Link in bio." · "If you read this twice, you already know why."
+
+## Audio rule (Business account, verified Aug 2026)
+
+Business accounts cannot use most licensed trending songs: only the Meta Sound Collection, original audio, and independently licensed tracks. Practical route: trending ORIGINAL audios from the Professional dashboard, Sound Collection by mood, or our own named original audio ("Hearth · <piece>"). Never licensed pop; several current lip-sync trends are creator-accounts-only and are skipped. Details: `research/trending-formats-2026-08.md`.
 
 ## 4. Weekly rhythm
 

@@ -29,7 +29,7 @@ Panel.
 | LinkedIn | https://www.linkedin.com/company/dearhearth | yes |
 | Crunchbase | https://www.crunchbase.com/organization/hearth-94b4 | yes |
 | F6S | registered as "Hearth Co", URL pending | not yet |
-| Wikidata | not created | — |
+| Wikidata | https://www.wikidata.org/wiki/Q141431662 (created 2026-09-11) | yes |
 | Trustpilot | not claimed | — |
 | X / Twitter | `x.com/dearhearth` unclaimed — returns 404 | removed |
 

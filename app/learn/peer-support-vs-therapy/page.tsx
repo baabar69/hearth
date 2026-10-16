@@ -531,8 +531,8 @@ export default function PeerSupportVsTherapyPage() {
                 <li>
                   <strong>Skip both temporarily</strong> if what you need
                   this week is an emergency room, a crisis line (988 in the
-                  US, 1-866-585-0445 in Canada, 116 123 in the UK and
-                  Ireland), a domestic-violence hotline, or a medical
+                  US and Canada, 116 123 in the UK and Ireland), a
+                  domestic-violence hotline, or a medical
                   professional. Neither therapy nor peer support is built
                   for acute danger.
                 </li>
@@ -565,8 +565,8 @@ export default function PeerSupportVsTherapyPage() {
                 lines (7 Cups, anonymous chat platforms) are good for an
                 immediate vent, but they are not designed for active
                 self-harm risk, suicidal ideation, or psychiatric
-                emergencies. If you are in crisis, dial 988 (US), 116 123
-                (UK/Ireland), 1-866-585-0445 (Canada), or your local
+                emergencies. If you are in crisis, call or text 988 (US and
+                Canada), dial 116 123 (UK/Ireland), or call your local
                 emergency number.
               </p>
             </div>

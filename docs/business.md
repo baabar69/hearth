@@ -513,7 +513,7 @@ When a Keeper detects acute risk (suicidal ideation, abuse disclosure, psychotic
 
 1. **Immediate:** Keeper acknowledges, validates, and stays present
 2. **Within session:** Keeper transparently bridges — "I want to make sure you have the right support for this. I'm going to connect you with one of our partner therapists today. I'll stay with you while we set that up."
-3. **Crisis line:** All members have one-tap access to 988 (US), 1-866-585-0445 (CA), and country-specific lines. Keeper reinforces this access.
+3. **Crisis line:** All members have one-tap access to 988 (US and CA) and country-specific lines. Keeper reinforces this access.
 4. **Post-session escalation:** Lead Keeper notified within 2 hours; clinical partner contacted; member followed up within 24 hours
 5. **No surveillance — full transparency.** Members know what triggers a Bridge handoff; we don't surveil emotion silently.
 

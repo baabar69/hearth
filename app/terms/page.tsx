@@ -61,7 +61,7 @@ export default function TermsPage() {
                 Hearth is peer support, not therapy. Nothing on this platform
                 constitutes medical advice, mental health treatment, or a
                 doctor-patient relationship. If you are in crisis, please call
-                988 (US) or 1-866-585-0445 (Canada).
+                or text 988 (US and Canada).
               </p>
             </div>
 
