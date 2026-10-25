@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: PATH,
     publishedTime: PUBLISHED,
     modifiedTime: REVIEWED,
-    authors: ["Dear Hearth"],
+    authors: ["Hearth"],
   },
 };
 
@@ -272,7 +272,7 @@ export default function CheapTherapyPage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Dear Hearth", path: "/" },
+              { name: "Hearth", path: "/" },
               { name: "Cheap therapy", path: PATH },
             ]),
             faqLd(FAQ),
@@ -300,7 +300,7 @@ export default function CheapTherapyPage() {
             }}
           >
             <Link href="/" style={{ color: "var(--ink-3)" }}>
-              Dear Hearth
+              Hearth
             </Link>
             {" · Learn · Cheap therapy"}
           </div>

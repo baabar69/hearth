@@ -125,7 +125,7 @@ export default function TherapyWithoutInsurancePage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Dear Hearth", path: "/" },
+              { name: "Hearth", path: "/" },
               { name: "Learn", path: "/learn/therapy-without-insurance" },
               {
                 name: "Therapy without insurance",

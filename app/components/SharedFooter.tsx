@@ -32,6 +32,12 @@ export default function SharedFooter() {
           <div className="foot-col">
             <p className="foot-h">Guides</p>
             <Link href="/peer-support">What is peer support?</Link>
+            <Link href="/learn/online-peer-support-services">
+              Peer support services compared
+            </Link>
+            <Link href="/learn/urdu-hindi-punjabi-peer-support">
+              Support in Urdu, Hindi, Punjabi
+            </Link>
             <Link href="/learn/alternatives-to-therapy">
               Alternatives to therapy
             </Link>

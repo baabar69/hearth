@@ -200,7 +200,7 @@ export default function PeerSupportVsTherapyPage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Dear Hearth", path: "/" },
+              { name: "Hearth", path: "/" },
               { name: "Learn", path: "/learn/peer-support-vs-therapy" },
               {
                 name: "Peer support vs. therapy",

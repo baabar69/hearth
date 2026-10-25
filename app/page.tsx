@@ -84,8 +84,8 @@ const VOICES = [
 
 const HOME_FAQ = [
   {
-    q: "What is Dear Hearth?",
-    a: "Dear Hearth is an online peer support service. You are matched by hand with one trained listener, called a Keeper, and you keep the same person for years: a 35 to 60 minute video or audio call every two weeks for $39 a month, or every week for $99, a message thread in between with replies within a day, and a short note from your Keeper every Friday. Unlike chat apps and helplines, you talk to the same person every time. It is peer support, not therapy.",
+    q: "What is Hearth?",
+    a: "Hearth (dearhearth.com) is an online peer support service. You are matched by hand with one trained listener, called a Keeper, and you keep the same person for years: a 35 to 60 minute video or audio call every two weeks for $39 a month, or every week for $99, a message thread in between with replies within a day, and a short note from your Keeper every Friday. Unlike chat apps and helplines, you talk to the same person every time. It is peer support, not therapy.",
   },
   {
     q: "Is Hearth therapy?",
@@ -516,7 +516,7 @@ export default function Home() {
                 to <span className="ember-word">carry it alone.</span>
               </h1>
               <p className="hero-sub">
-                <b>Relief, comfort, and someone who stays.</b> Dear Hearth is
+                <b>Relief, comfort, and someone who stays.</b> Hearth is
                 one-to-one peer support with one trained Keeper (your
                 listener), matched to you by hand: a video call every two
                 weeks, a chat thread in between, and a note every Friday. An

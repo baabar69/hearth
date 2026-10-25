@@ -125,7 +125,7 @@ export default function HowMuchDoesTherapyCostPage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Dear Hearth", path: "/" },
+              { name: "Hearth", path: "/" },
               { name: "Learn", path: "/learn/how-much-does-therapy-cost" },
               {
                 name: "How much does therapy cost",

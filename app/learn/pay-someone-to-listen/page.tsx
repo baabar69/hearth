@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     url: "/learn/pay-someone-to-listen",
     publishedTime: PUBLISHED,
     modifiedTime: REVIEWED,
-    authors: ["Dear Hearth"],
+    authors: ["Hearth"],
   },
 };
 
 const FAQ = [
   {
     q: "Can I pay someone to listen to me?",
-    a: "Yes. Dear Hearth, for example, matches you by hand with one trained listener (a Keeper) who stays with you for years, from $39 a month for a video or audio call every two weeks. Other paid peer support services, listener apps and coaches will also listen for a fee, and a therapist will if what you are carrying is clinical. Free warmlines, volunteer listener chats and peer-led groups exist too. Whoever you choose, check how the person is trained, whether you get the same person each time, what they do in a crisis, and how you cancel.",
+    a: "Yes. Hearth, for example, matches you by hand with one trained listener (a Keeper) who stays with you for years, from $39 a month for a video or audio call every two weeks. Other paid peer support services, listener apps and coaches will also listen for a fee, and a therapist will if what you are carrying is clinical. Free warmlines, volunteer listener chats and peer-led groups exist too. Whoever you choose, check how the person is trained, whether you get the same person each time, what they do in a crisis, and how you cancel.",
   },
   {
     q: "Is it weird to pay someone to listen?",
@@ -41,7 +41,7 @@ const FAQ = [
   },
   {
     q: "How much does it cost to pay someone to talk to?",
-    a: "Dear Hearth is $39 a month for a call every two weeks with the same trained listener, or $99 a month for a weekly call. Across the market, prices run from nothing to well over $100 a session. Warmlines, volunteer listener chats and peer-led groups are free. Other paid peer support and listener services vary widely, from per-call or per-minute pricing to monthly plans. Therapy paid in cash averaged about $143 a session in the US in a 2024 study, and lower-cost routes such as Open Path Collective run $40 to $70 a session after a one-time $65 membership.",
+    a: "Hearth is $39 a month for a call every two weeks with the same trained listener, or $99 a month for a weekly call. Across the market, prices run from nothing to well over $100 a session. Warmlines, volunteer listener chats and peer-led groups are free. Other paid peer support and listener services vary widely, from per-call or per-minute pricing to monthly plans. Therapy paid in cash averaged about $143 a session in the US in a 2024 study, and lower-cost routes such as Open Path Collective run $40 to $70 a session after a one-time $65 membership.",
   },
   {
     q: "Is a paid listener the same as a therapist?",
@@ -49,7 +49,7 @@ const FAQ = [
   },
   {
     q: "Where can I talk to someone online for free?",
-    a: "In the US and Canada, call or text 988 at any hour; in the US it is for emotional distress, not only suicidal thoughts. Warmlines are free, peer-staffed phone lines for talking before things reach crisis point, and about 30 states have one. 7 Cups has free volunteer listeners by chat. NAMI Connection runs free, peer-led support groups, many of them online. In the UK and Ireland, Samaritans are on 116 123. If you want the same person every time, Dear Hearth starts at $39 a month.",
+    a: "In the US and Canada, call or text 988 at any hour; in the US it is for emotional distress, not only suicidal thoughts. Warmlines are free, peer-staffed phone lines for talking before things reach crisis point, and about 30 states have one. 7 Cups has free volunteer listeners by chat. NAMI Connection runs free, peer-led support groups, many of them online. In the UK and Ireland, Samaritans are on 116 123. If you want the same person every time, Hearth starts at $39 a month.",
   },
 ];
 
@@ -64,7 +64,7 @@ type Option = {
 
 const OPTIONS: Option[] = [
   {
-    option: "Dear Hearth",
+    option: "Hearth",
     href: "/how-it-works",
     ours: true,
     cost: "$39 a month (a call every two weeks) or $99 (weekly)",
@@ -189,7 +189,7 @@ export default function PaySomeoneToListenPage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Dear Hearth", path: "/" },
+              { name: "Hearth", path: "/" },
               { name: "Learn", path: "/learn/pay-someone-to-listen" },
               {
                 name: "Pay someone to listen",
@@ -221,7 +221,7 @@ export default function PaySomeoneToListenPage() {
             }}
           >
             <Link href="/" style={{ color: "var(--ink-3)" }}>
-              Dear Hearth
+              Hearth
             </Link>
             {" · "}
             <Link
@@ -310,7 +310,7 @@ export default function PaySomeoneToListenPage() {
             >
               <strong>Yes, you can pay someone just to listen</strong>: a paid
               peer supporter, a listener service, a coach, or a therapist if
-              what you are carrying is clinical. With Dear Hearth, one trained
+              what you are carrying is clinical. With Hearth, one trained
               listener stays with you for years, from $39 a month.
             </p>
             <p
@@ -590,7 +590,7 @@ export default function PaySomeoneToListenPage() {
               lived something close to what you are carrying. They do not
               diagnose or treat. Services differ a lot in how they charge (per
               call, per minute or a monthly plan), in how well they train
-              people, and in whether you keep the same person. Dear Hearth
+              people, and in whether you keep the same person. Hearth
               keeps you with one Keeper for years. We wrote a separate guide
               to{" "}
               <Link
@@ -747,11 +747,11 @@ export default function PaySomeoneToListenPage() {
               Our service
             </div>
             <h2 style={{ maxWidth: "24ch", marginBottom: 28 }}>
-              Why people choose Dear Hearth.
+              Why people choose Hearth.
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.75, color: "var(--ink-2)" }}>
               If what you want is someone outside your life who listens,
-              remembers and stays, that is exactly what Dear Hearth is for.
+              remembers and stays, that is exactly what Hearth is for.
             </p>
             <ul
               style={{
@@ -782,7 +782,7 @@ export default function PaySomeoneToListenPage() {
                 marginTop: 24,
               }}
             >
-              Dear Hearth is peer support, not therapy, and not a crisis
+              Hearth is peer support, not therapy, and not a crisis
               service. In crisis, call or text 988 (US and Canada) or
               Samaritans on 116 123 (UK and Ireland).
             </p>

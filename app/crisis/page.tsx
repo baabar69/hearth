@@ -5,7 +5,7 @@ import SharedFooter from "../components/SharedFooter";
 export const metadata = {
   title: "Crisis Lines: US, Canada, UK, Pakistan & More",
   description:
-    "In crisis? US and Canada: call or text 988. UK and Ireland: 116 123. Pakistan: Umang 0311-7786264. Crisis lines by country.",
+    "In crisis? US and Canada: call or text 988. UK and Ireland: 116 123. Pakistan: Rescue 1122. Crisis lines by country.",
   alternates: { canonical: "/crisis" },
   openGraph: {
     title: "Crisis Resources · Hearth",
@@ -106,9 +106,9 @@ export default function CrisisPage() {
               },
               {
                 country: "Pakistan",
-                service: "Umang",
-                contact: "0311-7786264",
-                detail: "Mon–Sat, 9 AM – 5 PM",
+                service: "Rozan Counseling Helpline (emergencies: Rescue 1122)",
+                contact: "0304-111-1741",
+                detail: "Mon–Fri, 9 AM – 5 PM. In an emergency, call 1122",
                 primary: false,
               },
               {

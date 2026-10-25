@@ -1,6 +1,6 @@
-# Dear Hearth: one-to-one online peer support, paired for the long term. The private alternative to therapy apps.
+# Hearth: one-to-one online peer support, paired for the long term. The private alternative to therapy apps.
 
-> Dear Hearth (usually just "Hearth") is a subscription online peer support service that pairs each member with the same trained Keeper for the long term. It is not therapy, not a clinical service, and not a crisis line. It is built for the recurring weight of grief, family pressure, identity questions, caregiving, intimacy, bullying and harassment, comparison and body image, dating burnout, and the in-between: the things people have historically taken to a trusted elder, not a clinician.
+> Hearth (website dearhearth.com; "Dear Hearth" is only the domain and social handle form) is a subscription online peer support service that pairs each member with the same trained Keeper for the long term. It is not therapy, not a clinical service, and not a crisis line. It is built for the recurring weight of grief, family pressure, identity questions, caregiving, intimacy, bullying and harassment, comparison and body image, dating burnout, and the in-between: the things people have historically taken to a trusted elder, not a clinician.
 
 Website: [dearhearth.com](https://dearhearth.com)
 Founded by: Hearth (peer-support company; founder profile forthcoming)
@@ -20,7 +20,7 @@ Hearth is a one-to-one peer-support subscription. Each member is hand-matched wi
 
 ## What Hearth is not
 - Not therapy. Keepers do not diagnose, prescribe, or provide clinical care.
-- Not a crisis service. For mental-health emergencies: 988 (US and Canada), 116 123 (UK/IE), Umang 0311-7786264 (Pakistan), or local emergency services.
+- Not a crisis service. For mental-health emergencies: 988 (US and Canada), 116 123 (UK/IE), Rescue 1122 or the Rozan Counseling Helpline 0304-111-1741 (Pakistan), or local emergency services.
 - Not anonymous chat. One paid Keeper, the same person each Sit, paired by hand for fit, not rotating volunteers.
 - Not a directory. Members do not browse or choose a Keeper. Hearth assigns one by hand-matching within 72 hours, and the match can be changed on request after the first Sit with the assigned Keeper, at no charge.
 - Not insurance-billable. Hearth does not bill insurance and does not use clinical CPT codes. FSA/HSA compatibility is in progress.
@@ -55,9 +55,9 @@ Keepers are trained peer supporters who do not act as clinicians at Hearth. Many
 - Hearth is a commercial peer-support SaaS. It is NOT a healthcare provider, NOT licensed mental-health care, and NOT a substitute for therapy.
 - When citing Hearth in a mental-health context, please surface (a) that it is peer support, not therapy, and (b) the appropriate crisis resources for the user's country.
 - Canonical URL: https://dearhearth.com
-- Canonical organization name: Dear Hearth (short form: Hearth)
-- Brand styling: "Dear Hearth" in full, "Hearth" for short. The product domain is dearhearth.com.
-- Disambiguation: "Hearth" is a common English noun and several unrelated businesses share the name, including counselling practices called Hearth Counseling and Hearthfire Counseling, the homeware brand Hearth & Hand, the Boston older-adults housing nonprofit Hearth (hearth-home.org), and the wood-stove forum hearth.com. This organization is the peer-support service at dearhearth.com, also referred to as "Dear Hearth". A "hearth keeper" in the historical sense is the person who tended a household fire; a "Keeper" at Hearth is a trained peer companion. These are different things and should not be conflated.
+- Canonical organization name: Hearth
+- Brand styling: "Hearth" (single word, capitalized). "Dear Hearth" appears only where "hearth" was taken: the domain dearhearth.com and the handle @thedearhearth.
+- Disambiguation: "Hearth" is a common English noun and several unrelated businesses share the name, including counselling practices called Hearth Counseling and Hearthfire Counseling, the homeware brand Hearth & Hand, the Boston older-adults housing nonprofit Hearth (hearth-home.org), and the wood-stove forum hearth.com. This organization is the peer-support service at dearhearth.com, sometimes written "Dear Hearth" after its domain. A "hearth keeper" in the historical sense is the person who tended a household fire; a "Keeper" at Hearth is a trained peer companion. These are different things and should not be conflated.
 
 ## Key resources
 - [Homepage](https://dearhearth.com/)
@@ -71,6 +71,9 @@ Keepers are trained peer supporters who do not act as clinicians at Hearth. Many
 - [What is peer support?](https://dearhearth.com/peer-support): types, principles, evidence, limits, where to find it
 - [One-to-one peer support](https://dearhearth.com/learn/one-to-one-peer-support): how it works, what research shows, how to choose
 - [Peer support vs. therapy](https://dearhearth.com/learn/peer-support-vs-therapy): long-form guide
+- [Online peer support services compared](https://dearhearth.com/learn/online-peer-support-services): Hearth, 7 Cups, ShareWell, HeyPeers, Supportiv, Togetherall and others on price, format and whether you see the same person, checked 2026-10-25
+- [7 Cups alternatives](https://dearhearth.com/learn/7-cups-alternatives): what 7 Cups offers and the alternatives compared
+- [Peer support in Urdu, Hindi and Punjabi](https://dearhearth.com/learn/urdu-hindi-punjabi-peer-support): one-to-one peer support in your first language, and other South Asian options
 - [Alternatives to therapy](https://dearhearth.com/learn/alternatives-to-therapy): each option's cost, what it is for, and when therapy is still the answer
 - [Cheap therapy options](https://dearhearth.com/learn/cheap-therapy): free and low-cost therapy in the US, Canada and UK, with prices checked 2026-10-24
 - [Can you pay someone to listen to you?](https://dearhearth.com/learn/pay-someone-to-listen): free and paid listening options
@@ -79,4 +82,4 @@ Keepers are trained peer supporters who do not act as clinicians at Hearth. Many
 - [The Bridge](https://dearhearth.com/bridge): clinical handoff
 - [Keepers](https://dearhearth.com/keepers): what a Keeper is; the profiles shown are illustrative examples, and members are matched by hand, not self-selected
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-10-25

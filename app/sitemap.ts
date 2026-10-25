@@ -8,17 +8,20 @@ const SITE = "https://dearhearth.com";
 // without lying to crawlers.
 const ROUTES: Array<{ path: string; priority: number; lastmod: string }> = [
   // Core
-  { path: "/",                          priority: 1.0, lastmod: "2026-10-24" },
-  { path: "/how-it-works",              priority: 0.9, lastmod: "2026-10-24" },
-  { path: "/pricing",                   priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/",                          priority: 1.0, lastmod: "2026-10-25" },
+  { path: "/how-it-works",              priority: 0.9, lastmod: "2026-10-25" },
+  { path: "/pricing",                   priority: 0.9, lastmod: "2026-10-25" },
   { path: "/keepers",                   priority: 0.9, lastmod: "2026-10-24" },
   { path: "/hearth-vs-therapy",         priority: 0.9, lastmod: "2026-10-24" },
   { path: "/hearth-vs-betterhelp",      priority: 0.9, lastmod: "2026-10-24" },
-  { path: "/peer-support",              priority: 0.9, lastmod: "2026-10-24" },
-  { path: "/learn/one-to-one-peer-support", priority: 0.9, lastmod: "2026-10-24" },
-  { path: "/learn/alternatives-to-therapy", priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/peer-support",              priority: 0.9, lastmod: "2026-10-25" },
+  { path: "/learn/one-to-one-peer-support", priority: 0.9, lastmod: "2026-10-25" },
+  { path: "/learn/alternatives-to-therapy", priority: 0.9, lastmod: "2026-10-25" },
   { path: "/learn/cheap-therapy",        priority: 0.9, lastmod: "2026-10-24" },
-  { path: "/learn/pay-someone-to-listen", priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/learn/pay-someone-to-listen", priority: 0.9, lastmod: "2026-10-25" },
+  { path: "/learn/online-peer-support-services", priority: 0.9, lastmod: "2026-10-25" },
+  { path: "/learn/7-cups-alternatives",   priority: 0.8, lastmod: "2026-10-25" },
+  { path: "/learn/urdu-hindi-punjabi-peer-support", priority: 0.9, lastmod: "2026-10-25" },
   { path: "/learn/peer-support-vs-therapy", priority: 0.9, lastmod: "2026-10-24" },
   { path: "/learn/what-is-a-hearth-keeper", priority: 0.9, lastmod: "2026-08-22" },
   { path: "/learn/do-i-need-therapy",    priority: 0.9, lastmod: "2026-10-24" },
@@ -28,7 +31,7 @@ const ROUTES: Array<{ path: string; priority: number; lastmod: string }> = [
   { path: "/learn/therapy-without-insurance", priority: 0.9, lastmod: "2026-10-24" },
 
   // Mid-funnel
-  { path: "/about",                     priority: 0.7, lastmod: "2026-10-24" },
+  { path: "/about",                     priority: 0.7, lastmod: "2026-10-25" },
   { path: "/why-paired",                priority: 0.7, lastmod: "2026-10-24" },
   { path: "/stories",                   priority: 0.7, lastmod: "2026-10-24" },
   { path: "/circles",                   priority: 0.7, lastmod: "2026-10-24" },
@@ -43,7 +46,7 @@ const ROUTES: Array<{ path: string; priority: number; lastmod: string }> = [
 
   // Trust / informational
   { path: "/trust",                     priority: 0.6, lastmod: "2026-10-24" },
-  { path: "/crisis",                    priority: 0.6, lastmod: "2026-10-24" },
+  { path: "/crisis",                    priority: 0.6, lastmod: "2026-10-25" },
   { path: "/press",                     priority: 0.4, lastmod: "2026-10-24" },
   { path: "/accessibility",             priority: 0.3, lastmod: "2026-10-24" },
   { path: "/privacy",                   priority: 0.3, lastmod: "2026-10-24" },

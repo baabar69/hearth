@@ -59,7 +59,7 @@ export default function HowItWorks() {
               maxWidth: "52ch",
             }}
           >
-            No mystery. No fine print. Here is how Dear Hearth works, in
+            No mystery. No fine print. Here is how Hearth works, in
             order, from the day you sign up.
           </p>
         </div>

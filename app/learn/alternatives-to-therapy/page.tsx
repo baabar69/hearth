@@ -27,18 +27,18 @@ export const metadata: Metadata = {
     url: PATH,
     publishedTime: PUBLISHED,
     modifiedTime: REVIEWED,
-    authors: ["Dear Hearth"],
+    authors: ["Hearth"],
   },
 };
 
 const FAQ = [
   {
     q: "What can I do instead of therapy?",
-    a: "If what you are carrying is heavy but not clinical, the main alternatives are one-to-one peer support (such as Dear Hearth, where one trained listener stays with you for years), free support groups such as NAMI Connection, warmlines staffed by peers, free listening lines, structured self-help based on CBT, coaching for goal-directed change, and steady changes to sleep, movement and routine. Talking to a faith or community leader, or to a friend who already knows you, also counts. None of these treats a mental illness. If you have a diagnosis, thoughts of self-harm, trauma, or something that is stopping you from functioning, therapy is still the answer.",
+    a: "If what you are carrying is heavy but not clinical, the main alternatives are one-to-one peer support (such as Hearth, where one trained listener stays with you for years), free support groups such as NAMI Connection, warmlines staffed by peers, free listening lines, structured self-help based on CBT, coaching for goal-directed change, and steady changes to sleep, movement and routine. Talking to a faith or community leader, or to a friend who already knows you, also counts. None of these treats a mental illness. If you have a diagnosis, thoughts of self-harm, trauma, or something that is stopping you from functioning, therapy is still the answer.",
   },
   {
     q: "What is better than therapy?",
-    a: "Nothing is better than therapy at what therapy is for: diagnosing and treating mental illness. But therapy is not the best tool for everything. For grief that is painful but moving, loneliness, family pressure or a hard transition, many people find that continuity, being listened to by the same person over time, matters more than clinical technique. That is what Dear Hearth is built for. The right question is not which is better, but which one fits what you are carrying right now.",
+    a: "Nothing is better than therapy at what therapy is for: diagnosing and treating mental illness. But therapy is not the best tool for everything. For grief that is painful but moving, loneliness, family pressure or a hard transition, many people find that continuity, being listened to by the same person over time, matters more than clinical technique. That is what Hearth is built for. The right question is not which is better, but which one fits what you are carrying right now.",
   },
   {
     q: "Can peer support replace therapy?",
@@ -58,7 +58,7 @@ const FAQ = [
   },
   {
     q: "Can I pay someone to listen to me?",
-    a: "Yes. Dear Hearth matches you by hand with one trained listener (a Keeper) who stays with you for years, from $39 a month for a video or audio call every two weeks. Other paid peer support services exist, and free warmlines and volunteer listening lines connect you with whoever is available. Whichever you choose, check four things: whether you get the same person each time, what training they have, what they do if you are in crisis, and how easy it is to cancel.",
+    a: "Yes. Hearth matches you by hand with one trained listener (a Keeper) who stays with you for years, from $39 a month for a video or audio call every two weeks. Other paid peer support services exist, and free warmlines and volunteer listening lines connect you with whoever is available. Whichever you choose, check four things: whether you get the same person each time, what training they have, what they do if you are in crisis, and how easy it is to cancel.",
   },
 ];
 
@@ -91,7 +91,7 @@ const OUR_TAG = {
 };
 
 const DEAR_HEARTH: Option = {
-  name: "Dear Hearth",
+  name: "Hearth",
   href: "/how-it-works",
   ours: true,
   cost: "$39 a month (a call every two weeks) or $99 (weekly)",
@@ -153,7 +153,7 @@ const OTHER: Option[] = [
     goodFor: "The recurring weight of a life: grief, family pressure, loneliness, transitions.",
     notFor: "Diagnosis, treatment, trauma processing, medication, crisis.",
     samePerson: "Depends on the service. Ask before you pay.",
-    body: "A trained peer supporter, someone who listens rather than treats, meets with you regularly. Some services rotate supporters; some keep you with one person, as Dear Hearth does.",
+    body: "A trained peer supporter, someone who listens rather than treats, meets with you regularly. Some services rotate supporters; some keep you with one person, as Hearth does.",
   },
   {
     name: "Structured self-help",
@@ -190,7 +190,7 @@ const OTHER: Option[] = [
 ];
 
 const TABLE: Array<[string, string, string, string, string]> = [
-  ["Dear Hearth", "$39 a month (a call every two weeks) or $99 (weekly)", "Yes, for years", "No, peer support", "Ongoing weight that is not an illness, with one person who stays"],
+  ["Hearth", "$39 a month (a call every two weeks) or $99 (weekly)", "Yes, for years", "No, peer support", "Ongoing weight that is not an illness, with one person who stays"],
   ["Therapy", "Cash-pay average about $143 a session in the US", "Usually the same therapist; some apps reassign", "Yes", "Diagnosis, treatment, trauma, patterns you cannot break alone"],
   ["Low-cost therapy (Open Path, sliding scale, clinics)", "$40–70 a session through Open Path, plus a $65 one-time fee", "Usually", "Yes", "People who need therapy but cannot pay full rates"],
   ["Support groups", "Free", "Same group, not one-to-one", "No", "Shared experience of one specific thing"],
@@ -353,7 +353,7 @@ export default function AlternativesToTherapyPage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Dear Hearth", path: "/" },
+              { name: "Hearth", path: "/" },
               { name: "Alternatives to therapy", path: PATH },
             ]),
             faqLd(FAQ),
@@ -376,7 +376,7 @@ export default function AlternativesToTherapyPage() {
             }}
           >
             <Link href="/" style={{ color: "var(--ink-3)" }}>
-              Dear Hearth
+              Hearth
             </Link>
             {" · Alternatives to therapy"}
           </div>
@@ -651,7 +651,7 @@ export default function AlternativesToTherapyPage() {
               </thead>
               <tbody>
                 {TABLE.map((row) => {
-                  const ours = row[0] === "Dear Hearth";
+                  const ours = row[0] === "Hearth";
                   const base = {
                     padding: 14,
                     borderBottom: "1px solid var(--rule-2)",
@@ -674,7 +674,7 @@ export default function AlternativesToTherapyPage() {
                         {ours ? (
                           <>
                             <Link href="/how-it-works" style={{ color: "var(--ink)" }}>
-                              Dear Hearth
+                              Hearth
                             </Link>
                             <span style={OUR_TAG}>Our service</span>
                           </>
@@ -811,12 +811,12 @@ export default function AlternativesToTherapyPage() {
               Our service
             </div>
             <h2 style={{ maxWidth: "24ch", marginBottom: 28 }}>
-              Why people choose Dear Hearth.
+              Why people choose Hearth.
             </h2>
             <p style={P}>
               For weight that is real but not an illness, most people want the
               same thing: one person who listens, remembers, and stays. That is
-              what Dear Hearth is built to give you.
+              what Hearth is built to give you.
             </p>
             <ul style={{ marginTop: 24, paddingLeft: 0, listStyle: "none", display: "grid", gap: 16 }}>
               {[
@@ -832,16 +832,16 @@ export default function AlternativesToTherapyPage() {
               ))}
             </ul>
             <p style={{ ...P, marginTop: 24 }}>
-              Dear Hearth is peer support, not therapy, and not a crisis
+              Hearth is peer support, not therapy, and not a crisis
               service. If something clinical comes up, your Keeper says so
               plainly, helps you find a licensed therapist, and stays with you
               while you do. More in{" "}
               <Link href="/how-it-works" style={{ color: "var(--ember)" }}>
-                how Dear Hearth works
+                how Hearth works
               </Link>{" "}
               and{" "}
               <Link href="/hearth-vs-betterhelp" style={{ color: "var(--ember)" }}>
-                Dear Hearth vs. therapy apps
+                Hearth vs. therapy apps
               </Link>
               .
             </p>

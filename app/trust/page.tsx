@@ -8,7 +8,7 @@ export const metadata = {
     "Exactly where your information lives today: Whop for payment, email for the Long Talk, Google Meet for Sits. No ad pixels, no data sales, no recordings.",
   alternates: { canonical: "/trust" },
   openGraph: {
-    title: "Trust and Privacy · Dear Hearth",
+    title: "Trust and Privacy · Hearth",
     description:
       "Where your information lives today, who can see it, and the things we will not do with it.",
     url: "/trust",

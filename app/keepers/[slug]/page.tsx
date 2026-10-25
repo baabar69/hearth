@@ -209,7 +209,7 @@ export default async function KeeperProfile({
               primaryImage: keeper.photo,
             }),
             breadcrumbLd([
-              { name: "Dear Hearth", path: "/" },
+              { name: "Hearth", path: "/" },
               { name: "Keepers", path: "/keepers" },
               { name: keeper.name, path: `/keepers/${keeper.slug}` },
             ]),

@@ -302,7 +302,7 @@ export async function generateMetadata({
   const essay = ESSAYS.find((e) => e.slug === slug);
   if (!essay) return { title: "Ember" };
 
-  const title = `${essay.title} · Embers · Dear Hearth`;
+  const title = `${essay.title} · Embers · Hearth`;
   const description = metaDescription(essay.excerpt);
 
   return {

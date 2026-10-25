@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     url: PATH,
     publishedTime: PUBLISHED,
     modifiedTime: REVIEWED,
-    authors: ["Dear Hearth"],
+    authors: ["Hearth"],
   },
 };
 
@@ -73,7 +73,7 @@ const FAQ = [
   },
   {
     q: "Is peer support free?",
-    a: "Often, yes. Many support groups, warmlines and online communities are free. Peer specialists working in clinics are paid for by Medicaid or insurance in many US states. One-to-one peer support with the same trained person, such as Dear Hearth, costs from $39 a month and gives you what free group and chat options rarely do: the same person every time.",
+    a: "Often, yes. Many support groups, warmlines and online communities are free. Peer specialists working in clinics are paid for by Medicaid or insurance in many US states. One-to-one peer support with the same trained person, such as Hearth, costs from $39 a month and gives you what free group and chat options rarely do: the same person every time.",
   },
   {
     q: "Is peer support the same as counselling?",
@@ -81,7 +81,7 @@ const FAQ = [
   },
   {
     q: "Who can I talk to online for free?",
-    a: "7 Cups offers free text chats with volunteer listeners. NAMI and DBSA run free online support groups in the US. Togetherall is free through many employers, universities and UK health services. If you want to talk to the same trained person every time, Dear Hearth matches you with one Keeper from $39 a month. If you are in crisis, call or text 988 in the US and Canada, or call Samaritans on 116 123 in the UK and Ireland.",
+    a: "7 Cups offers free text chats with volunteer listeners. NAMI and DBSA run free online support groups in the US. Togetherall is free through many employers, universities and UK health services. If you want to talk to the same trained person every time, Hearth matches you with one Keeper from $39 a month. If you are in crisis, call or text 988 in the US and Canada, or call Samaritans on 116 123 in the UK and Ireland.",
   },
 ];
 
@@ -340,7 +340,7 @@ export default function PeerSupportPage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Dear Hearth", path: "/" },
+              { name: "Hearth", path: "/" },
               { name: "Peer support", path: PATH },
             ]),
             faqLd(FAQ),
@@ -368,7 +368,7 @@ export default function PeerSupportPage() {
             }}
           >
             <Link href="/" style={{ color: "var(--ink-3)" }}>
-              Dear Hearth
+              Hearth
             </Link>
             {" · Guide · Peer support"}
           </div>
@@ -952,7 +952,7 @@ export default function PeerSupportPage() {
           highlightFirst
           rows={[
             [
-              "Dear Hearth",
+              "Hearth",
               "Yes. One Keeper (a trained peer listener), matched to you by hand within 72 hours and kept for years",
               "A 35–60 minute video or audio call every one or two weeks, a message thread in between with replies within a day, and a written note every Friday",
               "$39 a month (a call every two weeks) or $99 (weekly). Cancel any time",
@@ -1005,6 +1005,10 @@ export default function PeerSupportPage() {
             call at no charge.{" "}
             <Link href="/how-it-works" style={LINK}>
               How Hearth works
+            </Link>
+            , or see{" "}
+            <Link href="/learn/online-peer-support-services" style={LINK}>
+              every online peer support service compared
             </Link>
             .
           </P>
@@ -1106,9 +1110,9 @@ export default function PeerSupportPage() {
             <span className="dot" />
             Our service
           </div>
-          <H2>Why people choose Dear Hearth.</H2>
+          <H2>Why people choose Hearth.</H2>
           <P first>
-            Dear Hearth is one-to-one online peer support. You are matched by
+            Hearth is one-to-one online peer support. You are matched by
             hand with one <strong>Keeper</strong>, a trained peer listener, and
             you keep the same person for years. You talk in a{" "}
             <strong>Sit</strong>, a 35–60 minute video or audio call, and in

@@ -130,7 +130,7 @@ export default function CantAffordTherapyPage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Dear Hearth", path: "/" },
+              { name: "Hearth", path: "/" },
               { name: "Learn", path: "/learn/cant-afford-therapy" },
               {
                 name: "Can't afford therapy",

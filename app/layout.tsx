@@ -24,11 +24,12 @@ const mono = JetBrains_Mono({
 });
 
 const SITE_URL = "https://dearhearth.com";
-// "Dear Hearth" is the name Google should learn. "Hearth" alone is a common
-// noun we can never own, and the rare spelling gets autocorrected to "dear
-// heart" until the web treats it as an entity name (docs/seo/audit-2026-09-09.md).
-const SITE_NAME = "Dear Hearth";
-const DEFAULT_TITLE = "Online Peer Support, an Alternative to Therapy · Dear Hearth";
+// The company is Hearth. "Dear Hearth" is only the domain and handle form
+// (dearhearth.com, @thedearhearth), used where "hearth" was taken. Schema lists
+// it as an alternate name so engines tie the domain to the company
+// (founder decision, 2026-10-25).
+const SITE_NAME = "Hearth";
+const DEFAULT_TITLE = "Online Peer Support, an Alternative to Therapy · Hearth";
 const DEFAULT_DESCRIPTION =
   "One-to-one online peer support: a trained listener, matched to you by hand and kept for years. An alternative to therapy apps, from $39 a month.";
 
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: DEFAULT_TITLE,
-    template: "%s · Dear Hearth",
+    template: "%s · Hearth",
   },
   description: DEFAULT_DESCRIPTION,
   applicationName: SITE_NAME,
@@ -77,7 +78,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Dear Hearth: one-to-one online peer support.",
+        alt: "Hearth: one-to-one online peer support.",
       },
     ],
   },
@@ -127,7 +128,7 @@ const ORGANIZATION_LD = {
   "@id": ORG_ID,
   name: SITE_NAME,
   legalName: "Hearth",
-  alternateName: "Hearth",
+  alternateName: ["Dear Hearth", "dearhearth.com"],
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
@@ -138,7 +139,7 @@ const ORGANIZATION_LD = {
   },
   image: `${SITE_URL}/og-image.png`,
   description:
-    "Dear Hearth is a one-to-one online peer support subscription pairing each member with the same trained listener (a Keeper) for the long term. Not therapy. Not a crisis service.",
+    "Hearth is a one-to-one online peer support subscription pairing each member with the same trained listener (a Keeper) for the long term. Not therapy. Not a crisis service.",
   slogan: "Pull up a chair.",
   knowsAbout: [
     "Peer support",
@@ -187,7 +188,7 @@ const WEBSITE_LD = {
   "@id": SITE_ID,
   url: SITE_URL,
   name: SITE_NAME,
-  alternateName: ["Hearth", "dearhearth.com"],
+  alternateName: ["Dear Hearth", "dearhearth.com"],
   description: DEFAULT_DESCRIPTION,
   inLanguage: "en-US",
   publisher: { "@id": ORG_ID },

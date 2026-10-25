@@ -11,7 +11,7 @@ import {
 } from "../../lib/schema";
 
 const PUBLISHED = "2026-10-24";
-const REVIEWED = "2026-10-24";
+const REVIEWED = "2026-10-25";
 const PATH = "/learn/one-to-one-peer-support";
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: PATH,
     publishedTime: PUBLISHED,
     modifiedTime: REVIEWED,
-    authors: ["Dear Hearth"],
+    authors: ["Hearth"],
   },
 };
 
@@ -46,11 +46,11 @@ const FAQ = [
   },
   {
     q: "Is there free one-to-one peer support?",
-    a: "Yes, free lines exist. In the US many states run free peer-run warmlines, volunteer listening platforms such as 7 Cups offer free chats, and in the UK and Ireland Samaritans listen for free around the clock. They usually connect you with whoever is available. If you want the same trained person every time, Dear Hearth matches you with one Keeper for years, from $39 a month for a video or audio call every two weeks.",
+    a: "Yes, free lines exist. In the US many states run free peer-run warmlines, volunteer listening platforms such as 7 Cups offer free chats, and in the UK and Ireland Samaritans listen for free around the clock. They usually connect you with whoever is available. If you want the same trained person every time, Hearth matches you with one Keeper for years, from $39 a month for a video or audio call every two weeks.",
   },
   {
     q: "Should it be the same person every time?",
-    a: "Yes, if you want to be known over time. Seeing the same supporter means you stop retelling your story and they notice how things change from month to month. That is why Dear Hearth keeps you with one Keeper for years, and lets you change Keeper at no charge after your first call if the fit is wrong. In a crisis, call or text 988 (US and Canada) or Samaritans on 116 123 (UK and Ireland).",
+    a: "Yes, if you want to be known over time. Seeing the same supporter means you stop retelling your story and they notice how things change from month to month. That is why Hearth keeps you with one Keeper for years, and lets you change Keeper at no charge after your first call if the fit is wrong. In a crisis, call or text 988 (US and Canada) or Samaritans on 116 123 (UK and Ireland).",
   },
   {
     q: "Can I have one-to-one peer support and therapy at the same time?",
@@ -70,7 +70,7 @@ type FormatRow = {
 
 const FORMATS_TABLE: FormatRow[] = [
   {
-    name: "Dear Hearth",
+    name: "Hearth",
     href: "/how-it-works",
     ours: true,
     what: "One Keeper (a trained peer listener), matched to you by hand within 72 hours. A video or audio call every week or two, messages in between, a note every Friday.",
@@ -212,7 +212,7 @@ export default function OneToOnePeerSupportPage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Dear Hearth", path: "/" },
+              { name: "Hearth", path: "/" },
               { name: "Learn", path: "/peer-support" },
               { name: "One-to-one peer support", path: PATH },
             ]),
@@ -241,7 +241,7 @@ export default function OneToOnePeerSupportPage() {
             }}
           >
             <Link href="/" style={{ color: "var(--ink-3)" }}>
-              Dear Hearth
+              Hearth
             </Link>
             {" · "}
             <Link href="/peer-support" style={{ color: "var(--ink-3)" }}>
@@ -623,8 +623,44 @@ export default function OneToOnePeerSupportPage() {
             </p>
             <p style={P_GAP}>
               Studies have not yet compared same-person and rotating formats
-              head to head. Continuity is the principle Dear Hearth is built
+              head to head. Continuity is the principle Hearth is built
               on: one Keeper, matched by hand, for as long as it helps.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* MATCHED VS CHOOSING */}
+      <section
+        style={{ padding: "80px 0", borderBottom: "1px solid var(--rule-2)" }}
+      >
+        <div className="wrap">
+          <div style={{ maxWidth: "68ch" }}>
+            <h2 style={{ maxWidth: "26ch", marginBottom: 28 }}>
+              Matched for you, or choosing your own peer?
+            </h2>
+            <p style={P}>
+              One-to-one services work in one of two ways. Some show you a
+              directory of peer supporters and let you browse profiles and book
+              whoever looks right. Others assign someone to you after asking
+              what you need.
+            </p>
+            <p style={P_GAP}>
+              <strong>Choosing your own</strong> suits people who already know
+              what they want in a supporter and enjoy picking. The catch is
+              that a profile tells you little about how someone listens, and
+              you are making the decision at the moment you have the least
+              energy for it.
+            </p>
+            <p style={P_GAP}>
+              <strong>Being matched</strong> suits people who would rather
+              someone else did the choosing. At Hearth a person, not an
+              algorithm, reads your 12-minute intake and pairs you with one
+              Keeper within 72 hours, matching first on language, then time
+              zone, then what you are carrying. If the first match is not
+              right, you can ask for a different Keeper after your first Sit
+              at no charge, and then you keep that person for as long as it
+              helps.
             </p>
           </div>
         </div>
@@ -678,7 +714,7 @@ export default function OneToOnePeerSupportPage() {
               US states, and volunteer listening platforms are free too; they
               usually connect you with whoever is available. A paid service
               buys you a trained supporter, a schedule and the same person.
-              Dear Hearth is $39 a month for a call every two weeks, or $99 a
+              Hearth is $39 a month for a call every two weeks, or $99 a
               month for a weekly call, and you can cancel any time in one
               click.
             </p>
@@ -771,10 +807,10 @@ export default function OneToOnePeerSupportPage() {
               Our service
             </div>
             <h2 style={{ maxWidth: "24ch", marginBottom: 28 }}>
-              Why people choose Dear Hearth.
+              Why people choose Hearth.
             </h2>
             <p style={P}>
-              Dear Hearth is one-to-one peer support built around one idea:
+              Hearth is one-to-one peer support built around one idea:
               the same person, for years.
             </p>
             <ul
@@ -814,7 +850,7 @@ export default function OneToOnePeerSupportPage() {
               ))}
             </ul>
             <p style={{ ...P, marginTop: 24 }}>
-              Dear Hearth is peer support, not therapy, and not a crisis
+              Hearth is peer support, not therapy, and not a crisis
               service. When something needs a clinician, your Keeper helps you
               find one.
             </p>
@@ -903,7 +939,7 @@ export default function OneToOnePeerSupportPage() {
                 ["/learn/peer-support-vs-therapy", "Peer support vs. therapy: the honest difference"],
                 ["/learn/do-i-need-therapy", "Do I need therapy, or someone to talk to?"],
                 ["/learn/alternatives-to-therapy", "Alternatives to therapy, and when each one fits"],
-                ["/pricing", "Dear Hearth pricing"],
+                ["/pricing", "Hearth pricing"],
                 ["/crisis", "Crisis resources by country"],
               ].map(([href, label]) => (
                 <Link

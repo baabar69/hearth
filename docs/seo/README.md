@@ -17,8 +17,16 @@ See `keyword-strategy.md`.
 
 ## Documents here
 
+**October 2026 update.** Company name is **Hearth**; "Dear Hearth" is only the domain and
+handle form (founder, 2026-10-25). This overrides the 2026-09-09 audit's advice to make
+"Dear Hearth" the entity name. Research from the October SEO and AEO work is in
+`research-2026-10/`.
+
 | File | What it covers |
 |---|---|
+| `research-2026-10/serp-peer-support.md` | Who ranks for "peer support", clusters, verified citations, link targets |
+| `research-2026-10/serp-therapy-alternatives-and-cheap-therapy.md` | Alternatives to therapy and cheap therapy SERPs, verified prices |
+| `research-2026-10/aeo-baseline-2026-10-25.md` | Whether AI engines name Hearth, what they cite instead, the gaps |
 | `keyword-strategy.md` | What to target, what to ignore, and the content cluster |
 | `search-console-findings.md` | Indexing diagnosis, and what has been ruled out |
 | `link-building.md` | Off-page strategy, profile URLs, and the copy for each platform |
