@@ -19,12 +19,12 @@ const ENFORCED_CSP = [
 
 const REPORT_ONLY_CSP = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://*.whop.com https://cdn.plaid.com https://eu-assets.i.posthog.com",
+  "script-src 'self' 'unsafe-inline' https://whop.com https://*.whop.com https://cdn.plaid.com https://eu-assets.i.posthog.com",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
-  "connect-src 'self' https://*.whop.com https://t.whop.tw https://*.plaid.com https://eu.i.posthog.com https://eu-assets.i.posthog.com",
-  "frame-src 'self' https://*.whop.com https://*.plaid.com",
+  "connect-src 'self' https://whop.com https://*.whop.com https://t.whop.tw https://*.plaid.com https://eu.i.posthog.com https://eu-assets.i.posthog.com",
+  "frame-src 'self' https://whop.com https://*.whop.com https://*.plaid.com",
   "form-action 'self'",
   "frame-ancestors 'self'",
   "base-uri 'self'",

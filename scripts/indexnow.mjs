@@ -16,6 +16,11 @@ import { readFile } from "node:fs/promises";
 
 const HOST = "dearhearth.com";
 const SITEMAP = `https://${HOST}/sitemap.xml`;
+// The sitemap this build just produced. postbuild runs before Netlify
+// publishes the deploy, so the live sitemap is still the previous one and
+// would leave every new page out of the ping until the next deploy. The new
+// URLs go live within a minute or two of this, well before engines crawl.
+const BUILT_SITEMAP = ".next/server/app/sitemap.xml.body";
 const KEY_FILE = "public/8e3f6a9d2b7c4f51a89e6b2d4f7c9a13.txt";
 
 // Netlify sets CONTEXT. Skip local builds and deploy previews so we only ever
@@ -32,9 +37,14 @@ if (!process.env.CONTEXT && !process.env.INDEXNOW_FORCE) {
 try {
   const key = (await readFile(KEY_FILE, "utf8")).trim();
 
-  const res = await fetch(SITEMAP);
-  if (!res.ok) throw new Error(`sitemap fetch failed: ${res.status}`);
-  const xml = await res.text();
+  let xml;
+  try {
+    xml = await readFile(BUILT_SITEMAP, "utf8");
+  } catch {
+    const res = await fetch(SITEMAP);
+    if (!res.ok) throw new Error(`sitemap fetch failed: ${res.status}`);
+    xml = await res.text();
+  }
 
   const urlList = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
   if (urlList.length === 0) throw new Error("no <loc> entries in sitemap");
