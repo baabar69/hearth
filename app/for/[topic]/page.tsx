@@ -104,7 +104,7 @@ const TOPICS: Topic[] = [
     slug: "identity",
     metaTitle: "Identity & belonging support · Hearth",
     metaDescription:
-      "Peer support for the questions about who you are: at work, at home, in the room. A Keeper matched by hand for the context you don't want to spend the hour explaining.",
+      "Peer support for questions about who you are, at work, at home and in the room. One Keeper, matched by hand, who already gets the context.",
     eyebrow: "For identity & belonging",
     headlinePre: "Too much of one thing.\nNot enough",
     headlineEmber: "of the other.",
@@ -218,7 +218,7 @@ const TOPICS: Topic[] = [
     slug: "anxiety",
     metaTitle: "Anxiety & overwhelm support · Hearth",
     metaDescription:
-      "Peer support for the racing heart before a family dinner. The weight in your chest. A Keeper for the relational, ongoing kind of anxiety that lives between sessions.",
+      "Peer support for the racing heart before a family dinner and the weight in your chest. One Keeper for the ongoing, everyday kind of anxiety.",
     eyebrow: "For anxiety & overwhelm",
     headlinePre: "Worry that won't\nstay",
     headlineEmber: "in one place.",
@@ -256,7 +256,7 @@ const TOPICS: Topic[] = [
     slug: "bullying",
     metaTitle: "Bullying & harassment support · Hearth",
     metaDescription:
-      "Peer support for being picked at, ganged up on, or quietly left out: at work, at university, online. One trained Keeper who stays while you get your footing back.",
+      "Peer support for being picked at, ganged up on or left out, at work, at university or online. One trained Keeper who stays while you recover.",
     eyebrow: "For bullying & harassment",
     headlinePre: "Being picked on was\nsupposed to end at",
     headlineEmber: "the school gate.",

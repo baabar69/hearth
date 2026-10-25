@@ -302,8 +302,8 @@ export async function generateMetadata({
   const essay = ESSAYS.find((e) => e.slug === slug);
   if (!essay) return { title: "Ember" };
 
-  const title = `${essay.title} · Embers · Hearth`;
-  const description = essay.excerpt;
+  const title = `${essay.title} · Embers · Dear Hearth`;
+  const description = metaDescription(essay.excerpt);
 
   return {
     title,
@@ -325,6 +325,22 @@ export async function generateMetadata({
       description,
     },
   };
+}
+
+// Search results cut descriptions at about 155 characters. Keep whole
+// sentences from the excerpt up to that length; the page still shows the
+// full excerpt.
+function metaDescription(text: string, max = 155): string {
+  if (text.length <= max) return text;
+  const sentences = text.match(/[^.!?]+[.!?]+/g) ?? [text];
+  let out = "";
+  for (const s of sentences) {
+    if ((out + s).trim().length > max) break;
+    out += s;
+  }
+  if (out.trim()) return out.trim();
+  const cut = text.slice(0, max - 1);
+  return `${cut.slice(0, cut.lastIndexOf(" "))}…`;
 }
 
 function formatDate(iso: string) {

@@ -105,8 +105,8 @@ export default function PricingPage() {
               maxWidth: "52ch",
             }}
           >
-            Two tiers. No hidden fees. No streaks. No upsells. Cancel any time
-            in one click.
+            Dear Hearth has two tiers. No hidden fees. No streaks. No upsells.
+            Cancel any time in one click.
           </p>
         </div>
       </section>

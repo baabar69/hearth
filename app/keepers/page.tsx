@@ -5,7 +5,7 @@ import KeeperPortrait from "../components/KeeperPortrait";
 import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 
 export const metadata = {
-  title: "Keepers: the trained peer supporters at Hearth",
+  title: "What a Keeper Is: Trained Peer Supporters",
   description:
     "What a Keeper is: a trained peer supporter matched to you by hand, not picked from a list. Example profiles show what we match on.",
   alternates: { canonical: "/keepers" },

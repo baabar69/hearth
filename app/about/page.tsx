@@ -86,8 +86,10 @@ export default function AboutPage() {
               maxWidth: "52ch",
             }}
           >
-            To restore the elder a generation of us never had. The kitchen
-            table. The long evening. The person who wasn&rsquo;t tired of you.
+            Dear Hearth is one-to-one online peer support: one trained
+            listener, kept for years. We built it to restore the elder a
+            generation of us never had. The kitchen table. The long evening.
+            The person who wasn&rsquo;t tired of you.
           </p>
         </div>
       </section>

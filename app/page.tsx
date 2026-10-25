@@ -66,26 +66,30 @@ const COMPARE = [
 
 const VOICES = [
   {
-    q: "I've been holding everyone for years. My mother. My kids. My husband's grief. The first Sit I cried for forty minutes. Aruna didn't try to stop me. She just stayed.",
+    q: "I've been holding everyone for years. My mother. My kids. My husband's grief. The first Sit I cried for forty minutes. My Keeper didn't try to stop me. She just stayed.",
     who: "Sara, 47",
-    meta: "Caregiving · 10 months in",
+    meta: "Caregiving",
   },
   {
-    q: "My grandmother died two years ago. I never grieved out loud. There wasn't space for it. Aruna made the space. We talk about her every week.",
+    q: "My grandmother died two years ago. I never grieved out loud. There wasn't space for it. My Keeper made the space. We talk about her every week.",
     who: "Devika, 38",
-    meta: "Grief · 1 year in",
+    meta: "Grief",
   },
   {
-    q: "I quit the job my parents wanted. I didn't tell them for six weeks. Faisal sat with me through that silence. Not a therapist. Just someone who'd done a version of this himself.",
+    q: "I quit the job my parents wanted. I didn't tell them for six weeks. My Keeper sat with me through that silence. Not a therapist. Just someone who'd done a version of this himself.",
     who: "Hassan, 29",
-    meta: "Career · 1 year in",
+    meta: "Career",
   },
 ];
 
 const HOME_FAQ = [
   {
+    q: "What is Dear Hearth?",
+    a: "Dear Hearth is an online peer support service. You are matched by hand with one trained listener, called a Keeper, and you keep the same person for years: a 35 to 60 minute video or audio call every two weeks for $39 a month, or every week for $99, a message thread in between with replies within a day, and a short note from your Keeper every Friday. Unlike chat apps and helplines, you talk to the same person every time. It is peer support, not therapy.",
+  },
+  {
     q: "Is Hearth therapy?",
-    a: "No. Hearth is peer support: a trained Keeper (often a psychologist by training in their home country) who does not act as a clinician, for the recurring weight of ordinary life. Keepers do not diagnose, treat or prescribe. If what you describe needs a therapist, your Keeper says so and helps you find a vetted one through The Bridge.",
+    a: "No. Hearth is peer support: a trained Keeper (often a psychologist by training in their home country) who does not act as a clinician, for the recurring weight of ordinary life. Keepers do not diagnose, treat or prescribe. If what you describe needs a therapist, your Keeper says so and helps you find one.",
   },
   {
     q: "How is Hearth different from therapy apps like BetterHelp?",
@@ -512,12 +516,12 @@ export default function Home() {
                 to <span className="ember-word">carry it alone.</span>
               </h1>
               <p className="hero-sub">
-                <b>Relief, comfort, and someone who stays.</b> One-to-one peer
-                support with one trained Keeper (your listener), matched to you
-                by hand: a video call every two weeks, a chat thread in
-                between, and a note every Friday. An alternative to therapy
-                for the weight that is not a diagnosis. $39 a month, cancel
-                any time.
+                <b>Relief, comfort, and someone who stays.</b> Dear Hearth is
+                one-to-one peer support with one trained Keeper (your
+                listener), matched to you by hand: a video call every two
+                weeks, a chat thread in between, and a note every Friday. An
+                alternative to therapy for the weight that is not a diagnosis.
+                $39 a month, cancel any time.
               </p>
               <div className="hero-pick">
                 <div className="hero-pick-label">What are you carrying?</div>
