@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "Can You Pay Someone to Listen to You?",
     description:
-      "Free options first, then paid ones: what each costs, whether you get the same person, and what to check before paying anyone to listen.",
+      "The paid and free ways to have someone listen: what each costs, whether you get the same person, and what to check before you pay.",
     url: "/learn/pay-someone-to-listen",
     publishedTime: PUBLISHED,
     modifiedTime: REVIEWED,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "Can I pay someone to listen to me?",
-    a: "Yes. Paid peer support services, listener apps and coaches will all listen for a fee, and a therapist will if what you are carrying is clinical. Before paying, try the free options, which include warmlines, volunteer listener chats and peer-led support groups. If you do pay, check how the person is trained, whether you get the same person each time, what they do in a crisis, and how you cancel.",
+    a: "Yes. Dear Hearth, for example, matches you by hand with one trained listener (a Keeper) who stays with you for years, from $39 a month for a video or audio call every two weeks. Other paid peer support services, listener apps and coaches will also listen for a fee, and a therapist will if what you are carrying is clinical. Free warmlines, volunteer listener chats and peer-led groups exist too. Whoever you choose, check how the person is trained, whether you get the same person each time, what they do in a crisis, and how you cancel.",
   },
   {
     q: "Is it weird to pay someone to listen?",
@@ -41,7 +41,7 @@ const FAQ = [
   },
   {
     q: "How much does it cost to pay someone to talk to?",
-    a: "From nothing to well over $100 a session. Warmlines, volunteer listener chats and peer-led groups are free. Paid peer support and listener services vary widely, from per-call or per-minute pricing to monthly plans; Hearth, for example, is $39 a month for a call every two weeks or $99 a month for a weekly call. Therapy paid in cash averaged about $143 a session in the US in a 2024 study, and lower-cost routes such as Open Path Collective run $40 to $70 a session after a one-time $65 membership.",
+    a: "Dear Hearth is $39 a month for a call every two weeks with the same trained listener, or $99 a month for a weekly call. Across the market, prices run from nothing to well over $100 a session. Warmlines, volunteer listener chats and peer-led groups are free. Other paid peer support and listener services vary widely, from per-call or per-minute pricing to monthly plans. Therapy paid in cash averaged about $143 a session in the US in a 2024 study, and lower-cost routes such as Open Path Collective run $40 to $70 a session after a one-time $65 membership.",
   },
   {
     q: "Is a paid listener the same as a therapist?",
@@ -49,69 +49,87 @@ const FAQ = [
   },
   {
     q: "Where can I talk to someone online for free?",
-    a: "In the US and Canada, call or text 988 at any hour; in the US it is for emotional distress, not only suicidal thoughts. Warmlines are free, peer-staffed phone lines for talking before things reach crisis point, and about 30 states have one. 7 Cups has free volunteer listeners by chat. NAMI Connection runs free, peer-led support groups, many of them online. In the UK and Ireland, Samaritans are on 116 123.",
+    a: "In the US and Canada, call or text 988 at any hour; in the US it is for emotional distress, not only suicidal thoughts. Warmlines are free, peer-staffed phone lines for talking before things reach crisis point, and about 30 states have one. 7 Cups has free volunteer listeners by chat. NAMI Connection runs free, peer-led support groups, many of them online. In the UK and Ireland, Samaritans are on 116 123. If you want the same person every time, Dear Hearth starts at $39 a month.",
   },
 ];
 
 type Option = {
   option: string;
+  href?: string;
+  ours?: boolean;
   cost: string;
   same: string;
-  goodFor: string;
-  notFor: string;
+  what: string;
 };
 
 const OPTIONS: Option[] = [
   {
+    option: "Dear Hearth",
+    href: "/how-it-works",
+    ours: true,
+    cost: "$39 a month (a call every two weeks) or $99 (weekly)",
+    same: "Yes, for years",
+    what: "One Keeper (a trained peer listener), matched to you by hand. Video or audio calls, messages in between, a note every Friday.",
+  },
+  {
     option: "Warmlines",
     cost: "Free",
-    same: "Usually not",
-    goodFor: "Talking to someone before things reach crisis point",
-    notFor: "An ongoing relationship with one person",
+    same: "No",
+    what: "A peer-staffed phone line for talking before things reach crisis point",
   },
   {
     option: "Volunteer listener chats (such as 7 Cups)",
     cost: "Free, with paid tiers on some",
     same: "Rarely",
-    goodFor: "Getting something off your chest right now, at any hour",
-    notFor: "Continuity, or anything complicated that needs context",
+    what: "Text chat with a trained volunteer, often within minutes",
   },
   {
     option: "Peer-led support groups (such as NAMI Connection)",
     cost: "Free",
-    same: "Often the same group",
-    goodFor: "Hearing from people who have lived the same thing",
-    notFor: "One-to-one attention",
+    same: "Same group, not one-to-one",
+    what: "A group of people who have lived the same thing",
   },
   {
     option: "Friends, family, faith or community leaders",
     cost: "Free",
     same: "Yes",
-    goodFor: "Being known already",
-    notFor: "Things you cannot say inside your own life",
+    what: "People who already know you",
   },
   {
-    option: "Paid peer support and listener services",
+    option: "Other paid peer support and listener services",
     cost: "Varies: per call, per minute or monthly",
     same: "Depends on the service; ask",
-    goodFor: "Regular conversation and being heard over time",
-    notFor: "Diagnosis or treatment",
+    what: "Regular conversation with a supporter",
   },
   {
     option: "Coaching",
-    cost: "Varies widely",
+    cost: "Varies widely; unregulated",
     same: "Usually yes",
-    goodFor: "Goals, decisions and accountability",
-    notFor: "Grief, loss or mental illness; coaching is unregulated",
+    what: "Help with goals, decisions and accountability",
   },
   {
     option: "Therapy",
     cost: "About $143 cash-pay average in the US; low-cost routes from $40",
-    same: "Usually yes",
-    goodFor: "Clinical conditions, trauma, patterns you cannot break alone",
-    notFor: "A cheap or quick start: cost and waiting lists are the usual obstacles",
+    same: "Usually the same therapist; some apps reassign",
+    what: "Assessment, diagnosis and treatment from a licensed clinician",
   },
 ];
+
+const OUR_TAG = {
+  display: "inline-block",
+  marginLeft: 8,
+  padding: "2px 8px",
+  borderRadius: 999,
+  border: "1px solid var(--ember)",
+  color: "var(--ember)",
+  fontFamily: "var(--mono)",
+  fontSize: 10,
+  letterSpacing: "0.1em",
+  textTransform: "uppercase" as const,
+  fontWeight: 500,
+  verticalAlign: "middle",
+  whiteSpace: "nowrap" as const,
+};
 
 const CHECKS: Array<[string, string]> = [
   [
@@ -158,7 +176,7 @@ export default function PaySomeoneToListenPage() {
               path: "/learn/pay-someone-to-listen",
               headline: "Can You Pay Someone to Listen to You?",
               description:
-                "Free options first, then paid ones: what each costs, whether you get the same person, and what to check before paying anyone to listen.",
+                "The paid and free ways to have someone listen: what each costs, whether you get the same person, and what to check before you pay.",
               datePublished: PUBLISHED,
               dateModified: REVIEWED,
               wordCount: 2000,
@@ -203,7 +221,7 @@ export default function PaySomeoneToListenPage() {
             }}
           >
             <Link href="/" style={{ color: "var(--ink-3)" }}>
-              Hearth
+              Dear Hearth
             </Link>
             {" · "}
             <Link
@@ -231,7 +249,7 @@ export default function PaySomeoneToListenPage() {
             }}
           >
             Yes. People do it every day, and there is nothing strange about it.
-            Here are the options, free ones first, with what each costs and
+            Here are the options, starting with ours, with what each costs and
             what to check before you hand over any money.
           </p>
           <div
@@ -292,8 +310,8 @@ export default function PaySomeoneToListenPage() {
             >
               <strong>Yes, you can pay someone just to listen</strong>: a paid
               peer supporter, a listener service, a coach, or a therapist if
-              what you are carrying is clinical. Try the free options first,
-              because some of them are very good.
+              what you are carrying is clinical. With Dear Hearth, one trained
+              listener stays with you for years, from $39 a month.
             </p>
             <p
               style={{
@@ -371,7 +389,7 @@ export default function PaySomeoneToListenPage() {
       >
         <div className="wrap">
           <h2 style={{ maxWidth: "24ch", marginBottom: 16 }}>
-            The options, free ones first.
+            The options, side by side.
           </h2>
           <p
             style={{
@@ -398,10 +416,11 @@ export default function PaySomeoneToListenPage() {
             >
               <thead>
                 <tr>
-                  {["Option", "Cost", "Same person?", "Good for", "Not for"].map(
+                  {["Option", "Cost", "Same person every time?", "What you get"].map(
                     (h) => (
                       <th
                         key={h}
+                        scope="col"
                         style={{
                           textAlign: "left",
                           padding: "12px 14px",
@@ -421,34 +440,50 @@ export default function PaySomeoneToListenPage() {
                 </tr>
               </thead>
               <tbody>
-                {OPTIONS.map((o) => (
-                  <tr key={o.option}>
-                    <td
-                      style={{
-                        padding: "14px",
-                        borderBottom: "1px solid var(--rule-2)",
-                        color: "var(--ink)",
-                        fontWeight: 500,
-                        verticalAlign: "top",
-                      }}
-                    >
-                      {o.option}
-                    </td>
-                    {[o.cost, o.same, o.goodFor, o.notFor].map((cell, i) => (
-                      <td
-                        key={i}
+                {OPTIONS.map((o) => {
+                  const base = {
+                    padding: "14px",
+                    borderBottom: "1px solid var(--rule-2)",
+                    color: "var(--ink-2)",
+                    verticalAlign: "top" as const,
+                    background: o.ours ? "var(--paper-2)" : undefined,
+                  };
+                  return (
+                    <tr key={o.option}>
+                      <th
+                        scope="row"
                         style={{
-                          padding: "14px",
-                          borderBottom: "1px solid var(--rule-2)",
-                          color: "var(--ink-2)",
-                          verticalAlign: "top",
+                          ...base,
+                          textAlign: "left",
+                          color: "var(--ink)",
+                          fontWeight: o.ours ? 600 : 500,
+                          borderLeft: o.ours ? "2px solid var(--ember)" : undefined,
                         }}
                       >
-                        {cell}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
+                        {o.href ? (
+                          <Link href={o.href} style={{ color: "var(--ink)" }}>
+                            {o.option}
+                          </Link>
+                        ) : (
+                          o.option
+                        )}
+                        {o.ours && <span style={OUR_TAG}>Our service</span>}
+                      </th>
+                      {[o.cost, o.same, o.what].map((cell, i) => (
+                        <td
+                          key={i}
+                          style={{
+                            ...base,
+                            color: o.ours && i === 1 ? "var(--ink)" : base.color,
+                            fontWeight: o.ours && i === 1 ? 600 : 400,
+                          }}
+                        >
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
@@ -462,7 +497,7 @@ export default function PaySomeoneToListenPage() {
         <div className="wrap">
           <div style={{ maxWidth: "68ch" }}>
             <h2 style={{ maxWidth: "24ch", marginBottom: 28 }}>
-              Before you pay anyone: the free routes.
+              The free routes.
             </h2>
 
             <h3 style={{ marginTop: 8, marginBottom: 12 }}>Warmlines</h3>
@@ -555,8 +590,9 @@ export default function PaySomeoneToListenPage() {
               lived something close to what you are carrying. They do not
               diagnose or treat. Services differ a lot in how they charge (per
               call, per minute or a monthly plan), in how well they train
-              people, and in whether you keep the same person. We wrote a
-              separate guide to{" "}
+              people, and in whether you keep the same person. Dear Hearth
+              keeps you with one Keeper for years. We wrote a separate guide
+              to{" "}
               <Link
                 href="/learn/one-to-one-peer-support"
                 style={{ color: "var(--ember)" }}
@@ -702,67 +738,61 @@ export default function PaySomeoneToListenPage() {
         </div>
       </section>
 
-      {/* WHERE HEARTH FITS */}
+      {/* WHY PEOPLE CHOOSE DEAR HEARTH */}
       <section style={{ padding: "80px 0", background: "var(--paper-2)" }}>
         <div className="wrap">
           <div style={{ maxWidth: "68ch" }}>
             <div className="eyebrow" style={{ marginBottom: 18 }}>
               <span className="dot" />
-              Where we fit
+              Our service
             </div>
             <h2 style={{ maxWidth: "24ch", marginBottom: 28 }}>
-              Hearth is one of the paid options.
+              Why people choose Dear Hearth.
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.75, color: "var(--ink-2)" }}>
-              Hearth is one-to-one peer support. We match you by hand with one{" "}
-              <strong>Keeper</strong>, a trained peer listener rather than a
-              clinician, and you keep the same person for as long as it helps.
-              You talk in a <strong>Sit</strong>, a 35 to 60 minute video or
-              audio call, and write to each other between calls. Your Keeper
-              also sends a short note every Friday.
+              If what you want is someone outside your life who listens,
+              remembers and stays, that is exactly what Dear Hearth is for.
             </p>
+            <ul
+              style={{
+                marginTop: 24,
+                paddingLeft: 0,
+                listStyle: "none",
+                display: "grid",
+                gap: 16,
+              }}
+            >
+              {[
+                ["The same person, for years.", "We match you by hand, within 72 hours, with one Keeper who stays with you. If the fit is wrong after your first call, you change Keeper at no charge."],
+                ["Trained, checked and supervised.", "Every Keeper completes Hearth's 120-hour training, a background check and monthly supervision. Many trained as psychologists or counsellors in their home countries."],
+                ["A regular time that is yours.", "A Sit is a 35 to 60 minute video or audio call: every two weeks for $39 a month, or every week for $99 a month."],
+                ["Someone between calls, too.", "The Long Talk is your message thread with your Keeper, with replies within a day (within 4 hours on the $99 plan), plus a short note from them every Friday."],
+                ["Easy to leave.", "Cancel any time, in one click."],
+              ].map(([head, body]) => (
+                <li key={head} style={{ fontSize: 17, lineHeight: 1.7, color: "var(--ink-2)" }}>
+                  <strong style={{ color: "var(--ink)" }}>{head}</strong> {body}
+                </li>
+              ))}
+            </ul>
             <p
               style={{
                 fontSize: 18,
                 lineHeight: 1.75,
                 color: "var(--ink-2)",
-                marginTop: 20,
+                marginTop: 24,
               }}
             >
-              It costs <strong>$39 a month</strong> for a Sit every two weeks,
-              or <strong>$99 a month</strong> for a weekly Sit. You can cancel
-              any time.{" "}
-              <Link href="/pricing" style={{ color: "var(--ember)" }}>
-                Full pricing
-              </Link>
-              .
+              Dear Hearth is peer support, not therapy, and not a crisis
+              service. In crisis, call or text 988 (US and Canada) or
+              Samaritans on 116 123 (UK and Ireland).
             </p>
-            <div
-              style={{
-                marginTop: 30,
-                padding: "24px 28px",
-                background: "var(--paper)",
-                border: "1px solid var(--rule-2)",
-              }}
-            >
-              <p
-                style={{
-                  fontSize: 17,
-                  lineHeight: 1.7,
-                  color: "var(--ink-2)",
-                  margin: 0,
-                }}
-              >
-                <strong style={{ color: "var(--ink)" }}>
-                  When Hearth is the wrong choice.
-                </strong>{" "}
-                If you need diagnosis or treatment, choose a therapist. If you
-                are in crisis, call 988 or Samaritans. If you want someone this
-                minute at 3am, a warmline or a volunteer chat will reach you
-                faster. If you would rather pay nothing, the free routes above
-                are good. Hearth is for wanting the same person, regularly, over
-                months or years.
-              </p>
+            <div className="cta-row" style={{ marginTop: 32 }}>
+              <Link href="/intake" className="btn btn-primary btn-lg">
+                Start the 12-minute intake <span className="arr">&rarr;</span>
+              </Link>
+              <Link href="/pricing" className="btn btn-ghost btn-lg">
+                See pricing
+              </Link>
             </div>
           </div>
         </div>

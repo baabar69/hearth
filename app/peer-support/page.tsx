@@ -73,7 +73,7 @@ const FAQ = [
   },
   {
     q: "Is peer support free?",
-    a: "Often, yes. Many support groups, warmlines and online communities are free. Peer specialists working in clinics are paid for by Medicaid or insurance in many US states. Paid one-to-one services, including Hearth, charge a monthly fee.",
+    a: "Often, yes. Many support groups, warmlines and online communities are free. Peer specialists working in clinics are paid for by Medicaid or insurance in many US states. One-to-one peer support with the same trained person, such as Dear Hearth, costs from $39 a month and gives you what free group and chat options rarely do: the same person every time.",
   },
   {
     q: "Is peer support the same as counselling?",
@@ -81,7 +81,7 @@ const FAQ = [
   },
   {
     q: "Who can I talk to online for free?",
-    a: "7 Cups offers free text chats with volunteer listeners at any hour. NAMI and DBSA run free online support groups in the US. Togetherall is free through many employers, universities and UK health services. If you are in crisis, call or text 988 in the US and Canada, or call Samaritans on 116 123 in the UK and Ireland.",
+    a: "7 Cups offers free text chats with volunteer listeners. NAMI and DBSA run free online support groups in the US. Togetherall is free through many employers, universities and UK health services. If you want to talk to the same trained person every time, Dear Hearth matches you with one Keeper from $39 a month. If you are in crisis, call or text 988 in the US and Canada, or call Samaritans on 116 123 in the UK and Ireland.",
   },
 ];
 
@@ -209,10 +209,13 @@ function Table({
   head,
   rows,
   minWidth = 680,
+  highlightFirst = false,
 }: {
   head: string[];
   rows: string[][];
   minWidth?: number;
+  /** Highlights the first row and tags it as our own service. */
+  highlightFirst?: boolean;
 }) {
   const cell: CSSProperties = {
     padding: "14px",
@@ -255,30 +258,53 @@ function Table({
           </tr>
         </thead>
         <tbody>
-          {rows.map((row) => (
-            <tr key={row[0]}>
-              {row.map((value, i) =>
-                i === 0 ? (
-                  <th
-                    key={i}
-                    scope="row"
-                    style={{
-                      ...cell,
-                      textAlign: "left",
-                      color: "var(--ink)",
-                      fontWeight: 500,
-                    }}
-                  >
-                    {value}
-                  </th>
-                ) : (
-                  <td key={i} style={cell}>
-                    {value}
-                  </td>
-                ),
-              )}
-            </tr>
-          ))}
+          {rows.map((row, r) => {
+            const hl = highlightFirst && r === 0;
+            const rowCell: CSSProperties = hl
+              ? { ...cell, background: "var(--paper-2)", color: "var(--ink)" }
+              : cell;
+            return (
+              <tr key={row[0]}>
+                {row.map((value, i) =>
+                  i === 0 ? (
+                    <th
+                      key={i}
+                      scope="row"
+                      style={{
+                        ...rowCell,
+                        textAlign: "left",
+                        color: "var(--ink)",
+                        fontWeight: hl ? 600 : 500,
+                        borderLeft: hl ? "3px solid var(--ember)" : undefined,
+                      }}
+                    >
+                      {value}
+                      {hl && (
+                        <span
+                          style={{
+                            display: "block",
+                            marginTop: 6,
+                            fontFamily: "var(--mono)",
+                            fontSize: 10,
+                            letterSpacing: "0.12em",
+                            textTransform: "uppercase",
+                            color: "var(--ember)",
+                            fontWeight: 500,
+                          }}
+                        >
+                          Our service
+                        </span>
+                      )}
+                    </th>
+                  ) : (
+                    <td key={i} style={rowCell}>
+                      {value}
+                    </td>
+                  ),
+                )}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
@@ -914,76 +940,78 @@ export default function PeerSupportPage() {
         <H2>Online peer support options, compared.</H2>
         <Prose>
           <P first>
-            Online peer support ranges from free, anonymous chat to paid,
-            scheduled one-to-one support. They do different jobs.
+            Online peer support ranges from anonymous chat to one trained
+            person who stays with you. The biggest difference between them is
+            whether you talk to the same person each time, because that is
+            what lets someone know your story instead of hearing it fresh.
           </P>
         </Prose>
         <Table
-          head={["Option", "Cost", "Format", "Best for", "Trade-off"]}
+          head={["Option", "Same person every time?", "Format", "Cost", "Best for"]}
           minWidth={860}
+          highlightFirst
           rows={[
             [
+              "Dear Hearth",
+              "Yes. One Keeper (a trained peer listener), matched to you by hand within 72 hours and kept for years",
+              "A 35–60 minute video or audio call every one or two weeks, a message thread in between with replies within a day, and a written note every Friday",
+              "$39 a month (a call every two weeks) or $99 (weekly). Cancel any time",
+              "Ongoing support from one person who knows your whole story",
+            ],
+            [
               "NAMI Connection groups (US)",
-              "Free",
+              "Same group, not one-to-one",
               "Peer-led groups, in person and online",
+              "Free",
               "Adults living with a mental health condition",
-              "Group format at fixed times; varies by local affiliate",
             ],
             [
               "DBSA support groups (US)",
-              "Free",
+              "Same group, not one-to-one",
               "Peer-led groups, many online",
+              "Free",
               "Depression and bipolar disorder",
-              "Built around a diagnosis; group rather than one-to-one",
             ],
             [
               "Warmlines",
-              "Free",
+              "No",
               "Phone, sometimes text",
+              "Free",
               "A hard evening that is not an emergency",
-              "A different person each time; limited hours in many areas",
             ],
             [
               "7 Cups",
+              "Rarely",
+              "Text chat with volunteer listeners",
               "Free listener chats; paid options exist",
-              "Text chat with volunteer listeners, at any hour",
               "Talking right now, anonymously",
-              "Volunteers with basic training; rarely the same person twice",
             ],
             [
               "Togetherall",
-              "Free if your employer, university or local health service provides it",
+              "No, it is a community",
               "Anonymous online community, monitored around the clock",
-              "Anonymity, and support at 3am",
-              "A community, not a one-to-one relationship",
-            ],
-            [
-              "Paid one-to-one peer support (for example, Hearth)",
-              "A monthly fee",
-              "The same trained person: scheduled calls plus messages",
-              "Continuity: someone who knows your story",
-              "It costs money, and it is not on demand at 3am",
+              "Free where an employer, university or health service provides it",
+              "Staying anonymous",
             ],
           ]}
         />
         <Prose>
           <P>
-            <strong>Where the free options are better, plainly.</strong> If you
-            need someone right now, in the middle of the night, a 24-hour chat
-            or a crisis line beats any scheduled service. If money is the
-            barrier, try the free groups first; many are excellent. If you want
-            people who share your exact diagnosis, DBSA and NAMI groups are
-            built for exactly that. If what you want is one person who stays,
-            that is where paid one-to-one support earns its place. More on
-            weighing all of this in{" "}
-            <Link href="/learn/alternatives-to-therapy" style={LINK}>
-              alternatives to therapy
-            </Link>{" "}
-            and{" "}
-            <Link href="/learn/cant-afford-therapy" style={LINK}>
-              cheap and free options when you can&rsquo;t afford therapy
+            Hearth is the only option above built around one person who stays.
+            Your Keeper completes Hearth&rsquo;s 120-hour training, a
+            background check and monthly supervision, and many Keepers trained
+            as psychologists or counsellors in their home countries. If the
+            first match is not right, you can change Keepers after your first
+            call at no charge.{" "}
+            <Link href="/how-it-works" style={LINK}>
+              How Hearth works
             </Link>
             .
+          </P>
+          <P>
+            In a crisis, call or text 988 (US and Canada) or Samaritans on 116
+            123 (UK and Ireland). If you need diagnosis or treatment, see a
+            licensed therapist; your Keeper can help you find one.
           </P>
         </Prose>
       </Section>
@@ -1076,33 +1104,45 @@ export default function PeerSupportPage() {
         <Prose>
           <div className="eyebrow" style={{ marginBottom: 18 }}>
             <span className="dot" />
-            Where we fit
+            Our service
           </div>
-          <H2>Where Hearth fits.</H2>
+          <H2>Why people choose Dear Hearth.</H2>
           <P first>
-            Hearth (in full, Dear Hearth) is a paid, one-to-one peer support
-            service. You are matched by hand with one <strong>Keeper</strong>,
-            a trained peer supporter, and you keep the same person for as long
-            as it helps. You talk in a <strong>Sit</strong>, a 35–60 minute
-            video or audio call, every two weeks for $39 a month or every week
-            for $99 a month. In between there is the{" "}
-            <strong>Long Talk</strong>, a written thread with your Keeper, and
-            a short note from them every Friday.
+            Dear Hearth is one-to-one online peer support. You are matched by
+            hand with one <strong>Keeper</strong>, a trained peer listener, and
+            you keep the same person for years. You talk in a{" "}
+            <strong>Sit</strong>, a 35–60 minute video or audio call, and in
+            between there is the <strong>Long Talk</strong>, a written thread
+            with your Keeper.
           </P>
+          <Bullets
+            items={[
+              [
+                "The same person, every time.",
+                "No rotating volunteers and no starting your story from the beginning. Your Keeper remembers last month, last year, and the name of your aunt.",
+              ],
+              [
+                "Matched by hand, not by an algorithm.",
+                "We read your intake and pair you within 72 hours on language, time zone and what you are carrying. You can change Keepers after your first Sit at no charge.",
+              ],
+              [
+                "Trained and supervised.",
+                "Every Keeper completes Hearth\u2019s 120-hour training, a background check and monthly supervision. Many trained as psychologists or counsellors in their home countries.",
+              ],
+              [
+                "Support between calls.",
+                "Write to your Keeper any day and hear back within a day (within 4 hours on the weekly plan), plus a short note from them every Friday.",
+              ],
+              [
+                "Simple pricing.",
+                "$39 a month for a Sit every two weeks, or $99 for weekly. Cancel any time, in one click.",
+              ],
+            ]}
+          />
           <P>
-            Many Keepers trained as psychologists or counsellors in their home
-            countries, and every Keeper completes Hearth&rsquo;s training in
-            listening, scope and crisis steps. None of them acts as a clinician
-            at Hearth. If what you are carrying needs therapy, your Keeper will
-            say so and help you find a licensed therapist.
-          </P>
-          <P>
-            Hearth is built for one gap in the comparison above: continuity.
-            Groups change, phone lines rotate, and free listeners are rarely
-            the same person twice. If you want one person who knows your story,
-            that is what we do. If you need something free, immediate or
-            clinical, use the options above instead. We would rather you got
-            the right help than our help.{" "}
+            Hearth is peer support, not therapy, and not a crisis service. If
+            something needs a clinician, your Keeper says so and helps you find
+            one, and stays with you while you do.{" "}
             <Link href="/how-it-works" style={LINK}>
               How Hearth works
             </Link>{" "}

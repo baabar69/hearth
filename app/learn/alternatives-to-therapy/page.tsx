@@ -34,11 +34,11 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "What can I do instead of therapy?",
-    a: "If what you are carrying is heavy but not clinical, the main alternatives are free support groups such as NAMI Connection, warmlines staffed by peers, free listening lines, one-to-one peer support, structured self-help based on CBT, coaching for goal-directed change, and steady changes to sleep, movement and routine. Talking to a faith or community leader, or to a friend who already knows you, also counts. None of these treats a mental illness. If you have a diagnosis, thoughts of self-harm, trauma, or something that is stopping you from functioning, therapy is still the answer.",
+    a: "If what you are carrying is heavy but not clinical, the main alternatives are one-to-one peer support (such as Dear Hearth, where one trained listener stays with you for years), free support groups such as NAMI Connection, warmlines staffed by peers, free listening lines, structured self-help based on CBT, coaching for goal-directed change, and steady changes to sleep, movement and routine. Talking to a faith or community leader, or to a friend who already knows you, also counts. None of these treats a mental illness. If you have a diagnosis, thoughts of self-harm, trauma, or something that is stopping you from functioning, therapy is still the answer.",
   },
   {
     q: "What is better than therapy?",
-    a: "Nothing is better than therapy at what therapy is for: diagnosing and treating mental illness. But therapy is not the best tool for everything. For grief that is painful but moving, loneliness, family pressure or a hard transition, many people find that continuity, being listened to by the same person over time, matters more than clinical technique. The right question is not which is better, but which one fits what you are carrying right now.",
+    a: "Nothing is better than therapy at what therapy is for: diagnosing and treating mental illness. But therapy is not the best tool for everything. For grief that is painful but moving, loneliness, family pressure or a hard transition, many people find that continuity, being listened to by the same person over time, matters more than clinical technique. That is what Dear Hearth is built for. The right question is not which is better, but which one fits what you are carrying right now.",
   },
   {
     q: "Can peer support replace therapy?",
@@ -58,7 +58,7 @@ const FAQ = [
   },
   {
     q: "Can I pay someone to listen to me?",
-    a: "Yes. Paid peer support services match you with a trained listener rather than a clinician. Prices range widely, and free options such as warmlines and volunteer listening lines exist too. If you pay, check four things: whether you get the same person each time, what training they have, what they do if you are in crisis, and how easy it is to cancel. Hearth is one such service: one trained listener, matched by hand, from $39 a month.",
+    a: "Yes. Dear Hearth matches you by hand with one trained listener (a Keeper) who stays with you for years, from $39 a month for a video or audio call every two weeks. Other paid peer support services exist, and free warmlines and volunteer listening lines connect you with whoever is available. Whichever you choose, check four things: whether you get the same person each time, what training they have, what they do if you are in crisis, and how easy it is to cancel.",
   },
 ];
 
@@ -67,17 +67,49 @@ type Option = {
   cost: string;
   goodFor: string;
   notFor: string;
+  notForLabel?: string;
   samePerson: string;
   body: string;
+  ours?: boolean;
+  href?: string;
+};
+
+const OUR_TAG = {
+  display: "inline-block",
+  marginLeft: 10,
+  padding: "2px 8px",
+  borderRadius: 999,
+  border: "1px solid var(--ember)",
+  color: "var(--ember)",
+  fontFamily: "var(--mono)",
+  fontSize: 10,
+  letterSpacing: "0.1em",
+  textTransform: "uppercase" as const,
+  fontWeight: 500,
+  verticalAlign: "middle",
+  whiteSpace: "nowrap" as const,
+};
+
+const DEAR_HEARTH: Option = {
+  name: "Dear Hearth",
+  href: "/how-it-works",
+  ours: true,
+  cost: "$39 a month (a call every two weeks) or $99 (weekly)",
+  samePerson: "Yes, for years.",
+  goodFor: "The recurring weight of a life: grief, family pressure, loneliness, caregiving, transitions.",
+  notForLabel: "Also included",
+  notFor: "Matched by hand within 72 hours. Free change of Keeper after your first Sit. Cancel any time in one click.",
+  body: "One Keeper (a trained peer listener), matched to you by hand and kept for years. You talk in a Sit, a 35 to 60 minute video or audio call, every two weeks or every week. In between there is the Long Talk, a message thread your Keeper replies to within a day, and a short note from them every Friday. Every Keeper completes Hearth's 120-hour training, a background check and monthly supervision, and many trained as psychologists or counsellors in their home countries. Peer support, not therapy.",
 };
 
 const CONNECTION: Option[] = [
+  DEAR_HEARTH,
   {
     name: "Support groups",
     cost: "Usually free",
     goodFor: "Shared experience of one specific thing: a diagnosis, a loss, caring for someone.",
     notFor: "People who need one-to-one attention, or who freeze in groups.",
-    samePerson: "Same group, often different people week to week.",
+    samePerson: "Same group, not one-to-one.",
     body: "NAMI Connection groups are free, peer-led, 90 minutes long, for adults 18 and over, and many now meet online. Grief, caregiver and condition-specific groups run through hospices, hospitals and charities. Quality depends heavily on the facilitator, so try two or three before deciding.",
   },
   {
@@ -85,7 +117,7 @@ const CONNECTION: Option[] = [
     cost: "Free",
     goodFor: "Talking to someone before things become a crisis, often someone with lived experience.",
     notFor: "Emergencies (use 988), or anyone who wants an ongoing relationship.",
-    samePerson: "Rarely. You talk to whoever answers.",
+    samePerson: "No. You talk to whoever answers.",
     body: "Warmlines are free, confidential phone lines staffed by peers, and the American Psychiatric Association counts about 30 US states with one. Hours vary. NAMI keeps a national directory. They are badly under-known, and for a hard evening they can be exactly right.",
   },
   {
@@ -93,8 +125,8 @@ const CONNECTION: Option[] = [
     cost: "Free",
     goodFor: "Being heard right now, at any hour, without booking anything.",
     notFor: "Continuity. You will usually explain yourself from the start each time.",
-    samePerson: "Almost never.",
-    body: "Volunteer listener platforms such as 7 Cups connect you with a trained volunteer by text, often within minutes. Training and experience vary by volunteer. For an immediate vent, these beat anything you have to book.",
+    samePerson: "Rarely.",
+    body: "Volunteer listener platforms such as 7 Cups connect you with a trained volunteer by text, often within minutes. Training and experience vary by volunteer. Useful for an immediate vent.",
   },
   {
     name: "Faith or community leaders",
@@ -121,7 +153,7 @@ const OTHER: Option[] = [
     goodFor: "The recurring weight of a life: grief, family pressure, loneliness, transitions.",
     notFor: "Diagnosis, treatment, trauma processing, medication, crisis.",
     samePerson: "Depends on the service. Ask before you pay.",
-    body: "A trained peer supporter, someone who listens rather than treats, meets with you regularly. Some services rotate supporters; some keep you with one person. Hearth is a paid version of this: one Keeper (a trained peer listener), matched to you by hand and kept for the long term.",
+    body: "A trained peer supporter, someone who listens rather than treats, meets with you regularly. Some services rotate supporters; some keep you with one person, as Dear Hearth does.",
   },
   {
     name: "Structured self-help",
@@ -158,12 +190,13 @@ const OTHER: Option[] = [
 ];
 
 const TABLE: Array<[string, string, string, string, string]> = [
-  ["Therapy", "Cash-pay average about $143 a session in the US", "Usually", "Yes", "Diagnosis, treatment, trauma, patterns you cannot break alone"],
+  ["Dear Hearth", "$39 a month (a call every two weeks) or $99 (weekly)", "Yes, for years", "No, peer support", "Ongoing weight that is not an illness, with one person who stays"],
+  ["Therapy", "Cash-pay average about $143 a session in the US", "Usually the same therapist; some apps reassign", "Yes", "Diagnosis, treatment, trauma, patterns you cannot break alone"],
   ["Low-cost therapy (Open Path, sliding scale, clinics)", "$40–70 a session through Open Path, plus a $65 one-time fee", "Usually", "Yes", "People who need therapy but cannot pay full rates"],
-  ["Support groups", "Free", "Same group", "No", "Shared experience of one specific thing"],
+  ["Support groups", "Free", "Same group, not one-to-one", "No", "Shared experience of one specific thing"],
   ["Warmlines", "Free", "No", "No", "A hard evening, before it becomes a crisis"],
-  ["Free listening lines", "Free", "No", "No", "Being heard right now"],
-  ["One-to-one peer support", "Free to paid", "Depends", "No", "Ongoing weight that is not an illness"],
+  ["Free listening lines", "Free", "Rarely", "No", "Being heard right now"],
+  ["Other one-to-one peer support", "Free to paid", "Depends on the service", "No", "Ongoing weight that is not an illness"],
   ["Self-help (CBT books, courses, apps)", "Free to low", "No", "Uses clinical methods, not care", "Building skills for worry and low mood"],
   ["Coaching", "Varies; unregulated", "Yes", "No", "Goals and decisions"],
   ["AI chatbots", "Free to low", "No person", "No", "Thinking out loud at any hour"],
@@ -237,12 +270,23 @@ function OptionCard({ o }: { o: Option }) {
     <article
       style={{
         background: "var(--paper)",
-        border: "1px solid var(--rule-2)",
+        border: o.ours ? "1px solid var(--ember)" : "1px solid var(--rule-2)",
+        borderLeft: o.ours ? "4px solid var(--ember)" : "1px solid var(--rule-2)",
         borderRadius: 10,
         padding: "24px 24px 26px",
+        boxShadow: o.ours ? "0 20px 40px -32px rgba(156,42,26,0.45)" : undefined,
       }}
     >
-      <h3 style={{ fontSize: 24, marginBottom: 12 }}>{o.name}</h3>
+      <h3 style={{ fontSize: 24, marginBottom: 12 }}>
+        {o.href ? (
+          <Link href={o.href} style={{ color: "var(--ink)" }}>
+            {o.name}
+          </Link>
+        ) : (
+          o.name
+        )}
+        {o.ours && <span style={OUR_TAG}>Our service</span>}
+      </h3>
       <p style={{ fontSize: 16.5, lineHeight: 1.7, color: "var(--ink-2)", margin: 0 }}>
         {o.body}
       </p>
@@ -269,7 +313,7 @@ function OptionCard({ o }: { o: Option }) {
           <dd style={{ margin: 0, fontSize: 15, color: "var(--ink-2)" }}>{o.goodFor}</dd>
         </div>
         <div>
-          <dt style={label}>Not for</dt>
+          <dt style={label}>{o.notForLabel ?? "Not for"}</dt>
           <dd style={{ margin: 0, fontSize: 15, color: "var(--ink-2)" }}>{o.notFor}</dd>
         </div>
       </dl>
@@ -505,7 +549,8 @@ export default function AlternativesToTherapyPage() {
             </h2>
             <p style={P}>
               Most of what helps outside therapy is some form of being heard by
-              another person. These are the free and low-cost ways to get that.
+              another person. Here are the main ways to get that, starting with
+              ours.
             </p>
           </div>
           <div style={{ display: "grid", gap: 18, maxWidth: 860 }}>
@@ -583,9 +628,10 @@ export default function AlternativesToTherapyPage() {
             <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 15, lineHeight: 1.6, minWidth: 760 }}>
               <thead>
                 <tr>
-                  {["Option", "Typical cost", "Same person?", "Clinical?", "Best for"].map((h) => (
+                  {["Option", "Typical cost", "Same person every time?", "Clinical?", "Best for"].map((h) => (
                     <th
                       key={h}
+                      scope="col"
                       style={{
                         textAlign: "left",
                         padding: "12px 14px",
@@ -604,31 +650,60 @@ export default function AlternativesToTherapyPage() {
                 </tr>
               </thead>
               <tbody>
-                {TABLE.map((row) => (
-                  <tr key={row[0]}>
-                    {row.map((cell, i) => (
-                      <td
-                        key={i}
+                {TABLE.map((row) => {
+                  const ours = row[0] === "Dear Hearth";
+                  const base = {
+                    padding: 14,
+                    borderBottom: "1px solid var(--rule-2)",
+                    color: "var(--ink-2)",
+                    verticalAlign: "top" as const,
+                    background: ours ? "var(--paper-2)" : undefined,
+                  };
+                  return (
+                    <tr key={row[0]}>
+                      <th
+                        scope="row"
                         style={{
-                          padding: 14,
-                          borderBottom: "1px solid var(--rule-2)",
-                          color: i === 0 ? "var(--ink)" : "var(--ink-2)",
-                          fontWeight: i === 0 ? 500 : 400,
-                          verticalAlign: "top",
+                          ...base,
+                          textAlign: "left",
+                          color: "var(--ink)",
+                          fontWeight: ours ? 600 : 500,
+                          borderLeft: ours ? "2px solid var(--ember)" : undefined,
                         }}
                       >
-                        {cell}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
+                        {ours ? (
+                          <>
+                            <Link href="/how-it-works" style={{ color: "var(--ink)" }}>
+                              Dear Hearth
+                            </Link>
+                            <span style={OUR_TAG}>Our service</span>
+                          </>
+                        ) : (
+                          row[0]
+                        )}
+                      </th>
+                      {row.slice(1).map((cell, i) => (
+                        <td
+                          key={i}
+                          style={{
+                            ...base,
+                            color: ours && i === 1 ? "var(--ink)" : base.color,
+                            fontWeight: ours && i === 1 ? 600 : 400,
+                          }}
+                        >
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
           <p style={{ fontSize: 15, lineHeight: 1.6, color: "var(--ink-3)", marginTop: 16, maxWidth: "68ch" }}>
             Therapy price from Zhu et al. (2024). Open Path rates checked on
-            24 October 2026. &ldquo;Same person?&rdquo; means whether you
-            usually see the same individual each time.
+            24 October 2026. &ldquo;Same person every time?&rdquo; means
+            whether you usually see the same individual each time.
           </p>
         </div>
       </section>
@@ -727,62 +802,57 @@ export default function AlternativesToTherapyPage() {
         </div>
       </section>
 
-      {/* WHERE HEARTH FITS */}
+      {/* WHY PEOPLE CHOOSE DEAR HEARTH */}
       <section style={{ padding: "80px 0", background: "var(--paper-2)" }}>
         <div className="wrap">
           <div style={{ maxWidth: "68ch" }}>
             <div className="eyebrow" style={{ marginBottom: 18 }}>
               <span className="dot" />
-              Where we fit
+              Our service
             </div>
             <h2 style={{ maxWidth: "24ch", marginBottom: 28 }}>
-              Where Hearth fits, and where the free options are better.
+              Why people choose Dear Hearth.
             </h2>
             <p style={P}>
-              Hearth is paid one-to-one peer support, not therapy. You are
-              matched by hand with one <strong>Keeper</strong>, a trained peer
-              listener rather than a clinician, and you keep the same person
-              for as long as it helps. You talk in a <strong>Sit</strong>, a
-              35 to 60 minute video or audio call, every two weeks for $39 a
-              month or every week for $99. In between there is the{" "}
-              <strong>Long Talk</strong>, a written thread with your Keeper,
-              and a short note from them every Friday.
+              For weight that is real but not an illness, most people want the
+              same thing: one person who listens, remembers, and stays. That is
+              what Dear Hearth is built to give you.
             </p>
-            <p style={{ ...P, marginTop: 18 }}>
-              Many Keepers trained as psychologists or counsellors in their
-              home countries, but none of them acts as your clinician here.
-              They do not diagnose, treat or prescribe. If something clinical
-              comes up, your Keeper says so plainly and helps you find a
-              licensed therapist, and stays with you while you do.
-            </p>
-            <p style={{ ...P, marginTop: 18 }}>
-              <strong style={{ color: "var(--ink)" }}>Choose a free option instead if</strong>{" "}
-              you need someone right now at 2am (a warmline or listening line
-              will answer; we will not), you want the company of people
-              living through the same specific thing (a support group does
-              that better than any one person can), or $39 a month is money
-              you do not have. We would rather you got the right help than our
-              help.
-            </p>
-            <p style={{ ...P, marginTop: 18 }}>
-              <strong style={{ color: "var(--ink)" }}>Hearth may fit if</strong>{" "}
-              what you are carrying is recurring rather than acute, you are
-              tired of explaining yourself from the beginning, and what you
-              want most is one person who stays.{" "}
+            <ul style={{ marginTop: 24, paddingLeft: 0, listStyle: "none", display: "grid", gap: 16 }}>
+              {[
+                ["One person, for years.", "We match you by hand, within 72 hours, with one Keeper who stays with you. If the fit is wrong after your first Sit, you change Keeper at no charge."],
+                ["Trained, checked and supervised.", "Every Keeper completes Hearth's 120-hour training, a background check and monthly supervision. Many trained as psychologists or counsellors in their home countries."],
+                ["A rhythm you can count on.", "A 35 to 60 minute video or audio Sit every two weeks for $39 a month, or every week for $99 a month."],
+                ["Company between calls.", "The Long Talk, your message thread with your Keeper, with replies within a day (within 4 hours on the $99 plan), and a short note from them every Friday."],
+                ["No lock-in.", "Cancel any time, in one click."],
+              ].map(([head, body]) => (
+                <li key={head} style={{ fontSize: 17, lineHeight: 1.7, color: "var(--ink-2)" }}>
+                  <strong style={{ color: "var(--ink)" }}>{head}</strong> {body}
+                </li>
+              ))}
+            </ul>
+            <p style={{ ...P, marginTop: 24 }}>
+              Dear Hearth is peer support, not therapy, and not a crisis
+              service. If something clinical comes up, your Keeper says so
+              plainly, helps you find a licensed therapist, and stays with you
+              while you do. More in{" "}
               <Link href="/how-it-works" style={{ color: "var(--ember)" }}>
-                How Hearth works
+                how Dear Hearth works
               </Link>{" "}
               and{" "}
-              <Link href="/pricing" style={{ color: "var(--ember)" }}>
-                pricing
-              </Link>{" "}
-              have the detail. If you are weighing us against online therapy
-              platforms, see{" "}
               <Link href="/hearth-vs-betterhelp" style={{ color: "var(--ember)" }}>
-                Hearth vs. therapy apps
+                Dear Hearth vs. therapy apps
               </Link>
               .
             </p>
+            <div className="cta-row" style={{ marginTop: 32 }}>
+              <Link href="/intake" className="btn btn-primary btn-lg">
+                Start the 12-minute intake <span className="arr">&rarr;</span>
+              </Link>
+              <Link href="/pricing" className="btn btn-ghost btn-lg">
+                See pricing
+              </Link>
+            </div>
           </div>
         </div>
       </section>
