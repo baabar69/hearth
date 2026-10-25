@@ -20,7 +20,7 @@ const CATEGORIES: Category[] = [
     items: [
       {
         q: "Is Hearth therapy?",
-        a: "No. Hearth is peer support. Not therapy, not medical advice, not a clinical service. Keepers are professionally trained companions (many are psychologists or counsellors by training in their home countries) who do not act as clinicians at Hearth. We say this plainly because the distinction is a feature, not a limitation. When something clinical comes up, your Keeper will tell you honestly and walk you to The Bridge, which connects you with vetted licensed therapists.",
+        a: "No. Hearth is peer support. Not therapy, not medical advice, not a clinical service. Keepers are professionally trained companions (many are psychologists or counsellors by training in their home countries) who do not act as clinicians at Hearth. We say this plainly because the distinction is a feature, not a limitation. When something clinical comes up, your Keeper will tell you honestly and help you find a licensed therapist. We call that handoff The Bridge.",
       },
       {
         q: "How is this different from BetterHelp or Talkspace?",
@@ -40,7 +40,7 @@ const CATEGORIES: Category[] = [
       },
       {
         q: "How is this different from a 12-week group program?",
-        a: "Group programs are time-bound, cohort-based, and usually run by one founder-facilitator. They work well for structured curricula. Hearth is open-ended and one-to-one. You stay paired with your Keeper for as long as the relationship serves you. Six months. Two years. The point is continuity, not a finish line. Hearth also offers Circles (our cohort format) for members who want both the long pairing and the time-bound group experience.",
+        a: "Group programs are time-bound, cohort-based, and usually run by one founder-facilitator. They work well for structured curricula. Hearth is open-ended and one-to-one. You stay paired with your Keeper for as long as the relationship serves you. Six months. Two years. The point is continuity, not a finish line. Circles, a small-group format for members who want a time-bound group alongside the long pairing, are coming soon.",
       },
       {
         q: "What does 'peer support' actually mean here?",
@@ -86,7 +86,7 @@ const CATEGORIES: Category[] = [
     items: [
       {
         q: "How much does it cost?",
-        a: "Hearthside is $39/month (biweekly Sits) or $390/year. Hearth Deep is $99/month (weekly Sits) or $990/year. Annual plans save you 2 months. À la carte options include an Extra Sit ($25), Couples Sit ($45), Single Circle ($25), and gifting starts at $39.",
+        a: "Hearthside is $39/month (biweekly Sits) or $390/year. Hearth Deep is $99/month (weekly Sits) or $990/year. Annual plans save you 2 months. À la carte options include an Extra Sit ($25), Couples Sit ($45), and gifting starts at $39. Circles (small groups) are coming soon.",
       },
       {
         q: "What's the difference between biweekly and weekly Sits?",
@@ -115,7 +115,7 @@ const CATEGORIES: Category[] = [
     items: [
       {
         q: "What's The Bridge?",
-        a: "The Bridge is Hearth's network of vetted, licensed therapists matched to members by hand. When your Keeper notices something clinical, they make a warm handoff: a personal introduction to a specific therapist, not a directory dump. You keep your Keeper throughout. It's not a goodbye; it's an addition.",
+        a: "The Bridge is how Hearth hands you to clinical care when you need it. When your Keeper notices something clinical, they say so plainly and help you find a therapist: through Open Path Collective, Psychology Today's directory, or your own doctor, and they will help you write that first email. We are building a network of partner therapists, and it is not open yet. You keep your Keeper throughout. It's not a goodbye; it's an addition.",
       },
       {
         q: "What if I'm already in therapy?",
@@ -136,7 +136,7 @@ const CATEGORIES: Category[] = [
     items: [
       {
         q: "Is this private?",
-        a: "Yes. Everything you share with your Keeper is private. We use encrypted, HIPAA-comparable storage. We do not sell your data, we do not run ad pixels on authenticated pages, and we do not share your information with third parties without your explicit consent.",
+        a: "Yes. Everything you share with your Keeper is private. Sits run on Google Meet and are not recorded; the Long Talk is an email thread, encrypted in transit but not end-to-end. We do not sell your data, we run no ad pixels anywhere, and we do not share your information with third parties without your explicit consent. The full detail is on our trust page.",
       },
       {
         q: "Who can see what I write to my Keeper?",

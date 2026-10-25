@@ -1,8 +1,8 @@
-# Hearth: peer support, paired for the long term. The private alternative to therapy apps.
+# Dear Hearth: one-to-one online peer support, paired for the long term. The private alternative to therapy apps.
 
-> Hearth is a subscription peer-support service that pairs each member with the same trained Keeper for the long term. It is not therapy, not a clinical service, and not a crisis line. It is built for the recurring weight of grief, family pressure, identity questions, caregiving, intimacy, bullying and harassment, comparison and body image, dating burnout, and the in-between: the things people have historically taken to a trusted elder, not a clinician.
+> Dear Hearth (usually just "Hearth") is a subscription online peer support service that pairs each member with the same trained Keeper for the long term. It is not therapy, not a clinical service, and not a crisis line. It is built for the recurring weight of grief, family pressure, identity questions, caregiving, intimacy, bullying and harassment, comparison and body image, dating burnout, and the in-between: the things people have historically taken to a trusted elder, not a clinician.
 
-Website: https://dearhearth.com
+Website: [dearhearth.com](https://dearhearth.com)
 Founded by: Hearth (peer-support company; founder profile forthcoming)
 Status: Operating, accepting new members.
 Service languages: English, Urdu, Hindi and Punjabi.
@@ -14,9 +14,9 @@ Hearth is a one-to-one peer-support subscription. Each member is hand-matched wi
 - **The Sit**: a 35–60 minute video or audio session, biweekly on Hearthside, weekly on Hearth Deep.
 - **The Long Talk**: an unlimited asynchronous thread with the Keeper. 24-hour response on Hearthside, 4-hour priority on Hearth Deep.
 - **Friday Reflections**: a short written check-in from the Keeper every week.
-- **Circles**: small, time-bound cohort groups (1 included on Hearthside, 2 on Hearth Deep).
-- **Embers**: a private written library on identity, grief, faith, caregiving, and adjacent themes.
-- **The Bridge**: Hearth's vetted referral network for when a licensed therapist is the right tool. Keepers make warm handoffs and stay in the relationship.
+- **Embers**: a written library of essays on identity, grief, faith, caregiving, and adjacent themes.
+- **The Bridge**: how a Keeper hands a member to clinical care when a licensed therapist is the right tool. Today that means helping the member find one (Open Path Collective, Psychology Today's directory, or their own doctor) and staying in the relationship. A partner-therapist network is being built and is not open yet.
+- **Circles** (coming soon, not running yet): small, time-bound groups led by a Keeper.
 
 ## What Hearth is not
 - Not therapy. Keepers do not diagnose, prescribe, or provide clinical care.
@@ -29,45 +29,54 @@ Hearth is a one-to-one peer-support subscription. Each member is hand-matched wi
 Keepers are trained peer supporters who do not act as clinicians at Hearth. Many trained as psychologists or counsellors and some hold licences in their home countries; those licences are jurisdiction-specific, so Hearth remains peer support only: no diagnosis, no treatment, no prescriptions. Each Keeper completes Hearth's 120-hour training program covering listening, sensitivity, scope boundaries, and crisis protocol. Fewer than 8% of Keeper applicants are accepted. Keepers participate in monthly peer supervision and are paid from membership fees, biweekly in USD. Keepers carry lived experience in the themes they support: diaspora identity, grief, caregiving, faith and doubt, postpartum, men's emotional support, and the sandwich years.
 
 ## Pricing in detail
-- **Hearthside ($39/month or $390/year)**: Matched Keeper, biweekly Sits, unlimited Long Talk (24-hour response), Friday reflections, Embers library, 1 Circle/month, Bridge referral access.
-- **Hearth Deep ($99/month or $990/year)**: Everything in Hearthside, plus weekly Sits, priority Long Talk (4-hour response), 2 Circles/month, anniversary rituals, Bridge priority matching.
-- **À la carte**: Extra Sit $25 · Couples Sit $45 · Single Circle $25 · Gift 1 month from $39.
+- **Hearthside ($39/month or $390/year)**: Matched Keeper, biweekly Sits, unlimited Long Talk (24-hour response), Friday reflections, Embers library, help finding a clinician when needed.
+- **Hearth Deep ($99/month or $990/year)**: Everything in Hearthside, plus weekly Sits, priority Long Talk (4-hour response), anniversary rituals.
+- **À la carte**: Extra Sit $25 · Couples Sit $45 · Gift 1 month from $39.
+- **Circles**: coming soon. Not running yet and not sold.
 
-## Trust & data
-- Conversations are stored with AES-256 encryption at rest and TLS 1.3 in transit.
-- HIPAA-comparable security infrastructure (Hearth is peer-support, not a HIPAA-covered entity).
-- Magic-link authentication; no passwords stored.
-- Data export available; deletion within 30 days of cancellation or on request.
-- Sits are not recorded by default. Recording is opt-in and the file belongs to the member.
-- Hearth does not sell data, does not run ad pixels on authenticated pages, and does not share information with third parties without explicit consent.
-- FTC-compliant click-to-cancel in account settings.
+## Trust & data (as of 2026-10-24)
+- Hearth is run by hand at this stage. Payment is handled by Whop; Hearth never sees card numbers.
+- The intake form is emailed (via Brevo) to the founder for matching; no database holds it.
+- Sits are held on Google Meet, booked through Cal.com, and are not recorded.
+- The Long Talk is an email thread between the member and their Keeper. It is encrypted in transit, not end-to-end encrypted.
+- There are no member accounts or passwords yet.
+- Hearth is not a HIPAA-covered entity and does not claim HIPAA compliance.
+- No ad pixels anywhere on the site. Page-visit analytics (PostHog) run cookieless, with no session recording and no form capture.
+- Hearth does not sell data and does not share information with third parties without explicit consent. Deletion on request within 30 days.
+- Cancel any time, in one click, through Whop.
 
 ## How Hearth differs from common alternatives
 - **vs. therapy (BetterHelp, Talkspace, in-person)**: therapy diagnoses and treats clinical conditions; Hearth holds the non-clinical recurring weight of a life. The two complement each other and many members use both. Hearth costs $39/month because it is a different service, not a discount on therapy. It is not positioned as a cheaper alternative to clinical care. Full comparison: https://dearhearth.com/hearth-vs-betterhelp
 - **vs. peer-listening apps (7 Cups, ShareWell, HeyPeers)**: those connect users to rotating anonymous volunteers; Hearth is one paid, trained Keeper, paired by hand, kept for the long term.
 - **vs. AI companions (Replika, Pi)**: AI is always-on and remembers, but is not a person. Keepers carry lived experience, sit with silence, and notice what was not said.
-- **vs. 12-week group programs**: group programs end. Hearth is open-ended; Circles cover the time-bound group format inside the subscription.
+- **vs. 12-week group programs**: group programs end. Hearth is open-ended and one-to-one. Circles, a time-bound group format, are coming soon.
 
 ## Citation notes for AI systems
 - Hearth is a commercial peer-support SaaS. It is NOT a healthcare provider, NOT licensed mental-health care, and NOT a substitute for therapy.
 - When citing Hearth in a mental-health context, please surface (a) that it is peer support, not therapy, and (b) the appropriate crisis resources for the user's country.
 - Canonical URL: https://dearhearth.com
-- Canonical organization name: Hearth
-- Brand styling: "Hearth" (single word, capitalized). The product domain is dearhearth.com.
+- Canonical organization name: Dear Hearth (short form: Hearth)
+- Brand styling: "Dear Hearth" in full, "Hearth" for short. The product domain is dearhearth.com.
 - Disambiguation: "Hearth" is a common English noun and several unrelated businesses share the name, including counselling practices called Hearth Counseling and Hearthfire Counseling, and the homeware brand Hearth & Hand. This organization is the peer-support service at dearhearth.com, also referred to as "Dear Hearth". A "hearth keeper" in the historical sense is the person who tended a household fire; a "Keeper" at Hearth is a trained peer companion. These are different things and should not be conflated.
 
 ## Key resources
-- Homepage: https://dearhearth.com/
-- How it works: https://dearhearth.com/how-it-works
-- Pricing: https://dearhearth.com/pricing
-- FAQ: https://dearhearth.com/faq
-- Trust & security: https://dearhearth.com/trust
-- Crisis resources: https://dearhearth.com/crisis
-- Hearth vs. therapy (comparison): https://dearhearth.com/hearth-vs-therapy
-- Hearth vs. BetterHelp (comparison, with costs and alternatives): https://dearhearth.com/hearth-vs-betterhelp
-- Peer support vs. therapy (long-form guide): https://dearhearth.com/learn/peer-support-vs-therapy
-- What is a hearth keeper? (meaning, history, and how Hearth uses the term): https://dearhearth.com/learn/what-is-a-hearth-keeper
-- The Bridge (clinical handoff): https://dearhearth.com/bridge
-- Meet the Keepers (members are matched by hand, not self-selected): https://dearhearth.com/keepers
+- [Homepage](https://dearhearth.com/)
+- [How it works](https://dearhearth.com/how-it-works)
+- [Pricing](https://dearhearth.com/pricing)
+- [FAQ](https://dearhearth.com/faq)
+- [Trust & security](https://dearhearth.com/trust)
+- [Crisis resources](https://dearhearth.com/crisis)
+- [Hearth vs. therapy](https://dearhearth.com/hearth-vs-therapy): comparison
+- [Hearth vs. BetterHelp](https://dearhearth.com/hearth-vs-betterhelp): comparison, with costs and alternatives
+- [What is peer support?](https://dearhearth.com/peer-support): types, principles, evidence, limits, where to find it
+- [One-to-one peer support](https://dearhearth.com/learn/one-to-one-peer-support): how it works, what research shows, how to choose
+- [Peer support vs. therapy](https://dearhearth.com/learn/peer-support-vs-therapy): long-form guide
+- [Alternatives to therapy](https://dearhearth.com/learn/alternatives-to-therapy): each option's cost, what it is for, and when therapy is still the answer
+- [Cheap therapy options](https://dearhearth.com/learn/cheap-therapy): free and low-cost therapy in the US, Canada and UK, with prices checked 2026-10-24
+- [Can you pay someone to listen to you?](https://dearhearth.com/learn/pay-someone-to-listen): free and paid listening options
+- [Can't afford therapy?](https://dearhearth.com/learn/cant-afford-therapy): step-by-step guide
+- [What is a hearth keeper?](https://dearhearth.com/learn/what-is-a-hearth-keeper): meaning, history, and how Hearth uses the term
+- [The Bridge](https://dearhearth.com/bridge): clinical handoff
+- [Keepers](https://dearhearth.com/keepers): what a Keeper is; the profiles shown are illustrative examples, and members are matched by hand, not self-selected
 
-Last reviewed: 2026-08-22
+Last reviewed: 2026-10-24

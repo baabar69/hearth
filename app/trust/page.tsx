@@ -3,14 +3,14 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "Trust & Security at Hearth: Encryption, Scope, Privacy",
+  title: "Trust and Privacy: Where Your Data Lives",
   description:
-    "AES-256 at rest, TLS 1.3 in transit, HIPAA-comparable infrastructure, magic-link auth, no data sales, no ad pixels. The eight promises we will not break.",
+    "Exactly where your information lives today: Whop for payment, email for the Long Talk, Google Meet for Sits. No ad pixels, no data sales, no recordings.",
   alternates: { canonical: "/trust" },
   openGraph: {
-    title: "Trust & Security · Hearth",
+    title: "Trust and Privacy · Dear Hearth",
     description:
-      "How we protect your story. Encryption, scope discipline, and the things we will not do with your data.",
+      "Where your information lives today, who can see it, and the things we will not do with it.",
     url: "/trust",
     type: "website",
   },
@@ -19,23 +19,23 @@ export const metadata = {
 const PRINCIPLES = [
   {
     eyebrow: "What you say stays here",
-    title: "Your Sits, your Long Talks, your story.",
-    body: "Everything you bring to a Sit or write into the Long Talk is between you and your Keeper. We don't share it with other Keepers. We don't share it with our team beyond what's needed for safety and quality. We don't sell it. We don't use it to train AI. Ever.",
+    title: "Your Sits, your Long Talk, your story.",
+    body: "Everything you bring to a Sit (your video or audio call) or write in the Long Talk (the message thread with your Keeper) is between you and your Keeper. We don't share it with other Keepers. The founder reads your intake to make the match, and is told if you raise a safety concern, so you are never left alone with it. We don't sell any of it, and we don't use it to train AI.",
   },
   {
-    eyebrow: "Encrypted, end to end",
-    title: "Your messages are not readable on our servers.",
-    body: "Long Talk messages, voice notes, and Sit notes are encrypted at rest and in transit. We use HIPAA-comparable security infrastructure. Even though Hearth is not a healthcare provider, we hold ourselves to that standard.",
+    eyebrow: "Plain about security",
+    title: "Encrypted in transit. Not end-to-end. Yet.",
+    body: "Today the Long Talk is an email thread and Sits run on Google Meet. Both are encrypted between you and the server, but neither is end-to-end encrypted, and email is stored by the providers that carry it. We would rather tell you that than borrow words like \"HIPAA-comparable\". When we move to a private member space, this page will say exactly what changed.",
   },
   {
     eyebrow: "No trackers in the room",
-    title: "No advertising pixels on authenticated pages.",
-    body: "Once you sign in, there are no Facebook pixels, no Google ads tags, no third-party analytics watching what you read or write. Marketing pages have minimal, privacy-respecting analytics. Member pages have none.",
+    title: "No advertising pixels. Anywhere.",
+    body: "There are no Facebook pixels and no Google Ads tags on this site. We count page visits with PostHog, set up to store no cookies, record no sessions and capture nothing you type into a form. Your Sits and Long Talk never touch any analytics at all.",
   },
   {
     eyebrow: "You own your story",
-    title: "Export it, delete it, take it with you.",
-    body: "You can request a full export of your Sit notes, Long Talk messages, and account data at any time. You can delete your account permanently, and within 30 days, your conversation data is removed from our systems and backups.",
+    title: "Ask, and we delete it.",
+    body: "Email privacy@dearhearth.com and we will delete your intake, your match record and our copy of your Long Talk within 30 days. The Long Talk is already yours: it sits in your own inbox, and you can keep it or delete it whenever you like.",
   },
 ];
 
@@ -65,7 +65,7 @@ const CRISIS = [
   },
   {
     title: "What our Keepers do when something escalates",
-    body: "If a Keeper notices something that needs a clinician (sustained suicidal ideation, an active crisis, abuse, anything outside peer support's scope) they pause the Sit gently, share the appropriate crisis resource, and walk you to The Bridge by name. They do not disappear. They do not pretend they can hold it.",
+    body: "If a Keeper notices something that needs a clinician (sustained suicidal ideation, an active crisis, abuse, anything outside peer support's scope) they pause the Sit gently, share the right crisis line, and help you find clinical care: Open Path Collective, Psychology Today's directory, or your own doctor. They offer to help you write that first email, there and then. They do not disappear. They do not pretend they can hold it.",
   },
   {
     title: "Mandatory reporting",
@@ -81,7 +81,7 @@ const PROMISES = [
   "We will not raise your price after you've signed up. Locked at your tier for as long as you stay.",
   "We will not sell, share, or rent your data, to anyone, ever.",
   "We will not let an algorithm match you. A human does it. By hand. In 72 hours.",
-  "We will not pretend our Keepers can hold what only a clinician can. The Bridge is a value, not a feature.",
+  "We will not pretend our Keepers can hold what only a clinician can. When you need one, your Keeper helps you find one.",
 ];
 
 export default function TrustPage() {
@@ -134,9 +134,9 @@ export default function TrustPage() {
               </h2>
             </div>
             <p className="lede">
-              These aren&rsquo;t aspirations. They&rsquo;re how the product is
-              built. In the database, in the auth layer, in the
-              Keeper&rsquo;s interface, in the lawyer&rsquo;s contract.
+              Hearth is small and run by hand right now, so this page
+              describes what is true today, not a roadmap. If something
+              changes, this page changes first.
             </p>
           </div>
 
@@ -221,10 +221,10 @@ export default function TrustPage() {
                   marginBottom: 14,
                 }}
               >
-                Security infrastructure
+                Where your information lives
               </p>
               <h2 style={{ fontSize: "clamp(28px, 3.5vw, 44px)", lineHeight: 1.15 }}>
-                The technical{" "}
+                The plain{" "}
                 <span className="serif-i" style={{ color: "var(--ember)" }}>
                   detail.
                 </span>
@@ -232,32 +232,32 @@ export default function TrustPage() {
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
               <SpecRow
-                label="Encryption at rest"
-                value="AES-256 on all conversation data, Sit notes, Long Talk messages, and voice notes."
+                label="Payment"
+                value="Handled by Whop, our payment provider. Your card number goes to Whop, never to us."
               />
               <SpecRow
-                label="Encryption in transit"
-                value="TLS 1.3 on every connection between you, your Keeper, and our servers."
+                label="Your intake"
+                value="Sent over HTTPS and delivered by email (through Brevo) to the founder, who makes your match. No database holds it. Our host's server logs briefly keep your first name, email, country and safety answer."
               />
               <SpecRow
-                label="Hosting"
-                value="US-based infrastructure (AWS), with isolated databases for member data."
+                label="Match records"
+                value="One spreadsheet: your email, plan, Keeper and dates. Only the founder has access."
               />
               <SpecRow
-                label="Auth"
-                value="Magic-link sign-in, no passwords to lose. Optional 2FA for additional protection."
+                label="Sits"
+                value="Booked through Cal.com, held on Google Meet. Not recorded."
               />
               <SpecRow
-                label="Backups"
-                value="Encrypted daily backups, retained 30 days, then permanently destroyed."
+                label="The Long Talk"
+                value="An email thread between you and your Keeper's Hearth address, copied to hello@dearhearth.com so it is never lost."
               />
               <SpecRow
-                label="Penetration testing"
-                value="Independent annual third-party security audit. Findings published in our security log."
+                label="The website"
+                value="Hosted on Netlify. HTTPS on every page. No member accounts or passwords exist yet, so there are none to leak."
               />
               <SpecRow
-                label="Standard"
-                value="HIPAA-comparable. We are not a covered entity, but we hold ourselves to the same posture."
+                label="Not HIPAA"
+                value="Hearth is peer support, not a healthcare provider, so HIPAA does not apply to us and we do not claim to meet it."
               />
             </div>
           </div>
@@ -523,8 +523,8 @@ export default function TrustPage() {
                 <a href="mailto:security@dearhearth.com" style={{ color: "var(--ember)", textDecoration: "underline" }}>
                   security@dearhearth.com
                 </a>
-                . Responsible disclosure is welcomed and rewarded. Please give
-                us a reasonable window to fix before publishing.
+                . Responsible disclosure is welcome. Please give us a
+                reasonable window to fix before publishing.
               </p>
             </div>
             <div>

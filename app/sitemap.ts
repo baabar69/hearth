@@ -8,28 +8,33 @@ const SITE = "https://dearhearth.com";
 // without lying to crawlers.
 const ROUTES: Array<{ path: string; priority: number; lastmod: string }> = [
   // Core
-  { path: "/",                          priority: 1.0, lastmod: "2026-05-14" },
-  { path: "/how-it-works",              priority: 0.9, lastmod: "2026-05-14" },
-  { path: "/pricing",                   priority: 0.9, lastmod: "2026-05-14" },
-  { path: "/keepers",                   priority: 0.9, lastmod: "2026-05-14" },
-  { path: "/hearth-vs-therapy",         priority: 0.9, lastmod: "2026-08-22" },
-  { path: "/hearth-vs-betterhelp",      priority: 0.9, lastmod: "2026-08-22" },
-  { path: "/learn/peer-support-vs-therapy", priority: 0.9, lastmod: "2026-05-14" },
+  { path: "/",                          priority: 1.0, lastmod: "2026-10-24" },
+  { path: "/how-it-works",              priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/pricing",                   priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/keepers",                   priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/hearth-vs-therapy",         priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/hearth-vs-betterhelp",      priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/peer-support",              priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/learn/one-to-one-peer-support", priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/learn/alternatives-to-therapy", priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/learn/cheap-therapy",        priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/learn/pay-someone-to-listen", priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/learn/peer-support-vs-therapy", priority: 0.9, lastmod: "2026-10-24" },
   { path: "/learn/what-is-a-hearth-keeper", priority: 0.9, lastmod: "2026-08-22" },
-  { path: "/learn/do-i-need-therapy",    priority: 0.9, lastmod: "2026-08-22" },
-  { path: "/learn/cant-afford-therapy",  priority: 0.9, lastmod: "2026-08-22" },
-  { path: "/learn/how-much-does-therapy-cost", priority: 0.9, lastmod: "2026-08-22" },
+  { path: "/learn/do-i-need-therapy",    priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/learn/cant-afford-therapy",  priority: 0.9, lastmod: "2026-10-24" },
+  { path: "/learn/how-much-does-therapy-cost", priority: 0.9, lastmod: "2026-10-24" },
   { path: "/learn/sliding-scale-therapy", priority: 0.9, lastmod: "2026-08-22" },
-  { path: "/learn/therapy-without-insurance", priority: 0.9, lastmod: "2026-08-22" },
+  { path: "/learn/therapy-without-insurance", priority: 0.9, lastmod: "2026-10-24" },
 
   // Mid-funnel
-  { path: "/about",                     priority: 0.7, lastmod: "2026-05-14" },
-  { path: "/why-paired",                priority: 0.7, lastmod: "2026-05-14" },
-  { path: "/stories",                   priority: 0.7, lastmod: "2026-05-14" },
-  { path: "/circles",                   priority: 0.7, lastmod: "2026-05-14" },
+  { path: "/about",                     priority: 0.7, lastmod: "2026-10-24" },
+  { path: "/why-paired",                priority: 0.7, lastmod: "2026-10-24" },
+  { path: "/stories",                   priority: 0.7, lastmod: "2026-10-24" },
+  { path: "/circles",                   priority: 0.7, lastmod: "2026-10-24" },
   { path: "/embers",                    priority: 0.7, lastmod: "2026-05-14" },
-  { path: "/bridge",                    priority: 0.7, lastmod: "2026-05-14" },
-  { path: "/faq",                       priority: 0.7, lastmod: "2026-05-14" },
+  { path: "/bridge",                    priority: 0.7, lastmod: "2026-10-24" },
+  { path: "/faq",                       priority: 0.7, lastmod: "2026-10-24" },
 
   // Audience-specific
   { path: "/for-keepers",               priority: 0.6, lastmod: "2026-05-14" },
@@ -37,26 +42,26 @@ const ROUTES: Array<{ path: string; priority: number; lastmod: string }> = [
   { path: "/gift",                      priority: 0.5, lastmod: "2026-05-14" },
 
   // Trust / informational
-  { path: "/trust",                     priority: 0.6, lastmod: "2026-05-14" },
-  { path: "/crisis",                    priority: 0.6, lastmod: "2026-05-14" },
-  { path: "/press",                     priority: 0.4, lastmod: "2026-05-14" },
-  { path: "/accessibility",             priority: 0.3, lastmod: "2026-05-14" },
-  { path: "/privacy",                   priority: 0.3, lastmod: "2026-05-14" },
+  { path: "/trust",                     priority: 0.6, lastmod: "2026-10-24" },
+  { path: "/crisis",                    priority: 0.6, lastmod: "2026-10-24" },
+  { path: "/press",                     priority: 0.4, lastmod: "2026-10-24" },
+  { path: "/accessibility",             priority: 0.3, lastmod: "2026-10-24" },
+  { path: "/privacy",                   priority: 0.3, lastmod: "2026-10-24" },
   { path: "/terms",                     priority: 0.3, lastmod: "2026-05-14" },
   // Note: /sign-in, /checkout, /welcome, /intake are intentionally excluded.
   // /intake is a conversion flow that should not absorb crawl budget.
 ];
 
 const FOR_TOPICS: { slug: string; lastmod: string }[] = [
-  { slug: "grief", lastmod: "2026-05-14" },
-  { slug: "family-pressure", lastmod: "2026-05-14" },
-  { slug: "identity", lastmod: "2026-05-14" },
-  { slug: "intimacy", lastmod: "2026-05-14" },
-  { slug: "sexual-identity", lastmod: "2026-05-14" },
-  { slug: "anxiety", lastmod: "2026-05-14" },
-  { slug: "bullying", lastmod: "2026-08-24" },
-  { slug: "comparison", lastmod: "2026-08-24" },
-  { slug: "dating-burnout", lastmod: "2026-08-24" },
+  { slug: "grief", lastmod: "2026-10-24" },
+  { slug: "family-pressure", lastmod: "2026-10-24" },
+  { slug: "identity", lastmod: "2026-10-24" },
+  { slug: "intimacy", lastmod: "2026-10-24" },
+  { slug: "sexual-identity", lastmod: "2026-10-24" },
+  { slug: "anxiety", lastmod: "2026-10-24" },
+  { slug: "bullying", lastmod: "2026-10-24" },
+  { slug: "comparison", lastmod: "2026-10-24" },
+  { slug: "dating-burnout", lastmod: "2026-10-24" },
 ];
 
 // Ember essays: per the new-page rule in AGENTS.md, every public page gets a
@@ -74,13 +79,9 @@ const EMBER_SLUGS: { slug: string; lastmod: string }[] = [
   { slug: "the-rooms-that-closed", lastmod: "2026-08-24" },
 ];
 
-const KEEPER_SLUGS = [
-  "aruna-bhattacharya",
-  "rabia-k",
-  "faisal-m",
-  "priya-s",
-  "hassan-a",
-];
+// The five /keepers/<slug> profiles are illustrative examples, set to noindex,
+// so they are deliberately not listed here. Add real Keepers back once they
+// consent to be shown (KAN-56).
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries = ROUTES.map((r) => ({
@@ -101,11 +102,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const keeperEntries = KEEPER_SLUGS.map((slug) => ({
-    url: `${SITE}/keepers/${slug}`,
-    lastModified: new Date("2026-05-14"),
-    priority: 0.7,
-  }));
-
-  return [...staticEntries, ...forEntries, ...emberEntries, ...keeperEntries];
+  return [...staticEntries, ...forEntries, ...emberEntries];
 }

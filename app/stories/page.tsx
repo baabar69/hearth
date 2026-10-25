@@ -3,14 +3,14 @@ import SharedFooter from "../components/SharedFooter";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Member Stories: What Hearth Peer Support Looks Like",
+  title: "What Peer Support Looks Like: Member Stories",
   description:
-    "What members say about pulling up a chair. Real stories from real Sits with real Keepers: diaspora grief, family pressure, postpartum, caregiver burnout, faith. Names changed for privacy.",
+    "Members in their own words on grief, family pressure, caregiving, identity and more. Real words, shared with permission. Names changed for privacy.",
   alternates: { canonical: "/stories" },
   openGraph: {
     title: "Hearth Stories: Member experiences",
     description:
-      "Real Sits, real Keepers, real outcomes. Names changed for privacy.",
+      "Members in their own words, shared with permission. Names changed for privacy.",
     url: "/stories",
     type: "website",
   },
@@ -21,81 +21,65 @@ const STORIES = [
     name: "Priya",
     age: "34",
     location: "Toronto",
-    keeper: "Aruna",
     topic: "Family pressure",
     quote:
-      "My mother and I have been having the same fight for ten years. Aruna didn't fix it. She helped me see what we were both protecting. The fight is still there. The shame around it isn't.",
-    months: "8 months in Hearth",
+      "My mother and I have been having the same fight for ten years. My Keeper didn't fix it. She helped me see what we were both protecting. The fight is still there. The shame around it isn't.",
   },
   {
     name: "Hassan",
     age: "29",
     location: "Brooklyn",
-    keeper: "Faisal",
     topic: "Career & life direction",
     quote:
-      "I quit the job my parents wanted. I didn't tell them for six weeks. Faisal sat with me through that silence. Not a therapist. Just someone who'd done a version of this himself.",
-    months: "1 year in Hearth",
+      "I quit the job my parents wanted. I didn't tell them for six weeks. My Keeper sat with me through that silence. Not a therapist. Just someone who'd done a version of this himself.",
   },
   {
     name: "Anonymous",
     age: "41",
     location: "Houston",
-    keeper: "Rabia",
     topic: "Intimacy & shame",
     quote:
-      "I'd never said any of it out loud. Not to my husband, not to friends, not to a therapist. Rabia didn't flinch. That's what I needed before I could say it to anyone else.",
-    months: "6 months in Hearth",
+      "I'd never said any of it out loud. Not to my husband, not to friends, not to a therapist. My Keeper didn't flinch. That's what I needed before I could say it to anyone else.",
   },
   {
     name: "Devika",
     age: "38",
     location: "Bay Area",
-    keeper: "Aruna",
     topic: "Grief & loss",
     quote:
-      "My grandmother died two years ago. I never grieved out loud. There wasn't space for it. Aruna made the space. We talk about her every week. It feels like keeping her with me.",
-    months: "1 year and 4 months in Hearth",
+      "My grandmother died two years ago. I never grieved out loud. There wasn't space for it. My Keeper made the space. We talk about her every week. It feels like keeping her with me.",
   },
   {
     name: "Anonymous",
     age: "26",
     location: "London",
-    keeper: "Priya S.",
     topic: "Sexual identity",
     quote:
-      "I came to Hearth because I couldn't tell my family. Priya didn't tell me what to do. She helped me figure out who I needed to tell first. Myself.",
-    months: "5 months in Hearth",
+      "I came to Hearth because I couldn't tell my family. My Keeper didn't tell me what to do. She helped me figure out who I needed to tell first. Myself.",
   },
   {
     name: "Sara",
     age: "47",
     location: "Chicago",
-    keeper: "Aruna",
     topic: "Caregiving burnout",
     quote:
-      "I've been holding everyone for years. My mother. My kids. My husband's grief. The first Sit I cried for forty minutes. Aruna didn't try to stop me. She just stayed.",
-    months: "10 months in Hearth",
+      "I've been holding everyone for years. My mother. My kids. My husband's grief. The first Sit I cried for forty minutes. My Keeper didn't try to stop me. She just stayed.",
   },
   {
     name: "Anonymous",
     age: "32",
     location: "Seattle",
-    keeper: "Hassan A.",
     topic: "Identity",
     quote:
-      "I'm a different person at work, at home, and with my closest friends. Hassan got it without me having to explain. That's the whole thing: not having to explain.",
-    months: "7 months in Hearth",
+      "I'm a different person at work, at home, and with my closest friends. My Keeper got it without me having to explain. That's the whole thing: not having to explain.",
   },
   {
     name: "Mira",
     age: "39",
     location: "New Jersey",
-    keeper: "Rabia",
     topic: "Marriage & partnership",
     quote:
-      "We were doing the slow drift. I didn't want a divorce, I didn't want couples therapy. I wanted someone to help me think. Rabia did that. I went home different.",
-    months: "9 months in Hearth",
+      "We were doing the slow drift. I didn't want a divorce, I didn't want couples therapy. I wanted someone to help me think. My Keeper did that. I went home different.",
   },
 ];
 
@@ -123,8 +107,9 @@ export default function StoriesPage() {
               color: "var(--ink-2)",
             }}
           >
-            Names are changed. Some are anonymous. The Sits, the Keepers, and
-            the words people brought are real, shared with permission.
+            The words are real, shared with permission. Members&rsquo; names
+            are changed and some are anonymous. We leave Keepers&rsquo; names
+            out too, to protect their privacy.
           </p>
         </div>
       </section>
@@ -214,8 +199,7 @@ export default function StoriesPage() {
                         marginTop: 6,
                       }}
                     >
-                      WITH {s.keeper.toUpperCase()} &middot;{" "}
-                      {s.months.toUpperCase()}
+                      {s.topic.toUpperCase()}
                     </div>
                   </div>
                 </div>

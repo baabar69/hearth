@@ -332,7 +332,6 @@ function HeroPhone() {
               i < active ? " done" : ""
             }`}
             aria-pressed={i === active}
-            aria-label={`${s.day}: ${s.label}`}
             onClick={() => go(i)}
           >
             <span className="ha-tab-day">{s.day}</span>
@@ -503,7 +502,7 @@ export default function Home() {
             <div>
               <div className="eyebrow">
                 <span className="dot" />
-                A trained listener, matched to you &middot; From $39 a month
+                Online peer support &middot; One trained listener &middot; From $39 a month
               </div>
               <h1 style={{ marginTop: 24 }}>
                 Pull up a chair.
@@ -513,10 +512,12 @@ export default function Home() {
                 to <span className="ember-word">carry it alone.</span>
               </h1>
               <p className="hero-sub">
-                <b>Relief, comfort, and someone who stays.</b> One trained
-                Keeper, matched to you by hand: a video call every two weeks,
-                a chat thread in between, and a note every Friday. For the
-                weight that is not a diagnosis. $39 a month, cancel any time.
+                <b>Relief, comfort, and someone who stays.</b> One-to-one peer
+                support with one trained Keeper (your listener), matched to you
+                by hand: a video call every two weeks, a chat thread in
+                between, and a note every Friday. An alternative to therapy
+                for the weight that is not a diagnosis. $39 a month, cancel
+                any time.
               </p>
               <div className="hero-pick">
                 <div className="hero-pick-label">What are you carrying?</div>
@@ -776,7 +777,16 @@ export default function Home() {
               clinical things, and priced like it. A Keeper is the third thing
               (older, attentive, consistent) that most of us no longer have.
               Hearth is peer support, not therapy. We say it plainly because
-              the difference is the point.
+              the difference is the point.{" "}
+              <Link href="/peer-support" style={{ color: "var(--ember)" }}>
+                What is peer support?
+              </Link>{" "}
+              <Link
+                href="/learn/alternatives-to-therapy"
+                style={{ color: "var(--ember)" }}
+              >
+                Alternatives to therapy, compared
+              </Link>
             </p>
           </div>
 
@@ -852,7 +862,7 @@ export default function Home() {
           <div className="bring-grid six reveal">
             <Link href="/for/family-pressure" className="bring-card bring-card-link">
               <div className="bring-icon">{"⌂"}</div>
-              <h4>Family pressure</h4>
+              <h3>Family pressure</h3>
               <p>
                 The call that ruins your Sunday. Expectations that don&rsquo;t
                 translate. Parents who love you in a language that feels like
@@ -861,7 +871,7 @@ export default function Home() {
             </Link>
             <Link href="/for/grief" className="bring-card bring-card-link">
               <div className="bring-icon">{"✶"}</div>
-              <h4>Grief &amp; loss</h4>
+              <h3>Grief &amp; loss</h3>
               <p>
                 The kind that arrives on time and the kind that shows up ten
                 years late. Losing people, places, versions of yourself.
@@ -869,7 +879,7 @@ export default function Home() {
             </Link>
             <div className="bring-card">
               <div className="bring-icon">{"♡"}</div>
-              <h4>Caregiving burnout</h4>
+              <h3>Caregiving burnout</h3>
               <p>
                 Holding everyone else together while quietly falling apart.
                 The guilt of needing your own chair.
@@ -877,7 +887,7 @@ export default function Home() {
             </div>
             <div className="bring-card">
               <div className="bring-icon">{"⌘"}</div>
-              <h4>Career crossroads</h4>
+              <h3>Career crossroads</h3>
               <p>
                 The job your family wanted vs. the life you actually want.
                 Success that feels hollow. Starting over at 35.
@@ -885,7 +895,7 @@ export default function Home() {
             </div>
             <div className="bring-card">
               <div className="bring-icon">{"☉"}</div>
-              <h4>Loneliness</h4>
+              <h3>Loneliness</h3>
               <p>
                 Not the kind that means you have no friends. The kind that means
                 nobody really knows the full version.
@@ -893,7 +903,7 @@ export default function Home() {
             </div>
             <div className="bring-card">
               <div className="bring-icon">{"⌒"}</div>
-              <h4>New parenthood</h4>
+              <h3>New parenthood</h3>
               <p>
                 The identity shift nobody warned you about. A relationship
                 reshaped overnight. Needing village but having Wi-Fi.
@@ -1004,7 +1014,7 @@ export default function Home() {
                 <div className="kpoint">
                   <span className="num">01</span>
                   <div>
-                    <h4>Paired once. Held over years.</h4>
+                    <h3>Paired once. Held over years.</h3>
                     <p>
                       You don&rsquo;t rotate. The same Keeper carries the
                       thread of your life across seasons.
@@ -1014,7 +1024,7 @@ export default function Home() {
                 <div className="kpoint">
                   <span className="num">02</span>
                   <div>
-                    <h4>Trained, vetted, paid.</h4>
+                    <h3>Trained, vetted, paid.</h3>
                     <p>
                       120 hours of Keeper training, background checks, crisis
                       protocol, monthly supervision. Not clinicians, and clear
@@ -1025,7 +1035,7 @@ export default function Home() {
                 <div className="kpoint">
                   <span className="num">03</span>
                   <div>
-                    <h4>Matched by hand. Changed on request.</h4>
+                    <h3>Matched by hand. Changed on request.</h3>
                     <p>
                       A person at Hearth pairs you by language, lived context,
                       and the themes you carry. Not the right fit after your
@@ -1112,7 +1122,6 @@ export default function Home() {
                 <li>A 35&ndash;60 minute call with your Keeper, every two weeks</li>
                 <li>Chat thread in between, replies within a day</li>
                 <li>A note from your Keeper every Friday</li>
-                <li>One small-group session a month (we call it a Circle)</li>
                 <li>Matched within 72 hours. Not the right fit after your first Sit? Ask and we reassign you</li>
               </ul>
               <Link
@@ -1177,6 +1186,7 @@ export default function Home() {
             and stays.{" "}
             <Link href="/pricing">Full pricing &rarr;</Link>
             <Link href="/hearth-vs-betterhelp">Compare with therapy apps &rarr;</Link>
+            <Link href="/learn/cheap-therapy">Cheap therapy options &rarr;</Link>
           </p>
         </div>
       </section>
@@ -1269,8 +1279,8 @@ export default function Home() {
             <div><dt>The Sit</dt><dd>Your call with your Keeper. 35 to 60 minutes, video or audio, every two weeks or every week.</dd></div>
             <div><dt>The Long Talk</dt><dd>The chat thread between calls. Text, voice notes, photos. Replies within a day.</dd></div>
             <div><dt>The Friday note</dt><dd>A few lines from your Keeper every Friday about what they noticed that week.</dd></div>
-            <div><dt>Circle</dt><dd>A small-group session, six to ten people, led by a Keeper. One a month is included.</dd></div>
-            <div><dt>The Bridge</dt><dd>If you ever need a therapist, we help you find a vetted one. Your Keeper stays.</dd></div>
+            <div><dt>Circle</dt><dd>A small-group session, six to ten people, led by a Keeper. Coming soon: Circles are not running yet.</dd></div>
+            <div><dt>The Bridge</dt><dd>If you ever need a therapist, your Keeper helps you find one. Your Keeper stays.</dd></div>
           </dl>
         </div>
       </section>

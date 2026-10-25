@@ -16,7 +16,7 @@ const REVIEWED = "2026-08-22";
 export const metadata: Metadata = {
   title: "Do I Need Therapy, or Someone to Talk To?",
   description:
-    "A plain way to tell the difference. What points toward therapy, what points toward support, and the full range of options between them. Written by a peer-support service that refers out for clinical care.",
+    "A plain way to tell the difference: what points toward therapy, what points toward support, and the options in between. From a service that refers out.",
   alternates: { canonical: "/learn/do-i-need-therapy" },
   openGraph: {
     type: "article",
@@ -629,8 +629,8 @@ export default function DoINeedTherapyPage() {
             >
               If someone joins Hearth and it becomes clear that clinical care is
               what they need, their Keeper says so and helps them get there
-              through <strong>The Bridge</strong>, our referral network of
-              licensed therapists. The Keeper stays alongside them through it,
+              by helping them find a licensed therapist (we call that handoff{" "}
+              <strong>The Bridge</strong>). The Keeper stays alongside them through it,
               because being handed off and dropped is its own small injury.
             </p>
             <div
@@ -702,6 +702,18 @@ export default function DoINeedTherapyPage() {
                 style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
               >
                 Cannot afford therapy? What to actually do &rarr;
+              </Link>
+              <Link
+                href="/peer-support"
+                style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
+              >
+                What is peer support? Types, evidence and limits &rarr;
+              </Link>
+              <Link
+                href="/learn/alternatives-to-therapy"
+                style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
+              >
+                Alternatives to therapy, compared &rarr;
               </Link>
               <Link
                 href="/learn/peer-support-vs-therapy"

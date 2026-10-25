@@ -12,18 +12,18 @@ import {
 } from "../../lib/schema";
 
 const PUBLISHED = "2026-08-22";
-const REVIEWED = "2026-08-22";
+const REVIEWED = "2026-10-24";
 
 export const metadata: Metadata = {
-  title: "Can't Afford Therapy? What to Actually Do",
+  title: "Can't Afford Therapy? What to Do Next",
   description:
-    "Sliding scale, Open Path, university clinics, employer EAPs, NAMI groups, warmlines and free listening lines. What each really costs, what the trade-off is, and the exact words to use when asking.",
+    "Can't afford therapy but need it? What to do first, the words to use to ask for a lower fee, the free routes, and what to do while you wait.",
   alternates: { canonical: "/learn/cant-afford-therapy" },
   openGraph: {
     type: "article",
-    title: "Cannot Afford Therapy? What to Actually Do",
+    title: "Can't Afford Therapy? What to Do Next",
     description:
-      "The real options when therapy is out of reach, what each costs, and the exact wording to use when asking for a reduced fee.",
+      "A step-by-step plan for when you need therapy and cannot pay full price, starting with one email you can send today.",
     url: "/learn/cant-afford-therapy",
     publishedTime: PUBLISHED,
     modifiedTime: REVIEWED,
@@ -33,12 +33,16 @@ export const metadata: Metadata = {
 
 const FAQ = [
   {
-    q: "What can I do if I cannot afford therapy?",
-    a: "Ask your therapist directly about a sliding scale, since many hold reduced-fee slots they do not advertise. Look at Open Path Psychotherapy Collective, where sessions run roughly $30 to $60 after a one-time membership fee. Check whether your employer offers an EAP, which typically covers a few free sessions. University training clinics offer supervised sessions at low cost. NAMI and similar organisations run free peer support groups. Warmlines offer free phone support before crisis point.",
+    q: "What do I do if I can't afford therapy but need it?",
+    a: "Work through it in order. First, ask the therapist you want whether they have a sliding scale. Second, check what you may already have: an employer EAP, Medicaid if your income qualifies, or student counselling. Third, look at Open Path Collective, where sessions are $40 to $70 after a one-time $65 membership, or a university training clinic. Fourth, contact a community mental health clinic or federally funded health centre, which do not turn people away for inability to pay. While you wait, warmlines and NAMI groups are free.",
   },
   {
     q: "How do I ask a therapist for a lower fee?",
     a: "Say it plainly at first contact: 'I am interested in working with you but your full fee is out of reach for me. Do you have any sliding scale or reduced fee openings, and if not, could you point me toward someone who does?' Therapists are asked this regularly and most are not offended. The worst realistic outcome is a no and a referral, which is still useful.",
+  },
+  {
+    q: "Where can I get free therapy in Canada or the UK?",
+    a: "In England, NHS Talking Therapies is free and you can refer yourself without going through a GP. In Ontario, Ontario Structured Psychotherapy offers free short-term CBT to adults by self-referral, and you do not need a health card. Other provinces and UK nations have their own routes, and waits vary by area.",
   },
   {
     q: "Is free therapy any good?",
@@ -50,55 +54,47 @@ const FAQ = [
   },
   {
     q: "Is peer support a cheaper substitute for therapy?",
-    a: "No. Peer support costs less because it is a different thing, not a discounted version of the same thing. Peer supporters do not diagnose, treat or prescribe. If you need clinical care, a cheaper non-clinical service does not meet that need, and the honest move is to keep working the low-cost therapy options on this page.",
+    a: "No. Peer support costs less because it is a different thing, not a discounted version of the same thing. Peer supporters do not diagnose, treat or prescribe. If you need clinical care, a cheaper non-clinical service does not meet that need, and the honest move is to keep working the low-cost therapy steps on this page.",
   },
 ];
 
-const OPTIONS = [
+// The step-by-step plan. The full side-by-side price list lives on
+// /learn/cheap-therapy, so this page does not compete with it.
+const STEPS = [
   {
-    name: "Ask about a sliding scale",
+    name: "1. Ask about a sliding scale",
     cost: "Often 30 to 60 percent off",
-    body: "Many therapists hold a few reduced-fee slots and never advertise them. This is the single most under-used option on this list, because people assume the listed price is the price.",
+    body: "Do this first, with the therapist you actually want. The words are above. Many therapists keep reduced-fee places they never advertise, and people skip this because the listed price looks fixed.",
   },
   {
-    name: "Open Path Psychotherapy Collective",
-    cost: "Roughly $30 to $60 a session, plus a one-time membership fee",
-    body: "A non-profit that connects lower and middle income clients with therapists who have agreed to reduced rates. Verify current rates on their site before relying on these numbers.",
+    name: "2. Check what you may already have",
+    cost: "Often free",
+    body: "An employer EAP (employee assistance programme) usually covers a few free sessions and is separate from health insurance, so ask HR even if you are not on the company plan. If your income is low, check Medicaid in your state, which can cover therapy at little or no cost. If you are a student, start with your college counselling centre.",
   },
   {
-    name: "University training clinics",
-    cost: "Free to about $40",
-    body: "Graduate students delivering therapy under close supervision. Often more attentive than an overloaded private practice, because they are being assessed. Sessions may be recorded for supervision and your therapist will eventually finish their placement.",
+    name: "3. Try Open Path or a training clinic",
+    cost: "$40 to $70 a session at Open Path",
+    body: "Open Path Collective connects people without adequate coverage to licensed therapists at $40 to $70 a session after a one-time $65 membership (checked 24 October 2026). University training clinics offer therapy from closely supervised graduate students, often free or close to it. Sessions may be recorded for supervision, and your therapist leaves when their placement ends.",
   },
   {
-    name: "Employer EAP",
-    cost: "Free, usually 3 to 6 sessions",
-    body: "Widely available and widely forgotten. Short-term by design, so best for a specific situation rather than long-term work. Check the confidentiality terms of your specific provider.",
+    name: "4. Call a clinic that cannot turn you away",
+    cost: "Free to low cost, by income",
+    body: "Certified Community Behavioral Health Clinics must serve anyone regardless of ability to pay, and there are more than 500 of them. Federally funded health centres charge on a sliding fee scale, do not deny care for inability to pay, and many offer mental health care. Waits can be long, so call now even if you start somewhere else. The free SAMHSA National Helpline, 1-800-662-4357, can point you to state-funded and sliding-fee programmes near you.",
   },
   {
-    name: "Community mental health centres",
-    cost: "Free to low cost, income-based",
-    body: "Publicly funded and means-tested. Waiting lists are usually long, and they are often the only route to psychiatry for uninsured people.",
-  },
-  {
-    name: "NAMI and condition-specific support groups",
+    name: "5. In Canada or the UK, start with the free public route",
     cost: "Free",
-    body: "Peer-led groups, in person and online, for specific conditions and for family members. Group rather than individual, and the experience varies with the facilitator.",
+    body: "In England, refer yourself to NHS Talking Therapies. In Ontario, Ontario Structured Psychotherapy offers free short-term CBT to adults by self-referral, with no health card needed. Routes and waits differ in other provinces and UK nations.",
   },
   {
-    name: "Warmlines",
+    name: "6. While you wait, do not wait alone",
     cost: "Free",
-    body: "Phone lines for talking to someone before things reach crisis. Staffed by people with lived experience. Badly under-known, and one of the most useful entries on this list.",
+    body: "Warmlines are free, peer-staffed phone lines for talking before things reach crisis, and about 30 states have one. NAMI Connection runs free 90-minute peer-led groups, many of them online. 7 Cups has free volunteer listeners at 3am. None of these is therapy, and all of them are there tonight.",
   },
   {
-    name: "7 Cups",
-    cost: "Free listeners, paid therapy tier",
-    body: "Trained volunteer listeners available immediately. Training is variable and you rarely get the same person twice, but it is free and it is there at 3am.",
-  },
-  {
-    name: "988 and crisis lines",
-    cost: "Free",
-    body: "For crisis, and increasingly for pre-crisis distress too. Call or text 988 in the US, Samaritans on 116 123 in the UK and Ireland.",
+    name: "If it is urgent",
+    cost: "Free, 24 hours",
+    body: "Call or text 988 in the US and Canada, or call Samaritans on 116 123 in the UK and Ireland. In the US, 988 is for emotional distress too, not only for suicidal thoughts.",
   },
 ];
 
@@ -111,21 +107,22 @@ export default function CantAffordTherapyPage() {
           __html: jsonLd([
             webPageLd({
               path: "/learn/cant-afford-therapy",
-              name: "Cannot Afford Therapy? What to Actually Do",
+              name: "Can't Afford Therapy? What to Do Next",
               description:
-                "Sliding scale, Open Path, university clinics, EAPs, NAMI groups, warmlines and free listening lines, with the real trade-offs of each.",
+                "A step-by-step plan for when you need therapy and cannot pay full price: sliding scale, free routes, low-cost clinics, and what to do while you wait.",
               lastReviewed: REVIEWED,
             }),
             articleLd({
               path: "/learn/cant-afford-therapy",
-              headline: "Cannot Afford Therapy? What to Actually Do",
+              headline: "Can't Afford Therapy? What to Do Next",
               description:
-                "The real options when therapy is out of reach, what each costs, and the exact wording to use when asking for a reduced fee.",
+                "A step-by-step plan for when you need therapy and cannot pay full price, starting with one email you can send today.",
               datePublished: PUBLISHED,
               dateModified: REVIEWED,
-              wordCount: 1800,
+              wordCount: 2000,
               about: [
                 "Affordable therapy",
+                "Free therapy",
                 "Low cost counselling",
                 "Mental health support",
                 "Peer support",
@@ -133,10 +130,10 @@ export default function CantAffordTherapyPage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Hearth", path: "/" },
+              { name: "Dear Hearth", path: "/" },
               { name: "Learn", path: "/learn/cant-afford-therapy" },
               {
-                name: "Cannot afford therapy",
+                name: "Can't afford therapy",
                 path: "/learn/cant-afford-therapy",
               },
             ]),
@@ -174,10 +171,10 @@ export default function CantAffordTherapyPage() {
             >
               Learn
             </Link>
-            {" · Cannot afford therapy"}
+            {" · Can’t afford therapy"}
           </div>
           <h1 style={{ maxWidth: "18ch", fontSize: "clamp(42px, 6.4vw, 88px)" }}>
-            Cannot afford
+            Can&rsquo;t afford
             <br />
             <span className="serif-i" style={{ color: "var(--ember)" }}>
               therapy?
@@ -192,9 +189,9 @@ export default function CantAffordTherapyPage() {
               color: "var(--ink-2)",
             }}
           >
-            There are more routes than most people know about, several of them
-            free, and one of them is simply asking. Here is the full list with
-            real numbers and the honest trade-off on each.
+            If you need therapy and cannot pay full price, here is what to do
+            next, in order, starting with one email you can send today.
+            Several of the routes are free, and one of them is simply asking.
           </p>
           <div
             style={{
@@ -205,7 +202,7 @@ export default function CantAffordTherapyPage() {
               letterSpacing: "0.04em",
             }}
           >
-            Published 22 August 2026 · ~8 min read
+            Published 22 August 2026 · Updated 24 October 2026 · ~8 min read
           </div>
         </div>
       </section>
@@ -330,7 +327,7 @@ export default function CantAffordTherapyPage() {
       >
         <div className="wrap">
           <h2 style={{ maxWidth: "22ch", marginBottom: 16 }}>
-            Every route, with the real trade-off.
+            What to do next, in order.
           </h2>
           <p
             style={{
@@ -341,26 +338,30 @@ export default function CantAffordTherapyPage() {
               marginBottom: 36,
             }}
           >
-            Costs are indicative and change. Verify current numbers with each
-            provider before relying on them. For what full-price therapy costs
-            by country, per session and per year, see{" "}
+            Work down the list. Each step is cheaper or faster than what most
+            people try first. For every low-cost option side by side, with
+            current prices, see{" "}
+            <Link href="/learn/cheap-therapy" style={{ color: "var(--ember)" }}>
+              cheap therapy options, with real prices
+            </Link>
+            . For what full-price therapy costs by country, see{" "}
             <Link
               href="/learn/how-much-does-therapy-cost"
               style={{ color: "var(--ember)" }}
             >
               how much therapy costs in 2026
             </Link>
-            . If you have no coverage at all, start with{" "}
+            . If you have no coverage at all, read{" "}
             <Link
               href="/learn/therapy-without-insurance"
               style={{ color: "var(--ember)" }}
             >
-              therapy without insurance
+              affordable therapy without insurance
             </Link>
             .
           </p>
           <div style={{ display: "grid", gap: 24, maxWidth: "72ch" }}>
-            {OPTIONS.map((o) => (
+            {STEPS.map((o) => (
               <div
                 key={o.name}
                 style={{
@@ -447,6 +448,28 @@ export default function CantAffordTherapyPage() {
               carrying, use them. We would rather you got the right help than our
               help.
             </p>
+            <p
+              style={{
+                fontSize: 18,
+                lineHeight: 1.75,
+                color: "var(--ink-2)",
+                marginTop: 20,
+              }}
+            >
+              If what you want is not clinical care but someone to talk to, we
+              compared the{" "}
+              <Link
+                href="/learn/alternatives-to-therapy"
+                style={{ color: "var(--ember)" }}
+              >
+                alternatives to therapy
+              </Link>{" "}
+              honestly, and explained{" "}
+              <Link href="/peer-support" style={{ color: "var(--ember)" }}>
+                what peer support is
+              </Link>{" "}
+              and what it is not.
+            </p>
             <div
               style={{
                 marginTop: 30,
@@ -470,7 +493,7 @@ export default function CantAffordTherapyPage() {
                 thing, not a discounted version of the same thing. Keepers do not
                 diagnose, treat or prescribe. If what you need is clinical care,
                 a cheaper non-clinical service does not meet that need, and the
-                right move is to keep working the low-cost therapy routes above.
+                right move is to keep working the low-cost therapy steps above.
                 Not sure which you need?{" "}
                 <Link
                   href="/learn/do-i-need-therapy"
@@ -522,6 +545,12 @@ export default function CantAffordTherapyPage() {
             </div>
             <div style={{ display: "grid", gap: 18, marginTop: 8 }}>
               <Link
+                href="/learn/cheap-therapy"
+                style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
+              >
+                Cheap therapy options, with real prices &rarr;
+              </Link>
+              <Link
                 href="/learn/sliding-scale-therapy"
                 style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
               >
@@ -531,7 +560,19 @@ export default function CantAffordTherapyPage() {
                 href="/learn/therapy-without-insurance"
                 style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
               >
-                Therapy without insurance: cost and options &rarr;
+                Affordable therapy without insurance &rarr;
+              </Link>
+              <Link
+                href="/learn/alternatives-to-therapy"
+                style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
+              >
+                Alternatives to therapy, compared &rarr;
+              </Link>
+              <Link
+                href="/peer-support"
+                style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
+              >
+                What is peer support? &rarr;
               </Link>
               <Link
                 href="/learn/how-much-does-therapy-cost"
@@ -571,8 +612,8 @@ export default function CantAffordTherapyPage() {
               </Link>
             </div>
             <div className="cta-row" style={{ marginTop: 44 }}>
-              <Link href="/#cta" className="btn btn-primary btn-lg">
-                Pull up a chair <span className="arr">&rarr;</span>
+              <Link href="/intake" className="btn btn-primary btn-lg">
+                Start the 12-minute intake <span className="arr">&rarr;</span>
               </Link>
               <Link href="/pricing" className="btn btn-ghost btn-lg">
                 See pricing

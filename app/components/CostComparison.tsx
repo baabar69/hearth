@@ -13,7 +13,7 @@ import Link from "next/link";
  * comparison page is a legal exposure, not a typo.
  */
 
-export const FIGURES_AS_OF = "August 2026";
+export const FIGURES_AS_OF = "24 October 2026";
 
 type Source = { label: string; href: string; external?: boolean };
 
@@ -66,16 +66,27 @@ const ROWS: Row[] = [
   },
   {
     option: "Private therapy, weekly",
-    perMonth: "About $715",
+    perMonth: "About $620",
     whatYouGet:
-      "At the US average of $165 a session. $430 to $1,080 across the usual $100 to $250 range. Licensed clinician, in person or online.",
+      "At the US cash-pay average of $143 a session (Zhu et al., 2024). $530 to $985 across state averages of $122 to $227. Licensed clinician, in person or online.",
     clinical: "Yes",
-    sources: [{ label: "Our cost guide", href: "/learn/how-much-does-therapy-cost" }],
+    sources: [
+      {
+        label: "Zhu et al. 2024",
+        href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11412241/",
+        external: true,
+      },
+      {
+        label: "SimplePractice",
+        href: "https://www.simplepractice.com/resource/how-much-does-therapy-cost",
+        external: true,
+      },
+    ],
   },
   {
     option: "Private therapy, every two weeks",
-    perMonth: "About $360",
-    whatYouGet: "Same clinician, half the frequency. $215 to $540 across the usual range.",
+    perMonth: "About $310",
+    whatYouGet: "Same clinician, half the frequency. $265 to $490 across state averages.",
     clinical: "Yes",
     sources: [{ label: "Our cost guide", href: "/learn/how-much-does-therapy-cost" }],
   },

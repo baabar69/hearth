@@ -12,7 +12,7 @@ export default function SignInPage() {
     <>
       <SharedNav />
 
-      <main
+      <div
         style={{
           minHeight: "calc(100vh - 80px)",
           background: "var(--paper)",
@@ -159,7 +159,7 @@ export default function SignInPage() {
             .
           </p>
         </div>
-      </main>
+      </div>
     </>
   );
 }

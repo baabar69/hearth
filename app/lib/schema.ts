@@ -60,7 +60,7 @@ export function pricingServiceLd(): JsonLd {
     },
     category: "Mental wellness and peer support",
     description:
-      "Subscription peer support pairing each member with the same trained Keeper. Sits (video/audio sessions), unlimited async Long Talk thread, Friday reflections, Circles, and Embers library. Not therapy.",
+      "Subscription peer support pairing each member with the same trained Keeper. Sits (video/audio sessions), unlimited async Long Talk thread, Friday reflections, and the Embers library. Not therapy.",
     termsOfService: `${SITE_URL}/terms`,
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -70,7 +70,7 @@ export function pricingServiceLd(): JsonLd {
           "@type": "Offer",
           name: "Hearthside",
           description:
-            "Biweekly Sits, unlimited Long Talk with 24-hour Keeper response, Friday reflections, full Embers library, 1 Circle/month included, Bridge referral access.",
+            "Biweekly Sits, unlimited Long Talk with 24-hour Keeper response, Friday reflections, full Embers library, help finding a clinician when needed.",
           url: `${SITE_URL}/pricing`,
           availability: "https://schema.org/InStock",
           priceCurrency: "USD",
@@ -110,7 +110,7 @@ export function pricingServiceLd(): JsonLd {
           "@type": "Offer",
           name: "Hearth Deep",
           description:
-            "Everything in Hearthside, plus weekly Sits, priority Long Talk with 4-hour response, 2 Circles/month, anniversary rituals, Bridge priority matching.",
+            "Everything in Hearthside, plus weekly Sits, priority Long Talk with 4-hour response, anniversary rituals.",
           url: `${SITE_URL}/pricing`,
           availability: "https://schema.org/InStock",
           priceCurrency: "USD",

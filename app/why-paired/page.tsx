@@ -4,9 +4,9 @@ import SharedFooter from "../components/SharedFooter";
 import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 
 export const metadata = {
-  title: "Why Paired Peer Support, Long-Term: Hearth's Model",
+  title: "Why Long-Term, One-to-One Peer Support",
   description:
-    "Rotating volunteers and 12-week programs fail the slow, recurring weight of a life. Hearth pairs you with one Keeper for as long as it serves you. Here's the reasoning.",
+    "Rotating volunteers and 12-week programs miss the slow, recurring weight of a life. Why Hearth pairs you with one listener for as long as it helps.",
   alternates: { canonical: "/why-paired" },
   openGraph: {
     title: "Why paired, long-term peer support · Hearth",

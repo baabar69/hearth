@@ -11,13 +11,12 @@ import {
 } from "../../lib/schema";
 
 const PUBLISHED = "2026-05-14";
-const REVIEWED = "2026-05-14";
+const REVIEWED = "2026-10-24";
 
 export const metadata: Metadata = {
-  title:
-    "Peer Support vs. Therapy: The Honest Difference (2026 Guide)",
+  title: "Peer Support vs Therapy: Key Differences",
   description:
-    "Peer support and therapy do different jobs. A plain guide to what each is for, how they cost, who they fit, and when to choose which. Written by Hearth, a peer-support service that refers out for clinical care.",
+    "Peer support and therapy do different jobs. What each is for, what each costs, who each fits, and how to choose. From a peer support service that refers out.",
   alternates: { canonical: "/learn/peer-support-vs-therapy" },
   openGraph: {
     type: "article",
@@ -54,7 +53,7 @@ const FAQ = [
   },
   {
     q: "Is peer support evidence-based?",
-    a: "Peer support has a meaningful evidence base for specific populations: recovery from substance use, serious mental illness, post-disaster mental health, and chronic illness self-management. Outside of those clinical contexts, the evidence base is younger and the field is still establishing measurement. What we know: continuity (same supporter, same person, over time) and training quality predict outcomes more than any other factor.",
+    a: "Partly. Reviews of the trials find modest, fairly consistent benefits on the personal side of recovery: hope, empowerment, feeling more able to cope. Effects on clinical symptoms are small or absent, and many of the studies are low quality. A 2024 umbrella review found some evidence for depression, especially around pregnancy and birth. That pattern is why peer support sits alongside therapy rather than replacing it.",
   },
   {
     q: "Is peer support covered by insurance?",
@@ -63,6 +62,59 @@ const FAQ = [
   {
     q: "How do I know if a peer-support service is legitimate?",
     a: "Look for: a written training program with documented hours (Hearth, for example, runs 120 hours), monthly supervision of the supporters, a clear scope statement (what they will not do), a real handoff path to licensed clinicians for things outside scope, and transparent pricing. Avoid services that claim to replace therapy, market themselves as cheaper diagnosis, or are vague about who their supporters are.",
+  },
+  {
+    q: "What are the downsides of peer support?",
+    a: "Quality varies a lot, because peer support is lightly regulated outside of certified peer specialist roles, and training ranges from a weekend to a long programme. It does not treat clinical conditions, and the research shows little effect on symptoms. A supporter's own story can crowd yours if they are not trained to hold it back. Free platforms usually rotate volunteers, so you may never speak to the same person twice. Paid services cost money and are rarely covered by insurance. And none of it is crisis care.",
+  },
+  {
+    q: "What is another name for peer support?",
+    a: "You will see peer mentoring, peer-to-peer support, mutual support or mutual aid (usually for groups), lived experience support, and, in health services, peer specialist or peer worker support. In addiction recovery the role is often called a recovery coach. Some older programmes say peer counselling, which causes confusion, because a peer supporter is not a licensed counsellor.",
+  },
+  {
+    q: "Is peer support counselling?",
+    a: "No. Counselling as a profession (a licensed professional counselor in the US, for example) is clinical work by a regulated professional who can assess and treat. Peer support is listening and support from someone trained who shares relevant experience, and it does not assess, diagnose or treat. A good peer supporter will tell you when counselling or therapy is the better tool and help you find it.",
+  },
+];
+
+const RESEARCH = [
+  {
+    head: "One-to-one peer support: modest gains, not symptom relief.",
+    body: "A 2020 meta-analysis of 19 trials (3,329 people) of one-to-one peer support in mental health services found small improvements in self-reported recovery and empowerment, and no effect on clinical symptoms or on how much people used services.",
+    cite: "White et al., BMC Psychiatry, 2020",
+  },
+  {
+    head: "Across 28 trials, the effects are small.",
+    body: "A 2023 meta-analysis of randomised trials of peer support for people with mental illness found small effects on clinical recovery and on personal recovery.",
+    cite: "Smit et al., Psychological Medicine, 2023",
+  },
+  {
+    head: "The evidence base is wide but mostly low quality.",
+    body: "A 2024 umbrella review of 35 systematic reviews found some evidence that peer support helps with depression (especially around pregnancy and birth), self-efficacy and recovery, while noting most of the reviews were of low quality.",
+    cite: "Cooper et al., BMC Medicine, 2024",
+  },
+  {
+    head: "Peer support complements clinical care.",
+    body: "The US government's mental health agency describes the peer role as one that complements, but does not duplicate or replace, the work of clinicians.",
+    cite: "SAMHSA, Value of Peers, 2017",
+  },
+];
+
+const REFERENCES = [
+  {
+    text: "White S, Foster R, Marks J, et al. The effectiveness of one-to-one peer support in mental health services: a systematic review and meta-analysis. BMC Psychiatry. 2020;20:534.",
+    href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7657356/",
+  },
+  {
+    text: "Smit D, Miguel C, Vrijsen JN, et al. The effectiveness of peer support for individuals with mental illness: systematic review and meta-analysis. Psychological Medicine. 2023;53(11):5332-5341.",
+    href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10476060/",
+  },
+  {
+    text: "Cooper RE, Saunders KRK, Greenburgh A, et al. The effectiveness, implementation, and experiences of peer support approaches for mental health: a systematic umbrella review. BMC Medicine. 2024;22:72.",
+    href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10902990/",
+  },
+  {
+    text: "Substance Abuse and Mental Health Services Administration (SAMHSA). Value of Peers. 2017.",
   },
 ];
 
@@ -134,13 +186,12 @@ export default function PeerSupportVsTherapyPage() {
             }),
             articleLd({
               path: "/learn/peer-support-vs-therapy",
-              headline:
-                "Peer Support vs. Therapy: The Honest Difference (2026 Guide)",
+              headline: "Peer Support vs. Therapy: The Honest Difference",
               description:
                 "Peer support and therapy do different jobs. A plain guide to what each is for, how they cost, who they fit, and when to choose which.",
               datePublished: PUBLISHED,
               dateModified: REVIEWED,
-              wordCount: 2400,
+              wordCount: 3000,
               about: [
                 "Peer support",
                 "Therapy",
@@ -149,7 +200,7 @@ export default function PeerSupportVsTherapyPage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Hearth", path: "/" },
+              { name: "Dear Hearth", path: "/" },
               { name: "Learn", path: "/learn/peer-support-vs-therapy" },
               {
                 name: "Peer support vs. therapy",
@@ -217,7 +268,7 @@ export default function PeerSupportVsTherapyPage() {
               letterSpacing: "0.04em",
             }}
           >
-            Published 14 May 2026 · Reviewed 14 May 2026 · ~12 min read
+            Published 14 May 2026 · Reviewed 24 October 2026 · ~13 min read
           </div>
         </div>
       </section>
@@ -455,7 +506,19 @@ export default function PeerSupportVsTherapyPage() {
                 consumer version of peer support is broader and less
                 regulated: paid one-to-one services (like Hearth), volunteer
                 platforms (7 Cups, ShareWell), and informal community
-                groups.
+                groups. For the full picture of the types, principles and
+                history, see our guide to{" "}
+                <Link href="/peer-support" style={{ color: "var(--ember)" }}>
+                  what peer support is
+                </Link>
+                , and for the paired, same-person format specifically,{" "}
+                <Link
+                  href="/learn/one-to-one-peer-support"
+                  style={{ color: "var(--ember)" }}
+                >
+                  one-to-one peer support
+                </Link>
+                .
               </p>
               <p
                 style={{
@@ -574,6 +637,59 @@ export default function PeerSupportVsTherapyPage() {
         </div>
       </section>
 
+      {/* WHAT THE RESEARCH SAYS */}
+      <section style={{ padding: "80px 0", borderBottom: "1px solid var(--rule-2)" }}>
+        <div className="wrap">
+          <div style={{ maxWidth: "70ch" }}>
+            <h2 style={{ fontSize: "clamp(28px, 3.4vw, 44px)", marginBottom: 18 }}>
+              What the research says.
+            </h2>
+            <p style={{ fontSize: 18, lineHeight: 1.75, color: "var(--ink-2)" }}>
+              Peer support helps, modestly, and mostly in how people feel
+              about their own lives rather than in clinical symptoms. That is
+              the honest summary of the best reviews, and it is the reason the
+              two belong side by side.
+            </p>
+            <ul
+              style={{
+                marginTop: 26,
+                paddingLeft: 0,
+                listStyle: "none",
+                display: "grid",
+                gap: 20,
+              }}
+            >
+              {RESEARCH.map((r) => (
+                <li
+                  key={r.head}
+                  style={{ fontSize: 17, lineHeight: 1.7, color: "var(--ink-2)" }}
+                >
+                  <strong style={{ color: "var(--ink)" }}>{r.head}</strong>{" "}
+                  {r.body}{" "}
+                  <span style={{ color: "var(--ink-3)", fontSize: 15 }}>
+                    ({r.cite})
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p
+              style={{
+                fontSize: 18,
+                lineHeight: 1.75,
+                color: "var(--ink-2)",
+                marginTop: 26,
+              }}
+            >
+              Read plainly: if you need a clinical condition treated, the
+              evidence points to therapy. If you want to feel less alone and
+              more able to carry what you are carrying, peer support has a
+              reasonable, if modest, case. Full references are at the end of
+              this page.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* WHERE HEARTH SITS */}
       <section
         style={{
@@ -599,8 +715,9 @@ export default function PeerSupportVsTherapyPage() {
               as licensed therapists here. We do not
               diagnose, do not prescribe, and we are not a crisis service.
               When something needs a clinician, your Keeper says so plainly
-              and walks you to The Bridge, our network of vetted, licensed
-              therapists matched by hand for fit.
+              and helps you find a licensed therapist (Open Path Collective,
+              Psychology Today, your own doctor). We call that handoff The
+              Bridge.
             </p>
             <p
               style={{
@@ -612,8 +729,8 @@ export default function PeerSupportVsTherapyPage() {
             >
               Hearthside is $39 a month for biweekly Sits. Hearth Deep is
               $99 a month for weekly Sits. Both include unlimited async
-              Long Talk with your Keeper, Friday reflections, the Embers
-              library, and Circles. Both can run alongside therapy.
+              Long Talk with your Keeper, Friday reflections and the Embers
+              library. Both can run alongside therapy.
             </p>
             <div
               style={{
@@ -677,6 +794,44 @@ export default function PeerSupportVsTherapyPage() {
         </div>
       </section>
 
+      {/* REFERENCES */}
+      <section style={{ padding: "60px 0", borderBottom: "1px solid var(--rule-2)" }}>
+        <div className="wrap">
+          <div style={{ maxWidth: "70ch" }}>
+            <div className="eyebrow" style={{ marginBottom: 18 }}>
+              <span className="dot" />
+              References
+            </div>
+            <ol
+              style={{
+                paddingLeft: 20,
+                margin: 0,
+                display: "grid",
+                gap: 12,
+                fontSize: 15,
+                lineHeight: 1.6,
+                color: "var(--ink-2)",
+              }}
+            >
+              {REFERENCES.map((r) => (
+                <li key={r.text}>
+                  {r.text}{" "}
+                  {r.href ? (
+                    <a
+                      href={r.href}
+                      rel="noopener"
+                      style={{ color: "var(--ember)", wordBreak: "break-all" }}
+                    >
+                      {r.href.replace("https://", "")}
+                    </a>
+                  ) : null}
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
       {/* RELATED */}
       <section style={{ padding: "60px 0 100px" }}>
         <div className="wrap">
@@ -695,6 +850,74 @@ export default function PeerSupportVsTherapyPage() {
               maxWidth: 1000,
             }}
           >
+            <li>
+              <Link
+                href="/peer-support"
+                style={{
+                  display: "block",
+                  padding: 20,
+                  border: "1px solid var(--rule-2)",
+                  borderRadius: 10,
+                }}
+              >
+                <strong>What is peer support?</strong>
+                <br />
+                <span style={{ color: "var(--ink-3)", fontSize: 14 }}>
+                  Types, principles, evidence and limits, in plain English.
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/learn/one-to-one-peer-support"
+                style={{
+                  display: "block",
+                  padding: 20,
+                  border: "1px solid var(--rule-2)",
+                  borderRadius: 10,
+                }}
+              >
+                <strong>One-to-one peer support</strong>
+                <br />
+                <span style={{ color: "var(--ink-3)", fontSize: 14 }}>
+                  One trained person, the same one each time: how it works and how to choose.
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/learn/do-i-need-therapy"
+                style={{
+                  display: "block",
+                  padding: 20,
+                  border: "1px solid var(--rule-2)",
+                  borderRadius: 10,
+                }}
+              >
+                <strong>Do I need therapy?</strong>
+                <br />
+                <span style={{ color: "var(--ink-3)", fontSize: 14 }}>
+                  How to tell whether what you are carrying calls for a clinician.
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/learn/alternatives-to-therapy"
+                style={{
+                  display: "block",
+                  padding: 20,
+                  border: "1px solid var(--rule-2)",
+                  borderRadius: 10,
+                }}
+              >
+                <strong>Alternatives to therapy</strong>
+                <br />
+                <span style={{ color: "var(--ink-3)", fontSize: 14 }}>
+                  The real options, what each is for, and when therapy is still the answer.
+                </span>
+              </Link>
+            </li>
             <li>
               <Link
                 href="/hearth-vs-therapy"

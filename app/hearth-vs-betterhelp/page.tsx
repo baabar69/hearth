@@ -12,7 +12,7 @@ import {
 export const metadata = {
   title: "Hearth vs. BetterHelp: Which One Do You Need?",
   description:
-    "BetterHelp is online therapy with licensed counsellors. Hearth is peer support with one Keeper, kept for years. Costs, formats, who each fits, and the honest alternatives.",
+    "BetterHelp is online therapy with licensed counsellors. Hearth is peer support with one listener, kept for years. Costs, formats and who each fits.",
   alternates: { canonical: "/hearth-vs-betterhelp" },
   openGraph: {
     title: "Hearth vs. BetterHelp: Which One Do You Need?",
@@ -92,7 +92,7 @@ const FAQ = [
   },
   {
     q: "What happens if I start with Hearth and turn out to need therapy?",
-    a: "Your Keeper will tell you plainly, usually in the first few conversations, and walk you to The Bridge, Hearth's network of vetted, licensed therapists. The Keeper relationship does not have to end. Many members keep both.",
+    a: "Your Keeper will tell you plainly, usually in the first few conversations, and help you find a licensed therapist (Open Path Collective, Psychology Today, your own doctor). We call that handoff The Bridge. The Keeper relationship does not have to end. Many members keep both.",
   },
 ];
 
@@ -406,11 +406,12 @@ export default function HearthVsBetterHelpPage() {
                 </p>
                 <p>
                   <b>A door to therapy when you need it.</b> If a Keeper hears
-                  something that needs a clinician, they say so and walk you to{" "}
+                  something that needs a clinician, they say so and help you find a licensed therapist. We call
+                  that handoff{" "}
                   <Link href="/bridge" style={{ textDecoration: "underline" }}>
                     The Bridge
                   </Link>
-                  , our network of vetted, licensed therapists.
+                  .
                 </p>
               </div>
             </div>

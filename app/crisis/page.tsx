@@ -3,9 +3,9 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "Mental Health Crisis Resources: US, Canada, UK, Pakistan & More",
+  title: "Crisis Lines: US, Canada, UK, Pakistan & More",
   description:
-    "If you are in crisis, reach out now. US and Canada: call or text 988. UK/IE: 116 123. Pakistan: 0311-7786264 (Umang). Hearth is peer support, not a crisis service.",
+    "In crisis? US and Canada: call or text 988. UK and Ireland: 116 123. Pakistan: Umang 0311-7786264. Crisis lines by country.",
   alternates: { canonical: "/crisis" },
   openGraph: {
     title: "Crisis Resources · Hearth",

@@ -15,13 +15,18 @@
   --honey: #E8A845;
   --sage: #4F5A45;
   --gold: #A6802B;
-  --serif: 'Fraunces', 'Source Serif 4', Georgia, serif;
-  --sans: 'Inter Tight', Helvetica, sans-serif;
-  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  /* --font-* are set by next/font in app/layout.tsx (self-hosted files). */
+  --serif: var(--font-serif), 'Source Serif 4', Georgia, serif;
+  --sans: var(--font-sans), Helvetica, sans-serif;
+  --mono: var(--font-mono), ui-monospace, Menlo, monospace;
   --maxw: 1320px;
 }
 
 /* ============ RESET & BASE ============ */
+/* Links inside running text are underlined so they don't rely on colour alone
+   (WCAG 1.4.1). Buttons, nav and footer links are not inside <p>, so they keep
+   their own styling. */
+p a:not(.btn), ol li a:not(.btn), td a:not(.btn) { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 400; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 body { font-size: 17px; line-height: 1.55; letter-spacing: -0.005em; }
@@ -153,7 +158,7 @@ section { padding: 120px 0; position: relative; }
   transition: background .25s, transform .25s;
 }
 .bring-card:hover .bring-icon { background: var(--ember); color: #FFF6E8; transform: scale(1.08); }
-.bring-card h4 { font-family: var(--serif); font-weight: 380; font-size: 20px; line-height: 1.15; margin-bottom: 10px; }
+.bring-card h3, .bring-card h4 { font-family: var(--serif); font-weight: 380; font-size: 20px; line-height: 1.15; margin-bottom: 10px; }
 .bring-card p { font-size: 14px; color: var(--ink-2); line-height: 1.5; }
 a.bring-card-link { display: block; text-decoration: none; color: inherit; cursor: pointer; }
 a.bring-card-link h4 { color: var(--ink); }
@@ -231,7 +236,7 @@ a.bring-card-link:hover h4 { color: var(--ember); transition: color .2s; }
 .kpoint { display: grid; grid-template-columns: 24px 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid var(--rule-2); }
 .kpoint:last-child { border-bottom: 1px solid var(--rule-2); }
 .kpoint .num { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; color: var(--ember); padding-top: 3px; }
-.kpoint h4 { font-family: var(--sans); font-weight: 500; font-size: 15px; letter-spacing: -0.005em; margin: 0 0 4px; }
+.kpoint h3, .kpoint h4 { font-family: var(--sans); font-weight: 500; font-size: 15px; letter-spacing: -0.005em; margin: 0 0 4px; }
 .kpoint p { font-size: 14.5px; color: var(--ink-2); line-height: 1.5; }
 
 /* ============ HOW IT WORKS ============ */
@@ -523,14 +528,14 @@ a.bring-card-link:hover h4 { color: var(--ember); transition: color .2s; }
 
 /* ============ FOOTER ============ */
 footer { background: var(--ink); color: #C9B894; padding: 80px 0 40px; }
-.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 60px; border-bottom: 1px solid #3A332C; }
+.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 60px; border-bottom: 1px solid #3A332C; }
 .foot-brand .brand-name { color: var(--paper); }
 .foot-brand p { color: #9C8E78; font-size: 14px; line-height: 1.55; max-width: 36ch; margin-top: 18px; }
-.foot-col h5 { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #C9B894; font-weight: 500; margin: 0 0 18px; }
+.foot-col .foot-h { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #C9B894; font-weight: 500; margin: 0 0 18px; }
 .foot-col a { display: block; font-size: 14px; color: #9C8E78; margin-bottom: 10px; transition: color .2s; }
 .foot-col a:hover { color: var(--paper); }
-.foot-bot { display: flex; justify-content: space-between; align-items: center; padding-top: 30px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6E6457; }
-.foot-bot .crisis { color: var(--ember); }
+.foot-bot { display: flex; justify-content: space-between; align-items: center; padding-top: 30px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #9C8E78; }
+.foot-bot .crisis { color: var(--honey); }
 @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } .foot-bot { flex-direction: column; gap: 12px; text-align: center; } }
 
 /* ============ HERO ANIMATION ============ */

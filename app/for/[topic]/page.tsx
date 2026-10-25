@@ -45,7 +45,7 @@ const TOPICS: Topic[] = [
       "A weekly or biweekly Sit with the same Keeper, every week, no matter where the grief takes you.",
       "A Long Talk thread you can write into at 2am. Your Keeper responds within 24 hours, no algorithms in between.",
       "A Friday Reflection from your Keeper: what stayed with them about your week, in their own words.",
-      "If the grief tips into something clinical, your Keeper walks you to The Bridge (a vetted therapist matched by hand for fit) by name.",
+      "If the grief tips into something clinical, your Keeper says so plainly and helps you find a therapist. We call that handoff The Bridge.",
     ],
     weDont:
       "Hearth is not a grief therapist. We do not provide bereavement counselling, prescribe anything, or replace the deeper clinical work some grief needs. We hold the long, slow, between-sessions weight: the ordinary grief that doesn't fit on a couch.",
@@ -162,7 +162,7 @@ const TOPICS: Topic[] = [
       "Encrypted, never shared, no one but your Keeper sees what you bring.",
     ],
     weDont:
-      "Hearth is not sex therapy or medical care. We do not treat sexual dysfunction, vaginismus, ED, or anything that needs a clinician. For the medical, we will walk you to a vetted clinician through The Bridge. We hold the shame, the identity, the words that have been waiting years to come out.",
+      "Hearth is not sex therapy or medical care. We do not treat sexual dysfunction, vaginismus, ED, or anything that needs a clinician. For the medical, your Keeper will help you find the right clinician. We hold the shame, the identity, the words that have been waiting years to come out.",
     keeperName: "Rabia K.",
     keeperSlug: "rabia-k",
     keeperBlurb:
@@ -197,7 +197,7 @@ const TOPICS: Topic[] = [
       "A Keeper who has either lived a version of this themselves or has held many people through it. We match carefully.",
       "A confidential, encrypted space. Your Sits and Long Talks are not shared with anyone, ever.",
       "Time. We do not push timelines. The slow work is the work.",
-      "A handoff to The Bridge (LGBTQ+-affirming therapists matched by hand for fit) when something deeper than peer support is needed.",
+      "Help finding an LGBTQ+-affirming therapist when something deeper than peer support is needed.",
     ],
     weDont:
       "Hearth is not an identity therapist or a coming-out coach. We will not tell you who you are or what to do. We sit with you while you figure it out, in your time, in your language.",
@@ -238,7 +238,7 @@ const TOPICS: Topic[] = [
       "Honest pacing. We don't rush you toward calm. We sit with the worry first.",
     ],
     weDont:
-      "Hearth is not a treatment for clinical anxiety or panic disorder. We do not diagnose, prescribe, or replace the work that medication and therapy can do. If your anxiety is severe or escalating, our Keepers will walk you to The Bridge (a vetted therapist matched by hand for fit) personally.",
+      "Hearth is not a treatment for clinical anxiety or panic disorder. We do not diagnose, prescribe, or replace the work that medication and therapy can do. If your anxiety is severe or escalating, your Keeper will say so plainly and help you find a therapist.",
     keeperName: "Rabia K.",
     keeperSlug: "rabia-k",
     keeperBlurb:
@@ -273,7 +273,7 @@ const TOPICS: Topic[] = [
       "A weekly or biweekly Sit (a 35–60 minute video or audio call) with the same Keeper, who remembers the names, the history, and what last Tuesday cost you.",
       "A Long Talk thread for the 1am re-read, the screenshot you need witnessed, the message you want to rehearse before you send it. A reply within 24 hours.",
       "A Friday Reflection from your Keeper: what they saw you carry this week, and the ground you got back.",
-      "If the weight has tipped into panic, depression, or something that needs treatment, your Keeper walks you to The Bridge (a vetted therapist matched by hand) by name.",
+      "If the weight has tipped into panic, depression, or something that needs treatment, your Keeper says so plainly and helps you find a therapist.",
     ],
     weDont:
       "Hearth is not HR, not a lawyer, and not a crisis line. We do not investigate complaints, contact the people involved, or give legal advice, and if you are being threatened or stalked, the police and a lawyer come first. What we hold is the rest of it: the Sunday dread, the rehearsing, the second-guessing, and the slow work of getting your voice back.",
@@ -311,7 +311,7 @@ const TOPICS: Topic[] = [
       "A weekly or biweekly Sit (a 35–60 minute video or audio call) with the same Keeper, who knows what your week actually held, not what it looked like.",
       "A Long Talk thread for the 1am scroll that turned on you. Write it as it happens. A reply within 24 hours, from a person.",
       "A Friday Reflection from your Keeper: the week you actually lived, witnessed by someone who was paying attention to the real one.",
-      "If food, weight, or exercise has taken on a clinical shape, your Keeper says so plainly and walks you to The Bridge (a vetted therapist matched by hand), and to specialist care, by name.",
+      "If food, weight, or exercise has taken on a clinical shape, your Keeper says so plainly and helps you find a therapist and specialist care.",
     ],
     weDont:
       "Hearth is not body-image therapy and not an eating-disorder service. If eating, weight, or the mirror has become something with a clinical edge, that deserves real treatment, and we will help you find it rather than sit beside it. What we hold is the everyday arithmetic: the scroll, the shame, the invisible cohort, and the slow work of wanting your own life again.",
@@ -349,7 +349,7 @@ const TOPICS: Topic[] = [
       "A weekly or biweekly Sit (a 35–60 minute video or audio call) with the same Keeper, who remembers March, and June, and what you swore in August.",
       "A Long Talk thread for the message you drafted four times, the profile you almost reactivated, the ache after the third date that went nowhere. A reply within 24 hours.",
       "A Friday Reflection from your Keeper: what they noticed about your week, including the things dating apps never will.",
-      "If the heartbreak has tipped into depression, or an old pattern needs deeper work, your Keeper walks you to The Bridge (a vetted therapist matched by hand) by name.",
+      "If the heartbreak has tipped into depression, or an old pattern needs deeper work, your Keeper says so plainly and helps you find a therapist.",
     ],
     weDont:
       "Hearth is not a dating coach, not a matchmaking service, and not couples therapy. We will not optimise your profile, and we will never tell you who to choose. What we hold is the long middle: the almosts, the hope you are embarrassed by, the tiredness, and the question under all of it, which was never really about the apps.",
@@ -868,7 +868,6 @@ export default async function ForTopicPage({
                 "One Sit every two weeks",
                 "Unlimited Long Talk · 24h response",
                 "Friday Reflection from your Keeper",
-                "One Circle per month included",
               ]}
               dark={false}
             />
@@ -880,8 +879,7 @@ export default async function ForTopicPage({
                 "Everything in Hearthside",
                 "Weekly Sits, 35–60 min each",
                 "Priority Long Talk, 4h response",
-                "Two Circles per month included",
-                "Bridge therapist matching when needed",
+                "Help finding a clinician when needed",
               ]}
               dark={true}
             />

@@ -436,7 +436,7 @@ export default function IntakePage() {
     return (
       <>
         <SharedNav />
-        <main style={{ minHeight: "100vh", background: "var(--paper)", display: "flex", alignItems: "center", justifyContent: "center", padding: "40px 24px" }}>
+        <div style={{ minHeight: "100vh", background: "var(--paper)", display: "flex", alignItems: "center", justifyContent: "center", padding: "40px 24px" }}>
           <div style={{ maxWidth: 520, textAlign: "center" }}>
             <div style={{
               width: 64, height: 64, borderRadius: "50%",
@@ -490,7 +490,7 @@ export default function IntakePage() {
               </Link>
             </div>
           </div>
-        </main>
+        </div>
       </>
     );
   }
@@ -500,7 +500,7 @@ export default function IntakePage() {
   return (
     <>
       <SharedNav />
-      <main style={{ minHeight: "100vh", background: "var(--paper)", paddingTop: 72 }}>
+      <div style={{ minHeight: "100vh", background: "var(--paper)", paddingTop: 72 }}>
         <div style={{ maxWidth: 600, margin: "0 auto", padding: "48px 24px 80px" }}>
           <ProgressBar step={step} />
 
@@ -1118,7 +1118,7 @@ export default function IntakePage() {
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }

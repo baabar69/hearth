@@ -39,7 +39,7 @@ const COMMITMENTS = [
 const LIMITS = [
   "Some Embers essays haven't been audited for screen-reader flow yet. We're working through the archive.",
   "Voice-note auto-transcription is in beta. If you need a transcript and it's not generated, email us and we'll provide one within 24 hours.",
-  "Group Circles use a third-party video provider; we're verifying their AA compliance and pushing improvements where they fall short.",
+  "Sits run on Google Meet, a third-party video service, so its accessibility (including live captions) is set by Google, not by us.",
   "Cognitive accessibility is harder to standardise. We welcome feedback on copy density, decision flows, and intake length.",
 ];
 

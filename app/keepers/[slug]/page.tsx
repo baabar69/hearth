@@ -4,12 +4,7 @@ import Link from "next/link";
 import SharedNav from "../../components/SharedNav";
 import SharedFooter from "../../components/SharedFooter";
 import KeeperPortrait from "../../components/KeeperPortrait";
-import {
-  breadcrumbLd,
-  jsonLd,
-  keeperPersonLd,
-  webPageLd,
-} from "../../lib/schema";
+import { breadcrumbLd, jsonLd, webPageLd } from "../../lib/schema";
 
 type Keeper = {
   slug: string;
@@ -168,14 +163,17 @@ export async function generateMetadata({
   const { slug } = await params;
   const keeper = KEEPERS.find((k) => k.slug === slug);
   if (!keeper) return { title: "Keeper" };
-  const first = keeper.name.split(" ")[0];
   const themes = keeper.themes.join(", ");
-  const title = `${keeper.name}, Hearth Keeper`;
-  const description = `${keeper.tagline} ${first} is a trained Hearth Keeper based in ${keeper.city}, supporting members through ${themes.toLowerCase()}.`;
+  const title = `Example Keeper profile: ${keeper.name}`;
+  const description = `An example of the kind of Keeper (trained peer listener) you might be matched with at Hearth, for themes like ${themes.toLowerCase()}. Names and details are illustrative.`;
   return {
     title,
     description,
     alternates: { canonical: `/keepers/${keeper.slug}` },
+    // These five profiles are illustrative, not real hires. Keep them out of
+    // the index, and out of Person schema, until real Keepers consent to be
+    // shown (KAN-56). Fictional Person markup is a structured-data policy risk.
+    robots: { index: false, follow: true },
     openGraph: {
       type: "profile",
       title,
@@ -205,17 +203,16 @@ export default async function KeeperProfile({
           __html: jsonLd([
             webPageLd({
               path: `/keepers/${keeper.slug}`,
-              name: `${keeper.name}, Hearth Keeper`,
+              name: `Example Keeper profile: ${keeper.name}`,
               description: keeper.tagline,
-              lastReviewed: "2026-05-14",
+              lastReviewed: "2026-10-24",
               primaryImage: keeper.photo,
             }),
             breadcrumbLd([
-              { name: "Hearth", path: "/" },
+              { name: "Dear Hearth", path: "/" },
               { name: "Keepers", path: "/keepers" },
               { name: keeper.name, path: `/keepers/${keeper.slug}` },
             ]),
-            keeperPersonLd(keeper),
           ]),
         }}
       />
@@ -257,7 +254,7 @@ export default async function KeeperProfile({
             <div>
               <div className="eyebrow" style={{ marginBottom: 18 }}>
                 <span className="dot" />
-                Keeper Profile
+                Example Keeper profile
               </div>
               <h1
                 style={{
@@ -281,9 +278,27 @@ export default async function KeeperProfile({
               >
                 &ldquo;{keeper.tagline}&rdquo;
               </p>
-              <Link href="/#cta" className="btn btn-primary btn-lg">
-                Pull up a chair with {keeper.name.split(" ")[0]}{" "}
-                <span className="arr">&rarr;</span>
+              <p
+                style={{
+                  fontSize: 15,
+                  lineHeight: 1.6,
+                  color: "var(--ink-2)",
+                  maxWidth: "48ch",
+                  marginBottom: 28,
+                  padding: "12px 16px",
+                  border: "1px solid var(--rule)",
+                  borderRadius: 8,
+                  background: "var(--paper-2)",
+                }}
+              >
+                This is an example profile. The name and details are
+                illustrative, written to show the kind of person you might be
+                matched with. You don&rsquo;t pick a Keeper from a list: we
+                match you by hand, and your Keeper introduces themselves by
+                email.
+              </p>
+              <Link href="/intake" className="btn btn-primary btn-lg">
+                Pull up a chair <span className="arr">&rarr;</span>
               </Link>
             </div>
 
@@ -567,15 +582,14 @@ export default async function KeeperProfile({
       <section className="bigcta" style={{ padding: "100px 0", textAlign: "center" }}>
         <div className="wrap">
           <h2 style={{ marginTop: 18 }}>
-            Ready to sit with {keeper.name.split(" ")[0]}?
+            Ready to meet your Keeper?
           </h2>
           <div className="cta-row" style={{ marginTop: 40 }}>
-            <Link href="/#cta" className="btn btn-primary btn-lg">
-              Pull up a chair with {keeper.name.split(" ")[0]}{" "}
-              <span className="arr">&rarr;</span>
+            <Link href="/intake" className="btn btn-primary btn-lg">
+              Start the 12-minute intake <span className="arr">&rarr;</span>
             </Link>
             <Link href="/keepers" className="btn btn-ghost btn-lg">
-              Meet the other Keepers
+              More example profiles
             </Link>
           </div>
         </div>

@@ -16,7 +16,7 @@ const REVIEWED = "2026-08-22";
 export const metadata: Metadata = {
   title: "What Is a Hearth Keeper? Meaning & Origins",
   description:
-    "A hearth keeper tended the household fire: the oldest domestic role there is, from Hestia and Vesta to the folk practice of carrying flame to a new home. What the term means, where it comes from, and why it endures.",
+    "A hearth keeper tended the household fire, from Hestia and Vesta to carrying flame to a new home. What the term means and how Hearth uses it.",
   alternates: { canonical: "/learn/what-is-a-hearth-keeper" },
   openGraph: {
     type: "article",

@@ -4,9 +4,9 @@ import SharedFooter from "../components/SharedFooter";
 import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 
 export const metadata = {
-  title: "About Hearth: Why we built paired, long-term peer support",
+  title: "About: Why We Built Long-Term Peer Support",
   description:
-    "Hearth exists to restore the elder a generation never had: trained, paid companionship for the recurring weight of a life. The story, the model, and how we think about scope.",
+    "Why Hearth exists: trained, paid peer support for the recurring weight of a life. The story, the model, and how we think about scope.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Hearth: Why paired peer support",

@@ -17,7 +17,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <main
+    <div
       style={{
         minHeight: "100vh",
         display: "flex",
@@ -79,6 +79,6 @@ export default function Error({
           </Link>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

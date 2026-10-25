@@ -14,7 +14,7 @@ import {
 } from "../lib/schema";
 
 export const metadata = {
-  title: "Hearth Pricing: $39/mo Peer Support, $99/mo Weekly Sits",
+  title: "Pricing: Peer Support From $39 a Month",
   description:
     "Hearthside is $39/month (biweekly Sits). Hearth Deep is $99/month (weekly Sits). Cancel any time in one click.",
   alternates: { canonical: "/pricing" },
@@ -146,8 +146,7 @@ export default function PricingPage() {
                 <li>The Long Talk, unlimited async thread with 24-hour Keeper response</li>
                 <li>Friday reflection from your Keeper, every week</li>
                 <li>Full Embers library access</li>
-                <li>One Circle per month included</li>
-                <li>The Bridge handoff when a clinician is the right tool</li>
+                <li>Help finding a clinician when that is the right tool</li>
               </ul>
               <Link
                 href={HEARTHSIDE_CHECKOUT_PATH}
@@ -186,9 +185,7 @@ export default function PricingPage() {
                 <li>Everything in Hearthside</li>
                 <li>Weekly Sits: one 35–60 min Sit every week</li>
                 <li>Priority Long Talk with 4-hour Keeper response window</li>
-                <li>Two Circles per month included</li>
                 <li>Anniversary rituals: yearly meaning-making with your Keeper</li>
-                <li>Bridge therapist priority matching when needed</li>
               </ul>
               <Link
                 href={HEARTH_DEEP_CHECKOUT_PATH}
@@ -366,9 +363,9 @@ export default function PricingPage() {
                   ["Keeper response time", "24 hours", "4 hours"],
                   ["Friday reflections", "✓", "✓"],
                   ["Embers library", "✓", "✓"],
-                  ["Circles per month", "1 included", "2 included"],
                   ["Anniversary rituals", "–", "✓"],
-                  ["Bridge referral access", "✓", "Priority"],
+                  ["Help finding a clinician", "✓", "✓"],
+                  ["Circles (small groups)", "Coming soon", "Coming soon"],
                   ["Price", "$39/mo or $390/yr", "$99/mo or $990/yr"],
                 ].map(([feature, basic, deep]) => (
                   <tr key={feature as string}>
@@ -453,7 +450,7 @@ export default function PricingPage() {
             <div>
               <div className="eyebrow">
                 <span className="dot" />
-                À la carte
+                Coming soon
               </div>
               <p
                 style={{
@@ -463,11 +460,11 @@ export default function PricingPage() {
                   lineHeight: 1.2,
                 }}
               >
-                Single Circle{" "}
-                <span style={{ color: "var(--ember)" }}>$25</span>
+                Circles
               </p>
               <p style={{ marginTop: 6, color: "var(--ink-3)", fontSize: 13.5 }}>
-                One Circle cohort, no membership needed.
+                Small groups on one theme. Not running yet; members hear
+                first when they open.
               </p>
             </div>
             <div>

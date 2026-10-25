@@ -18,7 +18,7 @@ export default function SharedFooter() {
             </p>
           </div>
           <div className="foot-col">
-            <h5>Hearth</h5>
+            <p className="foot-h">Hearth</p>
             <Link href="/how-it-works">How it works</Link>
             <Link href="/why-paired">Why paired</Link>
             <Link href="/keepers">Meet the Keepers</Link>
@@ -27,13 +27,31 @@ export default function SharedFooter() {
             <Link href="/bridge">The Bridge</Link>
             <Link href="/hearth-vs-therapy">Hearth vs. therapy</Link>
             <Link href="/hearth-vs-betterhelp">Hearth vs. therapy apps</Link>
-            <Link href="/learn/peer-support-vs-therapy">
-              Peer support vs. therapy
-            </Link>
             <Link href="/pricing">Pricing</Link>
           </div>
           <div className="foot-col">
-            <h5>The Brand</h5>
+            <p className="foot-h">Guides</p>
+            <Link href="/peer-support">What is peer support?</Link>
+            <Link href="/learn/alternatives-to-therapy">
+              Alternatives to therapy
+            </Link>
+            <Link href="/learn/cheap-therapy">Cheap therapy options</Link>
+            <Link href="/learn/one-to-one-peer-support">
+              One-to-one peer support
+            </Link>
+            <Link href="/learn/pay-someone-to-listen">
+              Pay someone to listen
+            </Link>
+            <Link href="/learn/peer-support-vs-therapy">
+              Peer support vs. therapy
+            </Link>
+            <Link href="/learn/do-i-need-therapy">Do I need therapy?</Link>
+            <Link href="/learn/how-much-does-therapy-cost">
+              What therapy costs
+            </Link>
+          </div>
+          <div className="foot-col">
+            <p className="foot-h">The Brand</p>
             <Link href="/about">Our story</Link>
             <Link href="/stories">Stories</Link>
             <Link href="/press">Press</Link>
@@ -50,7 +68,7 @@ export default function SharedFooter() {
             <Link href="/for-therapists">Join The Bridge</Link>
           </div>
           <div className="foot-col">
-            <h5>Members</h5>
+            <p className="foot-h">Members</p>
             <Link href="/trust">Trust & security</Link>
             <Link href="/accessibility">Accessibility</Link>
             <Link href="/privacy">Privacy</Link>

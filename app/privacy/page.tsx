@@ -74,7 +74,7 @@ export default function PrivacyPage() {
                 How it&rsquo;s stored
               </h2>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)", marginBottom: 16 }}>
-                All data is encrypted at rest and in transit using AES-256 and TLS 1.3. Our infrastructure is hosted on US-based servers that meet HIPAA-comparable security standards (even though Hearth is not a covered entity under HIPAA, we hold ourselves to the same standard because it&rsquo;s right).
+                Information is encrypted in transit (HTTPS and TLS) between you, your Keeper and the services we use. Today those services are Whop (payment), Brevo (email delivery), Google Meet with Cal.com (Sits and booking) and email (the Long Talk), and each stores data under its own security controls. The Long Talk is not end-to-end encrypted. Hearth is not a covered entity under HIPAA and does not claim HIPAA compliance. Our trust page lists exactly where each piece of your information lives.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--ink-2)" }}>
                 Access to member data within Hearth is restricted to: your assigned Keeper, and Hearth staff in specific documented circumstances (e.g., a safety concern that triggers mandatory reporting). We maintain access logs.

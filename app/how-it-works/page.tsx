@@ -4,7 +4,7 @@ import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 import Link from "next/link";
 
 export const metadata = {
-  title: "How Hearth works: From sign-up to your first Sit",
+  title: "How Hearth Works: Sign-Up to Your First Sit",
   description:
     "Intake, hand-pairing within 72 hours, your first Sit, and the Long Talk in between. Step by step, in plain language, with no fine print.",
   alternates: { canonical: "/how-it-works" },

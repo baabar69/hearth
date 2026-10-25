@@ -77,7 +77,7 @@ export default async function CheckoutPage({
     <>
       <SharedNav />
 
-      <main
+      <div
         style={{
           minHeight: "calc(100vh - 80px)",
           background: "var(--paper)",
@@ -153,7 +153,7 @@ export default async function CheckoutPage({
             </Link>
           </p>
         </div>
-      </main>
+      </div>
 
       <SharedFooter />
     </>

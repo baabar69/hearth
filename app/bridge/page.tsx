@@ -3,14 +3,14 @@ import SharedNav from "../components/SharedNav";
 import SharedFooter from "../components/SharedFooter";
 
 export const metadata = {
-  title: "The Bridge: Vetted Therapist Referrals from Hearth",
+  title: "The Bridge: From Peer Support to a Therapist",
   description:
-    "When peer support is not enough, your Keeper hands you off to a vetted, licensed therapist matched by hand for fit. The Bridge is how Hearth stays honest about scope.",
+    "When peer support is not enough, your Keeper helps you find a licensed therapist and stays with you. How Hearth stays honest about scope.",
   alternates: { canonical: "/bridge" },
   openGraph: {
     title: "The Bridge: Hearth's clinical handoff",
     description:
-      "Hand-matched referrals to licensed therapists when clinical care is the right tool.",
+      "How your Keeper helps you find a licensed therapist when clinical care is the right tool.",
     url: "/bridge",
     type: "website",
   },
@@ -96,11 +96,27 @@ export default function BridgePage() {
                 away. They build you a bridge and stand at the entrance.
               </p>
               <p style={{ marginTop: 18 }}>
-                The Bridge is Hearth&rsquo;s network of vetted, licensed
-                therapists. Each one is matched by hand to the member, with
-                an eye to fit; all bring real clinical care. When a referral is
-                made, it is a warm handoff. Not a directory dump, not
-                a goodbye. You keep your Keeper. You add the clinician.
+                The Bridge is that handoff. Today it works like this: your
+                Keeper helps you find a licensed therapist through Open Path
+                Collective (lower-cost sessions), Psychology Today&rsquo;s
+                directory, or your own doctor, and offers to help you write
+                the first email, there and then. Not a goodbye. You keep your
+                Keeper. You add the clinician.
+              </p>
+              <p
+                style={{
+                  marginTop: 18,
+                  fontSize: 16,
+                  padding: "12px 16px",
+                  border: "1px solid var(--rule)",
+                  borderRadius: 8,
+                  background: "var(--paper-2)",
+                }}
+              >
+                Plainly: we are building a network of partner therapists, and
+                it is not open yet. Until it is, no Keeper will promise you a
+                Hearth therapist. They will help you find the right one
+                elsewhere.
               </p>
             </div>
           </div>
@@ -140,8 +156,8 @@ export default function BridgePage() {
               },
               {
                 num: "03",
-                title: "They introduce you, by name.",
-                body: "If you say yes, your Keeper reaches out to a specific Bridge therapist (not a list, a person) and makes the introduction. They share context, with your consent. They tell the therapist who you are.",
+                title: "They help you reach out.",
+                body: "If you say yes, your Keeper helps you find a therapist who fits and offers to help you write the first message. Nothing about you is shared with anyone without your consent.",
               },
               {
                 num: "04",
@@ -204,7 +220,7 @@ export default function BridgePage() {
             <div>
               <div className="eyebrow" style={{ marginBottom: 18 }}>
                 <span className="dot" />
-                Bridge therapists
+                Partner therapists: in progress
               </div>
               <h2 style={{ fontSize: "clamp(28px, 3vw, 44px)" }}>
                 Licensed. Hand-matched. Vetted by us.
@@ -219,9 +235,9 @@ export default function BridgePage() {
                   marginBottom: 32,
                 }}
               >
-                Bridge therapists are not found on a general directory. Every
-                therapist in our network has been individually vetted by Hearth.
-                They are:
+                Our partner network is not open yet. When it opens, every
+                therapist in it will have been individually vetted by Hearth.
+                We are looking for therapists who are:
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 0 }}>
                 {[
@@ -289,9 +305,9 @@ export default function BridgePage() {
               <p>
                 We are not building a marketplace where therapists bid for
                 your business. We are not a directory that emails you a list
-                and wishes you luck. We protect therapist caseloads.
-                Bridge therapists are never overwhelmed with Hearth referrals.
-                The handoff is careful, specific, and human.
+                and wishes you luck. When the partner network opens, we will
+                protect therapist caseloads so no one is overwhelmed with
+                Hearth referrals. The handoff is careful, specific, and human.
               </p>
               <p style={{ marginTop: 18 }}>
                 The Bridge is also not a substitute for emergency services. If

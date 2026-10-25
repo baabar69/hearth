@@ -6,7 +6,7 @@ export const metadata = {
   title: "Circles",
   alternates: { canonical: "/circles" },
   description:
-    "Small, themed cohorts of 6–10 members, facilitated by a Keeper, over 4–8 weeks. The conversation you can't have alone, with people who already understand the room.",
+    "Coming soon: small, themed groups of 6–10 members, led by a Keeper (a trained peer listener), over 4–8 weeks. Circles are not running yet.",
   openGraph: {
     title: "Circles · Hearth",
     description:
@@ -73,50 +73,50 @@ const THEMES = [
   {
     title: "Mothers Between Worlds",
     forWhom: "Mothers raising children in circumstances different from the ones that raised them.",
-    dates: "Apr 28 → May 26, 2026",
+    dates: "Planned",
     weeks: "4 weeks",
-    facilitator: "Aruna",
-    spots: "3 of 8 spots left",
+    facilitator: "A Keeper",
+    spots: "Not open yet",
   },
   {
     title: "Eldest Daughters",
     forWhom: "Women who learned early that the family ran on their attention.",
-    dates: "May 6 → Jun 17, 2026",
+    dates: "Planned",
     weeks: "6 weeks",
-    facilitator: "Rabia",
-    spots: "5 of 10 spots left",
+    facilitator: "A Keeper",
+    spots: "Not open yet",
   },
   {
     title: "Grief That Arrived Late",
     forWhom: "For losses you never grieved out loud: the parent, the place, the version of yourself.",
-    dates: "May 12 → Jun 9, 2026",
+    dates: "Planned",
     weeks: "4 weeks",
-    facilitator: "Priya S.",
-    spots: "2 of 8 spots left",
+    facilitator: "A Keeper",
+    spots: "Not open yet",
   },
   {
     title: "On Coming Out to a Family You Love",
     forWhom: "A confidential cohort for queer members from families where the question is layered.",
-    dates: "May 20 → Jul 15, 2026",
+    dates: "Planned",
     weeks: "8 weeks",
-    facilitator: "Hassan A.",
-    spots: "4 of 8 spots left",
+    facilitator: "A Keeper",
+    spots: "Not open yet",
   },
   {
     title: "The Career Your Family Wanted",
     forWhom: "For the doctor who wanted to be a writer. The lawyer who wanted to teach. The dutiful child considering a different door.",
-    dates: "Jun 3 → Jul 1, 2026",
+    dates: "Planned",
     weeks: "4 weeks",
-    facilitator: "Faisal M.",
-    spots: "6 of 10 spots left",
+    facilitator: "A Keeper",
+    spots: "Not open yet",
   },
   {
     title: "Mothers and Daughters: The Long Conversation",
     forWhom: "The fight that has been going for a decade. The love underneath it. The figuring-out, slowly.",
-    dates: "Jun 10 → Jul 22, 2026",
+    dates: "Planned",
     weeks: "6 weeks",
-    facilitator: "Aruna",
-    spots: "7 of 10 spots left",
+    facilitator: "A Keeper",
+    spots: "Not open yet",
   },
 ];
 
@@ -177,12 +177,29 @@ export default function CirclesPage() {
             worlds, the grief that arrived late. A room of people who already
             understand the question, so you do not spend the night explaining it.
           </p>
+          <p
+            style={{
+              maxWidth: "60ch",
+              marginTop: 18,
+              fontSize: 16,
+              lineHeight: 1.6,
+              color: "var(--ink-2)",
+              padding: "12px 16px",
+              border: "1px solid var(--rule)",
+              borderRadius: 8,
+              background: "var(--paper-2)",
+            }}
+          >
+            Coming soon. Circles are not running yet, and nothing is charged
+            for them until they do. Members hear first when the first ones
+            open.
+          </p>
           <div className="hero-cta" style={{ marginTop: 32 }}>
             <Link href="/intake" className="btn btn-primary btn-lg">
-              Join Hearth &amp; access Circles <span className="arr">&rarr;</span>
+              Join Hearth <span className="arr">&rarr;</span>
             </Link>
             <Link href="#themes" className="btn btn-ghost btn-lg">
-              See upcoming themes
+              See planned themes
             </Link>
           </div>
         </div>
@@ -379,19 +396,19 @@ export default function CirclesPage() {
             <div>
               <div className="eyebrow">
                 <span className="dot" />
-                Upcoming themes
+                Planned themes
               </div>
               <h2 style={{ marginTop: 18 }}>
                 Six rooms{" "}
                 <span className="serif-i" style={{ color: "var(--ember)" }}>
-                  opening this season.
+                  we plan to open.
                 </span>
               </h2>
             </div>
             <p className="lede">
-              New Circles open each month. Members reserve their seat in the app;
-              single passes are available at $35 if you want to try one before
-              joining.
+              None of these is running yet. They are the first themes we plan
+              to open. If one of them is yours, email us and you will hear the
+              moment it opens.
             </p>
           </div>
 
@@ -540,8 +557,8 @@ export default function CirclesPage() {
                     </p>
                   </div>
                 </div>
-                <Link
-                  href="/intake"
+                <a
+                  href={`mailto:hello@dearhearth.com?subject=${encodeURIComponent(`Circle: ${t.title}`)}`}
                   style={{
                     marginTop: 10,
                     fontFamily: "var(--mono)",
@@ -552,8 +569,8 @@ export default function CirclesPage() {
                     alignSelf: "flex-start",
                   }}
                 >
-                  Reserve a seat &rarr;
-                </Link>
+                  Tell me when it opens &rarr;
+                </a>
               </article>
             ))}
           </div>
@@ -736,11 +753,11 @@ export default function CirclesPage() {
                   margin: 0,
                 }}
               >
-                Biweekly Sits with your matched Keeper, plus{" "}
+                Biweekly Sits with your matched Keeper.{" "}
                 <strong style={{ color: "var(--ink)" }}>
-                  one Circle per month
-                </strong>{" "}
-                included in the membership.
+                  Circles are coming soon
+                </strong>
+                ; members hear first.
               </p>
             </div>
 
@@ -788,11 +805,11 @@ export default function CirclesPage() {
                   margin: 0,
                 }}
               >
-                Weekly Sits, priority Long Talk, plus{" "}
+                Weekly Sits and priority Long Talk.{" "}
                 <strong style={{ color: "#FFE0B0" }}>
-                  two Circles per month
-                </strong>{" "}
-                included in the membership.
+                  Circles are coming soon
+                </strong>
+                ; members hear first.
               </p>
             </div>
 
@@ -825,11 +842,7 @@ export default function CirclesPage() {
                   marginBottom: 14,
                 }}
               >
-                $35
-                <span style={{ fontSize: 16, color: "var(--ink-3)" }}>
-                  {" "}
-                  /Circle
-                </span>
+                Not on sale yet
               </p>
               <p
                 style={{
@@ -839,8 +852,8 @@ export default function CirclesPage() {
                   margin: 0,
                 }}
               >
-                For non-members, or members who want an extra Circle on top of
-                what their tier includes. One series, no membership required.
+                A way to join one Circle without a membership, once Circles
+                open. Nothing is sold until then.
               </p>
             </div>
           </div>
@@ -998,8 +1011,8 @@ export default function CirclesPage() {
                 marginBottom: 28,
               }}
             >
-              Join Hearth and your first Circle is included in the membership.
-              Or pick up a single pass and try one before you decide.
+              Circles are not running yet. Join Hearth for one-to-one support
+              now, and you will hear first when the first Circle opens.
             </p>
             <div
               className="cta-row"
@@ -1011,8 +1024,7 @@ export default function CirclesPage() {
               }}
             >
               <Link href="/intake" className="btn btn-primary btn-lg">
-                Join Hearth &amp; access Circles{" "}
-                <span className="arr">&rarr;</span>
+                Join Hearth <span className="arr">&rarr;</span>
               </Link>
               <Link href="/pricing" className="btn btn-ghost btn-lg">
                 See pricing

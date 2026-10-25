@@ -57,7 +57,7 @@ export default function PressPage() {
                 A peer-support membership. Members are paired with a Keeper,
                 a trained, paid companion (often clinically trained, never acting as your clinician),
                 for biweekly or weekly Sits, an asynchronous Long Talk
-                thread, and group Circles. Keepers are matched by hand for
+                thread, and a weekly written note. Keepers are matched by hand for
                 fit; warmth and careful presence for everyone.
               </p>
             </div>
@@ -68,8 +68,9 @@ export default function PressPage() {
               <p style={{ color: "var(--ink-2)", lineHeight: 1.65, fontSize: 16 }}>
                 Therapy. A chatbot. A crisis service. We do not diagnose,
                 treat, prescribe, or provide clinical care. When clinical care
-                is the right tool, our Keepers refer members to The Bridge,
-                our partner network of US-licensed therapists.
+                is the right tool, our Keepers help members find a licensed
+                therapist and stay with them through the handoff (The Bridge).
+                A partner network of therapists is being built and is not open yet.
               </p>
             </div>
           </div>

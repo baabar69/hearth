@@ -12,16 +12,16 @@ import {
 } from "../../lib/schema";
 
 const PUBLISHED = "2026-08-22";
-const REVIEWED = "2026-08-22";
+const REVIEWED = "2026-10-24";
 
 export const metadata: Metadata = {
-  title: "Therapy Without Insurance: Cost and Options",
+  title: "Affordable Therapy Without Insurance: Options",
   description:
-    "What therapy costs cash-pay in the US, the written estimate you are legally owed, how a superbill gets money back if you are out of network, and the routes that work with no coverage at all.",
+    "Affordable therapy without insurance in the US: what cash-pay sessions cost, the estimate you are owed, superbills, and routes that need no coverage.",
   alternates: { canonical: "/learn/therapy-without-insurance" },
   openGraph: {
     type: "article",
-    title: "Therapy Without Insurance: What It Costs and What to Do",
+    title: "Affordable Therapy Without Insurance: Costs and Options",
     description:
       "Cash-pay costs, the Good Faith Estimate you are owed, superbills, and the routes that work with no coverage.",
     url: "/learn/therapy-without-insurance",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "How much is therapy without insurance?",
-    a: "In the US, $100 to $250 a session paying cash, with a national average around $165 as of August 2026. Sliding scale brings that to roughly $50 to $110 with many therapists, Open Path Collective runs $30 to $70 a session after a one-time membership, university training clinics are free to about $40, and community mental health centres charge on an income-based scale.",
+    a: "In the US, cash-pay sessions averaged about $143 in a 2024 study of therapist prices, and state averages run from about $122 to $227. Sliding scale brings that to roughly $50 to $110 with many therapists, Open Path Collective runs $40 to $70 a session after a one-time $65 membership, university training clinics are free to about $40, and community mental health centres charge on an income-based scale.",
   },
   {
     q: "Do therapists take patients without insurance?",
@@ -64,8 +64,8 @@ const ROUTES: Route[] = [
   },
   {
     name: "Open Path Collective",
-    cost: "$30 to $70 a session, $65 one-time membership",
-    body: "Licensed therapists who have agreed to reduced rates for people without adequate coverage. Built for exactly this situation. Figures as of August 2026.",
+    cost: "$40 to $70 a session, $65 one-time membership",
+    body: "Licensed therapists who have agreed to reduced rates for people without adequate coverage. Built for exactly this situation. Prices checked 24 October 2026.",
   },
   {
     name: "Community mental health centres and federally funded health centres",
@@ -103,14 +103,14 @@ export default function TherapyWithoutInsurancePage() {
           __html: jsonLd([
             webPageLd({
               path: "/learn/therapy-without-insurance",
-              name: "Therapy Without Insurance: What It Costs and What to Do",
+              name: "Affordable Therapy Without Insurance: Costs and Options",
               description:
                 "Cash-pay therapy costs in the US, the Good Faith Estimate you are owed, how superbills work, and the routes that work with no coverage.",
               lastReviewed: REVIEWED,
             }),
             articleLd({
               path: "/learn/therapy-without-insurance",
-              headline: "Therapy Without Insurance: What It Costs and What to Do",
+              headline: "Affordable Therapy Without Insurance: Costs and Options",
               description:
                 "What therapy costs cash-pay, the written estimate you are legally owed, how a superbill gets money back, and the routes that work with no coverage at all.",
               datePublished: PUBLISHED,
@@ -125,7 +125,7 @@ export default function TherapyWithoutInsurancePage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Hearth", path: "/" },
+              { name: "Dear Hearth", path: "/" },
               { name: "Learn", path: "/learn/therapy-without-insurance" },
               {
                 name: "Therapy without insurance",
@@ -198,7 +198,7 @@ export default function TherapyWithoutInsurancePage() {
               letterSpacing: "0.04em",
             }}
           >
-            Published 22 August 2026 · US figures as of August 2026 · ~8 min
+            Published 22 August 2026 · Updated 24 October 2026 · ~8 min
             read
           </div>
         </div>
@@ -243,9 +243,23 @@ export default function TherapyWithoutInsurancePage() {
                 color: "var(--ink)",
               }}
             >
-              Paying cash, therapy runs <strong>$100 to $250 a session</strong>{" "}
-              in the US, averaging about $165. With the routes below, most
-              people can get that to <strong>$30 to $80</strong>, and some to
+              Paying cash, a therapy session in the US averaged{" "}
+              <strong>about $143</strong> in a{" "}
+              <a
+                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11412241/"
+                style={{ color: "var(--ember)" }}
+              >
+                2024 study
+              </a>
+              , and{" "}
+              <a
+                href="https://www.simplepractice.com/resource/how-much-does-therapy-cost"
+                style={{ color: "var(--ember)" }}
+              >
+                state averages
+              </a>{" "}
+              run from about $122 to $227. With the routes below, most people
+              can get that to <strong>$30 to $80</strong>, and some to
               nothing.
             </p>
             <p
@@ -329,8 +343,13 @@ export default function TherapyWithoutInsurancePage() {
               marginBottom: 36,
             }}
           >
-            Cheapest and most under-used first. Costs are indicative and dated
-            August 2026. Verify with each provider.
+            Cheapest and most under-used first. Costs are indicative; Open
+            Path prices were checked on 24 October 2026. Verify with each
+            provider. For every low-cost option side by side, with prices, see{" "}
+            <Link href="/learn/cheap-therapy" style={{ color: "var(--ember)" }}>
+              cheap therapy options
+            </Link>
+            .
           </p>
           <div style={{ display: "grid", gap: 24, maxWidth: "72ch" }}>
             {ROUTES.map((r) => (
@@ -557,10 +576,16 @@ export default function TherapyWithoutInsurancePage() {
             </div>
             <div style={{ display: "grid", gap: 18, marginTop: 8 }}>
               <Link
+                href="/learn/cheap-therapy"
+                style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
+              >
+                Cheap therapy options, with real prices &rarr;
+              </Link>
+              <Link
                 href="/learn/cant-afford-therapy"
                 style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
               >
-                Cannot afford therapy? What to actually do &rarr;
+                Can&rsquo;t afford therapy? What to do next &rarr;
               </Link>
               <Link
                 href="/learn/how-much-does-therapy-cost"

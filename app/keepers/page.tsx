@@ -5,9 +5,9 @@ import KeeperPortrait from "../components/KeeperPortrait";
 import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 
 export const metadata = {
-  title: "Meet the Keepers: Trained peer supporters at Hearth",
+  title: "Keepers: the trained peer supporters at Hearth",
   description:
-    "Meet Hearth's Keepers: trained peer supporters paired with members by hand, not chosen from a list. Each one a person, not a profile, with languages, themes, and lived experience that matches what you're carrying.",
+    "What a Keeper is: a trained peer supporter matched to you by hand, not picked from a list. Example profiles show what we match on.",
   alternates: { canonical: "/keepers" },
   openGraph: {
     title: "Meet the Keepers · Hearth",
@@ -124,9 +124,28 @@ export default function KeepersPage() {
               maxWidth: "52ch",
             }}
           >
-            Each one a person, not a profile. We make the match by hand, and
-            you can ask to change it at any time. This page is so you know
-            the kind of person you might be sitting with.
+            A Keeper is a trained peer supporter: one person, matched to you
+            by hand, who stays. You don&rsquo;t choose from a list. After your
+            first Sit (your first video or audio call), you can ask for a
+            different Keeper at no charge.
+          </p>
+          <p
+            style={{
+              marginTop: 18,
+              fontSize: 16,
+              lineHeight: 1.6,
+              color: "var(--ink-2)",
+              maxWidth: "52ch",
+              padding: "12px 16px",
+              border: "1px solid var(--rule)",
+              borderRadius: 8,
+              background: "var(--paper-2)",
+            }}
+          >
+            The profiles below are examples. Names and details are
+            illustrative, written to show the kind of person you might sit
+            with. Your real Keeper introduces themselves by email after the
+            match.
           </p>
           <p
             style={{

@@ -16,7 +16,7 @@ const REVIEWED = "2026-08-22";
 export const metadata: Metadata = {
   title: "Sliding Scale Therapy: How to Ask",
   description:
-    "What a sliding scale is, how therapists actually set one, the exact words to use by email and by phone, what to do when the answer is no, and why asking is not rude.",
+    "What sliding scale therapy is, how therapists set one, the exact words to use by email or phone, and what to do when the answer is no.",
   alternates: { canonical: "/learn/sliding-scale-therapy" },
   openGraph: {
     type: "article",

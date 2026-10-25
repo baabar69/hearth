@@ -1,18 +1,42 @@
 import type { Metadata, Viewport } from "next";
+import { Fraunces, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import ExitPopup from "./components/ExitPopup";
 
+// Self-hosted through next/font: no render-blocking request to Google Fonts,
+// files preloaded from our own domain. globals.css reads these variables.
+const serif = Fraunces({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  axes: ["opsz"],
+  variable: "--font-serif",
+  display: "swap",
+});
+const sans = Inter_Tight({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
 const SITE_URL = "https://dearhearth.com";
-const SITE_NAME = "Hearth";
-const DEFAULT_TITLE = "Hearth: The Private Alternative to Therapy Apps";
+// "Dear Hearth" is the name Google should learn. "Hearth" alone is a common
+// noun we can never own, and the rare spelling gets autocorrected to "dear
+// heart" until the web treats it as an entity name (docs/seo/audit-2026-09-09.md).
+const SITE_NAME = "Dear Hearth";
+const DEFAULT_TITLE = "Online Peer Support, an Alternative to Therapy · Dear Hearth";
 const DEFAULT_DESCRIPTION =
-  "One trained Keeper, hand-matched to you and kept for years. A video call every two weeks, a chat thread in between, a note every Friday. Peer support, not therapy. From $39 a month.";
+  "One-to-one online peer support: a trained listener, matched to you by hand and kept for years. An alternative to therapy apps, from $39 a month.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: DEFAULT_TITLE,
-    template: "%s · Hearth",
+    template: "%s · Dear Hearth",
   },
   description: DEFAULT_DESCRIPTION,
   applicationName: SITE_NAME,
@@ -30,9 +54,9 @@ export const metadata: Metadata = {
     "trained companion",
     "subscription emotional support",
   ],
-  authors: [{ name: "Hearth", url: SITE_URL }],
-  creator: "Hearth",
-  publisher: "Hearth",
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   alternates: {
     canonical: "/",
   },
@@ -53,7 +77,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Hearth: the private alternative to therapy apps.",
+        alt: "Dear Hearth: one-to-one online peer support.",
       },
     ],
   },
@@ -103,18 +127,18 @@ const ORGANIZATION_LD = {
   "@id": ORG_ID,
   name: SITE_NAME,
   legalName: "Hearth",
-  alternateName: "Dear Hearth",
+  alternateName: "Hearth",
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
     url: `${SITE_URL}/logo.svg`,
     width: 512,
     height: 512,
-    caption: "Hearth",
+    caption: SITE_NAME,
   },
   image: `${SITE_URL}/og-image.png`,
   description:
-    "Hearth is a one-to-one peer-support subscription pairing each member with the same trained Keeper for the long term. Not therapy. Not a crisis service.",
+    "Dear Hearth is a one-to-one online peer support subscription pairing each member with the same trained listener (a Keeper) for the long term. Not therapy. Not a crisis service.",
   slogan: "Pull up a chair.",
   knowsAbout: [
     "Peer support",
@@ -132,6 +156,8 @@ const ORGANIZATION_LD = {
     "https://www.linkedin.com/company/dearhearth",
     "https://www.crunchbase.com/organization/hearth-94b4",
     "https://www.wikidata.org/wiki/Q141431662",
+    "https://www.instagram.com/thedearhearth/",
+    "https://www.threads.com/@thedearhearth",
   ],
   contactPoint: [
     {
@@ -162,6 +188,7 @@ const WEBSITE_LD = {
   "@id": SITE_ID,
   url: SITE_URL,
   name: SITE_NAME,
+  alternateName: ["Hearth", "dearhearth.com"],
   description: DEFAULT_DESCRIPTION,
   inLanguage: "en-US",
   publisher: { "@id": ORG_ID },
@@ -173,18 +200,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="magazine">
+    <html
+      lang="en"
+      data-theme="magazine"
+      className={`${serif.variable} ${sans.variable} ${mono.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_LD) }}
@@ -195,7 +216,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {children}
+        {/* One <main> landmark for every page (pages render their own nav and
+            footer inside it). Pages must not add another <main>. */}
+        <main>{children}</main>
         <ExitPopup />
       </body>
     </html>

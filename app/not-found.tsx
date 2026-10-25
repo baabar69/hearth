@@ -13,7 +13,7 @@ export default function NotFound() {
     <>
       <SharedNav />
 
-      <main
+      <div
         style={{
           minHeight: "calc(100vh - 200px)",
           display: "flex",
@@ -130,7 +130,7 @@ export default function NotFound() {
             </div>
           </div>
         </div>
-      </main>
+      </div>
 
       <SharedFooter />
     </>

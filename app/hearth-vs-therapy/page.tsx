@@ -4,7 +4,7 @@ import SharedFooter from "../components/SharedFooter";
 import { jsonLd, webPageLd, breadcrumbLd } from "../lib/schema";
 
 export const metadata = {
-  title: "Hearth vs. Therapy: Honest Comparison & When to Choose Each",
+  title: "Hearth vs Therapy: When to Choose Each",
   description:
     "Hearth is peer support, not therapy. A side-by-side comparison: what each does, what they cost, who they fit, and when to use both. Written by Hearth.",
   alternates: { canonical: "/hearth-vs-therapy" },
@@ -71,7 +71,7 @@ const COMPARISON = [
   {
     label: "Confidentiality",
     therapy: "HIPAA-protected. Session notes part of medical record.",
-    hearth: "HIPAA-comparable. Encrypted. Not a medical record.",
+    hearth: "Not covered by HIPAA. Not a medical record. Never sold, never recorded.",
   },
   {
     label: "What it can do",
@@ -664,13 +664,14 @@ export default function HearthVsTherapyPage() {
                 If you start with Hearth and your Keeper notices you&rsquo;d
                 benefit from a clinician (for what they&rsquo;re hearing,
                 or what you&rsquo;re asking for) they don&rsquo;t hand
-                you a Google search and disappear. They walk you to The
-                Bridge: a vetted therapist matched by hand, introduced by
-                name.
+                you a Google search and disappear. They help you find one
+                (Open Path Collective, Psychology Today, your own doctor) and
+                help you write the first email. That handoff is what we call
+                The Bridge.
               </p>
               <p style={{ color: "var(--ink-2)", fontSize: 17, lineHeight: 1.7, marginBottom: 24 }}>
-                Your Keeper stays your Keeper through the transition. The
-                bridge is a value, not a feature.
+                Your Keeper stays your Keeper through the transition. We are
+                building a network of partner therapists; it is not open yet.
               </p>
               <Link href="/bridge" className="btn btn-ghost">
                 How The Bridge works &rarr;

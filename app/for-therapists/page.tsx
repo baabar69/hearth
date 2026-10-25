@@ -4,7 +4,7 @@ import ForTherapistsClient from "./ForTherapistsClient";
 export const metadata: Metadata = {
   title: "The Bridge: For Licensed Therapists",
   description:
-    "Hearth refers members who need clinical care to licensed therapists through The Bridge. Warm handoffs from a Keeper who stays in the relationship. No fees, no lead-gen contracts.",
+    "Join The Bridge, the partner network of licensed therapists Hearth is building for members who need clinical care. No fees, no lead-gen contracts.",
   alternates: { canonical: "/for-therapists" },
   openGraph: {
     title: "Join The Bridge, for licensed therapists",

@@ -12,12 +12,12 @@ import {
 } from "../../lib/schema";
 
 const PUBLISHED = "2026-08-22";
-const REVIEWED = "2026-08-22";
+const REVIEWED = "2026-10-24";
 
 export const metadata: Metadata = {
   title: "How Much Does Therapy Cost in 2026?",
   description:
-    "Per session, per month and per year, in the US, UK, Canada and Australia. What insurance and Medicare actually cover, what the online platforms charge, and the arithmetic nobody does for you.",
+    "What therapy costs per session, month and year in the US, UK, Canada and Australia, what insurance covers, and what online platforms charge.",
   alternates: { canonical: "/learn/how-much-does-therapy-cost" },
   openGraph: {
     type: "article",
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "How much does a therapy session cost?",
-    a: "In the US, $100 to $250 without insurance, with a national average of about $165 in 2026. In the UK, £40 to £80 for a counsellor and £60 to £100 for a psychotherapist. In Canada, $120 to $200 for a registered psychotherapist or social worker and $200 to $350 for a psychologist. In Australia, $200 to $320 before the Medicare rebate, and roughly $75 to $175 out of pocket after it.",
+    a: "In the US, cash-pay sessions averaged about $143 in a 2024 study of therapist prices (about $83 when Medicaid paid), and state averages run from about $122 in Missouri to $227 in North Dakota. In the UK, £40 to £80 for a counsellor and £60 to £100 for a psychotherapist. In Canada, $120 to $200 for a registered psychotherapist or social worker and $200 to $350 for a psychologist. In Australia, $200 to $320 before the Medicare rebate, and roughly $75 to $175 out of pocket after it.",
   },
   {
     q: "How much does therapy cost per month?",
-    a: "It depends entirely on frequency, which is the part most price guides skip. Weekly therapy at the US average of $165 is about $715 a month. Fortnightly is about $360. At the top of the range in a major city, weekly sessions can pass $1,000 a month. Multiply your session price by 4.3 for weekly or 2.2 for fortnightly to get a realistic monthly figure.",
+    a: "It depends entirely on frequency, which is the part most price guides skip. Weekly therapy at a $143 session is about $620 a month. Fortnightly is about $310. At the top of the range in a major city, weekly sessions can pass $1,000 a month. Multiply your session price by 4.3 for weekly or 2.2 for fortnightly to get a realistic monthly figure.",
   },
   {
     q: "Why is therapy so expensive?",
@@ -66,10 +66,10 @@ type Row = {
 const ARITHMETIC: Row[] = [
   {
     country: "United States",
-    session: "$165 (range $100 to $250)",
-    weeklyMonth: "about $715",
-    weeklyYear: "about $8,600",
-    fortnightlyMonth: "about $360",
+    session: "$143 cash-pay average (state averages $122 to $227)",
+    weeklyMonth: "about $620",
+    weeklyYear: "about $7,440",
+    fortnightlyMonth: "about $310",
   },
   {
     country: "United Kingdom",
@@ -125,7 +125,7 @@ export default function HowMuchDoesTherapyCostPage() {
               ],
             }),
             breadcrumbLd([
-              { name: "Hearth", path: "/" },
+              { name: "Dear Hearth", path: "/" },
               { name: "Learn", path: "/learn/how-much-does-therapy-cost" },
               {
                 name: "How much does therapy cost",
@@ -197,7 +197,7 @@ export default function HowMuchDoesTherapyCostPage() {
               letterSpacing: "0.04em",
             }}
           >
-            Published 22 August 2026 · Figures as of August 2026 · ~8 min read
+            Published 22 August 2026 · US and app prices updated 24 October 2026 · ~8 min read
           </div>
         </div>
       </section>
@@ -243,7 +243,8 @@ export default function HowMuchDoesTherapyCostPage() {
                 color: "var(--ink)",
               }}
             >
-              A single session runs about <strong>$165 in the US</strong>,{" "}
+              A single session runs about <strong>$143 in the US</strong>{" "}
+              paying cash,{" "}
               <strong>£60 in the UK</strong>, <strong>C$150 in Canada</strong>{" "}
               and <strong>A$260 in Australia</strong> before any rebate.
             </p>
@@ -255,7 +256,7 @@ export default function HowMuchDoesTherapyCostPage() {
                 marginTop: 22,
               }}
             >
-              Weekly, that is roughly $715, £260, C$650 or A$1,000 a month. The
+              Weekly, that is roughly $620, £260, C$650 or A$1,000 a month. The
               rest of this page shows where those numbers come from, what
               insurance and public schemes genuinely take off, and what the
               online platforms charge instead.
@@ -276,9 +277,26 @@ export default function HowMuchDoesTherapyCostPage() {
 
             <h3 style={{ marginTop: 8, marginBottom: 12 }}>United States</h3>
             <p style={{ fontSize: 17.5, lineHeight: 1.75, color: "var(--ink-2)" }}>
-              <strong>$100 to $250 a session without insurance</strong>, with a
-              national average around $165 in 2026. In San Francisco, New York
-              and similar cities, $250 is common and $300 is not rare. Sliding
+              <strong>Cash-pay sessions averaged about $143</strong> in a 2024
+              study of therapist prices, against about $83 when Medicaid paid,
+              and about a third of the private-practice therapists studied did
+              not take insurance at all (
+              <a
+                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11412241/"
+                style={{ color: "var(--ember)" }}
+              >
+                Zhu et al., 2024
+              </a>
+              ). Across 104.7 million session fees in 2023 and 2024, state
+              averages ran from $122 in Missouri to $227 in North Dakota (
+              <a
+                href="https://www.simplepractice.com/resource/how-much-does-therapy-cost"
+                style={{ color: "var(--ember)" }}
+              >
+                SimplePractice
+              </a>
+              ). In San Francisco, New York and similar cities, $250 is common
+              and $300 is not rare. Sliding
               scale slots, where a therapist offers them, can bring a session to
               $30 to $80. In-network copays usually run $20 to $50, but a large
               share of experienced therapists do not take insurance at all. If
@@ -436,8 +454,9 @@ export default function HowMuchDoesTherapyCostPage() {
             }}
           >
             Rounded, and indicative. Your own figure is your session price times
-            4.3 for weekly or 2.2 for fortnightly. Figures as of August 2026;
-            verify with any provider before relying on them.
+            4.3 for weekly or 2.2 for fortnightly. US figures updated 24
+            October 2026, other countries as of August 2026; verify with any
+            provider before relying on them.
           </p>
         </div>
       </section>
@@ -453,10 +472,12 @@ export default function HowMuchDoesTherapyCostPage() {
             </h2>
             <p style={{ fontSize: 17.5, lineHeight: 1.75, color: "var(--ink-2)" }}>
               <strong>Subscription therapy apps</strong> bill{" "}
-              <strong>$60 to $120 a week, charged monthly or every four
-              weeks, so roughly $260 to $520 a month</strong> as of August
-              2026, for a licensed therapist, usually one live session a week
-              plus messaging. That is cheaper than weekly private therapy in a
+              <strong>about $60 to $120 a week, charged monthly or every four
+              weeks, so roughly $260 to $520 a month</strong>, for a licensed
+              therapist, usually one live session a week plus messaging.
+              BetterHelp lists $70 to $100 a week, billed every four weeks.
+              Online-Therapy.com lists $60, $90 or $120 a week, depending on
+              how many live sessions you get. That is cheaper than weekly private therapy in a
               major US city and more expensive than fortnightly private therapy
               almost anywhere. The therapist you are matched with can change,
               and that is the trade-off people most often report.
@@ -469,9 +490,11 @@ export default function HowMuchDoesTherapyCostPage() {
                 marginTop: 20,
               }}
             >
-              Messaging-only plans start lower, around <strong>$69 a week</strong>,
-              with live sessions costing more, and a few platforms accept some
-              US insurance, which can bring the cost down a long way. We set the
+              Talkspace lists <strong>$69 a week</strong> out of pocket for
+              messaging only, $99 for video plus messaging and $109 with
+              workshops, and says most insured members pay a $0 copay. Some
+              platforms accept some US insurance, which can bring the cost
+              down a long way. We set the
               category against Hearth in{" "}
               <Link href="/hearth-vs-betterhelp" style={{ color: "var(--ember)" }}>
                 Hearth vs. therapy apps
@@ -487,9 +510,23 @@ export default function HowMuchDoesTherapyCostPage() {
               }}
             >
               Prices on these platforms change often and vary by location and
-              promotion. The figures above come from BetterHelp&rsquo;s FAQ and
-              Talkspace&rsquo;s pricing page, checked in August 2026. Check the
-              platform&rsquo;s own page on the day.
+              promotion. The figures above come from{" "}
+              <a href="https://www.betterhelp.com/faq/" style={{ color: "var(--ember)" }}>
+                BetterHelp&rsquo;s FAQ
+              </a>
+              ,{" "}
+              <a href="https://www.talkspace.com/pricing" style={{ color: "var(--ember)" }}>
+                Talkspace&rsquo;s pricing page
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://www.online-therapy.com/pricing"
+                style={{ color: "var(--ember)" }}
+              >
+                Online-Therapy.com&rsquo;s pricing page
+              </a>
+              , checked 24 October 2026. Check the platform&rsquo;s own page on
+              the day.
             </p>
           </div>
         </div>
@@ -527,12 +564,17 @@ export default function HowMuchDoesTherapyCostPage() {
               <Link href="/learn/sliding-scale-therapy" style={{ color: "var(--ember)" }}>
                 sliding scale
               </Link>
-              , training clinics, community centres, Open Path. We
-              wrote those up in{" "}
-              <Link href="/learn/cant-afford-therapy" style={{ color: "var(--ember)" }}>
-                what to do when you cannot afford therapy
+              , training clinics, community centres, Open Path. Every one of
+              them, with current prices, is in{" "}
+              <Link href="/learn/cheap-therapy" style={{ color: "var(--ember)" }}>
+                cheap therapy options
               </Link>
-              , including the exact words to use when asking for a lower fee.
+              , and the step-by-step plan, including the exact words to use
+              when asking for a lower fee, is in{" "}
+              <Link href="/learn/cant-afford-therapy" style={{ color: "var(--ember)" }}>
+                what to do when you can&rsquo;t afford therapy
+              </Link>
+              .
             </p>
           </div>
         </div>
@@ -616,10 +658,16 @@ export default function HowMuchDoesTherapyCostPage() {
             </div>
             <div style={{ display: "grid", gap: 18, marginTop: 8 }}>
               <Link
+                href="/learn/cheap-therapy"
+                style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
+              >
+                Cheap therapy options, with real prices &rarr;
+              </Link>
+              <Link
                 href="/learn/cant-afford-therapy"
                 style={{ color: "var(--ink)", fontSize: 19, lineHeight: 1.5 }}
               >
-                Cannot afford therapy? What to actually do &rarr;
+                Can&rsquo;t afford therapy? What to do next &rarr;
               </Link>
               <Link
                 href="/learn/do-i-need-therapy"
